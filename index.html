@@ -3385,15 +3385,25 @@
         empty.hidden = shown !== 0;
       }
 
+      function setCat(cat) {
+        activeCat = cat || 'all';
+        chips.forEach(function (x) {
+          x.classList.toggle('is-on', x.getAttribute('data-cat') === activeCat);
+        });
+      }
+
       q.addEventListener('input', apply);
       chips.forEach(function (b) {
         b.addEventListener('click', function () {
-          chips.forEach(function (x) { x.classList.remove('is-on'); });
-          b.classList.add('is-on');
-          activeCat = b.getAttribute('data-cat');
+          setCat(b.getAttribute('data-cat'));
           apply();
         });
       });
+
+      // 支持深链：nav.specul.com/#coding 直接筛到该分类
+      function fromHash() { setCat((location.hash || '').replace('#', '')); }
+      window.addEventListener('hashchange', function () { fromHash(); apply(); });
+      fromHash();
       apply();
     })();
   </script>
