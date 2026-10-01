@@ -437,12 +437,25 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
     --sp-6: 40px; --sp-7: 56px;
     --container: min(1120px, 90vw);
   }
-  .nav-links { gap: var(--sp-4); }
-  .nav-links > a { font-size: 12.5px; }
+  /* 窄屏放不下一行 8 项（实测 320px 视口容器仅 288px，导航需 415px）——
+     改为让导航整体换到第二行并居中，而不是压缩字号或引入横向滚动。
+     全站「无横向滚动条」是硬约束，优先保证它。 */
+  .site-bar { flex-wrap: wrap; row-gap: 0; }
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--sp-2) var(--sp-4);
+    padding-bottom: var(--sp-2);
+  }
+  .nav-links > a { font-size: 12.5px; padding-block: var(--sp-1); }
+  .nav-tools { margin-left: var(--sp-2); }
   .brand-sub { display: none; }
 }
 @media (max-width: 520px) {
   .nav-links > a[data-en] { display: none !important; }
+  .nav-links { gap: var(--sp-1) var(--sp-3); }
+  .brand-text { display: none; }   /* 只留 brand-dot，为导航腾出整行 */
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
