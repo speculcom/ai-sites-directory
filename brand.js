@@ -4,14 +4,18 @@
    处理全站一致的语言切换与明暗主题。所有品牌页面共用同一份副本。
    依赖 DOM：
      #langBtn  语言按钮      #themeBtn  主题按钮
-     #markSub  品牌副标题（用 data-zh-sub / data-en-sub 提供两种文案）
+     #markName 品牌名（用 data-zh-name / data-en-name 提供中英文两种写法）
    存储键：specul-lang (zh|en) / specul-theme (dark|light)
+
+   注：早期版本这里叫 #markSub（品牌副标题），当时 brand-name 固定中文、
+   副标题放英文。后来中文态的副标题与品牌名撞成同一句话（截图里的「重影」），
+   2026-10-01 起改为品牌名本身随语言切换，副标题已从模板移除。
    ========================================================================== */
 (function () {
   var root = document.documentElement;
   var langBtn = document.getElementById('langBtn');
   var themeBtn = document.getElementById('themeBtn');
-  var sub = document.getElementById('markSub');
+  var name = document.getElementById('markName');
 
   // 页面若完全没有任何 [data-en] 节点，说明该页只有中文内容；
   // 此时移除语言按钮，而不是留一个点了没反应的开关。
@@ -24,9 +28,9 @@
     var en = lang === 'en';
     root.lang = en ? 'en' : 'zh-CN';
     if (langBtn) langBtn.textContent = en ? '中文' : 'EN';
-    if (sub) {
-      var text = en ? sub.dataset.enSub : sub.dataset.zhSub;
-      if (text) sub.textContent = text;
+    if (name) {
+      var text = en ? name.dataset.enName : name.dataset.zhName;
+      if (text) name.textContent = text;
     }
     try { localStorage.setItem('specul-lang', en ? 'en' : 'zh'); } catch (e) {}
   }
