@@ -516,7 +516,7 @@ dl.axes { margin: 0; }
 /* 2026-10-03：原 clamp(2rem,5vw,3.4rem) → 3.4rem = 54.4px（非整数）。
    接入全站 --display-sub 档，与其它站同一尺度。 */
 .h1 { font-size: var(--display-sub); line-height: 1.1; margin: 0 0 .75rem; }
-.lede { font-size: 15px; color: var(--ink-mid); max-width: 62ch; margin: 0 0 .5rem; }
+.lede { font-size: 15px; color: var(--ink-mid); max-width: var(--measure); margin: 0 0 .5rem; }
 .dim { opacity: .8; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
