@@ -7,33 +7,11 @@
    原则：内容层不定义字号、颜色、间距——那些只看 brand.css。
    ========================================================================== */
 
-/* ─────────────────────────────────────────────────────────────
-   站点强调色 · nav 导航 — 绿（索引、检索）
-   暗色绿配深色前景 8.0:1；亮色绿配白字 5.4:1
-   暗色主题下强调色很亮，配白字只有 1.6~1.7:1（按钮会糊），
-   所以 --brand-on 用深色前景；亮色主题用深强调色 + 白字。
-   ⚠ 只改这四个变量。中性色与间距必须继承 brand.css ——
-     各站 site.css 的头注释就是这么约定的，改中性色会让六站脱钩。
-   ───────────────────────────────────────────────────────────── */
-
-html:not([data-theme="light"]) {
-  --brand: #5ddc9a;
-  --brand-on: #04210f;
-  --brand-soft: rgba(93, 220, 154, .14);
-  --brand-line: rgba(93, 220, 154, .34);
-}
-
-html[data-theme="light"] {
-  --brand: #0f7a52;
-  --brand-on: #ffffff;
-  --brand-soft: rgba(15, 122, 82, .10);
-  --brand-line: rgba(15, 122, 82, .30);
-}
-
-
 /* ── 旧类名 → 新设计系统的桥接 ────────────────────────────────────────── */
 .hero {
-  padding: var(--sp-7) 0 var(--sp-6);
+  /* 2026-10-03：原--sp-7(80) 0 --sp-6(52) → 留白实测 80/52，
+     与 www(40) / models(32) 不同档。改用 --section-pad 体系，全站同一节奏。 */
+  padding: calc(var(--section-pad) * 2) 0 var(--section-pad);
   border-bottom: 0;
 }
 .kicker {
@@ -62,7 +40,7 @@ h1 {
   font-variant-numeric: tabular-nums; margin-right: 3px;
 }
 
-.section { padding-block: var(--sp-6); border-top: 1px solid var(--line); }
+.section { padding-block: var(--section-pad); border-top: 1px solid var(--line); }
 .section:first-of-type { border-top: 0; }
 .section > h2 {
   font-size: var(--fs-xl); font-weight: 700;
@@ -424,7 +402,7 @@ th.w-28 { width: 112px; } th.w-52 { width: 208px; }
 .block-head .t-section-lead { margin-bottom: var(--sp-3); }
 
 /* ── 详情页 ────────────────────────────────────────────────────────── */
-.detail { padding-block: var(--sp-6) var(--sp-7); }
+.detail { padding-block: var(--section-pad) calc(var(--section-pad) * 1.5); }
 .back {
   font-size: var(--fs-xs); color: var(--ink-dim);
   display: inline-flex; align-items: center; gap: 6px;
@@ -434,8 +412,10 @@ th.w-28 { width: 112px; } th.w-52 { width: 208px; }
 .detail-head { display: flex; align-items: flex-start; gap: var(--sp-3); margin-bottom: var(--sp-4); }
 .detail-head .mark { width: 52px; height: 52px; font-size: 20px; border-radius: 13px; }
 .detail-head h1 {
-  font-size: var(--fs-2xl); line-height: var(--lh-tight);
-  font-weight: 800; letter-spacing: -.028em; margin: 0 0 4px;
+  /* 2026-10-03：原 --fs-2xl(30px) → 实测详情页 h1 仅 30px，而首页 66px，差 2.2 倍。
+     这条规则特异性 (0,1,1) 高于 brand.css 的裸 h1，所以必须在这里改才生效。 */
+  font-size: var(--display-sub); line-height: var(--lh-tight);
+  font-weight: 800; letter-spacing: -.028em; margin: 0 0 var(--sp-2);
 }
 .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: var(--sp-5); }
 .badge {
