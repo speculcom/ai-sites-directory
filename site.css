@@ -614,6 +614,16 @@ dl.axes { margin: 0; }
 .card:hover { transform: translateY(-2px); border-color: var(--cyan, #22d3c5); }
 .c-ic { font-size: 18px; line-height: 1; }
 .c-nm { font-weight: 500; font-size: 15px; }
+/* 产品名后的官方英文名（2026-10-04）
+   这批是中国产品，英文页面上**保留中文名并并列官方英文名**，不做意译。
+   用 <i> 但不用 font-style: italic —— 斜体在中文旁边很跳，
+   改成常规字重 + 弱化色，靠层级而非字形区分。 */
+.c-nm-en {
+  font-style: normal; font-weight: 400; font-size: 12px;
+  color: var(--ink-dim); margin-left: 6px;
+}
+/* 英文态下英文名跟在中文名后面，两个都要留 —— 用户认的是官方中文名 */
+html[data-lang="en"] .c-nm-en { color: var(--ink-faint); }
 .c-ds { font-size: 13px; color: var(--ink-mid); line-height: 1.5; }
 .c-tg { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: auto; padding-top: .4rem; }
 .c-tg i {
