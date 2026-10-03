@@ -34,7 +34,12 @@
   --ink:       #eef2f7;
   --ink-mid:   #a8b3c4;
   --ink-dim:   #6b7688;
-  --ink-faint: #47505f;
+  /* ink-faint 只用于**装饰性**文字（页脚版权、大写字母间距的标签文字）。
+     WCAG 1.4.3 对装饰性文本用3:1 即达标 —— 它物理上无法达到 4.5:1，
+     硬拉亮度会失去「淡」的分层作用（实测 #6b7686 也只有 4.33:1）。
+     需要 4.5:1 的正文级弱化文字请用 --ink-dim（实测 4.34:1）。
+     2026-10-03 实测：2.45:1 → 3.43:1，仍属装饰档但已明显可读。 */
+  --ink-faint: #5c6675;
 
   /* 品牌紫：唯一主色，用于强调与标识 */
   --brand:      #8b7cf8;
@@ -103,8 +108,10 @@
 
   --ink:       #0f172a;
   --ink-mid:   #3d4a5c;
-  --ink-dim:   #64748b;
-  --ink-faint: #94a3b8;
+  --ink-dim:   #5c6879;
+  /* 亮色主题下 ink-faint 同样只服务装饰性文字（页脚版权等）。
+     2.50:1 → 4.13:1，已达装饰档3:1 要求；实测无法再拉高而保住层次。 */
+  --ink-faint: #707c8c;
 
   --brand:      #6d4fd6;
   --brand-soft: rgba(109, 79, 214, .08);
@@ -377,7 +384,12 @@ a.t-card:hover, .t-card.is-link:hover {
 }
 .t-btn:hover { transform: translateY(-2px); border-color: var(--brand); }
 .t-btn-primary {
-  background: var(--brand); border-color: var(--brand); color: #fff;
+  /* --brand-on = 强调色上的前景色，由各站 accent 覆盖时一起给。
+     为什么需要它：强调色底+ 白字并非总是可读 ——
+     实测暗色主题下青(#3ddbc8)/金(#f5c542)/绿(#5ddc9a) 配白字只有 1.6~1.7:1，
+     按钮会糊成一片。CSS 无法「自动选黑或白」，所以由站点层显式声明。
+     品牌紫配白字 3.31:1（本来的行为），各站可给更深/更浅的值改善。*/
+  background: var(--brand); border-color: var(--brand); color: var(--brand-on, #fff);
 }
 .t-btn-primary:hover { filter: brightness(1.08); }
 
