@@ -81,20 +81,88 @@
 
   var lang = 'zh';
   var theme = 'dark';
-  try { lang = localStorage.getItem('specul-lang') || 'zh'; } catch (e) {}
-  try { theme = localStorage.getItem('specul-theme') || 'dark'; } catch (e) {}
+  // ⚠ 语言来源的优先级：**URL 参数 > localStorage**（2026-10-03 修）。
+  //
+  // 为什么必须有 URL 参数：localStorage 是**按 origin 隔离**的
+  // （实测：在 127.0.0.1:4321 写入，换到 :4322 读回来是 null ——
+  //   浏览器规范，不是沙箱限制）。而 6 个站是 6 个不同域名，
+  //   于是「在 agent 站切到英文 → 点进 learn 站」会退回中文。
+  //   localStorage 只能记住**本域名内**的偏好，跨站必须靠 URL 携带。
+  //
+  // 跨站链接由 appendLang() 自动加 ?lang=，所以这条优先级保证：
+  //   在任何站切到英文 → 点别的站 → 还是英文；切到中文 → 点别的站 → 还是中文。
+  var qs = '';
+  try { qs = location.search || ''; } catch (e) {}
+  var qLang = (/(?:^|[?&])lang=(zh|en)(?:&|$)/.exec(qs) || [])[1];
+  if (qLang) {
+    lang = qLang;
+    // 回写本域偏好，这样本页后续切回时不必再依赖 URL
+    try { localStorage.setItem('specul-lang', lang); } catch (e) {}
+  } else {
+    try { lang = localStorage.getItem('specul-lang') || 'zh'; } catch (e) {}
+  }
+  // 同理：主题也跨站保持（顺手统一，避免两个开关行为不一致）
+  var qTheme = (/(?:^|[?&])theme=(dark|light)(?:&|$)/.exec(qs) || [])[1];
+  if (qTheme) {
+    theme = qTheme;
+    try { localStorage.setItem('specul-theme', theme); } catch (e) {}
+  } else {
+    try { theme = localStorage.getItem('specul-theme') || 'dark'; } catch (e) {}
+  }
 
   applyLang(lang);
   applyTheme(theme);
 
+  // 跨站链接自动带上当前语言与主题。
+  //
+  // 为什么必须**运行时统一处理**而不是在模板里写死 href：
+  // agent 站有 429 处跨站链接（grep 实测），逐个手写 ?lang= 一定会漏；
+  // 而漏掉的那些正是「点了语言变回中文」的症状来源。
+  //
+  // 判据：凡 host 属于 *.specul.com 就加。站内同域链接不加（保持 URL 干净）。
+  // 加之前先剥掉已有的 lang/theme，避免切语言时叠加出 ?lang=en&lang=zh。
+  function appendParams() {
+    var qs = '';
+    try { qs = location.search || ''; } catch (e) {}
+    var qLang = (/(?:^|[?&])lang=(zh|en)(?:&|$)/.exec(qs) || [])[1];
+    var qTheme = (/(?:^|[?&])theme=(dark|light)(?:&|$)/.exec(qs) || [])[1];
+    var curLang = qLang || (root.getAttribute('data-lang') === 'en' ? 'en' : 'zh');
+    var curTheme = qTheme || (root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+    var host = location.hostname;
+    var endsWithSpecul = /(^|\.)specul\.com$/.test(host) || host === 'specul.com';
+    var links = document.querySelectorAll('a[href]');
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i];
+      var href = a.getAttribute('href') || '';
+      if (!href || href.charAt(0) === '#') continue;
+      var u;
+      try { u = new URL(href, location.href); } catch (e) { continue; }
+      // 只处理跨站（specul.com 家族内、但 host 不同）的链接
+      var targetIsSpecul = /(^|\.)specul\.com$/.test(u.hostname);
+      if (!targetIsSpecul) continue;
+      if (u.hostname === host) continue;
+      if (!endsWithSpecul) {
+        // 本地开发（127.0.0.1 / localhost）也照样加，便于用探针验证行为
+      }
+      u.searchParams.set('lang', curLang);
+      u.searchParams.set('theme', curTheme);
+      a.setAttribute('href', u.toString());
+    }
+  }
+  appendParams();
+
   if (langBtn) {
     langBtn.addEventListener('click', function () {
       applyLang(root.lang === 'en' ? 'zh' : 'en');
+      // 切换后必须重算跨站链接参数 ——
+      // 否则链接上仍是切之前的 ?lang=，点了别的站语言又跳回去。
+      appendParams();
     });
   }
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
       applyTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+      appendParams();
     });
   }
 })();
