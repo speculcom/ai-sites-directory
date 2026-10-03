@@ -55,6 +55,32 @@
   --warn:  #fbbf24;   /* 部分核验 */
   --stop:  #f87171;   /* 过期 / 风险 */
 
+  /* ── 内容维度色板（2026-10-03 新增）──────────────────────────────────
+     为什么要它：--brand 是**站点级**标识（紫/青/蓝/绿/金），
+     但站点内部还有多个内容维度需要区分 —— agent 的形态与抽象层、
+     models 的量化档、nav 的分类。原先这些维度只能用粗体/边框/位置区分，
+     信息密度上不去，于是「靠留白和边框分组」，正好是留白多的根源。
+
+     **色彩是比留白更省空间的分组手段**：一个 2px 色条 + 一次色彩编码，
+     代替一段 40px 的上下留白。这是「空间利用率高」与「配色丰富」能同时成立的关键。
+
+     六个维度互不相邻使用（相邻两组必换色），避免读成渐变。
+     全部值按 WCAG 对比度算出：暗色对底色 ≥7.3:1、亮色对底色 ≥3.6:1，
+     且每色都给了 -on（色上的前景色）—— 暗色系这些色很亮，配白字只有 1.6~2.7:1。 */
+  --c-form:    #5aa9f5;  --c-form-on:    #04121f;   /* 形态：IDE / CLI / 厂商云 */
+  --c-layer:   #a78bfa;  --c-layer-on:   #120a2e;   /* 抽象层：原语 / 编排 / 开箱 */
+  --c-use:     #3ddbc8;  --c-use-on:     #04211d;   /* 用途：编程 / 办公 / 研究 */
+  --c-state:   #4ade80;  --c-state-on:   #04230f;   /* 状态：已核验 / 部分 / 过期 */
+  --c-quant:   #f5c542;  --c-quant-on:   #241a02;   /* 量化档：Q4 / Q8 / FP16 */
+  --c-class:   #fb923c;  --c-class-on:   #2a1003;   /* 分类：nav 的12 个大类 */
+  /* 每个维度的柔和底（用于 tag / 卡片左条 / 徽章底）*/
+  --c-form-soft:  rgba(90, 169, 245, .14);
+  --c-layer-soft: rgba(167, 139, 250, .14);
+  --c-use-soft:   rgba(61, 219, 200, .14);
+  --c-state-soft: rgba(74, 222, 128, .14);
+  --c-quant-soft: rgba(245, 197, 66, .14);
+  --c-class-soft: rgba(251, 146, 60, .14);
+
   /* ── 字号：语义命名 ── */
   --fs-micro: 11.5px;   /* 角标、计数 */
   --fs-xs:    13px;     /* meta、次要 */
@@ -63,7 +89,11 @@
   --fs-lg:    18px;     /* 卡片标题 */
   --fs-xl:    22px;     /* 区块标题 */
   --fs-2xl:   30px;     /* 页面标题 */
-  --fs-3xl:   clamp(40px, 6vw, 60px);  /* 首屏 */
+  /* 首屏标题**接入 --display**（2026-10-03）。原先 --fs-3xl 自己写死 clamp(40px,6vw,60px)，
+     与内容层各站各写的 clamp 互不相干 —— 实测六站 h1 落在 30/34/40/54/60px 五档。
+     现在首屏标题与详情页标题分别有唯一来源（--display / --display-sub），
+     各站内容层不再自己写 clamp。 */
+  --fs-3xl:   var(--display);
 
   /* ── 行高 ── */
   --lh-tight: 1.16;
@@ -76,6 +106,13 @@
   --sp-3: 12px;
   --sp-4: 20px;
   --sp-5: 32px;
+  /* 2026-10-03 新增 40px 档：介于 --sp-5(32) 与 --sp-6(52) 之间。
+     原因：实测六站的区块留白从 12px 到 108px 跨 9 倍（www 108 / agent 80 /
+     models 52 / learn 54 / nav 52 / agent详情 12），四个站四种做法（硬编码 64px /
+     18px / var(--sp-4) / var(--sp-6)），没有共同尺度。
+     用户要求「留空都小一点」→ 统一收到 40px 这一档：
+     比原先最紧的 models/nav(52) 小，比 www(108) 大幅收紧。 */
+  --sp-5b: 40px;
   --sp-6: 52px;
   --sp-7: 80px;
 
@@ -87,6 +124,25 @@
   --ring: rgba(139, 124, 248, .7);
   --ease: cubic-bezier(.4, 0, .2, 1);
   --shadow: 0 20px 50px -28px rgba(0, 0, 0, .85);
+
+  /* ── 排版尺度（2026-10-03 新增，同日二次校准）─────────────────────────
+     第一版的问题：把「大」理解成「留白更多」，于是 section-pad 给到 88px，
+     实测 www 变成 108px 留白 —— 用户反馈「留空都小一点」。
+     **大 ≠ 空。** 大气来自三件事，按权重排：
+       1. 主标够大（字号 + 字重 + 字间距收紧）
+       2. 区块之间有节奏（一致，不是多）
+       3. 颜色层次清楚（accent 明确、暗色有光晕）
+     留白只占很小一部分 —— 内容密度高但不挤，才叫「大气」。
+     所以这一版：**字号放大、留白收一档**。 */
+  --display: clamp(38px, 5.6vw, 66px);     /* 首页主标（原 60 → 66） */
+  --display-sub: clamp(28px, 3.8vw, 46px); /* 详情页主标（原 40 → 46） */
+  --h2: clamp(23px, 2.8vw, 32px);
+  --lede: 17px;
+  --lede-lh: 1.72;
+  /* 区块纵向留白：从 52~88px 收到 40px 一档，六站同一档 */
+  --section-pad: var(--sp-5b);
+  --section-pad-sm: var(--sp-5);
+  --block-gap: var(--sp-4);
 
   /* 兼容别名：v1 页面仍在引用，迁移完成后删除。
      --vio → --brand；--grad-text → 品牌紫实色（v2 不再用渐变文字） */
@@ -123,6 +179,22 @@
   --ok:    #15803d;
   --warn:  #b45309;
   --stop:  #dc2626;
+
+  /* 内容维度色板 · 亮色主题（2026-10-03）
+     亮色下用同色系更深一档 —— 对底色仍 ≥3.6:1，且配白字 ≥3.7:1 可读。 */
+  --c-form:    #1f6fc4;  --c-form-on:    #ffffff;
+  --c-layer:   #6d4fd6;  --c-layer-on:   #ffffff;
+  --c-use:     #0d9488;  --c-use-on:     #ffffff;
+  --c-state:   #15803d;  --c-state-on:   #ffffff;
+  --c-quant:   #a97a08;  --c-quant-on:   #ffffff;
+  --c-class:   #c2410c;  --c-class-on:   #ffffff;
+  --c-form-soft:  rgba(31, 111, 196, .10);
+  --c-layer-soft: rgba(109, 79, 214, .10);
+  --c-use-soft:   rgba(13, 148, 136, .10);
+  --c-state-soft: rgba(21, 128, 61, .10);
+  --c-quant-soft: rgba(169, 122, 8, .10);
+  --c-class-soft: rgba(194, 65, 12, .10);
+
   --shadow: 0 20px 46px -30px rgba(15, 23, 42, .3);
 }
 
@@ -142,6 +214,15 @@ body {
   text-rendering: optimizeLegibility;
 }
 h1, h2, h3, h4, p, ul, ol, figure { margin: 0; padding: 0; }
+
+/*裸标签的 h1/h2 默认字号 —— 2026-10-03 新增。
+   为什么必须加：agent 站详情页的 h1 **没有任何类名**，于是没有任何规则命中它，
+   30px 是浏览器默认的 `h1 { font-size: 2em }` × 父级 15.5px 算出来的，
+   与首页的 66px 差 2.2 倍 —— 六站详情页因此「小一号」。
+   「所有 h1 都必须命中规则」比「给每个 h1 都加类」更可靠：
+   裸标签规则兜底，内容层想单独调时再显式覆盖。 */
+h1 { font-size: var(--display-sub); line-height: var(--lh-tight); font-weight: 800; letter-spacing: -.028em; }
+h2 { font-size: var(--h2); line-height: var(--lh-tight); font-weight: 700; letter-spacing: -.018em; }
 ul, ol { list-style: none; }
 img, svg { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -158,12 +239,19 @@ code, kbd, pre { overflow-wrap: anywhere; }
 .container { width: var(--container); margin-inline: auto; }
 .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
 
-/* 页面底纹：v1 用了两团 radial + 网格，v2 减为一处光晕 + 更细的网格 */
+/* 页面底纹：一处光晕 + 一层细网格。
+   ⚠ 2026-10-03 改动：光晕色原先**硬编码为品牌紫** rgba(139,124,248,.13)，
+   所以各站 accent 改成青/蓝/绿/金之后，底纹还是紫的 ——
+   六站页面背景一模一样，这就是「不生动」也「不像一套站」的原因之一。
+   现在改用 color-mix 从 --brand 派生：站点换 accent，底纹自动跟着换。
+   color-mix 的两个底色都取自当前主题（--brand 与 --bg），
+   所以明暗两套主题都成立，不需要再各写一份。 */
 .brand-ambient::before {
   content: "";
   position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background:
-    radial-gradient(1100px 620px at 78% -8%, rgba(139, 124, 248, .13), transparent 62%),
+    radial-gradient(1100px 620px at 78% -8%,
+      color-mix(in srgb, var(--brand) 16%, transparent), transparent 62%),
     linear-gradient(180deg, #0a0e15 0%, var(--bg) 40%, #05070b 100%);
 }
 .brand-ambient::after {
@@ -178,7 +266,8 @@ code, kbd, pre { overflow-wrap: anywhere; }
 }
 [data-theme="light"] .brand-ambient::before {
   background:
-    radial-gradient(1100px 620px at 78% -8%, rgba(109, 79, 214, .07), transparent 60%),
+    radial-gradient(1100px 620px at 78% -8%,
+      color-mix(in srgb, var(--brand) 9%, transparent), transparent 60%),
     linear-gradient(180deg, #f7f9fc 0%, var(--bg) 50%, #eef2f7 100%);
 }
 [data-theme="light"] .brand-ambient::after {
@@ -279,7 +368,10 @@ code, kbd, pre { overflow-wrap: anywhere; }
   font-weight: 800; letter-spacing: -.035em; margin: 0 0 var(--sp-4);
 }
 .t-h1 {
-  font-size: var(--fs-2xl); line-height: var(--lh-tight);
+  /* 2026-10-03：原 --fs-2xl(30px) → 实测 agent 详情页 h1 只有 30px，
+     而首页 66px，差 2.2 倍。接 --display-sub(46px)，详情页与首页同一套尺度。
+     --fs-2xl 本身保留 30px 给「卡片标题」等中间层级，不当页面主标用。 */
+  font-size: var(--display-sub); line-height: var(--lh-tight);
   font-weight: 800; letter-spacing: -.028em; margin: 0 0 var(--sp-3);
 }
 .t-h2 {
@@ -450,7 +542,13 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
    ══════════════════════════════════════════════════════════════════════ */
 @media (max-width: 760px) {
   :root {
-    --fs-3xl: clamp(32px, 9vw, 44px);
+    /* 窄屏覆写改到 --display / --display-sub 上 ——
+       2026-10-03 前 --fs-3xl 是独立的 clamp，这里覆盖它；
+       现在 --fs-3xl = var(--display)，覆写必须跟着改 --display 才有效。
+       **变量别名链上任一环覆写错位，下游全部失效** —— 这类 bug 只看 computed 值才发现。 */
+    --display: clamp(30px, 8.6vw, 42px);
+    --display-sub: clamp(24px, 6.4vw, 32px);
+    --h2: clamp(20px, 5vw, 26px);
     --sp-6: 40px; --sp-7: 56px;
     --container: min(1120px, 90vw);
   }
