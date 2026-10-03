@@ -20,7 +20,7 @@
   color: var(--ink-faint); margin: 0 0 var(--sp-3);
 }
 .kicker::before {
-  content: ""; width: 14px; height: 2px; border-radius: 2px;
+  content: ""; width: 14px; height: 2px; border-radius:var(--r-xs);
   background: var(--accent, var(--brand)); flex-shrink: 0;
 }
 h1 {
@@ -72,7 +72,7 @@ h1 {
   padding: var(--sp-3) var(--sp-4);
   border: 1px solid var(--line);
   border-left: 2px solid var(--accent, var(--brand));
-  border-radius: 3px;
+  border-radius:var(--r-xs);
   background: var(--bg-raise);
 }
 .guide-q {
@@ -188,7 +188,7 @@ h1 {
   width: 38px; height: 38px; flex-shrink: 0;
   display: grid; place-items: center;
   font-size: 15px; font-weight: 700; letter-spacing: -.01em;
-  border-radius: 10px;
+  border-radius:var(--r-sm);
   color: var(--card-accent, var(--accent, var(--brand)));
   background: color-mix(in srgb, var(--card-accent, var(--accent, var(--brand))) 13%, transparent);
   border: 1px solid color-mix(in srgb, var(--card-accent, var(--accent, var(--brand))) 32%, transparent);
@@ -262,7 +262,7 @@ h1 {
 }
 .panel code {
   font-size: .92em; background: var(--bg-inset);
-  padding: 1px 5px; border-radius: 4px; color: var(--ink);
+  padding: 1px 5px; border-radius:var(--r-xs); color: var(--ink);
 }
 
 /* ── 相关条目 ────────────────────────────────────────────────────────
@@ -301,7 +301,7 @@ table.src a { color: var(--accent, var(--brand)); word-break: break-all; }
 table.src a:hover { text-decoration: underline; }
 .td-mark {
   display: inline-grid; place-items: center;
-  width: 22px; height: 22px; border-radius: 6px;
+  width: 22px; height: 22px; border-radius:var(--r-sm);
   font-size: 11px; font-weight: 700; vertical-align: -5px; margin-right: 8px;
   color: var(--card-accent, var(--accent, var(--brand)));
   background: color-mix(in srgb, var(--card-accent, var(--accent, var(--brand))) 14%, transparent);
@@ -313,7 +313,7 @@ td a:hover { color: var(--accent, var(--brand)); }
 .td-fit { color: var(--ink-dim); font-size: var(--fs-xs); line-height: 1.6; min-width: 190px; }
 .td-conf {
   display: inline-block; font-size: var(--fs-micro);
-  padding: 2px 8px; border-radius: 4px;
+  padding: 2px 8px; border-radius:var(--r-xs);
   border: 1px solid var(--line); color: var(--ink-dim); white-space: nowrap;
 }
 .td-conf.verified { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 36%, transparent); }
@@ -410,7 +410,7 @@ th.w-28 { width: 112px; } th.w-52 { width: 208px; }
 }
 .back:hover { color: var(--accent, var(--brand)); }
 .detail-head { display: flex; align-items: flex-start; gap: var(--sp-3); margin-bottom: var(--sp-4); }
-.detail-head .mark { width: 52px; height: 52px; font-size: 20px; border-radius: 13px; }
+.detail-head .mark { width: 52px; height: 52px; font-size: 20px; border-radius:var(--r); }
 .detail-head h1 {
   /* 2026-10-03：原 --fs-2xl(30px) → 实测详情页 h1 仅 30px，而首页 66px，差 2.2 倍。
      这条规则特异性 (0,1,1) 高于 brand.css 的裸 h1，所以必须在这里改才生效。 */
@@ -419,7 +419,7 @@ th.w-28 { width: 112px; } th.w-52 { width: 208px; }
 }
 .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: var(--sp-5); }
 .badge {
-  font-size: var(--fs-micro); padding: 4px 10px; border-radius: 6px;
+  font-size: var(--fs-micro); padding: 4px 10px; border-radius:var(--r-sm);
   border: 1px solid var(--line); color: var(--ink-dim);
 }
 .badge.accent {
@@ -449,7 +449,7 @@ th.w-28 { width: 112px; } th.w-52 { width: 208px; }
 }
 .axis dd code {
   background: var(--bg-inset); padding: 1px 5px;
-  border-radius: 4px; font-size: .92em;
+  border-radius:var(--r-xs); font-size: .92em;
 }
 dl.axes { margin: 0; }
 
@@ -509,7 +509,9 @@ dl.axes { margin: 0; }
 
 
 /* ===== 硅基导航 · 目录站特有 ===== */
-.hero { padding-top: 3rem; }
+/* 2026-10-03：原 padding-top: 3rem(48px) + 后续 .cat-group 的 --section-pad(40px)
+   叠加 → 实测首屏空白带 176px（y=296~472）。改用全站同一档。 */
+.hero { padding: var(--section-pad) 0 var(--sp-3); }
 .eyebrow { font-size: 12px; letter-spacing: .18em; color: var(--ink-mid); margin: 0 0 .5rem; }
 /* 2026-10-03：原 clamp(2rem,5vw,3.4rem) → 3.4rem = 54.4px（非整数）。
    接入全站 --display-sub 档，与其它站同一尺度。 */
@@ -518,10 +520,13 @@ dl.axes { margin: 0; }
 .dim { opacity: .8; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
-.controls { margin: 1.5rem 0 2rem; }
+/* 筛选区 —— 2026-10-03：原margin: 1.5rem 0 2rem（56px）+
+   section的 padding-top 40px = 96px，实测首屏空白带 152px。
+   筛选区属于「工具条」而非内容区块，不该吃内容区块的留白档。 */
+.controls { margin: var(--sp-3) 0 var(--sp-4); }
 #q {
   width: 100%; max-width: 460px; padding: .7rem .9rem; font: inherit;
-  border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius: 10px;
+  border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius:var(--r-sm);
   background: var(--bg-raise, rgba(127,127,127,.08)); color: inherit;
 }
 #q:focus-visible { outline: 2px solid var(--cyan, #22d3c5); outline-offset: 2px; }
@@ -561,10 +566,15 @@ dl.axes { margin: 0; }
 }
 
 .cat-group { margin: var(--section-pad) 0; }
+/* 第一个分组紧跟 hero，属于同一组内容，不该再吃一份 40px 上边距 —— */
+.chips + .cat-group { margin-top: var(--sp-3); }
 .cat-h { display: flex; align-items: center; gap: .6rem; font-size: var(--fs-xl); margin: 0 0 var(--sp-2); }
 .cat-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--cat-c, var(--accent)); flex-shrink: 0; }
 .cat-h em { font-style: normal; font-size: var(--fs-micro); opacity: .6; font-variant-numeric: tabular-nums; }
-.cat-sub { margin: 0 0 var(--sp-3); font-size: var(--fs-sm); color: var(--ink-mid); }
+/* 分组说明紧贴卡片组 —— 现代派判据：标题与它所辖内容之间不留空带。
+   原 margin-bottom: var(--sp-3) 叠加 grid 行gap 后，
+   .cat-sub 与首行卡片之间实测隔 152px（y=288~440），分组感被空白冲淡。 */
+.cat-sub { margin: var(--sp-1) 0 var(--sp-2); font-size: var(--fs-sm); color: var(--ink-mid); }
 /* 分类色板：11 个分类用 6 组色，按「两组错位」分配 ——
    直接 i%6 会让第 1 与第 7 个分类撞色且**相邻出现**，读起来像渐变。
    这里 A=[0..5]、B=[3,4,5,0,1,2]（旋转 3 位），保证任两个相邻分类都不同色。 */
@@ -596,7 +606,7 @@ dl.axes { margin: 0; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: .85rem; }
 .card {
   display: flex; flex-direction: column; gap: .35rem;
-  padding: .9rem 1rem; border-radius: 12px; text-decoration: none; color: inherit;
+  padding: .9rem 1rem; border-radius:var(--r); text-decoration: none; color: inherit;
   border: 1px solid var(--border, rgba(127,127,127,.28));
   background: var(--bg-panel, rgba(127,127,127,.06));
   transition: transform .18s ease, border-color .18s ease;
