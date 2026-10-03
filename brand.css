@@ -174,7 +174,21 @@
   --r:    12px;   /* 卡片（主体，最常用） */
   --r-lg: 18px;   /* 大面板、对话框、modal */
   --container: min(1120px, 90vw);
+
+  /* ── 行宽（2026-10-03 新增）──────────────────────────────────────────
+     为什么不能用 ch：1ch = 数字「0」的宽度（约 0.5em），而**汉字是全角 1em = 2ch**。
+     所以 max-width: 60ch 实际只放得下 30 个汉字 —— 实测 www 的 hero-sub 被卡在
+     612px、agent 的 lede 被卡在 550px，用户报「大字不停换行、内容集中在左侧、
+     宽屏横向没占满」。这不是排版失误，是**用西文单位约束中文**。
+
+     新规则：用 em 明确「一行放多少汉字」，并随视口放宽。
+     取值按正文 15px × 汉字数 算出，不是拍脑袋：
+       40em = 600px ≈ 40 汉字（窄屏一行，超出换行）
+       46em = 690px ≈ 46 汉字（宽屏一行，密度合适不至于一行太长） */
+  --measure: 40em;        /* 正文行宽上限 */
+  --measure-wide: 34em;   /* 导语行宽上限（17px 字号下 ≈ 40 汉字） */
   --ring: rgba(139, 124, 248, .7);
+
   --ease: cubic-bezier(.4, 0, .2, 1);
   --shadow: 0 20px 50px -28px rgba(0, 0, 0, .85);
 
@@ -203,6 +217,29 @@
   --grad-text: var(--brand);
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
+
+
+
+  /* 宽屏放宽行宽：容器已封顶 1120px，所以在容器内把行宽放开一档 */
+  @media (min-width: 1600px) {
+    :root { --measure: 46em; --measure-wide: 40em; }
+  }
+/* 超宽屏（≥2200px）再放宽一档：容器已经到 1720px，
+   行宽若不跟着放，导语会只占容器 1/3（实测 2560 下 36%）。 */
+@media (min-width: 2200px) {
+    :root { --measure: 54em; --measure-wide: 48em; }
+  }
+
+/* ── 宽屏容器分档（2026-10-03）──────────────────────────────────────
+   原值 min(1120px, 90vw) 在 1440 以上就封顶 —— 实测 1920 与 2560 视口下
+   容器都是 1120px，超宽屏右侧白留400~720px，用户报「横向没占满」。
+   现在按视口分档放开。每档都留出可读行长（正文约 40~48 汉字/行），
+   不会把一行拉到 2000px 那种「一行到底」的难读形态。
+   分档而不是连续公式：连续 min() 在中间尺寸会算出奇怪的中间值。 */
+@media (min-width: 1560px) { :root { --container: min(1320px, 88vw); } }
+@media (min-width: 1800px) { :root { --container: min(1480px, 86vw); } }
+@media (min-width: 2200px) { :root { --container: min(1720px, 82vw); } }
+@media (min-width: 2800px) { :root { --container: min(2000px, 78vw); } }
 
 /* 浅色：不是把暗色反过来，是重新给一套值 */
 [data-theme="light"] {
@@ -443,7 +480,7 @@ code, kbd, pre { overflow-wrap: anywhere; }
   font-size: var(--fs-lg); line-height: var(--lh-snug);
   font-weight: 650; margin: 0;
 }
-.t-lede { font-size: 17px; line-height: var(--lh-body); color: var(--ink-mid); max-width: 60ch; margin: 0; }
+.t-lede { font-size: 17px; line-height: var(--lh-body); color: var(--ink-mid); max-width: var(--measure-wide); margin: 0; }
 .t-sm { font-size: var(--fs-sm); line-height: 1.68; color: var(--ink-mid); }
 .t-xs { font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-dim); }
 
@@ -464,7 +501,7 @@ code, kbd, pre { overflow-wrap: anywhere; }
 .t-section:first-of-type { border-top: 0; }
 .t-section-lead {
   font-size: var(--fs-sm); line-height: var(--lh-body);
-  color: var(--ink-dim); max-width: 68ch; margin: 0 0 var(--sp-5);
+  color: var(--ink-dim); max-width: var(--measure); margin: 0 0 var(--sp-5);
 }
 
 /* ══════════════════════════════════════════════════════════════════════
