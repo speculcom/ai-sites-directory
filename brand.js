@@ -27,7 +27,25 @@
   function applyLang(lang) {
     var en = lang === 'en';
     root.lang = en ? 'en' : 'zh-CN';
-    if (langBtn) langBtn.textContent = en ? '中文' : 'EN';
+    // ⚠ data-lang 必须一起设（2026-10-03 修）。
+    // brand.css 的语言显隐完全靠这个属性：
+    //   html[data-lang="en"] [data-zh] { display: none !important; }
+    //   html[data-lang="en"] [data-en] { display: revert !important; }
+    // 而原来的实现只设了 root.lang —— 于是 data-lang 永远是 null，
+    // **全站 6 个站的英文态都仍在显示中文内容**，切换看着「只换了品牌名」。
+    // 为什么之前没被发现：单看品牌名确实变了，而正文没变容易被当成
+    // 「页面本来就这样」。凡是 CSS 用属性选择器做显隐，JS 就必须同步写该属性。
+    root.setAttribute('data-lang', en ? 'en' : 'zh');
+    // 语言按钮文案**刻意用单字「中」**（2026-10-03 用户定案）。
+    // 原实现英文态显示「EN」、中文态显示「中文」—— 两个汉字的宽度把
+    // .nav-tools 撑开，破坏顶部导航的布局（窄屏更明显）。
+    // 按钮语义是「切到另一种语言」，单字够用；宽度问题由 CSS 兜底
+    // （#langBtn 固定 min-width + 居中，两种文案都不会位移）。
+    if (langBtn) {
+      langBtn.textContent = en ? '中' : 'EN';
+      langBtn.setAttribute('aria-label', en ? '切换到中文' : 'Switch to English');
+      langBtn.setAttribute('title', en ? '切换到中文' : 'Switch to English');
+    }
     if (name) {
       var text = en ? name.dataset.enName : name.dataset.zhName;
       if (text) name.textContent = text;
