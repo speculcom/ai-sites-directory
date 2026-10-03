@@ -113,7 +113,12 @@
   /* ── 行高 ── */
   --lh-tight: 1.16;
   --lh-snug:  1.42;
-  --lh-body:  1.76;
+  /* 2026-10-03：原 1.76 → 实测全站行高比 1.76，超出「紧凑」判据（1.5~1.7）。
+     收到 1.62（15px 正文 = 24.3px 行高）：中文正文可读性仍好，
+     每行多容纳 1~2 个字，长段落与卡片列表的紧凑感改善最明显。
+     ⚠ 改这个值要同步 brand.css 里硬编码的 1.72 / 1.75（导语与说明段）——
+       它们不引用变量，改了变量它们不会跟着变。 */
+  --lh-body:  1.62;
 
   /* ── 间距（8px 基线）── */
   --sp-1: 4px;
@@ -131,10 +136,43 @@
   --sp-6: 52px;
   --sp-7: 80px;
 
-  /* ── 形状 ── */
-  --r-sm: 8px;
-  --r:    12px;
-  --r-lg: 18px;
+  /* ── 形状 ──
+     2026-10-03 新增 --r-xs 并明确四档的用途。
+     此前实测源码里有 **24 种** border-radius 取值（2/3/4/5/6/7/8/9/10/12/13/14/
+     16/18/20/24px + 99px + 999px + 50% + 4 个已有变量）——
+     圆角没有档位体系，是「不像一套」最直接的来源：
+     同样性质的卡片，一处 4px 一处 9px 一处 13px，眼睛会读成「三个不同组件」。
+     现已把 61 处收敛到这四档（特例 999px 胶囊与 50% 圆形/头像 保留）。 */
+  /* ── 内容层旧别名（2026-10-03 补齐）────────────────────────────────
+     这套命名（--text / --muted / --panel / --bg-soft / --accent …）是 v1 遗留：
+     **从未被定义过**，但内容层有 139 处引用，浏览器一律回退到默认值 ——
+     属于**静默失效**：页面看起来「有点怪」但没有任何报错，只有量computed 值才发现。
+     修法是补别名而不是逐个替换引用（139 处会漏，且以后还会新增）。
+     下面每个别名的右侧值都来自 brand.css 的真实 token，单一真相源不变。 */
+  --text: var(--ink);            /* 正文色 */
+  --text-dim: var(--ink-dim);    /* 弱化正文 */
+  --muted: var(--ink-mid);       /* meta / 说明文字 */
+  --dim: var(--ink-dim);         /* 旧名 --dim */
+  --panel: var(--bg-panel);      /* 卡片底 */
+  --panel-solid: var(--bg-raise);
+  --bg-soft: var(--bg-inset);    /* 柔和底 */
+  --gold: var(--c-quant);        /* 金色强调 → 量化档色 */
+  --accent: var(--brand);        /* 站点 accent */
+  --card-accent: var(--brand);
+  --border: var(--line);
+  --pa: var(--brand-soft);
+  --dc: var(--c-class);          /* nav 分类色变量 */
+  --red: var(--stop);
+  --font: var(--mono);
+  /* --brand-on 的**默认值**（2026-10-03 补）：原先只有各站 accent 块定义它，
+     而 www 站没有 accent 块 → var(--brand-on, #fff) 的 fallback 生效。
+     放在这里让 brand.css 自洽：任何站不定义也能拿到合法值。 */
+  --brand-on: #fff;
+
+  --r-xs: 4px;    /* 徽章、色条、输入框、代码块 */
+  --r-sm: 8px;    /* 标签、chip、按钮 */
+  --r:    12px;   /* 卡片（主体，最常用） */
+  --r-lg: 18px;   /* 大面板、对话框、modal */
   --container: min(1120px, 90vw);
   --ring: rgba(139, 124, 248, .7);
   --ease: cubic-bezier(.4, 0, .2, 1);
@@ -405,7 +443,7 @@ code, kbd, pre { overflow-wrap: anywhere; }
   font-size: var(--fs-lg); line-height: var(--lh-snug);
   font-weight: 650; margin: 0;
 }
-.t-lede { font-size: 17px; line-height: 1.72; color: var(--ink-mid); max-width: 60ch; margin: 0; }
+.t-lede { font-size: 17px; line-height: var(--lh-body); color: var(--ink-mid); max-width: 60ch; margin: 0; }
 .t-sm { font-size: var(--fs-sm); line-height: 1.68; color: var(--ink-mid); }
 .t-xs { font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-dim); }
 
@@ -425,7 +463,7 @@ code, kbd, pre { overflow-wrap: anywhere; }
 .t-section { padding-block: var(--sp-6); border-top: 1px solid var(--line); }
 .t-section:first-of-type { border-top: 0; }
 .t-section-lead {
-  font-size: var(--fs-sm); line-height: 1.72;
+  font-size: var(--fs-sm); line-height: var(--lh-body);
   color: var(--ink-dim); max-width: 68ch; margin: 0 0 var(--sp-5);
 }
 
