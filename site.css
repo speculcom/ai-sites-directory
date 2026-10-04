@@ -629,7 +629,18 @@ html[data-lang="en"] .c-nm-en { color: var(--ink-faint); }
 .c-tg i {
   font-style: normal; font-size: 11px; padding: .1rem .45rem; border-radius: 999px;
   background: rgba(127,127,127,.16); color: var(--ink-mid);
+  display: inline-flex; align-items: baseline; gap: .3em;
 }
+/* 标签的双语：与全站一致用 data-zh / data-en 属性，
+   显隐由 brand.css 的 [data-lang] 规则统一管（不要自己写 display）。
+   ⚠ 之前这里用 <b> 存英文 → brand.css 管不到 → 英文态下中文没隐藏，
+   实测出现「多模态Multimodal」「GPTGPT」。 */
+.c-tg i span { white-space: nowrap; }
+/* 中文态下两者并列（顺带让用户看到英文术语），用间隔符隔开 */
+.c-tg i span[data-zh]::after {
+  content: " ";
+}
+html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
 .c-warn { font-size: 11px; color: var(--red, #e24b4a); }
 .card.is-dead { opacity: .55; }
 .card.is-maybe { opacity: .8; }
