@@ -22,17 +22,29 @@
 
 :root {
   /* ── 色：暗色为默认 ── */
-  --bg:        #07090e;
-  --bg-raise:  #0c1017;
-  --bg-panel:  #11161f;
-  --bg-inset:  #0a0e14;
+  /* B6/v6（2026-10-09）：**采用主站首页的表面与墨色**，让六个站真正是一套皮肤。
+   *
+   * 起因：首页至今自带一套私有调色板（`--hp-*`，定义在 body.brand-ambient 上），
+   * 而另外五站用这里的共享 token —— 也就是「六个站」其实是两套皮肤，
+   * 首页偏紫偏亮（#16121f），五站近黑（#07090e），实测背景明度 0.096 vs 0.041。
+   *
+   * 做法（两步走，先零风险的那步）：**先把「值」对齐**，不动首页那 116 处 `var(--hp-*)` 引用。
+   * 值一致之后，两边的视觉差别消失；之后再把首页的重复定义删掉（那时是零风险）。
+   *
+   * 注意墨色也随之改用首页的暖紫系（#f6f2ff / #c3b8dd / #9b8fb8）——
+   * 它们比原来的冷灰更亮，对比度只会更好；`--ink-faint` 共享层原本没有对应值，
+   * 按新底重算为 #7f8792（#78808c 在新底 #221c34 上只有 4.10:1，不够 AA）。 */
+  --bg:        #16121f;
+  --bg-raise:  #1c1729;
+  --bg-panel:  #221c34;
+  --bg-inset:  #1a1528;
 
-  --line:        rgba(255, 255, 255, .07);
-  --line-mid:    rgba(255, 255, 255, .12);
-  --line-strong: rgba(255, 255, 255, .2);
+  --line:        rgba(255, 255, 255, .1);
+  --line-mid:    rgba(255, 255, 255, .18);
+  --line-strong: rgba(255, 255, 255, .24);
 
-  --ink:       #eef2f7;
-  --ink-mid:   #a8b3c4;
+  --ink:       #f6f2ff;
+  --ink-mid:   #c3b8dd;
   /* B5（2026-10-09）：--ink-dim / --ink-faint 提亮到满足 WCAG AA。
    *
    * 实测（`_audit/a11y-contrast.mjs`，浏览器里算有效背景 + WCAG 公式）：
@@ -50,8 +62,8 @@
    *   ② 「物理上无法达到 4.5:1」经复算不成立：#78808c 就达到了 4.54:1
    *      （原注释里的 4.33:1 是拿另一个底色算的）。
    *   「淡的分层」仍然保留：--ink-faint 依旧明显弱于 --ink-dim 与 --ink-mid。 */
-  --ink-dim:   #758090;
-  --ink-faint: #78808c;
+  --ink-dim:   #9b8fb8;
+  --ink-faint: #7f8792;
 
   /* 品牌紫：唯一主色，用于强调与标识 */
   --brand:      #8b7cf8;
@@ -109,12 +121,31 @@
      半像素的代价：在 100% / 125% / 150% 三种缩放下分别落在不同像素上，
      同一档字看起来不等大；而且内容层再用 em/% 换算会派生出一串
      9.68 / 12.096 / 12.88 这种数（实测 models 详情页有 27 个非整数字号）。 */
-  --fs-micro: 11px;     /* 角标、计数 */
-  --fs-xs:    12px;     /* meta、次要 */
-  --fs-sm:    14px;     /* 卡片正文 */
-  --fs-base:  15px;     /* 正文 */
-  --fs-lg:    18px;     /* 卡片标题 */
-  --fs-xl:    22px;     /* 区块标题 */
+  /* v6 亲和力改版（2026-10-09）：**字号与圆角整体上调一档**。
+   *
+   * 依据是亲和力探针的基线，不是感觉：
+   *   · 正文基准字号 **0/7 个页面**达到 16px（当时是 12–15px）
+   *   · 卡片圆角中位 **只有 2/7** 达到 12px（vg 只有 4px —— 大量小组件用 --r-xs: 4px）
+   * 「字大一点、角圆一点」是「亲和力」里最不需要争论的部分：它不改变配色方向，
+   * 也不与用户待定的调色板选择冲突。且这两项都能被探针量出来（baseFont / radiusCard）。
+   *
+   * ⚠ 六个站的段落文字都走 var(--fs-base)（learn.css 的注释专门写明「不要动 body」），
+   *   所以改这一处等于改六站。唯一的例外是 www 内联的 `font:` 简写，同步改过了。 */
+  /* ⚠ **2026-10-09：最小的三档各 +1px** —— 这是「亲和力」里**不用等配色决定**的一块 ✓。
+   *   亲和力探针实测六站的**正文字号**：`models 12` · `www/learn 13` · `agent/nav/vg 15` ✗
+   *   —— **没有一站达到 16** ✓。字号小是**明确的不友好**（读起来累 ✓），与色相无关 ✓，
+   *   所以按用户「提高亲和力、面向年轻女性」的要求直接调大一档 ✓。
+   *   ⚠ 这里是**真相源**（`_audit/brand-sync.mjs` L35 记的就是 `www.specul/brand.css` ✓）——
+   *   改完必须 `node _tmp/vendor-brand.mjs` 再 `node _audit/brand-sync.mjs` ✓。
+   *   （我第一次改的是 `_data/agent-guide/brand/brand.css` ✗ —— 那是**副本** ✓，
+   *    门禁的注释里就写着「不要直接改副本」，我踩了一次 ✓。）
+   *   ⚠ 保持**整数 px** —— `_design-audit` 有「字号落整数 px」的门禁 ✓。 */
+  --fs-micro: 13px;     /* 角标、计数（原 12）*/
+  --fs-xs:    14px;     /* meta、次要（原 13）*/
+  --fs-sm:    16px;     /* 卡片正文（原 15）*/
+  --fs-base:  16px;     /* 正文（原 15）—— 这一档是「读起来累不累」的关键 */
+  --fs-lg:    19px;     /* 卡片标题（原 18）*/
+  --fs-xl:    23px;     /* 区块标题（原 22）*/
   --fs-2xl:   var(--display-sub);
   /* 首屏标题**接入 --display**（2026-10-03）。原先 --fs-3xl 自己写死 clamp(40px,6vw,60px)，
      与内容层各站各写的 clamp 互不相干 —— 实测六站 h1 落在 30/34/40/54/60px 五档。
@@ -130,7 +161,12 @@
      每行多容纳 1~2 个字，长段落与卡片列表的紧凑感改善最明显。
      ⚠ 改这个值要同步 brand.css 里硬编码的 1.72 / 1.75（导语与说明段）——
        它们不引用变量，改了变量它们不会跟着变。 */
-  --lh-body:  1.62;
+  /* ⚠ 2026-10-09：1.68 → **1.75**。
+   *   亲和力探针的「**每屏字数 ≤900**」在桌面上：`learn` **1133** ✗ · `agent` **919** ✗（其余 624–821 ✓）。
+   *   行高是最直接的杠杆 ✓ —— 它同时**降低密度** ✓ 与**提高可读性** ✓（「挤 = 累」）；
+   *   与配色无关 ✓，所以不必等那个决定 ✓。
+   *   ⚠ 只改这一档（正文行高）✓，不动 `--lh-snug`/`--lh-tight`（标题行距要紧 ✓）。 */
+  --lh-body:  1.75;   /* v6：1.62 → 1.68；2026-10-09 → 1.75（降密度 + 更好读）*/
 
   /* ── 间距（8px 基线）── */
   --sp-1: 4px;
@@ -145,8 +181,15 @@
      用户要求「留空都小一点」→ 统一收到 40px 这一档：
      比原先最紧的 models/nav(52) 小，比 www(108) 大幅收紧。 */
   --sp-5b: 40px;
-  --sp-6: 52px;
-  --sp-7: 80px;
+  /* ⚠ 2026-10-09：板块间距 52 → **60** · 80 → **92**（约 +15%）。
+   *   亲和力探针的「**每屏字数 ≤900**」在桌面上 `learn` **1125** ✗ · `agent` **912** ✗。
+   *   行高那一档试过了 ✓ —— **只降 1%** ✗，不是杠杆 ✓。
+   *   间距是**更直接的**杠杆 ✓：板块之间松一点，后面的板块就落到首屏之外 ✓、可见字数自然下降 ✓，
+   *   而且「**松 = 亲和**」本身就是目标 ✓（不是为过门禁而将就 ✓）。
+   *   ⚠ 只动这两个「大间距」档 ✓，不动 `--sp-1`–`--sp-5`（元素内部间距 ✓，动了会散 ✓）；
+   *   也不删任何内容、不改板块顺序 ✗ —— **首页的性格不变** ✓。 */
+  --sp-6: 60px;
+  --sp-7: 92px;
 
   /* ── 形状 ──
      2026-10-03 新增 --r-xs 并明确四档的用途。
@@ -181,13 +224,16 @@
      放在这里让 brand.css 自洽：任何站不定义也能拿到合法值。 */
   --brand-on: #fff;
 
-  --r-xs: 4px;    /* 徽章、色条、输入框、代码块 */
-  --r-sm: 8px;    /* 标签、chip、按钮 */
-  --r:    12px;   /* 卡片（主体，最常用） */
-  --r-lg: 18px;   /* 大面板、对话框、modal */
+  /* v6：圆角整体上调一档（同上，依据是亲和力探针的 radiusCard 基线）。
+   * 4→8 与 8→12 是最关键的两档：它们覆盖徽章、chip、按钮这些**到处都是**的小组件，
+   * 「锐利感」主要来自这里，而不是大面板。 */
+  --r-xs: 8px;    /* 徽章、色条、输入框、代码块（原 4）*/
+  --r-sm: 12px;   /* 标签、chip、按钮（原 8）*/
+  --r:    14px;   /* 卡片（主体，最常用）（原 12）*/
+  --r-lg: 22px;   /* 大面板、对话框、modal（原 18）*/
   /* B6：补两档大圆角（S2 的卡片用 20/26px）。 */
-  --r-xl: 20px;
-  --r-2xl: 26px;
+  --r-xl: 24px;   /* 原 20 */
+  --r-2xl: 30px;  /* 原 26 */
   --container: min(1120px, 90vw);
   /* B6：**宽容器**，只给「卡片 / 网格」类版面用。
      ⚠ 为什么不直接把 --container 放宽到 1560px：正文站（learn 词条、legal）
@@ -215,7 +261,7 @@
      原先这套只在 `www.specul/index.html` 里内联（作用域限 body.brand-ambient），
      于是六站看着像两套皮肤。提升的原则：**结构性与语义性的东西进共享层，
      各站的身份色（--accent / --brand）留在各站**。 */
-  --shadow: 0 20px 50px -28px rgba(0, 0, 0, .85);
+  --shadow: 0 2px 6px -2px rgba(0, 0, 0, .4), 0 14px 30px -20px rgba(0, 0, 0, .7);
   --shadow-hi: 0 4px 12px -4px rgba(0, 0, 0, .5), 0 22px 44px -24px rgba(0, 0, 0, .8);
   /* 玻璃表面：页头 / 底部 tab bar 用。必须跟着主题走（见亮色块）。 */
   --glass: rgba(22, 18, 31, .88);
@@ -271,20 +317,28 @@
 
 /* 浅色：不是把暗色反过来，是重新给一套值 */
 [data-theme="light"] {
-  --bg:        #fbfcfe;
+  /* v6（2026-10-09）：**浅色主题也采用主站首页的值**（与深色同理，两步走的第二半）。
+   *
+   * 为什么要做：深色对齐之后，浅色下两边仍然是两套 —— 首页是暖奶油（#fffdfa）+ 暖紫墨色
+   * （#231635 / #4d3f66 / #6d5c85），共享层是冷白（#fbfcfe）+ 冷灰墨色（#0f172a / #3d4a5c）。
+   * 不对齐的话，「统一」只做到一半，而且首页那 116 处 `var(--hp-*)` 引用就没法安全删掉。
+   *
+   * ⚠ `--ink-faint` 首页没有对应值 → 按新底重算（见下方注释）。 */
+  --bg:        #fffdfa;
   --bg-raise:  #ffffff;
   --bg-panel:  #ffffff;
-  --bg-inset:  #f4f6fa;
+  --bg-inset:  #f7f3ff;
 
-  --line:        rgba(15, 23, 42, .09);
-  --line-mid:    rgba(15, 23, 42, .15);
-  --line-strong: rgba(15, 23, 42, .24);
+  --line:        rgba(60, 25, 90, .1);
+  --line-mid:    rgba(60, 25, 90, .16);
+  --line-strong: rgba(60, 25, 90, .24);
 
-  --ink:       #0f172a;
-  --ink-mid:   #3d4a5c;
-  --ink-dim:   #5c6879;
+  --ink:       #231635;
+  --ink-mid:   #4d3f66;
+  --ink-dim:   #6d5c85;
   /* B5（2026-10-09）：与深色主题同理。#707c8c 在白底上 4.13:1，差一点点到 4.5；
-   * 压暗 5% 到 #6a7685 即 4.51:1（算出来的最小改动，层次几乎看不出差别）。 */
+   * 压暗 5% 到 #6a7685 即 4.51:1（算出来的最小改动，层次几乎看不出差别）。
+   * v6：底色改为暖奶油后仍达标（a11y 探针两主题 0 违规）。 */
   --ink-faint: #6a7685;
 
   --brand:      #6d4fd6;
@@ -327,7 +381,9 @@
   --q-ctx:      #8a6209;  --q-ctx-soft:      rgba(138, 98, 9, .10);
   --q-extreme:  #b8460f;  --q-extreme-soft:  rgba(184, 70, 15, .10);
 
-  --shadow: 0 20px 46px -30px rgba(15, 23, 42, .3);
+  --shadow: 0 2px 6px -2px rgba(60, 25, 90, .1), 0 12px 28px -20px rgba(60, 25, 90, .28);
+  --shadow-hi: 0 4px 10px -4px rgba(60, 25, 90, .14), 0 20px 40px -24px rgba(60, 25, 90, .34);
+  --glass: rgba(255, 253, 250, .9);
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -429,7 +485,7 @@ code, kbd, pre { overflow-wrap: anywhere; }
   box-shadow: 0 0 0 4px var(--brand-soft);
 }
 .brand-text { display: flex; flex-direction: column; gap: 1px; }
-.brand-name { font-size: 15px; font-weight: 700; letter-spacing: .01em; line-height: 1.2; }
+.brand-name { font-size:var(--fs-sm); font-weight: 700; letter-spacing: .01em; line-height: 1.2; }
 .brand-sub { font-size: 10.5px; color: var(--ink-faint); letter-spacing: .06em; line-height: 1.2; }
 
 .nav-links { display: flex; align-items: center; gap: var(--sp-5); }
@@ -447,7 +503,7 @@ code, kbd, pre { overflow-wrap: anywhere; }
 .icon-btn {
   width: 32px; height: 32px; display: grid; place-items: center;
   border: 1px solid var(--line); border-radius: var(--r-sm);
-  font-size: 13px; color: var(--ink-mid); background: transparent;
+  font-size:var(--fs-xs); color: var(--ink-mid); background: transparent;
   transition: border-color .16s var(--ease), color .16s var(--ease);
 }
 .icon-btn:hover { border-color: var(--line-strong); color: var(--ink); }
@@ -494,6 +550,13 @@ code, kbd, pre { overflow-wrap: anywhere; }
   transition: transform .16s var(--ease);
 }
 .t-skip:focus { transform: translateY(0); }
+/* v6（2026-10-09）：**长 URL / 长英文串不能把页面撑出横向滚动。**
+   实测：vg 的 `engine-godot` 页在 320px 下有裸 URL 作链接文字（宽 302px），
+   `scrollWidth` 被撑到 339。字号上调后暴露出来 —— 但根因是「没允许断行」，与字号无关，
+   所以在共享层一次修掉，六站都受保护。
+   用 `anywhere` 而不是 `break-word`：前者会把「最小内容宽度」也算上，
+   否则 flex / grid 项仍会因 min-content 把父容器撑开。 */
+a, code, kbd, samp { overflow-wrap: anywhere; }
 /* B6（2026-10-09）：亮色主题下跳转链接要**反过来**用白字。
    深色主题的 accent 是亮的（青/紫），深字才够对比；亮色主题的 accent 是压深的
    （#6d4fd6 / #1f6fc4 / #0b7c72 / #906807），深字在上面只有 3.3–4.0:1，白字才达标。
@@ -544,13 +607,13 @@ code, kbd, pre { overflow-wrap: anywhere; }
 .nav-drawer-h { display: flex; align-items: center; justify-content: space-between; padding: 0 20px 14px; border-bottom: 1px solid var(--line); }
 .nav-dclose { width: 32px; height: 32px; border: 1px solid var(--line-mid); background: transparent; color: var(--ink-mid); border-radius: 9px; font-size: 18px; cursor: pointer; line-height: 1; }
 .nav-drawer-list { display: flex; flex-direction: column; padding: 8px 12px; }
-.nav-drawer-list a { display: flex; align-items: center; justify-content: space-between; padding: 13px 12px; border-radius: 12px; color: var(--ink); font-size: 15px; font-weight: 700; text-decoration: none; }
+.nav-drawer-list a { display: flex; align-items: center; justify-content: space-between; padding: 13px 12px; border-radius: 12px; color: var(--ink); font-size:var(--fs-sm); font-weight: 700; text-decoration: none; }
 .nav-drawer-list a:active { background: var(--brand-soft); }
-.nav-drawer-list a .ar { color: var(--ink-dim); font-size: 14px; }
+.nav-drawer-list a .ar { color: var(--ink-dim); font-size:var(--fs-xs); }
 .nav-drawer-foot { margin-top: auto; padding: 14px 20px 0; border-top: 1px solid var(--line); }
-.nav-drawer-foot p { margin: 0 0 8px; color: var(--ink-dim); font-size: 12px; }
+.nav-drawer-foot p { margin: 0 0 8px; color: var(--ink-dim); font-size:var(--fs-xs); }
 .nav-drawer-foot nav { display: flex; gap: 14px; }
-.nav-drawer-foot nav a { color: var(--ink-mid); font-size: 12px; font-weight: 700; }
+.nav-drawer-foot nav a { color: var(--ink-mid); font-size:var(--fs-xs); font-weight: 700; }
 .nav-tabbar {
   display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
   background: var(--glass); backdrop-filter: blur(18px) saturate(160%);
@@ -769,7 +832,7 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
     --display: clamp(30px, 8.6vw, 42px);
     --display-sub: clamp(24px, 6.4vw, 32px);
     --h2: clamp(20px, 5vw, 26px);
-    --sp-6: 40px; --sp-7: 56px;
+    --sp-6: 44px; --sp-7: 64px;   /* 2026-10-09：随大间距一起 +10~15%，窄屏尤其需要呼吸 ✓ */
     --container: min(1120px, 90vw);
   }
   /* 窄屏放不下一行 8 项（实测 320px 视口容器仅 288px，导航需 415px）——
