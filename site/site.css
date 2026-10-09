@@ -515,11 +515,11 @@ dl.axes { margin: 0; }
 /* 2026-10-03：原 padding-top: 3rem(48px) + 后续 .cat-group 的 --section-pad(40px)
    叠加 → 实测首屏空白带 176px（y=296~472）。改用全站同一档。 */
 .hero { padding: var(--section-pad) 0 var(--sp-3); }
-.eyebrow { font-size: 12px; letter-spacing: .18em; color: var(--ink-mid); margin: 0 0 .5rem; }
+.eyebrow { font-size:var(--fs-xs); letter-spacing: .18em; color: var(--ink-mid); margin: 0 0 .5rem; }
 /* 2026-10-03：原 clamp(2rem,5vw,3.4rem) → 3.4rem = 54.4px（非整数）。
    接入全站 --display-sub 档，与其它站同一尺度。 */
 .h1 { font-size: var(--display-sub); line-height: 1.1; margin: 0 0 .75rem; }
-.lede { font-size: 15px; color: var(--ink-mid); max-width: var(--measure); margin: 0 0 .5rem; }
+.lede { font-size:var(--fs-sm); color: var(--ink-mid); max-width: var(--measure); margin: 0 0 .5rem; }
 .dim { opacity: .8; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
@@ -538,7 +538,7 @@ dl.axes { margin: 0; }
  *   （实测 Chrome 是 13.3333px），_design-audit 会判「非整数字号」。
  *   字号 13px 与 .chip 一致，实际是「整数 px」而不是「碰巧看起来对」。 */
 .tagsel {
-  margin-top: .9rem; padding: .35rem .75rem; font: inherit; font-size: 13px;
+  margin-top: .9rem; padding: .35rem .75rem; font: inherit; font-size:var(--fs-xs);
   border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius:var(--r-sm);
   background: var(--bg-raise, rgba(127,127,127,.08)); color: inherit; cursor: pointer;
   max-width: 100%;
@@ -546,23 +546,23 @@ dl.axes { margin: 0; }
 .tagsel:focus-visible { outline: 2px solid var(--cyan, #22d3c5); outline-offset: 2px; }
 /* B4：按「我想做什么」的入口。字号整数 px（设计系统规则）。 */
 .intent { margin: var(--sp-4) 0 0; }
-.intent-h { font-size: 13px; color: var(--ink-mid); margin: 0 0 .6rem; }
+.intent-h { font-size:var(--fs-xs); color: var(--ink-mid); margin: 0 0 .6rem; }
 .intent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(190px, 100%), 1fr)); gap: .5rem; }
 .intent-card { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem;
   padding: .55rem .8rem; border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius: var(--r-sm);
-  text-decoration: none; color: inherit; font-size: 13px; }
+  text-decoration: none; color: inherit; font-size:var(--fs-xs); }
 .intent-card:hover { border-color: var(--cyan, #22d3c5); }
 .intent-card b { font-weight: 500; }
-.intent-n { font-size: 11px; color: var(--ink-faint, #888); white-space: nowrap; }
+.intent-n { font-size:var(--fs-xs); color: var(--ink-faint, #888); white-space: nowrap; }
 
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .9rem; }
 .chip {
   display: inline-flex; align-items: center; gap: .4rem;
-  padding: .35rem .75rem; font: inherit; font-size: 13px; cursor: pointer;
+  padding: .35rem .75rem; font: inherit; font-size:var(--fs-xs); cursor: pointer;
   border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius: 999px;
   background: transparent; color: var(--ink-mid);
 }
-.chip em { font-style: normal; opacity: .6; font-size: 11px; }
+.chip em { font-style: normal; opacity: .6; font-size:var(--fs-xs); }
 .chip:hover { border-color: var(--cyan, #22d3c5); color: inherit; }
 .chip.is-on { background: var(--cyan, #22d3c5); border-color: var(--cyan, #22d3c5); color: #04121a; }
 /* B6（2026-10-09）：亮色主题下 --cyan 被压深（#0b7c72），深字在上面只有 3.74:1 → 改白字。
@@ -585,12 +585,12 @@ dl.axes { margin: 0; }
    仍然加限定：防将来有人把这段搬进模板时静默污染另一个站。
    代价为零（本文件只用于 nav 站，:has(.cat-group) 必然命中）。 */
 :root:has(.cat-group):not([data-theme="light"]) {
-  --brand: #5ddc9a; --brand-on: #04210f;
-  --brand-soft: rgba(93, 220, 154, .14); --brand-line: rgba(93, 220, 154, .34);
+  --brand: #8b7cf8; --brand-on:#fff;
+  --brand-soft:rgba(139, 124, 248, .14); --brand-line:rgba(139, 124, 248, .34);
 }
 :root:has(.cat-group)[data-theme="light"] {
-  --brand: #0f7a52; --brand-on: #ffffff;
-  --brand-soft: rgba(15, 122, 82, .10); --brand-line: rgba(15, 122, 82, .30);
+  --brand: #6d4fd6; --brand-on:#fff;
+  --brand-soft:rgba(109, 79, 214, .08); --brand-line:rgba(109, 79, 214, .28);
 }
 
 .cat-group { margin: var(--section-pad) 0; }
@@ -641,16 +641,16 @@ dl.axes { margin: 0; }
 }
 .card:hover { transform: translateY(-2px); border-color: var(--cyan, #22d3c5); }
 .c-ic { font-size: 18px; line-height: 1; }
-.c-nm { font-weight: 500; font-size: 15px; }
+.c-nm { font-weight: 500; font-size:var(--fs-sm); }
 /* 产品名（2026-10-04 改）
    原方案是「中文名 + 官方英文名并列」，但**并列会让英文页面上出现汉字** ——
    用户明确要求英文页面尽可能不出现中文，所以改为互斥：
      中文态 → 中文名；英文态 → 只显示官方英文名。
    显隐由 brand.css 的 [data-lang] 规则统一管，这里不要自己写 display。 */
-.c-ds { font-size: 13px; color: var(--ink-mid); line-height: 1.5; }
+.c-ds { font-size:var(--fs-xs); color: var(--ink-mid); line-height: 1.5; }
 .c-tg { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: auto; padding-top: .4rem; }
 .c-tg i {
-  font-style: normal; font-size: 11px; padding: .1rem .45rem; border-radius: 999px;
+  font-style: normal; font-size:var(--fs-xs); padding: .1rem .45rem; border-radius: 999px;
   background: rgba(127,127,127,.16); color: var(--ink-mid);
   display: inline-flex; align-items: baseline; gap: .3em;
 }
@@ -664,7 +664,7 @@ dl.axes { margin: 0; }
   content: " ";
 }
 html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
-.c-warn { font-size: 11px; color: var(--red, #e24b4a); }
+.c-warn { font-size:var(--fs-xs); color: var(--red, #e24b4a); }
 /* 失效条目渲染为 div（不可点，见 card() 注释）：光标与 hover 也要跟着「去链接化」 */
 .card.is-dead { opacity: .55; cursor: default; }
 .card.is-dead:hover { transform: none; border-color: var(--border, rgba(127,127,127,.28)); }
