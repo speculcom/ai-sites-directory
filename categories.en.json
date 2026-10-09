@@ -1,0 +1,15 @@
+{
+  "_comment": "nav 站分类名的英文版。2026-10-04 补——此前 categories 只有 name/desc（中文），英文态下分类标题与说明全显示中文。键必须与 nav-data.json 的 categories 键一一对应，改名会静默失效。",
+  "llm":       { "name": "LLMs & chat",      "desc": "General models, AI search and the prompt ecosystem" },
+  "coding":    { "name": "AI coding & agents", "desc": "Coding assistants, terminal agents and automation" },
+  "gen":       { "name": "Multimodal generation", "desc": "Image, video, audio, 3D and avatar generation" },
+  "app":       { "name": "Applications",     "desc": "Ready-to-use AI products you can use today" },
+  "model":     { "name": "Model providers",  "desc": "Labs and vendors shipping their own models" },
+  "dev":       { "name": "Developer tools",  "desc": "SDKs, frameworks and tooling for building on models" },
+  "infra":     { "name": "Infrastructure",   "desc": "Compute, serving, gateways and deployment" },
+  "robot":     { "name": "Robotics & embodied", "desc": "Robots, drones and embodied AI" },
+  "learn":     { "name": "Learning",         "desc": "Courses, documentation and reference material" },
+  "community": { "name": "Community",        "desc": "Forums, newsletters, aggregators and communities" },
+  "tools":     { "name": "Tools & utilities", "desc": "Small utilities, clients, plugins and helpers" },
+  "ext":       { "name": "Excluded",         "desc": "Not listed here: links, coins, games" }
+}
