@@ -1,0 +1,5466 @@
+{
+ "at": "2026-10-08T08:51:11.630Z",
+ "source": "nav-data.json",
+ "items": 711,
+ "checked": 692,
+ "probedNow": 1,
+ "dedup": true,
+ "proxy": false,
+ "only": null,
+ "tally": {
+  "ok": 443,
+  "blocked": 60,
+  "unverifiable": 139,
+  "changed": 50
+ },
+ "history": [
+  {
+   "at": "2026-10-08T07:33:16.961Z",
+   "kind": "start",
+   "items": 711,
+   "probedNow": 0,
+   "tally": {
+    "ok": 57,
+    "blocked": 6,
+    "unknown": 629
+   }
+  },
+  {
+   "at": "2026-10-08T07:34:02.260Z",
+   "kind": "done",
+   "items": 711,
+   "probedNow": 5,
+   "tally": {
+    "ok": 57,
+    "blocked": 6,
+    "unknown": 624,
+    "unverifiable": 5
+   }
+  },
+  {
+   "at": "2026-10-08T07:34:38.405Z",
+   "kind": "start",
+   "items": 711,
+   "probedNow": 0,
+   "tally": {
+    "ok": 57,
+    "blocked": 6,
+    "unknown": 624,
+    "unverifiable": 5
+   }
+  },
+  {
+   "at": "2026-10-08T08:03:05.582Z",
+   "kind": "done",
+   "items": 711,
+   "probedNow": 624,
+   "tally": {
+    "ok": 443,
+    "blocked": 59,
+    "unverifiable": 139,
+    "changed": 50,
+    "dead": 1
+   }
+  },
+  {
+   "at": "2026-10-08T08:51:10.782Z",
+   "kind": "start",
+   "items": 711,
+   "probedNow": 0,
+   "tally": {
+    "ok": 443,
+    "blocked": 59,
+    "unverifiable": 139,
+    "changed": 50,
+    "dead": 1
+   }
+  },
+  {
+   "at": "2026-10-08T08:51:11.629Z",
+   "kind": "done",
+   "items": 711,
+   "probedNow": 1,
+   "tally": {
+    "ok": 443,
+    "blocked": 60,
+    "unverifiable": 139,
+    "changed": 50
+   }
+  }
+ ],
+ "results": [
+  {
+   "u": "https://chatglm.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://xinghuo.xfyun.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://yuanbao.tencent.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://platform.deepseek.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.stepfun.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://chat.deepseek.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://hunyuan.tencent.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.baichuan-ai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://tongyi.aliyun.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.tiangong.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://metaso.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://pi.ai",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://hailuoai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://yiyan.baidu.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://kimi.moonshot.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://tingwu.aliyun.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.bochaai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.iflyrec.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://ai.wps.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://writer.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.jasper.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.ai21.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.copy.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.phind.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://console.anthropic.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://js.design/ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.grammarly.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://cohere.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://consensus.app",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.doubao.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.canva.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://claude.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.reka.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.midjourney.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://openai.com/dall-e-3",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://rytr.me",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://yige.baidu.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://designer.microsoft.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://otter.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://jenni.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.notion.so/product/ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://uizard.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://stability.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://kling.kuaishou.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://jimeng.jianying.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.synthesia.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.capcut.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://andisearch.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://haiper.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://pixverse.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.genmo.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.vidu.studio",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://firefly.adobe.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://runwayml.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.descript.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.udio.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.moyin.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://elevenlabs.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://murf.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://iamcreate.ai/",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.tinavi.com/",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://www.fjdynamics.cn/",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "u": "https://galileo.ai/",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch",
+   "lv": "2026-10-08"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://chat.openai.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://gemini.google.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://grok.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.perplexity.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://chat.mistral.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://huggingface.co/chat",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://github.com/comfyanonymous/ComfyUI",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://character.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://poe.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.meta.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://aistudio.google.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://devv.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://you.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://search.brave.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://gamma.app",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://writesonic.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.usegalileo.ai",
+   "v": "changed",
+   "s": 308,
+   "to": "https://stitch.withgoogle.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://leonardo.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.seaart.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.krea.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://clipdrop.co",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tensor.art",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://pika.art",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://play.ht",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOTFOUND",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.coderabbit.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://cursor.sh",
+   "v": "changed",
+   "s": 200,
+   "to": "https://cursor.com/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://v0.dev",
+   "v": "changed",
+   "s": 200,
+   "to": "https://v0.app/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.speak.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://boomy.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://sourcegraph.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://fliki.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.aiva.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://bolt.new",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://codeium.com/windsurf",
+   "v": "changed",
+   "s": 200,
+   "to": "https://devin.ai/desktop",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://cline.bot",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://soundraw.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.coze.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.locofy.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://replit.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tempo.new",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://agents.baidu.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.builder.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://dify.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://lovable.dev",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://relevanceai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://zed.dev",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tabbyml.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://manus.im",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://csm.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOTFOUND",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://smythos.com",
+   "v": "changed",
+   "s": 302,
+   "to": "https://github.com/smythos/sre",
+   "via": "curl",
+   "fetchErr": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://spline.design",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://superagent.sh",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://botpress.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.crewai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://hyper3d.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://readyplayer.me",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOTFOUND",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.tabnine.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.tricentis.com/products?utm_source=www.tabnine.com&utm_medium=referral&utm_campaign=redirect",
+   "via": "curl",
+   "fetchErr": "UND_ERR_HEADERS_OVERFLOW"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.heygen.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://lumalabs.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://invideo.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://suno.ai",
+   "v": "changed",
+   "s": 308,
+   "to": "https://suno.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.animaapp.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.coze.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://langchain.com/langgraph",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.meshy.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.tripo3d.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://hourone.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.deepmotion.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.kaedim3d.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.d-id.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.xiaoice.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.deepbrain.io",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.aistudios.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://zenvideo.qq.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOENT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://robetta.bakerlab.org/",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOTFOUND",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.isomorphiclabs.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.tempus.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.recursion.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.infervision.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.viz.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.harvey.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://alphafold.ebi.ac.uk",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.everlaw.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.aidoc.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.alpha-sense.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.butterflynetwork.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://alpaca.markets",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.powerlaw.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.pathai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.lawgeex.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.kavout.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.khanmigo.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.century.tech",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ironcladapp.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.kensho.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://quizlet.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.quantconnect.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.duolingo.com/max",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://albert.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.persado.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.unitree.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.optimove.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.fftai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://numer.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.figure.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.pencil.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ERR_TLS_CERT_ALTNAME_INVALID",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.nvidia.com/en-us/clara/bionemo",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.carnegielearning.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.squirrelai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.engineai.com.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.1x.tech",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://bostondynamics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.agibot.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "http500"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://anyword.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://apptronik.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://agilityrobotics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://phrasee.co",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.jacquard.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ubtrobot.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.cloudminds.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.clonerobotics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.roborock.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://pal-robotics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.gs-robot.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.dji.com/robomaster-s1",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.pudutech.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.yaskawa.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.siasun.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ros.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.dreame.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.universal-robots.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.fanuc.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://new.abb.com/products/robotics",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://docs.ros.org/en/rolling",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.estun.com",
+   "v": "ok",
+   "s": 302,
+   "via": "curl",
+   "fetchErr": "TypeError"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://beyondimagination.co",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.kuka.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.kuka.cn/zh-cn",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.keenon.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ecovacs.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://developer.nvidia.com/isaac",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://mujoco.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.coppeliarobotics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://cyberbotics.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://gazebosim.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://waymo.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.getcruise.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-spawnSync curl ETIMEDOUT",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.apollo.auto",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.weride.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-spawnSync curl ETIMEDOUT",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.pony.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.mobileye.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.nuro.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://aurora.tech",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://zoox.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.sec.gov/Archives/edgar/data/1827980/000110465923064691/tm2316862d1_ex99-1.htm",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.skydio.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ehang.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.flyzipline.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.zipline.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://wing.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.xag.cn",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.intuitive.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.medtronic.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://cmrsurgical.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.geekplus.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://locusrobotics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.hairobotics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.vexrobotics.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ironox.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.eksobionics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://makerfaire.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.saabseaeye.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://farm.bot",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.oceaneering.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.deepinfar.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://seegrid.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://rewalk.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://golifeward.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.suitx.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.bluerivertechnology.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.makeblock.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.xtool.cn/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://microbit.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://bluerobotics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.robocup.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.firstinspires.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "UND_ERR_SOCKET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.arduino.cc",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "UND_ERR_SOCKET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.raspberrypi.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "UND_ERR_SOCKET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://carbonrobotics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://education.lego.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://legoeducation.cn/zh-cn/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://modelscope.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ollama.ai",
+   "v": "changed",
+   "s": 200,
+   "to": "https://ollama.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://replicate.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://groq.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.together.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://openrouter.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.tryleap.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://fireworks.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.baseten.co",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://weaviate.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.anyscale.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.databricks.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.lingyiwanwu.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.pinecone.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://allenai.org/olmo",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.trychroma.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://qdrant.tech",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.banana.dev",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.llamaindex.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://modal.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.langchain.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.snowflake.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://langfuse.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://haystack.deepset.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://keras.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ibm.com/granite",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://sdk.vercel.ai",
+   "v": "changed",
+   "s": 200,
+   "to": "https://ai-sdk.dev/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://opencv.org",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://octo.ai",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.nvidia.com/en-us/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://neptune.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "CERT_HAS_EXPIRED",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://civitai.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://llama.meta.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://mistral.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ai.google.dev/gemma",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://azure.microsoft.com/products/phi",
+   "v": "ok",
+   "s": 302,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://milvus.io",
+   "v": "ok",
+   "s": 302,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.elastic.co",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.tensorflow.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://pytorch.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://onnx.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://jax.readthedocs.io",
+   "v": "changed",
+   "s": 200,
+   "to": "https://docs.jax.dev/en/latest/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://wandb.ai",
+   "v": "changed",
+   "s": 200,
+   "to": "https://forge.coreweave.com/wandb",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://mlflow.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://clear.ml",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.bentoml.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.kubeflow.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://dagshub.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://scale.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://labelbox.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://labelstud.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.superannotate.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://valohai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.arthur.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.credo.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://metaflow.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://snorkel.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://lmsys.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.guardrailsai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://whylabs.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://polygon.technology",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://docs.confident-ai.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://deepeval.com/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://arbitrum.io",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://aptoslabs.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.trulens.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://seldon.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://cardano.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://sui.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.avax.network",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.avalanche.com/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://flow.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tezos.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://hedera.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.zilliqa.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.bnbchain.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://zksync.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.algorand.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://algorand.co/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.starknet.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://cosmos.network",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.robustintelligence.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://linea.build",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.base.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://crfm.stanford.edu/helm",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ethereum.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://solana.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://bitcoin.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.optimism.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://polkadot.network",
+   "v": "changed",
+   "s": 301,
+   "to": "https://polkadot.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://near.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tron.network",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://scroll.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-spawnSync curl ETIMEDOUT",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.mantle.xyz",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://chain.link",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.alchemy.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://infura.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tenderly.co",
+   "v": "blocked",
+   "s": 429,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.gnosis.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://livepeer.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.bandprotocol.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://thegraph.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://layerzero.network",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ipfs.tech",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://blur.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://filecoin.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.quicknode.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://api3.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://stargate.finance",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://wormhole.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://crust.network",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://across.to",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://bscscan.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://polygonscan.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://x2y2.io",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.pokt.network",
+   "v": "changed",
+   "s": 200,
+   "to": "https://pocket.network/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tronscan.org",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://hardhat.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.synapseprotocol.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://hypercall.xyz/synapse",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://thirdweb.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://hivemapper.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://book.getfoundry.sh",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.arweave.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.storj.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://akash.network",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.iotex.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "UND_ERR_SOCKET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://dimo.zone",
+   "v": "changed",
+   "s": 301,
+   "to": "https://dimo.org/",
+   "via": "curl",
+   "fetchErr": "UND_ERR_SOCKET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://opensea.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://magiceden.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://rarible.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://superrare.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://looksrare.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://foundation.app",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://etherscan.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://solscan.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://remix.ethereum.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://moralis.io",
+   "v": "changed",
+   "s": 301,
+   "to": "https://developers.moralis.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.helium.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ondo.finance",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNRESET",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://centrifuge.io",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://godsunchained.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://splinterlands.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ironfish.network",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://aleo.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://alienworlds.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://parcl.co",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.parcllabs.com/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.tradingview.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNRESET",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.maple.finance",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.myneighboralice.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNRESET",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://dune.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://defillama.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNRESET",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.binance.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNRESET",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://vulcanforged.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://vulcan-x.io/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.nansen.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://goldfinch.finance",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://glassnode.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.arkhamintelligence.com",
+   "v": "changed",
+   "s": 301,
+   "to": "https://info.arkm.com/",
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.getmonero.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://z.cash",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://oasisprotocol.org",
+   "v": "changed",
+   "s": 200,
+   "to": "https://oasis.net/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://coinmarketcap.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.coingecko.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://jup.ag",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNREFUSED",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://messari.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tokenterminal.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.okx.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.coinbase.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://uniswap.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.bybit.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.kraken.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.gate.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.kucoin.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.bitget.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNRESET",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://rainbow.me",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNRESET",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://crypto.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.gemini.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.htx.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.bitfinex.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.mexc.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://metamask.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://phantom.app",
+   "v": "changed",
+   "s": 301,
+   "to": "https://phantom.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ledger.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://trustwallet.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://rabby.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://trezor.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://safe.global",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.keplr.app",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://coin98.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.exodus.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.sushi.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNRESET",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ether.fi",
+   "v": "blocked",
+   "s": 429,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://dydx.trade",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNRESET",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.pendle.finance",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://balancer.fi",
+   "v": "blocked",
+   "s": 429,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://lido.fi",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.argent.xyz",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://aave.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://makerdao.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://curve.fi",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://pancakeswap.finance",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.eigenlayer.xyz",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.eigencloud.xyz/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://1inch.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://compound.finance",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://gmx.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tether.to",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://axieinfinity.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://frax.finance",
+   "v": "changed",
+   "s": 200,
+   "to": "https://frax.com/",
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.circle.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.sandbox.game",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.synthetix.io",
+   "v": "ok",
+   "s": 308,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ethena.fi",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.stepn.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ankr.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.immutable.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://stake.fish",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.staderlabs.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.allnodes.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://snapshot.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.tally.xyz",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.deso.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.bankless.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.theblock.co",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://decrypt.co",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://cyberconnect.me",
+   "v": "changed",
+   "s": 200,
+   "to": "https://cyber.co/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.gala.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://a16zcrypto.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.moonpay.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.farcaster.xyz",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.lens.xyz",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://multicoin.capital",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://blockworks.co",
+   "v": "changed",
+   "s": 200,
+   "to": "https://blockworks.com/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://aragon.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ramp.network",
+   "v": "changed",
+   "s": 200,
+   "to": "https://rampnetwork.com/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.paradigm.xyz",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tokentax.co",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.tsmc.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://reservoir.tools",
+   "v": "blocked",
+   "s": 429,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://koinly.io",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.hygon.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://rocketpool.net",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://juicebox.money",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.mthreads.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.cambricon.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://sudoswap.xyz",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://paragraph.xyz",
+   "v": "changed",
+   "s": 301,
+   "to": "https://paragraph.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.coindesk.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://bitpay.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://panteracapital.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.cointracker.io",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.zenledger.io",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.gem.xyz",
+   "v": "changed",
+   "s": 302,
+   "to": "https://opensea.io/os2",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.amd.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.intel.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.arm.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.horizon.auto",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.cerebras.net",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.cerebras.ai/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.graphcore.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://sambanova.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.hisilicon.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.birentech.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.enflame-tech.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.imaginationtech.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.kunlunxin.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://neuralink.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://synchron.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://blackrockneurotech.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://lightmatter.co",
+   "v": "changed",
+   "s": 200,
+   "to": "https://lightmatter.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ayarlabs.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.lightelligence.io",
+   "v": "unverifiable",
+   "s": 521,
+   "err": "http521",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://quantumai.google",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ionq.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.quantinuum.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.originqc.com.cn",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://lambdalabs.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://lambda.ai/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.coreweave.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.autodl.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.runpod.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.paperspace.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://vast.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://jarvislabs.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.cadence.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.synopsys.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ansys.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://ansys.synopsys.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.keysight.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://eda.sw.siemens.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://semiconductor.samsung.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.skhynix.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.micron.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.westerndigital.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.ymtc.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.asml.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.appliedmaterials.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.lamresearch.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.tel.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.amec-inc.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.sifive.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://riscv.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.starfivetech.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.nucleisys.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.esperanto.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://vercel.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.netlify.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.deepl.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.figma.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://codepen.io",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.kaggle.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://stackblitz.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://excalidraw.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://obsidian.md",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.raycast.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.warp.dev",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://linear.app",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.postman.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.docker.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://supabase.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://glitch.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.cloudflare.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://aws.amazon.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://firebase.google.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://planetscale.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://neon.tech",
+   "v": "changed",
+   "s": 200,
+   "to": "https://neon.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://railway.app",
+   "v": "changed",
+   "s": 200,
+   "to": "https://railway.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://fly.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://render.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://dribbble.com",
+   "v": "ok",
+   "s": 202,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.behance.net",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://unsplash.com",
+   "v": "blocked",
+   "s": 401,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.pexels.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://iconify.design",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://lottiefiles.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.datadoghq.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://pages.github.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://observablehq.com",
+   "v": "blocked",
+   "s": 429,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://plotly.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.producthunt.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.chartjs.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://stackoverflow.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://grafana.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://logrocket.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.namecheap.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://zapier.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://sentry.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.make.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://newrelic.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://news.ycombinator.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.reddit.com/r/MachineLearning",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://dev.to",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://d3js.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://echarts.apache.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://porkbun.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://airtable.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://bubble.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://retool.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://arxiv.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://paperswithcode.com",
+   "v": "changed",
+   "s": 302,
+   "to": "https://huggingface.co/papers/trending",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.researchgate.net",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.connectedpapers.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.semanticscholar.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.edx.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://leetcode.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.codecademy.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.udacity.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://exercism.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ocw.mit.edu",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.3blue1brown.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.khanacademy.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.coursera.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.deeplearning.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://openstax.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.codewars.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.promptingguide.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://online.stanford.edu",
+   "v": "ok",
+   "s": 202,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://learnprompting.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://venturebeat.com/category/ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.technologyreview.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.fast.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://cookbook.openai.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.theverge.com/ai-artificial-intelligence",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://commoncrawl.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.anthropic.com/research",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.alignmentforum.org",
+   "v": "blocked",
+   "s": 429,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://analyticsindiamag.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://hub.baai.ac.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://community.openai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://techcrunch.com/category/artificial-intelligence",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.eleuther.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.swift.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.hackerrank.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.typescriptlang.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://d2l.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://go.dev",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.rust-lang.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://incompleteideas.net/book/the-book.html",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "DEPTH_ZERO_SELF_SIGNED_CERT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://docs.anthropic.com/prompt-library",
+   "v": "changed",
+   "s": 301,
+   "to": "https://claude.com/app-unavailable-in-region",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://flowgpt.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://deepmind.google",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ai.meta.com/research",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://research.nvidia.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://datasetsearch.research.google.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.image-net.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.openstreetmap.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://discuss.huggingface.co",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.python.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.deeplearningbook.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://hastie.su.domains/ElemStatLearn",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://lexfridman.com/podcast",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.youtube.com/@MachineLearningStreetTalk",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://changelog.com/practicalai",
+   "v": "changed",
+   "s": 200,
+   "to": "https://practicalai.show/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://dataskeptic.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://promptbase.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://prompthero.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.artbreeder.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://promptfolder.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.aiprm.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.certik.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.openzeppelin.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.trailofbits.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://quantstamp.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.slowmist.com",
+   "v": "ok",
+   "s": 301,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://code.visualstudio.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.sublimetext.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://iterm2.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://zuplo.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://tyk.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.alfredapp.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://rectangleapp.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://konghq.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://alacritty.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.softroboticsinc.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://ziglang.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://alt-tab-macos.netlify.app",
+   "v": "changed",
+   "s": 200,
+   "to": "https://alt-tab.app/",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://1password.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://julialang.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.usebruno.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://cloud.google.com/apigee",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://bitwarden.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.modular.com/mojo",
+   "v": "changed",
+   "s": 200,
+   "to": "https://mojolang.org/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.babylonjs.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://openbionics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.festo.com/bionic",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.piaggiofastforward.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://wyss.harvard.edu/technology/robobees",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://agent.specul.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://threejs.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://rapier.rs",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://playcanvas.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://phaser.io",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-08",
+   "u": "https://www.tesla.com/AI",
+   "v": "blocked",
+   "s": 403,
+   "via": "fetch"
+  }
+ ]
+}
