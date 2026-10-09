@@ -7,7 +7,7 @@
     },
     "brand.js": {
       "source": "www.specul/brand.js",
-      "sha256": "4c4b00ce3eaeddb4be06e083a4f9fb0edc75f462130e531415d726ed2c17c777"
+      "sha256": "f2e8c34c5e7ccb18dbb74cb7692cc430467b43db75a276af70e8b9672b64636f"
     },
     "shell.mjs": {
       "source": "_sites/_template/shell.mjs",
