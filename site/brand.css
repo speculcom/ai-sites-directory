@@ -1,0 +1,798 @@
+/* ==========================================================================
+   Specul 设计系统 v2 —— 编辑部风格
+   --------------------------------------------------------------------------
+   v1 的问题（真实审计结论，不是感觉）：
+     · 信息密度失控 —— 一屏 5 个区块全写满，糊成一片
+     · 卡片无视觉锚点 —— 纯文字块，眼睛找不到落脚点
+     · 没有节奏 —— 间距/标题/留白几乎一样，页面没呼吸
+     · 英文小标签满天飞 —— 中文页里散落杂乱标签
+     · 色彩单调 —— 整页只有两个颜色，没有重点
+
+   v2 的原则：
+     1. 一屏一个焦点。首屏只讲一件事。
+     2. 层级靠字号与留白拉开，不靠颜色堆。
+     3. 颜色是标记，不是装饰。全站只有「品牌紫」+「功能青」+「状态色」。
+     4. 中文站不散落英文装饰标签。术语只在必要处出现，且中文优先。
+     5. 卡片要有「锚」—— 序号、色条、或图标，给眼睛一个落点。
+
+   尺度体系（8px 基线）：
+     字号 12 / 13 / 15 / 18 / 22 / 30 / 44 / 60
+     间距 4  8  12  20  32  52  80
+   ========================================================================== */
+
+:root {
+  /* ── 色：暗色为默认 ── */
+  --bg:        #07090e;
+  --bg-raise:  #0c1017;
+  --bg-panel:  #11161f;
+  --bg-inset:  #0a0e14;
+
+  --line:        rgba(255, 255, 255, .07);
+  --line-mid:    rgba(255, 255, 255, .12);
+  --line-strong: rgba(255, 255, 255, .2);
+
+  --ink:       #eef2f7;
+  --ink-mid:   #a8b3c4;
+  /* B5（2026-10-09）：--ink-dim / --ink-faint 提亮到满足 WCAG AA。
+   *
+   * 实测（`_audit/a11y-contrast.mjs`，浏览器里算有效背景 + WCAG 公式）：
+   *   旧 --ink-dim   #6b7688 → 3.95:1（最亮的深色底 #11161f）
+   *   旧 --ink-faint #5c6675 → 3.12:1
+   * 两者是**全站违规量最大**的色（1700 条聚类里的绝大多数）。
+   *
+   * 新值是**算出来的最小提亮量**（7% / 17%），不是随手调的：
+   *   #758090 → 4.52:1 · #78808c → 4.54:1（都过了 4.5 的线）
+   *
+   * ⚠ 这里推翻 2026-10-03 的一个判断。原注释写「ink-faint 只用于装饰性文字，
+   *   WCAG 1.4.3 对装饰性文本用 3:1 即达标」，并据此停在 3.43:1。两处不成立：
+   *   ① 3:1 那条豁免是给**大字号文本**（≥24px，或 ≥18.66px 加粗）与**非文本 UI 组件**的，
+   *      不是给「小字号的装饰性文本」的 —— 页脚版权与标签文字传达信息，属正文，要 4.5:1；
+   *   ② 「物理上无法达到 4.5:1」经复算不成立：#78808c 就达到了 4.54:1
+   *      （原注释里的 4.33:1 是拿另一个底色算的）。
+   *   「淡的分层」仍然保留：--ink-faint 依旧明显弱于 --ink-dim 与 --ink-mid。 */
+  --ink-dim:   #758090;
+  --ink-faint: #78808c;
+
+  /* 品牌紫：唯一主色，用于强调与标识 */
+  --brand:      #8b7cf8;
+  --brand-soft: rgba(139, 124, 248, .14);
+  --brand-line: rgba(139, 124, 248, .34);
+
+  /* 功能青：仅用于「可交互 / 数据」这类功能性提示 */
+  --cyan:      #3ddbc8;
+  --cyan-soft: rgba(61, 219, 200, .12);
+
+  /* 状态色：语义固定，不作装饰 */
+  --ok:    #4ade80;   /* 已核验 */
+  --warn:  #fbbf24;   /* 部分核验 */
+  --stop:  #f87171;   /* 过期 / 风险 */
+
+  /* ── 内容维度色板（2026-10-03 新增）──────────────────────────────────
+     为什么要它：--brand 是**站点级**标识（紫/青/蓝/绿/金），
+     但站点内部还有多个内容维度需要区分 —— agent 的形态与抽象层、
+     models 的量化档、nav 的分类。原先这些维度只能用粗体/边框/位置区分，
+     信息密度上不去，于是「靠留白和边框分组」，正好是留白多的根源。
+
+     **色彩是比留白更省空间的分组手段**：一个 2px 色条 + 一次色彩编码，
+     代替一段 40px 的上下留白。这是「空间利用率高」与「配色丰富」能同时成立的关键。
+
+     六个维度互不相邻使用（相邻两组必换色），避免读成渐变。
+     全部值按 WCAG 对比度算出：暗色对底色 ≥7.3:1、亮色对底色 ≥3.6:1，
+     且每色都给了 -on（色上的前景色）—— 暗色系这些色很亮，配白字只有 1.6~2.7:1。 */
+  --c-form:    #5aa9f5;  --c-form-on:    #04121f;   /* 形态：IDE / CLI / 厂商云 */
+  --c-layer:   #a78bfa;  --c-layer-on:   #120a2e;   /* 抽象层：原语 / 编排 / 开箱 */
+  --c-use:     #3ddbc8;  --c-use-on:     #04211d;   /* 用途：编程 / 办公 / 研究 */
+  --c-state:   #4ade80;  --c-state-on:   #04230f;   /* 状态：已核验 / 部分 / 过期 */
+  --c-quant:   #f5c542;  --c-quant-on:   #241a02;   /* 量化档：Q4 / Q8 / FP16 */
+  --c-class:   #fb923c;  --c-class-on:   #2a1003;   /* 分类：nav 的12 个大类 */
+  /* 每个维度的柔和底（用于 tag / 卡片左条 / 徽章底）*/
+  --c-form-soft:  rgba(90, 169, 245, .14);
+  --c-layer-soft: rgba(167, 139, 250, .14);
+  --c-use-soft:   rgba(61, 219, 200, .14);
+  --c-state-soft: rgba(74, 222, 128, .14);
+  --c-quant-soft: rgba(245, 197, 66, .14);
+  --c-class-soft: rgba(251, 146, 60, .14);
+
+  /* ── 量化档专用色阶（2026-10-03）────────────────────────────────────
+     单独一组而不是复用 --c-*: 量化档是**有序**的（近似无损 → 极限压缩），
+     需要一条「质量递减」的连续色带，不能用分类色 ——
+     分类色之间无序（紫≠比青高级），量化档必须读得出高低。
+     冷 → 暖 = 高质量 → 高压缩，与「越压缩越暖」的心理预期一致。 */
+  --q-lossless: #a78bfa;  --q-lossless-soft: rgba(167, 139, 250, .14);  /* 近似无损 */
+  --q-conserv:  #5aa9f5;  --q-conserv-soft:  rgba(90, 169, 245, .14);   /* 保守 */
+  --q-balance:  #3ddbc8;  --q-balance-soft:  rgba(61, 219, 200, .14);   /* 平衡 */
+  --q-ctx:      #f5c542;  --q-ctx-soft:      rgba(245, 197, 66, .14);   /* 长上下文 */
+  --q-extreme:  #fb923c;  --q-extreme-soft:  rgba(251, 146, 60, .14);   /* 极限压缩 */
+
+  /* ── 字号：语义命名 ── */
+  /* 2026-10-03 全部取整。原值 11.5 / 15.5 / 30（--fs-2xl 已改--display-sub）。
+     半像素的代价：在 100% / 125% / 150% 三种缩放下分别落在不同像素上，
+     同一档字看起来不等大；而且内容层再用 em/% 换算会派生出一串
+     9.68 / 12.096 / 12.88 这种数（实测 models 详情页有 27 个非整数字号）。 */
+  --fs-micro: 11px;     /* 角标、计数 */
+  --fs-xs:    12px;     /* meta、次要 */
+  --fs-sm:    14px;     /* 卡片正文 */
+  --fs-base:  15px;     /* 正文 */
+  --fs-lg:    18px;     /* 卡片标题 */
+  --fs-xl:    22px;     /* 区块标题 */
+  --fs-2xl:   var(--display-sub);
+  /* 首屏标题**接入 --display**（2026-10-03）。原先 --fs-3xl 自己写死 clamp(40px,6vw,60px)，
+     与内容层各站各写的 clamp 互不相干 —— 实测六站 h1 落在 30/34/40/54/60px 五档。
+     现在首屏标题与详情页标题分别有唯一来源（--display / --display-sub），
+     各站内容层不再自己写 clamp。 */
+  --fs-3xl:   var(--display);
+
+  /* ── 行高 ── */
+  --lh-tight: 1.16;
+  --lh-snug:  1.42;
+  /* 2026-10-03：原 1.76 → 实测全站行高比 1.76，超出「紧凑」判据（1.5~1.7）。
+     收到 1.62（15px 正文 = 24.3px 行高）：中文正文可读性仍好，
+     每行多容纳 1~2 个字，长段落与卡片列表的紧凑感改善最明显。
+     ⚠ 改这个值要同步 brand.css 里硬编码的 1.72 / 1.75（导语与说明段）——
+       它们不引用变量，改了变量它们不会跟着变。 */
+  --lh-body:  1.62;
+
+  /* ── 间距（8px 基线）── */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 20px;
+  --sp-5: 32px;
+  /* 2026-10-03 新增 40px 档：介于 --sp-5(32) 与 --sp-6(52) 之间。
+     原因：实测六站的区块留白从 12px 到 108px 跨 9 倍（www 108 / agent 80 /
+     models 52 / learn 54 / nav 52 / agent详情 12），四个站四种做法（硬编码 64px /
+     18px / var(--sp-4) / var(--sp-6)），没有共同尺度。
+     用户要求「留空都小一点」→ 统一收到 40px 这一档：
+     比原先最紧的 models/nav(52) 小，比 www(108) 大幅收紧。 */
+  --sp-5b: 40px;
+  --sp-6: 52px;
+  --sp-7: 80px;
+
+  /* ── 形状 ──
+     2026-10-03 新增 --r-xs 并明确四档的用途。
+     此前实测源码里有 **24 种** border-radius 取值（2/3/4/5/6/7/8/9/10/12/13/14/
+     16/18/20/24px + 99px + 999px + 50% + 4 个已有变量）——
+     圆角没有档位体系，是「不像一套」最直接的来源：
+     同样性质的卡片，一处 4px 一处 9px 一处 13px，眼睛会读成「三个不同组件」。
+     现已把 61 处收敛到这四档（特例 999px 胶囊与 50% 圆形/头像 保留）。 */
+  /* ── 内容层旧别名（2026-10-03 补齐）────────────────────────────────
+     这套命名（--text / --muted / --panel / --bg-soft / --accent …）是 v1 遗留：
+     **从未被定义过**，但内容层有 139 处引用，浏览器一律回退到默认值 ——
+     属于**静默失效**：页面看起来「有点怪」但没有任何报错，只有量computed 值才发现。
+     修法是补别名而不是逐个替换引用（139 处会漏，且以后还会新增）。
+     下面每个别名的右侧值都来自 brand.css 的真实 token，单一真相源不变。 */
+  --text: var(--ink);            /* 正文色 */
+  --text-dim: var(--ink-dim);    /* 弱化正文 */
+  --muted: var(--ink-mid);       /* meta / 说明文字 */
+  --dim: var(--ink-dim);         /* 旧名 --dim */
+  --panel: var(--bg-panel);      /* 卡片底 */
+  --panel-solid: var(--bg-raise);
+  --bg-soft: var(--bg-inset);    /* 柔和底 */
+  --gold: var(--c-quant);        /* 金色强调 → 量化档色 */
+  --accent: var(--brand);        /* 站点 accent */
+  --card-accent: var(--brand);
+  --border: var(--line);
+  --pa: var(--brand-soft);
+  --dc: var(--c-class);          /* nav 分类色变量 */
+  --red: var(--stop);
+  --font: var(--mono);
+  /* --brand-on 的**默认值**（2026-10-03 补）：原先只有各站 accent 块定义它，
+     而 www 站没有 accent 块 → var(--brand-on, #fff) 的 fallback 生效。
+     放在这里让 brand.css 自洽：任何站不定义也能拿到合法值。 */
+  --brand-on: #fff;
+
+  --r-xs: 4px;    /* 徽章、色条、输入框、代码块 */
+  --r-sm: 8px;    /* 标签、chip、按钮 */
+  --r:    12px;   /* 卡片（主体，最常用） */
+  --r-lg: 18px;   /* 大面板、对话框、modal */
+  /* B6：补两档大圆角（S2 的卡片用 20/26px）。 */
+  --r-xl: 20px;
+  --r-2xl: 26px;
+  --container: min(1120px, 90vw);
+  /* B6：**宽容器**，只给「卡片 / 网格」类版面用。
+     ⚠ 为什么不直接把 --container 放宽到 1560px：正文站（learn 词条、legal）
+       一旦行宽到 1560px，15px 字号下每行约 150 字符，远超可读区间（45–90）。
+       www 之所以能用宽容器，是因为它的内容是卡片与 chip，不是散文。
+       所以宽度是**两种用途两个 token**，而不是一个数全局改大。 */
+  --container-wide: min(1560px, 92vw);
+
+  /* ── 行宽（2026-10-03 新增）──────────────────────────────────────────
+     为什么不能用 ch：1ch = 数字「0」的宽度（约 0.5em），而**汉字是全角 1em = 2ch**。
+     所以 max-width: 60ch 实际只放得下 30 个汉字 —— 实测 www 的 hero-sub 被卡在
+     612px、agent 的 lede 被卡在 550px，用户报「大字不停换行、内容集中在左侧、
+     宽屏横向没占满」。这不是排版失误，是**用西文单位约束中文**。
+
+     新规则：用 em 明确「一行放多少汉字」，并随视口放宽。
+     取值按正文 15px × 汉字数 算出，不是拍脑袋：
+       40em = 600px ≈ 40 汉字（窄屏一行，超出换行）
+       46em = 690px ≈ 46 汉字（宽屏一行，密度合适不至于一行太长） */
+  --measure: 40em;        /* 正文行宽上限 */
+  --measure-wide: 34em;   /* 导语行宽上限（17px 字号下 ≈ 40 汉字） */
+  --ring: rgba(139, 124, 248, .7);
+
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  /* B6（2026-10-09）：把首页 S2 的**表面与色系**提升到共享层，六站自动继承。
+     原先这套只在 `www.specul/index.html` 里内联（作用域限 body.brand-ambient），
+     于是六站看着像两套皮肤。提升的原则：**结构性与语义性的东西进共享层，
+     各站的身份色（--accent / --brand）留在各站**。 */
+  --shadow: 0 20px 50px -28px rgba(0, 0, 0, .85);
+  --shadow-hi: 0 4px 12px -4px rgba(0, 0, 0, .5), 0 22px 44px -24px rgba(0, 0, 0, .8);
+  /* 玻璃表面：页头 / 底部 tab bar 用。必须跟着主题走（见亮色块）。 */
+  --glass: rgba(22, 18, 31, .88);
+
+  /* ── 排版尺度（2026-10-03 新增，同日二次校准）─────────────────────────
+     第一版的问题：把「大」理解成「留白更多」，于是 section-pad 给到 88px，
+     实测 www 变成 108px 留白 —— 用户反馈「留空都小一点」。
+     **大 ≠ 空。** 大气来自三件事，按权重排：
+       1. 主标够大（字号 + 字重 + 字间距收紧）
+       2. 区块之间有节奏（一致，不是多）
+       3. 颜色层次清楚（accent 明确、暗色有光晕）
+     留白只占很小一部分 —— 内容密度高但不挤，才叫「大气」。
+     所以这一版：**字号放大、留白收一档**。 */
+  --display: clamp(38px, 5.6vw, 66px);     /* 首页主标（原 60 → 66） */
+  --display-sub: clamp(28px, 3.8vw, 46px); /* 详情页主标（原 40 → 46） */
+  --h2: clamp(23px, 2.8vw, 32px);
+  --lede: 17px;
+  --lede-lh: 1.72;
+  /* 区块纵向留白：从 52~88px 收到 40px 一档，六站同一档 */
+  --section-pad: var(--sp-5b);
+  --section-pad-sm: var(--sp-5);
+  --block-gap: var(--sp-4);
+
+  /* 兼容别名：v1 页面仍在引用，迁移完成后删除。
+     --vio → --brand；--grad-text → 品牌紫实色（v2 不再用渐变文字） */
+  --vio: var(--brand);
+  --grad-text: var(--brand);
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+
+
+  /* 宽屏放宽行宽：容器已封顶 1120px，所以在容器内把行宽放开一档 */
+  @media (min-width: 1600px) {
+    :root { --measure: 46em; --measure-wide: 40em; }
+  }
+/* 超宽屏（≥2200px）再放宽一档：容器已经到 1720px，
+   行宽若不跟着放，导语会只占容器 1/3（实测 2560 下 36%）。 */
+@media (min-width: 2200px) {
+    :root { --measure: 54em; --measure-wide: 48em; }
+  }
+
+/* ── 宽屏容器分档（2026-10-03）──────────────────────────────────────
+   原值 min(1120px, 90vw) 在 1440 以上就封顶 —— 实测 1920 与 2560 视口下
+   容器都是 1120px，超宽屏右侧白留400~720px，用户报「横向没占满」。
+   现在按视口分档放开。每档都留出可读行长（正文约 40~48 汉字/行），
+   不会把一行拉到 2000px 那种「一行到底」的难读形态。
+   分档而不是连续公式：连续 min() 在中间尺寸会算出奇怪的中间值。 */
+@media (min-width: 1560px) { :root { --container: min(1320px, 88vw); } }
+@media (min-width: 1800px) { :root { --container: min(1480px, 86vw); } }
+@media (min-width: 2200px) { :root { --container: min(1720px, 82vw); } }
+@media (min-width: 2800px) { :root { --container: min(2000px, 78vw); } }
+
+/* 浅色：不是把暗色反过来，是重新给一套值 */
+[data-theme="light"] {
+  --bg:        #fbfcfe;
+  --bg-raise:  #ffffff;
+  --bg-panel:  #ffffff;
+  --bg-inset:  #f4f6fa;
+
+  --line:        rgba(15, 23, 42, .09);
+  --line-mid:    rgba(15, 23, 42, .15);
+  --line-strong: rgba(15, 23, 42, .24);
+
+  --ink:       #0f172a;
+  --ink-mid:   #3d4a5c;
+  --ink-dim:   #5c6879;
+  /* B5（2026-10-09）：与深色主题同理。#707c8c 在白底上 4.13:1，差一点点到 4.5；
+   * 压暗 5% 到 #6a7685 即 4.51:1（算出来的最小改动，层次几乎看不出差别）。 */
+  --ink-faint: #6a7685;
+
+  --brand:      #6d4fd6;
+  --brand-soft: rgba(109, 79, 214, .08);
+  --brand-line: rgba(109, 79, 214, .28);
+
+  --cyan:      #0b7c72;
+  --cyan-soft: rgba(13, 148, 136, .1);
+
+  --ok:    #15803d;
+  --warn:  #b45309;
+  --stop:  #dc2626;
+
+  /* 内容维度色板 · 亮色主题（2026-10-03）
+     亮色下用同色系更深一档 —— 对底色仍 ≥3.6:1，且配白字 ≥3.7:1 可读。 */
+  --c-form:    #1f6fc4;  --c-form-on:    #ffffff;
+  --c-layer:   #6d4fd6;  --c-layer-on:   #ffffff;
+  --c-use:     #0b7c72;  --c-use-on:     #ffffff;
+  --c-state:   #15803d;  --c-state-on:   #ffffff;
+  /* B6（2026-10-09）：#a97a08 → #906807。
+     注意这里**推翻本文件原先的一句结论**：原注释写「实测 #0d9488(3.65) / #a97a08(3.74) 不够，
+     各自加深一档后达标」—— 但两处的**现值仍是 3.74/3.84**，也就是说那次并没有真的达标。
+     之所以一直没被发现：B5 的对比度探针**只测了默认（深色）主题**，
+     而这两个色只出现在亮色主题的覆盖块里。B6 把探针扩成双主题后一次报出 342 处。
+     现在按「白底 + 各自柔和底」双条件算出：#0b7c72（白 5.05 / 最坏底 4.53）· #906807（5.06 / 4.54）。 */
+  --c-quant:   #906807;  --c-quant-on:   #ffffff;
+  --c-class:   #c2410c;  --c-class-on:   #ffffff;
+  --c-form-soft:  rgba(31, 111, 196, .10);
+  --c-layer-soft: rgba(109, 79, 214, .10);
+  --c-use-soft:   rgba(13, 148, 136, .10);
+  --c-state-soft: rgba(21, 128, 61, .10);
+  --c-quant-soft: rgba(169, 122, 8, .10);
+  --c-class-soft: rgba(194, 65, 12, .10);
+
+  /* 量化档 · 亮色：tier 标签是 0.7rem(≈11px) 小字，属正文级→ 必须 ≥4.5:1。
+     实测 #0d9488(3.65) / #a97a08(3.74) 不够，各自加深一档后达标。 */
+  --q-lossless: #6248c4;  --q-lossless-soft: rgba(98, 72, 196, .10);
+  --q-conserv:  #1a5fae;  --q-conserv-soft:  rgba(26, 95, 174, .10);
+  --q-balance:  #0f766e;  --q-balance-soft:  rgba(15, 118, 110, .10);
+  --q-ctx:      #8a6209;  --q-ctx-soft:      rgba(138, 98, 9, .10);
+  --q-extreme:  #b8460f;  --q-extreme-soft:  rgba(184, 70, 15, .10);
+
+  --shadow: 0 20px 46px -30px rgba(15, 23, 42, .3);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   基础
+   ══════════════════════════════════════════════════════════════════════ */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--bg); scroll-padding-top: 96px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, p, ul, ol, figure { margin: 0; padding: 0; }
+
+/*裸标签的 h1/h2 默认字号 —— 2026-10-03 新增。
+   为什么必须加：agent 站详情页的 h1 **没有任何类名**，于是没有任何规则命中它，
+   30px 是浏览器默认的 `h1 { font-size: 2em }` × 父级 15.5px 算出来的，
+   与首页的 66px 差 2.2 倍 —— 六站详情页因此「小一号」。
+   「所有 h1 都必须命中规则」比「给每个 h1 都加类」更可靠：
+   裸标签规则兜底，内容层想单独调时再显式覆盖。 */
+h1 { font-size: var(--display-sub); line-height: var(--lh-tight); font-weight: 800; letter-spacing: -.028em; }
+h2 { font-size: var(--h2); line-height: var(--lh-tight); font-weight: 700; letter-spacing: -.018em; }
+ul, ol { list-style: none; }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { background: 0; border: 0; color: inherit; cursor: pointer; font: inherit; }
+code, kbd, pre { overflow-wrap: anywhere; }
+::selection { background: var(--brand-soft); }
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+
+.container { width: var(--container); margin-inline: auto; }
+.mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+
+/* 页面底纹：一处光晕 + 一层细网格。
+   ⚠ 2026-10-03 改动：光晕色原先**硬编码为品牌紫** rgba(139,124,248,.13)，
+   所以各站 accent 改成青/蓝/绿/金之后，底纹还是紫的 ——
+   六站页面背景一模一样，这就是「不生动」也「不像一套站」的原因之一。
+   现在改用 color-mix 从 --brand 派生：站点换 accent，底纹自动跟着换。
+   color-mix 的两个底色都取自当前主题（--brand 与 --bg），
+   所以明暗两套主题都成立，不需要再各写一份。 */
+.brand-ambient::before {
+  content: "";
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(1100px 620px at 78% -8%,
+      color-mix(in srgb, var(--brand) 16%, transparent), transparent 62%),
+    linear-gradient(180deg, #0a0e15 0%, var(--bg) 40%, #05070b 100%);
+}
+.brand-ambient::after {
+  content: "";
+  position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .5;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 10%, transparent 72%);
+  mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 10%, transparent 72%);
+}
+[data-theme="light"] .brand-ambient::before {
+  background:
+    radial-gradient(1100px 620px at 78% -8%,
+      color-mix(in srgb, var(--brand) 9%, transparent), transparent 60%),
+    linear-gradient(180deg, #f7f9fc 0%, var(--bg) 50%, #eef2f7 100%);
+}
+[data-theme="light"] .brand-ambient::after {
+  background-image:
+    linear-gradient(rgba(15,23,42,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,.05) 1px, transparent 1px);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   顶栏 —— 细、高、留白足
+   ══════════════════════════════════════════════════════════════════════ */
+.site-header {
+  position: sticky; top: 0; z-index: 60;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+.site-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--sp-4); min-height: 66px; padding-block: var(--sp-2);
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
+.brand-dot {
+  width: 9px; height: 9px; border-radius: 3px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--brand), var(--cyan));
+  box-shadow: 0 0 0 4px var(--brand-soft);
+}
+.brand-text { display: flex; flex-direction: column; gap: 1px; }
+.brand-name { font-size: 15px; font-weight: 700; letter-spacing: .01em; line-height: 1.2; }
+.brand-sub { font-size: 10.5px; color: var(--ink-faint); letter-spacing: .06em; line-height: 1.2; }
+
+.nav-links { display: flex; align-items: center; gap: var(--sp-5); }
+.nav-links > a {
+  font-size: 13.5px; color: var(--ink-mid); position: relative;
+  padding-block: var(--sp-2); transition: color .16s var(--ease);
+}
+.nav-links > a:hover { color: var(--ink); }
+.nav-links > a[aria-current] { color: var(--ink); font-weight: 600; }
+.nav-links > a[aria-current]::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 2px;
+  height: 2px; border-radius: 2px; background: var(--brand);
+}
+.nav-tools { display: inline-flex; align-items: center; gap: var(--sp-2); }
+.icon-btn {
+  width: 32px; height: 32px; display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: var(--r-sm);
+  font-size: 13px; color: var(--ink-mid); background: transparent;
+  transition: border-color .16s var(--ease), color .16s var(--ease);
+}
+.icon-btn:hover { border-color: var(--line-strong); color: var(--ink); }
+
+/* 语言按钮固定 32px 见上（width + display:grid; place-items:center）——
+   这也是语言按钮文案**只能用单字「中」而不能用「中文」**的原因：
+   两个汉字塞进 32px 会挤成一团，看起来像布局坏了。
+   （2026-10-03 用户定案：英文态EN，中文态「中」。） */
+
+/* ══════════════════════════════════════════════════════════════════════
+   页脚 —— 三段单行，信息少而准
+   ══════════════════════════════════════════════════════════════════════ */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-block: var(--sp-5) var(--sp-6);
+  color: var(--ink-faint); font-size: var(--fs-xs);
+  margin-top: auto;
+}
+.foot-row {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: var(--sp-3) var(--sp-5); justify-content: space-between;
+}
+.foot-brand { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; }
+.foot-copy { color: var(--ink-faint); }
+.foot-links { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-4); }
+.foot-links > a { color: var(--ink-dim); transition: color .16s var(--ease); }
+.foot-links > a:hover { color: var(--ink); }
+.foot-legal-links { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-4); }
+.foot-legal-links > a { color: var(--ink-faint); }
+.foot-legal-links > a:hover { color: var(--ink-mid); }
+
+/* ══════════════════════════════════════════════════════════════════════
+   跳转链接
+   ══════════════════════════════════════════════════════════════════════ */
+.t-skip {
+  position: absolute; left: var(--sp-3); top: 10px; z-index: 100;
+  transform: translateY(-180%);
+  /* B5（2026-10-09）：原来是白字 + --brand 底，实测 1.62–3.31:1（各站 accent 不同），
+   * 全部不达标。改为**深色字 + 亮 accent 底**：白字在亮色上对比度天然不足，
+   * 而深字在同样底色上到 ~6:1。跳转链接是键盘用户第一个会遇到的东西，不能是低对比的。 */
+  background: var(--brand); color: #06080d;
+  padding: 10px 16px; border-radius: var(--r-sm);
+  font-size: var(--fs-xs); font-weight: 600;
+  transition: transform .16s var(--ease);
+}
+.t-skip:focus { transform: translateY(0); }
+/* B6（2026-10-09）：亮色主题下跳转链接要**反过来**用白字。
+   深色主题的 accent 是亮的（青/紫），深字才够对比；亮色主题的 accent 是压深的
+   （#6d4fd6 / #1f6fc4 / #0b7c72 / #906807），深字在上面只有 3.3–4.0:1，白字才达标。
+   —— 同一个组件在两个主题下需要**相反**的前景色，这是「一套值走天下」行不通的地方。 */
+[data-theme="light"] .t-skip { color: #fff; }
+
+/* ══════════════════════════════════════════════════════════════════════
+   B6（2026-10-09）· 移动端导航（汉堡抽屉 + 底部 tab bar）
+   ──────────────────────────────────────────────────────────────────────
+   来源：首页 S2 的内联实现（原先作用域限 body.brand-ambient，只有 www 有）。
+   提升到共享层的意义：**六站从此是同一套实现**，而不是六份各自演化。
+
+   移植时做了三件事（都不是照抄）：
+     1. token 映射：--hp-raise/--hp-line/--hp-ink* → --bg-panel/--line/--ink*；
+        --hp-glass → --glass（B6 新增，会随主题变）
+     2. 字号一律整数 px（设计系统硬规则，_design-audit 守着）
+     3. 抽屉只在 ≤900px 生效（与 .nav-links 的隐藏断点一致 —— 两者必须同时切换，
+        否则会出现「导航没了但没有替代入口」或「两个入口同时出现」）
+
+   ⚠ 底部 tab bar 只给 www 用，**没有**推给其余五站：那五站的页脚站群链接在窄屏
+     本来就可见（实测 390px 下六个站全部可达），再加一条 tab bar 只是把同一批入口
+     写两遍。推广的是组件与 token，用不用取决于它在该站是否冗余。
+   ══════════════════════════════════════════════════════════════════════ */
+.nav-burger {
+  display: none; flex-direction: column; justify-content: center; gap: 4px;
+  width: 34px; height: 34px; padding: 0 6px; background: transparent;
+  border: 1px solid var(--line-mid); border-radius: var(--r-sm); cursor: pointer;
+}
+.nav-burger i { display: block; height: 2px; background: var(--ink-mid); border-radius: 2px; transition: transform .2s var(--ease), opacity .2s var(--ease); }
+.nav-burger[aria-expanded="true"] i:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-burger[aria-expanded="true"] i:nth-child(2) { opacity: 0; }
+.nav-burger[aria-expanded="true"] i:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.nav-scrim { display: none; position: fixed; inset: 0; z-index: 50; background: rgba(0, 0, 0, .45); opacity: 0; pointer-events: none; transition: opacity .24s var(--ease); }
+.nav-scrim.open { opacity: 1; pointer-events: auto; }
+.nav-drawer {
+  display: none; flex-direction: column; position: fixed; top: 0; right: 0; bottom: 0; z-index: 60;
+  width: min(78vw, 300px); background: var(--bg-panel); border-left: 1px solid var(--line);
+  box-shadow: -14px 0 40px -20px rgba(0, 0, 0, .5);
+  transform: translateX(102%); transition: transform .28s var(--ease);
+  padding: 16px 0 calc(14px + env(safe-area-inset-bottom, 0px));
+  /* ⚠ 必须**显式**写 overflow-x: hidden。
+     只写 overflow-y: auto 时，CSS 的 overflow 耦合规则会把另一轴的 visible
+     计算成 auto —— 于是抽屉成了一个「横向可滚」的容器，被 models-check 的
+     「全站不允许横向滚动容器」约定判失败（24/24 全红）。显式写清就没有歧义。 */
+  overflow-x: hidden; overflow-y: auto;
+}
+.nav-drawer.open { transform: none; }
+.nav-drawer-h { display: flex; align-items: center; justify-content: space-between; padding: 0 20px 14px; border-bottom: 1px solid var(--line); }
+.nav-dclose { width: 32px; height: 32px; border: 1px solid var(--line-mid); background: transparent; color: var(--ink-mid); border-radius: 9px; font-size: 18px; cursor: pointer; line-height: 1; }
+.nav-drawer-list { display: flex; flex-direction: column; padding: 8px 12px; }
+.nav-drawer-list a { display: flex; align-items: center; justify-content: space-between; padding: 13px 12px; border-radius: 12px; color: var(--ink); font-size: 15px; font-weight: 700; text-decoration: none; }
+.nav-drawer-list a:active { background: var(--brand-soft); }
+.nav-drawer-list a .ar { color: var(--ink-dim); font-size: 14px; }
+.nav-drawer-foot { margin-top: auto; padding: 14px 20px 0; border-top: 1px solid var(--line); }
+.nav-drawer-foot p { margin: 0 0 8px; color: var(--ink-dim); font-size: 12px; }
+.nav-drawer-foot nav { display: flex; gap: 14px; }
+.nav-drawer-foot nav a { color: var(--ink-mid); font-size: 12px; font-weight: 700; }
+.nav-tabbar {
+  display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  background: var(--glass); backdrop-filter: blur(18px) saturate(160%);
+  border-top: 1px solid var(--line); padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+}
+.nav-tabbar a, .nav-tabbar button {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 7px 2px 6px; background: transparent; border: 0; color: var(--ink-dim);
+  font: inherit; font-size: 10px; font-weight: 700; text-decoration: none; cursor: pointer;
+}
+.nav-tabbar a[aria-current="page"], .nav-tabbar button[aria-expanded="true"] { color: var(--brand); }
+.nav-tabbar .ti { font-size: 17px; line-height: 1; }
+@media (max-width: 900px) {
+  .nav-burger { display: flex; }
+  .nav-scrim, .nav-drawer { display: flex; }
+}
+@media (max-width: 768px) {
+  .nav-tabbar { display: flex; }
+  /* 有 tab bar 的页面要给页脚留出底部空间，否则最后一行被挡住 */
+  body.has-tabbar .site-footer, body.has-tabbar .foot { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-burger i, .nav-scrim, .nav-drawer { transition: none !important; }
+}
+/* 无脚本时不能把导航藏进抽屉：汉堡按钮是 <button>，没有 JS 点了没反应。
+   所以 JS 可用时由 brand.js 给 <html> 加 .js-on，只有此时才启用抽屉。 */
+html:not(.js-on) .nav-burger { display: none; }
+@media (max-width: 900px) { html:not(.js-on) .nav-links { display: flex !important; } }
+
+/* ══════════════════════════════════════════════════════════════════════
+   排版原语
+   ══════════════════════════════════════════════════════════════════════ */
+.t-hero {
+  font-size: var(--fs-3xl); line-height: var(--lh-tight);
+  font-weight: 800; letter-spacing: -.035em; margin: 0 0 var(--sp-4);
+}
+.t-h1 {
+  /* 2026-10-03：原 --fs-2xl(30px) → 实测 agent 详情页 h1 只有 30px，
+     而首页 66px，差 2.2 倍。接 --display-sub(46px)，详情页与首页同一套尺度。
+     --fs-2xl 本身保留 30px 给「卡片标题」等中间层级，不当页面主标用。 */
+  font-size: var(--display-sub); line-height: var(--lh-tight);
+  font-weight: 800; letter-spacing: -.028em; margin: 0 0 var(--sp-3);
+}
+.t-h2 {
+  font-size: var(--fs-xl); line-height: var(--lh-snug);
+  font-weight: 700; letter-spacing: -.018em; margin: 0 0 var(--sp-3);
+}
+.t-h3 {
+  font-size: var(--fs-lg); line-height: var(--lh-snug);
+  font-weight: 650; margin: 0;
+}
+.t-lede { font-size: 17px; line-height: var(--lh-body); color: var(--ink-mid); max-width: var(--measure-wide); margin: 0; }
+.t-sm { font-size: var(--fs-sm); line-height: 1.68; color: var(--ink-mid); }
+.t-xs { font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-dim); }
+
+/* 区块 eyebrow：中文优先，不再散落英文装饰 */
+.t-eyebrow {
+  display: flex; align-items: center; gap: var(--sp-2);
+  font-size: var(--fs-micro); font-weight: 600;
+  letter-spacing: .14em; color: var(--ink-faint);
+  margin: 0 0 var(--sp-3);
+}
+.t-eyebrow::before {
+  content: ""; width: 14px; height: 2px; border-radius: 2px;
+  background: var(--brand); flex-shrink: 0;
+}
+
+/* 区块：上下留白给足，制造节奏 */
+.t-section { padding-block: var(--sp-6); border-top: 1px solid var(--line); }
+.t-section:first-of-type { border-top: 0; }
+.t-section-lead {
+  font-size: var(--fs-sm); line-height: var(--lh-body);
+  color: var(--ink-dim); max-width: var(--measure); margin: 0 0 var(--sp-5);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   卡片 —— 给眼睛一个落点
+   ══════════════════════════════════════════════════════════════════════ */
+.t-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: var(--sp-4);
+  display: flex; flex-direction: column; gap: var(--sp-2);
+  min-width: 0;
+  transition: border-color .18s var(--ease), transform .18s var(--ease);
+}
+a.t-card:hover, .t-card.is-link:hover {
+  border-color: var(--line-strong); transform: translateY(-2px);
+}
+.t-card > p { margin: 0; font-size: var(--fs-sm); line-height: 1.68; color: var(--ink-mid); }
+
+/* 卡片编号锚：让列表有节奏可循 */
+.t-index {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: var(--fs-micro); font-weight: 600;
+  color: var(--ink-faint); letter-spacing: .1em;
+}
+
+/* 细色条锚：卡片左侧 2px，用状态色，不用整块背景 */
+.t-card-bar { position: relative; padding-left: var(--sp-4); }
+.t-card-bar::before {
+  content: ""; position: absolute; left: 0; top: 2px; bottom: 2px;
+  width: 2px; border-radius: 2px; background: var(--brand);
+}
+.t-card-bar.is-ok::before { background: var(--ok); }
+.t-card-bar.is-warn::before { background: var(--warn); }
+.t-card-bar.is-stop::before { background: var(--stop); }
+
+/* 标签：只用于分类标记，不做装饰 */
+.t-tag {
+  align-self: flex-start;
+  display: inline-flex; align-items: center;
+  font-size: var(--fs-micro); font-weight: 600; letter-spacing: .08em;
+  color: var(--brand); background: var(--brand-soft);
+  border: 1px solid var(--brand-line); border-radius: 20px;
+  padding: 3px 9px; line-height: 1.4;
+}
+.t-tag.is-cyan { color: var(--cyan); background: var(--cyan-soft); border-color: color-mix(in srgb, var(--cyan) 34%, transparent); }
+
+/* 状态点：语义固定 */
+.t-state {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: var(--fs-micro); color: var(--ink-dim);
+}
+.t-state::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--ink-faint);
+}
+.t-state.is-ok::before { background: var(--ok); }
+.t-state.is-warn::before { background: var(--warn); }
+.t-state.is-stop::before { background: var(--stop); }
+
+/* ══════════════════════════════════════════════════════════════════════
+   按钮 —— 两级，形态统一
+   ══════════════════════════════════════════════════════════════════════ */
+.t-btn {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  font-size: var(--fs-sm); font-weight: 600; line-height: 1.4;
+  padding: 11px 20px; border-radius: 10px;
+  border: 1px solid var(--line-strong); color: var(--ink);
+  transition: transform .18s var(--ease), border-color .18s var(--ease), background .18s var(--ease);
+}
+.t-btn:hover { transform: translateY(-2px); border-color: var(--brand); }
+.t-btn-primary {
+  /* --brand-on = 强调色上的前景色，由各站 accent 覆盖时一起给。
+     为什么需要它：强调色底+ 白字并非总是可读 ——
+     实测暗色主题下青(#3ddbc8)/金(#f5c542)/绿(#5ddc9a) 配白字只有 1.6~1.7:1，
+     按钮会糊成一片。CSS 无法「自动选黑或白」，所以由站点层显式声明。
+     品牌紫配白字 3.31:1（本来的行为），各站可给更深/更浅的值改善。*/
+  background: var(--brand); border-color: var(--brand); color: var(--brand-on, #fff);
+}
+.t-btn-primary:hover { filter: brightness(1.08); }
+
+/* ══════════════════════════════════════════════════════════════════════
+   指标 / 网格
+   ══════════════════════════════════════════════════════════════════════ */
+.t-metrics { display: flex; flex-wrap: wrap; gap: var(--sp-4) var(--sp-5); }
+.t-metrics > div { min-width: 84px; }
+.t-metrics strong {
+  display: block; font-size: 24px; font-weight: 700; line-height: 1.2;
+  color: var(--ink); font-variant-numeric: tabular-nums;
+}
+.t-metrics span { font-size: var(--fs-xs); color: var(--ink-dim); }
+
+.t-grid { display: grid; gap: var(--sp-3); }
+.t-grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.t-grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+/* 1px 间隙网格：分隔线由容器背景产生，卡片不加边框 */
+.t-mesh {
+  display: grid; gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line); border-radius: var(--r); overflow: hidden;
+}
+.t-mesh > * { background: var(--bg-panel); padding: var(--sp-4); }
+
+/* 表格：编辑台质感 */
+.t-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.t-table th, .t-table td {
+  text-align: left; padding: 11px var(--sp-3);
+  border-bottom: 1px solid var(--line); vertical-align: top;
+}
+.t-table thead th {
+  font-size: var(--fs-micro); font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-faint);
+  border-bottom-color: var(--line-mid);
+}
+.t-table tbody tr:last-child td { border-bottom: 0; }
+.t-table tbody tr:hover { background: var(--bg-inset); }
+.t-table a { color: var(--brand); }
+.t-table a:hover { text-decoration: underline; }
+
+/* ══════════════════════════════════════════════════════════════════════
+   语言显隐 —— 三条都必须 !important，否则被元素自身 display 覆盖级联
+   ══════════════════════════════════════════════════════════════════════ */
+[data-en] { display: none !important; }
+html[data-lang="en"] [data-zh] { display: none !important; }
+html[data-lang="en"] [data-en] { display: revert !important; }
+
+h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
+.t-lede[data-en], .t-section-lead[data-en], .t-sm[data-en] { display: block; }
+.t-btn[data-en], .t-btn[data-zh] { display: inline-flex; }
+[data-zh].t-tag, [data-zh].t-state { display: inline-flex !important; }
+.t-metrics span { display: block; }
+
+/* ══════════════════════════════════════════════════════════════════════
+   窄屏
+   ══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 760px) {
+  :root {
+    /* 窄屏覆写改到 --display / --display-sub 上 ——
+       2026-10-03 前 --fs-3xl 是独立的 clamp，这里覆盖它；
+       现在 --fs-3xl = var(--display)，覆写必须跟着改 --display 才有效。
+       **变量别名链上任一环覆写错位，下游全部失效** —— 这类 bug 只看 computed 值才发现。 */
+    --display: clamp(30px, 8.6vw, 42px);
+    --display-sub: clamp(24px, 6.4vw, 32px);
+    --h2: clamp(20px, 5vw, 26px);
+    --sp-6: 40px; --sp-7: 56px;
+    --container: min(1120px, 90vw);
+  }
+  /* 窄屏放不下一行 8 项（实测 320px 视口容器仅 288px，导航需 415px）——
+     改为让导航整体换到第二行并居中，而不是压缩字号或引入横向滚动。
+     全站「无横向滚动条」是硬约束，优先保证它。 */
+  .site-bar { flex-wrap: wrap; row-gap: 0; }
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--sp-2) var(--sp-4);
+    padding-bottom: var(--sp-2);
+  }
+  .nav-links > a { font-size: 12.5px; padding-block: var(--sp-1); }
+  .nav-tools { margin-left: var(--sp-2); }
+  .brand-sub { display: none; }
+}
+@media (max-width: 520px) {
+  .nav-links > a[data-en] { display: none !important; }
+  .nav-links { gap: var(--sp-1) var(--sp-3); }
+  .brand-text { display: none; }   /* 只留 brand-dot，为导航腾出整行 */
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
