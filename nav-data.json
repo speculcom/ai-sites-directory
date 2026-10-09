@@ -1,0 +1,7179 @@
+{
+  "categories": [
+    {
+      "code": "llm",
+      "name": "大模型与对话",
+      "desc": "通用大模型、AI 搜索与提示词生态"
+    },
+    {
+      "code": "coding",
+      "name": "AI 编程与 Agent",
+      "desc": "编码助手、终端 Agent 与自动化智能体"
+    },
+    {
+      "code": "gen",
+      "name": "多模态生成",
+      "desc": "图像、视频、音频、3D 与数字人生成"
+    },
+    {
+      "code": "app",
+      "name": "AI 办公与垂直应用",
+      "desc": "写作办公、医疗、法律、金融、教育、营销等"
+    },
+    {
+      "code": "model",
+      "name": "模型与权重",
+      "desc": "模型平台、开源模型与权重托管"
+    },
+    {
+      "code": "dev",
+      "name": "开发框架与工具",
+      "desc": "AI 开发框架、MLOps、向量库、评测与安全"
+    },
+    {
+      "code": "infra",
+      "name": "算力与芯片",
+      "desc": "算力云、芯片、量子计算与半导体"
+    },
+    {
+      "code": "robot",
+      "name": "机器人与具身智能",
+      "desc": "人形、工业、服务、自动驾驶与无人机"
+    },
+    {
+      "code": "learn",
+      "name": "学习资源",
+      "desc": "论文、课程、数据集、书籍与练习平台"
+    },
+    {
+      "code": "community",
+      "name": "社区与资讯",
+      "desc": "AI 资讯、社区、播客与实验室"
+    },
+    {
+      "code": "tools",
+      "name": "开发者工具",
+      "desc": "通用开发、后端、效率与低代码工具"
+    },
+    {
+      "code": "ext",
+      "name": "延伸领域",
+      "desc": "链上与加密等相邻领域（非 AI 主体）"
+    }
+  ],
+  "items": [
+    {
+      "n": "ChatGPT",
+      "d": "OpenAI 推出的顶级对话式 AI，支持文本、图像、语音多模态交互。",
+      "u": "https://chat.openai.com",
+      "tag": "多模态",
+      "ic": "💬",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Claude",
+      "d": "Anthropic 开发的安全可靠大模型，擅长长文本分析与深度推理。",
+      "u": "https://claude.ai",
+      "tag": "长文本·安全",
+      "ic": "🧠",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Gemini",
+      "d": "Google DeepMind 打造的新一代多模态大模型，整合搜索与推理。",
+      "u": "https://gemini.google.com",
+      "tag": "大厂·多模态",
+      "ic": "♊",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "DeepSeek",
+      "d": "深度求索推出的高性能开源大模型，编程与推理能力突出。",
+      "u": "https://chat.deepseek.com",
+      "tag": "开源·编程助手",
+      "ic": "🔮",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Kimi",
+      "d": "月之暗面推出的超长上下文 AI 助手，支持 200 万字输入。",
+      "u": "https://kimi.moonshot.cn",
+      "tag": "长文本·国产",
+      "ic": "🌙",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "通义千问",
+      "d": "阿里云自研大语言模型，提供对话、编程、翻译等多场景服务。",
+      "u": "https://tongyi.aliyun.com",
+      "tag": "大厂·国产",
+      "ic": "☁️",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "文心一言",
+      "d": "百度推出的知识增强大语言模型，深度整合百度搜索生态。",
+      "u": "https://yiyan.baidu.com",
+      "tag": "大厂·RAG",
+      "ic": "📘",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "豆包",
+      "d": "字节跳动旗下 AI 对话助手，集成抖音生态与多模态能力。",
+      "u": "https://www.doubao.com",
+      "tag": "大厂·多模态",
+      "ic": "🫘",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Grok",
+      "d": "xAI（马斯克旗下）推出的幽默风格 AI 助手，实时访问 X 平台数据。",
+      "u": "https://grok.com",
+      "tag": "大厂·实时",
+      "ic": "🚀",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Perplexity",
+      "d": "AI 驱动的智能搜索引擎，结合大模型与实时网页检索。",
+      "u": "https://www.perplexity.ai",
+      "tag": "搜索·学术",
+      "ic": "🔎",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "智谱清言",
+      "d": "智谱 AI 推出的 GLM 系列大模型对话产品，支持多模态交互。",
+      "u": "https://chatglm.cn",
+      "tag": "国产",
+      "ic": "💎",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "讯飞星火",
+      "d": "科大讯飞自研大模型，深耕语音交互与教育办公场景。",
+      "u": "https://xinghuo.xfyun.cn",
+      "tag": "语音合成",
+      "ic": "🔥",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "百川智能",
+      "d": "百川 AI 推出的 Baichuan 系列大模型平台，中文评测突出。",
+      "u": "https://www.baichuan-ai.com",
+      "tag": "国产",
+      "ic": "🌊",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "腾讯混元",
+      "d": "腾讯自研大模型，深度嵌入微信、腾讯会议等产品矩阵。",
+      "u": "https://hunyuan.tencent.com",
+      "tag": "大厂",
+      "ic": "🐧",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "腾讯元宝",
+      "d": "腾讯 AI 助手应用，融合混元大模型与公众号内容生态。",
+      "u": "https://yuanbao.tencent.com",
+      "tag": "大厂",
+      "ic": "💰",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "海螺 AI",
+      "d": "Minimax 推出的 AI 对话产品，语音合成能力业界领先。",
+      "u": "https://hailuoai.com",
+      "tag": "语音合成",
+      "ic": "🐚",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "阶跃星辰",
+      "d": "Step 系列大模型，数学推理与多模态能力突出。",
+      "u": "https://www.stepfun.com",
+      "tag": "科研",
+      "ic": "⭐",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Cohere",
+      "d": "企业级大语言模型平台，Command R 系列专注 RAG 与多语言。",
+      "u": "https://cohere.com",
+      "tag": "企业级·RAG",
+      "ic": "🏢",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Mistral Le Chat",
+      "d": "法国 Mistral AI 官方对话产品，支持多语言与联网搜索。",
+      "u": "https://chat.mistral.ai",
+      "tag": "大厂",
+      "ic": "🇫🇷",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Character.ai",
+      "d": "AI 角色扮演与对话平台，创建和互动各类虚拟角色。",
+      "u": "https://character.ai",
+      "tag": "数字人",
+      "ic": "🎭",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Poe",
+      "d": "Quora 旗下多模型聚合 AI 平台，一站体验数十种大语言模型。",
+      "u": "https://poe.com",
+      "tag": "搜索·社区",
+      "ic": "📦",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "HuggingChat",
+      "d": "Hugging Face 开源 AI 对话，可自由切换多种开源模型。",
+      "u": "https://huggingface.co/chat",
+      "tag": "开源",
+      "ic": "🤗",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Anthropic Console",
+      "d": "Claude API 开发者控制台，构建和部署 AI 应用。",
+      "u": "https://console.anthropic.com",
+      "tag": "API",
+      "ic": "🏗️",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Meta AI",
+      "d": "Meta 推出的免费 AI 助手，集成 Llama 系列模型能力。",
+      "u": "https://www.meta.ai",
+      "tag": "大厂·免费",
+      "ic": "🅼",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Pi",
+      "d": "Inflection AI 打造的情感化 AI 对话助手，对话自然温暖。",
+      "u": "https://pi.ai",
+      "tag": "大厂",
+      "ic": "π",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "DeepSeek 平台",
+      "d": "DeepSeek API 开发平台，提供模型推理与微调服务。",
+      "u": "https://platform.deepseek.com",
+      "tag": "API·模型微调",
+      "ic": "🖥️",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Google AI Studio",
+      "d": "Google 官方 AI 原型开发平台，免费使用 Gemini 系列模型。",
+      "u": "https://aistudio.google.com",
+      "tag": "大厂",
+      "ic": "🅶",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Reka AI",
+      "d": "前 DeepMind 团队创立的多模态大模型，视觉理解能力突出。",
+      "u": "https://www.reka.ai",
+      "tag": "多模态·大厂",
+      "ic": "🌟",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "AI21 Labs",
+      "d": "以色列 AI 公司推出 Jurassic 系列大模型，企业级语言理解。",
+      "u": "https://www.ai21.com",
+      "tag": "企业级",
+      "ic": "🇮🇱",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Writer",
+      "d": "企业级全栈 AI 写作平台，Palmyra 模型专为商业场景打造。",
+      "u": "https://writer.com",
+      "tag": "企业级",
+      "ic": "✒️",
+      "cat": "llm",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "秘塔 AI 搜索",
+      "d": "中文 AI 搜索引擎，可深入学术与专业领域检索。",
+      "u": "https://metaso.cn",
+      "tag": "搜索·学术",
+      "ic": "🔍",
+      "cat": "llm",
+      "old_t": "AI搜索",
+      "old_c": "ai"
+    },
+    {
+      "n": "天工 AI 搜索",
+      "d": "昆仑万维推出的 AI 搜索产品，支持多轮深度研究。",
+      "u": "https://www.tiangong.cn",
+      "tag": "搜索",
+      "ic": "🌤️",
+      "cat": "llm",
+      "old_t": "AI搜索",
+      "old_c": "ai"
+    },
+    {
+      "n": "Devv",
+      "d": "面向开发者的 AI 搜索引擎，精准检索编程与技术文档。",
+      "u": "https://devv.ai",
+      "tag": "编程助手·搜索",
+      "ic": "👾",
+      "cat": "llm",
+      "old_t": "AI搜索",
+      "old_c": "ai"
+    },
+    {
+      "n": "You.com",
+      "d": "以隐私为核心的 AI 搜索引擎，支持多种 AI 模式切换。",
+      "u": "https://you.com",
+      "tag": "安全·搜索",
+      "ic": "🔒",
+      "cat": "llm",
+      "old_t": "AI搜索",
+      "old_c": "ai"
+    },
+    {
+      "n": "Phind",
+      "d": "专为开发者打造的 AI 答案引擎，结合实时搜索与代码生成。",
+      "u": "https://www.phind.com",
+      "tag": "编程助手·搜索",
+      "ic": "💡",
+      "cat": "llm",
+      "old_t": "AI搜索",
+      "old_c": "ai"
+    },
+    {
+      "n": "博查 AI 搜索",
+      "d": "字节旗下 AI 搜索产品，聚合全网信息智能回答。",
+      "u": "https://www.bochaai.com",
+      "tag": "大厂·搜索",
+      "ic": "🎯",
+      "cat": "llm",
+      "old_t": "AI搜索",
+      "old_c": "ai"
+    },
+    {
+      "n": "Brave Search",
+      "d": "Brave 浏览器内置 AI 搜索引擎，隐私优先无追踪。",
+      "u": "https://search.brave.com",
+      "tag": "安全",
+      "ic": "🦁",
+      "cat": "llm",
+      "old_t": "AI搜索",
+      "old_c": "ai"
+    },
+    {
+      "n": "Consensus",
+      "d": "AI 驱动的学术论文搜索引擎，用研究证据回答问题。",
+      "u": "https://consensus.app",
+      "tag": "学术",
+      "ic": "🎓",
+      "cat": "llm",
+      "old_t": "AI搜索",
+      "old_c": "ai"
+    },
+    {
+      "n": "Andi Search",
+      "d": "AI 原生搜索引擎，以对话形式呈现结构化答案。",
+      "u": "https://andisearch.com",
+      "tag": "搜索",
+      "ic": "🧠",
+      "cat": "llm",
+      "old_t": "AI搜索",
+      "old_c": "ai"
+    },
+    {
+      "n": "Gamma",
+      "d": "AI 驱动的演示文稿与文档生成工具，一键创建精美 PPT。",
+      "u": "https://gamma.app",
+      "tag": "办公",
+      "ic": "📊",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "Jasper",
+      "d": "老牌 AI 营销写作助手，支持品牌化内容批量生成。",
+      "u": "https://www.jasper.ai",
+      "tag": "营销·写作",
+      "ic": "✍️",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "Copy.ai",
+      "d": "AI 销售与营销写作平台，专注 GTM 工作流自动化。",
+      "u": "https://www.copy.ai",
+      "tag": "营销·工作流",
+      "ic": "📋",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "Grammarly",
+      "d": "全球领先的 AI 写作辅助工具，语法检查与风格优化。",
+      "u": "https://www.grammarly.com",
+      "tag": "写作",
+      "ic": "✅",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "通义听悟",
+      "d": "阿里云 AI 音视频转写工具，支持实时翻译与摘要生成。",
+      "u": "https://tingwu.aliyun.com",
+      "tag": "会议·翻译",
+      "ic": "👂",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "讯飞听见",
+      "d": "科大讯飞语音转文字平台，会议记录与访谈利器。",
+      "u": "https://www.iflyrec.com",
+      "tag": "会议",
+      "ic": "🎙️",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "Otter.ai",
+      "d": "AI 会议记录与转录工具，实时生成会议笔记与摘要。",
+      "u": "https://otter.ai",
+      "tag": "会议",
+      "ic": "🦦",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "Notion AI",
+      "d": "Notion 内置 AI 写作助手，笔记、文档与知识库一体化。",
+      "u": "https://www.notion.so/product/ai",
+      "tag": "办公·RAG",
+      "ic": "📝",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "WPS AI",
+      "d": "金山办公 WPS 内置 AI 助手，文档、表格、PPT 智能处理。",
+      "u": "https://ai.wps.cn",
+      "tag": "办公·国产",
+      "ic": "📑",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "Rytr",
+      "d": "高性价比 AI 写作助手，支持 40+ 用例与多语种内容生成。",
+      "u": "https://rytr.me",
+      "tag": "多语言",
+      "ic": "✍️",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "Writesonic",
+      "d": "AI 内容生成与营销写作平台，企业级 SEO 优化文章创作。",
+      "u": "https://writesonic.com",
+      "tag": "营销",
+      "ic": "🚀",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "Jenni AI",
+      "d": "AI 学术写作与研究助手，论文与报告写作的最佳伴侣。",
+      "u": "https://jenni.ai",
+      "tag": "学术",
+      "ic": "🎓",
+      "cat": "app",
+      "old_t": "AI写作办公",
+      "old_c": "ai"
+    },
+    {
+      "n": "Canva",
+      "d": "全球最流行的在线设计平台，深度集成 AI 图像与排版功能。",
+      "u": "https://www.canva.com",
+      "tag": "设计",
+      "ic": "🖌️",
+      "cat": "gen",
+      "old_t": "AI设计",
+      "old_c": "ai"
+    },
+    {
+      "n": "Microsoft Designer",
+      "d": "微软 AI 设计工具，通过自然语言生成海报、社媒图像。",
+      "u": "https://designer.microsoft.com",
+      "tag": "大厂·设计",
+      "ic": "🪟",
+      "cat": "gen",
+      "old_t": "AI设计",
+      "old_c": "ai"
+    },
+    {
+      "n": "Galileo AI",
+      "d": "用自然语言描述即可生成 UI 界面设计稿的 AI 工具。",
+      "u": "https://www.usegalileo.ai",
+      "tag": "UI生成",
+      "ic": "🎨",
+      "cat": "gen",
+      "old_t": "AI设计",
+      "old_c": "ai"
+    },
+    {
+      "n": "Uizard",
+      "d": "AI 驱动的产品原型设计工具，草图一键转交互原型。",
+      "u": "https://uizard.io",
+      "tag": "UI生成",
+      "ic": "📱",
+      "cat": "gen",
+      "old_t": "AI设计",
+      "old_c": "ai"
+    },
+    {
+      "n": "即时 AI",
+      "d": "即时设计推出的 AI UI 生成工具，中文界面设计首选。",
+      "u": "https://js.design/ai",
+      "tag": "国产·UI生成",
+      "ic": "🇨🇳",
+      "cat": "gen",
+      "old_t": "AI设计",
+      "old_c": "ai"
+    },
+    {
+      "n": "Midjourney",
+      "d": "最受欢迎的 AI 图像生成工具，以艺术风格和质量著称。",
+      "u": "https://www.midjourney.com",
+      "tag": "图像生成",
+      "ic": "🎨",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "Stable Diffusion",
+      "d": "Stability AI 的开源图像生成模型，可本地部署自由创作。",
+      "u": "https://stability.ai",
+      "tag": "开源·本地部署",
+      "ic": "🖼️",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "DALL·E",
+      "d": "OpenAI 开发的图像生成模型，与 ChatGPT 深度整合。",
+      "u": "https://openai.com/dall-e-3",
+      "tag": "图像生成·大厂",
+      "ic": "✨",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "ComfyUI",
+      "d": "功能强大的 Stable Diffusion 节点式工作流界面，灵活高效。",
+      "u": "https://github.com/comfyanonymous/ComfyUI",
+      "tag": "工作流·开源",
+      "ic": "🔧",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "Leonardo AI",
+      "d": "游戏资产级 AI 图像生成平台，提供模型微调与画布编辑。",
+      "u": "https://leonardo.ai",
+      "tag": "图像生成·游戏",
+      "ic": "🎮",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "Firefly",
+      "d": "Adobe 推出的商用安全 AI 图像生成工具，深度集成 PS。",
+      "u": "https://firefly.adobe.com",
+      "tag": "大厂·安全",
+      "ic": "🦋",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "通义万相",
+      "d": "阿里云推出的 AI 创意绘画平台，支持文生图与风格迁移。",
+      "u": "https://tongyi.aliyun.com/wanxiang",
+      "tag": "大厂·设计",
+      "ic": "🖼️",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "文心一格",
+      "d": "百度出品的 AI 艺术与创意辅助平台，中文理解优秀。",
+      "u": "https://yige.baidu.com",
+      "tag": "大厂·多语言",
+      "ic": "🖌️",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "SeaArt",
+      "d": "专注于动漫风格的 AI 绘画平台，模型与 LoRA 资源丰富。",
+      "u": "https://www.seaart.ai",
+      "tag": "视频生成·模型微调",
+      "ic": "🌸",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "Krea AI",
+      "d": "AI 实时图像生成与增强工具，边画边生成创意无限。",
+      "u": "https://www.krea.ai",
+      "tag": "实时·图像生成",
+      "ic": "🎯",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "Clipdrop",
+      "d": "Jasper 旗下 AI 图像处理工具套件，去除背景与增强画质。",
+      "u": "https://clipdrop.co",
+      "tag": "图像生成",
+      "ic": "📸",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "Tensor.art",
+      "d": "AI 图像分享与模型工作流社区，在线免费生成 AI 绘画。",
+      "u": "https://tensor.art",
+      "tag": "社区·免费",
+      "ic": "🎨",
+      "cat": "gen",
+      "old_t": "AI绘画",
+      "old_c": "ai"
+    },
+    {
+      "n": "Runway",
+      "d": "专业级 AI 视频生成与编辑平台，支持 Gen-3 等前沿模型。",
+      "u": "https://runwayml.com",
+      "tag": "视频生成",
+      "ic": "🎬",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Pika",
+      "d": "简单易用的 AI 视频生成工具，支持文本转视频及视频编辑。",
+      "u": "https://pika.art",
+      "tag": "视频生成",
+      "ic": "🎥",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "可灵 Kling",
+      "d": "快手推出的 AI 视频生成大模型，支持文生视频和图生视频。",
+      "u": "https://kling.kuaishou.com",
+      "tag": "国产",
+      "ic": "🎞️",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Sora",
+      "d": "OpenAI 出品的革命性文生视频模型，物理世界模拟能力极强。",
+      "u": "https://openai.com/sora",
+      "tag": "大厂·仿真",
+      "ic": "🌌",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "HeyGen",
+      "d": "AI 数字人视频生成平台，支持真人克隆与多语言口型同步。",
+      "u": "https://www.heygen.com",
+      "tag": "数字人·语音克隆",
+      "ic": "🤖",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Synthesia",
+      "d": "企业级 AI 虚拟主播视频生成，无需真人出镜制作专业视频。",
+      "u": "https://www.synthesia.io",
+      "tag": "数字人·企业级",
+      "ic": "🎭",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Luma AI",
+      "d": "3D 与视频生成 AI 平台，Dream Machine 效果惊艳。",
+      "u": "https://lumalabs.ai",
+      "tag": "3D生成",
+      "ic": "📸",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "即梦",
+      "d": "剪映旗下 AI 视频生成工具，文生视频与图生视频一体化。",
+      "u": "https://jimeng.jianying.com",
+      "tag": "国产",
+      "ic": "💭",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Pixverse",
+      "d": "免费 AI 视频生成平台，支持文生视频与动漫风格。",
+      "u": "https://pixverse.ai",
+      "tag": "免费·视频生成",
+      "ic": "✨",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Vidu",
+      "d": "生数科技推出的长时长 AI 视频生成模型，一致性表现优异。",
+      "u": "https://www.vidu.studio",
+      "tag": "视频生成",
+      "ic": "🎯",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "剪映",
+      "d": "抖音官方视频剪辑工具，AI 字幕、调色与模板一键生成。",
+      "u": "https://www.capcut.cn",
+      "tag": "视频生成",
+      "ic": "✂️",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Haiper AI",
+      "d": "前 DeepMind 团队创立的 AI 视频生成平台，生成质量优秀。",
+      "u": "https://haiper.ai",
+      "tag": "大厂",
+      "ic": "🎬",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Genmo",
+      "d": "AI 创意视频与动画生成工具，支持交互式视频创作。",
+      "u": "https://www.genmo.ai",
+      "tag": "设计·视频生成",
+      "ic": "✨",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "invideo AI",
+      "d": "AI 一键生成专业营销视频，输入话题自动产出成片。",
+      "u": "https://invideo.io",
+      "tag": "营销·工作流",
+      "ic": "🎥",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Fliki",
+      "d": "AI 文本转视频配音工具，博客转视频与社交媒体创作利器。",
+      "u": "https://fliki.ai",
+      "tag": "语音合成·视频生成",
+      "ic": "🎙️",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Descript",
+      "d": "下一代 AI 视频与播客编辑器，脚本编辑即可改变视频内容。",
+      "u": "https://www.descript.com",
+      "tag": "播客",
+      "ic": "🎧",
+      "cat": "gen",
+      "old_t": "AI视频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Suno",
+      "d": "AI 音乐生成平台，输入歌词或描述即可创作完整歌曲。",
+      "u": "https://suno.ai",
+      "tag": "音乐生成",
+      "ic": "🎵",
+      "cat": "gen",
+      "old_t": "AI音频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Udio",
+      "d": "高质量 AI 音乐生成工具，由前 Google DeepMind 研究员打造。",
+      "u": "https://www.udio.com",
+      "tag": "音乐生成",
+      "ic": "🎹",
+      "cat": "gen",
+      "old_t": "AI音频",
+      "old_c": "ai"
+    },
+    {
+      "n": "ElevenLabs",
+      "d": "目前最逼真的 AI 语音合成与克隆平台，支持多语言。",
+      "u": "https://elevenlabs.io",
+      "tag": "语音克隆·语音合成",
+      "ic": "🗣️",
+      "cat": "gen",
+      "old_t": "AI音频",
+      "old_c": "ai"
+    },
+    {
+      "n": "魔音工坊",
+      "d": "出门问问旗下的 AI 配音工具，提供数百种拟人化音色。",
+      "u": "https://www.moyin.com",
+      "tag": "语音合成·多语言",
+      "ic": "🎤",
+      "cat": "gen",
+      "old_t": "AI音频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Murf AI",
+      "d": "专业 AI 配音平台，适用于播客、有声书与视频配音。",
+      "u": "https://murf.ai",
+      "tag": "语音合成",
+      "ic": "🎧",
+      "cat": "gen",
+      "old_t": "AI音频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Play.ht",
+      "d": "AI 语音生成平台，2025 年 7 月被 Meta 收购（acqui-hire），2025-12-31 永久停服，2026 年域名停止解析。原域名已失效。",
+      "u": "https://play.ht",
+      "tag": "语音合成·多语言",
+      "ic": "🔊",
+      "cat": "gen",
+      "old_t": "AI音频",
+      "old_c": "ai",
+      "retired": true
+    },
+    {
+      "n": "Speak",
+      "d": "AI 语言学习 App，通过语音交互练习英语与韩语口语。",
+      "u": "https://www.speak.com",
+      "tag": "教育",
+      "ic": "🗣️",
+      "cat": "gen",
+      "old_t": "AI音频",
+      "old_c": "ai"
+    },
+    {
+      "n": "AIVA",
+      "d": "古典与影视配乐 AI 作曲家，全球首个注册 AI 音乐协会成员。",
+      "u": "https://www.aiva.ai",
+      "tag": "音乐生成",
+      "ic": "🎻",
+      "cat": "gen",
+      "old_t": "AI音频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Soundraw",
+      "d": "AI 自动生成免版税音乐，按情绪与风格定制个性化配乐。",
+      "u": "https://soundraw.io",
+      "tag": "音乐生成",
+      "ic": "🎶",
+      "cat": "gen",
+      "old_t": "AI音频",
+      "old_c": "ai"
+    },
+    {
+      "n": "Boomy",
+      "d": "AI 音乐创作与流媒体发行一体化，生成音乐直接上传平台。",
+      "u": "https://boomy.com",
+      "tag": "音乐生成",
+      "ic": "🎸",
+      "cat": "gen",
+      "old_t": "AI音频",
+      "old_c": "ai"
+    },
+    {
+      "n": "GitHub Copilot",
+      "d": "GitHub 与 OpenAI 联合推出的 AI 编程助手，深度集成 IDE。",
+      "u": "https://github.com/features/copilot",
+      "tag": "编程助手·IDE",
+      "ic": "👨‍💻",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Cursor",
+      "d": "基于 VS Code 的 AI 原生代码编辑器，编程体验极致智能。",
+      "u": "https://cursor.sh",
+      "tag": "IDE",
+      "ic": "🖱️",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Windsurf",
+      "d": "Codeium 推出的 AI 原生 IDE，支持多文件智能编辑与重构。",
+      "u": "https://codeium.com/windsurf",
+      "tag": "IDE·编程助手",
+      "ic": "🌊",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "v0.dev",
+      "d": "Vercel 推出的 AI 前端界面生成工具，通过自然语言生成 UI。",
+      "u": "https://v0.dev",
+      "tag": "UI生成",
+      "ic": "🖌️",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Bolt.new",
+      "d": "StackBlitz 推出的 AI 全栈应用生成器，直接在浏览器构建应用。",
+      "u": "https://bolt.new",
+      "tag": "编程助手·前端",
+      "ic": "⚡",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "通义灵码",
+      "d": "阿里云推出的免费 AI 编程助手，兼容主流 IDE。",
+      "u": "https://tongyi.aliyun.com/lingma",
+      "tag": "大厂·免费",
+      "ic": "🐴",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Replit",
+      "d": "在线代码编辑与托管平台，AI 加持的一键应用部署。",
+      "u": "https://replit.com",
+      "tag": "IDE·云服务",
+      "ic": "🔄",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Sourcegraph Cody",
+      "d": "基于代码图的 AI 编程助手，理解全仓库上下文。",
+      "u": "https://sourcegraph.com",
+      "tag": "长文本",
+      "ic": "📐",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "CodeRabbit",
+      "d": "AI 代码审查助手，自动审查 PR 提供改进建议。",
+      "u": "https://www.coderabbit.ai",
+      "tag": "编程助手·营销",
+      "ic": "🐰",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Tabnine",
+      "d": "老牌 AI 代码补全引擎，支持本地模型保障代码隐私。",
+      "u": "https://www.tabnine.com",
+      "tag": "本地部署·安全",
+      "ic": "🔐",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Zed",
+      "d": "Rust 编写的高性能代码编辑器，深度集成 AI 协作编程。",
+      "u": "https://zed.dev",
+      "tag": "高性能",
+      "ic": "⚡",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Tabby",
+      "d": "开源自托管的 AI 代码助手，数据完全可控可私有化部署。",
+      "u": "https://tabbyml.com",
+      "tag": "本地部署·开源",
+      "ic": "🐈",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Cline",
+      "d": "VS Code 开源 AI 编程代理，用自然语言指挥 AI 写代码。",
+      "u": "https://cline.bot",
+      "tag": "Agent·开源",
+      "ic": "🤖",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Lovable",
+      "d": "AI 全栈应用生成器，用自然语言描述即可构建完整 Web 应用。",
+      "u": "https://lovable.dev",
+      "tag": "编程助手·前端",
+      "ic": "❤️",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Tempo",
+      "d": "AI React 组件生成工具，用自然语言设计前端界面。",
+      "u": "https://tempo.new",
+      "tag": "前端·UI生成",
+      "ic": "⏱️",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Anima",
+      "d": "设计稿转代码 AI 工具，Figma 一键导出 React 组件。",
+      "u": "https://www.animaapp.com",
+      "tag": "UI生成·编程助手",
+      "ic": "🖌️",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Locofy",
+      "d": "设计稿转前端代码平台，加速从设计到生产的转换流程。",
+      "u": "https://www.locofy.ai",
+      "tag": "UI生成·编程助手",
+      "ic": "🚀",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Builder.io",
+      "d": "AI 可视化 CMS 页面构建器，用自然语言生成高性能页面。",
+      "u": "https://www.builder.io",
+      "tag": "可视化·前端",
+      "ic": "🏗️",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "AutoGPT",
+      "d": "开源自主 AI Agent 框架，让 AI 自动分解和执行复杂任务。",
+      "u": "https://github.com/Significant-Gravitas/AutoGPT",
+      "tag": "Agent·开源",
+      "ic": "🤖",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "Dify",
+      "d": "开源的 LLM 应用开发平台，可视化编排 AI 工作流与 Agent。",
+      "u": "https://dify.ai",
+      "tag": "工作流·可视化",
+      "ic": "🧩",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "扣子 Coze",
+      "d": "字节跳动推出的 AI Bot 开发平台，零代码搭建智能助手。",
+      "u": "https://www.coze.cn",
+      "tag": "大厂",
+      "ic": "🤖",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "Coze",
+      "d": "字节跳动国际版 AI Bot 平台，集成 Discord 和 Telegram。",
+      "u": "https://www.coze.com",
+      "tag": "多语言",
+      "ic": "🌐",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "Manus",
+      "d": "通用型 AI Agent，能独立完成复杂任务的自主智能体。",
+      "u": "https://manus.im",
+      "tag": "Agent",
+      "ic": "✋",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "百宝箱",
+      "d": "百度智能云的 AI Agent 平台，快速构建智能体应用。",
+      "u": "https://agents.baidu.com",
+      "tag": "大厂·Agent",
+      "ic": "🎁",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "LangGraph",
+      "d": "LangChain 出品的 Agent 编排框架，构建状态化多智能体。",
+      "u": "https://langchain.com/langgraph",
+      "tag": "工作流",
+      "ic": "🕸️",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "CrewAI",
+      "d": "多 Agent 协作框架，定义角色让多个 AI 智能体协同工作。",
+      "u": "https://www.crewai.com",
+      "tag": "Agent·协作",
+      "ic": "👥",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "Relevance AI",
+      "d": "无代码 AI 团队构建平台，用 Agent 自动化业务流程。",
+      "u": "https://relevanceai.com",
+      "tag": "工作流",
+      "ic": "🤖",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "Superagent",
+      "d": "开源的 AI 代理框架，快速构建自定义 AI 助理。",
+      "u": "https://superagent.sh",
+      "tag": "开源",
+      "ic": "🦸",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "Botpress",
+      "d": "开源对话 AI 平台，可视化搭建企业级 AI 聊天机器人。",
+      "u": "https://botpress.com",
+      "tag": "开源",
+      "ic": "💬",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "SmythOS",
+      "d": "AI 智能体操作系统，拖拽式构建与部署多 Agent 工作流。",
+      "u": "https://smythos.com",
+      "tag": "可视化·云服务",
+      "ic": "🔄",
+      "cat": "coding",
+      "old_t": "AI Agent",
+      "old_c": "ai"
+    },
+    {
+      "n": "Meshy",
+      "d": "AI 3D 模型生成器，文字和图片一键转为高质量 3D 模型。",
+      "u": "https://www.meshy.ai",
+      "tag": "3D生成·游戏",
+      "ic": "🧊",
+      "cat": "gen",
+      "old_t": "3D生成",
+      "old_c": "ai"
+    },
+    {
+      "n": "Tripo AI",
+      "d": "快速 3D AI 模型生成平台，文生 3D 和图生 3D 一体化。",
+      "u": "https://www.tripo3d.ai",
+      "tag": "3D生成",
+      "ic": "🔺",
+      "cat": "gen",
+      "old_t": "3D生成",
+      "old_c": "ai"
+    },
+    {
+      "n": "CSM AI",
+      "d": "Common Sense Machines，图片与视频转 3D 世界模型。2026 年初被 Google 收购后官网下线。",
+      "u": "https://csm.ai",
+      "tag": "3D生成·具身智能",
+      "ic": "🌍",
+      "cat": "gen",
+      "old_t": "3D生成",
+      "old_c": "ai",
+      "retired": true
+    },
+    {
+      "n": "Rodin",
+      "d": "文本和图片生成高质量 3D 头像与数字资产的 AI 平台。",
+      "u": "https://hyper3d.ai",
+      "tag": "数字人",
+      "ic": "🗿",
+      "cat": "gen",
+      "old_t": "3D生成",
+      "old_c": "ai"
+    },
+    {
+      "n": "Spline AI",
+      "d": "AI 辅助实时 3D 设计与协作平台，浏览器端零门槛创作。",
+      "u": "https://spline.design",
+      "tag": "实时",
+      "ic": "🎮",
+      "cat": "gen",
+      "old_t": "3D生成",
+      "old_c": "ai"
+    },
+    {
+      "n": "DeepMotion",
+      "d": "AI 动作捕捉与 3D 动画生成，视频一键转骨骼动画。",
+      "u": "https://www.deepmotion.com",
+      "tag": "视频生成",
+      "ic": "🏃",
+      "cat": "gen",
+      "old_t": "3D生成",
+      "old_c": "ai"
+    },
+    {
+      "n": "Kaedim",
+      "d": "AI 图片转 3D 模型，为游戏开发者快速生成游戏资产。",
+      "u": "https://www.kaedim3d.com",
+      "tag": "游戏",
+      "ic": "🎮",
+      "cat": "gen",
+      "old_t": "3D生成",
+      "old_c": "ai"
+    },
+    {
+      "n": "Ready Player Me",
+      "d": "跨游戏跨平台 3D 虚拟化身平台，一张自拍即可生成。2025-12 被 Netflix 收购，2026-01-31 起服务关闭。",
+      "u": "https://readyplayer.me",
+      "tag": "数字人",
+      "ic": "🧑",
+      "cat": "gen",
+      "old_t": "3D生成",
+      "old_c": "ai",
+      "retired": true
+    },
+    {
+      "n": "小冰",
+      "d": "微软小冰独立后的 AI Being 平台，覆盖虚拟人与数字人技术。",
+      "u": "https://www.xiaoice.com",
+      "tag": "数字人·大厂",
+      "ic": "❄️",
+      "cat": "gen",
+      "old_t": "数字人",
+      "old_c": "ai"
+    },
+    {
+      "n": "D-ID",
+      "d": "AI 生成式数字人视频，让照片开口说话技术开创者。",
+      "u": "https://www.d-id.com",
+      "tag": "数字人·视频生成",
+      "ic": "🖼️",
+      "cat": "gen",
+      "old_t": "数字人",
+      "old_c": "ai"
+    },
+    {
+      "n": "Hour One",
+      "d": "企业级 AI 虚拟主播视频生成，专业数字人制作平台。",
+      "u": "https://hourone.ai",
+      "tag": "企业级·数字人",
+      "ic": "🎬",
+      "cat": "gen",
+      "old_t": "数字人",
+      "old_c": "ai"
+    },
+    {
+      "n": "DeepBrain AI",
+      "d": "AI Studios 虚拟人视频制作平台，支持多语种数字人。",
+      "u": "https://www.deepbrain.io",
+      "tag": "多语言",
+      "ic": "🧠",
+      "cat": "gen",
+      "old_t": "数字人",
+      "old_c": "ai"
+    },
+    {
+      "n": "腾讯智影",
+      "d": "腾讯 AI 数字人视频创作平台，在线生成虚拟主播视频。",
+      "u": "https://zenvideo.qq.com",
+      "tag": "大厂",
+      "ic": "🎥",
+      "cat": "gen",
+      "old_t": "数字人",
+      "old_c": "ai"
+    },
+    {
+      "n": "AlphaFold DB",
+      "d": "DeepMind 蛋白质结构预测数据库，加速生命科学研究。",
+      "u": "https://alphafold.ebi.ac.uk",
+      "tag": "科研·大厂",
+      "ic": "🧬",
+      "cat": "app",
+      "old_t": "AI for Science",
+      "old_c": "ai"
+    },
+    {
+      "n": "RoseTTAFold",
+      "d": "华盛顿大学蛋白质结构预测工具，AI 驱动计算生物学。官方服务器现为 robetta.bakerlab.org。",
+      "u": "https://robetta.bakerlab.org/",
+      "tag": "科研·学术",
+      "ic": "🔬",
+      "cat": "app",
+      "old_t": "AI for Science",
+      "old_c": "ai"
+    },
+    {
+      "n": "NVIDIA BioNeMo",
+      "d": "NVIDIA AI 药物研发平台，加速分子模拟与新药发现。",
+      "u": "https://www.nvidia.com/en-us/clara/bionemo",
+      "tag": "医疗·大厂",
+      "ic": "💊",
+      "cat": "app",
+      "old_t": "AI for Science",
+      "old_c": "ai"
+    },
+    {
+      "n": "Isomorphic Labs",
+      "d": "DeepMind 分拆的 AI 药物发现公司，诺奖级团队创业。",
+      "u": "https://www.isomorphiclabs.com",
+      "tag": "医疗·大厂",
+      "ic": "🧪",
+      "cat": "app",
+      "old_t": "AI for Science",
+      "old_c": "ai"
+    },
+    {
+      "n": "Recursion",
+      "d": "AI 驱动的药物发现与研发平台，已上市临床阶段公司。",
+      "u": "https://www.recursion.com",
+      "tag": "医疗",
+      "ic": "🏥",
+      "cat": "app",
+      "old_t": "AI for Science",
+      "old_c": "ai"
+    },
+    {
+      "n": "Viz.ai",
+      "d": "AI 中风检测与急救协调平台，FDA 获批，显著缩短救治时间。",
+      "u": "https://www.viz.ai",
+      "tag": "医疗",
+      "ic": "🏥",
+      "cat": "app",
+      "old_t": "AI 医疗",
+      "old_c": "ai"
+    },
+    {
+      "n": "PathAI",
+      "d": "AI 病理诊断平台，辅助医生提高癌症诊断准确率。",
+      "u": "https://www.pathai.com",
+      "tag": "医疗",
+      "ic": "🔬",
+      "cat": "app",
+      "old_t": "AI 医疗",
+      "old_c": "ai"
+    },
+    {
+      "n": "Aidoc",
+      "d": "AI 放射科辅助诊断，实时分析 CT 与 MRI 影像标记异常。",
+      "u": "https://www.aidoc.com",
+      "tag": "医疗",
+      "ic": "🩻",
+      "cat": "app",
+      "old_t": "AI 医疗",
+      "old_c": "ai"
+    },
+    {
+      "n": "Butterfly Network",
+      "d": "AI 驱动的手持式超声设备，让超声诊断更加可及。",
+      "u": "https://www.butterflynetwork.com",
+      "tag": "医疗",
+      "ic": "🦋",
+      "cat": "app",
+      "old_t": "AI 医疗",
+      "old_c": "ai"
+    },
+    {
+      "n": "Tempus",
+      "d": "AI 驱动的个性化癌症诊疗平台，基因组与临床数据融合。",
+      "u": "https://www.tempus.com",
+      "tag": "医疗",
+      "ic": "🧬",
+      "cat": "app",
+      "old_t": "AI 医疗",
+      "old_c": "ai"
+    },
+    {
+      "n": "推想科技",
+      "d": "中国 AI 医疗影像龙头，胸肺与脑部疾病智能筛查领先。",
+      "u": "https://www.infervision.com",
+      "tag": "医疗",
+      "ic": "🫁",
+      "cat": "app",
+      "old_t": "AI 医疗",
+      "old_c": "ai"
+    },
+    {
+      "n": "Harvey AI",
+      "d": "OpenAI 投资的 AI 法律助手，律所级法律研究与文档生成。",
+      "u": "https://www.harvey.ai",
+      "tag": "法律·办公",
+      "ic": "⚖️",
+      "cat": "app",
+      "old_t": "AI 法律",
+      "old_c": "ai"
+    },
+    {
+      "n": "Lawgeex",
+      "d": "AI 合同审查与合规平台，自动比对合同条款与法律标准。",
+      "u": "https://www.lawgeex.com",
+      "tag": "法律·合规",
+      "ic": "📋",
+      "cat": "app",
+      "old_t": "AI 法律",
+      "old_c": "ai"
+    },
+    {
+      "n": "Ironclad",
+      "d": "企业级合同生命周期管理，AI 驱动的合同创建与分析。",
+      "u": "https://ironcladapp.com",
+      "tag": "法律·企业级",
+      "ic": "🛡️",
+      "cat": "app",
+      "old_t": "AI 法律",
+      "old_c": "ai"
+    },
+    {
+      "n": "Everlaw",
+      "d": "AI 电子证据开示与诉讼支持平台，法律科技独角兽。",
+      "u": "https://www.everlaw.com",
+      "tag": "法律",
+      "ic": "🔍",
+      "cat": "app",
+      "old_t": "AI 法律",
+      "old_c": "ai"
+    },
+    {
+      "n": "幂律智能",
+      "d": "中国 AI 法律服务先锋，智能合同审查与知识管理平台。",
+      "u": "https://www.powerlaw.ai",
+      "tag": "国产·法律",
+      "ic": "🇨🇳",
+      "cat": "app",
+      "old_t": "AI 法律",
+      "old_c": "ai"
+    },
+    {
+      "n": "Kensho",
+      "d": "S&P Global 旗下 AI 金融分析平台，自然语言查询市场数据。",
+      "u": "https://www.kensho.com",
+      "tag": "金融",
+      "ic": "📊",
+      "cat": "app",
+      "old_t": "AI 金融",
+      "old_c": "ai"
+    },
+    {
+      "n": "Alpaca",
+      "d": "AI 驱动的量化交易 API 平台，用代码实现自动化交易策略。",
+      "u": "https://alpaca.markets",
+      "tag": "模型微调·API",
+      "ic": "🦙",
+      "cat": "app",
+      "old_t": "AI 金融",
+      "old_c": "ai"
+    },
+    {
+      "n": "QuantConnect",
+      "d": "开源量化交易研究平台，支持多语言算法回测与实盘交易。",
+      "u": "https://www.quantconnect.com",
+      "tag": "模型微调·金融",
+      "ic": "📈",
+      "cat": "app",
+      "old_t": "AI 金融",
+      "old_c": "ai"
+    },
+    {
+      "n": "AlphaSense",
+      "d": "AI 市场情报平台，搜索海量研报与会议记录发现投资信号。",
+      "u": "https://www.alpha-sense.com",
+      "tag": "链上数据",
+      "ic": "💡",
+      "cat": "app",
+      "old_t": "AI 金融",
+      "old_c": "ai"
+    },
+    {
+      "n": "Numerai",
+      "d": "AI 驱动的去中心化对冲基金，数据科学家竞赛预测股市。",
+      "u": "https://numer.ai",
+      "tag": "金融·评测",
+      "ic": "🧪",
+      "cat": "app",
+      "old_t": "AI 金融",
+      "old_c": "ai"
+    },
+    {
+      "n": "Kavout",
+      "d": "AI 量化选股平台，Kai 评分系统结合多因子智能筛选。",
+      "u": "https://www.kavout.com",
+      "tag": "金融",
+      "ic": "🔮",
+      "cat": "app",
+      "old_t": "AI 金融",
+      "old_c": "ai"
+    },
+    {
+      "n": "Khanmigo",
+      "d": "可汗学院推出的 AI 导师，苏格拉底式引导激发主动思考。",
+      "u": "https://www.khanmigo.ai",
+      "tag": "教育",
+      "ic": "🧑‍🏫",
+      "cat": "app",
+      "old_t": "AI 教育",
+      "old_c": "ai"
+    },
+    {
+      "n": "Duolingo Max",
+      "d": "多邻国 AI 强化版，对话式角色扮演练习真实语言场景。",
+      "u": "https://www.duolingo.com/max",
+      "tag": "数字人",
+      "ic": "🦉",
+      "cat": "app",
+      "old_t": "AI 教育",
+      "old_c": "ai"
+    },
+    {
+      "n": "Quizlet",
+      "d": "AI 驱动的学习记忆平台，自动生成闪卡与测验题目。",
+      "u": "https://quizlet.com",
+      "tag": "Agent·教育",
+      "ic": "📝",
+      "cat": "app",
+      "old_t": "AI 教育",
+      "old_c": "ai"
+    },
+    {
+      "n": "Century Tech",
+      "d": "AI 自适应学习平台，根据学生能力动态调整学习路径。",
+      "u": "https://www.century.tech",
+      "tag": "教育",
+      "ic": "🎓",
+      "cat": "app",
+      "old_t": "AI 教育",
+      "old_c": "ai"
+    },
+    {
+      "n": "Carnegie Learning",
+      "d": "卡内基梅隆大学衍生的 AI 数学教育公司，认知科学研究驱动。",
+      "u": "https://www.carnegielearning.com",
+      "tag": "科研",
+      "ic": "🔢",
+      "cat": "app",
+      "old_t": "AI 教育",
+      "old_c": "ai"
+    },
+    {
+      "n": "Squirrel AI",
+      "d": "松鼠 AI，中国自适应教育领军者，AI 精准诊断知识薄弱点。",
+      "u": "https://www.squirrelai.com",
+      "tag": "国产",
+      "ic": "🐿️",
+      "cat": "app",
+      "old_t": "AI 教育",
+      "old_c": "ai"
+    },
+    {
+      "n": "Persado",
+      "d": "AI 营销语言生成平台，NLP 优化广告文案与邮件营销效果。",
+      "u": "https://www.persado.com",
+      "tag": "写作",
+      "ic": "📧",
+      "cat": "app",
+      "old_t": "AI 营销",
+      "old_c": "ai"
+    },
+    {
+      "n": "Phrasee",
+      "d": "AI 品牌语言优化工具，确保营销内容符合品牌调性。",
+      "u": "https://phrasee.co",
+      "tag": "营销·设计",
+      "ic": "🎯",
+      "cat": "app",
+      "old_t": "AI 营销",
+      "old_c": "ai"
+    },
+    {
+      "n": "Albert AI",
+      "d": "自主 AI 数字营销平台，自动优化跨渠道广告投放策略。",
+      "u": "https://albert.ai",
+      "tag": "营销",
+      "ic": "📊",
+      "cat": "app",
+      "old_t": "AI 营销",
+      "old_c": "ai"
+    },
+    {
+      "n": "Anyword",
+      "d": "AI 营销文案生成与效果预测，数据驱动内容优化。",
+      "u": "https://anyword.com",
+      "tag": "写作",
+      "ic": "📈",
+      "cat": "app",
+      "old_t": "AI 营销",
+      "old_c": "ai"
+    },
+    {
+      "n": "Optimove",
+      "d": "AI 客户关系营销平台，预测客户行为驱动精准个性化营销。",
+      "u": "https://www.optimove.com",
+      "tag": "营销",
+      "ic": "🎯",
+      "cat": "app",
+      "old_t": "AI 营销",
+      "old_c": "ai"
+    },
+    {
+      "n": "Pencil",
+      "d": "AI 广告创意生成与 A/B 测试平台，数据驱动创意迭代。",
+      "u": "https://www.pencil.com",
+      "tag": "设计",
+      "ic": "✏️",
+      "cat": "app",
+      "old_t": "AI 营销",
+      "old_c": "ai"
+    },
+    {
+      "n": "Tesla Optimus",
+      "d": "特斯拉推出的通用人形机器人，旨在替代人类执行重复性劳动。原 /optimus 独立页已下线，官方内容并入 tesla.com/AI（AI & Robotics 专区）。",
+      "u": "https://www.tesla.com/AI",
+      "tag": "大厂·人形机器人",
+      "ic": "🤖",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Figure AI",
+      "d": "OpenAI 投资的通用人形机器人公司，目标是商业化量产。",
+      "u": "https://www.figure.ai",
+      "tag": "人形机器人·大厂",
+      "ic": "🦿",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Boston Dynamics",
+      "d": "全球最知名的高动态机器人公司，以 Atlas 和 Spot 著称。",
+      "u": "https://bostondynamics.com",
+      "tag": "人形机器人·四足",
+      "ic": "🐕",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Unitree 宇树",
+      "d": "中国领先的四足与人形机器人公司，产品覆盖消费到工业。",
+      "u": "https://www.unitree.com",
+      "tag": "四足·国产",
+      "ic": "🐾",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "1X Technologies",
+      "d": "OpenAI 投资的挪威人形机器人公司，专注于家庭服务场景。",
+      "u": "https://www.1x.tech",
+      "tag": "人形机器人·服务机器人",
+      "ic": "🏠",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Agility Robotics",
+      "d": "Digit 人形机器人制造商，专注物流仓储场景的商业化应用。",
+      "u": "https://agilityrobotics.com",
+      "tag": "人形机器人·物流",
+      "ic": "📦",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "傅利叶智能",
+      "d": "中国通用人形机器人 GR-1 开发商，布局康复与通用场景。",
+      "u": "https://www.fftai.com",
+      "tag": "医疗·国产",
+      "ic": "🏥",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "智元机器人",
+      "d": "华为前高管创办的具身智能公司，推动人形机器人产业化。",
+      "u": "https://www.agibot.com",
+      "tag": "具身智能·大厂",
+      "ic": "🧬",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Apptronik",
+      "d": "NASA 合作的通用人形机器人 Apollo，聚焦物流与制造。",
+      "u": "https://apptronik.com",
+      "tag": "人形机器人·物流",
+      "ic": "🚀",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "优必选科技",
+      "d": "中国人形机器人第一股，Walker 系列人形机器人行业领先。",
+      "u": "https://www.ubtrobot.com",
+      "tag": "人形机器人·国产",
+      "ic": "🤖",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "达闼机器人",
+      "d": "云端智能机器人公司，Cloud Ginger 主打服务场景。",
+      "u": "https://www.cloudminds.com",
+      "tag": "人形机器人·服务机器人",
+      "ic": "☁️",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "逐际动力",
+      "d": "EngineAI，专注于通用人形机器人运动智能与控制。",
+      "u": "https://www.engineai.com.cn",
+      "tag": "具身智能·国产",
+      "ic": "🏃",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Clone Robotics",
+      "d": "人工肌肉驱动的人形机器人，仿生肌腱技术模拟人类运动。",
+      "u": "https://www.clonerobotics.com",
+      "tag": "仿生·人形机器人",
+      "ic": "🦾",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "PAL Robotics",
+      "d": "西班牙人形与服务机器人公司，REEM 系列享誉欧洲。",
+      "u": "https://pal-robotics.com",
+      "tag": "服务机器人·人形机器人",
+      "ic": "🇪🇸",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Beyond Imagination",
+      "d": "BEOMNI 人形远程操作机器人，用 VR 遥控实现远程作业。",
+      "u": "https://beyondimagination.co",
+      "tag": "服务机器人",
+      "ic": "🕶️",
+      "cat": "robot",
+      "old_t": "人形机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "ABB Robotics",
+      "d": "全球工业机器人巨头，提供全系列协作与工业机器人。",
+      "u": "https://new.abb.com/products/robotics",
+      "tag": "工业·协作",
+      "ic": "⚙️",
+      "cat": "robot",
+      "old_t": "工业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "FANUC",
+      "d": "日本发那科，全球装机量最大的工业机器人制造商。",
+      "u": "https://www.fanuc.com",
+      "tag": "工业",
+      "ic": "🏭",
+      "cat": "robot",
+      "old_t": "工业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "KUKA",
+      "d": "德国库卡机器人，汽车制造与工业自动化领域的标杆。",
+      "u": "https://www.kuka.com",
+      "tag": "自动驾驶",
+      "ic": "🚗",
+      "cat": "robot",
+      "old_t": "工业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Yaskawa 安川",
+      "d": "日本安川电机，伺服电机与工业机器人全球领先。",
+      "u": "https://www.yaskawa.com",
+      "tag": "机械臂",
+      "ic": "🔌",
+      "cat": "robot",
+      "old_t": "工业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "埃斯顿自动化",
+      "d": "国产工业机器人龙头，覆盖焊接、搬运、喷涂全场景。",
+      "u": "https://www.estun.com",
+      "tag": "国产",
+      "ic": "🇨🇳",
+      "cat": "robot",
+      "old_t": "工业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "新松机器人",
+      "d": "中国机器人产业国家队，工业与服务机器人全覆盖。",
+      "u": "https://www.siasun.com",
+      "tag": "大厂",
+      "ic": "🤖",
+      "cat": "robot",
+      "old_t": "工业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "普渡机器人",
+      "d": "全球餐饮配送机器人领导者，覆盖送餐、回盘、消毒。",
+      "u": "https://www.pudutech.com",
+      "tag": "物流",
+      "ic": "🍽️",
+      "cat": "robot",
+      "old_t": "服务机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "擎朗智能",
+      "d": "商用服务机器人公司，餐饮酒店配送机器人畅销海外。",
+      "u": "https://www.keenon.com",
+      "tag": "企业级·物流",
+      "ic": "🤖",
+      "cat": "robot",
+      "old_t": "服务机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "高仙机器人",
+      "d": "清洁机器人行业龙头，商用清洁与无人环卫全覆盖。",
+      "u": "https://www.gs-robot.com",
+      "tag": "服务机器人",
+      "ic": "🧹",
+      "cat": "robot",
+      "old_t": "服务机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "追觅科技",
+      "d": "从扫地机器人到仿生四足机器人，消费机器人创新者。",
+      "u": "https://www.dreame.com",
+      "tag": "服务机器人",
+      "ic": "🏡",
+      "cat": "robot",
+      "old_t": "服务机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "科沃斯",
+      "d": "中国扫地机器人领军品牌，家庭服务机器人生态完善。",
+      "u": "https://www.ecovacs.com",
+      "tag": "服务机器人",
+      "ic": "🧽",
+      "cat": "robot",
+      "old_t": "服务机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "石头科技",
+      "d": "高端扫地机器人品牌，清洁算法与导航技术领先。",
+      "u": "https://www.roborock.com",
+      "tag": "服务机器人",
+      "ic": "🪨",
+      "cat": "robot",
+      "old_t": "服务机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "大疆 RoboMaster",
+      "d": "DJI 教育机器人系列，编程与竞技一体的人工智能学习平台。",
+      "u": "https://www.dji.com/robomaster-s1",
+      "tag": "教育·评测",
+      "ic": "🏆",
+      "cat": "robot",
+      "old_t": "服务机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "ROS.org",
+      "d": "机器人操作系统（Robot Operating System）官方网站与社区。",
+      "u": "https://www.ros.org",
+      "tag": "开源",
+      "ic": "⚙️",
+      "cat": "robot",
+      "old_t": "机器人平台",
+      "old_c": "robot"
+    },
+    {
+      "n": "NVIDIA Isaac",
+      "d": "NVIDIA 机器人开发平台，提供仿真、训练与部署全套方案。",
+      "u": "https://developer.nvidia.com/isaac",
+      "tag": "大厂·仿真",
+      "ic": "🟢",
+      "cat": "robot",
+      "old_t": "机器人平台",
+      "old_c": "robot"
+    },
+    {
+      "n": "ROS 2",
+      "d": "下一代机器人操作系统，为工业级应用提供更强实时性。",
+      "u": "https://docs.ros.org/en/rolling",
+      "tag": "实时·工业",
+      "ic": "📡",
+      "cat": "robot",
+      "old_t": "机器人平台",
+      "old_c": "robot"
+    },
+    {
+      "n": "Universal Robots",
+      "d": "协作机器人鼻祖，UR 系列全球装机量遥遥领先。",
+      "u": "https://www.universal-robots.com",
+      "tag": "协作·本地部署",
+      "ic": "🤝",
+      "cat": "robot",
+      "old_t": "机器人平台",
+      "old_c": "robot"
+    },
+    {
+      "n": "MuJoCo",
+      "d": "Google DeepMind 开源物理引擎，机器人仿真研究首选。",
+      "u": "https://mujoco.org",
+      "tag": "仿真·开源",
+      "ic": "🔬",
+      "cat": "robot",
+      "old_t": "机器人平台",
+      "old_c": "robot"
+    },
+    {
+      "n": "NVIDIA Omniverse",
+      "d": "NVIDIA 3D 协作与仿真平台，驱动机器人数字孪生开发。",
+      "u": "https://www.nvidia.com/en-us/omniverse",
+      "tag": "仿真·大厂",
+      "ic": "🌐",
+      "cat": "robot",
+      "old_t": "机器人平台",
+      "old_c": "robot"
+    },
+    {
+      "n": "CoppeliaSim",
+      "d": "专业机器人仿真软件，支持多种物理引擎与编程语言。",
+      "u": "https://www.coppeliarobotics.com",
+      "tag": "仿真·多语言",
+      "ic": "🔧",
+      "cat": "robot",
+      "old_t": "机器人平台",
+      "old_c": "robot"
+    },
+    {
+      "n": "Webots",
+      "d": "开源跨平台机器人仿真软件，Cyberbotics 出品学术首选。",
+      "u": "https://cyberbotics.com",
+      "tag": "开源",
+      "ic": "🤖",
+      "cat": "robot",
+      "old_t": "机器人平台",
+      "old_c": "robot"
+    },
+    {
+      "n": "Gazebo",
+      "d": "OSRF 维护的开源 3D 机器人仿真器，ROS 生态核心组件。",
+      "u": "https://gazebosim.org",
+      "tag": "开源·仿真",
+      "ic": "🏗️",
+      "cat": "robot",
+      "old_t": "机器人平台",
+      "old_c": "robot"
+    },
+    {
+      "n": "Waymo",
+      "d": "Alphabet 旗下自动驾驶公司，全球 L4 自动驾驶技术标杆。",
+      "u": "https://waymo.com",
+      "tag": "自动驾驶·大厂",
+      "ic": "🚗",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "Cruise",
+      "d": "GM 旗下的自动驾驶公司，2022 年拿下加州首个无人出租车收费许可，2023 年因事故吊销许可，2025 年 2 月 Robotaxi 业务终止并入 GM 的 Super Cruise（转向 ADAS）。",
+      "u": "https://www.getcruise.com",
+      "tag": "自动驾驶",
+      "ic": "🚕",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "百度 Apollo",
+      "d": "百度自动驾驶开放平台，提供车路行云一体化方案。",
+      "u": "https://www.apollo.auto",
+      "tag": "大厂·API",
+      "ic": "🇨🇳",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "文远知行 WeRide",
+      "d": "全球领先的 L4 级自动驾驶公司，覆盖出行与货运。",
+      "u": "https://www.weride.ai",
+      "tag": "自动驾驶·物流",
+      "ic": "🚌",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "小马智行 Pony.ai",
+      "d": "中美两地同步运营的自动驾驶公司，技术实力强劲。",
+      "u": "https://www.pony.ai",
+      "tag": "自动驾驶",
+      "ic": "🐴",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "Mobileye",
+      "d": "英特尔旗下自动驾驶视觉芯片公司，ADAS 市场领导者。",
+      "u": "https://www.mobileye.com",
+      "tag": "图像生成·自动驾驶",
+      "ic": "👁️",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "Nuro",
+      "d": "专注最后一公里自动驾驶配送的公司，无人配送车已商用。",
+      "u": "https://www.nuro.ai",
+      "tag": "物流·企业级",
+      "ic": "📦",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "Aurora",
+      "d": "自动驾驶技术研发平台，聚焦货运卡车与乘用车自动驾驶。",
+      "u": "https://aurora.tech",
+      "tag": "物流·自动驾驶",
+      "ic": "🚛",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "Zoox",
+      "d": "亚马逊旗下全自动驾驶公司，打造无方向盘的 Robotaxi。",
+      "u": "https://zoox.com",
+      "tag": "大厂·自动驾驶",
+      "ic": "🚗",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "TuSimple",
+      "d": "自动驾驶卡车公司，2021 年上市、2024 年退市，2024 年底转型为 CreateAI（AI 生成动画与游戏内容）。官网现为 iamcreate.ai。",
+      "u": "https://iamcreate.ai/",
+      "tag": "物流",
+      "ic": "🚚",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "Embark Trucks",
+      "d": "自动驾驶卡车软件公司，2023 年被 Applied Intuition 收购，2026 年 3 月完成清算退市。链接为 SEC 的收购公告。",
+      "u": "https://www.sec.gov/Archives/edgar/data/1827980/000110465923064691/tm2316862d1_ex99-1.htm",
+      "tag": "物流·高性能",
+      "ic": "🛣️",
+      "cat": "robot",
+      "old_t": "自动驾驶",
+      "old_c": "robot"
+    },
+    {
+      "n": "Skydio",
+      "d": "美国 AI 自主无人机领导者，全自主避障飞行无出其右。",
+      "u": "https://www.skydio.com",
+      "tag": "Agent",
+      "ic": "🛸",
+      "cat": "robot",
+      "old_t": "无人机",
+      "old_c": "robot"
+    },
+    {
+      "n": "亿航智能 EHang",
+      "d": "全球首家上市的载人级自动驾驶飞行器公司。",
+      "u": "https://www.ehang.com",
+      "tag": "无人机",
+      "ic": "🚁",
+      "cat": "robot",
+      "old_t": "无人机",
+      "old_c": "robot"
+    },
+    {
+      "n": "Zipline",
+      "d": "医疗物资无人机配送全球领导者，服务非洲与美国。",
+      "u": "https://www.flyzipline.com",
+      "tag": "医疗·物流",
+      "ic": "💉",
+      "cat": "robot",
+      "old_t": "无人机",
+      "old_c": "robot"
+    },
+    {
+      "n": "Wing",
+      "d": "Google 母公司 Alphabet 旗下无人机配送服务。",
+      "u": "https://wing.com",
+      "tag": "大厂·物流",
+      "ic": "📦",
+      "cat": "robot",
+      "old_t": "无人机",
+      "old_c": "robot"
+    },
+    {
+      "n": "极飞科技 XAG",
+      "d": "中国智慧农业无人化技术领导者，农业无人机全球领先。",
+      "u": "https://www.xag.cn",
+      "tag": "农业·国产",
+      "ic": "🌾",
+      "cat": "robot",
+      "old_t": "无人机",
+      "old_c": "robot"
+    },
+    {
+      "n": "Intuitive Surgical",
+      "d": "达芬奇手术机器人制造商，微创外科手术机器人的开创者。",
+      "u": "https://www.intuitive.com",
+      "tag": "医疗",
+      "ic": "🏥",
+      "cat": "robot",
+      "old_t": "手术机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Medtronic Hugo",
+      "d": "美敦力 Hugo 手术机器人系统，拓展机器人辅助手术边界。",
+      "u": "https://www.medtronic.com",
+      "tag": "医疗·大厂",
+      "ic": "⚕️",
+      "cat": "robot",
+      "old_t": "手术机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "CMR Surgical",
+      "d": "英国手术机器人公司 Versius，模块化便携设计领先。",
+      "u": "https://cmrsurgical.com",
+      "tag": "医疗·机械臂",
+      "ic": "🇬🇧",
+      "cat": "robot",
+      "old_t": "手术机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "天智航",
+      "d": "中国骨科手术机器人领导者，TiRobot 系列国内装机第一。",
+      "u": "https://www.tinavi.com/",
+      "tag": "医疗·国产",
+      "ic": "🦴",
+      "cat": "robot",
+      "old_t": "手术机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "极智嘉 Geek+",
+      "d": "全球仓储物流 AMR 机器人领军企业，服务 40+ 国家。",
+      "u": "https://www.geekplus.com",
+      "tag": "物流·服务机器人",
+      "ic": "📦",
+      "cat": "robot",
+      "old_t": "物流机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Locus Robotics",
+      "d": "美国仓储 AMR 机器人公司，人机协同提升拣选效率。",
+      "u": "https://locusrobotics.com",
+      "tag": "服务机器人·协作",
+      "ic": "🤖",
+      "cat": "robot",
+      "old_t": "物流机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "海柔创新",
+      "d": "HAI ROBOTICS，箱式仓储机器人首创者，ACR 系统全球领先。",
+      "u": "https://www.hairobotics.com",
+      "tag": "服务机器人·物流",
+      "ic": "📬",
+      "cat": "robot",
+      "old_t": "物流机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Seegrid",
+      "d": "美国无人叉车与物流机器人公司，视觉导航技术深厚。",
+      "u": "https://seegrid.com",
+      "tag": "物流",
+      "ic": "🛒",
+      "cat": "robot",
+      "old_t": "物流机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Ekso Bionics",
+      "d": "工业与医疗外骨骼先驱，EksoNR 获 FDA 批准用于康复。",
+      "u": "https://www.eksobionics.com",
+      "tag": "工业·医疗",
+      "ic": "🦾",
+      "cat": "robot",
+      "old_t": "外骨骼",
+      "old_c": "robot"
+    },
+    {
+      "n": "ReWalk Robotics",
+      "d": "全球首个获 FDA 批准的个人外骨骼系统，助力截瘫行走。",
+      "u": "https://rewalk.com",
+      "tag": "医疗",
+      "ic": "🚶",
+      "cat": "robot",
+      "old_t": "外骨骼",
+      "old_c": "robot"
+    },
+    {
+      "n": "SuitX",
+      "d": "模块化工业外骨骼，Ottobock 旗下品牌降低工伤风险。",
+      "u": "https://www.suitx.com",
+      "tag": "工业",
+      "ic": "🛡️",
+      "cat": "robot",
+      "old_t": "外骨骼",
+      "old_c": "robot"
+    },
+    {
+      "n": "Blue River Technology",
+      "d": "John Deere 旗下 AI 农业公司，精准识别并处理每一株作物。",
+      "u": "https://www.bluerivertechnology.com",
+      "tag": "农业机器人",
+      "ic": "🌿",
+      "cat": "robot",
+      "old_t": "农业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "FarmBot",
+      "d": "开源的自动化微型农场机器人，全程自动播种与灌溉。",
+      "u": "https://farm.bot",
+      "tag": "开源·农业机器人",
+      "ic": "🌾",
+      "cat": "robot",
+      "old_t": "农业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Carbon Robotics",
+      "d": "AI 激光除草机器人，用高功率激光精准消灭杂草零农药。",
+      "u": "https://carbonrobotics.com",
+      "tag": "农业机器人",
+      "ic": "⚡",
+      "cat": "robot",
+      "old_t": "农业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "丰疆智能",
+      "d": "中国智慧农业机器人头部企业，自动驾驶农机落地多国。",
+      "u": "https://www.fjdynamics.cn/",
+      "tag": "农业·农业机器人·国产",
+      "ic": "🚜",
+      "cat": "robot",
+      "old_t": "农业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Iron Ox",
+      "d": "AI 温室农业机器人，全自动化蔬菜种植以减少资源消耗。",
+      "u": "https://ironox.com",
+      "tag": "农业机器人",
+      "ic": "🥬",
+      "cat": "robot",
+      "old_t": "农业机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Oceaneering",
+      "d": "全球领先的深海工程与 ROV 遥控水下机器人服务商。",
+      "u": "https://www.oceaneering.com",
+      "tag": "服务机器人·无人机",
+      "ic": "🌊",
+      "cat": "robot",
+      "old_t": "水下机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Saab Seaeye",
+      "d": "萨博旗下电动水下机器人，用于海洋勘探与水下检测。",
+      "u": "https://www.saabseaeye.com",
+      "tag": "医疗",
+      "ic": "⚓",
+      "cat": "robot",
+      "old_t": "水下机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Blue Robotics",
+      "d": "开源海洋机器人组件供应商，水下推进器与 ROV 套件。",
+      "u": "https://bluerobotics.com",
+      "tag": "开源",
+      "ic": "🔷",
+      "cat": "robot",
+      "old_t": "水下机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "深之蓝",
+      "d": "中国水下智能装备领军者，消费级与工业级水下机器人齐备。",
+      "u": "https://www.deepinfar.com",
+      "tag": "国产·服务机器人",
+      "ic": "🤿",
+      "cat": "robot",
+      "old_t": "水下机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "RoboCup",
+      "d": "机器人世界杯，全球最权威的机器人竞技与学术交流赛事。",
+      "u": "https://www.robocup.org",
+      "tag": "评测·学术",
+      "ic": "🏆",
+      "cat": "robot",
+      "old_t": "机器人赛事",
+      "old_c": "robot"
+    },
+    {
+      "n": "FIRST Robotics",
+      "d": "全球最大的青少年机器人竞赛组织，激发下一代工程师。",
+      "u": "https://www.firstinspires.org",
+      "tag": "教育",
+      "ic": "🤖",
+      "cat": "robot",
+      "old_t": "机器人赛事",
+      "old_c": "robot"
+    },
+    {
+      "n": "VEX Robotics",
+      "d": "全球规模最大的中小学生机器人竞赛平台之一。",
+      "u": "https://www.vexrobotics.com",
+      "tag": "评测",
+      "ic": "⚙️",
+      "cat": "robot",
+      "old_t": "机器人赛事",
+      "old_c": "robot"
+    },
+    {
+      "n": "Maker Faire",
+      "d": "全球创客与机器人爱好者盛会，展示各类 DIY 机器人项目。",
+      "u": "https://makerfaire.com",
+      "tag": "社区",
+      "ic": "🛠️",
+      "cat": "robot",
+      "old_t": "机器人赛事",
+      "old_c": "robot"
+    },
+    {
+      "n": "LEGO Education",
+      "d": "乐高教育系列，SPIKE Prime 和 Mindstorms 编程机器人。",
+      "u": "https://education.lego.com",
+      "tag": "编程助手",
+      "ic": "🧱",
+      "cat": "robot",
+      "old_t": "机器人教育",
+      "old_c": "robot"
+    },
+    {
+      "n": "Arduino",
+      "d": "开源电子原型平台，机器人设计与创客教育入门首选。",
+      "u": "https://www.arduino.cc",
+      "tag": "开源",
+      "ic": "⚡",
+      "cat": "robot",
+      "old_t": "机器人教育",
+      "old_c": "robot"
+    },
+    {
+      "n": "Raspberry Pi",
+      "d": "微型单板计算机，机器人控制与 AI 边缘计算理想平台。",
+      "u": "https://www.raspberrypi.com",
+      "tag": "芯片设计·边缘计算",
+      "ic": "🥧",
+      "cat": "robot",
+      "old_t": "机器人教育",
+      "old_c": "robot"
+    },
+    {
+      "n": "micro:bit",
+      "d": "BBC 主导的微型编程教育计算机，全球学校广泛采用。",
+      "u": "https://microbit.org",
+      "tag": "编程助手",
+      "ic": "🔲",
+      "cat": "robot",
+      "old_t": "机器人教育",
+      "old_c": "robot"
+    },
+    {
+      "n": "Makeblock",
+      "d": "中国 STEAM 教育机器人品牌，mBot 系列全球畅销。",
+      "u": "https://www.makeblock.com",
+      "tag": "教育·国产",
+      "ic": "🤖",
+      "cat": "robot",
+      "old_t": "机器人教育",
+      "old_c": "robot"
+    },
+    {
+      "n": "Hugging Face",
+      "d": "全球最大的 AI 模型社区与开源平台，托管数十万模型与数据集。",
+      "u": "https://huggingface.co",
+      "tag": "社区·开源",
+      "ic": "🤗",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "ModelScope 魔搭",
+      "d": "阿里云推出的中文 AI 模型开源社区，汇集国内优质模型。",
+      "u": "https://modelscope.cn",
+      "tag": "大厂·国产",
+      "ic": "🧩",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Ollama",
+      "d": "本地运行大语言模型的最简单方式，支持 Llama、Mistral 等。",
+      "u": "https://ollama.ai",
+      "tag": "本地部署",
+      "ic": "🦙",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Replicate",
+      "d": "一键运行和部署开源 AI 模型的云平台，API 简单易用。",
+      "u": "https://replicate.com",
+      "tag": "云服务·API",
+      "ic": "☁️",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Civitai",
+      "d": "Stable Diffusion 模型与 LoRA 的最大分享社区，创作者天堂。",
+      "u": "https://civitai.com",
+      "tag": "社区",
+      "ic": "🏛️",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "OpenRouter",
+      "d": "统一的 LLM API 网关，一站调用 200+ 模型，按量付费。",
+      "u": "https://openrouter.ai",
+      "tag": "API",
+      "ic": "🔀",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Together AI",
+      "d": "开源模型推理与微调平台，提供极速 GPU 推理 API。",
+      "u": "https://www.together.ai",
+      "tag": "推理·模型微调",
+      "ic": "⚡",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Fireworks AI",
+      "d": "极低延迟的开源模型推理平台，专为生产环境优化。",
+      "u": "https://fireworks.ai",
+      "tag": "高性能",
+      "ic": "🎆",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Groq",
+      "d": "LPU 推理引擎驱动的极速 LLM 推理服务，毫秒级响应。",
+      "u": "https://groq.com",
+      "tag": "芯片设计·高性能",
+      "ic": "💨",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "OctoAI",
+      "d": "高效 AI 推理优化与模型部署平台，大幅降低部署成本。",
+      "u": "https://octo.ai",
+      "tag": "推理",
+      "ic": "🐙",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Anyscale",
+      "d": "Ray 框架商业化平台，大规模分布式 AI 推理与训练引擎。",
+      "u": "https://www.anyscale.com",
+      "tag": "云服务",
+      "ic": "⚡",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Modal",
+      "d": "高性能无服务器 GPU 云，AI 模型推理与批处理秒级弹性。",
+      "u": "https://modal.com",
+      "tag": "云服务·GPU",
+      "ic": "☁️",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Banana Dev",
+      "d": "AI 模型部署平台，几行代码将 ML 模型转化为生产 API。",
+      "u": "https://www.banana.dev",
+      "tag": "云服务·API",
+      "ic": "🍌",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Baseten",
+      "d": "高性能开源模型推理服务，专为生产级 LLM 部署优化。",
+      "u": "https://www.baseten.co",
+      "tag": "云服务",
+      "ic": "⚡",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Leap AI",
+      "d": "AI 模型 API 化平台，快速为图片和文本模型生成 API。",
+      "u": "https://www.tryleap.ai",
+      "tag": "API",
+      "ic": "🚀",
+      "cat": "model",
+      "old_t": "模型平台",
+      "old_c": "models"
+    },
+    {
+      "n": "Llama",
+      "d": "Meta 发布的开源大语言模型系列，当前最受欢迎的开源基座。",
+      "u": "https://llama.meta.com",
+      "tag": "大厂·开源",
+      "ic": "🦙",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "Mistral",
+      "d": "法国 AI 公司推出的高性能开源模型，轻量高效部署友好。",
+      "u": "https://mistral.ai",
+      "tag": "高性能",
+      "ic": "🌪️",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "Qwen",
+      "d": "阿里通义千问开源模型系列，覆盖多种尺寸与多模态。",
+      "u": "https://github.com/QwenLM/Qwen",
+      "tag": "大厂",
+      "ic": "🏯",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "Gemma",
+      "d": "Google 推出的轻量开源模型系列，适合端侧部署与实验。",
+      "u": "https://ai.google.dev/gemma",
+      "tag": "大厂",
+      "ic": "💎",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "Phi",
+      "d": "微软研究院推出的小语言模型，在手机和笔记本上流畅运行。",
+      "u": "https://azure.microsoft.com/products/phi",
+      "tag": "大厂",
+      "ic": "📱",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "Yi 零一万物",
+      "d": "零一万物开源的大语言模型系列，中英文能力高度平衡。",
+      "u": "https://www.lingyiwanwu.com",
+      "tag": "多语言",
+      "ic": "☯",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "DeepSeek Models",
+      "d": "深度求索开源模型系列，MoE 架构效率与性能双领先。",
+      "u": "https://huggingface.co/deepseek-ai",
+      "tag": "高性能",
+      "ic": "🔮",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "DBRX by Databricks",
+      "d": "Databricks 推出的开源 MoE 模型，高效推理与企业级性能。",
+      "u": "https://www.databricks.com",
+      "tag": "大厂",
+      "ic": "🧱",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "OLMo by Allen AI",
+      "d": "Allen 人工智能研究所构建的完全开源的大语言模型。",
+      "u": "https://allenai.org/olmo",
+      "tag": "学术·开源",
+      "ic": "🏛️",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "IBM Granite",
+      "d": "IBM 企业级开源模型系列，专为业务工作流和编码优化。",
+      "u": "https://www.ibm.com/granite",
+      "tag": "大厂·企业级",
+      "ic": "💼",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "Snowflake Arctic",
+      "d": "Snowflake 推出的企业智能开源大模型，高效 SQL 与编码。",
+      "u": "https://www.snowflake.com",
+      "tag": "企业级·编程助手",
+      "ic": "❄️",
+      "cat": "model",
+      "old_t": "开源模型",
+      "old_c": "models"
+    },
+    {
+      "n": "Pinecone",
+      "d": "全托管向量数据库，为 LLM 应用提供高性能语义检索。",
+      "u": "https://www.pinecone.io",
+      "tag": "云服务·RAG",
+      "ic": "🌲",
+      "cat": "dev",
+      "old_t": "向量数据库",
+      "old_c": "models"
+    },
+    {
+      "n": "Weaviate",
+      "d": "开源向量数据库，内置向量化模块，支持 GraphQL 查询。",
+      "u": "https://weaviate.io",
+      "tag": "开源",
+      "ic": "🔍",
+      "cat": "dev",
+      "old_t": "向量数据库",
+      "old_c": "models"
+    },
+    {
+      "n": "Chroma",
+      "d": "开源 AI 原生向量数据库，AI 应用开发者的入门首选。",
+      "u": "https://www.trychroma.com",
+      "tag": "开源",
+      "ic": "🎨",
+      "cat": "dev",
+      "old_t": "向量数据库",
+      "old_c": "models"
+    },
+    {
+      "n": "Milvus",
+      "d": "全球最流行的开源向量数据库之一，云原生弹性架构。",
+      "u": "https://milvus.io",
+      "tag": "开源·云服务",
+      "ic": "🐘",
+      "cat": "dev",
+      "old_t": "向量数据库",
+      "old_c": "models"
+    },
+    {
+      "n": "Qdrant",
+      "d": "高性能开源向量搜索引擎，Rust 编写延迟极低。",
+      "u": "https://qdrant.tech",
+      "tag": "高性能",
+      "ic": "🦀",
+      "cat": "dev",
+      "old_t": "向量数据库",
+      "old_c": "models"
+    },
+    {
+      "n": "Elasticsearch",
+      "d": "老牌搜索引擎，向量检索与全文检索一体化，生态庞大。",
+      "u": "https://www.elastic.co",
+      "tag": "搜索",
+      "ic": "🔎",
+      "cat": "dev",
+      "old_t": "向量数据库",
+      "old_c": "models"
+    },
+    {
+      "n": "LangChain",
+      "d": "最流行的 LLM 应用开发框架，链式编排 AI 工作流。",
+      "u": "https://www.langchain.com",
+      "tag": "工作流·基础设施",
+      "ic": "⛓️",
+      "cat": "dev",
+      "old_t": "AI开发框架",
+      "old_c": "models"
+    },
+    {
+      "n": "LlamaIndex",
+      "d": "数据索引与 RAG 框架，轻松构建知识增强型 AI 应用。",
+      "u": "https://www.llamaindex.ai",
+      "tag": "RAG",
+      "ic": "📇",
+      "cat": "dev",
+      "old_t": "AI开发框架",
+      "old_c": "models"
+    },
+    {
+      "n": "Langfuse",
+      "d": "开源 LLM 应用可观测平台，追踪、监控与调试 AI 调用。",
+      "u": "https://langfuse.com",
+      "tag": "可观测",
+      "ic": "📊",
+      "cat": "dev",
+      "old_t": "AI开发框架",
+      "old_c": "models"
+    },
+    {
+      "n": "Vercel AI SDK",
+      "d": "Vercel 推出的 AI 应用开发工具包，快速搭建 AI 前端。",
+      "u": "https://sdk.vercel.ai",
+      "tag": "前端",
+      "ic": "▲",
+      "cat": "dev",
+      "old_t": "AI开发框架",
+      "old_c": "models"
+    },
+    {
+      "n": "Haystack",
+      "d": "deepset 开源的 NLP 框架，构建可扩展的检索与问答系统。",
+      "u": "https://haystack.deepset.ai",
+      "tag": "RAG",
+      "ic": "🧱",
+      "cat": "dev",
+      "old_t": "AI开发框架",
+      "old_c": "models"
+    },
+    {
+      "n": "TensorFlow",
+      "d": "Google 推出的端到端开源机器学习平台，工业界广泛使用。",
+      "u": "https://www.tensorflow.org",
+      "tag": "大厂·工业",
+      "ic": "🔶",
+      "cat": "dev",
+      "old_t": "开源 AI 项目",
+      "old_c": "models"
+    },
+    {
+      "n": "PyTorch",
+      "d": "Meta 推出的开源深度学习框架，学术研究领域首选工具。",
+      "u": "https://pytorch.org",
+      "tag": "大厂·学术",
+      "ic": "🔥",
+      "cat": "dev",
+      "old_t": "开源 AI 项目",
+      "old_c": "models"
+    },
+    {
+      "n": "OpenCV",
+      "d": "开源计算机视觉库，2500+ 优化算法覆盖图像处理全流程。",
+      "u": "https://opencv.org",
+      "tag": "图像生成·开源",
+      "ic": "👁️",
+      "cat": "dev",
+      "old_t": "开源 AI 项目",
+      "old_c": "models"
+    },
+    {
+      "n": "Keras",
+      "d": "高级深度学习 API，TensorFlow 上层接口极简构建神经网络。",
+      "u": "https://keras.io",
+      "tag": "API",
+      "ic": "🧠",
+      "cat": "dev",
+      "old_t": "开源 AI 项目",
+      "old_c": "models"
+    },
+    {
+      "n": "ONNX",
+      "d": "开放神经网络交换格式，跨框架模型互操作性的行业标准。",
+      "u": "https://onnx.ai",
+      "tag": "跨链",
+      "ic": "🔄",
+      "cat": "dev",
+      "old_t": "开源 AI 项目",
+      "old_c": "models"
+    },
+    {
+      "n": "JAX",
+      "d": "Google 开源高性能数值计算库，自动微分与 XLA 编译加速。",
+      "u": "https://jax.readthedocs.io",
+      "tag": "大厂·高性能",
+      "ic": "⚡",
+      "cat": "dev",
+      "old_t": "开源 AI 项目",
+      "old_c": "models"
+    },
+    {
+      "n": "Weights & Biases",
+      "d": "最流行的 ML 实验追踪与可视化平台，团队协作神器。",
+      "u": "https://wandb.ai",
+      "tag": "可观测·可视化",
+      "ic": "📈",
+      "cat": "dev",
+      "old_t": "MLOps",
+      "old_c": "models"
+    },
+    {
+      "n": "MLflow",
+      "d": "Databricks 旗下开源 ML 全生命周期管理平台，行业标准。",
+      "u": "https://mlflow.org",
+      "tag": "开源",
+      "ic": "⚙️",
+      "cat": "dev",
+      "old_t": "MLOps",
+      "old_c": "models"
+    },
+    {
+      "n": "Neptune.ai",
+      "d": "ML 实验追踪与模型注册中心，企业级元数据管理。",
+      "u": "https://neptune.ai",
+      "tag": "企业级",
+      "ic": "🔱",
+      "cat": "dev",
+      "old_t": "MLOps",
+      "old_c": "models"
+    },
+    {
+      "n": "ClearML",
+      "d": "开源 ML/DL 实验管理与编排平台，一站式 MLOps 方案。",
+      "u": "https://clear.ml",
+      "tag": "开源·工作流",
+      "ic": "🧊",
+      "cat": "dev",
+      "old_t": "MLOps",
+      "old_c": "models"
+    },
+    {
+      "n": "BentoML",
+      "d": "开源 AI 模型部署与服务框架，模型到 API 只需几分钟。",
+      "u": "https://www.bentoml.com",
+      "tag": "本地部署·API",
+      "ic": "🍱",
+      "cat": "dev",
+      "old_t": "MLOps",
+      "old_c": "models"
+    },
+    {
+      "n": "DagsHub",
+      "d": "ML 协作平台，Git 风格管理数据、模型与实验版本化。",
+      "u": "https://dagshub.com",
+      "tag": "数据集",
+      "ic": "🐕",
+      "cat": "dev",
+      "old_t": "MLOps",
+      "old_c": "models"
+    },
+    {
+      "n": "Metaflow",
+      "d": "Netflix 开源的 ML 项目框架，从原型到生产的全流程管理。",
+      "u": "https://metaflow.org",
+      "tag": "大厂·工作流",
+      "ic": "🎬",
+      "cat": "dev",
+      "old_t": "MLOps",
+      "old_c": "models"
+    },
+    {
+      "n": "Kubeflow",
+      "d": "Kubernetes 原生 ML 工作流平台，分布式训练与部署利器。",
+      "u": "https://www.kubeflow.org",
+      "tag": "云服务",
+      "ic": "☸️",
+      "cat": "dev",
+      "old_t": "MLOps",
+      "old_c": "models"
+    },
+    {
+      "n": "Seldon",
+      "d": "开源 ML 模型部署与管理平台，云原生模型服务框架。",
+      "u": "https://seldon.io",
+      "tag": "云服务",
+      "ic": "🌐",
+      "cat": "dev",
+      "old_t": "MLOps",
+      "old_c": "models"
+    },
+    {
+      "n": "Valohai",
+      "d": "ML 训练流水线自动化平台，一键复现实验且自动部署。",
+      "u": "https://valohai.com",
+      "tag": "工作流",
+      "ic": "🔁",
+      "cat": "dev",
+      "old_t": "MLOps",
+      "old_c": "models"
+    },
+    {
+      "n": "Scale AI",
+      "d": "全球最大的 AI 数据标注与数据引擎平台，估值超百亿。",
+      "u": "https://scale.com",
+      "tag": "数据集·链上数据",
+      "ic": "⚖️",
+      "cat": "dev",
+      "old_t": "数据标注",
+      "old_c": "models"
+    },
+    {
+      "n": "Labelbox",
+      "d": "企业级数据标注与 AI 数据引擎，端到端数据管理。",
+      "u": "https://labelbox.com",
+      "tag": "企业级",
+      "ic": "🏷️",
+      "cat": "dev",
+      "old_t": "数据标注",
+      "old_c": "models"
+    },
+    {
+      "n": "Label Studio",
+      "d": "开源多模态数据标注平台，支持文本、图像、音频、视频。",
+      "u": "https://labelstud.io",
+      "tag": "开源·多模态",
+      "ic": "🏗️",
+      "cat": "dev",
+      "old_t": "数据标注",
+      "old_c": "models"
+    },
+    {
+      "n": "SuperAnnotate",
+      "d": "AI 辅助数据标注与模型管理，自动化标注加速迭代。",
+      "u": "https://www.superannotate.com",
+      "tag": "工作流",
+      "ic": "🚀",
+      "cat": "dev",
+      "old_t": "数据标注",
+      "old_c": "models"
+    },
+    {
+      "n": "Snorkel AI",
+      "d": "程序化数据标注与弱监督学习平台，以编程替代手工标注。",
+      "u": "https://snorkel.ai",
+      "tag": "工作流",
+      "ic": "🤿",
+      "cat": "dev",
+      "old_t": "数据标注",
+      "old_c": "models"
+    },
+    {
+      "n": "Credo AI",
+      "d": "AI 治理与风险平台，自动评估模型公平性与合规性。",
+      "u": "https://www.credo.ai",
+      "tag": "Web3·合规",
+      "ic": "🛡️",
+      "cat": "dev",
+      "old_t": "AI 安全",
+      "old_c": "models"
+    },
+    {
+      "n": "Robust Intelligence",
+      "d": "AI 安全平台，自动检测模型漏洞防御对抗性攻击。",
+      "u": "https://www.robustintelligence.com",
+      "tag": "安全",
+      "ic": "🔒",
+      "cat": "dev",
+      "old_t": "AI 安全",
+      "old_c": "models"
+    },
+    {
+      "n": "Arthur AI",
+      "d": "LLM 监控与安全平台，实时检测幻觉、偏见和有害输出。",
+      "u": "https://www.arthur.ai",
+      "tag": "可观测·安全",
+      "ic": "👑",
+      "cat": "dev",
+      "old_t": "AI 安全",
+      "old_c": "models"
+    },
+    {
+      "n": "WhyLabs",
+      "d": "AI 可观测与数据监控平台，LangKit 检测 LLM 质量问题。",
+      "u": "https://whylabs.ai",
+      "tag": "可观测",
+      "ic": "🔬",
+      "cat": "dev",
+      "old_t": "AI 安全",
+      "old_c": "models"
+    },
+    {
+      "n": "Guardrails AI",
+      "d": "开源 LLM 护栏框架，以规则约束 AI 输出保障安全合规。",
+      "u": "https://www.guardrailsai.com",
+      "tag": "安全·开源",
+      "ic": "🛤️",
+      "cat": "dev",
+      "old_t": "AI 安全",
+      "old_c": "models"
+    },
+    {
+      "n": "LMSYS Chatbot Arena",
+      "d": "UC Berkeley 主导的 LLM 竞技场，众包盲测模型排行榜。",
+      "u": "https://lmsys.org",
+      "tag": "评测",
+      "ic": "🏟️",
+      "cat": "dev",
+      "old_t": "AI 评测",
+      "old_c": "models"
+    },
+    {
+      "n": "Stanford HELM",
+      "d": "斯坦福全生命周期语言模型评测，多维度全面评估 LLM。",
+      "u": "https://crfm.stanford.edu/helm",
+      "tag": "学术",
+      "ic": "🎓",
+      "cat": "dev",
+      "old_t": "AI 评测",
+      "old_c": "models"
+    },
+    {
+      "n": "Galileo",
+      "d": "AI 模型评估与可观测平台，快速发现与修复模型错误。现已被 Cisco 收购（galileo.ai）。",
+      "u": "https://galileo.ai/",
+      "tag": "评测",
+      "ic": "🔭",
+      "cat": "dev",
+      "old_t": "AI 评测",
+      "old_c": "models"
+    },
+    {
+      "n": "DeepEval",
+      "d": "开源 LLM 评测框架，单元测试方式量化评估模型质量。",
+      "u": "https://docs.confident-ai.com",
+      "tag": "开源",
+      "ic": "✅",
+      "cat": "dev",
+      "old_t": "AI 评测",
+      "old_c": "models"
+    },
+    {
+      "n": "TruLens",
+      "d": "开源 LLM 应用反馈与评估框架，追踪 RAG 管道质量指标。",
+      "u": "https://www.trulens.org",
+      "tag": "RAG·评测·开源",
+      "ic": "📏",
+      "cat": "dev",
+      "old_t": "AI 评测",
+      "old_c": "models"
+    },
+    {
+      "n": "Ethereum",
+      "d": "全球最大的智能合约平台，DeFi 与 NFT 生态的核心基础设施。",
+      "u": "https://ethereum.org",
+      "tag": "智能合约·DeFi",
+      "ic": "💎",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Solana",
+      "d": "高性能 Layer1 公链，以高 TPS 和低费用著称，生态繁荣。",
+      "u": "https://solana.com",
+      "tag": "高性能·交易",
+      "ic": "☀️",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Bitcoin",
+      "d": "全球第一个去中心化数字货币，区块链技术的开创者。",
+      "u": "https://bitcoin.org",
+      "tag": "公链",
+      "ic": "₿",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Polygon",
+      "d": "以太坊 Layer2 扩容解决方案，提供更快更便宜的交易。",
+      "u": "https://polygon.technology",
+      "tag": "L2",
+      "ic": "🔷",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Arbitrum",
+      "d": "Optimistic Rollup 龙头，以太坊最受欢迎的 Layer2 网络。",
+      "u": "https://arbitrum.io",
+      "tag": "L2",
+      "ic": "🔵",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Optimism",
+      "d": "以太坊 Layer2 OP Stack 核心贡献者，推动超级链愿景。",
+      "u": "https://www.optimism.io",
+      "tag": "L2",
+      "ic": "🔴",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Sui",
+      "d": "Meta 前团队打造的新一代高性能 Layer1，Move 语言原生。",
+      "u": "https://sui.io",
+      "tag": "智能合约·高性能",
+      "ic": "💧",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Aptos",
+      "d": "由 Meta Diem 项目衍生而来的 Layer1 公链，安全可扩展。",
+      "u": "https://aptoslabs.com",
+      "tag": "智能合约·安全",
+      "ic": "🌊",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Polkadot",
+      "d": "跨链互操作协议，连接多条专用区块链实现数据互通。",
+      "u": "https://polkadot.network",
+      "tag": "跨链",
+      "ic": "🔗",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Avalanche",
+      "d": "高性能可定制区块链平台，子网架构灵活可定制。",
+      "u": "https://www.avax.network",
+      "tag": "基础设施",
+      "ic": "❄️",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Cardano",
+      "d": "学术研究驱动的 PoS 公链，采用 Haskell 实现高安全。",
+      "u": "https://cardano.org",
+      "tag": "学术·基础设施",
+      "ic": "🔷",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "BNB Chain",
+      "d": "Binance 官方公链，交易费低廉，GameFi 与 DeFi 生态繁荣。",
+      "u": "https://www.bnbchain.org",
+      "tag": "交易·GameFi",
+      "ic": "🟡",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "COSMOS",
+      "d": "跨链生态协议，IBC 协议实现多链资产与数据互操作。",
+      "u": "https://cosmos.network",
+      "tag": "跨链",
+      "ic": "🌌",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Near Protocol",
+      "d": "分片技术驱动的 L1 公链，开发体验友好，生态快速增长。",
+      "u": "https://near.org",
+      "tag": "基础设施·API",
+      "ic": "🌙",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Tron",
+      "d": "高吞吐量公链，USDT 流通量最大的区块链网络之一。",
+      "u": "https://tron.network",
+      "tag": "稳定币·高性能",
+      "ic": "🔴",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Algorand",
+      "d": "MIT 教授创立的纯 PoS 公链，碳中和且快速终局不分叉。",
+      "u": "https://www.algorand.com",
+      "tag": "基础设施",
+      "ic": "🟢",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Flow",
+      "d": "Dapper Labs 推出的消费者级区块链，NBA Top Shot 同链。",
+      "u": "https://flow.com",
+      "tag": "公链·NFT",
+      "ic": "🌊",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Tezos",
+      "d": "自升级 PoS 公链，链上治理实现无硬分叉协议长期演进。",
+      "u": "https://tezos.com",
+      "tag": "Web3",
+      "ic": "🔷",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Hedera",
+      "d": "企业级哈希图共识公链，Google 和 IBM 均参与治理。",
+      "u": "https://hedera.com",
+      "tag": "基础设施·企业级",
+      "ic": "🌿",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Zilliqa",
+      "d": "分片技术先驱公链，高吞吐量低费用的区块链平台。",
+      "u": "https://www.zilliqa.com",
+      "tag": "基础设施·高性能",
+      "ic": "🔶",
+      "cat": "ext",
+      "old_t": "公链平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "zkSync Era",
+      "d": "零知识 Rollup 领跑者，以太坊扩容的同时保障最高安全性。",
+      "u": "https://zksync.io",
+      "tag": "L2·安全",
+      "ic": "⚡",
+      "cat": "ext",
+      "old_t": "Layer2 网络",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "StarkNet",
+      "d": "STARK 证明驱动的 ZK-Rollup，实现超大规模可扩展性。",
+      "u": "https://www.starknet.io",
+      "tag": "L2",
+      "ic": "🔲",
+      "cat": "ext",
+      "old_t": "Layer2 网络",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Base",
+      "d": "Coinbase 孵化的以太坊 L2，背靠过亿用户入口快速成长。",
+      "u": "https://www.base.org",
+      "tag": "交易",
+      "ic": "🔵",
+      "cat": "ext",
+      "old_t": "Layer2 网络",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Linea",
+      "d": "Consensys 推出的 zkEVM L2，深度集成 MetaMask 生态。",
+      "u": "https://linea.build",
+      "tag": "基础设施·L2",
+      "ic": "📈",
+      "cat": "ext",
+      "old_t": "Layer2 网络",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Scroll",
+      "d": "字节码兼容的 zkEVM Layer2，以太坊应用零成本迁移。",
+      "u": "https://scroll.io",
+      "tag": "L2",
+      "ic": "📜",
+      "cat": "ext",
+      "old_t": "Layer2 网络",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Mantle",
+      "d": "由 BitDAO 演化而来的模块化 L2，采用 EigenDA 数据可用性。",
+      "u": "https://www.mantle.xyz",
+      "tag": "L2",
+      "ic": "🛡️",
+      "cat": "ext",
+      "old_t": "Layer2 网络",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Chainlink",
+      "d": "去中心化预言机网络，为智能合约安全提供链下真实数据。",
+      "u": "https://chain.link",
+      "tag": "预言机·数据集",
+      "ic": "🔮",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Alchemy",
+      "d": "领先的区块链开发者平台，提供节点服务与增强 API。",
+      "u": "https://www.alchemy.com",
+      "tag": "基础设施·API",
+      "ic": "🧪",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Infura",
+      "d": "Consensys 旗下以太坊基础设施服务，节点即服务先驱。",
+      "u": "https://infura.io",
+      "tag": "公链·基础设施",
+      "ic": "🔥",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "The Graph",
+      "d": "去中心化区块链数据索引协议，高效灵活查询链上数据。",
+      "u": "https://thegraph.com",
+      "tag": "RAG",
+      "ic": "📊",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "IPFS",
+      "d": "星际文件系统，点对点的分布式文件存储与共享网络协议。",
+      "u": "https://ipfs.tech",
+      "tag": "云服务",
+      "ic": "🌐",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Arweave",
+      "d": "永久存储协议，一次付费永久保存数据构建永不忘却的网络。",
+      "u": "https://www.arweave.org",
+      "tag": "存储",
+      "ic": "🏛️",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Tenderly",
+      "d": "以太坊全栈开发工具套件，调试、模拟与监控智能合约。",
+      "u": "https://tenderly.co",
+      "tag": "仿真",
+      "ic": "🛠️",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "QuickNode",
+      "d": "高性能区块链 RPC 节点服务商，支持 30+ 主流公链。",
+      "u": "https://www.quicknode.com",
+      "tag": "基础设施·跨链",
+      "ic": "⚡",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Gnosis",
+      "d": "以太坊侧链与预测市场基础设施，Safe 多签钱包发源地。",
+      "u": "https://www.gnosis.io",
+      "tag": "L2",
+      "ic": "🦉",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Livepeer",
+      "d": "去中心化视频转码网络，大幅降低视频流媒体基础设施成本。",
+      "u": "https://livepeer.org",
+      "tag": "视频生成",
+      "ic": "📺",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Pocket Network",
+      "d": "去中心化 RPC 协议，由节点运营商网络提供多链数据访问。",
+      "u": "https://www.pokt.network",
+      "tag": "基础设施·跨链",
+      "ic": "📡",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Band Protocol",
+      "d": "去中心化跨链预言机，为 Web3 应用提供可验证真实数据。",
+      "u": "https://www.bandprotocol.com",
+      "tag": "预言机·跨链",
+      "ic": "📊",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "API3",
+      "d": "第一方预言机网络，数据提供商直接运行节点保障数据源。",
+      "u": "https://api3.org",
+      "tag": "预言机",
+      "ic": "🔗",
+      "cat": "ext",
+      "old_t": "基础设施",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Filecoin",
+      "d": "去中心化存储网络，IPFS 的激励层实现数据永续存储。",
+      "u": "https://filecoin.io",
+      "tag": "存储",
+      "ic": "💾",
+      "cat": "ext",
+      "old_t": "去中心化存储",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Storj",
+      "d": "去中心化云存储平台，闲置硬盘空间共享经济实现安全存。",
+      "u": "https://www.storj.io",
+      "tag": "基础设施·Web3",
+      "ic": "📦",
+      "cat": "ext",
+      "old_t": "去中心化存储",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Crust Network",
+      "d": "基于 IPFS 的去中心化云存储激励层，Web3 数据永存方案。",
+      "u": "https://crust.network",
+      "tag": "存储",
+      "ic": "🦀",
+      "cat": "ext",
+      "old_t": "去中心化存储",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Wormhole",
+      "d": "通用互操作协议，已连接 30+ 条主流区块链实现跨链通信。",
+      "u": "https://wormhole.com",
+      "tag": "跨链",
+      "ic": "🕳️",
+      "cat": "ext",
+      "old_t": "跨链桥",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "LayerZero",
+      "d": "全链互操作协议，以超轻节点技术实现安全跨链。",
+      "u": "https://layerzero.network",
+      "tag": "跨链·基础设施",
+      "ic": "0️⃣",
+      "cat": "ext",
+      "old_t": "跨链桥",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Stargate",
+      "d": "基于 LayerZero 的跨链桥，提供统一流动性与即时确认。",
+      "u": "https://stargate.finance",
+      "tag": "DeFi",
+      "ic": "🌌",
+      "cat": "ext",
+      "old_t": "跨链桥",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Across",
+      "d": "以太坊跨链桥协议，低成本快速完成 Layer2 间资产转移。",
+      "u": "https://across.to",
+      "tag": "跨链",
+      "ic": "🌉",
+      "cat": "ext",
+      "old_t": "跨链桥",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Synapse",
+      "d": "跨链互操作与资产桥接协议，支持 20+ EVM 链安全互通。",
+      "u": "https://www.synapseprotocol.com",
+      "tag": "智能合约",
+      "ic": "🧬",
+      "cat": "ext",
+      "old_t": "跨链桥",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "OpenSea",
+      "d": "全球最大的 NFT 交易市场，支持以太坊、Polygon 等多链。",
+      "u": "https://opensea.io",
+      "tag": "NFT·跨链",
+      "ic": "🌊",
+      "cat": "ext",
+      "old_t": "NFT市场",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Blur",
+      "d": "专业级 NFT 聚合交易平台，以速度和深度流动性著称。",
+      "u": "https://blur.io",
+      "tag": "NFT·搜索",
+      "ic": "💨",
+      "cat": "ext",
+      "old_t": "NFT市场",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Magic Eden",
+      "d": "Solana 生态最大的 NFT 市场，跨链扩张至比特币 Ordinals。",
+      "u": "https://magiceden.io",
+      "tag": "公链·NFT",
+      "ic": "🪄",
+      "cat": "ext",
+      "old_t": "NFT市场",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Rarible",
+      "d": "社区治理的去中心化 NFT 市场，支持多链创建与交易。",
+      "u": "https://rarible.com",
+      "tag": "Web3·跨链",
+      "ic": "🔶",
+      "cat": "ext",
+      "old_t": "NFT市场",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "SuperRare",
+      "d": "高端加密艺术 NFT 平台，精选全球顶尖数字艺术家作品。",
+      "u": "https://superrare.com",
+      "tag": "设计",
+      "ic": "🖼️",
+      "cat": "ext",
+      "old_t": "NFT市场",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "LooksRare",
+      "d": "以社区为核心的 NFT 交易市场，交易挖矿回馈活跃用户。",
+      "u": "https://looksrare.org",
+      "tag": "社区",
+      "ic": "👀",
+      "cat": "ext",
+      "old_t": "NFT市场",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "X2Y2",
+      "d": "去中心化 NFT 聚合市场，低费率并支持批量交易与挂单。",
+      "u": "https://x2y2.io",
+      "tag": "交易·工作流",
+      "ic": "🔄",
+      "cat": "ext",
+      "old_t": "NFT市场",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Foundation",
+      "d": "策展型加密艺术平台，艺术家邀请制确保作品高质量。",
+      "u": "https://foundation.app",
+      "tag": "设计",
+      "ic": "🏛️",
+      "cat": "ext",
+      "old_t": "NFT市场",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Etherscan",
+      "d": "以太坊最权威的区块链浏览器，查询交易与合约源码。",
+      "u": "https://etherscan.io",
+      "tag": "公链·交易",
+      "ic": "🔍",
+      "cat": "ext",
+      "old_t": "区块链浏览器",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Solscan",
+      "d": "Solana 生态最流行的区块链浏览器，账户与代币追踪。",
+      "u": "https://solscan.io",
+      "tag": "公链·钱包",
+      "ic": "☀️",
+      "cat": "ext",
+      "old_t": "区块链浏览器",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Polygonscan",
+      "d": "Polygon 官方区块链浏览器，查询 L2 交易与合约。",
+      "u": "https://polygonscan.com",
+      "tag": "公链·L2",
+      "ic": "🔷",
+      "cat": "ext",
+      "old_t": "区块链浏览器",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "BscScan",
+      "d": "BNB Chain 官方区块链浏览器，追踪 BSC 所有链上活动。",
+      "u": "https://bscscan.com",
+      "tag": "公链",
+      "ic": "🟡",
+      "cat": "ext",
+      "old_t": "区块链浏览器",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Tronscan",
+      "d": "Tron 区块链官方浏览器，查询 USDT 转账与智能合约。",
+      "u": "https://tronscan.org",
+      "tag": "公链·稳定币",
+      "ic": "🔴",
+      "cat": "ext",
+      "old_t": "区块链浏览器",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Hardhat",
+      "d": "以太坊智能合约开发框架，本地测试与部署的首选工具。",
+      "u": "https://hardhat.org",
+      "tag": "智能合约",
+      "ic": "🪖",
+      "cat": "ext",
+      "old_t": "Web3 开发",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Foundry",
+      "d": "Rust 编写的极速以太坊智能合约开发与测试工具套件。",
+      "u": "https://book.getfoundry.sh",
+      "tag": "高性能",
+      "ic": "🦀",
+      "cat": "ext",
+      "old_t": "Web3 开发",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Thirdweb",
+      "d": "Web3 全栈开发平台，零门槛构建 NFT、代币与市场应用。",
+      "u": "https://thirdweb.com",
+      "tag": "智能合约·API",
+      "ic": "🛠️",
+      "cat": "ext",
+      "old_t": "Web3 开发",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Remix",
+      "d": "以太坊官方智能合约在线 IDE，快速编写与部署 Solidity。",
+      "u": "https://remix.ethereum.org",
+      "tag": "IDE·智能合约",
+      "ic": "🧩",
+      "cat": "ext",
+      "old_t": "Web3 开发",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Moralis",
+      "d": "Web3 后端即服务平台，一站式构建去中心化应用后端。",
+      "u": "https://moralis.io",
+      "tag": "云服务·API",
+      "ic": "⚡",
+      "cat": "ext",
+      "old_t": "Web3 开发",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Helium",
+      "d": "去中心化物联网网络，用户共享热点赚取代币覆盖 LoRaWAN。",
+      "u": "https://www.helium.com",
+      "tag": "基础设施",
+      "ic": "🎈",
+      "cat": "ext",
+      "old_t": "DePIN",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Hivemapper",
+      "d": "去中心化地图网络，行车记录仪采集街景以代币激励贡献者。",
+      "u": "https://hivemapper.com",
+      "tag": "数据集",
+      "ic": "🗺️",
+      "cat": "ext",
+      "old_t": "DePIN",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "IoTeX",
+      "d": "Web3 物联网公链，连接真实世界设备到区块链实现数据确权。",
+      "u": "https://www.iotex.io",
+      "tag": "公链",
+      "ic": "📡",
+      "cat": "ext",
+      "old_t": "DePIN",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Akash Network",
+      "d": "去中心化云计算市场，闲置 GPU 算力共享降低 AI 训练成本。",
+      "u": "https://akash.network",
+      "tag": "云服务·基础设施",
+      "ic": "☁️",
+      "cat": "ext",
+      "old_t": "DePIN",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "DIMO",
+      "d": "去中心化车辆数据网络，车主分享行车数据赚取 DIMO 代币。",
+      "u": "https://dimo.zone",
+      "tag": "自动驾驶·数据集",
+      "ic": "🚗",
+      "cat": "ext",
+      "old_t": "DePIN",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Ondo Finance",
+      "d": "代币化美国国债与现实资产发行平台，链上获取传统金融收益。",
+      "u": "https://ondo.finance",
+      "tag": "金融",
+      "ic": "🏦",
+      "cat": "ext",
+      "old_t": "RWA 现实资产",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Centrifuge",
+      "d": "去中心化真实资产融资协议，将发票与应收账款引入链上。",
+      "u": "https://centrifuge.io",
+      "tag": "金融",
+      "ic": "🏭",
+      "cat": "ext",
+      "old_t": "RWA 现实资产",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Maple Finance",
+      "d": "去中心化机构借贷平台，高信用借款人获得低抵押贷款。",
+      "u": "https://www.maple.finance",
+      "tag": "DeFi·金融",
+      "ic": "🍁",
+      "cat": "ext",
+      "old_t": "RWA 现实资产",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Goldfinch",
+      "d": "去中心化信贷协议，为新兴市场提供无抵押加密贷款。",
+      "u": "https://goldfinch.finance",
+      "tag": "金融",
+      "ic": "🐦",
+      "cat": "ext",
+      "old_t": "RWA 现实资产",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Parcl",
+      "d": "合成房地产投资协议，以代币追踪全球城市房价涨跌。",
+      "u": "https://parcl.co",
+      "tag": "语音合成",
+      "ic": "🏘️",
+      "cat": "ext",
+      "old_t": "RWA 现实资产",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Gods Unchained",
+      "d": "免费区块链卡牌游戏，Immutable X 运行，真正的卡牌所有权。",
+      "u": "https://godsunchained.com",
+      "tag": "游戏·公链",
+      "ic": "⚔️",
+      "cat": "ext",
+      "old_t": "链游平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Splinterlands",
+      "d": "区块链卡牌对战游戏，Hive 区块链运行，日活百万级。",
+      "u": "https://splinterlands.com",
+      "tag": "游戏·基础设施",
+      "ic": "🃏",
+      "cat": "ext",
+      "old_t": "链游平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Alien Worlds",
+      "d": "去中心化元宇宙挖矿游戏，跨链 NFT 探索外星世界。",
+      "u": "https://alienworlds.io",
+      "tag": "GameFi",
+      "ic": "👽",
+      "cat": "ext",
+      "old_t": "链游平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Vulcan Forged",
+      "d": "NFT 游戏工作室与去中心化应用市场，多款热门链游。",
+      "u": "https://vulcanforged.com",
+      "tag": "链上数据",
+      "ic": "🔨",
+      "cat": "ext",
+      "old_t": "链游平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "My Neighbor Alice",
+      "d": "区块链多人建造游戏，社交与 NFT 农场结合治愈系风格。",
+      "u": "https://www.myneighboralice.com",
+      "tag": "社交",
+      "ic": "🏡",
+      "cat": "ext",
+      "old_t": "链游平台",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Monero",
+      "d": "最具影响力的隐私币，默认匿名保障交易发送方与接收方隐私。",
+      "u": "https://www.getmonero.org",
+      "tag": "交易",
+      "ic": "🕵️",
+      "cat": "ext",
+      "old_t": "隐私公链",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Zcash",
+      "d": "学术密码学驱动的隐私币，zk-SNARKs 零知识证明加密交易。",
+      "u": "https://z.cash",
+      "tag": "L2·学术",
+      "ic": "🔐",
+      "cat": "ext",
+      "old_t": "隐私公链",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Aleo",
+      "d": "基于零知识证明的隐私智能合约平台，默认隐私可编程。",
+      "u": "https://aleo.org",
+      "tag": "L2·智能合约",
+      "ic": "🕶️",
+      "cat": "ext",
+      "old_t": "隐私公链",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Iron Fish",
+      "d": "全链路加密的隐私 L1 公链，所有交易默认不可见。",
+      "u": "https://ironfish.network",
+      "tag": "Web3",
+      "ic": "🐟",
+      "cat": "ext",
+      "old_t": "隐私公链",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "Oasis Network",
+      "d": "隐私优先的 L1 公链，TEE 与零知识技术保护用户数据。",
+      "u": "https://oasisprotocol.org",
+      "tag": "安全",
+      "ic": "🟢",
+      "cat": "ext",
+      "old_t": "隐私公链",
+      "old_c": "blockchain"
+    },
+    {
+      "n": "CoinMarketCap",
+      "d": "全球最权威的加密货币市值排名与数据聚合平台。",
+      "u": "https://coinmarketcap.com",
+      "tag": "链上数据·评测",
+      "ic": "📊",
+      "cat": "ext",
+      "old_t": "行情数据",
+      "old_c": "crypto"
+    },
+    {
+      "n": "CoinGecko",
+      "d": "全面的加密货币数据平台，提供代币基本面的深度分析。",
+      "u": "https://www.coingecko.com",
+      "tag": "数据集",
+      "ic": "🦎",
+      "cat": "ext",
+      "old_t": "行情数据",
+      "old_c": "crypto"
+    },
+    {
+      "n": "TradingView",
+      "d": "专业级行情图表工具，支持加密货币与股票的技术分析。",
+      "u": "https://www.tradingview.com",
+      "tag": "可视化·金融",
+      "ic": "📈",
+      "cat": "ext",
+      "old_t": "行情数据",
+      "old_c": "crypto"
+    },
+    {
+      "n": "DefiLlama",
+      "d": "DeFi 全链 TVL 数据聚合平台，追踪各协议总锁仓价值。",
+      "u": "https://defillama.com",
+      "tag": "链上数据·DeFi",
+      "ic": "🦙",
+      "cat": "ext",
+      "old_t": "行情数据",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Dune Analytics",
+      "d": "链上数据分析平台，用 SQL 查询并可视化区块链数据。",
+      "u": "https://dune.com",
+      "tag": "链上数据",
+      "ic": "🏜️",
+      "cat": "ext",
+      "old_t": "行情数据",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Nansen",
+      "d": "链上智能分析平台，追踪 Smart Money 与巨鲸实时动向。",
+      "u": "https://www.nansen.ai",
+      "tag": "链上数据",
+      "ic": "🐋",
+      "cat": "ext",
+      "old_t": "行情数据",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Glassnode",
+      "d": "专业级链上数据与研究平台，洞察市场周期与链上指标。",
+      "u": "https://glassnode.com",
+      "tag": "链上数据",
+      "ic": "🔍",
+      "cat": "ext",
+      "old_t": "行情数据",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Messari",
+      "d": "加密资产研究平台，提供深度行业报告与治理追踪。",
+      "u": "https://messari.io",
+      "tag": "学术·办公",
+      "ic": "📖",
+      "cat": "ext",
+      "old_t": "行情数据",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Arkham",
+      "d": "链上身份追踪与情报平台，可视化实体持仓与资金流向。",
+      "u": "https://www.arkhamintelligence.com",
+      "tag": "链上数据",
+      "ic": "🕵️",
+      "cat": "ext",
+      "old_t": "行情数据",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Token Terminal",
+      "d": "加密项目财务报表式数据分析，对标传统金融基本面指标。",
+      "u": "https://tokenterminal.com",
+      "tag": "金融·链上数据",
+      "ic": "💹",
+      "cat": "ext",
+      "old_t": "行情数据",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Binance",
+      "d": "全球交易量最大的加密货币交易所，生态体系全面完善。",
+      "u": "https://www.binance.com",
+      "tag": "交易",
+      "ic": "🟡",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "OKX",
+      "d": "全球领先的加密货币交易所与 Web3 自托管钱包平台。",
+      "u": "https://www.okx.com",
+      "tag": "交易·Web3",
+      "ic": "⚪",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Coinbase",
+      "d": "美国最大的合规加密货币交易所，纳斯达克上市受 SEC 监管。",
+      "u": "https://www.coinbase.com",
+      "tag": "合规·金融",
+      "ic": "🔵",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Uniswap",
+      "d": "以太坊上最大的去中心化交易所（DEX），AMM 做市先驱。",
+      "u": "https://uniswap.org",
+      "tag": "交易·DeFi",
+      "ic": "🦄",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Jupiter",
+      "d": "Solana 生态最大的聚合 DEX，自动寻找最优兑换路由。",
+      "u": "https://jup.ag",
+      "tag": "公链·搜索",
+      "ic": "🪐",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Bybit",
+      "d": "全球前三的加密货币衍生品交易所，交易深度与产品线丰富。",
+      "u": "https://www.bybit.com",
+      "tag": "交易",
+      "ic": "🌐",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Kraken",
+      "d": "美国老牌合规交易所，以顶级安全和法币出入金便捷著称。",
+      "u": "https://www.kraken.com",
+      "tag": "合规·金融",
+      "ic": "🐙",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Gate.io",
+      "d": "老牌交易所，币种数量超 2000，首发新资产速度优势明显。",
+      "u": "https://www.gate.io",
+      "tag": "钱包·交易",
+      "ic": "🚪",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "KuCoin",
+      "d": "全球知名综合性交易所，以发掘优质早期项目广受好评。",
+      "u": "https://www.kucoin.com",
+      "tag": "交易",
+      "ic": "🪙",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Bitget",
+      "d": "合约交易量全球领先的交易所，跟单交易功能业内最成熟。",
+      "u": "https://www.bitget.com",
+      "tag": "交易",
+      "ic": "💪",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Crypto.com",
+      "d": "全球知名加密平台，拥有 VISA 卡与庞大用户基础的生态体系。",
+      "u": "https://crypto.com",
+      "tag": "交易",
+      "ic": "🔵",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Gemini",
+      "d": "Winklevoss 兄弟创立的合规交易所，纽约州持牌安全优先。",
+      "u": "https://www.gemini.com",
+      "tag": "合规",
+      "ic": "♊",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "HTX",
+      "d": "火币全球站，亚太区老牌交易所资产储备与流动性实力雄厚。",
+      "u": "https://www.htx.com",
+      "tag": "交易",
+      "ic": "🔥",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Bitfinex",
+      "d": "老牌专业级交易平台，提供高级交易功能与深度流动性。",
+      "u": "https://www.bitfinex.com",
+      "tag": "交易",
+      "ic": "💱",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "MEXC",
+      "d": "以闪电般上币速度和海量币种著称的全球化交易所。",
+      "u": "https://www.mexc.com",
+      "tag": "交易·钱包",
+      "ic": "⚡",
+      "cat": "ext",
+      "old_t": "交易所",
+      "old_c": "crypto"
+    },
+    {
+      "n": "MetaMask",
+      "d": "最流行的以太坊钱包浏览器插件，玩转 DeFi 的必备入口。",
+      "u": "https://metamask.io",
+      "tag": "钱包",
+      "ic": "🦊",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Phantom",
+      "d": "Solana 生态首选钱包，支持浏览器插件与移动端无缝体验。",
+      "u": "https://phantom.app",
+      "tag": "公链",
+      "ic": "👻",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Ledger",
+      "d": "全球领先的硬件冷钱包品牌，私钥离线存储安全保障资产。",
+      "u": "https://www.ledger.com",
+      "tag": "存储",
+      "ic": "🔒",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Trust Wallet",
+      "d": "Binance 旗下多链移动钱包，支持百万种加密资产管理。",
+      "u": "https://trustwallet.com",
+      "tag": "跨链",
+      "ic": "🛡️",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Rabby",
+      "d": "DeBank 团队打造的以太坊钱包，交易前自动风险扫描与模拟。",
+      "u": "https://rabby.io",
+      "tag": "安全·仿真",
+      "ic": "🐰",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Rainbow",
+      "d": "设计优雅的以太坊移动钱包，iOS/Android 原生交互体验出色。",
+      "u": "https://rainbow.me",
+      "tag": "设计",
+      "ic": "🌈",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Trezor",
+      "d": "欧洲领先的硬件冷钱包品牌，开源固件安全透明可审计。",
+      "u": "https://trezor.io",
+      "tag": "开源",
+      "ic": "🔐",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Safe",
+      "d": "多签智能合约钱包，团队金库与 DAO 资产管理的行业标准。",
+      "u": "https://safe.global",
+      "tag": "钱包",
+      "ic": "🏦",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Keplr",
+      "d": "COSMOS 生态首选钱包，跨链管理 IBC 资产与质押操作。",
+      "u": "https://www.keplr.app",
+      "tag": "钱包·跨链",
+      "ic": "🌌",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Coin98",
+      "d": "东南亚流行的多链钱包，一站式管理 DeFi 与 NFT 资产。",
+      "u": "https://coin98.com",
+      "tag": "跨链",
+      "ic": "💰",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Exodus",
+      "d": "设计精美的多链桌面与移动钱包，内置交易所与质押功能。",
+      "u": "https://www.exodus.com",
+      "tag": "设计",
+      "ic": "💎",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Argent",
+      "d": "以太坊 StarkNet 智能合约钱包，社交恢复免助记词极简体验。",
+      "u": "https://www.argent.xyz",
+      "tag": "钱包·L2",
+      "ic": "🦄",
+      "cat": "ext",
+      "old_t": "钱包",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Aave",
+      "d": "领先的去中心化借贷协议，支持多链存借数字资产。",
+      "u": "https://aave.com",
+      "tag": "DeFi·跨链",
+      "ic": "👻",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Lido",
+      "d": "最大的流动性质押协议，占据 ETH 质押量的主导份额。",
+      "u": "https://lido.fi",
+      "tag": "质押",
+      "ic": "💧",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "MakerDAO",
+      "d": "去中心化稳定币 DAI 发行协议，DeFi 领域基石级应用。",
+      "u": "https://makerdao.com",
+      "tag": "稳定币",
+      "ic": "⚙️",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Curve",
+      "d": "稳定币交易 DEX，以超低滑点与深度流动性池闻名。",
+      "u": "https://curve.fi",
+      "tag": "稳定币",
+      "ic": "📉",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "PancakeSwap",
+      "d": "BNB Chain 上最大的去中心化交易所，用户活跃度极高。",
+      "u": "https://pancakeswap.finance",
+      "tag": "公链·交易",
+      "ic": "🥞",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "EigenLayer",
+      "d": "以太坊再质押协议，释放已质押资产的额外收益潜力。",
+      "u": "https://www.eigenlayer.xyz",
+      "tag": "质押·基础设施",
+      "ic": "🔄",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Pendle",
+      "d": "收益代币化协议，将未来收益分拆为可灵活交易的数字资产。",
+      "u": "https://www.pendle.finance",
+      "tag": "DeFi·质押",
+      "ic": "⏳",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "1inch",
+      "d": "DEX 聚合器龙头，自动寻找最优兑换路径降低滑点成本。",
+      "u": "https://1inch.io",
+      "tag": "搜索",
+      "ic": "🐉",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "SushiSwap",
+      "d": "多链 DEX 与 DeFi 工具集，提供跨链兑换与借贷一体化服务。",
+      "u": "https://www.sushi.com",
+      "tag": "跨链·交易",
+      "ic": "🍣",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Ether.fi",
+      "d": "去中心化流动性质押协议，非托管方式安全参与 ETH 质押。",
+      "u": "https://www.ether.fi",
+      "tag": "质押·钱包",
+      "ic": "🌊",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Compound",
+      "d": "去中心化货币市场协议，存币生息与抵押借贷的去中心化实现。",
+      "u": "https://compound.finance",
+      "tag": "DeFi·质押",
+      "ic": "🏦",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Balancer",
+      "d": "可自定义权重的多资产流动性池协议，自动化投资组合再平衡。",
+      "u": "https://balancer.fi",
+      "tag": "钱包",
+      "ic": "⚖️",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "GMX",
+      "d": "Arbitrum 上最大的去中心化永续合约交易所，零滑点交易。",
+      "u": "https://gmx.io",
+      "tag": "交易",
+      "ic": "📈",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "dYdX",
+      "d": "专业级去中心化衍生品交易所，链下订单簿链上结算。",
+      "u": "https://dydx.trade",
+      "tag": "交易",
+      "ic": "🔄",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Synthetix",
+      "d": "合成资产协议，链上发行交易追踪法币商品与加密货币的资产。",
+      "u": "https://www.synthetix.io",
+      "tag": "语音合成",
+      "ic": "🧪",
+      "cat": "ext",
+      "old_t": "DeFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Tether",
+      "d": "发行 USDT 的公司，全球流通量最大的稳定币发行商。",
+      "u": "https://tether.to",
+      "tag": "稳定币",
+      "ic": "💵",
+      "cat": "ext",
+      "old_t": "稳定币",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Circle",
+      "d": "USDC 发行商，美受监管的合规稳定币，储备透明可审计。",
+      "u": "https://www.circle.com",
+      "tag": "稳定币·合规",
+      "ic": "⭕",
+      "cat": "ext",
+      "old_t": "稳定币",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Ethena",
+      "d": "合成美元协议 USDe，通过创新的 Delta 中性策略维持锚定。",
+      "u": "https://www.ethena.fi",
+      "tag": "稳定币",
+      "ic": "🛡️",
+      "cat": "ext",
+      "old_t": "稳定币",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Frax",
+      "d": "部分抵押算法稳定币协议，创新的 AMO 策略实现高效稳定。",
+      "u": "https://frax.finance",
+      "tag": "稳定币·DeFi",
+      "ic": "🏛️",
+      "cat": "ext",
+      "old_t": "稳定币",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Axie Infinity",
+      "d": "区块链游戏开创者，边玩边赚（P2E）模式的领头羊。",
+      "u": "https://axieinfinity.com",
+      "tag": "GameFi",
+      "ic": "🐉",
+      "cat": "ext",
+      "old_t": "GameFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "The Sandbox",
+      "d": "去中心化虚拟世界与元宇宙平台，用户共建数字乐园。",
+      "u": "https://www.sandbox.game",
+      "tag": "游戏·NFT",
+      "ic": "🏖️",
+      "cat": "ext",
+      "old_t": "GameFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Immutable",
+      "d": "NFT 与链游基础设施，Immutable X 与 zkEVM 专为游戏打造。",
+      "u": "https://www.immutable.com",
+      "tag": "基础设施·GameFi",
+      "ic": "🔗",
+      "cat": "ext",
+      "old_t": "GameFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Gala Games",
+      "d": "去中心化区块链游戏平台，玩家拥有游戏资产的真正所有权。",
+      "u": "https://www.gala.com",
+      "tag": "Web3",
+      "ic": "🎮",
+      "cat": "ext",
+      "old_t": "GameFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "STEPN",
+      "d": "首创 Move-to-Earn 运动即赚钱模式，边跑步边赚取加密资产。",
+      "u": "https://www.stepn.com",
+      "tag": "GameFi·具身智能",
+      "ic": "👟",
+      "cat": "ext",
+      "old_t": "GameFi",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Rocket Pool",
+      "d": "去中心化 ETH 流动性质押协议，节点自运营降低准入门槛。",
+      "u": "https://rocketpool.net",
+      "tag": "质押·基础设施",
+      "ic": "🚀",
+      "cat": "ext",
+      "old_t": "质押服务",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Stader Labs",
+      "d": "跨链流动性质押平台，多链部署降低用户参与门槛。",
+      "u": "https://www.staderlabs.com",
+      "tag": "跨链·质押",
+      "ic": "🏷️",
+      "cat": "ext",
+      "old_t": "质押服务",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Ankr",
+      "d": "Web3 去中心化节点与质押基础设施，支持 30+ 链质押。",
+      "u": "https://www.ankr.com",
+      "tag": "基础设施·跨链",
+      "ic": "⚓",
+      "cat": "ext",
+      "old_t": "质押服务",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Allnodes",
+      "d": "非托管质押与节点托管平台，一键运行验证节点赚取收益。",
+      "u": "https://www.allnodes.com",
+      "tag": "钱包",
+      "ic": "🔒",
+      "cat": "ext",
+      "old_t": "质押服务",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Stake.fish",
+      "d": "全球专业的 PoS 验证节点运营商，横跨 20+ 主流公链。",
+      "u": "https://stake.fish",
+      "tag": "基础设施·跨链",
+      "ic": "🐟",
+      "cat": "ext",
+      "old_t": "质押服务",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Snapshot",
+      "d": "去中心化治理投票平台，Gasless 链下投票体验丝滑。",
+      "u": "https://snapshot.org",
+      "tag": "Web3",
+      "ic": "🗳️",
+      "cat": "ext",
+      "old_t": "DAO 工具",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Aragon",
+      "d": "DAO 创建与管理框架，一键启动去中心化自治组织。",
+      "u": "https://aragon.org",
+      "tag": "Web3",
+      "ic": "🏛️",
+      "cat": "ext",
+      "old_t": "DAO 工具",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Tally",
+      "d": "DAO 治理与投票界面，追踪治理提案并参与链上决策。",
+      "u": "https://www.tally.xyz",
+      "tag": "Web3·UI生成",
+      "ic": "📋",
+      "cat": "ext",
+      "old_t": "DAO 工具",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Juicebox",
+      "d": "社区金库与筹款协议，DAO 持续获得项目收入的工具。",
+      "u": "https://juicebox.money",
+      "tag": "创业",
+      "ic": "💰",
+      "cat": "ext",
+      "old_t": "DAO 工具",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Farcaster",
+      "d": "去中心化社交协议，Einstein 架构实现足够去中心化的社交网络。",
+      "u": "https://www.farcaster.xyz",
+      "tag": "社交",
+      "ic": "📯",
+      "cat": "ext",
+      "old_t": "加密社交",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Lens Protocol",
+      "d": "可组合的去中心化社交图谱，开发者自由构建社交应用。",
+      "u": "https://www.lens.xyz",
+      "tag": "社交",
+      "ic": "🌿",
+      "cat": "ext",
+      "old_t": "加密社交",
+      "old_c": "crypto"
+    },
+    {
+      "n": "CyberConnect",
+      "d": "去中心化社交图谱协议，跨平台复用用户社交身份与数据。",
+      "u": "https://cyberconnect.me",
+      "tag": "社交",
+      "ic": "🔗",
+      "cat": "ext",
+      "old_t": "加密社交",
+      "old_c": "crypto"
+    },
+    {
+      "n": "DeSo",
+      "d": "专为社交应用打造的 L1 区块链，链上存储内容与社交数据。",
+      "u": "https://www.deso.com",
+      "tag": "存储",
+      "ic": "💎",
+      "cat": "ext",
+      "old_t": "加密社交",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Paragraph",
+      "d": "Web3 内容发布与 Newsletter 平台，作者与读者直接互联互通。",
+      "u": "https://paragraph.xyz",
+      "tag": "资讯",
+      "ic": "📰",
+      "cat": "ext",
+      "old_t": "加密社交",
+      "old_c": "crypto"
+    },
+    {
+      "n": "The Block",
+      "d": "加密货币与区块链行业领先的新闻与研究媒体。",
+      "u": "https://www.theblock.co",
+      "tag": "资讯·学术",
+      "ic": "📰",
+      "cat": "ext",
+      "old_t": "加密媒体",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Decrypt",
+      "d": "通俗易懂的 Web3 与加密货币新闻报道平台，新手友好。",
+      "u": "https://decrypt.co",
+      "tag": "资讯",
+      "ic": "🔓",
+      "cat": "ext",
+      "old_t": "加密媒体",
+      "old_c": "crypto"
+    },
+    {
+      "n": "CoinDesk",
+      "d": "加密资产新闻与事件数据标杆，行业最具影响力的媒体之一。",
+      "u": "https://www.coindesk.com",
+      "tag": "营销",
+      "ic": "📰",
+      "cat": "ext",
+      "old_t": "加密媒体",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Blockworks",
+      "d": "数字资产领域的媒体与研究平台，提供专业级分析与播客。",
+      "u": "https://blockworks.co",
+      "tag": "播客",
+      "ic": "🎙️",
+      "cat": "ext",
+      "old_t": "加密媒体",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Bankless",
+      "d": "去中心化金融倡导者媒体，教育大众走向无需银行的未来。",
+      "u": "https://www.bankless.com",
+      "tag": "DeFi·教育",
+      "ic": "🏴",
+      "cat": "ext",
+      "old_t": "加密媒体",
+      "old_c": "crypto"
+    },
+    {
+      "n": "BitPay",
+      "d": "老牌全球加密支付处理商，支持多币种支付与发票管理。",
+      "u": "https://bitpay.com",
+      "tag": "金融",
+      "ic": "💳",
+      "cat": "ext",
+      "old_t": "加密支付",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Ramp Network",
+      "d": "法币到加密货币的入金通道，合规覆盖 150+ 国家和地区。",
+      "u": "https://ramp.network",
+      "tag": "金融·合规",
+      "ic": "🏦",
+      "cat": "ext",
+      "old_t": "加密支付",
+      "old_c": "crypto"
+    },
+    {
+      "n": "MoonPay",
+      "d": "全球领先的加密货币基础设施支付平台，服务超 500 万用户。",
+      "u": "https://www.moonpay.com",
+      "tag": "金融·基础设施",
+      "ic": "🌙",
+      "cat": "ext",
+      "old_t": "加密支付",
+      "old_c": "crypto"
+    },
+    {
+      "n": "a16z Crypto",
+      "d": "Andreessen Horowitz 加密风投基金，Web3 领域最大投资者之一。",
+      "u": "https://a16zcrypto.com",
+      "tag": "创业·Web3",
+      "ic": "💰",
+      "cat": "ext",
+      "old_t": "加密基金",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Paradigm",
+      "d": "顶级加密原生风投，投资 Coinbase 与 Uniswap 等标杆项目。",
+      "u": "https://www.paradigm.xyz",
+      "tag": "创业",
+      "ic": "🔮",
+      "cat": "ext",
+      "old_t": "加密基金",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Pantera Capital",
+      "d": "美国第一家加密资产投资公司，专注区块链全阶段投资。",
+      "u": "https://panteracapital.com",
+      "tag": "金融·创业",
+      "ic": "🐆",
+      "cat": "ext",
+      "old_t": "加密基金",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Multicoin Capital",
+      "d": "以论文驱动著称的加密对冲基金，深度研究链上经济模型。",
+      "u": "https://multicoin.capital",
+      "tag": "金融·学术",
+      "ic": "📚",
+      "cat": "ext",
+      "old_t": "加密基金",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Koinly",
+      "d": "加密资产税务计算与申报平台，支持多国税法与交易所导入。",
+      "u": "https://koinly.io",
+      "tag": "合规·多语言",
+      "ic": "🧾",
+      "cat": "ext",
+      "old_t": "加密税务",
+      "old_c": "crypto"
+    },
+    {
+      "n": "CoinTracker",
+      "d": "加密资产投资组合追踪与税务申报平台，覆盖万亿美元资产。",
+      "u": "https://www.cointracker.io",
+      "tag": "金融·合规",
+      "ic": "📊",
+      "cat": "ext",
+      "old_t": "加密税务",
+      "old_c": "crypto"
+    },
+    {
+      "n": "TokenTax",
+      "d": "专业加密税务软件，自动计算资本利得并生成申报表格。",
+      "u": "https://tokentax.co",
+      "tag": "工作流·合规",
+      "ic": "💰",
+      "cat": "ext",
+      "old_t": "加密税务",
+      "old_c": "crypto"
+    },
+    {
+      "n": "ZenLedger",
+      "d": "加密税务计算与投资组合管理一体化，支持 DeFi 和 NFT 报税。",
+      "u": "https://www.zenledger.io",
+      "tag": "DeFi·NFT·合规",
+      "ic": "🧘",
+      "cat": "ext",
+      "old_t": "加密税务",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Gem.xyz",
+      "d": "NFT 聚合交易工具，批量扫地板价高效收集 NFT 资产。",
+      "u": "https://www.gem.xyz",
+      "tag": "搜索·工作流",
+      "ic": "💎",
+      "cat": "ext",
+      "old_t": "NFT 工具",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Sudoswap",
+      "d": "去中心化 NFT 自动化做市协议，即时创建与交易 NFT 池。",
+      "u": "https://sudoswap.xyz",
+      "tag": "DeFi·NFT",
+      "ic": "🔄",
+      "cat": "ext",
+      "old_t": "NFT 工具",
+      "old_c": "crypto"
+    },
+    {
+      "n": "Reservoir",
+      "d": "NFT 开发者基础设施，统一 API 聚合所有市场的 NFT 数据。",
+      "u": "https://reservoir.tools",
+      "tag": "API·搜索",
+      "ic": "🔧",
+      "cat": "ext",
+      "old_t": "NFT 工具",
+      "old_c": "crypto"
+    },
+    {
+      "n": "NVIDIA",
+      "d": "GPU 领域全球领导者，AI 算力基础设施的核心供应商。",
+      "u": "https://www.nvidia.com",
+      "tag": "GPU",
+      "ic": "🟢",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "AMD",
+      "d": "高性能计算与 GPU 提供商，数据中心 AI 芯片的重要玩家。",
+      "u": "https://www.amd.com",
+      "tag": "GPU·CPU",
+      "ic": "🔴",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Intel",
+      "d": "全球最大半导体公司之一，发力 AI PC 与数据中心芯片赛道。",
+      "u": "https://www.intel.com",
+      "tag": "CPU·芯片设计",
+      "ic": "🔵",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "台积电 TSMC",
+      "d": "全球最大半导体代工企业，AI 芯片制造的核心枢纽。",
+      "u": "https://www.tsmc.com",
+      "tag": "芯片设计",
+      "ic": "🏭",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "ARM",
+      "d": "全球领先的芯片 IP 供应商，移动计算与 IoT 生态的基石。",
+      "u": "https://www.arm.com",
+      "tag": "芯片设计·边缘计算",
+      "ic": "📱",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "寒武纪",
+      "d": "中国 AI 芯片第一股，思元系列智能加速卡业界遥遥领先。",
+      "u": "https://www.cambricon.com",
+      "tag": "国产·GPU",
+      "ic": "🧊",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "海光信息",
+      "d": "国产 x86 兼容 CPU 龙头，数据中心与服务器芯片性能强劲。",
+      "u": "https://www.hygon.cn",
+      "tag": "CPU·国产",
+      "ic": "💠",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "摩尔线程",
+      "d": "国产全功能 GPU 厂商，发力 AI 训练与推理芯片市场。",
+      "u": "https://www.mthreads.com",
+      "tag": "GPU·模型微调",
+      "ic": "🧵",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "地平线",
+      "d": "边缘 AI 芯片与自动驾驶计算方案的全球领导者。",
+      "u": "https://www.horizon.auto",
+      "tag": "边缘计算·自动驾驶",
+      "ic": "🚘",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Cerebras",
+      "d": "晶圆级 AI 芯片 WSE-3，单芯片集成 4 万亿晶体管。",
+      "u": "https://www.cerebras.net",
+      "tag": "芯片设计",
+      "ic": "🧇",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Graphcore",
+      "d": "英国 AI 芯片独角兽，IPU 架构专为机器学习智能设计。",
+      "u": "https://www.graphcore.ai",
+      "tag": "芯片设计",
+      "ic": "🇬🇧",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "SambaNova",
+      "d": "企业级 AI 芯片与完整系统，创新的可重构数据流架构。",
+      "u": "https://sambanova.ai",
+      "tag": "数据集·企业级",
+      "ic": "🔥",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "华为海思",
+      "d": "中国头部芯片设计公司，麒麟与昇腾系列领跑 AI 推理。",
+      "u": "https://www.hisilicon.com",
+      "tag": "国产",
+      "ic": "🇨🇳",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "壁仞科技",
+      "d": "国产通用 GPU 创企，BR100 单芯片算力看齐国际旗舰水平。",
+      "u": "https://www.birentech.com",
+      "tag": "GPU",
+      "ic": "💎",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "燧原科技",
+      "d": "国产云端 AI 训练与推理芯片厂商，产品已规模商用。",
+      "u": "https://www.enflame-tech.com",
+      "tag": "国产·云服务",
+      "ic": "🔥",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Imagination",
+      "d": "英国 GPU IP 头部公司，PowerVR 架构授权苹果等大厂使用。",
+      "u": "https://www.imaginationtech.com",
+      "tag": "GPU",
+      "ic": "🇬🇧",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "昆仑芯",
+      "d": "百度旗下 AI 芯片公司，昆仑系列芯片大规模部署百度云。",
+      "u": "https://www.kunlunxin.com",
+      "tag": "大厂·国产",
+      "ic": "⛰️",
+      "cat": "infra",
+      "old_t": "芯片算力",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Neuralink",
+      "d": "马斯克创办的脑机接口公司，探索人脑与计算机的直接交互。",
+      "u": "https://neuralink.com",
+      "tag": "医疗",
+      "ic": "🧬",
+      "cat": "infra",
+      "old_t": "神经元芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Synchron",
+      "d": "血管内植入式脑机接口，微创方式实现神经信号的精准读取。",
+      "u": "https://synchron.com",
+      "tag": "医疗",
+      "ic": "🩸",
+      "cat": "infra",
+      "old_t": "神经元芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Blackrock Neurotech",
+      "d": "植入式脑机接口先驱，Utah 阵列已稳定临床使用多年。",
+      "u": "https://blackrockneurotech.com",
+      "tag": "医疗",
+      "ic": "⚡",
+      "cat": "infra",
+      "old_t": "神经元芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Lightmatter",
+      "d": "光子计算芯片先锋，用光代替电子实现超低功耗 AI 推理。",
+      "u": "https://lightmatter.co",
+      "tag": "芯片设计·边缘计算",
+      "ic": "💡",
+      "cat": "infra",
+      "old_t": "硅光芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Ayar Labs",
+      "d": "光互连技术领导者，用光速连接芯片间的海量数据传输。",
+      "u": "https://ayarlabs.com",
+      "tag": "芯片设计",
+      "ic": "🔗",
+      "cat": "infra",
+      "old_t": "硅光芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "曦智科技",
+      "d": "中国光子计算芯片先锋，光计算与光互连双轮驱动创新。",
+      "u": "https://www.lightelligence.io",
+      "tag": "国产·芯片设计",
+      "ic": "☀️",
+      "cat": "infra",
+      "old_t": "硅光芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "IBM Quantum",
+      "d": "IBM 量子计算平台，提供云端量子计算服务与开源 Qiskit SDK。",
+      "u": "https://www.ibm.com/quantum",
+      "tag": "量子计算·云服务",
+      "ic": "⚛️",
+      "cat": "infra",
+      "old_t": "量子计算",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Google Quantum AI",
+      "d": "Google 量子计算研究团队，目标构建有实用价值的量子计算机。",
+      "u": "https://quantumai.google",
+      "tag": "量子计算",
+      "ic": "🔬",
+      "cat": "infra",
+      "old_t": "量子计算",
+      "old_c": "silicon"
+    },
+    {
+      "n": "IonQ",
+      "d": "离子阱量子计算技术领导者，全球首家纯量子计算上市公司。",
+      "u": "https://ionq.com",
+      "tag": "量子计算",
+      "ic": "💫",
+      "cat": "infra",
+      "old_t": "量子计算",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Quantinuum",
+      "d": "Honeywell 量子计算部门与 CQC 合并，推出系统模型 H2。",
+      "u": "https://www.quantinuum.com",
+      "tag": "大厂",
+      "ic": "🛰️",
+      "cat": "infra",
+      "old_t": "量子计算",
+      "old_c": "silicon"
+    },
+    {
+      "n": "本源量子",
+      "d": "中国量子计算第一梯队企业，已发布超导量子计算机。",
+      "u": "https://www.originqc.com.cn",
+      "tag": "国产·量子计算",
+      "ic": "🇨🇳",
+      "cat": "infra",
+      "old_t": "量子计算",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Lambda Labs",
+      "d": "专注 AI 训练的 GPU 云服务商，提供 A100/H100 实例。",
+      "u": "https://lambdalabs.com",
+      "tag": "算力云·模型微调",
+      "ic": "☁️",
+      "cat": "infra",
+      "old_t": "算力云",
+      "old_c": "silicon"
+    },
+    {
+      "n": "CoreWeave",
+      "d": "NVIDIA 投资的 GPU 加速云服务商，专注大规模 AI 推理与训练。",
+      "u": "https://www.coreweave.com",
+      "tag": "算力云·社区",
+      "ic": "⚡",
+      "cat": "infra",
+      "old_t": "算力云",
+      "old_c": "silicon"
+    },
+    {
+      "n": "AutoDL",
+      "d": "国内流行的 GPU 租用平台，性价比极高按量灵活计费。",
+      "u": "https://www.autodl.com",
+      "tag": "算力云·国产",
+      "ic": "🖥️",
+      "cat": "infra",
+      "old_t": "算力云",
+      "old_c": "silicon"
+    },
+    {
+      "n": "RunPod",
+      "d": "按需 GPU 云平台，Serverless 推理服务即时弹性伸缩。",
+      "u": "https://www.runpod.io",
+      "tag": "云服务",
+      "ic": "🏃",
+      "cat": "infra",
+      "old_t": "算力云",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Paperspace",
+      "d": "DigitalOcean 旗下的 GPU 云计算平台，深度集成 Jupyter Notebook。",
+      "u": "https://www.paperspace.com",
+      "tag": "IDE·GPU",
+      "ic": "📓",
+      "cat": "infra",
+      "old_t": "算力云",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Vast.ai",
+      "d": "去中心化 GPU 租赁市场，全球算力资源共享低价灵活租用。",
+      "u": "https://vast.ai",
+      "tag": "Web3·基础设施",
+      "ic": "🌐",
+      "cat": "infra",
+      "old_t": "算力云",
+      "old_c": "silicon"
+    },
+    {
+      "n": "JarvisLabs",
+      "d": "印度 GPU 云服务商，提供极具性价比的 A6000 和 RTX 系列 GPU。",
+      "u": "https://jarvislabs.ai",
+      "tag": "GPU",
+      "ic": "🇮🇳",
+      "cat": "infra",
+      "old_t": "算力云",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Cadence",
+      "d": "全球电子设计自动化工具巨头，AI 芯片设计流程核心工具。",
+      "u": "https://www.cadence.com",
+      "tag": "芯片设计",
+      "ic": "⚙️",
+      "cat": "infra",
+      "old_t": "芯片设计 EDA",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Synopsys",
+      "d": "全球最大 EDA 与半导体 IP 供应商之一，AI 驱动 EDA 革新。",
+      "u": "https://www.synopsys.com",
+      "tag": "芯片设计",
+      "ic": "🔧",
+      "cat": "infra",
+      "old_t": "芯片设计 EDA",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Ansys",
+      "d": "多物理场仿真软件领导者，芯片电磁与散热仿真不可或缺。",
+      "u": "https://www.ansys.com",
+      "tag": "仿真",
+      "ic": "⚡",
+      "cat": "infra",
+      "old_t": "芯片设计 EDA",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Keysight",
+      "d": "测试与测量巨头，芯片设计与验证全流程解决方案提供商。",
+      "u": "https://www.keysight.com",
+      "tag": "芯片设计",
+      "ic": "📡",
+      "cat": "infra",
+      "old_t": "芯片设计 EDA",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Siemens EDA",
+      "d": "原 Mentor Graphics，西门子旗下 PCB 与 IC 设计全流程 EDA 方案。",
+      "u": "https://eda.sw.siemens.com",
+      "tag": "大厂·芯片设计",
+      "ic": "🔌",
+      "cat": "infra",
+      "old_t": "芯片设计 EDA",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Samsung Semiconductor",
+      "d": "全球最大存储芯片制造商，DRAM 与 NAND 闪存份额第一。",
+      "u": "https://semiconductor.samsung.com",
+      "tag": "存储",
+      "ic": "💾",
+      "cat": "infra",
+      "old_t": "存储芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "SK Hynix",
+      "d": "韩国存储芯片巨头，HBM 高带宽内存领跑 AI 时代需求。",
+      "u": "https://www.skhynix.com",
+      "tag": "存储",
+      "ic": "🇰🇷",
+      "cat": "infra",
+      "old_t": "存储芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Micron",
+      "d": "美国存储芯片巨头，全球第三大 DRAM 与 NAND 供应商。",
+      "u": "https://www.micron.com",
+      "tag": "存储",
+      "ic": "💿",
+      "cat": "infra",
+      "old_t": "存储芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Western Digital",
+      "d": "全球领先的数据存储解决方案商，HDD 与 SSD 产品线全面。",
+      "u": "https://www.westerndigital.com",
+      "tag": "存储",
+      "ic": "🖴",
+      "cat": "infra",
+      "old_t": "存储芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "长江存储 YMTC",
+      "d": "中国 3D NAND 闪存制造商，Xtacking 架构创新领先。",
+      "u": "https://www.ymtc.com",
+      "tag": "存储·国产",
+      "ic": "🇨🇳",
+      "cat": "infra",
+      "old_t": "存储芯片",
+      "old_c": "silicon"
+    },
+    {
+      "n": "ASML",
+      "d": "荷兰光刻机巨头，独家供应 EUV 极紫外光刻机给先进制程。",
+      "u": "https://www.asml.com",
+      "tag": "芯片设计",
+      "ic": "🇳🇱",
+      "cat": "infra",
+      "old_t": "半导体设备",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Applied Materials",
+      "d": "全球最大半导体设备制造商，覆盖沉积刻蚀注入全流程。",
+      "u": "https://www.appliedmaterials.com",
+      "tag": "工作流",
+      "ic": "🏭",
+      "cat": "infra",
+      "old_t": "半导体设备",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Lam Research",
+      "d": "刻蚀与沉积设备领导者，3D NAND 与先进逻辑制程核心供应商。",
+      "u": "https://www.lamresearch.com",
+      "tag": "芯片设计",
+      "ic": "⚡",
+      "cat": "infra",
+      "old_t": "半导体设备",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Tokyo Electron",
+      "d": "日本半导体设备巨头，涂胶显影与刻蚀设备市占率全球领先。",
+      "u": "https://www.tel.com",
+      "tag": "芯片设计",
+      "ic": "🇯🇵",
+      "cat": "infra",
+      "old_t": "半导体设备",
+      "old_c": "silicon"
+    },
+    {
+      "n": "中微半导体 AMEC",
+      "d": "中国刻蚀机与 MOCVD 龙头，等离子体刻蚀机进入 5nm 产线。",
+      "u": "https://www.amec-inc.com",
+      "tag": "芯片设计·国产",
+      "ic": "🇨🇳",
+      "cat": "infra",
+      "old_t": "半导体设备",
+      "old_c": "silicon"
+    },
+    {
+      "n": "SiFive",
+      "d": "RISC-V 处理器 IP 领先供应商，提供从 MCU 到高性能 CPU 方案。",
+      "u": "https://www.sifive.com",
+      "tag": "芯片设计",
+      "ic": "🔮",
+      "cat": "infra",
+      "old_t": "RISC-V 生态",
+      "old_c": "silicon"
+    },
+    {
+      "n": "RISC-V International",
+      "d": "RISC-V 指令集架构基金会，管理开放 ISA 标准与生态发展。",
+      "u": "https://riscv.org",
+      "tag": "芯片设计",
+      "ic": "🏛️",
+      "cat": "infra",
+      "old_t": "RISC-V 生态",
+      "old_c": "silicon"
+    },
+    {
+      "n": "赛昉科技 StarFive",
+      "d": "中国 RISC-V 处理器核心供应商，发力数据中心与 AI 芯片。",
+      "u": "https://www.starfivetech.com",
+      "tag": "芯片设计·国产",
+      "ic": "⭐",
+      "cat": "infra",
+      "old_t": "RISC-V 生态",
+      "old_c": "silicon"
+    },
+    {
+      "n": "芯来科技 Nuclei",
+      "d": "中国 RISC-V IP 供应商，覆盖 MCU 到应用处理器全产品线。",
+      "u": "https://www.nucleisys.com",
+      "tag": "芯片设计",
+      "ic": "🧬",
+      "cat": "infra",
+      "old_t": "RISC-V 生态",
+      "old_c": "silicon"
+    },
+    {
+      "n": "Esperanto",
+      "d": "RISC-V 架构 AI 加速芯片公司，千核低功耗 AI 推理芯片。",
+      "u": "https://www.esperanto.ai",
+      "tag": "GPU·算力云",
+      "ic": "🧠",
+      "cat": "infra",
+      "old_t": "RISC-V 生态",
+      "old_c": "silicon"
+    },
+    {
+      "n": "GitHub",
+      "d": "全球最大的代码托管与协作平台，开源社区的精神中心。",
+      "u": "https://github.com",
+      "tag": "编程助手·协作",
+      "ic": "🐙",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Vercel",
+      "d": "前端部署平台领导者，支持 Next.js 等现代框架一键全球部署。",
+      "u": "https://vercel.com",
+      "tag": "云服务·前端",
+      "ic": "▲",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Netlify",
+      "d": "流行的静态网站部署平台，提供 Serverless 边缘函数支持。",
+      "u": "https://www.netlify.com",
+      "tag": "云服务",
+      "ic": "🟣",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "DeepL",
+      "d": "目前最精准的 AI 翻译工具，高质量支持 30+ 语言互译。",
+      "u": "https://www.deepl.com",
+      "tag": "翻译",
+      "ic": "🌍",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Figma",
+      "d": "领先的 UI/UX 在线协作设计工具，产品设计行业事实标准。",
+      "u": "https://www.figma.com",
+      "tag": "设计·协作",
+      "ic": "🎯",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "CodePen",
+      "d": "在线前端代码编辑器与分享社区，快速调试展示代码创意。",
+      "u": "https://codepen.io",
+      "tag": "前端·仿真",
+      "ic": "✒️",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Kaggle",
+      "d": "全球最大的数据科学与机器学习竞赛平台，Google 子品牌。",
+      "u": "https://www.kaggle.com",
+      "tag": "数据集·评测",
+      "ic": "🏆",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "StackBlitz",
+      "d": "浏览器端全栈 Web 开发 IDE，基于 WebContainers 技术。",
+      "u": "https://stackblitz.com",
+      "tag": "IDE·前端",
+      "ic": "⚡",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Excalidraw",
+      "d": "开源白板手绘风格绘图协作工具，支持端到端加密。",
+      "u": "https://excalidraw.com",
+      "tag": "设计·办公",
+      "ic": "✏️",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Obsidian",
+      "d": "本地优先的知识管理工具，双向链接构建个人知识图谱。",
+      "u": "https://obsidian.md",
+      "tag": "办公·可视化",
+      "ic": "💎",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Raycast",
+      "d": "macOS 上的效率启动器，集成 AI 与海量插件扩展。",
+      "u": "https://www.raycast.com",
+      "tag": "办公",
+      "ic": "⚡",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Warp",
+      "d": "Rust 编写的下一代 AI 终端，智能补全与协作工作流。",
+      "u": "https://www.warp.dev",
+      "tag": "命令行",
+      "ic": "⬛",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Linear",
+      "d": "现代产品管理型任务追踪工具，性能极致的设计驱动。",
+      "u": "https://linear.app",
+      "tag": "办公",
+      "ic": "📐",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Postman",
+      "d": "全球最流行的 API 开发与测试平台，协作调试首选。",
+      "u": "https://www.postman.com",
+      "tag": "API",
+      "ic": "📮",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Docker",
+      "d": "容器化平台标准，彻底改变了应用的打包、分发与部署。",
+      "u": "https://www.docker.com",
+      "tag": "云服务",
+      "ic": "🐳",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Supabase",
+      "d": "开源的 Firebase 替代方案，提供数据库认证与实时订阅。",
+      "u": "https://supabase.com",
+      "tag": "云服务·开源",
+      "ic": "⚡",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Glitch",
+      "d": "社区驱动的在线协作编程平台，即时构建与分享 Web 应用。",
+      "u": "https://glitch.com",
+      "tag": "协作·社区",
+      "ic": "🐠",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Cloudflare",
+      "d": "全球领先的 CDN 与边缘计算平台，Workers 无服务器函数。",
+      "u": "https://www.cloudflare.com",
+      "tag": "云服务·边缘计算",
+      "ic": "☁️",
+      "cat": "tools",
+      "old_t": "后端服务",
+      "old_c": "tools"
+    },
+    {
+      "n": "AWS",
+      "d": "全球最大云服务商，提供 200+ 全功能基础设施服务。",
+      "u": "https://aws.amazon.com",
+      "tag": "云服务",
+      "ic": "🟧",
+      "cat": "tools",
+      "old_t": "后端服务",
+      "old_c": "tools"
+    },
+    {
+      "n": "Firebase",
+      "d": "Google 的全托管后端平台，实时数据库与认证一键集成。",
+      "u": "https://firebase.google.com",
+      "tag": "大厂·实时",
+      "ic": "🔥",
+      "cat": "tools",
+      "old_t": "后端服务",
+      "old_c": "tools"
+    },
+    {
+      "n": "PlanetScale",
+      "d": "基于 Vitess 的 MySQL 兼容 Serverless 数据库平台。",
+      "u": "https://planetscale.com",
+      "tag": "云服务",
+      "ic": "🪐",
+      "cat": "tools",
+      "old_t": "后端服务",
+      "old_c": "tools"
+    },
+    {
+      "n": "Neon",
+      "d": "Serverless PostgreSQL 数据库，分支式开发体验极佳。",
+      "u": "https://neon.tech",
+      "tag": "云服务",
+      "ic": "💡",
+      "cat": "tools",
+      "old_t": "后端服务",
+      "old_c": "tools"
+    },
+    {
+      "n": "Railway",
+      "d": "极简部署平台，从代码到运行只需一个命令极速上线。",
+      "u": "https://railway.app",
+      "tag": "云服务",
+      "ic": "🚂",
+      "cat": "tools",
+      "old_t": "后端服务",
+      "old_c": "tools"
+    },
+    {
+      "n": "Fly.io",
+      "d": "全球分布式应用部署平台，将容器部署到用户附近的边缘。",
+      "u": "https://fly.io",
+      "tag": "边缘计算·云服务",
+      "ic": "✈️",
+      "cat": "tools",
+      "old_t": "后端服务",
+      "old_c": "tools"
+    },
+    {
+      "n": "Render",
+      "d": "一体化云平台，部署 Web 服务、静态站点与数据库。",
+      "u": "https://render.com",
+      "tag": "云服务",
+      "ic": "🎨",
+      "cat": "tools",
+      "old_t": "后端服务",
+      "old_c": "tools"
+    },
+    {
+      "n": "Dribbble",
+      "d": "全球设计师作品展示与灵感社区，发现顶级设计创意。",
+      "u": "https://dribbble.com",
+      "tag": "社区",
+      "ic": "🏀",
+      "cat": "tools",
+      "old_t": "设计资源",
+      "old_c": "tools"
+    },
+    {
+      "n": "Behance",
+      "d": "Adobe 旗下设计作品展示平台，全球创意人才聚集地。",
+      "u": "https://www.behance.net",
+      "tag": "大厂·设计",
+      "ic": "🎨",
+      "cat": "tools",
+      "old_t": "设计资源",
+      "old_c": "tools"
+    },
+    {
+      "n": "Unsplash",
+      "d": "高质量免费图片素材库，摄影师社区驱动无版权使用。",
+      "u": "https://unsplash.com",
+      "tag": "图像生成·免费",
+      "ic": "📷",
+      "cat": "tools",
+      "old_t": "设计资源",
+      "old_c": "tools"
+    },
+    {
+      "n": "Pexels",
+      "d": "免费高质量图片与视频素材，个人和商业均可免版税使用。",
+      "u": "https://www.pexels.com",
+      "tag": "设计·音乐生成",
+      "ic": "🎬",
+      "cat": "tools",
+      "old_t": "设计资源",
+      "old_c": "tools"
+    },
+    {
+      "n": "Iconify",
+      "d": "统一的开源图标框架，聚合 200+ 图标集数十万 SVG。",
+      "u": "https://iconify.design",
+      "tag": "设计·前端",
+      "ic": "🔣",
+      "cat": "tools",
+      "old_t": "设计资源",
+      "old_c": "tools"
+    },
+    {
+      "n": "LottieFiles",
+      "d": "轻量级动画资源平台，SVG/Lottie 动画创作分享与嵌入。",
+      "u": "https://lottiefiles.com",
+      "tag": "视频生成·前端",
+      "ic": "✨",
+      "cat": "tools",
+      "old_t": "设计资源",
+      "old_c": "tools"
+    },
+    {
+      "n": "Datadog",
+      "d": "全栈可观测平台，基础设施到应用性能一体化监控。",
+      "u": "https://www.datadoghq.com",
+      "tag": "可观测",
+      "ic": "🐶",
+      "cat": "tools",
+      "old_t": "监控可观测",
+      "old_c": "tools"
+    },
+    {
+      "n": "Sentry",
+      "d": "实时错误追踪与性能监控，开发者排错的必备神器。",
+      "u": "https://sentry.io",
+      "tag": "可观测",
+      "ic": "🛡️",
+      "cat": "tools",
+      "old_t": "监控可观测",
+      "old_c": "tools"
+    },
+    {
+      "n": "Grafana",
+      "d": "开源数据可视化与分析平台，构建专业级监控仪表盘。",
+      "u": "https://grafana.com",
+      "tag": "可视化",
+      "ic": "📊",
+      "cat": "tools",
+      "old_t": "监控可观测",
+      "old_c": "tools"
+    },
+    {
+      "n": "New Relic",
+      "d": "全栈可观测性平台，从应用性能到基础设施统一观测。",
+      "u": "https://newrelic.com",
+      "tag": "可观测",
+      "ic": "📈",
+      "cat": "tools",
+      "old_t": "监控可观测",
+      "old_c": "tools"
+    },
+    {
+      "n": "LogRocket",
+      "d": "前端会话回放与性能监控，精准复现用户所见问题。",
+      "u": "https://logrocket.com",
+      "tag": "可观测·前端",
+      "ic": "🚀",
+      "cat": "tools",
+      "old_t": "监控可观测",
+      "old_c": "tools"
+    },
+    {
+      "n": "Hacker News",
+      "d": "Y Combinator 运营的科技与创业社区，极客聚集地。",
+      "u": "https://news.ycombinator.com",
+      "tag": "创业",
+      "ic": "🟠",
+      "cat": "community",
+      "old_t": "资讯社区",
+      "old_c": "tools"
+    },
+    {
+      "n": "Product Hunt",
+      "d": "新产品发现与评选平台，每日发现最新最热的科技产品。",
+      "u": "https://www.producthunt.com",
+      "tag": "社区·创业",
+      "ic": "🐱",
+      "cat": "community",
+      "old_t": "资讯社区",
+      "old_c": "tools"
+    },
+    {
+      "n": "Reddit r/MachineLearning",
+      "d": "Reddit 最大机器学习社区，交流前沿论文与技术讨论。",
+      "u": "https://www.reddit.com/r/MachineLearning",
+      "tag": "学术",
+      "ic": "🤖",
+      "cat": "community",
+      "old_t": "资讯社区",
+      "old_c": "tools"
+    },
+    {
+      "n": "Dev.to",
+      "d": "开发者技术博客与社区，分享编程经验与最佳实践。",
+      "u": "https://dev.to",
+      "tag": "资讯·社区",
+      "ic": "👩‍💻",
+      "cat": "community",
+      "old_t": "资讯社区",
+      "old_c": "tools"
+    },
+    {
+      "n": "Stack Overflow",
+      "d": "全球最大的编程问答社区，解决开发遇到的一切难题。",
+      "u": "https://stackoverflow.com",
+      "tag": "编程助手",
+      "ic": "🟧",
+      "cat": "community",
+      "old_t": "资讯社区",
+      "old_c": "tools"
+    },
+    {
+      "n": "D3.js",
+      "d": "数据驱动的文档操作库，灵活构建任意定制化图表。",
+      "u": "https://d3js.org",
+      "tag": "前端",
+      "ic": "📊",
+      "cat": "tools",
+      "old_t": "数据可视化",
+      "old_c": "tools"
+    },
+    {
+      "n": "Observable",
+      "d": "在线数据可视化与协作 Notebook 平台，D3 作者创立。",
+      "u": "https://observablehq.com",
+      "tag": "IDE·协作",
+      "ic": "📓",
+      "cat": "tools",
+      "old_t": "数据可视化",
+      "old_c": "tools"
+    },
+    {
+      "n": "ECharts",
+      "d": "百度开源的可视化图表库，丰富的交互式图表开箱即用。",
+      "u": "https://echarts.apache.org",
+      "tag": "国产",
+      "ic": "📈",
+      "cat": "tools",
+      "old_t": "数据可视化",
+      "old_c": "tools"
+    },
+    {
+      "n": "Plotly",
+      "d": "交互式科学图表库，支持 Python、R、JS 等多语言界面。",
+      "u": "https://plotly.com",
+      "tag": "科研·多语言",
+      "ic": "📉",
+      "cat": "tools",
+      "old_t": "数据可视化",
+      "old_c": "tools"
+    },
+    {
+      "n": "Chart.js",
+      "d": "简洁优雅的开源 HTML5 图表库，8 种基础图表易上手。",
+      "u": "https://www.chartjs.org",
+      "tag": "前端",
+      "ic": "🎯",
+      "cat": "tools",
+      "old_t": "数据可视化",
+      "old_c": "tools"
+    },
+    {
+      "n": "Namecheap",
+      "d": "高性价比域名注册商，提供域名、主机与安全证书服务。",
+      "u": "https://www.namecheap.com",
+      "tag": "云服务",
+      "ic": "🔖",
+      "cat": "tools",
+      "old_t": "域名托管",
+      "old_c": "tools"
+    },
+    {
+      "n": "Cloudflare Domains",
+      "d": "Cloudflare 域名注册，按成本价出售零加价保障隐私。",
+      "u": "https://www.cloudflare.com/products/registrar",
+      "tag": "安全",
+      "ic": "☁️",
+      "cat": "tools",
+      "old_t": "域名托管",
+      "old_c": "tools"
+    },
+    {
+      "n": "GitHub Pages",
+      "d": "从 GitHub 仓库直接托管的免费静态网站服务。",
+      "u": "https://pages.github.com",
+      "tag": "免费·前端",
+      "ic": "🐙",
+      "cat": "tools",
+      "old_t": "域名托管",
+      "old_c": "tools"
+    },
+    {
+      "n": "Vercel Domains",
+      "d": "Vercel 平台内置域名管理，SSL 自动续签一键部署。",
+      "u": "https://vercel.com/docs/domains",
+      "tag": "安全·工作流",
+      "ic": "▲",
+      "cat": "tools",
+      "old_t": "域名托管",
+      "old_c": "tools"
+    },
+    {
+      "n": "Porkbun",
+      "d": "趣味域名注册商，价格透明无隐藏费用，免费 WHOIS 隐私。",
+      "u": "https://porkbun.com",
+      "tag": "安全",
+      "ic": "🐷",
+      "cat": "tools",
+      "old_t": "域名托管",
+      "old_c": "tools"
+    },
+    {
+      "n": "Zapier",
+      "d": "全球最大的工作流自动化平台，连接 7000+ 应用零代码集成。",
+      "u": "https://zapier.com",
+      "tag": "工作流",
+      "ic": "⚡",
+      "cat": "tools",
+      "old_t": "低代码/无代码",
+      "old_c": "tools"
+    },
+    {
+      "n": "Make",
+      "d": "可视化自动化平台，灵活构建复杂多步骤集成工作流。",
+      "u": "https://www.make.com",
+      "tag": "可视化·工作流",
+      "ic": "🔧",
+      "cat": "tools",
+      "old_t": "低代码/无代码",
+      "old_c": "tools"
+    },
+    {
+      "n": "Airtable",
+      "d": "电子表格与数据库的完美结合，低代码构建业务应用。",
+      "u": "https://airtable.com",
+      "tag": "办公",
+      "ic": "🗃️",
+      "cat": "tools",
+      "old_t": "低代码/无代码",
+      "old_c": "tools"
+    },
+    {
+      "n": "Bubble",
+      "d": "功能强大的无代码 Web 应用构建平台，可视化编程。",
+      "u": "https://bubble.io",
+      "tag": "前端·可视化",
+      "ic": "🫧",
+      "cat": "tools",
+      "old_t": "低代码/无代码",
+      "old_c": "tools"
+    },
+    {
+      "n": "Retool",
+      "d": "企业级内部工具快速构建平台，拖拽组件直连数据库。",
+      "u": "https://retool.com",
+      "tag": "企业级",
+      "ic": "🛠️",
+      "cat": "tools",
+      "old_t": "低代码/无代码",
+      "old_c": "tools"
+    },
+    {
+      "n": "arXiv",
+      "d": "康奈尔大学运营的预印本论文平台，AI 前沿研究首选。",
+      "u": "https://arxiv.org",
+      "tag": "学术",
+      "ic": "📄",
+      "cat": "learn",
+      "old_t": "论文研究",
+      "old_c": "learn"
+    },
+    {
+      "n": "Papers With Code",
+      "d": "将论文与代码一一对应的平台，追踪 AI 技术最新进展。",
+      "u": "https://paperswithcode.com",
+      "tag": "学术·编程助手",
+      "ic": "📝",
+      "cat": "learn",
+      "old_t": "论文研究",
+      "old_c": "learn"
+    },
+    {
+      "n": "Semantic Scholar",
+      "d": "AI 驱动的学术文献搜索引擎，理解论文间引用与语义。",
+      "u": "https://www.semanticscholar.org",
+      "tag": "学术·搜索",
+      "ic": "🔬",
+      "cat": "learn",
+      "old_t": "论文研究",
+      "old_c": "learn"
+    },
+    {
+      "n": "Connected Papers",
+      "d": "以图谱形式可视化论文引用关系，轻松探索学术脉络。",
+      "u": "https://www.connectedpapers.com",
+      "tag": "可视化",
+      "ic": "🕸️",
+      "cat": "learn",
+      "old_t": "论文研究",
+      "old_c": "learn"
+    },
+    {
+      "n": "ResearchGate",
+      "d": "全球学术社交网络，研究者分享论文与同行在线交流。",
+      "u": "https://www.researchgate.net",
+      "tag": "社交·学术",
+      "ic": "🌍",
+      "cat": "learn",
+      "old_t": "论文研究",
+      "old_c": "learn"
+    },
+    {
+      "n": "Coursera",
+      "d": "全球顶级大学与企业的在线课程平台，提供专业证书与学位。",
+      "u": "https://www.coursera.org",
+      "tag": "课程·合规",
+      "ic": "🎓",
+      "cat": "learn",
+      "old_t": "在线课程",
+      "old_c": "learn"
+    },
+    {
+      "n": "edX",
+      "d": "哈佛与 MIT 创立的非营利慕课平台，海量免费大学课程。",
+      "u": "https://www.edx.org",
+      "tag": "课程·学术",
+      "ic": "🏛️",
+      "cat": "learn",
+      "old_t": "在线课程",
+      "old_c": "learn"
+    },
+    {
+      "n": "Udacity",
+      "d": "聚焦前沿技术的纳米学位平台，AI 与数据科学精品课程。",
+      "u": "https://www.udacity.com",
+      "tag": "课程",
+      "ic": "🎯",
+      "cat": "learn",
+      "old_t": "在线课程",
+      "old_c": "learn"
+    },
+    {
+      "n": "Fast.ai",
+      "d": "免费的深度学习实战课程，以应用为导向的教学理念。",
+      "u": "https://www.fast.ai",
+      "tag": "免费",
+      "ic": "⚡",
+      "cat": "learn",
+      "old_t": "在线课程",
+      "old_c": "learn"
+    },
+    {
+      "n": "DeepLearning.AI",
+      "d": "吴恩达创立的 AI 教育公司，体系化的深度学习专项课程。",
+      "u": "https://www.deeplearning.ai",
+      "tag": "课程·教育",
+      "ic": "🧠",
+      "cat": "learn",
+      "old_t": "在线课程",
+      "old_c": "learn"
+    },
+    {
+      "n": "LeetCode",
+      "d": "全球最流行的算法与编程面试练习平台，大厂求职必备。",
+      "u": "https://leetcode.com",
+      "tag": "教育",
+      "ic": "💻",
+      "cat": "learn",
+      "old_t": "练习平台",
+      "old_c": "learn"
+    },
+    {
+      "n": "Codecademy",
+      "d": "交互式编程学习平台，在浏览器中边学边写代码练习。",
+      "u": "https://www.codecademy.com",
+      "tag": "课程",
+      "ic": "🎓",
+      "cat": "learn",
+      "old_t": "练习平台",
+      "old_c": "learn"
+    },
+    {
+      "n": "HackerRank",
+      "d": "编程练习与招聘平台，企业技术面试题库与技能认证。",
+      "u": "https://www.hackerrank.com",
+      "tag": "教育·合规",
+      "ic": "🟢",
+      "cat": "learn",
+      "old_t": "练习平台",
+      "old_c": "learn"
+    },
+    {
+      "n": "Codewars",
+      "d": "社区驱动的编程挑战平台，以段位系统激励持续编码训练。",
+      "u": "https://www.codewars.com",
+      "tag": "评测",
+      "ic": "⚔️",
+      "cat": "learn",
+      "old_t": "练习平台",
+      "old_c": "learn"
+    },
+    {
+      "n": "Exercism",
+      "d": "免费开源编程练习平台，由人类导师免费审阅你的代码。",
+      "u": "https://exercism.org",
+      "tag": "开源·教育",
+      "ic": "🏋️",
+      "cat": "learn",
+      "old_t": "练习平台",
+      "old_c": "learn"
+    },
+    {
+      "n": "MIT OpenCourseWare",
+      "d": "MIT 所有课程资料的免费开放计划，知识无界共享。",
+      "u": "https://ocw.mit.edu",
+      "tag": "免费·课程",
+      "ic": "🏛️",
+      "cat": "learn",
+      "old_t": "开放资源",
+      "old_c": "learn"
+    },
+    {
+      "n": "Stanford Online",
+      "d": "斯坦福大学在线课程平台，AI 与 CS 课程世界顶级。",
+      "u": "https://online.stanford.edu",
+      "tag": "学术·教育",
+      "ic": "🌲",
+      "cat": "learn",
+      "old_t": "开放资源",
+      "old_c": "learn"
+    },
+    {
+      "n": "Khan Academy",
+      "d": "全球最大免费在线教育平台，科学数学到编程全覆盖。",
+      "u": "https://www.khanacademy.org",
+      "tag": "免费·课程",
+      "ic": "🦸",
+      "cat": "learn",
+      "old_t": "开放资源",
+      "old_c": "learn"
+    },
+    {
+      "n": "OpenStax",
+      "d": "Rice 大学运营的免费开放教科书平台，高质量大学教材。",
+      "u": "https://openstax.org",
+      "tag": "课程·免费",
+      "ic": "📚",
+      "cat": "learn",
+      "old_t": "开放资源",
+      "old_c": "learn"
+    },
+    {
+      "n": "3Blue1Brown",
+      "d": "用精美动画直观讲解数学与 AI 核心概念的 YouTube 频道。",
+      "u": "https://www.3blue1brown.com",
+      "tag": "科研·可视化",
+      "ic": "🧮",
+      "cat": "learn",
+      "old_t": "开放资源",
+      "old_c": "learn"
+    },
+    {
+      "n": "Learn Prompting",
+      "d": "免费的提示工程入门教材，系统学习如何高效驾驭 AI。",
+      "u": "https://learnprompting.org",
+      "tag": "免费",
+      "ic": "📖",
+      "cat": "learn",
+      "old_t": "提示工程",
+      "old_c": "learn"
+    },
+    {
+      "n": "Prompting Guide",
+      "d": "DAIR.AI 维护的提示工程综合指南与研究论文整理。",
+      "u": "https://www.promptingguide.ai",
+      "tag": "学术",
+      "ic": "🧭",
+      "cat": "learn",
+      "old_t": "提示工程",
+      "old_c": "learn"
+    },
+    {
+      "n": "Anthropic Prompt Library",
+      "d": "Anthropic 官方提示词库，精选各行各业高效 Prompt 模板。",
+      "u": "https://docs.anthropic.com/prompt-library",
+      "tag": "大厂·设计",
+      "ic": "📚",
+      "cat": "learn",
+      "old_t": "提示工程",
+      "old_c": "learn"
+    },
+    {
+      "n": "OpenAI Cookbook",
+      "d": "OpenAI API 官方代码示例库，覆盖常见场景最佳实践。",
+      "u": "https://cookbook.openai.com",
+      "tag": "大厂·编程助手",
+      "ic": "👨‍🍳",
+      "cat": "learn",
+      "old_t": "提示工程",
+      "old_c": "learn"
+    },
+    {
+      "n": "FlowGPT",
+      "d": "全球最大的 AI Prompt 社区，数百万用户分享创作 Prompt。",
+      "u": "https://flowgpt.com",
+      "tag": "社区",
+      "ic": "🌟",
+      "cat": "learn",
+      "old_t": "提示工程",
+      "old_c": "learn"
+    },
+    {
+      "n": "MIT Technology Review",
+      "d": "MIT 旗下权威科技媒体，深度报道 AI 与前沿科技动态。",
+      "u": "https://www.technologyreview.com",
+      "tag": "资讯·学术",
+      "ic": "🏛️",
+      "cat": "community",
+      "old_t": "AI资讯",
+      "old_c": "learn"
+    },
+    {
+      "n": "The Verge AI",
+      "d": "The Verge AI 频道，用通俗语言解读最新 AI 技术趋势。",
+      "u": "https://www.theverge.com/ai-artificial-intelligence",
+      "tag": "资讯",
+      "ic": "🔺",
+      "cat": "community",
+      "old_t": "AI资讯",
+      "old_c": "learn"
+    },
+    {
+      "n": "VentureBeat AI",
+      "d": "聚焦 AI 产业与创业的科技媒体，深度技术商业报道。",
+      "u": "https://venturebeat.com/category/ai",
+      "tag": "创业",
+      "ic": "💼",
+      "cat": "community",
+      "old_t": "AI资讯",
+      "old_c": "learn"
+    },
+    {
+      "n": "TechCrunch AI",
+      "d": "TechCrunch AI 频道，追踪全球 AI 创投与企业动态。",
+      "u": "https://techcrunch.com/category/artificial-intelligence",
+      "tag": "创业·企业级",
+      "ic": "📰",
+      "cat": "community",
+      "old_t": "AI资讯",
+      "old_c": "learn"
+    },
+    {
+      "n": "Analytics India Magazine",
+      "d": "印度最大的 AI 数据科学媒体，覆盖亚洲 AI 行业趋势。",
+      "u": "https://analyticsindiamag.com",
+      "tag": "数据集",
+      "ic": "🇮🇳",
+      "cat": "community",
+      "old_t": "AI资讯",
+      "old_c": "learn"
+    },
+    {
+      "n": "Google DeepMind",
+      "d": "全球顶尖 AI 研究实验室，AlphaGo 与 AlphaFold 缔造者。",
+      "u": "https://deepmind.google",
+      "tag": "大厂",
+      "ic": "🧠",
+      "cat": "community",
+      "old_t": "AI实验室",
+      "old_c": "learn"
+    },
+    {
+      "n": "OpenAI Research",
+      "d": "OpenAI 研究主页，探索 AGI 前沿发布 GPT 系列技术。",
+      "u": "https://openai.com/research",
+      "tag": "学术·大厂",
+      "ic": "🏢",
+      "cat": "community",
+      "old_t": "AI实验室",
+      "old_c": "learn"
+    },
+    {
+      "n": "Meta AI Research",
+      "d": "Meta 人工智能研究中心，前沿研究覆盖基础模型与多模态。",
+      "u": "https://ai.meta.com/research",
+      "tag": "大厂",
+      "ic": "🅵",
+      "cat": "community",
+      "old_t": "AI实验室",
+      "old_c": "learn"
+    },
+    {
+      "n": "Anthropic Research",
+      "d": "Anthropic 安全研究方向，专注于可控可信的 AI 系统。",
+      "u": "https://www.anthropic.com/research",
+      "tag": "安全",
+      "ic": "🔒",
+      "cat": "community",
+      "old_t": "AI实验室",
+      "old_c": "learn"
+    },
+    {
+      "n": "NVIDIA Research",
+      "d": "NVIDIA 研究院，推动 GPU 计算与生成式 AI 技术前沿。",
+      "u": "https://research.nvidia.com",
+      "tag": "GPU",
+      "ic": "🟢",
+      "cat": "community",
+      "old_t": "AI实验室",
+      "old_c": "learn"
+    },
+    {
+      "n": "Common Crawl",
+      "d": "海量互联网爬虫数据的非营利开放数据集，训练大模型基石。",
+      "u": "https://commoncrawl.org",
+      "tag": "数据集",
+      "ic": "🌐",
+      "cat": "learn",
+      "old_t": "开源数据集",
+      "old_c": "learn"
+    },
+    {
+      "n": "Hugging Face Datasets",
+      "d": "Hugging Face 开放数据集社区，数万个 NLP/CV/语音数据集。",
+      "u": "https://huggingface.co/datasets",
+      "tag": "社区",
+      "ic": "🤗",
+      "cat": "learn",
+      "old_t": "开源数据集",
+      "old_c": "learn"
+    },
+    {
+      "n": "Google Dataset Search",
+      "d": "Google 数据集搜索引擎，跨领域搜索海量开放数据。",
+      "u": "https://datasetsearch.research.google.com",
+      "tag": "大厂·搜索",
+      "ic": "🔍",
+      "cat": "learn",
+      "old_t": "开源数据集",
+      "old_c": "learn"
+    },
+    {
+      "n": "ImageNet",
+      "d": "计算机视觉领域的基准图像数据库，奠定深度学习革命。",
+      "u": "https://www.image-net.org",
+      "tag": "评测",
+      "ic": "🖼️",
+      "cat": "learn",
+      "old_t": "开源数据集",
+      "old_c": "learn"
+    },
+    {
+      "n": "OpenStreetMap",
+      "d": "维基百科式开源世界地图，免费的地理空间数据宝库。",
+      "u": "https://www.openstreetmap.org",
+      "tag": "开源",
+      "ic": "🗺️",
+      "cat": "learn",
+      "old_t": "开源数据集",
+      "old_c": "learn"
+    },
+    {
+      "n": "Hugging Face Forums",
+      "d": "Hugging Face 官方论坛，AI 开发者交流技术讨论的首选。",
+      "u": "https://discuss.huggingface.co",
+      "tag": "社区",
+      "ic": "🤗",
+      "cat": "community",
+      "old_t": "AI社区",
+      "old_c": "learn"
+    },
+    {
+      "n": "AI Alignment Forum",
+      "d": "AI 对齐与安全领域的专业讨论社区，深度技术对话。",
+      "u": "https://www.alignmentforum.org",
+      "tag": "安全",
+      "ic": "🛡️",
+      "cat": "community",
+      "old_t": "AI社区",
+      "old_c": "learn"
+    },
+    {
+      "n": "EleutherAI Discord",
+      "d": "EleutherAI 开源 AI 社区，聚集志愿研究者推动民主化。",
+      "u": "https://www.eleuther.ai",
+      "tag": "开源",
+      "ic": "🔓",
+      "cat": "community",
+      "old_t": "AI社区",
+      "old_c": "learn"
+    },
+    {
+      "n": "智源社区",
+      "d": "北京智源人工智能研究院社区，中国 AI 学术交流高地。",
+      "u": "https://hub.baai.ac.cn",
+      "tag": "学术·国产",
+      "ic": "🇨🇳",
+      "cat": "community",
+      "old_t": "AI社区",
+      "old_c": "learn"
+    },
+    {
+      "n": "OpenAI Developer Forum",
+      "d": "OpenAI 官方开发者社区，交流 API 使用与最佳实践。",
+      "u": "https://community.openai.com",
+      "tag": "大厂·社区",
+      "ic": "💬",
+      "cat": "community",
+      "old_t": "AI社区",
+      "old_c": "learn"
+    },
+    {
+      "n": "Rust",
+      "d": "系统编程语言，零开销抽象与内存安全，正在重塑底层生态。",
+      "u": "https://www.rust-lang.org",
+      "tag": "安全",
+      "ic": "🦀",
+      "cat": "learn",
+      "old_t": "编程语言",
+      "old_c": "learn"
+    },
+    {
+      "n": "Python",
+      "d": "人工智能与数据科学第一语言，生态极度丰富易学易用。",
+      "u": "https://www.python.org",
+      "tag": "数据集",
+      "ic": "🐍",
+      "cat": "learn",
+      "old_t": "编程语言",
+      "old_c": "learn"
+    },
+    {
+      "n": "TypeScript",
+      "d": "JavaScript 的超集，类型系统赋予前端工程级开发体验。",
+      "u": "https://www.typescriptlang.org",
+      "tag": "前端",
+      "ic": "🔷",
+      "cat": "learn",
+      "old_t": "编程语言",
+      "old_c": "learn"
+    },
+    {
+      "n": "Go",
+      "d": "Google 推出的高效并发语言，云原生基础设施开发标配。",
+      "u": "https://go.dev",
+      "tag": "云服务",
+      "ic": "🐹",
+      "cat": "learn",
+      "old_t": "编程语言",
+      "old_c": "learn"
+    },
+    {
+      "n": "Swift",
+      "d": "Apple 生态的主力开发语言，iOS 与 AI 端侧推理首选。",
+      "u": "https://www.swift.org",
+      "tag": "大厂·本地部署",
+      "ic": "🍎",
+      "cat": "learn",
+      "old_t": "编程语言",
+      "old_c": "learn"
+    },
+    {
+      "n": "Deep Learning Book",
+      "d": "Ian Goodfellow 等著的深度学习圣经，理论基础就此一本。",
+      "u": "https://www.deeplearningbook.org",
+      "tag": "课程·学术",
+      "ic": "📘",
+      "cat": "learn",
+      "old_t": "AI书籍",
+      "old_c": "learn"
+    },
+    {
+      "n": "d2l.ai",
+      "d": "李沐等人编写互动式深度学习教材，代码驱动的在线学习。",
+      "u": "https://d2l.ai",
+      "tag": "课程·编程助手",
+      "ic": "📗",
+      "cat": "learn",
+      "old_t": "AI书籍",
+      "old_c": "learn"
+    },
+    {
+      "n": "Pattern Recognition and Machine Learning",
+      "d": "Christopher Bishop 的 PRML 经典，贝叶斯机器学习奠基。",
+      "u": "https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning",
+      "tag": "科研",
+      "ic": "📙",
+      "cat": "learn",
+      "old_t": "AI书籍",
+      "old_c": "learn"
+    },
+    {
+      "n": "Reinforcement Learning: An Introduction",
+      "d": "Sutton & Barto 所著的强化学习入门圣经，领域奠基之作。",
+      "u": "https://incompleteideas.net/book/the-book.html",
+      "tag": "课程·学术",
+      "ic": "🎮",
+      "cat": "learn",
+      "old_t": "AI书籍",
+      "old_c": "learn"
+    },
+    {
+      "n": "The Elements of Statistical Learning",
+      "d": "Trevor Hastie 著统计学习理论经典，理解机器学习理论基础。",
+      "u": "https://hastie.su.domains/ElemStatLearn",
+      "tag": "科研",
+      "ic": "📕",
+      "cat": "learn",
+      "old_t": "AI书籍",
+      "old_c": "learn"
+    },
+    {
+      "n": "Lex Fridman Podcast",
+      "d": "MIT 研究员 Lex Fridman 深度对话 AI 科学家与哲学家的播客。",
+      "u": "https://lexfridman.com/podcast",
+      "tag": "播客",
+      "ic": "🎙️",
+      "cat": "community",
+      "old_t": "播客",
+      "old_c": "learn"
+    },
+    {
+      "n": "Machine Learning Street Talk",
+      "d": "横扫 AI 学术前沿的对话播客，深度剖析最新论文与方法。",
+      "u": "https://www.youtube.com/@MachineLearningStreetTalk",
+      "tag": "学术",
+      "ic": "🎧",
+      "cat": "community",
+      "old_t": "播客",
+      "old_c": "learn"
+    },
+    {
+      "n": "Practical AI",
+      "d": "Changelog 旗下 AI 实用播客，关注 AI 产品化与工程实践。",
+      "u": "https://changelog.com/practicalai",
+      "tag": "播客",
+      "ic": "🛠️",
+      "cat": "community",
+      "old_t": "播客",
+      "old_c": "learn"
+    },
+    {
+      "n": "Data Skeptic",
+      "d": "以怀疑论视角看数据科学前沿，通俗解读机器学习与统计。",
+      "u": "https://dataskeptic.com",
+      "tag": "教育·数据集",
+      "ic": "🔍",
+      "cat": "community",
+      "old_t": "播客",
+      "old_c": "learn"
+    },
+    {
+      "n": "This Week in Startups",
+      "d": "Jason Calacanis 主持，每周邀请顶尖科技创业者深度对话。",
+      "u": "https://www.youtube.com/@ThisWeekInStartups",
+      "tag": "创业",
+      "ic": "🎯",
+      "cat": "community",
+      "old_t": "播客",
+      "old_c": "learn"
+    },
+    {
+      "n": "PromptBase",
+      "d": "AI 提示词交易市场，购买和出售高质量 Midjourney/DALL-E Prompt。",
+      "u": "https://promptbase.com",
+      "tag": "链上数据·交易",
+      "ic": "💼",
+      "cat": "llm",
+      "old_t": "AI提示词市场",
+      "old_c": "ai"
+    },
+    {
+      "n": "PromptHero",
+      "d": "最流行的 AI 图像 Prompt 搜索引擎，发现优秀提示词与作品。",
+      "u": "https://prompthero.com",
+      "tag": "搜索·图像生成",
+      "ic": "🏆",
+      "cat": "llm",
+      "old_t": "AI提示词市场",
+      "old_c": "ai"
+    },
+    {
+      "n": "Artbreeder",
+      "d": "AI 图像融合与基因编辑创作平台，通过混合图像创造新视觉。",
+      "u": "https://www.artbreeder.com",
+      "tag": "图像生成",
+      "ic": "🧬",
+      "cat": "llm",
+      "old_t": "AI提示词市场",
+      "old_c": "ai"
+    },
+    {
+      "n": "PromptFolder",
+      "d": "提示词管理工具，保存、组织与分享你的最佳 AI Prompt。",
+      "u": "https://promptfolder.com",
+      "tag": "社区",
+      "ic": "📁",
+      "cat": "llm",
+      "old_t": "AI提示词市场",
+      "old_c": "ai"
+    },
+    {
+      "n": "ChatGPT Prompt Plus",
+      "d": "浏览器扩展一键保存和复用最常用的 ChatGPT 提示词模板。",
+      "u": "https://www.aiprm.com",
+      "tag": "设计",
+      "ic": "🔖",
+      "cat": "llm",
+      "old_t": "AI提示词市场",
+      "old_c": "ai"
+    },
+    {
+      "n": "CertiK",
+      "d": "全球领先的 Web3 智能合约安全审计公司，守护百亿美元资产。",
+      "u": "https://www.certik.com",
+      "tag": "合规",
+      "ic": "🛡️",
+      "cat": "tools",
+      "old_t": "安全审计",
+      "old_c": "tools"
+    },
+    {
+      "n": "OpenZeppelin",
+      "d": "开源智能合约安全框架，提供审计服务和标准化合约库。",
+      "u": "https://www.openzeppelin.com",
+      "tag": "合规",
+      "ic": "🔐",
+      "cat": "tools",
+      "old_t": "安全审计",
+      "old_c": "tools"
+    },
+    {
+      "n": "Trail of Bits",
+      "d": "顶尖信息安全研究公司，专注区块链与应用安全深度审计。",
+      "u": "https://www.trailofbits.com",
+      "tag": "安全·学术",
+      "ic": "🔍",
+      "cat": "tools",
+      "old_t": "安全审计",
+      "old_c": "tools"
+    },
+    {
+      "n": "Quantstamp",
+      "d": "智能合约安全审计与区块链安全服务，保护去中心化应用。",
+      "u": "https://quantstamp.com",
+      "tag": "合规·Web3",
+      "ic": "⚡",
+      "cat": "tools",
+      "old_t": "安全审计",
+      "old_c": "tools"
+    },
+    {
+      "n": "慢雾科技 SlowMist",
+      "d": "中国领先区块链安全公司，发现并防护大量严重漏洞。",
+      "u": "https://www.slowmist.com",
+      "tag": "国产·安全",
+      "ic": "🇨🇳",
+      "cat": "tools",
+      "old_t": "安全审计",
+      "old_c": "tools"
+    },
+    {
+      "n": "VS Code",
+      "d": "微软开源代码编辑器，最受开发者欢迎的轻量级 IDE 应用。",
+      "u": "https://code.visualstudio.com",
+      "tag": "IDE·开源",
+      "ic": "🔵",
+      "cat": "tools",
+      "old_t": "桌面工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Sublime Text",
+      "d": "极速跨平台高级文本编辑器，启动快如闪电支持海量插件。",
+      "u": "https://www.sublimetext.com",
+      "tag": "高性能",
+      "ic": "🟠",
+      "cat": "tools",
+      "old_t": "桌面工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "iTerm2",
+      "d": "macOS 终极终端模拟器，分屏与快捷键大幅提升命令行效率。",
+      "u": "https://iterm2.com",
+      "tag": "命令行",
+      "ic": "🖥️",
+      "cat": "tools",
+      "old_t": "桌面工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Alacritty",
+      "d": "GPU 加速跨平台终端模拟器，性能极致的 Rust 编写之美。",
+      "u": "https://alacritty.org",
+      "tag": "GPU",
+      "ic": "⚡",
+      "cat": "tools",
+      "old_t": "桌面工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Bruno",
+      "d": "开源离线 API 测试客户端，轻量替代 Postman 数据本地存储。",
+      "u": "https://www.usebruno.com",
+      "tag": "API·本地部署",
+      "ic": "🧪",
+      "cat": "tools",
+      "old_t": "桌面工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Kong",
+      "d": "全球最流行的开源 API 网关，管理保护与监控微服务 API。",
+      "u": "https://konghq.com",
+      "tag": "API·云服务",
+      "ic": "🦍",
+      "cat": "tools",
+      "old_t": "API 网关",
+      "old_c": "tools"
+    },
+    {
+      "n": "Apigee",
+      "d": "Google Cloud 旗下的企业级 API 管理平台，全生命周期 API 治理。",
+      "u": "https://cloud.google.com/apigee",
+      "tag": "大厂·企业级",
+      "ic": "🔗",
+      "cat": "tools",
+      "old_t": "API 网关",
+      "old_c": "tools"
+    },
+    {
+      "n": "Tyk",
+      "d": "开源 API 网关与管理平台，高性能轻量级部署灵活可扩展。",
+      "u": "https://tyk.io",
+      "tag": "开源·高性能",
+      "ic": "⚡",
+      "cat": "tools",
+      "old_t": "API 网关",
+      "old_c": "tools"
+    },
+    {
+      "n": "AWS API Gateway",
+      "d": "AWS 全托管 API 管理服务，与 Lambda 等无服务器服务深度集成。",
+      "u": "https://aws.amazon.com/api-gateway",
+      "tag": "大厂·云服务",
+      "ic": "☁️",
+      "cat": "tools",
+      "old_t": "API 网关",
+      "old_c": "tools"
+    },
+    {
+      "n": "Zuplo",
+      "d": "API 网关即服务，内置速率限制与身份验证快速部署 API。",
+      "u": "https://zuplo.com",
+      "tag": "合规",
+      "ic": "🛡️",
+      "cat": "tools",
+      "old_t": "API 网关",
+      "old_c": "tools"
+    },
+    {
+      "n": "Alfred",
+      "d": "macOS 效率神器，应用程序启动器与自动化工作流引擎。",
+      "u": "https://www.alfredapp.com",
+      "tag": "工作流",
+      "ic": "🎩",
+      "cat": "tools",
+      "old_t": "效率工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Rectangle",
+      "d": "macOS 免费窗口管理工具，用快捷键快速分屏排列应用窗口。",
+      "u": "https://rectangleapp.com",
+      "tag": "免费",
+      "ic": "🪟",
+      "cat": "tools",
+      "old_t": "效率工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "AltTab",
+      "d": "macOS 窗口切换增强器，Windows 风格 Alt+Tab 更高效切换。",
+      "u": "https://alt-tab-macos.netlify.app",
+      "tag": "免费",
+      "ic": "🔄",
+      "cat": "tools",
+      "old_t": "效率工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "1Password",
+      "d": "行业领先的密码管理与团队安全平台，自动填充与安全共享。",
+      "u": "https://1password.com",
+      "tag": "安全",
+      "ic": "🔑",
+      "cat": "tools",
+      "old_t": "效率工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Bitwarden",
+      "d": "开源免费跨平台密码管理器，端到端加密自托管灵活部署。",
+      "u": "https://bitwarden.com",
+      "tag": "开源·本地部署",
+      "ic": "🔓",
+      "cat": "tools",
+      "old_t": "效率工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Zig",
+      "d": "新兴系统编程语言，与 C 深度互操作挑战 C 语言生态主导地位。",
+      "u": "https://ziglang.org",
+      "tag": "跨链",
+      "ic": "⚡",
+      "cat": "learn",
+      "old_t": "编程语言",
+      "old_c": "learn"
+    },
+    {
+      "n": "Julia",
+      "d": "高性能科学计算语言，兼顾 Python 易用与 C 速度完美平衡。",
+      "u": "https://julialang.org",
+      "tag": "科研·高性能",
+      "ic": "🔮",
+      "cat": "learn",
+      "old_t": "编程语言",
+      "old_c": "learn"
+    },
+    {
+      "n": "Mojo",
+      "d": "为 AI 计算的 Python 超集语言，高达 Python 35000 倍提速潜力。",
+      "u": "https://www.modular.com/mojo",
+      "tag": "高性能",
+      "ic": "🔥",
+      "cat": "learn",
+      "old_t": "编程语言",
+      "old_c": "learn"
+    },
+    {
+      "n": "Festo Bionic",
+      "d": "德国 Festo 仿生学习网络，以变色龙袋鼠等仿生机器人启发行业。",
+      "u": "https://www.festo.com/bionic",
+      "tag": "仿生·无人机",
+      "ic": "🦎",
+      "cat": "robot",
+      "old_t": "仿生机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Soft Robotics",
+      "d": "软体机器人抓手公司，柔性夹持适应不规则物体实现自适应抓取。",
+      "u": "https://www.softroboticsinc.com",
+      "tag": "机械臂",
+      "ic": "🐙",
+      "cat": "robot",
+      "old_t": "仿生机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Piaggio Fast Forward",
+      "d": "摩托巨头比亚乔旗下机器人公司，跟随式货运机器人 Gita。",
+      "u": "https://www.piaggiofastforward.com",
+      "tag": "物流",
+      "ic": "🤖",
+      "cat": "robot",
+      "old_t": "仿生机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Open Bionics",
+      "d": "英国轻量仿生义肢公司，Hero Arm 是首获医疗认证的 3D 打印。",
+      "u": "https://openbionics.com",
+      "tag": "医疗",
+      "ic": "🦾",
+      "cat": "robot",
+      "old_t": "仿生机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "RoboBees",
+      "d": "哈佛微机器人实验室研制的微型飞行机器人，仿蜜蜂群智能。",
+      "u": "https://wyss.harvard.edu/technology/robobees",
+      "tag": "无人机",
+      "ic": "🐝",
+      "cat": "robot",
+      "old_t": "仿生机器人",
+      "old_c": "robot"
+    },
+    {
+      "n": "Notion",
+      "d": "全能型笔记与知识管理工具，集成 AI 写作辅助强大功能。",
+      "u": "https://www.notion.so",
+      "tag": "办公",
+      "ic": "📝",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Agent 图谱",
+      "d": "52 个 AI agent 对象分三层对比——自己跑的成品 agent（Cursor、Claude Code、Copilot、Windsurf、Zed、Cline、Aider、Codex CLI 等）、自己搭的运行时与 SDK、MCP 工具（filesystem、git、memory、fetch、playwright 等），每条判断挂官方源，不给总分排名。",
+      "u": "https://agent.specul.com",
+      "tag": "IDE·命令行·Agent",
+      "ic": "📊",
+      "cat": "app",
+      "old_t": "投机取巧",
+      "old_c": "ai"
+    },
+    {
+      "n": "three.js",
+      "d": "成熟的开源 JavaScript 3D 库，WebGL / WebGPU 双后端，适合网页 3D 与可视化。",
+      "u": "https://threejs.org",
+      "tag": "3D生成·开源",
+      "ic": "🔺",
+      "cat": "ext",
+      "old_t": "游戏开发",
+      "old_c": "game"
+    },
+    {
+      "n": "Rapier",
+      "d": "Rust 编写的物理引擎 WASM 版，提供碰撞与刚体模拟，性能稳定。",
+      "u": "https://rapier.rs",
+      "tag": "科研",
+      "ic": "⚙️",
+      "cat": "ext",
+      "old_t": "游戏开发",
+      "old_c": "game"
+    },
+    {
+      "n": "Babylon.js",
+      "d": "成熟的 Web 3D 引擎，适合对照选型的开源方案。",
+      "u": "https://www.babylonjs.com",
+      "tag": "前端",
+      "ic": "🏛️",
+      "cat": "ext",
+      "old_t": "游戏开发",
+      "old_c": "game"
+    },
+    {
+      "n": "PlayCanvas",
+      "d": "开源 WebGL 游戏引擎与编辑器，偏移动端与协作。",
+      "u": "https://playcanvas.com",
+      "tag": "游戏·前端",
+      "ic": "🎮",
+      "cat": "ext",
+      "old_t": "游戏开发",
+      "old_c": "game"
+    },
+    {
+      "n": "Phaser",
+      "d": "最流行的 HTML5 2D 游戏框架，适合对照选型的轻量 2D 方案。",
+      "u": "https://phaser.io",
+      "tag": "前端",
+      "ic": "👾",
+      "cat": "ext",
+      "old_t": "游戏开发",
+      "old_c": "game"
+    }
+  ]
+}
