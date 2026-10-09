@@ -1,0 +1,33 @@
+# 硅基导航（ai-sites-directory）
+
+> AI 相关网站都在哪、各是干什么的。
+
+按 12 个分类组织的 AI 网站目录；`ext`（延伸领域）分类**不上站**。每条给出官网、一句话描述、标签（封闭词表）与可达性状态。
+
+## 规模（由数据算出，见 `scripts/` 的构建脚本与 `_audit/gen-repo-docs.mjs`）
+
+711 条条目 / 12 个分类（其中 ext 184 条不上站，线上为 527 条 / 11 类），标签词表 92 个。
+
+## 内容地图
+
+- `nav-data.json` — **唯一真相源**：条目 + 分类
+- `tags.en.json` — 标签词表（封闭枚举）+ 英文
+- `descriptions.en.json` — 条目英文描述（键 = 条目名）
+- `check-results.json` — 外链可达性结果（`check-links.mjs` 生成）
+- `content/*.md` — 分类页文案
+
+## 不做什么
+
+- 不收没有官网的条目
+- 不写营销话术（`d` 必须能从那家官网自证）
+- 不放过期链接：`retired` 条目渲染成不可点状态
+
+## 规范与校验
+
+- 字段规范：`SCHEMA.md`
+- 校验器：`validate.mjs（本仓无 scripts/，脚本都在仓根）`（不合规直接失败退出）
+
+
+## 站点
+
+https://nav.specul.com/
