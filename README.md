@@ -1,5 +1,7 @@
 # ai-sites-directory
 
+> English version: [README.en.md](./README.en.md)
+
 硅基导航的**源仓**（唯一真相源）。
 
 > ⚠ **本仓不再直接发布站点。**
