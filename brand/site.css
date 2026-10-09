@@ -1,0 +1,511 @@
+/* ==========================================================================
+   三站（IDE / CLI / MCP）内容层样式
+   --------------------------------------------------------------------------
+   基调全部来自 brand.css（v2 设计系统），这里只做两件事：
+     1. 旧类名映射到新原语（保证 build.mjs 不用大改）
+     2. 图谱站特有的结构（对象网格 / 对比表 / 维度表）
+   原则：内容层不定义字号、颜色、间距——那些只看 brand.css。
+   ========================================================================== */
+
+/* ── 旧类名 → 新设计系统的桥接 ────────────────────────────────────────── */
+.hero {
+  /* 2026-10-03：原--sp-7(80) 0 --sp-6(52) → 留白实测 80/52，
+     与 www(40) / models(32) 不同档。改用 --section-pad 体系，全站同一节奏。 */
+  padding: calc(var(--section-pad) * 2) 0 var(--section-pad);
+  border-bottom: 0;
+}
+.kicker {
+  display: flex; align-items: center; gap: var(--sp-2);
+  font-size: var(--fs-micro); font-weight: 600; letter-spacing: .14em;
+  color: var(--ink-faint); margin: 0 0 var(--sp-3);
+}
+.kicker::before {
+  content: ""; width: 14px; height: 2px; border-radius:var(--r-xs);
+  background: var(--accent, var(--brand)); flex-shrink: 0;
+}
+h1 {
+  font-size: var(--fs-3xl); line-height: var(--lh-tight);
+  font-weight: 800; letter-spacing: -.035em; margin: 0 0 var(--sp-4);
+}
+.lede {
+  color: var(--ink-mid); font-size: 17px; line-height: 1.72;
+  max-width: 60ch; margin: 0;
+}
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-5);
+  margin-top: var(--sp-5); font-size: var(--fs-xs); color: var(--ink-dim);
+}
+.hero-meta b {
+  color: var(--ink); font-weight: 700; font-size: var(--fs-lg);
+  font-variant-numeric: tabular-nums; margin-right: 3px;
+}
+
+.section { padding-block: var(--section-pad); border-top: 1px solid var(--line); }
+.section:first-of-type { border-top: 0; }
+.section > h2 {
+  font-size: var(--fs-xl); font-weight: 700;
+  letter-spacing: -.018em; margin: 0 0 var(--sp-2);
+}
+.section > .section-desc {
+  color: var(--ink-dim); font-size: var(--fs-sm); line-height: 1.72;
+  margin: 0 0 var(--sp-5); max-width: 68ch;
+}
+
+/* ── 「从这里开始」引导区 ────────────────────────────────────────────────
+   访客从搜索/推荐落地后的第一屏。目的不是罗列对象，而是先让他回答一个
+   是非题（我属于哪一类），再给下一跳。数据再准，读者不知道用途就等于没用。
+   视觉上刻意比下面的对象表轻：左边一条竖线表明这是「导读」不是「结论」。
+   ────────────────────────────────────────────────────────────────────── */
+.guide-band { border-top: 0; }
+.guide-list {
+  list-style: none; margin: 0 0 var(--sp-5); padding: 0;
+  display: grid; gap: var(--sp-2);
+  max-width: 92ch;
+}
+.guide-step {
+  display: grid;
+  /* 两列：左侧「你的情况」，右侧「所以看哪」。用 grid 而非 flex 是为了让
+     两列在窄屏能干净地叠成一列，不出现挤压。 */
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: var(--sp-2) var(--sp-5);
+  align-items: baseline;
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--accent, var(--brand));
+  border-radius:var(--r-xs);
+  background: var(--bg-raise);
+}
+.guide-q {
+  display: flex; align-items: baseline; gap: var(--sp-2);
+  font-size: var(--fs-sm); color: var(--ink-mid); line-height: 1.6;
+}
+.guide-n {
+  flex-shrink: 0;
+  display: inline-grid; place-items: center;
+  width: 18px; height: 18px; border-radius: 50%;
+  font-size: 11px; font-weight: 700; line-height: 1;
+  color: var(--accent, var(--brand));
+  border: 1px solid color-mix(in srgb, var(--accent, var(--brand)) 42%, transparent);
+  background: color-mix(in srgb, var(--accent, var(--brand)) 11%, transparent);
+  transform: translateY(2px);
+}
+.guide-a {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: var(--fs-sm); line-height: 1.6;
+}
+.guide-a strong { color: var(--ink); font-weight: 700; }
+/* 为什么这样分——一行灰字，是本文档存在的理由，别删 */
+.guide-why { color: var(--ink-faint); font-size: var(--fs-xs); line-height: 1.62; }
+.guide-foot {
+  font-size: var(--fs-xs); color: var(--ink-dim); line-height: 1.7;
+  margin: 0; max-width: 82ch;
+  padding-top: var(--sp-3); border-top: 1px solid var(--line);
+}
+.guide-foot strong { color: var(--ink-mid); }
+
+@media (max-width: 760px) {
+  .guide-step { grid-template-columns: 1fr; gap: var(--sp-1); }
+  .guide-a { padding-left: calc(18px + var(--sp-2)); }
+}
+/* ≤520px 时两级缩进 + 长平台名串（"Telegram/Discord/Slack/WhatsApp/Signal/Email"）
+   会把 grid item 撑到容器外——grid item 默认 min-width:auto 不允许比容器窄。
+   min-width:0 让它可收缩，overflow-wrap让长串能断。
+   实测 320px 视口下 harness 站引导区scrollWidth 361，超出 41px。 */
+@media (max-width: 520px) {
+  .guide-step { padding: var(--sp-3); }
+  .guide-q, .guide-a, .guide-why, .guide-foot { min-width: 0; overflow-wrap: anywhere; }
+  .guide-a { padding-left: 0; }
+  .guide-n { display: none; }  /* 序号已由列表序号表达，去掉圆圈省出整行宽度 */
+}
+
+/* ── harness 站的family 分组 ────────────────────────────────────────────────
+   validate 把 family 定为必填枚举，注释写明「决定首页矩阵怎么分组」。
+   分组标题里必须带这一层的判别理由（不只是名字），否则分组只是装饰。
+   ────────────────────────────────────────────────────────────────────── */
+.fam-block { margin-bottom: var(--sp-6); }
+.fam-block:last-child { margin-bottom: 0; }
+.fam-head { margin-bottom: var(--sp-3); }
+.fam-head h3 {
+  display: flex; align-items: baseline; gap: var(--sp-2);
+  font-size: var(--fs-lg); font-weight: 700; letter-spacing: -.012em;
+  margin: 0 0 var(--sp-1);
+}
+.fam-n {
+  font-size: var(--fs-micro); font-weight: 600; line-height: 1;
+  color: var(--ink-dim); font-variant-numeric: tabular-nums;
+  padding: 3px 7px; border: 1px solid var(--line-mid); border-radius: 999px;
+}
+.fam-head p {
+  margin: 0; font-size: var(--fs-sm); line-height: 1.7;
+  color: var(--ink-dim); max-width: 84ch;
+}
+
+/* ── 状态声明带：诚实边界必须显眼，但不是喊 ────────────────────────── */
+.status-band { border-top: 1px solid var(--brand-line); }
+.status-inner {
+  display: grid; grid-template-columns: 30px 1fr; gap: var(--sp-3);
+  align-items: start; max-width: 80ch;
+}
+.status-mark {
+  width: 24px; height: 24px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 13px; font-weight: 700;
+  color: var(--accent, var(--brand));
+  border: 1px solid color-mix(in srgb, var(--accent, var(--brand)) 45%, transparent);
+  background: color-mix(in srgb, var(--accent, var(--brand)) 12%, transparent);
+}
+.status-inner h2 {
+  font-size: var(--fs-lg); font-weight: 700;
+  margin: 2px 0 var(--sp-2); letter-spacing: -.01em;
+}
+.status-inner p {
+  font-size: var(--fs-sm); line-height: 1.72;
+  color: var(--ink-mid); margin: 0 0 var(--sp-2);
+}
+.status-inner p:last-child { margin-bottom: 0; }
+
+/* ── 对象网格：给每张卡一个视觉锚（字母标识 + 状态色条）───────────── */
+.grid {
+  display: grid; gap: var(--sp-3);
+  /* min(330px, 100%) 而非 minmax(330px, 1fr)：后者在视口 < 330px 时
+     仍强制 330px 下限 → 卡片溢出（320px 视口实测 scrollWidth 469）。
+     100% 上限让它在窄屏收缩到容器宽。 */
+  grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr));
+}
+.card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: var(--sp-4);
+  display: flex; flex-direction: column; gap: var(--sp-2);
+  min-width: 0;
+  transition: border-color .18s var(--ease), transform .18s var(--ease);
+}
+.card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+.card-top { display: flex; align-items: flex-start; gap: var(--sp-3); }
+/* 字母标识：实心方块，给眼睛一个落点（v1 是纯文字块，没有锚） */
+.mark {
+  width: 38px; height: 38px; flex-shrink: 0;
+  display: grid; place-items: center;
+  font-size: 15px; font-weight: 700; letter-spacing: -.01em;
+  border-radius:var(--r-sm);
+  color: var(--card-accent, var(--accent, var(--brand)));
+  background: color-mix(in srgb, var(--card-accent, var(--accent, var(--brand))) 13%, transparent);
+  border: 1px solid color-mix(in srgb, var(--card-accent, var(--accent, var(--brand))) 32%, transparent);
+}
+.card h3 {
+  font-size: var(--fs-lg); font-weight: 650; line-height: var(--lh-snug);
+  margin: 0 0 2px; letter-spacing: -.012em;
+}
+.card h3 a { color: var(--ink); transition: color .16s var(--ease); }
+.card h3 a:hover { color: var(--accent, var(--brand)); }
+.card-id { min-width: 0; }
+.card .vendor {
+  font-size: var(--fs-micro); color: var(--ink-faint);
+  letter-spacing: .06em; line-height: 1.4;
+}
+.card .tagline {
+  font-size: var(--fs-sm); line-height: 1.64;
+  color: var(--ink-mid); margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* 卡底：状态 + 入口，一行放平 */
+.card-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--sp-2); margin-top: auto; padding-top: var(--sp-3);
+  border-top: 1px solid var(--line);
+}
+.more {
+  font-size: var(--fs-xs); font-weight: 600;
+  color: var(--accent, var(--brand));
+  transition: opacity .16s var(--ease);
+}
+.more:hover { opacity: .72; }
+
+/* ── 面板：节奏统一（v1 各面板间距不一，看起来很乱）───────────── */
+.panel {
+  margin: 0 0 var(--sp-3);
+  padding: var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--bg-panel);
+}
+/* 内容少的面板（适合/价格/未知项/实测）用紧凑版式 */
+.panel.is-slim { padding: var(--sp-3) var(--sp-4); }
+.panel.is-slim h2 {
+  font-size: var(--fs-base); font-weight: 650;
+  margin: 0 0 var(--sp-2); letter-spacing: -.01em;
+}
+.panel.is-slim p { font-size: var(--fs-sm); }
+.panel:last-child { margin-bottom: 0; }
+.panel h2 {
+  font-size: var(--fs-lg); font-weight: 700;
+  margin: 0 0 var(--sp-3); letter-spacing: -.012em;
+}
+.panel.warn { border-color: color-mix(in srgb, var(--accent, var(--brand)) 38%, transparent); }
+.panel.warn h2 { color: var(--accent, var(--brand)); }
+.panel p {
+  font-size: var(--fs-sm); line-height: 1.72;
+  color: var(--ink-mid); margin: 0 0 var(--sp-2);
+}
+.panel p:last-child { margin-bottom: 0; }
+.panel ul { margin: 0; padding: 0; display: grid; gap: var(--sp-2); }
+.panel li {
+  font-size: var(--fs-sm); line-height: 1.7; color: var(--ink-mid);
+  padding-left: var(--sp-3); position: relative;
+}
+.panel li::before {
+  content: ""; position: absolute; left: 0; top: .72em;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent, var(--brand));
+}
+.panel code {
+  /* 2026-10-08：原 .92em。父级 14px 时算出 12.88px —— 半像素字号，
+   * _design-audit 的「字号档位」检查会判失败（字号只用 3 档 token）。
+   * 改用 --fs-xs（12px），落在既有档位上。 */
+  font-size: var(--fs-xs); background: var(--bg-inset);
+  padding: 1px 5px; border-radius:var(--r-xs); color: var(--ink);
+}
+
+/* ── 相关条目 ────────────────────────────────────────────────────────
+ * 每条 = 「显示名链接」+「为什么要读它」两段。
+ * 分两个 span 而不是把整行塞进 <a>：嵌套 <a> 会被解析器静默吞掉后续兄弟节点。
+ * ⚠ grid item 必须显式 min-width:0 —— 理由里有 `Qwen/Qwen3-Flash` 这类
+ *   不可断词的长串，不置 0 会在窄屏把整格撑破（记忆里的硬约束）。*/
+.rel-list li {
+  display: grid; gap: 2px; min-width: 0;
+}
+.rel-t { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
+.rel-t a { color: var(--ink); }
+.rel-n { color: var(--ink-dim); min-width: 0; overflow-wrap: anywhere; }
+
+/* ── 表格：对比表与证据表 ───────────────────────────────────────────── */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line); border-radius: var(--r);
+  background: var(--bg-panel);
+}
+table.cmp, table.src { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+table.cmp { min-width: 720px; }
+table.cmp th, table.cmp td,
+table.src th, table.src td {
+  text-align: left; padding: 11px var(--sp-3);
+  border-bottom: 1px solid var(--line); vertical-align: top;
+}
+table.cmp thead th, table.src thead th {
+  font-size: var(--fs-micro); font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint);
+  border-bottom-color: var(--line-mid);
+}
+table.cmp tbody tr:last-child td, table.src tbody tr:last-child td { border-bottom: 0; }
+table.cmp tbody tr:hover, table.src tbody tr:hover { background: var(--bg-inset); }
+table.src a { color: var(--accent, var(--brand)); word-break: break-all; }
+table.src a:hover { text-decoration: underline; }
+.td-mark {
+  display: inline-grid; place-items: center;
+  width: 22px; height: 22px; border-radius:var(--r-sm);
+  font-size: 11px; font-weight: 700; vertical-align: -5px; margin-right: 8px;
+  color: var(--card-accent, var(--accent, var(--brand)));
+  background: color-mix(in srgb, var(--card-accent, var(--accent, var(--brand))) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--card-accent, var(--accent, var(--brand))) 30%, transparent);
+}
+td a { display: inline-flex; align-items: center; color: var(--ink); }
+td a:hover { color: var(--accent, var(--brand)); }
+.td-vendor, .td-date { color: var(--ink-dim); font-size: var(--fs-xs); white-space: nowrap; }
+.td-fit { color: var(--ink-dim); font-size: var(--fs-xs); line-height: 1.6; min-width: 190px; }
+.td-conf {
+  display: inline-block; font-size: var(--fs-micro);
+  padding: 2px 8px; border-radius:var(--r-xs);
+  border: 1px solid var(--line); color: var(--ink-dim); white-space: nowrap;
+}
+.td-conf.verified { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 36%, transparent); }
+.td-conf.partial { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 36%, transparent); }
+.td-conf.stale { color: var(--stop); border-color: color-mix(in srgb, var(--stop) 36%, transparent); }
+
+/* ── 维度说明：mesh 网格 + 编号锚（不再是纯文字长列表）──────────── */
+.axis-mesh { grid-template-columns: repeat(auto-fit, minmax(238px, 1fr)); }
+.axis-cell { display: flex; flex-direction: column; gap: var(--sp-1); }
+.axis-name {
+  font-size: var(--fs-base); font-weight: 650; line-height: 1.4;
+  margin: 0; letter-spacing: -.008em;
+}
+.axis-ask {
+  font-size: var(--fs-xs); line-height: 1.62;
+  color: var(--ink-dim); margin: 0;
+}
+
+.panel-lead {
+  margin: 0 0 var(--sp-3);
+  padding: var(--sp-4);
+  border-left: 2px solid var(--accent, var(--brand));
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  background: var(--bg-inset);
+  font-size: var(--fs-base); line-height: 1.74; color: var(--ink);
+}
+
+/* ── 工具类（替代内联样式）────────────────────────────────────────── */
+.panel.is-lead { padding-block: var(--sp-3); }
+.panel.is-lead p { font-size: var(--fs-base); line-height: 1.74; }
+.lead { font-size: var(--fs-base); line-height: 1.74; color: var(--ink); margin: 0; }
+.t-sm.mb-2 { margin-bottom: var(--sp-2); }
+.t-sm.mb-3 { margin-bottom: var(--sp-3); }
+.em { font-size: var(--fs-base); color: var(--ink); }
+.link-brand { color: var(--accent, var(--brand)); }
+.link-brand:hover { text-decoration: underline; }
+.fine { font-size: var(--fs-xs); line-height: 1.66; color: var(--ink-dim); margin: 0; }
+.fine.mt-2 { margin-top: var(--sp-2); }
+.fine.mt-3 { margin-top: var(--sp-3); }
+.fine.mt-6 { margin-top: var(--sp-6); }
+table.src.is-flush { margin: 0; }
+table.src.is-flush.mb-3 { margin: 0 0 var(--sp-3); }
+/* .panel 里直接放的表格（没有 .table-wrap 包裹）列多时会把面板撑出横向滚动条。
+   给它自己的 display:block + overflow-x:auto，溢出被限制在表格内部，
+   全站仍无横向滚动条。
+   ⚠ 不要只写`.is-flush` —— 详情页的「证据来源」表（类型/名称/链接 三列，
+   th.w-20 = 80px + th.w-52 = 208px）在 320px 下把表格撑到 334px，
+   而它**没有** is-flush 类，所以曾经漏掉。现在按「.panel 内的表格」一刀切。*/
+.panel > table.src,
+.panel > table.cmp {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+th.w-20 { width: 80px; }  th.w-24 { width: 96px; }
+th.w-28 { width: 112px; } th.w-52 { width: 208px; }
+
+/* 证据来源表在窄屏转成卡片 —— 不是为了修横向溢出（那个 .panel > table.src
+   的 overflow-x:auto 已经解决了），而是因为**横向滚动解决了可读性**：
+   th.w-20 + th.w-52 = 288px 固定列宽，在 320px 视口下正好等于面板内宽，
+   把第三列（链接）挤到只剩 20px —— `https://github.com/anthropics/...`
+   被压成每行一个字符的竖排，肉眼读不了（2026-10-03 实测）。
+ * `display:block` + 逐格堆叠，让每条证据占一行块、链接独占一行可完整折行。
+ * ⚠ td 不能用 `display:flex` —— 格内多个 span / <br> 会各成一个不可换行的
+ *   flex item，文字被压成 30px 窄带（这个坑两列表 table.budget 已经踩过）。*/
+@media (max-width: 560px) {
+  .panel > table.src thead { display: none; }
+  .panel > table.src tbody,
+  .panel > table.src tr,
+  .panel > table.src td { display: block; width: auto; }
+  .panel > table.src tr {
+    padding: var(--sp-3) 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .panel > table.src tbody tr:last-child { border-bottom: 0; }
+  .panel > table.src td { border: 0; padding: 2px 0; }
+  /* 类型是元信息，压暗一号；链接是这一格唯一的长内容，允许任意位置折行 */
+  .panel > table.src td:first-child {
+    color: var(--ink-dim); font-size: var(--fs-xs);
+    text-transform: uppercase; letter-spacing: .04em;
+  }
+}
+.nw { white-space: nowrap; }
+.vendor.is-caps { text-transform: uppercase; letter-spacing: .06em; }
+.block-head { margin-top: var(--sp-6); }
+.block-head .t-section-lead { margin-bottom: var(--sp-3); }
+
+/* ── 详情页 ────────────────────────────────────────────────────────── */
+.detail { padding-block: var(--section-pad) calc(var(--section-pad) * 1.5); }
+.back {
+  font-size: var(--fs-xs); color: var(--ink-dim);
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-bottom: var(--sp-4); transition: color .16s var(--ease);
+}
+.back:hover { color: var(--accent, var(--brand)); }
+.detail-head { display: flex; align-items: flex-start; gap: var(--sp-3); margin-bottom: var(--sp-4); }
+.detail-head .mark { width: 52px; height: 52px; font-size: 20px; border-radius:var(--r); }
+.detail-head h1 {
+  /* 2026-10-03：原 --fs-2xl(30px) → 实测详情页 h1 仅 30px，而首页 66px，差 2.2 倍。
+     这条规则特异性 (0,1,1) 高于 brand.css 的裸 h1，所以必须在这里改才生效。 */
+  font-size: var(--display-sub); line-height: var(--lh-tight);
+  font-weight: 800; letter-spacing: -.028em; margin: 0 0 var(--sp-2);
+}
+.badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: var(--sp-5); }
+.badge {
+  font-size: var(--fs-micro); padding: 4px 10px; border-radius:var(--r-sm);
+  border: 1px solid var(--line); color: var(--ink-dim);
+}
+.badge.accent {
+  color: var(--accent, var(--brand));
+  border-color: color-mix(in srgb, var(--accent, var(--brand)) 38%, transparent);
+  background: color-mix(in srgb, var(--accent, var(--brand)) 9%, transparent);
+}
+
+/* 维度：定义列表，左侧一条细线做锚 */
+.axis {
+  padding-block: var(--sp-3);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.axis:last-of-type { border-bottom: 0; }
+.axis::before {
+  content: ""; position: absolute; left: -14px; top: 20px;
+  width: 6px; height: 1px; background: var(--line-strong);
+}
+.axis dt {
+  font-size: var(--fs-micro); font-weight: 600;
+  letter-spacing: .1em; color: var(--ink-faint);
+  margin-bottom: 6px;
+}
+.axis dd {
+  margin: 0; font-size: var(--fs-sm); line-height: 1.74; color: var(--ink);
+}
+.axis dd code {
+  background: var(--bg-inset); padding: 1px 5px;
+  border-radius:var(--r-xs); font-size: var(--fs-xs); /* 原 .92em → 12.88px，同 .panel code */
+}
+dl.axes { margin: 0; }
+
+/* 未知项：用状态色，不靠文字说明 */
+.unknown { color: var(--warn); }
+
+/* ── 站内分区导航（一站三分区用）─────────────────────────────────────
+ * 跨站导航在 brand.css 的 .nav-links，这里只解决「在本站换层」。
+ * 配色复用 --pa（每分区自己的 accent，由内联 style 传进来），
+ * 不引入新色—— 全站配色真相源只有 brand.css 一处。 */
+.part-bar {
+  border-block: 1px solid var(--line);
+  background: var(--bg-raise);
+}
+.part-bar .container {
+  display: flex; flex-wrap: wrap; gap: 0;
+  padding-inline: 0;
+}
+.part-bar a {
+  flex: 1 1 200px; min-width: 0;
+  display: flex; flex-direction: column; gap: 3px;
+  padding: var(--sp-3) var(--sp-4);
+  border-left: 1px solid var(--line);
+  text-decoration: none;
+  transition: background .16s var(--ease);
+}
+.part-bar a:first-child { border-left: 0; }
+.part-bar a:hover { background: var(--bg-panel); }
+.part-bar a[aria-current="page"] {
+  background: var(--bg-panel);
+  box-shadow: inset 0 2px 0 var(--pa, var(--brand));
+}
+.part-bar a b {
+  font-size: var(--fs-sm); font-weight: 700; line-height: 1.3;
+  color: var(--ink); letter-spacing: -.01em;
+}
+.part-bar a[aria-current="page"] b { color: var(--pa, var(--brand)); }
+.part-bar a span {
+  font-size: var(--fs-micro); line-height: 1.5; color: var(--ink-faint);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 640px) {
+  .part-bar a { flex-basis: 100%; border-left: 0; border-top: 1px solid var(--line); }
+  .part-bar a:first-child { border-top: 0; }
+}
+
+/* 详情页面包屑：站→ 分区 → 本页 */
+.crumbs {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  font-size: var(--fs-micro); color: var(--ink-faint);
+  margin-bottom: var(--sp-3);
+}
+.crumbs a { color: var(--ink-dim); text-decoration: none; }
+.crumbs a:hover { color: var(--brand); }
+.crumbs span[aria-current="page"] { color: var(--ink); }
+.crumbs > * + *::before { content: "/"; margin-right: 6px; color: var(--ink-faint); }
