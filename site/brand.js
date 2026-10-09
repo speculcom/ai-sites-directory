@@ -24,6 +24,27 @@
     langBtn = null;
   }
 
+  // 从系统/浏览器偏好推断初始语言（2026-10-10 新增）。
+  //
+  // 只认**第一个**语言项，不做 zh-* / zh-Hans / zh_CN 之外的细分匹配 ——
+  // 站上只有中英两种文案，把 zh-TW / zh-HK 也算成中文（简体）虽然不准确，
+  // 但这是唯一没有第三份繁体译文时的合理选择；反过来把 zh-TW 判成英文更糟。
+  //
+  // 读不到就返回 'zh'（原行为），保证在没有 navigator 的环境里不炸。
+  function detectLang() {
+    try {
+      var list = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language];
+      var first = String(list[0] || '').toLowerCase();
+      if (!first) return 'zh';
+      // 以 zh 开头（zh / zh-CN / zh-Hans / zh-TW …）→ 中文，其余一律英文
+      return /^zh\b/.test(first) ? 'zh' : 'en';
+    } catch (e) {
+      return 'zh';
+    }
+  }
+
   function applyLang(lang) {
     var en = lang === 'en';
     root.lang = en ? 'en' : 'zh-CN';
@@ -81,7 +102,7 @@
 
   var lang = 'zh';
   var theme = 'dark';
-  // ⚠ 语言来源的优先级：**URL 参数 > localStorage**（2026-10-03 修）。
+  // ⚠ 语言来源的优先级：**URL 参数 > localStorage > 浏览器语言**（2026-10-03 / 10-10 两次修）。
   //
   // 为什么必须有 URL 参数：localStorage 是**按 origin 隔离**的
   // （实测：在 127.0.0.1:4321 写入，换到 :4322 读回来是 null ——
@@ -91,6 +112,12 @@
   //
   // 跨站链接由 appendLang() 自动加 ?lang=，所以这条优先级保证：
   //   在任何站切到英文 → 点别的站 → 还是英文；切到中文 → 点别的站 → 还是中文。
+  //
+  // 第三层（2026-10-10 新增）：此前这一层的兜底是**写死的中文**，于是英文系统的
+  //   用户首次访问**一律落到中文**，要自己点一次 EN 才知道这站有英文。
+  //   现在改成读 navigator.language ——「首次访问」按系统语言走，
+  //   用户手动切过之后仍然以 localStorage 为准（不跟系统语言反复拉扯）。
+  //   navigator.languages 是有序偏好列表，第一个命中即可；都读不到就留在中文。
   var qs = '';
   try { qs = location.search || ''; } catch (e) {}
   var qLang = (/(?:^|[?&])lang=(zh|en)(?:&|$)/.exec(qs) || [])[1];
@@ -99,7 +126,9 @@
     // 回写本域偏好，这样本页后续切回时不必再依赖 URL
     try { localStorage.setItem('specul-lang', lang); } catch (e) {}
   } else {
-    try { lang = localStorage.getItem('specul-lang') || 'zh'; } catch (e) {}
+    try { lang = localStorage.getItem('specul-lang') || detectLang(); } catch (e) {}
+    // 兜底：localStorage 读不出来（隐私模式等）时仍按系统语言走
+    if (lang !== 'zh' && lang !== 'en') lang = detectLang();
   }
   // 同理：主题也跨站保持（顺手统一，避免两个开关行为不一致）
   var qTheme = (/(?:^|[?&])theme=(dark|light)(?:&|$)/.exec(qs) || [])[1];
