@@ -275,8 +275,23 @@
        3. 颜色层次清楚（accent 明确、暗色有光晕）
      留白只占很小一部分 —— 内容密度高但不挤，才叫「大气」。
      所以这一版：**字号放大、留白收一档**。 */
-  --display: clamp(38px, 5.6vw, 66px);     /* 首页主标（原 60 → 66） */
-  --display-sub: clamp(28px, 3.8vw, 46px); /* 详情页主标（原 40 → 46） */
+  /* ⚠ **2026-10-10：--display 与 --display-sub 合并成同一档**（用户定案「六站整体效果与首页一致」）。
+   *
+   * 实测（Chrome 渲染值，非源文件）发现首页主标有三档并存：
+   *   www 34px（自己写死的 26/30/34 响应式）· learn/models/nav 46px · agent/vg 66px
+   * —— 相差近 2 倍，而 `brand.css` 六站**逐字节相同**、`consistency` 报 9/9 通过。
+   * 根因是 brand.css 原本设计成「首屏 --display / 详情 --display-sub」两档，
+   * 但**六站各自挑档**：agent/vg 首页用了大的那档，learn/models/nav 首页用了小的那档，
+   * www 则完全绕开 token 自己写了一套。共享层相同 ≠ 渲染相同 ✗。
+   *
+   * 现在让 --display 直接别名到 --display-sub：**首屏与详情页主标统一为 46px**。
+   * 为什么选 46 而不是跟着首页的 34：
+   *   · 六站里有 3 站首页本来就在 46（learn/models/nav），改动量最小
+   *   · www 只从 34 涨到 46，版式气质不变；agent/vg 从 66 降到 46 仍是醒目的大标题
+   *   · 若压到 34，agent/vg 的首屏会明显变朴素，与「现代简洁、色彩丰富」相悖
+   * 保留别名而不是删 token：`--fs-3xl` 等下游仍引用它，直接删会让下游静默失效。 */
+  --display: var(--display-sub);
+  --display-sub: clamp(28px, 3.8vw, 46px); /* 首屏与详情页主标共用这一档 */
   --h2: clamp(23px, 2.8vw, 32px);
   --lede: 17px;
   --lede-lh: 1.72;
@@ -502,7 +517,14 @@ code, kbd, pre { overflow-wrap: anywhere; }
 .nav-tools { display: inline-flex; align-items: center; gap: var(--sp-2); }
 .icon-btn {
   width: 32px; height: 32px; display: grid; place-items: center;
-  border: 1px solid var(--line); border-radius: var(--r-sm);
+  border: 1px solid var(--line);
+  /* ⚠ 2026-10-10：999px 胶囊，不再用 var(--r-sm)（12px）。
+   *   实测按钮 32×32，12px 圆角看起来像小方块；首页本来就用胶囊
+   *   （`body.brand-ambient .icon-btn { border-radius: 999px }`），
+   *   而其余五站走共享层的 12px —— 六站顶栏按钮形状不一致 ✗。
+   *   按「与首页一致」定案：把胶囊**提进共享层**，删掉首页那条内联覆盖。
+   *   胶囊也与本站其余元素一致（.hp-chip / .hp-route .num 等都是 999px）。 */
+  border-radius: 999px;
   font-size:var(--fs-xs); color: var(--ink-mid); background: transparent;
   transition: border-color .16s var(--ease), color .16s var(--ease);
 }
@@ -829,7 +851,7 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
        2026-10-03 前 --fs-3xl 是独立的 clamp，这里覆盖它；
        现在 --fs-3xl = var(--display)，覆写必须跟着改 --display 才有效。
        **变量别名链上任一环覆写错位，下游全部失效** —— 这类 bug 只看 computed 值才发现。 */
-    --display: clamp(30px, 8.6vw, 42px);
+    --display: var(--display-sub);
     --display-sub: clamp(24px, 6.4vw, 32px);
     --h2: clamp(20px, 5vw, 26px);
     --sp-6: 44px; --sp-7: 64px;   /* 2026-10-09：随大间距一起 +10~15%，窄屏尤其需要呼吸 ✓ */
