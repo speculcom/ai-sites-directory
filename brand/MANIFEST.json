@@ -1,0 +1,21 @@
+{
+  "_comment": "共享品牌资产的 vendored 副本。真相源见 source 字段；改动真相源后请重新 vendor 并跑 node _audit/brand-sync.mjs",
+  "assets": {
+    "brand.css": {
+      "source": "www.specul/brand.css",
+      "sha256": "0a90cc4f62a6d0eb84d7238171ed207d0fe194a53df6c0a69342575f01a0e6a7"
+    },
+    "brand.js": {
+      "source": "www.specul/brand.js",
+      "sha256": "4c4b00ce3eaeddb4be06e083a4f9fb0edc75f462130e531415d726ed2c17c777"
+    },
+    "shell.mjs": {
+      "source": "_sites/_template/shell.mjs",
+      "sha256": "cb1db85602c6cd95d9f2977da89f271ceb00d63e42ef4ac886da8f65b1720f88"
+    },
+    "site.css": {
+      "source": "_sites/_template/site.css",
+      "sha256": "0e190b0c2ab62de7e42e5e236cf19a007b082e45d8fa845ab81cd39c0626c88a"
+    }
+  }
+}
