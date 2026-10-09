@@ -1,0 +1,89 @@
+{
+ "summary": [
+  {
+   "code": "llm",
+   "name": "大模型与对话",
+   "n": 44,
+   "dead": 0,
+   "maybe": 15
+  },
+  {
+   "code": "coding",
+   "name": "AI 编程与 Agent",
+   "n": 30,
+   "dead": 0,
+   "maybe": 1
+  },
+  {
+   "code": "gen",
+   "name": "多模态生成",
+   "n": 56,
+   "dead": 0,
+   "maybe": 17
+  },
+  {
+   "code": "app",
+   "name": "AI 办公与垂直应用",
+   "n": 47,
+   "dead": 0,
+   "maybe": 4
+  },
+  {
+   "code": "model",
+   "name": "模型与权重",
+   "n": 26,
+   "dead": 0,
+   "maybe": 4
+  },
+  {
+   "code": "dev",
+   "name": "开发框架与工具",
+   "n": 42,
+   "dead": 0,
+   "maybe": 4
+  },
+  {
+   "code": "infra",
+   "name": "算力与芯片",
+   "n": 55,
+   "dead": 0,
+   "maybe": 5
+  },
+  {
+   "code": "robot",
+   "name": "机器人与具身智能",
+   "n": 87,
+   "dead": 0,
+   "maybe": 8
+  },
+  {
+   "code": "learn",
+   "name": "学习资源",
+   "n": 43,
+   "dead": 0,
+   "maybe": 5
+  },
+  {
+   "code": "community",
+   "name": "社区与资讯",
+   "n": 25,
+   "dead": 0,
+   "maybe": 7
+  },
+  {
+   "code": "tools",
+   "name": "开发者工具",
+   "n": 72,
+   "dead": 0,
+   "maybe": 6
+  },
+  {
+   "code": "ext",
+   "name": "延伸领域",
+   "n": 184,
+   "dead": 0,
+   "maybe": 63
+  }
+ ],
+ "needWork": []
+}
