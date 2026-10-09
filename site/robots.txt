@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nav.specul.com/sitemap.xml
