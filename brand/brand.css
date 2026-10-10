@@ -78,6 +78,10 @@
   /* 功能青：仅用于「可交互 / 数据」这类功能性提示 */
   --cyan:      #3ddbc8;
   --cyan-soft: rgba(61, 219, 200, .12);
+  /* 青色底上的前景色（2026-10-10 新增）。
+     nav 的 .chip.is-on 原本在本站写死 #04121a / #fff 两套 ——
+     那是「同一个组件的同一处前景色写两遍」，每站都可能抄错一份。 */
+  --cyan-on:   #04121a;
 
   /* ══════════════════════════════════════════════════════════════════
      分类色盘 · 六色（2026-10-10 新增 · 从首页内联样式**提为共享 token**）
@@ -114,6 +118,14 @@
   --ok:    #4ade80;   /* 已核验 */
   --warn:  #fbbf24;   /* 部分核验 */
   --stop:  #f87171;   /* 过期 / 风险 */
+
+  /* 状态色的「柔和底 + 文字」两档（2026-10-10 新增）。
+     徽章类组件要的是「淡底 + 同色系深字」，直接拿 --ok 当文字色会太刺眼。
+     vg 的置信度徽章原本**自建了六套**这样的裸值（暗/亮各三色），
+     现在统一到这三组 token ✓ —— 六站若再需要徽章，直接用，不必重写。 */
+  --ok-soft:   rgba(74, 222, 128, .15);   --ok-ink:   #8ce8ad;
+  --warn-soft: rgba(251, 191, 36, .15);   --warn-ink: #f5cf7a;
+  --stop-soft: rgba(248, 113, 113, .14);  --stop-ink: #f7a3a3;
 
   /* ── 内容维度色板（2026-10-03 新增）──────────────────────────────────
      为什么要它：--brand 是**站点级**标识（紫/青/蓝/绿/金），
@@ -420,6 +432,7 @@
 
   --cyan:      #0b7c72;
   --cyan-soft: rgba(13, 148, 136, .1);
+  --cyan-on:   #ffffff;   /* 亮色下 --cyan 被压深，前景必须反转为白字 */
 
   /* 分类色盘 · 亮色主题（2026-10-10 · 与暗色同一组，值取自首页内联）
      ⚠ 亮色下 `ink` 是**压暗版**（原首页值），因为浅底上浅色文字达不到 AA。
@@ -434,6 +447,12 @@
   --ok:    #15803d;
   --warn:  #b45309;
   --stop:  #dc2626;
+
+  /* 亮色下的徽章两档（与暗色同名，供徽章组件统一引用）。
+     亮底上必须用**更深**的一档才够 AA —— 这是暗色那组值不能直接搬过来的原因。 */
+  --ok-soft:   rgba(21, 128, 61, .10);   --ok-ink:   #166534;
+  --warn-soft: rgba(180, 83, 9, .10);    --warn-ink: #92400e;
+  --stop-soft: rgba(220, 38, 38, .09);   --stop-ink: #991b1b;
 
   /* 内容维度色板 · 亮色主题（2026-10-03）
      亮色下用同色系更深一档 —— 对底色仍 ≥3.6:1，且配白字 ≥3.7:1 可读。 */
@@ -574,6 +593,36 @@ code, kbd, pre { overflow-wrap: anywhere; }
   .grad-title { color: var(--brand); }
 }
 
+/* ── 全站主标自动渐变（2026-10-10）────────────────────────────────────
+   问题：实测 **217 页里 211 页的 h1 没有渐变** —— 只有六站首页有。
+   逐页往标题里包 `<span class="grad-title">` 是**不可维护**的：
+   以后每加一个页面就要记得包，一漏就又不一致 ✗
+   而六站的主标**全都是 `h1` 元素**（`.hp-hero h1` / `.page-head h1` /
+   `.detail-head h1` / `.hero h1` / `.t-hero` / `.h1` 只是挂在它身上的类），
+   所以**在共享层直接给 h1 上渐变**即可，一处覆盖全部 217 页 ✓
+
+   ⚠ 副标题要显式还原颜色：h1 变成 `color: transparent` 后，
+     子元素若只靠继承就会跟着透明（看不见）。
+     各站的 `.sub` / `h1 .sub` 都已显式写 color，这里再加一条兜底 ✓
+   ⚠ 渐变文字**测不到对比度**（探针归入「无法测量」那一类），
+     所以这三个色标只能靠 `_audit/gradient-contrast.mjs` 单独验。 */
+h1 {
+  background: linear-gradient(100deg,
+    var(--grad-title-from),
+    var(--grad-title-mid) 48%,
+    var(--grad-title-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* 副标题 / 说明性子节点还原为正常墨色 */
+h1 .sub,
+h1 .h1-sub,
+h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  h1 { color: var(--ink); }
+}
+
 /* ══════════════════════════════════════════════════════════════════════
    顶栏 —— 细、高、留白足
    ══════════════════════════════════════════════════════════════════════ */
@@ -600,7 +649,12 @@ code, kbd, pre { overflow-wrap: anywhere; }
 
 .nav-links { display: flex; align-items: center; gap: var(--sp-5); }
 .nav-links > a {
-  font-size: 13.5px; color: var(--ink-mid); position: relative;
+  /* ⚠ 2026-10-10：13.5px → var(--fs-xs)（14px）。
+     半像素字号是「节奏失准」的来源，而且 _design-audit 有「落整数 px」的门禁 ——
+     这条之所以还能存在，是因为 **www 的页内联样式用 14px 把它盖掉了**，
+     于是其余五站实测仍是 13.5px ✗（共享层写了、实际没生效）。
+     现在两边都改成同一个 token，六站真正一致 ✓ */
+  font-size: var(--fs-xs); color: var(--ink-mid); position: relative;
   padding-block: var(--sp-2); transition: color .16s var(--ease);
 }
 .nav-links > a:hover { color: var(--ink); }
@@ -963,7 +1017,7 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
     gap: var(--sp-2) var(--sp-4);
     padding-bottom: var(--sp-2);
   }
-  .nav-links > a { font-size: 12.5px; padding-block: var(--sp-1); }
+  .nav-links > a { font-size: var(--fs-micro); padding-block: var(--sp-1); }
   .nav-tools { margin-left: var(--sp-2); }
   .brand-sub { display: none; }
 }
