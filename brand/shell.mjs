@@ -13,13 +13,20 @@
 /** 品牌唯一真相源（改这里等于改全站） */
 // 品牌名随语言切换：中文「投机取巧」/ 英文「Speculative Speculation」（用户 2026-10-01 定）。
 //
-//⚠ 不要再加 brand-sub 副标题 —— 之前 `short` 与 `zh` 都是「投机取巧」，
-// 导致 brand-name 与 brand-sub 在中文态渲染出同一句话（截图里左上角「重影」）。
-// 现在把中英文都放进 brand-name 本身，副标题已从模板里移除。
+// ⚠ 「不要加 brand-sub」是 **2026-10-01** 的结论，现在**部分推翻**（用户 2026-10-10 指示：
+//   「所有分站都要和首页一样，上面中文、下面英文」）。
+//   当时的问题是 `short` 与 `zh` **都是**「投机取巧」，于是 brand-name 与 brand-sub
+//   在中文态渲染出同一句话（左上角「重影」）—— 症结是**两个元素内容相同**，
+//   不是「有副标题」这件事本身。
+//   现在的做法：副标题**只放英文**，中文态显示「投机取巧 / Speculative Speculation」
+//   （即首页的样子），英文态只显示英文站名一行 —— 不重复、不重影 ✓
 export const BRAND = {
   zh: '投机取巧',
   en: 'Speculative Speculation',
   short: '投机取巧',
+  /* 副标题只在中文态出现（见上方说明）。英文态不显示，
+   * 否则英文站名与副标题会是同一句话 —— 那正是 10-01「重影」的成因。 */
+  sub: 'Speculative Speculation',
   repo: 'https://github.com/speculcom/ai-coding-agent-atlas',
 };
 
@@ -61,6 +68,7 @@ export function header(current) {
         <span class="brand-dot" aria-hidden="true"></span>
         <span class="brand-text">
           <span class="brand-name" id="markName" data-zh-name="${BRAND.zh}" data-en-name="${BRAND.en}">${BRAND.zh}</span>
+          <span class="brand-sub" id="markSub" data-zh-sub="${BRAND.sub}" data-en-sub="">${BRAND.sub}</span>
         </span>
       </a>
       <nav class="nav-links" aria-label="站点导航">
@@ -95,6 +103,7 @@ export function drawer(current) {
   <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="站点导航">
     <div class="nav-drawer-h">
       <span class="brand-name"><span data-zh>${BRAND.zh}</span><span data-en>${BRAND.en}</span></span>
+      <span class="brand-sub" data-zh-sub="${BRAND.sub}" data-en-sub="">${BRAND.sub}</span>
       <button class="nav-dclose" type="button" aria-label="关闭">×</button>
     </div>
     <nav class="nav-drawer-list">
