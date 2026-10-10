@@ -1008,23 +1008,51 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
   }
   /* 窄屏放不下一行 8 项（实测 320px 视口容器仅 288px，导航需 415px）——
      改为让导航整体换到第二行并居中，而不是压缩字号或引入横向滚动。
-     全站「无横向滚动条」是硬约束，优先保证它。 */
+     全站「无横向滚动条」是硬约束，优先保证它。
+
+     ⚠ 2026-10-10 修：原先这里是 `.nav-links { width: 100% }` ——
+     主题/语言/汉堡按钮移进 .nav-links 之后，按钮组也跟着占满整行、
+     **被挤到第三条**去（实测：链接 1 行 + 按钮 1 行，汉堡孤零零占一整行 ✗）。
+     实测四种写法（390 / 360 两个视口）后选「flex:1 + 按钮不换行」：
+       A width:100%      按钮独占一行 ✗
+       B flex:1          按钮与品牌同行、链接下行居中 ✓ ← 采用
+       C 绝对定位        可行但依赖 position，且与粘顶叠层易错位
+       D 链接全隐藏      只剩汉堡，可达性变差（虽然 hamburger 抽屉也有全部链接）
+     B 不引入额外定位，是纯 flex 约束 ✓ */
   .site-bar { flex-wrap: wrap; row-gap: 0; }
   .nav-links {
-    width: 100%;
+    flex: 1; min-width: 0;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--sp-2) var(--sp-4);
+    gap: var(--sp-1) var(--sp-3);
     padding-bottom: var(--sp-2);
   }
   .nav-links > a { font-size: var(--fs-micro); padding-block: var(--sp-1); }
-  .nav-tools { margin-left: var(--sp-2); }
+  /* 按钮组不参与换行，且不收缩 —— 它与品牌同行。
+     ⚠ 2026-10-10：.nav-tools 已从 <nav> 内部移成 .site-bar 的直接子元素
+     （六个 shell 一并改）。放里面时它必然跟着链接一起换行，方案 B 不成立 ——
+     链接占满整行时按钮组被挤到第三条，顶栏实测 134px。现在它与 .nav-links 平级，
+     B 才真正生效：按钮留在品牌行，链接在自己的 flex:1 盒子里换行居中。 */
+  .nav-tools { flex-shrink: 0; }
   .brand-sub { display: none; }
 }
 @media (max-width: 520px) {
   .nav-links > a[data-en] { display: none !important; }
   .nav-links { gap: var(--sp-1) var(--sp-3); }
   .brand-text { display: none; }   /* 只留 brand-dot，为导航腾出整行 */
+  /* 520px 以下第一行只剩 brand-dot + 按钮组，宽度够 6 个链接（实测约 280px）
+     完整排在第二行 —— 让 .nav-links 独占整行并居中：
+     实测 390px 下 6 个链接恰好一行（顶栏 92px、两行），
+     比挤成两行后第 2 行只剩「导航」一个要齐整得多。
+
+     ⚠ order 是必需的，不是装饰：DOM 顺序是 brand → nav-links → 按钮组，
+     而 .nav-links 在这里占满 100% 宽，它会把后面的按钮组挤到第三条 ✗
+     （实测顶栏 134px、品牌单独占第一行）。
+     用 order 把按钮组提到链接之前（margin-left:auto 把它推到右侧），
+     链接仍然独占第二行 —— 纯 flex 约束，不引入定位。 */
+  .nav-links { order: 3; width: 100%; flex: 0 0 100%; justify-content: center; }
+  .nav-tools { order: 1; margin-left: auto; }
+  .nav-burger { order: 2; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
