@@ -5,11 +5,15 @@
    依赖 DOM：
      #langBtn  语言按钮      #themeBtn  主题按钮
      #markName 品牌名（用 data-zh-name / data-en-name 提供中英文两种写法）
+     #markSub  品牌副名（**2026-10-10 新增**：中文态显示英文副名，英文态清空）
    存储键：specul-lang (zh|en) / specul-theme (dark|light)
 
    注：早期版本这里叫 #markSub（品牌副标题），当时 brand-name 固定中文、
    副标题放英文。后来中文态的副标题与品牌名撞成同一句话（截图里的「重影」），
-   2026-10-01 起改为品牌名本身随语言切换，副标题已从模板移除。
+   2026-10-01 起改为品牌名本身随语言切换、副标题移除。
+   2026-10-10 用户要求「所有分站都要像首页一样，上面中文下面英文」→ 副标题回来了，
+   但**只在中文态显示**：英文态主名已是英文，副名若还留着就是同一句话显示两遍，
+   正是当初「重影」的成因。所以这里统一处理，全站（含抽屉）行为一致 ✓
    ========================================================================== */
 (function () {
   var root = document.documentElement;
@@ -70,6 +74,18 @@
     if (name) {
       var text = en ? name.dataset.enName : name.dataset.zhName;
       if (text) name.textContent = text;
+    }
+    // 品牌副名（2026-10-10 新增）：中文态显示英文副名，英文态清空并隐藏。
+    // 为什么英文态要清空：英文态主名已经是「Speculative Speculation」，
+    // 副名若是同一句话，左上角就会显示两遍 —— 那正是 2026-10-01 修掉的「重影」。
+    // ⚠ 这段原先只存在于 `www.specul/index.html` 的**页内联脚本**里（只首页有）；
+    //   现在搬进共享层，六站（含手机抽屉）行为一致 ✓
+    var subs = document.querySelectorAll('#markSub, .nav-drawer .brand-sub');
+    for (var i = 0; i < subs.length; i++) {
+      var s = subs[i];
+      var st = en ? (s.dataset.enSub || '') : (s.dataset.zhSub || '');
+      s.textContent = st;
+      s.style.display = st ? '' : 'none';
     }
     try { localStorage.setItem('specul-lang', en ? 'en' : 'zh'); } catch (e) {}
   }
