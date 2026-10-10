@@ -120,8 +120,46 @@ ${items}
   </aside>`;
 }
 
-/** footer —— repo 参数让图谱站链自己的数据仓库（默认图谱仓库，不再链 keel3d） */
-export function footer(repo = 'https://github.com/speculcom/ai-coding-agent-atlas', repoLabel = 'GitHub') {
+/** 页脚「开源」链接的文案（2026-10-10 用户定案：不再叫 GitHub，叫「开源」）
+ *  ⚠ repoLabel 是**原样进 HTML** 的（footer() 不做转义），所以调用方要传就传完整节点。
+ *    统一用这个常量，别再各写各的双节点 —— 之前 models 传「数据仓」、其余传 GitHub，
+ *    同一个位置出现了三种叫法。既然都是指向 markdown 内容仓，就该同名。 */
+export const OPEN_SOURCE_LABEL = '<span data-zh>开源</span><span data-en>Open source</span>';
+
+/** 底部 tab bar —— 手机端「像 App 一样」的固定导航（2026-10-10 用户要求：分站也要有）
+ *
+ *  · 标记与 www 首页完全一致（同样 5 项：首页/学 AI/Agent/模型/更多）；
+ *    样式在共享 brand.css —— 默认 `display:none`，≤768px 才 `display:flex`；
+ *  · 行为**不需要新脚本**：brand.js 已经监听 `.nav-tabbar [aria-controls]` 作为「更多」，
+ *    点它开的就是同一个抽屉（实测 www 上可用）；
+ *  · 页脚留白靠 <body class="has-tabbar"> 触发 brand.css 里的
+ *    `body.has-tabbar .site-footer { padding-bottom: … }` —— 漏了这个类，
+ *    底部 tab bar 会盖住页脚最后一行；
+ *  · 只有 4 个入口 + 「更多」，vg / nav 不单列：和主站一样放进抽屉，
+ *    5 个格子是手机上的舒适密度（6 个挤、4 个太空）。
+ */
+export function tabbar(current) {
+  const items = [
+    { key: 'www', ti: '◎', zh: '首页', en: 'Home', plain: false },
+    { key: 'learn', ti: '▤', zh: '学 AI', en: 'Learn', plain: false },
+    { key: 'agent', ti: '◈', zh: 'Agent', en: 'Agent', plain: true },
+    { key: 'models', ti: '▦', zh: '模型', en: 'Models', plain: false },
+  ].map(({ key, ti, zh, en, plain }) => {
+    const n = NAV.find((x) => x.key === key);
+    const cur = key === current ? ' aria-current="page"' : '';
+    // plain=true 的项中英同名，走单节点（避免英文态出现两个同词）
+    const label = plain ? zh : `<span data-zh>${zh}</span><span data-en>${en}</span>`;
+    return `  <a href="${n.href}"${cur}><span class="ti" aria-hidden="true">${ti}</span>${label}</a>`;
+  }).join('\n');
+
+  return `<nav class="nav-tabbar" aria-label="快捷导航">
+${items}
+  <button type="button" id="tabMore" aria-controls="navDrawer" aria-expanded="false"><span class="ti" aria-hidden="true">⋯</span><span data-zh>更多</span><span data-en>More</span></button>
+</nav>`;
+}
+
+/** footer —— repo 参数让各站链自己的 **markdown 内容仓**（不是部署仓） */
+export function footer(repo = 'https://github.com/speculcom/ai-agent-guide', repoLabel = OPEN_SOURCE_LABEL) {
   // 2026-10-04 修：原先对 nav / www 两项特殊处理，输出**纯中文** `${n.zh}`（无 data-en），
   // 其余项才走双节点 —— 结果英文态的页脚露出「学 AI」「本地模型」等中文。
   // 实测（渲染态审计）：英文态页脚有 2 处中文可见。
@@ -176,13 +214,14 @@ ${accent ? `  <style>:root { --accent: ${accent}; }${headExtra ? '\n' + headExtr
      现在只保留头部那一处 —— 单一真相源，且可被主题覆盖。
      ⚠ 这段注释里**不能出现反引号**：它在模板字符串内部，反引号会提前结束模板
      （写这段时踩了第 4 次；pitfalls 里早有记录）。 -->
-<body class="brand-ambient">
+<body class="brand-ambient has-tabbar">
   <a class="t-skip" href="#main"><span data-zh>跳到主要内容</span><span data-en>Skip to main content</span></a>
 ${header(current)}
   <main id="main">
 ${body}
   </main>
 ${footer(repo, repoLabel)}
+${tabbar(current)}
   <script src="${depth(assetPrefix)}brand.js"></script>${BRIDGE}
 </body>
 </html>
