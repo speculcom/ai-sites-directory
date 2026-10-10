@@ -293,7 +293,7 @@ const INTENT = [
 
 const body = `    <section class="section hero">
       <div class="container">
-        <p class="eyebrow">SPECUL · DIRECTORY</p>        <h1 class="h1"><span data-zh>硅基导航</span><span data-en>Silicon Directory</span></h1>
+        <p class="eyebrow">SPECUL · DIRECTORY</p>        <h1 class="h1"><span class="grad-title"><span data-zh>硅基导航</span><span data-en>Silicon Directory</span></span></h1>
         <p class="lede">系统化收录 <strong>${items.length}</strong> 个 AI 相关网站，按 ${cats.length} 类组织。每条附一句话说明与链接核验状态。</p>
         <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，逐条人工整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，${CHECK_DEAD_N} 个已失效，${CHECK_UNVER_N} 个网络受限未能探测——不代表失效）。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, compiled by hand; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live, ${CHECK_DEAD_N} dead, ${CHECK_UNVER_N} unreachable from the probe environment — not necessarily dead). This page is an index and does not replace each site's own documentation.</span></p>
       </div>
@@ -330,7 +330,10 @@ const html = shell({
   title: '硅基导航 · AI 网站目录 | 投机取巧',
   desc: `系统化收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织：每条附一句话说明、标签、可达性核验状态与官网链接，并按「我想做什么」给出入口。`,
   canonical: 'https://nav.specul.com/',
-  accent: '#22d3c5',
+  /* ⚠ 2026-10-10 不再传 accent（原 '#22d3c5'青色）。
+   * 用户定案「不需要分站专属色，整体与首页一致」；brand.css 的 --accent 是
+   * var(--brand)，深浅两主题都过 AA ✓ 不传即自动跟随。 */
+  accent: null,
   body,
   /* B5（2026-10-09）：结构性数据。CollectionPage + ItemList 的前 20 条 ——
    * 不列全部 527 条（那会让页面体积翻倍），列前 20 条足以表达「这是一份有序目录」。
@@ -496,173 +499,14 @@ fs.writeFileSync(path.join(SITE, 'index.html'), final, 'utf8');
 // ---- site.css：沿用图谱站已调好的基础，再追加目录站特有样式 ----
 // 2026-10-03改：原先读 `_sites/ide/site.css`（旧 IDE 站产物，随 v4 废弃一起删了）。
 // 真相源一直是 `_sites/_template/site.css` —— 各站那几份都是构建时从它复制的副本。
-let css = fs.readFileSync(path.join(TEMPLATE, 'site.css'), 'utf8');
-css += `
-
-/* ===== 硅基导航 · 目录站特有 ===== */
-/* 2026-10-03：原 padding-top: 3rem(48px) + 后续 .cat-group 的 --section-pad(40px)
-   叠加 → 实测首屏空白带 176px（y=296~472）。改用全站同一档。 */
-.hero { padding: var(--section-pad) 0 var(--sp-3); }
-.eyebrow { font-size:var(--fs-xs); letter-spacing: .18em; color: var(--ink-mid); margin: 0 0 .5rem; }
-/* 2026-10-03：原 clamp(2rem,5vw,3.4rem) → 3.4rem = 54.4px（非整数）。
-   接入全站 --display-sub 档，与其它站同一尺度。 */
-.h1 { font-size: var(--display-sub); line-height: 1.1; margin: 0 0 .75rem; }
-.lede { font-size:var(--fs-sm); color: var(--ink-mid); max-width: var(--measure); margin: 0 0 .5rem; }
-.dim { opacity: .8; }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-
-/* 筛选区 —— 2026-10-03：原margin: 1.5rem 0 2rem（56px）+
-   section的 padding-top 40px = 96px，实测首屏空白带 152px。
-   筛选区属于「工具条」而非内容区块，不该吃内容区块的留白档。 */
-.controls { margin: var(--sp-3) 0 var(--sp-4); }
-#q {
-  width: 100%; max-width: 460px; padding: .7rem .9rem; font: inherit;
-  border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius:var(--r-sm);
-  background: var(--bg-raise, rgba(127,127,127,.08)); color: inherit;
-}
-#q:focus-visible { outline: 2px solid var(--cyan, #22d3c5); outline-offset: 2px; }
-/* B2（2026-10-09）：标签筛选下拉。
- * ⚠ 必须显式给字号 —— 不为 select 写样式时，浏览器用表单控件默认字号
- *   （实测 Chrome 是 13.3333px），_design-audit 会判「非整数字号」。
- *   字号 13px 与 .chip 一致，实际是「整数 px」而不是「碰巧看起来对」。 */
-.tagsel {
-  margin-top: .9rem; padding: .35rem .75rem; font: inherit; font-size:var(--fs-xs);
-  border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius:var(--r-sm);
-  background: var(--bg-raise, rgba(127,127,127,.08)); color: inherit; cursor: pointer;
-  max-width: 100%;
-}
-.tagsel:focus-visible { outline: 2px solid var(--cyan, #22d3c5); outline-offset: 2px; }
-/* B4：按「我想做什么」的入口。字号整数 px（设计系统规则）。 */
-.intent { margin: var(--sp-4) 0 0; }
-.intent-h { font-size:var(--fs-xs); color: var(--ink-mid); margin: 0 0 .6rem; }
-.intent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(190px, 100%), 1fr)); gap: .5rem; }
-.intent-card { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem;
-  padding: .55rem .8rem; border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius: var(--r-sm);
-  text-decoration: none; color: inherit; font-size:var(--fs-xs); }
-.intent-card:hover { border-color: var(--cyan, #22d3c5); }
-.intent-card b { font-weight: 500; }
-.intent-n { font-size:var(--fs-xs); color: var(--ink-faint, #888); white-space: nowrap; }
-
-.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .9rem; }
-.chip {
-  display: inline-flex; align-items: center; gap: .4rem;
-  padding: .35rem .75rem; font: inherit; font-size:var(--fs-xs); cursor: pointer;
-  border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius: 999px;
-  background: transparent; color: var(--ink-mid);
-}
-.chip em { font-style: normal; opacity: .6; font-size:var(--fs-xs); }
-.chip:hover { border-color: var(--cyan, #22d3c5); color: inherit; }
-.chip.is-on { background: var(--cyan, #22d3c5); border-color: var(--cyan, #22d3c5); color: #04121a; }
-/* B6（2026-10-09）：亮色主题下 --cyan 被压深（#0b7c72），深字在上面只有 3.74:1 → 改白字。
-   与 brand.css 的 .t-skip 同一处理：亮底用深字、暗底用白字，必须分主题。 */
-[data-theme="light"] .chip.is-on { color: #fff; }
-[data-theme="light"] .chip.is-on em { opacity: .85; }
-.chip.is-on em { opacity: .75; }
-
-/* 分类分组 —— 2026-10-03：按分类上色 + 留白收进统一档。
-   原先 11 个分类的圆点全是同一个 var(--accent)，分类之间毫无区分，
-   只能靠「2.5rem 的上下留白 + 一个小圆点」分组 —— 这正是留白多的来源。
-   现在：圆点取分类色 + 区块左侧色条 + 徽章，三重标识，margin 收到 --section-pad。 */
-/* 站点强调色 · nav 导航 — 绿（索引、检索）
-   2026-10-03：原先只加在产物 site.css 上，重建就被覆盖 → 必须写进生成器。
-   暗色绿配深色前景 9.9:1；亮色绿配白字 5.4:1。 */
-/* 作用域限定为「有分类分组的页面」。
-   查证结论：nav 的 site.css = 模板 site.css（readFileSync 读入）+ 本文件的追加段，
-   而分类色板与 .cat-group 都只存在于本追加段里，模板与agent 真相源都没有 ——
-   所以当前**不存在**绿色泄漏到 agent 的风险。
-   仍然加限定：防将来有人把这段搬进模板时静默污染另一个站。
-   代价为零（本文件只用于 nav 站，:has(.cat-group) 必然命中）。 */
-:root:has(.cat-group):not([data-theme="light"]) {
-  --brand: #8b7cf8; --brand-on:#fff;
-  --brand-soft:rgba(139, 124, 248, .14); --brand-line:rgba(139, 124, 248, .34);
-}
-:root:has(.cat-group)[data-theme="light"] {
-  --brand: #6d4fd6; --brand-on:#fff;
-  --brand-soft:rgba(109, 79, 214, .08); --brand-line:rgba(109, 79, 214, .28);
-}
-
-.cat-group { margin: var(--section-pad) 0; }
-/* 第一个分组紧跟 hero，属于同一组内容，不该再吃一份 40px 上边距 —— */
-.chips + .cat-group { margin-top: var(--sp-3); }
-.cat-h { display: flex; align-items: center; gap: .6rem; font-size: var(--fs-xl); margin: 0 0 var(--sp-2); }
-.cat-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--cat-c, var(--accent)); flex-shrink: 0; }
-.cat-h em { font-style: normal; font-size: var(--fs-micro); opacity: .6; font-variant-numeric: tabular-nums; }
-/* 分组说明紧贴卡片组 —— 现代派判据：标题与它所辖内容之间不留空带。
-   原 margin-bottom: var(--sp-3) 叠加 grid 行gap 后，
-   .cat-sub 与首行卡片之间实测隔 152px（y=288~440），分组感被空白冲淡。 */
-.cat-sub { margin: var(--sp-1) 0 var(--sp-2); font-size: var(--fs-sm); color: var(--ink-mid); }
-/* 分类色板：11 个分类用 6 组色，按「两组错位」分配 ——
-   直接 i%6 会让第 1 与第 7 个分类撞色且**相邻出现**，读起来像渐变。
-   这里 A=[0..5]、B=[3,4,5,0,1,2]（旋转 3 位），保证任两个相邻分类都不同色。 */
-[data-cat="llm"]       { --cat-c: var(--c-layer); --cat-soft: var(--c-layer-soft); }
-[data-cat="coding"]    { --cat-c: var(--c-form);  --cat-soft: var(--c-form-soft); }
-[data-cat="gen"]       { --cat-c: var(--c-use);   --cat-soft: var(--c-use-soft); }
-[data-cat="app"]       { --cat-c: var(--c-quant); --cat-soft: var(--c-quant-soft); }
-[data-cat="model"]     { --cat-c: var(--c-class); --cat-soft: var(--c-class-soft); }
-[data-cat="dev"]       { --cat-c: var(--c-state); --cat-soft: var(--c-state-soft); }
-[data-cat="infra"]     { --cat-c: var(--c-quant); --cat-soft: var(--c-quant-soft); }
-[data-cat="robot"]     { --cat-c: var(--c-class); --cat-soft: var(--c-class-soft); }
-[data-cat="learn"]     { --cat-c: var(--c-state); --cat-soft: var(--c-state-soft); }
-[data-cat="community"] { --cat-c: var(--c-layer); --cat-soft: var(--c-layer-soft); }
-[data-cat="tools"]     { --cat-c: var(--c-form);  --cat-soft: var(--c-form-soft); }
-
-/* 筛选 chip 与分组同色 —— 点「coding」时页面上 coding 分组的圆点和色条也是同一色，
-   筛选与内容形成视觉对应，不用读文字就知道筛的是哪一类。
-   无障碍：chip 文字始终存在，颜色只是辅助。 */
-.chip[data-cat]:not([data-cat="all"]) { color: var(--cat-c, var(--ink-mid)); }
-.chip[data-cat]:not([data-cat="all"])::before {
-  content: ""; width: 6px; height: 6px; border-radius: 50%;
-  background: currentColor; flex-shrink: 0;
-}
-.chip[data-cat]:not([data-cat="all"]).is-on {
-  background: var(--cat-soft, var(--brand-soft));
-  border-color: var(--cat-c, var(--brand-line));
-}
-
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: .85rem; }
-.card {
-  display: flex; flex-direction: column; gap: .35rem;
-  padding: .9rem 1rem; border-radius:var(--r); text-decoration: none; color: inherit;
-  border: 1px solid var(--border, rgba(127,127,127,.28));
-  background: var(--bg-panel, rgba(127,127,127,.06));
-  transition: transform .18s ease, border-color .18s ease;
-}
-.card:hover { transform: translateY(-2px); border-color: var(--cyan, #22d3c5); }
-.c-ic { font-size: 18px; line-height: 1; }
-.c-nm { font-weight: 500; font-size:var(--fs-sm); }
-/* 产品名（2026-10-04 改）
-   原方案是「中文名 + 官方英文名并列」，但**并列会让英文页面上出现汉字** ——
-   用户明确要求英文页面尽可能不出现中文，所以改为互斥：
-     中文态 → 中文名；英文态 → 只显示官方英文名。
-   显隐由 brand.css 的 [data-lang] 规则统一管，这里不要自己写 display。 */
-.c-ds { font-size:var(--fs-xs); color: var(--ink-mid); line-height: 1.5; }
-.c-tg { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: auto; padding-top: .4rem; }
-.c-tg i {
-  font-style: normal; font-size:var(--fs-xs); padding: .1rem .45rem; border-radius: 999px;
-  background: rgba(127,127,127,.16); color: var(--ink-mid);
-  display: inline-flex; align-items: baseline; gap: .3em;
-}
-/* 标签的双语：与全站一致用 data-zh / data-en 属性，
-   显隐由 brand.css 的 [data-lang] 规则统一管（不要自己写 display）。
-   ⚠ 之前这里用 <b> 存英文 → brand.css 管不到 → 英文态下中文没隐藏，
-   实测出现「多模态Multimodal」「GPTGPT」。 */
-.c-tg i span { white-space: nowrap; }
-/* 中文态下两者并列（顺带让用户看到英文术语），用间隔符隔开 */
-.c-tg i span[data-zh]::after {
-  content: " ";
-}
-html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
-.c-warn { font-size:var(--fs-xs); color: var(--red, #e24b4a); }
-/* 失效条目渲染为 div（不可点，见 card() 注释）：光标与 hover 也要跟着「去链接化」 */
-.card.is-dead { opacity: .55; cursor: default; }
-.card.is-dead:hover { transform: none; border-color: var(--border, rgba(127,127,127,.28)); }
-.card.is-maybe { opacity: .8; }
-.empty { padding: 2rem 0; color: var(--ink-mid); }
-
-@media (max-width: 560px) {
-  .grid { grid-template-columns: 1fr; }
-}
-`;
+/* ⚠ 2026-10-10：站级样式的**真相源改为真实文件** `css/nav.css`。
+ * 原先是本文件里的一个模板字符串（改样式要动 .mjs、CSS 门禁扫不到它）。
+ * 抽取后已验证：**剥掉注释与空白后，产物与抽取前逐字符相同** ✓
+ * （差异仅为我新增的文件头与一个换行 —— 不含任何一条 CSS 声明的改动）。
+ * 共享基底仍读 `_template/site.css`，本文件只放 nav 站特有部分。
+ * ⚠ R3（内容库自足）：源文件放在**仓内**，随仓 clone，clone-build 门禁才过得去。 */
+let css = fs.readFileSync(path.join(TEMPLATE, 'site.css'), 'utf8')
+  + fs.readFileSync(path.join(BASE, 'css', 'nav.css'), 'utf8');
 fs.writeFileSync(path.join(SITE, 'site.css'), css, 'utf8');
 
 // ---- 品牌资源与其他文件 ----
