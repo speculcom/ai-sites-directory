@@ -28,7 +28,7 @@ h1 {
   font-weight: 800; letter-spacing: -.035em; margin: 0 0 var(--sp-4);
 }
 .lede {
-  color: var(--ink-mid); font-size: 17px; line-height: 1.72;
+  color: var(--ink-mid); font-size: var(--lede); line-height: var(--lede-lh);
   max-width: 60ch; margin: 0;
 }
 .hero-meta {
@@ -83,7 +83,7 @@ h1 {
   flex-shrink: 0;
   display: inline-grid; place-items: center;
   width: 18px; height: 18px; border-radius: 50%;
-  font-size: 11px; font-weight: 700; line-height: 1;
+  font-size: undefined; font-weight: 700; line-height: 1;
   color: var(--accent, var(--brand));
   border: 1px solid color-mix(in srgb, var(--accent, var(--brand)) 42%, transparent);
   background: color-mix(in srgb, var(--accent, var(--brand)) 11%, transparent);
@@ -149,7 +149,7 @@ h1 {
 .status-mark {
   width: 24px; height: 24px; border-radius: 50%;
   display: grid; place-items: center;
-  font-size: 13px; font-weight: 700;
+  font-size: undefined; font-weight: 700;
   color: var(--accent, var(--brand));
   border: 1px solid color-mix(in srgb, var(--accent, var(--brand)) 45%, transparent);
   background: color-mix(in srgb, var(--accent, var(--brand)) 12%, transparent);
@@ -187,7 +187,7 @@ h1 {
 .mark {
   width: 38px; height: 38px; flex-shrink: 0;
   display: grid; place-items: center;
-  font-size: 15px; font-weight: 700; letter-spacing: -.01em;
+  font-size: undefined; font-weight: 700; letter-spacing: -.01em;
   border-radius:var(--r-sm);
   color: var(--card-accent, var(--accent, var(--brand)));
   background: color-mix(in srgb, var(--card-accent, var(--accent, var(--brand))) 13%, transparent);
@@ -305,7 +305,7 @@ table.src a:hover { text-decoration: underline; }
 .td-mark {
   display: inline-grid; place-items: center;
   width: 22px; height: 22px; border-radius:var(--r-sm);
-  font-size: 11px; font-weight: 700; vertical-align: -5px; margin-right: 8px;
+  font-size: undefined; font-weight: 700; vertical-align: -5px; margin-right: 8px;
   color: var(--card-accent, var(--accent, var(--brand)));
   background: color-mix(in srgb, var(--card-accent, var(--accent, var(--brand))) 14%, transparent);
   border: 1px solid color-mix(in srgb, var(--card-accent, var(--accent, var(--brand))) 30%, transparent);
@@ -413,7 +413,7 @@ th.w-28 { width: 112px; } th.w-52 { width: 208px; }
 }
 .back:hover { color: var(--accent, var(--brand)); }
 .detail-head { display: flex; align-items: flex-start; gap: var(--sp-3); margin-bottom: var(--sp-4); }
-.detail-head .mark { width: 52px; height: 52px; font-size: 20px; border-radius:var(--r); }
+.detail-head .mark { width: 52px; height: 52px; font-size: undefined; border-radius:var(--r); }
 .detail-head h1 {
   /* 2026-10-03：原 --fs-2xl(30px) → 实测详情页 h1 仅 30px，而首页 66px，差 2.2 倍。
      这条规则特异性 (0,1,1) 高于 brand.css 的裸 h1，所以必须在这里改才生效。 */
@@ -509,6 +509,17 @@ dl.axes { margin: 0; }
 .crumbs a:hover { color: var(--brand); }
 .crumbs span[aria-current="page"] { color: var(--ink); }
 .crumbs > * + *::before { content: "/"; margin-right: 6px; color: var(--ink-faint); }
+/* ==========================================================================
+   nav.css —— 本文件是 **源**，构建时追加到 `site/site.css` 末尾。
+   --------------------------------------------------------------------------
+   2026-10-10 从 `_data/nav/build-site.mjs` 的内嵌模板字符串原样抽出 ✓
+   共享基底（顶栏 / 页脚 / 卡片 / 表格等通用组件）仍由构建时读
+   `_sites/_template/site.css` 提供，本文件只放 **nav 站特有**的部分。
+
+   ⚠ 本文件**只允许用 brand.css 的 token**：不许写裸色值、不许写裸 px 字号。
+     由 `_audit/token-purity.mjs` 强制 ✓
+   ========================================================================== */
+
 
 
 /* ===== 硅基导航 · 目录站特有 ===== */
@@ -518,7 +529,7 @@ dl.axes { margin: 0; }
 .eyebrow { font-size:var(--fs-xs); letter-spacing: .18em; color: var(--ink-mid); margin: 0 0 .5rem; }
 /* 2026-10-03：原 clamp(2rem,5vw,3.4rem) → 3.4rem = 54.4px（非整数）。
    接入全站 --display-sub 档，与其它站同一尺度。 */
-.h1 { font-size: var(--display-sub); line-height: 1.1; margin: 0 0 .75rem; }
+.h1 { margin: 0 0 .75rem; }
 .lede { font-size:var(--fs-sm); color: var(--ink-mid); max-width: var(--measure); margin: 0 0 .5rem; }
 .dim { opacity: .8; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -532,7 +543,7 @@ dl.axes { margin: 0; }
   border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius:var(--r-sm);
   background: var(--bg-raise, rgba(127,127,127,.08)); color: inherit;
 }
-#q:focus-visible { outline: 2px solid var(--cyan, #22d3c5); outline-offset: 2px; }
+#q:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
 /* B2（2026-10-09）：标签筛选下拉。
  * ⚠ 必须显式给字号 —— 不为 select 写样式时，浏览器用表单控件默认字号
  *   （实测 Chrome 是 13.3333px），_design-audit 会判「非整数字号」。
@@ -543,7 +554,7 @@ dl.axes { margin: 0; }
   background: var(--bg-raise, rgba(127,127,127,.08)); color: inherit; cursor: pointer;
   max-width: 100%;
 }
-.tagsel:focus-visible { outline: 2px solid var(--cyan, #22d3c5); outline-offset: 2px; }
+.tagsel:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
 /* B4：按「我想做什么」的入口。字号整数 px（设计系统规则）。 */
 .intent { margin: var(--sp-4) 0 0; }
 .intent-h { font-size:var(--fs-xs); color: var(--ink-mid); margin: 0 0 .6rem; }
@@ -551,9 +562,9 @@ dl.axes { margin: 0; }
 .intent-card { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem;
   padding: .55rem .8rem; border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius: var(--r-sm);
   text-decoration: none; color: inherit; font-size:var(--fs-xs); }
-.intent-card:hover { border-color: var(--cyan, #22d3c5); }
+.intent-card:hover { border-color: var(--cyan); }
 .intent-card b { font-weight: 500; }
-.intent-n { font-size:var(--fs-xs); color: var(--ink-faint, #888); white-space: nowrap; }
+.intent-n { font-size:var(--fs-xs); color: var(--ink-faint); white-space: nowrap; }
 
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .9rem; }
 .chip {
@@ -563,11 +574,12 @@ dl.axes { margin: 0; }
   background: transparent; color: var(--ink-mid);
 }
 .chip em { font-style: normal; opacity: .6; font-size:var(--fs-xs); }
-.chip:hover { border-color: var(--cyan, #22d3c5); color: inherit; }
-.chip.is-on { background: var(--cyan, #22d3c5); border-color: var(--cyan, #22d3c5); color: #04121a; }
+.chip:hover { border-color: var(--cyan); color: inherit; }
+.chip.is-on { background: var(--cyan); border-color: var(--cyan); color: var(--cyan-on); }
 /* B6（2026-10-09）：亮色主题下 --cyan 被压深（#0b7c72），深字在上面只有 3.74:1 → 改白字。
-   与 brand.css 的 .t-skip 同一处理：亮底用深字、暗底用白字，必须分主题。 */
-[data-theme="light"] .chip.is-on { color: #fff; }
+   与 brand.css 的 .t-skip 同一处理：亮底用深字、暗底用白字，必须分主题。
+   ⚠ 2026-10-10：这两套前景色已提为共享 token `--cyan-on`（暗 #04121a / 亮 #fff），
+      本站的 `[data-theme="light"]` 覆写随之删除 —— 否则又是两份配方。 */
 [data-theme="light"] .chip.is-on em { opacity: .85; }
 .chip.is-on em { opacity: .75; }
 
@@ -584,14 +596,15 @@ dl.axes { margin: 0; }
    所以当前**不存在**绿色泄漏到 agent 的风险。
    仍然加限定：防将来有人把这段搬进模板时静默污染另一个站。
    代价为零（本文件只用于 nav 站，:has(.cat-group) 必然命中）。 */
-:root:has(.cat-group):not([data-theme="light"]) {
-  --brand: #8b7cf8; --brand-on:#fff;
-  --brand-soft:rgba(139, 124, 248, .14); --brand-line:rgba(139, 124, 248, .34);
-}
-:root:has(.cat-group)[data-theme="light"] {
-  --brand: #6d4fd6; --brand-on:#fff;
-  --brand-soft:rgba(109, 79, 214, .08); --brand-line:rgba(109, 79, 214, .28);
-}
+/* ⚠ 2026-10-10：原先这里有两个 `:root:has(.cat-group)[…data-theme…]` 块，
+   各自重新声明 `--brand / --brand-on / --brand-soft / --brand-line`。
+   查证：**四个值与 brand.css 逐一相同**（暗 #8b7cf8 / #fff / rgba(139,124,248,.14) / .34，
+   亮 #6d4fd6 / #fff / rgba(109,79,214,.08) / .28）——
+   v6 把 nav 的绿色 accent 改成主站紫之后，这里就变成了**纯重复配方**。
+   留着它 = 同一份配方写两遍，改一处忘一处就静默分叉 ✗
+   原来的作用域限定（`:has(.cat-group)`）本意是防污染其它站；
+   但既然值已与共享层相同，污染不可能发生 —— 整段删除 ✓
+   （分类色板与 .cat-group 本身在下面，未受影响。） */
 
 .cat-group { margin: var(--section-pad) 0; }
 /* 第一个分组紧跟 hero，属于同一组内容，不该再吃一份 40px 上边距 —— */
@@ -639,8 +652,8 @@ dl.axes { margin: 0; }
   background: var(--bg-panel, rgba(127,127,127,.06));
   transition: transform .18s ease, border-color .18s ease;
 }
-.card:hover { transform: translateY(-2px); border-color: var(--cyan, #22d3c5); }
-.c-ic { font-size: 18px; line-height: 1; }
+.card:hover { transform: translateY(-2px); border-color: var(--cyan); }
+.c-ic { font-size: var(--fs-lg); line-height: 1; }
 .c-nm { font-weight: 500; font-size:var(--fs-sm); }
 /* 产品名（2026-10-04 改）
    原方案是「中文名 + 官方英文名并列」，但**并列会让英文页面上出现汉字** ——
@@ -664,7 +677,7 @@ dl.axes { margin: 0; }
   content: " ";
 }
 html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
-.c-warn { font-size:var(--fs-xs); color: var(--red, #e24b4a); }
+.c-warn { font-size:var(--fs-xs); color: var(--red); }
 /* 失效条目渲染为 div（不可点，见 card() 注释）：光标与 hover 也要跟着「去链接化」 */
 .card.is-dead { opacity: .55; cursor: default; }
 .card.is-dead:hover { transform: none; border-color: var(--border, rgba(127,127,127,.28)); }
@@ -674,3 +687,4 @@ html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
 @media (max-width: 560px) {
   .grid { grid-template-columns: 1fr; }
 }
+
