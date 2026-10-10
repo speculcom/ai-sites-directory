@@ -33,11 +33,16 @@
    *
    * 注意墨色也随之改用首页的暖紫系（#f6f2ff / #c3b8dd / #9b8fb8）——
    * 它们比原来的冷灰更亮，对比度只会更好；`--ink-faint` 共享层原本没有对应值，
-   * 按新底重算为 #7f8792（#78808c 在新底 #221c34 上只有 4.10:1，不够 AA）。 */
-  --bg:        #16121f;
-  --bg-raise:  #1c1729;
-  --bg-panel:  #221c34;
-  --bg-inset:  #1a1528;
+   * 按新底重算为 #7f8792（#78808c 在新底 #221c34 上只有 4.10:1，不够 AA）。
+   *
+   * ⚠ 2026-10-10 用户「暗色版底色再黑一点」→ #16121f → #100d18，
+   *   面板/嵌入档按同比例下移（#221c34 → #1b1628 等）。
+   *   **压暗底色会连带改变彩色底上的文字对比度**（a11y 探针里那些
+   *   「on rgb(...)」的数值全部会变），所以改完必须重跑 `a11y-contrast --strict` ✓ */
+  --bg:        #07060e;
+  --bg-raise:  #0b0913;
+  --bg-panel:  #100d1a;
+  --bg-inset:  #0a0814;
 
   --line:        rgba(255, 255, 255, .1);
   --line-mid:    rgba(255, 255, 255, .18);
@@ -73,6 +78,37 @@
   /* 功能青：仅用于「可交互 / 数据」这类功能性提示 */
   --cyan:      #3ddbc8;
   --cyan-soft: rgba(61, 219, 200, .12);
+
+  /* ══════════════════════════════════════════════════════════════════
+     分类色盘 · 六色（2026-10-10 新增 · 从首页内联样式**提为共享 token**）
+     ──────────────────────────────────────────────────────────────────
+     为什么提上来：这套 6 色原先只写在 `www.specul/index.html` 的**页内联
+     `<style>`** 里 —— `brand.css` 里根本没有，于是**其余五站想用也用不了** ✗。
+     而「色彩丰富」这件事全靠它：affinity 探针实测**只有首页和 nav 的暖色
+     占比是 0.31，其余四站是 0** —— 冷紫一片，正是「过于严肃」的来源。
+
+     为什么是分类色而不是分站色：用户 2026-10-10 定案「不需要分站专属色，
+     整体与首页一致即可」。所以这 6 色按**内容类别**用（哪一类内容就上哪一色），
+     六个站共用同一套 ✓ —— 既满足「色彩丰富」，又不违反「不要分站主题色」。
+
+     三档用法（照搬首页已验证的模式）：
+       --cat-X      装饰面：大色块、图表、卡片顶条、渐变端点
+       --cat-X-soft 同色 20% 透明：底色块、标签底
+       --cat-X-ink  提亮版：**文字专用**，保证 WCAG AA
+
+     ⚠ 数值照搬首页，因为它已在 28 页 × 明暗两主题下通过 AA（0 违规）✓。
+       若要改任何一个值，必须重跑 `_audit/a11y-contrast.mjs 4321 --strict`
+       —— 玫红/青柠这类浅色降到白底就不达标了 ✗。
+
+     暗色主题（浅底上的深前景 → ink 取更亮的同色相）。
+     ⚠ 这 12 个值原先定义在首页内联 `body.brand-ambient` 下，
+       作用域比 `:root` 窄；提到 `:root` 后**六站都可用**，首页行为不变 ✓。 */
+  --cat-violet:      #a78bfa;   --cat-violet-ink:  #c4b0ff;   --cat-violet-soft: rgba(167, 139, 250, .2);
+  --cat-rose:        #ff7ba1;   --cat-rose-ink:    #ff9ab8;   --cat-rose-soft:   rgba(255, 92, 138, .2);
+  --cat-amber:       #ffc35c;   --cat-amber-ink:   #ffcf7a;   --cat-amber-soft:  rgba(255, 176, 58, .2);
+  --cat-teal:        #3ad4cc;   --cat-teal-ink:    #5fd8d2;   --cat-teal-soft:   rgba(18, 184, 176, .2);
+  --cat-blue:        #63b0ff;   --cat-blue-ink:    #8cc6ff;   --cat-blue-soft:   rgba(59, 158, 255, .2);
+  --cat-lime:        #a3e34a;   --cat-lime-ink:    #b6e56a;   --cat-lime-soft:   rgba(132, 204, 22, .2);
 
   /* 状态色：语义固定，不作装饰 */
   --ok:    #4ade80;   /* 已核验 */
@@ -146,6 +182,9 @@
   --fs-base:  16px;     /* 正文（原 15）—— 这一档是「读起来累不累」的关键 */
   --fs-lg:    19px;     /* 卡片标题（原 18）*/
   --fs-xl:    23px;     /* 区块标题（原 22）*/
+  /* 大号数字（首页与 models 的统计数）—— 2026-10-10 新增。
+     原来各站写死 24px/30px 不一，改这一个档即六站统一。 */
+  --fs-stat:  24px;
   --fs-2xl:   var(--display-sub);
   /* 首屏标题**接入 --display**（2026-10-03）。原先 --fs-3xl 自己写死 clamp(40px,6vw,60px)，
      与内容层各站各写的 clamp 互不相干 —— 实测六站 h1 落在 30/34/40/54/60px 五档。
@@ -305,6 +344,25 @@
   --vio: var(--brand);
   --grad-text: var(--brand);
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ── 标题渐变（2026-10-10 新增 · 提为共享组件）─────────────────────
+     用户要求：「各个分站的标题都跟首页一样有一点渐变色」。
+     渐变原先只写在 `www.specul/index.html` 的 `.hp-hero h1 em` 里，
+     其余五站没有 —— 现在提成共享类 `.grad-title`，六站同一份。
+
+     三个色标取自上面的 `--cat-*` 色盘（玫红 → 紫 → 青），
+     即首页那一组；**没有新增任何色值** ✓
+
+     ⚠ `color: transparent` + `background-clip: text` 的组合有个已知副作用：
+       **渐变文字不能被 a11y-contrast 探针测到对比度**（探针把它归入
+       「无法测量（渐变文字等）」那一类）。所以：
+         · 深浅两主题的渐变色标必须**人工**保证可读，浅底那套已按 AA 压暗
+         · `_audit/gradient-contrast.mjs` 单独量渐变，**改这三个色必须跑它**
+     ⚠ 不要给整段 h1 上渐变 —— 副标题、说明文字用渐变会掉可读性。
+       只包「标题里那一句要强调的字」。 */
+  --grad-title-from: var(--cat-rose);
+  --grad-title-mid:  var(--cat-violet);
+  --grad-title-to:   var(--cat-teal);
 }
 
 
@@ -362,6 +420,16 @@
 
   --cyan:      #0b7c72;
   --cyan-soft: rgba(13, 148, 136, .1);
+
+  /* 分类色盘 · 亮色主题（2026-10-10 · 与暗色同一组，值取自首页内联）
+     ⚠ 亮色下 `ink` 是**压暗版**（原首页值），因为浅底上浅色文字达不到 AA。
+       改任何一个值都必须重跑 `a11y-contrast --strict`。 */
+  --cat-violet:      #7c5cff;   --cat-violet-ink:  #5b34e8;   --cat-violet-soft: rgba(124, 92, 255, .13);
+  --cat-rose:        #ff5c8a;   --cat-rose-ink:    #c81e56;   --cat-rose-soft:   rgba(255, 92, 138, .13);
+  --cat-amber:       #ffb03a;   --cat-amber-ink:   #a86a00;   --cat-amber-soft:  rgba(255, 176, 58, .16);
+  --cat-teal:        #12b8b0;   --cat-teal-ink:    #07706a;   --cat-teal-soft:   rgba(18, 184, 176, .13);
+  --cat-blue:        #3b9eff;   --cat-blue-ink:    #0b6fc4;   --cat-blue-soft:   rgba(59, 158, 255, .13);
+  --cat-lime:        #84cc16;   --cat-lime-ink:    #4d8a00;   --cat-lime-soft:   rgba(132, 204, 22, .14);
 
   --ok:    #15803d;
   --warn:  #b45309;
@@ -452,10 +520,13 @@ code, kbd, pre { overflow-wrap: anywhere; }
 .brand-ambient::before {
   content: "";
   position: fixed; inset: 0; z-index: -1; pointer-events: none;
-  background:
-    radial-gradient(1100px 620px at 78% -8%,
-      color-mix(in srgb, var(--brand) 16%, transparent), transparent 62%),
-    linear-gradient(180deg, #0a0e15 0%, var(--bg) 40%, #05070b 100%);
+  /* ⚠ 2026-10-10 用户「底色里这些渐变可以去掉」→ 去掉那圈品牌色辉光，
+     底色改为**平涂** --bg。
+     顺带修掉一处旧账：原来这里的 `linear-gradient(180deg, #0a0e15 … #05070b)`
+     里那两个色值是 **v6 统一之前**的冷灰蓝底，与当时的紫底早就不是一回事了 ——
+     属于「改了 token 忘了改硬编码」的漏网之鱼 ✓ 现在随 --bg 一起走。
+     亮色主题保留竖向渐变（浅色下它给页面一点纵深，用户没提出要动）。 */
+  background: var(--bg);
 }
 .brand-ambient::after {
   content: "";
@@ -477,6 +548,30 @@ code, kbd, pre { overflow-wrap: anywhere; }
   background-image:
     linear-gradient(rgba(15,23,42,.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(15,23,42,.05) 1px, transparent 1px);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   标题渐变（2026-10-10 · 提为共享组件）
+   --------------------------------------------------------------------------
+   用户要求：各分站的标题跟首页一样带渐变。原先它只存在于首页内联样式的
+   `.hp-hero h1 em` 里，其余五站没有 —— 现在六站共用这一份 ✓
+   用法：<h1>把要强调的那几个字<span class="grad-title">包起来</span></h1>
+   ⚠ 见 :root 里 --grad-title-* 的注释：渐变文字测不到对比度，
+     改色必须跑 `_audit/gradient-contrast.mjs`。
+   ══════════════════════════════════════════════════════════════════════ */
+.grad-title {
+  background: linear-gradient(100deg,
+    var(--grad-title-from),
+    var(--grad-title-mid) 48%,
+    var(--grad-title-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* 降级：不支持 background-clip:text 的浏览器上至少还是品牌紫，
+   而不是「透明字看不见」—— 这条比看起来重要 */
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .grad-title { color: var(--brand); }
 }
 
 /* ══════════════════════════════════════════════════════════════════════
