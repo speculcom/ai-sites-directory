@@ -355,7 +355,6 @@ const html = shell({
     },
   },
   repo: 'https://github.com/speculcom/ai-sites-directory',
-  repoLabel: 'GitHub',
   headExtra: '',
 });
 
