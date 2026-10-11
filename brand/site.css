@@ -23,16 +23,13 @@
   content: ""; width: 14px; height: 2px; border-radius:var(--r-xs);
   background: var(--accent, var(--brand)); flex-shrink: 0;
 }
-h1 {
-  font-size: var(--fs-3xl); line-height: var(--lh-tight);
-  /* ⚠ 2026-10-10：删掉了这里的 `letter-spacing: -.035em`。
-     共享层 brand.css 的 h1 已经是 -.028em（六站一致），而这条**无选择器前缀的 h1**
-     排在 brand.css 之后、权重相同 → 把它盖掉了：
-     agent / nav / vg 的 h1 字距实测 -1.61px，www 是 -1.288px，
-     同样 46px 的主标松紧却不同（ui-parity 报出 3 种取值）。
-     h1 属于骨架，字距必须由 brand.css 一处决定。 */
-  font-weight: 800; margin: 0 0 var(--sp-4);
-}
+/* ⚠ 2026-10-10：整块删除这个 `h1` 规则。
+   它与共享层 brand.css 的 h1 是**同一份东西的副本**，只差两个值：
+     · font-size: var(--fs-3xl) —— 而 --fs-3xl = var(--display) = var(--display-sub)，
+       与共享层完全相同（只是绕了一圈）
+     · margin: 0 0 var(--sp-4) —— 共享层是 0，于是这一站的主标多出 24px 下边距，
+       六站实测：agent/vg 20px、models 13.8px、learn/nav 12px、www 10px、legal 0px
+   h1 属骨架，样式只能由 brand.css 一处决定；副本留着就是下一次分叉的起点。 */
 .lede {
   color: var(--ink-mid); font-size: var(--lede); line-height: var(--lede-lh);
   max-width: 60ch; margin: 0;
