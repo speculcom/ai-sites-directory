@@ -3,7 +3,7 @@
   "assets": {
     "brand.css": {
       "source": "www.specul/brand.css",
-      "sha256": "96263b463a9f0d9a1413432067f246d49f8d824da5b9867aaafc9149dd5fb214"
+      "sha256": "53c13f8c7fb18eb290d0e9c5d2517e516ed1a7d01cde02f20d0fc6e7ef62826d"
     },
     "brand.js": {
       "source": "www.specul/brand.js",
@@ -15,7 +15,7 @@
     },
     "site.css": {
       "source": "_sites/_template/site.css",
-      "sha256": "848ccbb4fba6403d1a6c5f55b769611b7cc98d138dc422c24982ac2a6c546304"
+      "sha256": "7a75f75838ab1a190e944c9e45de5301d1a1c86fff3fee7ee99a9fb79a934ed7"
     }
   }
 }
