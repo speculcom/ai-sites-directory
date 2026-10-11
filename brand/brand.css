@@ -511,7 +511,12 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; padding: 0; }
    与首页的 66px 差 2.2 倍 —— 六站详情页因此「小一号」。
    「所有 h1 都必须命中规则」比「给每个 h1 都加类」更可靠：
    裸标签规则兜底，内容层想单独调时再显式覆盖。 */
-h1 { font-size: var(--display-sub); line-height: var(--lh-tight); font-weight: 800; letter-spacing: -.028em; }
+h1 { font-size: var(--display-sub); line-height: var(--lh-tight); font-weight: 800; letter-spacing: -.028em;
+  /* ⚠ 2026-10-10：主标下边距提升到共享层。
+     原先 brand.css 是 0，而各站自己在别处补：agent/vg 20px、models 13.8px、
+     learn/nav 12px、www 10px、legal 0px —— 同一个站群，主标与首段的间距六种值。
+     骨架间距只能有一处定义。页面若要更紧，用自己的选择器覆盖即可（detail 页就是）。 */
+  margin: 0 0 var(--sp-3); }
 h2 { font-size: var(--h2); line-height: var(--lh-tight); font-weight: 700; letter-spacing: -.018em; }
 ul, ol { list-style: none; }
 img, svg { max-width: 100%; display: block; }
