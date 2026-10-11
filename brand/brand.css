@@ -638,13 +638,19 @@ h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
   gap: var(--sp-4); min-height: 66px; padding-block: var(--sp-2);
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
+/* 品牌点 —— 2026-10-10 统一到首页取值。
+   原先共享层是 9px / 3px 圆角 / 紫→青，而 www 首页在页内联 CSS 里另写了一份
+   11px / 正圆 / 玫红→紫。两处并存时首页与分站的左上角标记**肉眼可辨不同**
+   （ui-parity 实测：brandDot 宽 11 vs 9、圆角 50% vs 3px）。
+   首页是基准，所以共享层取首页的值，www 那份本地覆盖删掉。 */
 .brand-dot {
-  width: 9px; height: 9px; border-radius: 3px; flex-shrink: 0;
-  background: linear-gradient(135deg, var(--brand), var(--cyan));
-  box-shadow: 0 0 0 4px var(--brand-soft);
+width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0;
+background: linear-gradient(135deg, var(--cat-rose), var(--cat-violet));
+box-shadow: 0 0 0 4px var(--brand-soft);
 }
 .brand-text { display: flex; flex-direction: column; gap: 1px; }
-.brand-name { font-size:var(--fs-sm); font-weight: 700; letter-spacing: .01em; line-height: 1.2; }
+/* 字重 800 = 首页取值（ui-parity 实测原先首页 800 / 分站 700） */
+.brand-name { font-size:var(--fs-sm); font-weight: 800; letter-spacing: .01em; line-height: 1.2; }
 .brand-sub { font-size: 10.5px; color: var(--ink-faint); letter-spacing: .06em; line-height: 1.2; }
 
 .nav-links { display: flex; align-items: center; gap: var(--sp-5); }
@@ -688,10 +694,12 @@ h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
    页脚 —— 三段单行，信息少而准
    ══════════════════════════════════════════════════════════════════════ */
 .site-footer {
-  border-top: 1px solid var(--line);
-  padding-block: var(--sp-5) var(--sp-6);
-  color: var(--ink-faint); font-size: var(--fs-xs);
-  margin-top: auto;
+border-top: 1px solid var(--line);
+/* 上下留白取首页的 22 / 26px（原先共享层是 --sp-5 / --sp-6，桌面下 60px，
+   与首页差一截 —— 六站页脚高度因此不一致）。 */
+padding: 22px 0 26px;
+color: var(--ink-faint); font-size: var(--fs-xs);
+margin-top: auto;
 }
 .foot-row {
   display: flex; flex-wrap: wrap; align-items: center;
@@ -699,12 +707,49 @@ h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
 }
 .foot-brand { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; }
 .foot-copy { color: var(--ink-faint); }
-.foot-links { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-4); }
-.foot-links > a { color: var(--ink-dim); transition: color .16s var(--ease); }
-.foot-links > a:hover { color: var(--ink); }
-.foot-legal-links { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-4); }
-.foot-legal-links > a { color: var(--ink-faint); }
-.foot-legal-links > a:hover { color: var(--ink-mid); }
+/* 页脚 —— 2026-10-10 统一到首页取值（药丸链接 + 22/26px 上下留白）。
+   原先共享层是**纯文字链接**（无底色无边框、字重 400），而 www 首页在页内联 CSS
+   里另写了一套**药丸**（底色 + 1px 边框 + 字重 750 + 999px 圆角）。
+   结果同一个页脚位置，六站两样（ui-parity 实测：footLink 字重 750 vs 400、
+   页脚下内边距 26px vs 60px）。首页是基准，故共享层取药丸版，www 本地那套删除。
+
+   ⚠ `.foot-links > a` 与 `.foot-links a` 的选择器权重不同，这里统一用 `>` ——
+   分站页脚里的链接都是 nav 的直接子元素，不需要给嵌套的 span 上样式。 */
+.foot-links { display: flex; flex-wrap: wrap; gap: 6px; flex: 0 0 auto; }
+.foot-links > a {
+  display: inline-flex; align-items: center; padding: 5px 12px;
+  border-radius: 999px; color: var(--ink-mid); background: var(--bg-panel);
+  border: 1px solid var(--line); font-size: var(--fs-xs); font-weight: 750;
+  text-decoration: none; transition: border-color .18s, color .18s;
+}
+.foot-links > a:hover { border-color: var(--cat-violet); color: var(--cat-violet-ink); }
+.foot-links > a[aria-current] { color: var(--cat-violet-ink); border-color: var(--cat-violet); }
+.foot-legal-links { display: flex; flex-wrap: wrap; gap: 8px; flex: 0 0 auto; margin-left: auto; }
+.foot-legal-links > a {
+  display: inline-flex; align-items: center; padding: 5px 13px;
+  border-radius: 999px; border: 1px solid var(--line); color: var(--ink-mid);
+  font-size: var(--fs-xs); font-weight: 750; text-decoration: none; transition: border-color .18s, color .18s;
+}
+.foot-legal-links > a:hover { border-color: var(--cat-violet); color: var(--cat-violet-ink); background: var(--cat-violet-soft); }
+
+/* ⚠ 2026-10-10：窄屏页脚药丸会溢出。
+   分站页脚有 10 个药丸（6 站链接 + 开源 + 3 条法律），在 390px 下排成一行
+   需要 510px → 横向溢出（responsive-overflow 门禁报 scrollWidth 510 > 390），
+   页面被撑宽。www 首页页脚链接少（且 ≤768 藏了 .foot-links）所以没暴露 ——
+   **这正是「只按首页验收」的盲区**。
+   现在窄屏把页脚药丸收紧：横向内距 12→9px、字重 750→600、
+   外边距 3px、字号降到 12px，并在 400px 以下让导航药丸换行成两列。 */
+@media (max-width: 768px) {
+  .foot-links, .foot-legal-links { gap: 4px; margin-left: 0; }
+  .foot-links > a, .foot-legal-links > a {
+    padding: 4px 9px; font-size: 12px; font-weight: 600;
+  }
+}
+@media (max-width: 400px) {
+  /* 更窄时导航类药丸（较长文字）换行，避免单行溢出 */
+  .foot-links { width: 100%; }
+  .foot-links > a, .foot-legal-links > a { padding: 4px 8px; font-size: 11.5px; }
+}
 
 /* ══════════════════════════════════════════════════════════════════════
    跳转链接
@@ -819,7 +864,12 @@ html:not(.js-on) .nav-burger { display: none; }
    ══════════════════════════════════════════════════════════════════════ */
 .t-hero {
   font-size: var(--fs-3xl); line-height: var(--lh-tight);
-  font-weight: 800; letter-spacing: -.035em; margin: 0 0 var(--sp-4);
+  /* ⚠ 2026-10-10：删掉了这里的 `letter-spacing: -.035em`。
+     agent / vg 首页的 h1 写的是 `<h1 class="t-hero">`，而 `.t-hero` 权重高于 `h1`，
+     于是这两站的主标字距被这条带走（-1.61px），其余站是 -1.288px ——
+     同样 46px 的字看起来松紧不一样（ui-parity 报出）。
+     h1 属骨架，字距只由上面的 `h1` 一处决定，类名不该另开一份。 */
+  font-weight: 800; margin: 0 0 var(--sp-4);
 }
 .t-h1 {
   /* 2026-10-03：原 --fs-2xl(30px) → 实测 agent 详情页 h1 只有 30px，
@@ -1006,53 +1056,28 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
     --sp-6: 44px; --sp-7: 64px;   /* 2026-10-09：随大间距一起 +10~15%，窄屏尤其需要呼吸 ✓ */
     --container: min(1120px, 90vw);
   }
-  /* 窄屏放不下一行 8 项（实测 320px 视口容器仅 288px，导航需 415px）——
-     改为让导航整体换到第二行并居中，而不是压缩字号或引入横向滚动。
-     全站「无横向滚动条」是硬约束，优先保证它。
+  /* 窄屏（≤900px）顶栏策略 —— **六站完全一致**，2026-10-10 用户定案：
+     顶部只留「品牌 + 主题/语言 + 汉堡」，**文字导航链接全部收进抽屉**。
 
-     ⚠ 2026-10-10 修：原先这里是 `.nav-links { width: 100% }` ——
-     主题/语言/汉堡按钮移进 .nav-links 之后，按钮组也跟着占满整行、
-     **被挤到第三条**去（实测：链接 1 行 + 按钮 1 行，汉堡孤零零占一整行 ✗）。
-     实测四种写法（390 / 360 两个视口）后选「flex:1 + 按钮不换行」：
-       A width:100%      按钮独占一行 ✗
-       B flex:1          按钮与品牌同行、链接下行居中 ✓ ← 采用
-       C 绝对定位        可行但依赖 position，且与粘顶叠层易错位
-       D 链接全隐藏      只剩汉堡，可达性变差（虽然 hamburger 抽屉也有全部链接）
-     B 不引入额外定位，是纯 flex 约束 ✓ */
-  .site-bar { flex-wrap: wrap; row-gap: 0; }
-  .nav-links {
-    flex: 1; min-width: 0;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--sp-1) var(--sp-3);
-    padding-bottom: var(--sp-2);
-  }
-  .nav-links > a { font-size: var(--fs-micro); padding-block: var(--sp-1); }
-  /* 按钮组不参与换行，且不收缩 —— 它与品牌同行。
-     ⚠ 2026-10-10：.nav-tools 已从 <nav> 内部移成 .site-bar 的直接子元素
-     （六个 shell 一并改）。放里面时它必然跟着链接一起换行，方案 B 不成立 ——
-     链接占满整行时按钮组被挤到第三条，顶栏实测 134px。现在它与 .nav-links 平级，
-     B 才真正生效：按钮留在品牌行，链接在自己的 flex:1 盒子里换行居中。 */
-  .nav-tools { flex-shrink: 0; }
+   为什么不再显示链接行（原先这里是方案 B：链接换到第二行居中）：
+     · 底部已有 App 式 tab bar（首页 / 学 AI / Agent / 模型 / 更多），四个入口直接可达；
+     · 顶部再摆 6 个链接 = 同一批入口写两遍，且把顶栏从 66px 撑到 89px（实测）；
+     · 最要紧的是**不一致**：www 早就只留按钮+汉堡，分站却顶着链接行 ——
+       同一个站群，六种站，用户点进来第一眼就是两套顶栏。
+     现在这条规则在**共享层**，谁也别想再单独改（原先它只写在 www 的页内联 CSS 里）。
+
+   可达性没有损失：抽屉里有全部 6 个站，tab bar 有 4 个 + 「更多」开抽屉，
+   `mobile-nav` 门禁就是专门数「390px 下能否到达其余 5 个站」的 ✓ */
+  .site-bar { flex-wrap: nowrap; }
+  .nav-links { flex: 0 0 auto; }          /* 链接已隐藏，只剩一个空盒子，别占宽 */
+  .nav-links > a { display: none; }
+  .nav-tools { flex-shrink: 0; margin-left: auto; }  /* 推到右侧，紧挨汉堡 */
+  .nav-burger { flex-shrink: 0; }
   .brand-sub { display: none; }
 }
 @media (max-width: 520px) {
-  .nav-links > a[data-en] { display: none !important; }
-  .nav-links { gap: var(--sp-1) var(--sp-3); }
-  .brand-text { display: none; }   /* 只留 brand-dot，为导航腾出整行 */
-  /* 520px 以下第一行只剩 brand-dot + 按钮组，宽度够 6 个链接（实测约 280px）
-     完整排在第二行 —— 让 .nav-links 独占整行并居中：
-     实测 390px 下 6 个链接恰好一行（顶栏 92px、两行），
-     比挤成两行后第 2 行只剩「导航」一个要齐整得多。
-
-     ⚠ order 是必需的，不是装饰：DOM 顺序是 brand → nav-links → 按钮组，
-     而 .nav-links 在这里占满 100% 宽，它会把后面的按钮组挤到第三条 ✗
-     （实测顶栏 134px、品牌单独占第一行）。
-     用 order 把按钮组提到链接之前（margin-left:auto 把它推到右侧），
-     链接仍然独占第二行 —— 纯 flex 约束，不引入定位。 */
-  .nav-links { order: 3; width: 100%; flex: 0 0 100%; justify-content: center; }
-  .nav-tools { order: 1; margin-left: auto; }
-  .nav-burger { order: 2; }
+  /* ≤520px 连品牌文字也藏掉，只留 brand-dot —— 与 www 首页同一取舍。 */
+  .brand-text { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
