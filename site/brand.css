@@ -658,7 +658,7 @@ box-shadow: 0 0 0 4px var(--brand-soft);
 .brand-name { font-size:var(--fs-sm); font-weight: 800; letter-spacing: .01em; line-height: 1.2; }
 .brand-sub { font-size: 10.5px; color: var(--ink-faint); letter-spacing: .06em; line-height: 1.2; }
 
-.nav-links { display: flex; align-items: center; gap: var(--sp-5); }
+.nav-links { display: flex; align-items: center; gap: var(--sp-5); margin-left: auto; }
 .nav-links > a {
   /* ⚠ 2026-10-10：13.5px → var(--fs-xs)（14px）。
      半像素字号是「节奏失准」的来源，而且 _design-audit 有「落整数 px」的门禁 ——
@@ -669,7 +669,12 @@ box-shadow: 0 0 0 4px var(--brand-soft);
   padding-block: var(--sp-2); transition: color .16s var(--ease);
 }
 .nav-links > a:hover { color: var(--ink); }
-.nav-links > a[aria-current] { color: var(--ink); font-weight: 600; }
+/* ⚠ 2026-10-10：当前项样式统一取首页（品牌紫 + 字重 800）。
+   原先共享层是 `color: var(--ink); font-weight: 600`（近白半粗），
+   而 www 首页用自己的 site.css 覆盖成品牌紫 800 ——
+   实测：首页 rgb(196,176,255)/800，其余五站 rgb(246,242,255)/600。
+   「我现在在哪个站」应该是全站最醒目的那一个。 */
+.nav-links > a[aria-current] { color: var(--cat-violet-ink); font-weight: 800; }
 .nav-links > a[aria-current]::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 2px;
   height: 2px; border-radius: 2px; background: var(--brand);
@@ -853,6 +858,10 @@ a, code, kbd, samp { overflow-wrap: anywhere; }
 }
 @media (max-width: 768px) {
   .nav-tabbar { display: flex; }
+  /* 窄屏隐藏页脚的站群链接 —— 取首页的做法，提进共享层。
+     理由与首页原注释一致：底部 tab bar（4 入口 + 「更多」开抽屉）已经覆盖同一批入口，
+     页脚再写一遍在 390px 下要多占两三行。HTML 里仍然保留（无脚本也可达）。 */
+  .foot-links { display: none; }
   /* 有 tab bar 的页面要给页脚留出底部空间，否则最后一行被挡住 */
   body.has-tabbar .site-footer, body.has-tabbar .foot { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
 }
