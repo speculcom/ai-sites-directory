@@ -25,7 +25,13 @@
 }
 h1 {
   font-size: var(--fs-3xl); line-height: var(--lh-tight);
-  font-weight: 800; letter-spacing: -.035em; margin: 0 0 var(--sp-4);
+  /* ⚠ 2026-10-10：删掉了这里的 `letter-spacing: -.035em`。
+     共享层 brand.css 的 h1 已经是 -.028em（六站一致），而这条**无选择器前缀的 h1**
+     排在 brand.css 之后、权重相同 → 把它盖掉了：
+     agent / nav / vg 的 h1 字距实测 -1.61px，www 是 -1.288px，
+     同样 46px 的主标松紧却不同（ui-parity 报出 3 种取值）。
+     h1 属于骨架，字距必须由 brand.css 一处决定。 */
+  font-weight: 800; margin: 0 0 var(--sp-4);
 }
 .lede {
   color: var(--ink-mid); font-size: var(--lede); line-height: var(--lede-lh);
