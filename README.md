@@ -8,6 +8,23 @@
 > 站点产物在 **[`speculcom/nav`](https://github.com/speculcom/nav)** → <https://nav.specul.com>
 > 2026-10-04 起拆分（原为本仓既存数据又发 Pages）。
 
+## 我该怎么读
+
+711 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
+
+| 你想干嘛 | 走哪条路 |
+|---|---|
+| 「这个领域有什么现成的」 | 下面的**分类表**，11 类各自多少条、代表站点是哪几个 |
+| 「我知道叫什么名字」 | 直接搜 [`content/`](./content/)，一站一个 md，文件名就是域名 |
+| 「这家的东西还活着吗」 | 看 [`check-results.json`](./check-results.json) 里每条的核验状态和核验日期 |
+| 「我要机器可读」 | [`nav-data.json`](./nav-data.json) 是主数据，其余都是它的派生物 |
+
+一个提醒：`unverifiable`（探测不到）**不等于**站点死了。
+DNS 在本地解析不了、在云端能打开是常事。所以探测受限的条目我们照样保留、链接照旧可点，
+不打「失效」徽标 —— 那只是我们探不到，不是它没了。
+
+站上的版本：<https://nav.specul.com/>
+
 ## 目录结构
 
 | 路径 | 内容 |
@@ -97,6 +114,29 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 
 只索引、只引述、不托管、不解读许可、不给法律意见。
 描述文字为本站原创（CC BY 4.0，署名即可自由使用），被收录网站的信息归各自权利人。
+
+<!-- INDEX:BEGIN 由 _audit/gen-repo-docs.mjs 生成，勿手改 -->
+
+## 内容索引
+
+| 分类 | 条目数 | 代表站点 |
+|---|---|---|
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+
+> 想看全部条目：[`content/`](./content/) 一站一个 md，或 [`nav-data.json`](./nav-data.json)（主数据）。
+
+<!-- INDEX:END -->
 
 ## 实测规模（A8）
 
