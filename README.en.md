@@ -108,6 +108,29 @@ Descriptions are our own original text ([CC BY 4.0](https://creativecommons.org/
 free to reuse with attribution); information about the listed sites belongs to their
 respective rights holders.
 
+<!-- INDEX:BEGIN 由 _audit/gen-repo-docs.mjs 生成，勿手改 -->
+
+## Content index
+
+| Category | Items | Examples |
+|---|---|---|
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+| undefined | 0 |  |
+
+> Full list: [`content/`](./content/) (one markdown file per site) or [`nav-data.json`](./nav-data.json).
+
+<!-- INDEX:END -->
+
 ## Measured size (A8)
 
 <!-- STATS:BEGIN 由 _audit/gen-repo-docs.mjs 生成，勿手改 -->
