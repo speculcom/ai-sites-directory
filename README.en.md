@@ -2,13 +2,30 @@
 
 > 中文版：[README.md](./README.md)
 
-> 中文 | [English](README.md)
-
 The **source repo** for the directory (single source of truth).
 
 > ⚠ **This repo no longer publishes the site directly.**
 > Build output lives in **[`speculcom/nav`](https://github.com/speculcom/nav)** → <https://nav.specul.com>
 > Split on 2026-10-04 (it previously held the data and published Pages at the same time).
+
+## How to read this
+
+711 sites live in one file, which nobody is going to scroll through. Go by where you
+are instead:
+
+| What you want | Where |
+|---|---|
+| "What's already out there in this field?" | The **category table** below — how many entries each of the 11 categories has, plus a few names |
+| "I know what it's called" | Search [`content/`](./content/) — one markdown file per site, named after the domain |
+| "Is this thing still alive?" | `check-results.json` carries a verification status and date for every entry |
+| "I want it machine-readable" | [`nav-data.json`](./nav-data.json) is the source of truth; everything else derives from it |
+
+One caveat worth repeating: `unverifiable` does **not** mean dead. DNS failing on
+your machine while the site opens fine from a cloud host is routine. So entries we
+couldn't probe are kept and stay clickable, without a "broken" badge — we simply
+couldn't reach them, which is not the same as them being gone.
+
+Live version: <https://nav.specul.com/>
 
 ## Layout
 
@@ -108,7 +125,7 @@ Descriptions are our own original text ([CC BY 4.0](https://creativecommons.org/
 free to reuse with attribution); information about the listed sites belongs to their
 respective rights holders.
 
-<!-- INDEX:BEGIN 由 _audit/gen-repo-docs.mjs 生成，勿手改 -->
+<!-- INDEX:BEGIN generated, do not edit -->
 
 ## Content index
 
@@ -133,7 +150,7 @@ respective rights holders.
 
 ## Measured size (A8)
 
-<!-- STATS:BEGIN 由 _audit/gen-repo-docs.mjs 生成，勿手改 -->
+<!-- STATS:BEGIN generated, do not edit -->
 | Item | Measured value |
 |---|---|
 | Items | 711 (public 527 · ext 184) |
