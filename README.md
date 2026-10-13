@@ -115,7 +115,7 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 只索引、只引述、不托管、不解读许可、不给法律意见。
 描述文字为本站原创（CC BY 4.0，署名即可自由使用），被收录网站的信息归各自权利人。
 
-<!-- INDEX:BEGIN 由 _audit/gen-repo-docs.mjs 生成，勿手改 -->
+<!-- INDEX:BEGIN generated, do not edit -->
 
 ## 内容索引
 
@@ -140,7 +140,7 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 
 ## 实测规模（A8）
 
-<!-- STATS:BEGIN 由 _audit/gen-repo-docs.mjs 生成，勿手改 -->
+<!-- STATS:BEGIN generated, do not edit -->
 | 项 | 实测值 |
 |---|---|
 | 条目 | 711 条（对外 527 · ext 184） |
