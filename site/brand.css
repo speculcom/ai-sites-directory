@@ -982,6 +982,15 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-state.is-warn::before { background: var(--warn); }
 .t-state.is-stop::before { background: var(--stop); }
 
+/* ── 学习叙事组件（v7 S22 · 2026-10-18）──────────────────────────────
+   「学完你能…」（.t-take）与「通往下一站」（.t-next）。
+   宪章 1：新语义先在共享层定义一次，各站消费 —— 此前这两句的样式若只写进
+   learn.css，guides / 学习路径 / 其他站要用时必然各抄一套。
+   措辞与内容来自各站的数据层（learn 是 meta.js 的 levels[].take / next）；
+   这里只管版式，不管文案。 */
+.t-take { margin: 4px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-mid); min-width: 0; }
+.t-next { margin: 6px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-dim); min-width: 0; }
+
 /* ══════════════════════════════════════════════════════════════════════
    按钮 —— 两级，形态统一
    ══════════════════════════════════════════════════════════════════════ */
