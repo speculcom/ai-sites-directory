@@ -991,6 +991,26 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-take { margin: 4px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-mid); min-width: 0; }
 .t-next { margin: 6px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-dim); min-width: 0; }
 
+/* ── 学习路径组件（v7 S23 · 2026-10-19）───────────────────────────────
+   三条精选路径（半小时入门 / 一个下午看懂原理 / 一周路线）的版式。
+   宪章 1：先在这里定义一次，learn 首页导览条与 path/<id>/ 路径页共用；
+   禁止在 learn.css 或 build.mjs 的内联 <style> 里再写一套。
+   数据来自 _data/glossary/paths/*.json（真相源），这里只管版式。 */
+.t-pathcard { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); min-width: 0; }
+.t-pathcard h3 { margin: 0 0 2px; font-size: var(--fs-body); font-weight: 700; }
+.t-pathcard .t-pathspan { font-size: var(--fs-xs); color: var(--ink-dim); }
+.t-pathcard .t-pathlead { margin: 6px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-mid); }
+.t-pathsteps { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; counter-reset: tp; }
+.t-pathsteps li { counter-increment: tp; min-width: 0; }
+.t-pathsteps a { display: inline-block; background: var(--bg-raise); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; font-size: var(--fs-xs); text-decoration: none; color: var(--ink-mid); }
+.t-pathsteps a::before { content: counter(tp); opacity: .55; margin-right: 5px; font-variant-numeric: tabular-nums; }
+.t-pathsteps a:hover { border-color: var(--line-strong); color: var(--ink); }
+.t-pathgo { display: inline-block; margin-top: 10px; font-size: var(--fs-xs); text-decoration: none; }
+.t-check { border: 1px dashed var(--line-mid); border-radius: 12px; padding: 12px 16px; margin: 18px 0 0; min-width: 0; }
+.t-check .t-check-h { font-size: var(--fs-xs); letter-spacing: .09em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 6px; }
+.t-check ol { margin: 0; padding-left: 1.2rem; }
+.t-check li { font-size: var(--fs-xs); line-height: 1.7; color: var(--ink-mid); margin: 4px 0; }
+
 /* ══════════════════════════════════════════════════════════════════════
    按钮 —— 两级，形态统一
    ══════════════════════════════════════════════════════════════════════ */
