@@ -1029,6 +1029,19 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-myth .t-myth-said { font-size: var(--fs-sm); color: var(--ink-dim); margin: 0; }
 .t-myth .t-myth-fact { font-size: var(--fs-sm); line-height: 1.7; color: var(--ink); margin: 6px 0 0; }
 
+/* ── 任务入口卡（v7 S43 · 2026-10-19）───────────────────────────────
+   AI 工具首页的「任务视角」入口：「我想让 AI 替我写代码 / 自己搭 agent /
+   跑长任务 / 读文件 / 上网 / 装工具」→ 链到既有分区页与既有筛选参数。
+   宪章 1：先在这里定义一次，agent 站消费；禁止在 site.css 或 build.mjs
+   的内联 <style> 里再写一套。条数从档案现算（R4），这里只管版式。
+   与 .t-guidecard / .t-pathcard 同族：panel 底 + 边框 + 圆角。 */
+.t-taskcard { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); min-width: 0; }
+.t-taskcard h3 { margin: 0 0 2px; font-size: var(--fs-lg); font-weight: 700; }
+.t-taskcard .t-taskn { font-size: var(--fs-xs); color: var(--ink-dim); font-variant-numeric: tabular-nums; }
+.t-taskcard .t-tasklead { margin: 6px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-mid); }
+.t-taskcard .t-tasknote { margin: 6px 0 0; font-size: var(--fs-micro); color: var(--ink-dim); }
+.t-taskgo { display: inline-block; margin-top: 10px; font-size: var(--fs-xs); text-decoration: none; }
+
 /* ── 编年史与版图组件（v7 S39 · 2026-10-19）────────────────────────────
    学 AI 的「版图」一页（关键模型时间线 + 公司版图 + 术语演变）的版式。
    宪章 1：先在这里定义一次，learn.specul/atlas/ 页与后续任何引用共用；
