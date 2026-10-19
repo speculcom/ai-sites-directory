@@ -1029,6 +1029,22 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-myth .t-myth-said { font-size: var(--fs-sm); color: var(--ink-dim); margin: 0; }
 .t-myth .t-myth-fact { font-size: var(--fs-sm); line-height: 1.7; color: var(--ink); margin: 6px 0 0; }
 
+/* ── 编年史与版图组件（v7 S39 · 2026-10-19）────────────────────────────
+   学 AI 的「版图」一页（关键模型时间线 + 公司版图 + 术语演变）的版式。
+   宪章 1：先在这里定义一次，learn.specul/atlas/ 页与后续任何引用共用；
+   禁止在 learn.css 或 build.mjs 的内联 <style> 里再写一套。
+   数据来自 _data/glossary/atlas/atlas.json（真相源），这里只管版式。 */
+.t-atlas-tl { list-style: none; margin: 0; padding: 0; }
+.t-atlas-tl li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.t-atlas-date { font-variant-numeric: tabular-nums; font-size: var(--fs-xs); color: var(--ink-dim); white-space: nowrap; padding-top: 2px; }
+.t-atlas-ev { min-width: 0; }
+.t-atlas-ev h3 { margin: 0; font-size: var(--fs-sm); font-weight: 650; }
+.t-atlas-ev p { margin: 3px 0 0; font-size: var(--fs-xs); line-height: 1.65; color: var(--ink-mid); }
+.t-atlas-org { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); min-width: 0; }
+.t-atlas-org h3 { margin: 0 0 2px; font-size: var(--fs-sm); font-weight: 700; }
+.t-atlas-org .t-atlas-founded { font-size: var(--fs-xs); color: var(--ink-dim); }
+.t-atlas-org p { margin: 6px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-mid); }
+
 /* ══════════════════════════════════════════════════════════════════════
    按钮 —— 两级，形态统一
    ══════════════════════════════════════════════════════════════════════ */
