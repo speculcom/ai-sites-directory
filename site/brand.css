@@ -1042,6 +1042,32 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-taskcard .t-tasknote { margin: 6px 0 0; font-size: var(--fs-micro); color: var(--ink-dim); }
 .t-taskgo { display: inline-block; margin-top: 10px; font-size: var(--fs-xs); text-decoration: none; }
 
+/* ── 边界声明（v7 S44 · 2026-10-20）─────────────────────────────────────
+   AI 工具站三张索引页顶部的「收录什么 / 不收录什么 / 用什么格式」三句。
+   宪章 1：先在这里定义一次，三个分区索引页共用；禁止在 site.css 或
+   build.mjs 的内联 <style> 里再写一套。文案在 build.mjs（内容），这里只管版式。 */
+.t-boundary { background: var(--bg-inset); border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); max-width: 82ch; }
+.t-boundary ol { margin: 0; padding: 0; list-style: none; }
+.t-boundary li { margin: 0 0 var(--sp-2); font-size: var(--fs-sm); line-height: 1.7; color: var(--ink-mid); }
+.t-boundary li:last-child { margin-bottom: 0; }
+.t-boundary li strong { color: var(--ink); }
+
+/* ── 轻档案三要素卡（v7 S45 · 2026-10-20 · D9 修订）─────────────────────
+   对话问答类 / 创作工具类的卡片格式（D4 定案：能做什么 / 数据去哪 /
+   适合谁，三要素，不上八维）。D9 定案：价格不进数据层——「多少钱」一行
+   （.t-lightnote）只放官方定价页链接，本站不存报价数字。
+   宪章 1：先在这里定义一次，AI 工具站消费；禁止在 site.css 或内联再写一套。
+   与 .t-taskcard / .t-guidecard 同族：panel 底 + 边框 + 圆角。
+   数据在 _data/agent-guide/light/light.json（真相源），这里只管版式。 */
+.t-lightcard { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); min-width: 0; }
+.t-lightcard h3 { margin: 0; font-size: var(--fs-lg); font-weight: 700; }
+.t-lightcard .t-lightvendor { margin: 2px 0 0; font-size: var(--fs-xs); color: var(--ink-dim); }
+.t-lightcard dl { margin: var(--sp-3) 0 0; }
+.t-lightcard dt { font-size: var(--fs-micro); color: var(--ink-dim); }
+.t-lightcard dd { margin: 2px 0 var(--sp-2); font-size: var(--fs-sm); line-height: 1.6; color: var(--ink-mid); }
+.t-lightcard .t-lightsrc { font-size: var(--fs-micro); }
+.t-lightcard .t-lightnote { margin: var(--sp-2) 0 0; font-size: var(--fs-micro); color: var(--ink-dim); }
+
 /* ── 编年史与版图组件（v7 S39 · 2026-10-19）────────────────────────────
    学 AI 的「版图」一页（关键模型时间线 + 公司版图 + 术语演变）的版式。
    宪章 1：先在这里定义一次，learn.specul/atlas/ 页与后续任何引用共用；
