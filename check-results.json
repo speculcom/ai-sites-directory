@@ -1,17 +1,19 @@
 {
- "at": "2026-10-08T08:51:11.630Z",
+ "at": "2026-10-21T07:40:00.214Z",
  "source": "nav-data.json",
  "items": 711,
  "checked": 692,
- "probedNow": 1,
+ "probedNow": 139,
  "dedup": true,
- "proxy": false,
- "only": null,
+ "proxy": true,
+ "only": [
+  "unverifiable"
+ ],
  "tally": {
-  "ok": 443,
-  "blocked": 60,
-  "unverifiable": 139,
-  "changed": 50
+  "ok": 535,
+  "blocked": 77,
+  "changed": 56,
+  "unverifiable": 24
  },
  "history": [
   {
@@ -85,6 +87,54 @@
     "blocked": 60,
     "unverifiable": 139,
     "changed": 50
+   }
+  },
+  {
+   "at": "2026-10-21T07:35:47.644Z",
+   "kind": "start",
+   "items": 711,
+   "probedNow": 0,
+   "tally": {
+    "ok": 443,
+    "blocked": 60,
+    "unverifiable": 139,
+    "changed": 50
+   }
+  },
+  {
+   "at": "2026-10-21T07:35:47.647Z",
+   "kind": "done",
+   "items": 711,
+   "probedNow": 0,
+   "tally": {
+    "ok": 443,
+    "blocked": 60,
+    "unverifiable": 139,
+    "changed": 50
+   }
+  },
+  {
+   "at": "2026-10-21T07:36:14.441Z",
+   "kind": "start",
+   "items": 711,
+   "probedNow": 0,
+   "tally": {
+    "ok": 443,
+    "blocked": 60,
+    "unverifiable": 139,
+    "changed": 50
+   }
+  },
+  {
+   "at": "2026-10-21T07:40:00.213Z",
+   "kind": "done",
+   "items": 711,
+   "probedNow": 139,
+   "tally": {
+    "ok": 535,
+    "blocked": 77,
+    "changed": 56,
+    "unverifiable": 24
    }
   }
  ],
@@ -532,218 +582,12 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://chat.openai.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://gemini.google.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://grok.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.perplexity.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://chat.mistral.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://huggingface.co/chat",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://github.com/comfyanonymous/ComfyUI",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://character.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://poe.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.meta.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://aistudio.google.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://devv.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://you.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://search.brave.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://gamma.app",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://writesonic.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.usegalileo.ai",
    "v": "changed",
    "s": 308,
    "to": "https://stitch.withgoogle.com/",
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://leonardo.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.seaart.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.krea.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://clipdrop.co",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://tensor.art",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://pika.art",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://play.ht",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ENOTFOUND",
-   "via": "fetch"
   },
   {
    "lv": "2026-10-08",
@@ -918,14 +762,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://csm.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ENOTFOUND",
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://smythos.com",
    "v": "changed",
    "s": 302,
@@ -970,14 +806,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://readyplayer.me",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ENOTFOUND",
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.tabnine.com",
    "v": "changed",
    "s": 200,
@@ -987,48 +815,12 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.heygen.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://lumalabs.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://invideo.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://suno.ai",
    "v": "changed",
    "s": 308,
    "to": "https://suno.com/",
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.animaapp.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -1045,33 +837,6 @@
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.meshy.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.tripo3d.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://hourone.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -1113,23 +878,6 @@
    "to": "https://www.aistudios.com/",
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://zenvideo.qq.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ENOENT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://robetta.bakerlab.org/",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ENOTFOUND",
-   "via": "fetch"
   },
   {
    "lv": "2026-10-08",
@@ -1343,15 +1091,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.pencil.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ERR_TLS_CERT_ALTNAME_INVALID",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.nvidia.com/en-us/clara/bionemo",
    "v": "ok",
    "s": 200,
@@ -1443,15 +1182,6 @@
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.cloudminds.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -1562,15 +1292,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://beyondimagination.co",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.kuka.com",
    "v": "changed",
    "s": 200,
@@ -1604,29 +1325,11 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://mujoco.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.coppeliarobotics.com",
    "v": "ok",
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://cyberbotics.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -1638,38 +1341,11 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://waymo.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.getcruise.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-spawnSync curl ETIMEDOUT",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.apollo.auto",
    "v": "ok",
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.weride.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-spawnSync curl ETIMEDOUT",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -1751,15 +1427,6 @@
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.xag.cn",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -2178,51 +1845,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://neptune.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "CERT_HAS_EXPIRED",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://civitai.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://llama.meta.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://mistral.ai",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://ai.google.dev/gemma",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://azure.microsoft.com/products/phi",
    "v": "ok",
    "s": 302,
@@ -2244,24 +1866,6 @@
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.tensorflow.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://pytorch.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -2542,15 +2146,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.robustintelligence.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://linea.build",
    "v": "ok",
    "s": 200,
@@ -2573,75 +2168,12 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://ethereum.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://solana.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://bitcoin.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.optimism.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://polkadot.network",
    "v": "changed",
    "s": 301,
    "to": "https://polkadot.com/",
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://near.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://tron.network",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://scroll.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-spawnSync curl ETIMEDOUT",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -2854,24 +2386,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.arweave.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.storj.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://akash.network",
    "v": "ok",
    "s": 200,
@@ -2896,111 +2410,12 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://opensea.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://magiceden.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://rarible.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://superrare.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://looksrare.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://foundation.app",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://etherscan.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://solscan.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://remix.ethereum.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://moralis.io",
    "v": "changed",
    "s": 301,
    "to": "https://developers.moralis.com/",
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.helium.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://ondo.finance",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ECONNRESET",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -3054,15 +2469,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.tradingview.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ECONNRESET",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.maple.finance",
    "v": "ok",
    "s": 200,
@@ -3070,37 +2476,10 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.myneighboralice.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ECONNRESET",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://dune.com",
    "v": "blocked",
    "s": 403,
    "via": "fetch"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://defillama.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ECONNRESET",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.binance.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ECONNRESET",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -3142,24 +2521,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.getmonero.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://z.cash",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://oasisprotocol.org",
    "v": "changed",
    "s": 200,
@@ -3169,182 +2530,11 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://coinmarketcap.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.coingecko.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://jup.ag",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ECONNREFUSED",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://messari.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://tokenterminal.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.okx.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.coinbase.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://uniswap.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.bybit.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.kraken.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.gate.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.kucoin.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.bitget.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ECONNRESET",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://rainbow.me",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ECONNRESET",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://crypto.com",
    "v": "blocked",
    "s": 403,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.gemini.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.htx.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.bitfinex.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.mexc.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://metamask.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -3357,38 +2547,11 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.ledger.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://trustwallet.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://rabby.io",
    "v": "ok",
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://trezor.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -3408,46 +2571,10 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://coin98.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.exodus.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.sushi.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ECONNRESET",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.ether.fi",
    "v": "blocked",
    "s": 429,
    "via": "fetch"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://dydx.trade",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ECONNRESET",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -3472,51 +2599,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.argent.xyz",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://aave.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://makerdao.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://curve.fi",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://pancakeswap.finance",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.eigenlayer.xyz",
    "v": "changed",
    "s": 200,
@@ -3526,38 +2608,11 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://1inch.io",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://compound.finance",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://gmx.io",
    "v": "ok",
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://tether.to",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "ETIMEDOUT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -3817,15 +2872,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://juicebox.money",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.mthreads.com",
    "v": "ok",
    "s": 200,
@@ -3853,24 +2899,6 @@
    "to": "https://paragraph.com/",
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.coindesk.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://bitpay.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -3920,15 +2948,6 @@
    "s": 403,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.arm.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -4046,24 +3065,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.lightelligence.io",
-   "v": "unverifiable",
-   "s": 521,
-   "err": "http521",
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://quantumai.google",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://ionq.com",
    "v": "ok",
    "s": 200,
@@ -4077,15 +3078,6 @@
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.originqc.com.cn",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -4275,15 +3267,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://riscv.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.starfivetech.com",
    "v": "ok",
    "s": 200,
@@ -4412,29 +3395,11 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.docker.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://supabase.com",
    "v": "ok",
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://glitch.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -4451,15 +3416,6 @@
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://firebase.google.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -4513,15 +3469,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://www.behance.net",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://unsplash.com",
    "v": "blocked",
    "s": 401,
@@ -4559,15 +3506,6 @@
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://pages.github.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -4653,24 +3591,6 @@
    "v": "ok",
    "s": 200,
    "via": "fetch"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://news.ycombinator.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.reddit.com/r/MachineLearning",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -5006,15 +3926,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://incompleteideas.net/book/the-book.html",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "DEPTH_ZERO_SELF_SIGNED_CERT",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://docs.anthropic.com/prompt-library",
    "v": "changed",
    "s": 301,
@@ -5024,74 +3935,11 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://flowgpt.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://deepmind.google",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://ai.meta.com/research",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://research.nvidia.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://datasetsearch.research.google.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://www.image-net.org",
    "v": "ok",
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.openstreetmap.org",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://discuss.huggingface.co",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -5119,29 +3967,11 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://hastie.su.domains/ElemStatLearn",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://lexfridman.com/podcast",
    "v": "ok",
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.youtube.com/@MachineLearningStreetTalk",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -5167,24 +3997,6 @@
    "s": 403,
    "via": "curl",
    "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://prompthero.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://www.artbreeder.com",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
   },
   {
    "lv": "2026-10-08",
@@ -5353,15 +4165,6 @@
   },
   {
    "lv": "2026-10-08",
-   "u": "https://cloud.google.com/apigee",
-   "v": "unverifiable",
-   "s": 0,
-   "err": "timeout",
-   "curlErr": "curl-000",
-   "via": "fetch+curl"
-  },
-  {
-   "lv": "2026-10-08",
    "u": "https://bitwarden.com",
    "v": "ok",
    "s": 200,
@@ -5461,6 +4264,1130 @@
    "v": "blocked",
    "s": 403,
    "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://chat.openai.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://gemini.google.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://grok.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.perplexity.ai",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://chat.mistral.ai",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://character.ai",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://poe.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-spawnSync curl ETIMEDOUT",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://huggingface.co/chat",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.meta.ai",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://aistudio.google.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://devv.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://you.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://search.brave.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://gamma.app",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://writesonic.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://github.com/comfyanonymous/ComfyUI",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://play.ht",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOTFOUND",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://readyplayer.me",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOTFOUND",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://zenvideo.qq.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOENT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://csm.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOTFOUND",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://robetta.bakerlab.org/",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOTFOUND",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://beyondimagination.co",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ENOTFOUND",
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.pencil.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ERR_TLS_CERT_ALTNAME_INVALID",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.animaapp.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://cyberbotics.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://mujoco.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.weride.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.getcruise.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "CERT_HAS_EXPIRED",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://leonardo.ai",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.seaart.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.krea.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://clipdrop.co",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://tensor.art",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://pika.art",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.heygen.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://lumalabs.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://invideo.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.meshy.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.tripo3d.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://hourone.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.cloudminds.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://waymo.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-spawnSync curl ETIMEDOUT",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.xag.cn",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://pytorch.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://scroll.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://neptune.ai",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "CERT_HAS_EXPIRED",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://civitai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://llama.meta.com",
+   "v": "changed",
+   "s": 200,
+   "to": "https://dev.meta.ai/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://mistral.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://ai.google.dev/gemma",
+   "v": "changed",
+   "s": 200,
+   "to": "https://deepmind.google/models/gemma/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.tensorflow.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.robustintelligence.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://ethereum.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://solana.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://bitcoin.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.optimism.io",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://near.org",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ETIMEDOUT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://tron.network",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ETIMEDOUT"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.arweave.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ETIMEDOUT"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.storj.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ETIMEDOUT"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://opensea.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ETIMEDOUT"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://magiceden.io",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "ETIMEDOUT"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://ondo.finance",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.myneighboralice.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://rarible.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://superrare.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://looksrare.org",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://foundation.app",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://etherscan.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://solscan.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://remix.ethereum.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.helium.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.getmonero.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://z.cash",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://coinmarketcap.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.coingecko.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.tradingview.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://defillama.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://messari.io",
+   "v": "blocked",
+   "s": 429,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://tokenterminal.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.bitget.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.kucoin.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNREFUSED"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.binance.com",
+   "v": "ok",
+   "s": 202,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.okx.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.coinbase.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://uniswap.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://jup.ag",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.bybit.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.kraken.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.gate.io",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.gemini.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.htx.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.bitfinex.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.mexc.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://metamask.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.ledger.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://trustwallet.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://rainbow.me",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.sushi.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.arm.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://trezor.io",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://coin98.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.exodus.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.argent.xyz",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.ready.co/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://aave.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://makerdao.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://curve.fi",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.curve.finance/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://pancakeswap.finance",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://1inch.io",
+   "v": "changed",
+   "s": 200,
+   "to": "https://1inch.com/",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://compound.finance",
+   "v": "changed",
+   "s": 200,
+   "to": "https://www.compound.xyz/redirect",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://dydx.trade",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://tether.to",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://juicebox.money",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.coindesk.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://bitpay.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.lightelligence.io",
+   "v": "unverifiable",
+   "s": 521,
+   "err": "http521",
+   "via": "curl",
+   "fetchErr": "http521"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.docker.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://deepmind.google",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://glitch.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://pages.github.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://riscv.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://research.nvidia.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://incompleteideas.net/book/the-book.html",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "DEPTH_ZERO_SELF_SIGNED_CERT",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://quantumai.google",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.originqc.com.cn",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://firebase.google.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.behance.net",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://news.ycombinator.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.reddit.com/r/MachineLearning",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://flowgpt.com",
+   "v": "blocked",
+   "s": 403,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://ai.meta.com/research",
+   "v": "unverifiable",
+   "s": 400,
+   "err": "http400",
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://datasetsearch.research.google.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.openstreetmap.org",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.artbreeder.com",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "ECONNREFUSED",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://discuss.huggingface.co",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://hastie.su.domains/ElemStatLearn",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://www.youtube.com/@MachineLearningStreetTalk",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://prompthero.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-21",
+   "u": "https://cloud.google.com/apigee",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
   }
  ]
 }
