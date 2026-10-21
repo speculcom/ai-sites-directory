@@ -36,7 +36,7 @@ export const BRAND = {
  *  「导航」放末位：它是「去别的站」的兜底出口，不是内容层。
  *
  *  2026-10-02 从八项改来，三处变化：
- *   - IDE / CLI / MCP / Harness 四项合成 Agent 一项（四站合成 agent.specul.com 一站三分区）
+ *   - IDE / CLI / MCP / Harness 四项合成 Agent 一项（四站合成 tools.specul.com 一站三分区）
  *   - 新增「学 AI」= learn.specul.com（116 词术语表站）
  *   - 移除「规划中」：keel.specul.com 已于 2026-10-03 整体退役（本地已归档）
  *  2026-10-05 新增「AI 做游戏」= vg.specul.com（第五项，共 6 项）。
@@ -46,13 +46,14 @@ export const BRAND = {
 export const NAV = [
   { key: 'www', href: 'https://specul.com/', zh: '首页', en: 'Home' },
   { key: 'learn', href: 'https://learn.specul.com/', zh: '学 AI', en: 'Learn' },
-  { key: 'agent', href: 'https://agent.specul.com/', zh: 'Agent', en: 'Agent' },
-  { key: 'models', href: 'https://models.specul.com/', zh: '本地模型', en: 'Models' },
+  // v7 S14（2026-10-21）改名：Agent→AI 工具、本地模型→AI 模型、导航→AI 导航（域名切换在 S20）
+  { key: 'agent', href: 'https://tools.specul.com/', zh: 'AI 工具', en: 'AI Tools' },
+  { key: 'models', href: 'https://models.specul.com/', zh: 'AI 模型', en: 'AI Models' },
   // 2026-10-05 新增：AI 做游戏（占位站，内容在P1~P3 建）
   { key: 'vg', href: 'https://vg.specul.com/', zh: 'AI 做游戏', en: 'Vibe Gaming' },
   // ⚠ 作品库（demos.specul.com）**尚未建** —— 占位页还没上线，先不占导航位。
   //   上线时在此加：{ key: 'demos', href: 'https://demos.specul.com/', zh: '作品库', en: 'Demos' }
-  { key: 'nav', href: 'https://nav.specul.com/', zh: '导航', en: 'Directory' },
+  { key: 'nav', href: 'https://nav.specul.com/', zh: 'AI 导航', en: 'AI Directory' },
 ];
 
 /** header —— current 为当前站的 key */
@@ -142,7 +143,7 @@ export function tabbar(current) {
   const items = [
     { key: 'www', ti: '◎', zh: '首页', en: 'Home', plain: false },
     { key: 'learn', ti: '▤', zh: '学 AI', en: 'Learn', plain: false },
-    { key: 'agent', ti: '◈', zh: 'Agent', en: 'Agent', plain: true },
+    { key: 'agent', ti: '◈', zh: '工具', en: 'Tools', plain: false },
     { key: 'models', ti: '▦', zh: '模型', en: 'Models', plain: false },
   ].map(({ key, ti, zh, en, plain }) => {
     const n = NAV.find((x) => x.key === key);

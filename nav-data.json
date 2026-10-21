@@ -7116,9 +7116,9 @@
       "old_c": "tools"
     },
     {
-      "n": "Agent 图谱",
-      "d": "52 个 AI agent 对象分三层对比——自己跑的成品 agent（Cursor、Claude Code、Copilot、Windsurf、Zed、Cline、Aider、Codex CLI 等）、自己搭的运行时与 SDK、MCP 工具（filesystem、git、memory、fetch、playwright 等），每条判断挂官方源，不给总分排名。",
-      "u": "https://agent.specul.com",
+      "n": "AI 工具",
+      "d": "52 个 AI 工具对象分三个分区对比——现成的 AI 工具（Cursor、Claude Code、Copilot、Windsurf、Zed、Cline、Aider、Codex CLI 等）、自己搭（进阶）的运行时与 SDK、给 AI 装的工具（filesystem、git、memory、fetch、playwright 等 MCP），每条判断挂官方源，不给总分排名。",
+      "u": "https://tools.specul.com",
       "tag": "IDE·命令行·Agent",
       "ic": "📊",
       "cat": "app",

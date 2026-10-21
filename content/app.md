@@ -324,9 +324,9 @@
 - 标签：设计
 - 核验：未验证（探测受限：ERR_TLS_CERT_ALTNAME_INVALID，非死链）
 
-## Agent 图谱
+## AI 工具
 
-- 链接：<https://agent.specul.com>
-- 说明：52 个 AI agent 对象分三层对比——自己跑的成品 agent（Cursor、Claude Code、Copilot、Windsurf、Zed、Cline、Aider、Codex CLI 等）、自己搭的运行时与 SDK、MCP 工具（filesystem、git、memory、fetch、playwright 等），每条判断挂官方源，不给总分排名。
+- 链接：<https://tools.specul.com>
+- 说明：52 个 AI 工具对象分三个分区对比——现成的 AI 工具（Cursor、Claude Code、Copilot、Windsurf、Zed、Cline、Aider、Codex CLI 等）、自己搭（进阶）的运行时与 SDK、给 AI 装的工具（filesystem、git、memory、fetch、playwright 等 MCP），每条判断挂官方源，不给总分排名。
 - 标签：IDE·命令行·Agent
 - 核验：ok（2026-10-08）

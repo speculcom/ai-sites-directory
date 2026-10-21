@@ -2,7 +2,7 @@
 
 > English version: [README.en.md](./README.en.md)
 
-硅基导航的**源仓**（唯一真相源）。
+AI 导航的**源仓**（唯一真相源）。
 
 > ⚠ **本仓不再直接发布站点。**
 > 站点产物在 **[`speculcom/nav`](https://github.com/speculcom/nav)** → <https://nav.specul.com>

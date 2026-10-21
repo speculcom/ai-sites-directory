@@ -293,7 +293,7 @@ const INTENT = [
 
 const body = `    <section class="section hero">
       <div class="container">
-        <p class="eyebrow">SPECUL · DIRECTORY</p>        <h1 class="h1"><span class="grad-title"><span data-zh>硅基导航</span><span data-en>Silicon Directory</span></span></h1>
+        <p class="eyebrow">SPECUL · DIRECTORY</p>        <h1 class="h1"><span class="grad-title"><span data-zh>AI 导航</span><span data-en>AI Directory</span></span></h1>
         <p class="lede">系统化收录 <strong>${items.length}</strong> 个 AI 相关网站，按 ${cats.length} 类组织。每条附一句话说明与链接核验状态。</p>
         <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，逐条人工整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，${CHECK_DEAD_N} 个已失效，${CHECK_UNVER_N} 个网络受限未能探测——不代表失效）。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, compiled by hand; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live, ${CHECK_DEAD_N} dead, ${CHECK_UNVER_N} unreachable from the probe environment — not necessarily dead). This page is an index and does not replace each site's own documentation.</span></p>
       </div>
@@ -327,7 +327,7 @@ ${groups}
 
 const html = shell({
   current: 'nav',
-  title: '硅基导航 · AI 网站目录 | 投机取巧',
+  title: 'AI 导航 · AI 网站目录 | 投机取巧',
   desc: `系统化收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织：每条附一句话说明、标签、可达性核验状态与官网链接，并按「我想做什么」给出入口。`,
   canonical: 'https://nav.specul.com/',
   /* ⚠ 2026-10-10 不再传 accent（原 '#22d3c5'青色）。
@@ -341,7 +341,7 @@ const html = shell({
   jsonLd: {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: '硅基导航 · AI 网站目录',
+    name: 'AI 导航 · AI 网站目录',
     url: 'https://nav.specul.com/',
     description: `系统化收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织。`,
     inLanguage: 'zh-Hans',
