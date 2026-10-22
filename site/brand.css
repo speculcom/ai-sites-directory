@@ -742,6 +742,14 @@ margin-top: auto;
 }
 .foot-legal-links > a:hover { border-color: var(--cat-violet); color: var(--cat-violet-ink); background: var(--cat-violet-soft); }
 
+/* v8 T8（L3 商标声明）：页脚固定一句商标行。
+   六站共享 shell 的 footer() 生成；www/learn 手写外壳手改同步。
+   不抢视觉：--ink-faint 最弱层级、--fs-xs 最小字号，一行换行不溢出。 */
+.foot-trademark {
+  margin: 10px 0 0; color: var(--ink-faint); font-size: var(--fs-xs);
+  line-height: 1.5; overflow-wrap: anywhere;
+}
+
 /* ⚠ 2026-10-10：窄屏页脚药丸会溢出。
    分站页脚有 10 个药丸（6 站链接 + 开源 + 3 条法律），在 390px 下排成一行
    需要 510px → 横向溢出（responsive-overflow 门禁报 scrollWidth 510 > 390），

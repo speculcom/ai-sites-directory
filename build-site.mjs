@@ -68,6 +68,19 @@ const CAT_EN = (() => {
   }
 })();
 const check = JSON.parse(fs.readFileSync(path.join(BASE, 'check-results.json'), 'utf8'));
+/* T31（2026-10-22）：「本站有档案 →」标注 —— nav 条目若在 tools 站（tools.specul.com）
+ * 有深度档案，卡片上给出站内互链。映射由主仓生成器 `_audit/gen-nav-dossier-map.mjs`
+ * 算出并 vendored 到本仓 `dossiers.json`（R3 内容库自足：构建只读本仓）。
+ * ⚠ 匹配口径「宁缺勿错」：精确名 + 人工核对过域名的别名表；不同产品不硬凑。
+ * 缺文件 → 空映射可接受降级（标注消失、构建不炸），但必须 warn。 */
+const DOSSIER = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(BASE, 'dossiers.json'), 'utf8'));
+  } catch (e) {
+    console.warn('  ! dossiers.json 读不到，「本站有档案」标注将全部缺失：' + e.message);
+    return {};
+  }
+})();
 /* ⚠ 2026-10-05：TODAY 之前硬编码 '2026-09-30' —— 页面写「链接核验于 2026-09-30」，
  *   但 check-results.json 可能已是更新的核验。**页面声称的核验日期与实际数据不符
  *   = 假出处**（v3 铁律：核验快照必须可回溯）。改为读核验产物的真实时间戳。
@@ -140,9 +153,18 @@ function card(it) {
   const dead = st.cls === 'is-dead';
   const tag = dead ? 'div' : 'a';
   const linkAttrs = dead ? '' : ` href="${esc(it.u)}" target="_blank" rel="noopener"`;
+  /* T31（2026-10-22）：「本站有档案 →」标注。
+   * ⚠ 卡片本体是 <a>（is-dead 时是 <div>）——档案链接**不能嵌套进 <a>**
+   *   （嵌套 <a> 会被 HTML 解析器静默吞掉，本仓踩过）。所以用 .card-wrap 包裹，
+   *   档案 <a> 作为卡片的**兄弟元素**放在卡外下方。
+   * ⚠ 筛选用的 data-cat/data-tags/data-blob 移到 wrapper 上（筛选隐藏的是 wrapper，
+   *   卡片随之隐藏；档案链接也跟着走，不会出现「卡片没了但标注还在」）。 */
+  const dos = DOSSIER[it.n];
+  const dosHref = dos ? `https://tools.specul.com/${dos.split('/')[0]}/${dos.split('/')[1]}.html` : '';
   /* B2（2026-10-09）：`data-tags` 供标签筛选用 —— 存**拆分后的标签**（空格分隔），
    * 不是原始串。分类筛选看 data-cat，标签筛选看它，两者独立、可叠加。 */
-  return `          <${tag} class="card${st.cls ? ' ' + st.cls : ''}" id="${anchorId(it.n)}"${linkAttrs} data-cat="${it.cat}" data-tags="${esc(tags.join(' '))}" data-blob="${esc(searchBlob)}">
+  return `          <div class="card-wrap" data-cat="${it.cat}" data-tags="${esc(tags.join(' '))}" data-blob="${esc(searchBlob)}">
+          <${tag} class="card${st.cls ? ' ' + st.cls : ''}" id="${anchorId(it.n)}"${linkAttrs}>
             <span class="c-ic" aria-hidden="true">${esc(it.ic || '◈')}</span>
             <span class="c-nm"><span data-zh>${esc(it.n)}</span>${VENDOR_EN[it.n] ? `<span data-en>${esc(VENDOR_EN[it.n])}</span>` : ''}</span>
             <span class="c-ds"><span data-zh>${esc(it.d)}</span><span data-en>${esc(DESC_EN[it.n] || it.d)}</span></span>
@@ -156,7 +178,8 @@ ${tags.length ? `            <span class="c-tg">${tags.map((t) => {
           // 其余情况（含 identity 映射的中文标签如「A/B测试」）→ 必须双语包裹。
           // 否则英文态因为没有 data-en 可切换，会继续显示中文（实测渲染态 1 处残留）。
           return `<i><span data-zh>${esc(t)}</span><span data-en>${esc(en)}</span></i>`;
-        }).join('')}</span>\n` : ''}${st.note ? `            <span class="c-warn">${st.note}</span>\n` : ''}          </${tag}>`;
+        }).join('')}</span>\n` : ''}${st.note ? `            <span class="c-warn">${st.note}</span>\n` : ''}          </${tag}>
+${dos ? `          <a class="c-dossier" href="${dosHref}">${biSpan('本站有档案 →', 'Full profile →')}</a>\n` : ''}          </div>`;
 }
 
 // ---- 「零中文」检查：英文态是否还有中文产品名 ----
@@ -366,7 +389,10 @@ const script = `
       var tagSel = document.getElementById('tag');
       var empty = document.getElementById('empty');
       var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
-      var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+      /* T31：筛选对象改为 .card-wrap（卡片+档案标注的包裹层）——
+       * data-cat/data-tags/data-blob 现在挂在 wrapper 上，隐藏 wrapper 时
+       * 「本站有档案 →」标注随卡片一起消失，不会留下悬空链接。 */
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.card-wrap'));
       var groups = Array.prototype.slice.call(document.querySelectorAll('.cat-group'));
       var activeCat = 'all';
       var activeTag = '';
@@ -385,7 +411,7 @@ const script = `
           if (on) shown++;
         });
         groups.forEach(function (g) {
-          var has = Array.prototype.slice.call(g.querySelectorAll('.card')).some(function (c) { return !c.hidden; });
+          var has = Array.prototype.slice.call(g.querySelectorAll('.card-wrap')).some(function (c) { return !c.hidden; });
           g.hidden = !has;
         });
         empty.hidden = shown !== 0;

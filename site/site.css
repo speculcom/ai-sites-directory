@@ -352,12 +352,22 @@ td a:hover { color: var(--accent, var(--brand)); }
 }
 
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: .85rem; }
+/* T31（2026-10-22）：.card-wrap = 卡片 + 「本站有档案 →」标注的包裹层。
+ * 筛选（分类/标签/搜索）隐藏的是 wrapper —— 档案标注随卡片一起消失。
+ * ⚠⚠ [hidden] 必须显式写：UA 样式表的 [hidden]{display:none} 会被作者样式表的
+ *   display 声明压过（作者 > UA，同特异性）。旧版 .card{display:flex} 就踩了这个坑 ——
+ *   筛选脚本设了 hidden、探针读 .hidden 属性全绿，**但卡片视觉上根本没隐藏**
+ *   （2026-10-22 T31 加标注时用 Playwright 实测抓到：display 仍是 flex）。
+ *   教训：筛选类探针必须断言**计算样式**，不能只读属性。 */
+.card-wrap { display: flex; flex-direction: column; min-width: 0; }
+.card-wrap[hidden] { display: none; }
 .card {
   display: flex; flex-direction: column; gap: .35rem;
   padding: .9rem 1rem; border-radius:var(--r); text-decoration: none; color: inherit;
   border: 1px solid var(--border, rgba(127,127,127,.28));
   background: var(--bg-panel, rgba(127,127,127,.06));
   transition: transform .18s ease, border-color .18s ease;
+  flex: 1;
 }
 .card:hover { transform: translateY(-2px); border-color: var(--cyan); }
 .c-ic { font-size: var(--fs-lg); line-height: 1; }
@@ -385,6 +395,13 @@ td a:hover { color: var(--accent, var(--brand)); }
 }
 html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
 .c-warn { font-size:var(--fs-xs); color: var(--red); }
+/* T31：「本站有档案 →」——卡片外的兄弟链接（不能嵌进 <a> 卡片本体）。
+ * 用 --brand 与官网外链区分：这是站内互链，不是外部资源。 */
+.c-dossier {
+  display: inline-block; margin-top: .45rem; font-size: var(--fs-xs);
+  color: var(--brand); text-decoration: none;
+}
+.c-dossier:hover { text-decoration: underline; }
 /* 失效条目渲染为 div（不可点，见 card() 注释）：光标与 hover 也要跟着「去链接化」 */
 .card.is-dead { opacity: .55; cursor: default; }
 .card.is-dead:hover { transform: none; border-color: var(--border, rgba(127,127,127,.28)); }
