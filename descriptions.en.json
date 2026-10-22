@@ -35,7 +35,7 @@
   "Replit": "An online editor and hosting platform with AI-assisted one-click deployment.",
   "Sourcegraph Cody": "A code-graph-based assistant that understands whole-repository context.",
   "CodeRabbit": "An AI code reviewer that reviews pull requests and suggests improvements.",
-  "Tabnine": "A long-standing completion engine that supports local models for code privacy.",
+  "Tabnine": "Long-standing AI code completion engine; acquired by Tricentis 2026-07-30 — its site now redirects into Tricentis and the product is no longer listed separately.",
   "Zed": "A high-performance editor written in Rust, with AI pair programming built in.",
   "Tabby": "An open, self-hosted AI coding assistant — your data stays yours.",
   "Cline": "An open-source AI agent for VS Code; you direct it in natural language.",
@@ -152,7 +152,7 @@
   "Anyword": "AI marketing copy generation with performance prediction and data-driven optimisation.",
   "Optimove": "AI customer relationship marketing, predicting behaviour to drive personalisation.",
   "Pencil": "AI ad creative generation and A/B testing, iterating creative from data.",
-  "AI 工具": "168 AI tool profiles compared across 10 categories — AI coding, general chat, image/video/audio generation, deep research, automation, frameworks and runtimes, MCP tools, local runners and more. Every judgement links to an official source; no overall rankings.",
+  "AI 工具": "171 AI tool profiles compared across 10 categories — AI coding, general chat, image/video/audio generation, deep research, automation, frameworks and runtimes, MCP tools, local runners and more. Every judgement links to an official source; no overall rankings.",
   "Hugging Face": "The world's largest AI model community and open platform, hosting hundreds of thousands of models and datasets.",
   "ModelScope 魔搭": "Alibaba Cloud's open model community for Chinese-language AI, gathering quality domestic models.",
   "Ollama": "The simplest way to run large language models locally, supporting Llama, Mistral and others.",
@@ -529,5 +529,7 @@
   "ChatGPT Prompt Plus": "A browser extension for saving and reusing your most-used ChatGPT prompt templates.",
   "慢雾科技 SlowMist": "A leading Chinese blockchain security company, uncovering and preventing serious vulnerabilities.",
   "Qoder CN": "Alibaba Cloud's AI coding assistant family (formerly Lingma, renamed 2026-05-20); IDE/plugin/CLI, switchable domestic models.",
-  "v0": "Vercel's prompt-to-full-stack app platform (v0.dev now redirects to v0.app); a sandbox runs a terminal with pre-installed agents."
+  "v0": "Vercel's prompt-to-full-stack app platform (v0.dev now redirects to v0.app); a sandbox runs a terminal with pre-installed agents.",
+  "Qoder": "Alibaba-affiliated AI coding product line for international markets (separate from domestic Qoder CN); one family spanning IDE, plugin, CLI and Cloud Agents.",
+  "Qodo": "AI code review and SDLC governance platform (formerly CodiumAI); the official sunset notice retired its code generation, and the IDE plugin retires 2026-10-30."
 }

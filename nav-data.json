@@ -1064,6 +1064,26 @@
       "old_c": "ai"
     },
     {
+      "n": "Qoder",
+      "d": "阿里体系 AI 编码产品国际线（与国内线 Qoder CN 分线），IDE/插件/CLI/Cloud Agents 一个家族。",
+      "u": "https://qoder.com",
+      "tag": "大厂·免费",
+      "ic": "🚀",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Qodo",
+      "d": "AI 代码评审与 SDLC 治理平台（原 CodiumAI）；官方已公告废弃代码生成、IDE 插件 2026-10-30 退役。",
+      "u": "https://www.qodo.ai",
+      "tag": "企业级·编程助手",
+      "ic": "🔍",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
       "n": "Replit",
       "d": "在线代码编辑与托管平台，AI 加持的一键应用部署。",
       "u": "https://replit.com",
@@ -1095,13 +1115,14 @@
     },
     {
       "n": "Tabnine",
-      "d": "老牌 AI 代码补全引擎，支持本地模型保障代码隐私。",
+      "d": "老牌 AI 代码补全引擎，2026-07-30 被 Tricentis 收购，官网已整站并入 Tricentis 站、产品清单不再单列。",
       "u": "https://www.tabnine.com",
       "tag": "本地部署·安全",
       "ic": "🔐",
       "cat": "coding",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "retired": true
     },
     {
       "n": "Zed",
@@ -7117,7 +7138,7 @@
     },
     {
       "n": "AI 工具",
-      "d": "168 个 AI 工具对象按 10 大类对比——AI 编程、通用对话、图像/视频/音频生成、深度研究、自动化、框架与运行时、MCP 工具、本地运行器等，每条判断挂官方源，不给总分排名。",
+      "d": "171 个 AI 工具对象按 10 大类对比——AI 编程、通用对话、图像/视频/音频生成、深度研究、自动化、框架与运行时、MCP 工具、本地运行器等，每条判断挂官方源，不给总分排名。",
       "u": "https://tools.specul.com",
       "tag": "IDE·命令行·Agent",
       "ic": "📊",
