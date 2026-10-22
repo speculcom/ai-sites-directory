@@ -1,18 +1,16 @@
 {
- "at": "2026-10-21T07:40:00.214Z",
+ "at": "2026-10-22T23:11:10.550Z",
  "source": "nav-data.json",
- "items": 711,
- "checked": 692,
- "probedNow": 139,
+ "items": 715,
+ "checked": 697,
+ "probedNow": 6,
  "dedup": true,
- "proxy": true,
- "only": [
-  "unverifiable"
- ],
+ "proxy": false,
+ "only": null,
  "tally": {
-  "ok": 535,
+  "ok": 541,
   "blocked": 77,
-  "changed": 56,
+  "changed": 55,
   "unverifiable": 24
  },
  "history": [
@@ -134,6 +132,30 @@
     "ok": 535,
     "blocked": 77,
     "changed": 56,
+    "unverifiable": 24
+   }
+  },
+  {
+   "at": "2026-10-22T23:11:08.921Z",
+   "kind": "start",
+   "items": 715,
+   "probedNow": 0,
+   "tally": {
+    "ok": 535,
+    "blocked": 77,
+    "changed": 56,
+    "unverifiable": 24
+   }
+  },
+  {
+   "at": "2026-10-22T23:11:10.549Z",
+   "kind": "done",
+   "items": 715,
+   "probedNow": 6,
+   "tally": {
+    "ok": 541,
+    "blocked": 77,
+    "changed": 55,
     "unverifiable": 24
    }
   }
@@ -602,14 +624,6 @@
    "v": "changed",
    "s": 200,
    "to": "https://cursor.com/",
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-08",
-   "u": "https://v0.dev",
-   "v": "changed",
-   "s": 200,
-   "to": "https://v0.app/",
    "via": "fetch"
   },
   {
@@ -5388,6 +5402,48 @@
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-22",
+   "u": "https://qoder.com.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-22",
+   "u": "https://kuaima.baidu.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-22",
+   "u": "https://qoder.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-22",
+   "u": "https://v0.app",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-22",
+   "u": "https://kilo.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-22",
+   "u": "https://www.qodo.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
   }
  ]
 }
