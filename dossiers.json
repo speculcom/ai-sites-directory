@@ -1,5 +1,6 @@
 {
  "Andi Search": "research/andi",
+ "Bolt.new": "coding/bolt-new",
  "ChatGPT": "chat/chatgpt",
  "Claude": "chat/claude-chat",
  "Cline": "coding/cline",
@@ -24,6 +25,7 @@
  "LangGraph": "framework/langgraph",
  "Leonardo AI": "image/leonardo-ai",
  "LlamaIndex": "framework/llamaindex",
+ "Lovable": "coding/lovable",
  "Luma AI": "video/luma",
  "Make": "automation/make",
  "Manus": "chat/manus",
@@ -48,6 +50,7 @@
  "You.com": "research/you-com",
  "Zapier": "automation/zapier",
  "Zed": "coding/zed",
+ "v0": "coding/v0",
  "即梦": "image/jimeng",
  "可灵 Kling": "video/kling",
  "天工 AI 搜索": "research/tiangong",

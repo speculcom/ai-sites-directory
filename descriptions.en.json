@@ -31,7 +31,6 @@
   "GitHub Copilot": "GitHub and OpenAI's AI coding assistant, deeply integrated into the IDE.",
   "Cursor": "An AI-native code editor built on VS Code.",
   "Windsurf": "Codeium's AI-native IDE, with multi-file editing and refactoring.",
-  "v0.dev": "Vercel's tool that generates front-end UI from natural language.",
   "Bolt.new": "StackBlitz's AI full-stack app builder — builds and runs in the browser.",
   "Replit": "An online editor and hosting platform with AI-assisted one-click deployment.",
   "Sourcegraph Cody": "A code-graph-based assistant that understands whole-repository context.",
@@ -153,7 +152,7 @@
   "Anyword": "AI marketing copy generation with performance prediction and data-driven optimisation.",
   "Optimove": "AI customer relationship marketing, predicting behaviour to drive personalisation.",
   "Pencil": "AI ad creative generation and A/B testing, iterating creative from data.",
-  "AI 工具": "165 AI tool profiles compared across 10 categories — AI coding, general chat, image/video/audio generation, deep research, automation, frameworks and runtimes, MCP tools, local runners and more. Every judgement links to an official source; no overall rankings.",
+  "AI 工具": "168 AI tool profiles compared across 10 categories — AI coding, general chat, image/video/audio generation, deep research, automation, frameworks and runtimes, MCP tools, local runners and more. Every judgement links to an official source; no overall rankings.",
   "Hugging Face": "The world's largest AI model community and open platform, hosting hundreds of thousands of models and datasets.",
   "ModelScope 魔搭": "Alibaba Cloud's open model community for Chinese-language AI, gathering quality domestic models.",
   "Ollama": "The simplest way to run large language models locally, supporting Llama, Mistral and others.",
@@ -529,5 +528,6 @@
   "PromptFolder": "A prompt management tool for saving, organising and sharing your best AI prompts.",
   "ChatGPT Prompt Plus": "A browser extension for saving and reusing your most-used ChatGPT prompt templates.",
   "慢雾科技 SlowMist": "A leading Chinese blockchain security company, uncovering and preventing serious vulnerabilities.",
-  "Qoder CN": "Alibaba Cloud's AI coding assistant family (formerly Lingma, renamed 2026-05-20); IDE/plugin/CLI, switchable domestic models."
+  "Qoder CN": "Alibaba Cloud's AI coding assistant family (formerly Lingma, renamed 2026-05-20); IDE/plugin/CLI, switchable domestic models.",
+  "v0": "Vercel's prompt-to-full-stack app platform (v0.dev now redirects to v0.app); a sandbox runs a terminal with pre-installed agents."
 }
