@@ -6,7 +6,7 @@ A directory of AI websites organized into 12 categories; the `ext` (extended dom
 
 ## Size (computed from data — see the build scripts under `scripts/` and `_audit/gen-repo-docs.mjs`)
 
-713 entries / 12 categories (of which 184 ext entries are not on the site; 529 entries / 11 categories are live), tag vocabulary of 92.
+715 entries / 12 categories (of which 184 ext entries are not on the site; 531 entries / 11 categories are live), tag vocabulary of 92.
 
 ## Content map
 

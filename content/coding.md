@@ -1,6 +1,6 @@
 # AI 编程与 Agent
 
-> 编码助手、终端 Agent 与自动化智能体 · 共 32 条
+> 编码助手、终端 Agent 与自动化智能体 · 共 34 条
 
 ## GitHub Copilot
 
@@ -56,6 +56,20 @@
 - 链接：<https://www.qodo.ai>
 - 说明：AI 代码评审与 SDLC 治理平台（原 CodiumAI）；官方已公告废弃代码生成、IDE 插件 2026-10-30 退役。
 - 标签：企业级·编程助手
+- 核验：未核验
+
+## Kilo Code
+
+- 链接：<https://kilo.ai>
+- 说明：开源 AI 编码 agent（MIT）：VS Code/JetBrains/CLI/云端，500+ 模型零加价，BYOK 与本地模型全支持。
+- 标签：开源·免费
+- 核验：未核验
+
+## 文心快码
+
+- 链接：<https://kuaima.baidu.com>
+- 说明：百度 AI 编码全家桶（Baidu Comate）：AI IDE+多 IDE 插件+CLI，国产模型可切，私有化数据不出域。
+- 标签：国产·大厂
 - 核验：未核验
 
 ## Replit

@@ -10,7 +10,7 @@ The **source repo** for the directory (single source of truth).
 
 ## How to read this
 
-713 sites live in one file, which nobody is going to scroll through. Go by where you
+715 sites live in one file, which nobody is going to scroll through. Go by where you
 are instead:
 
 | What you want | Where |
@@ -32,7 +32,7 @@ Live version: <https://nav.specul.com/>
 | Path | Content |
 |---|---|
 | `content/` | **Content source**: one Markdown file per site, with category, description and tags |
-| `nav-data.json` | **Primary data**: 713 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 529 items / 11 categories are live) |
+| `nav-data.json` | **Primary data**: 715 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 531 items / 11 categories are live) |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | English mappings (category / tag / vendor / description) |
 | `check-results.json` | Link-verification snapshot (each entry has a status and a verification date `lv`; `history` records each run's start/done). **The builder and `gen-content.mjs` consume it directly** to render verification status |
 | `urls.txt` | Historical snapshot (generated 2026-09-30). ⚠ No longer a verification input — `check-links.mjs` reads `nav-data.json` directly, so it can never drift from the data |
@@ -153,7 +153,7 @@ respective rights holders.
 <!-- STATS:BEGIN generated, do not edit -->
 | Item | Measured value |
 |---|---|
-| Items | 713 (public 529 · ext 184) |
+| Items | 715 (public 531 · ext 184) |
 | Categories | 12 (11 public) |
 | Tag vocabulary | 92 (closed enum) |
 | Retired | 4 (Play.ht · Tabnine · CSM AI · Ready Player Me) |

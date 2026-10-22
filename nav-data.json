@@ -1084,6 +1084,26 @@
       "old_c": "ai"
     },
     {
+      "n": "Kilo Code",
+      "d": "开源 AI 编码 agent（MIT）：VS Code/JetBrains/CLI/云端，500+ 模型零加价，BYOK 与本地模型全支持。",
+      "u": "https://kilo.ai",
+      "tag": "开源·免费",
+      "ic": "🪁",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "文心快码",
+      "d": "百度 AI 编码全家桶（Baidu Comate）：AI IDE+多 IDE 插件+CLI，国产模型可切，私有化数据不出域。",
+      "u": "https://kuaima.baidu.com",
+      "tag": "国产·大厂",
+      "ic": "⚡",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
       "n": "Replit",
       "d": "在线代码编辑与托管平台，AI 加持的一键应用部署。",
       "u": "https://replit.com",
@@ -7138,7 +7158,7 @@
     },
     {
       "n": "AI 工具",
-      "d": "171 个 AI 工具对象按 10 大类对比——AI 编程、通用对话、图像/视频/音频生成、深度研究、自动化、框架与运行时、MCP 工具、本地运行器等，每条判断挂官方源，不给总分排名。",
+      "d": "173 个 AI 工具对象按 10 大类对比——AI 编程、通用对话、图像/视频/音频生成、深度研究、自动化、框架与运行时、MCP 工具、本地运行器等，每条判断挂官方源，不给总分排名。",
       "u": "https://tools.specul.com",
       "tag": "IDE·命令行·Agent",
       "ic": "📊",
