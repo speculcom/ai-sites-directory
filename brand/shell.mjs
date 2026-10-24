@@ -10,6 +10,12 @@
 //   const html = shell(site, `…页面主体…`);
 // ============================================================================
 
+import { existsSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+const assetRoot = existsSync(new URL('brand.js', import.meta.url)) ? new URL('./', import.meta.url) : new URL('../../www.specul/', import.meta.url);
+// Content fingerprint: every newly generated page asks for the matching core.
+export const RUNTIME_VERSION = createHash('sha256').update(readFileSync(new URL('brand.css', assetRoot))).update(readFileSync(new URL('brand.js', assetRoot))).digest('hex').slice(0, 12);
+
 /** 品牌唯一真相源（改这里等于改全站） */
 // 品牌名随语言切换：中文「投机取巧」/ 英文「Speculative Speculation」（用户 2026-10-01 定）。
 //
@@ -27,7 +33,7 @@ export const BRAND = {
   /* 副标题只在中文态出现（见上方说明）。英文态不显示，
    * 否则英文站名与副标题会是同一句话 —— 那正是 10-01「重影」的成因。 */
   sub: 'Speculative Speculation',
-  repo: 'https://github.com/speculcom/ai-coding-agent-atlas',
+  repo: 'https://github.com/speculcom/ai-handbook',
 };
 
 /** 全站导航（五项，顺序固定；各站自己那项由 current 高亮）
@@ -160,7 +166,7 @@ ${items}
 }
 
 /** footer —— repo 参数让各站链自己的 **markdown 内容仓**（不是部署仓） */
-export function footer(repo = 'https://github.com/speculcom/ai-agent-guide', repoLabel = OPEN_SOURCE_LABEL) {
+export function footer(repo = 'https://github.com/speculcom/ai-handbook', repoLabel = OPEN_SOURCE_LABEL) {
   // 2026-10-04 修：原先对 nav / www 两项特殊处理，输出**纯中文** `${n.zh}`（无 data-en），
   // 其余项才走双节点 —— 结果英文态的页脚露出「学 AI」「本地模型」等中文。
   // 实测（渲染态审计）：英文态页脚有 2 处中文可见。
@@ -173,7 +179,7 @@ export function footer(repo = 'https://github.com/speculcom/ai-agent-guide', rep
     <div class="container foot-row">
       <div class="foot-brand">
         <span class="brand-dot" aria-hidden="true"></span>
-        <span class="foot-copy">© 2026 ${BRAND.zh} · <span data-zh>Specul</span><span data-en>Specul</span></span>
+        <span class="foot-copy">© 2026 <span data-zh>${BRAND.zh}</span><span data-en>Specul</span></span>
       </div>
       <nav class="foot-links" aria-label="页脚导航">
 ${links}
@@ -197,7 +203,7 @@ export function shell({ current, title, desc, canonical, accent, body, repo, rep
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(desc)}" />
   <link rel="canonical" href="${esc(canonical)}" />
@@ -208,7 +214,8 @@ export function shell({ current, title, desc, canonical, accent, body, repo, rep
   <meta property="og:description" content="${esc(desc)}" />
   <meta name="theme-color" content="#16121f" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b7cf8'/%3E%3Cstop offset='1' stop-color='%2322d3c5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='48' height='48' rx='12' fill='%2305080f'/%3E%3Cpath d='M14 32 L24 12 L34 32' fill='none' stroke='url(%23g)' stroke-width='2.4' stroke-linejoin='round'/%3E%3Ccircle cx='24' cy='27' r='2.4' fill='%2322d3c5'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="${depth(assetPrefix)}brand.css" />
+  <script src="${depth(assetPrefix)}brand.js?v=${RUNTIME_VERSION}"></script>
+  <link rel="stylesheet" href="${depth(assetPrefix)}brand.css?v=${RUNTIME_VERSION}" />
   <link rel="stylesheet" href="${depth(assetPrefix)}site.css" />
 ${accent ? `  <style>:root { --accent: ${accent}; }${headExtra ? '\n' + headExtra : ''}</style>\n` : ''}${jsonLd ? `  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n` : ''}</head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
@@ -226,7 +233,6 @@ ${body}
   </main>
 ${footer(repo, repoLabel)}
 ${tabbar(current)}
-  <script src="${depth(assetPrefix)}brand.js"></script>${BRIDGE}
 </body>
 </html>
 `;
@@ -243,15 +249,13 @@ function depth(assetPrefix) {
 }
 
 /** 语言桥接：brand.js 只切 <html lang>，而 data-zh/data-en 显隐需要 html[data-lang] */
-export const BRIDGE = `
-  <script>
-    (function () {
-      var root = document.documentElement;
-      function sync() { root.setAttribute('data-lang', root.lang === 'en' ? 'en' : 'zh'); }
-      new MutationObserver(sync).observe(root, { attributes: true, attributeFilter: ['lang'] });
-      sync();
-    })();
-  </script>`;
+// Kept as an empty export for existing builders; brand.js owns both attributes.
+export const BRIDGE = '';
+
+/** Native option text is localised by the shared runtime; values never change. */
+export function nativeOption(value, zh, en = zh) {
+  return `<option value="${esc(value)}" data-ui-text-zh="${esc(zh)}" data-ui-text-en="${esc(en)}">${esc(zh)}</option>`;
+}
 
 export function esc(s) {
   return String(s ?? '')

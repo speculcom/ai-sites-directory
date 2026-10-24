@@ -19,7 +19,7 @@ const WWWBRAND = fs.existsSync(path.join(VENDORED, 'brand.css'))
   ? VENDORED
   : path.join(SPECUL, 'www.specul');
 
-const { shell, esc } = await import(
+const { shell, esc, nativeOption } = await import(
   'file:///' + path.join(TEMPLATE, 'shell.mjs').replace(/\\/g, '/')
 );
 
@@ -294,8 +294,8 @@ const tagCount = {};
 for (const i of items) for (const t of String(i.tag || '').split('·').map((x) => x.trim()).filter(Boolean)) tagCount[t] = (tagCount[t] || 0) + 1;
 const tagList = Object.keys(tagCount).sort((a, b) => (tagCount[b] - tagCount[a]) || a.localeCompare(b, 'zh'));
 const tagSelect = `<label class="sr-only" for="tag"><span data-zh>按标签筛选</span><span data-en>Filter by tag</span></label>
-          <select id="tag" class="tagsel"><option value="">全部标签 / All tags</option>${
-  tagList.map((t) => `<option value="${esc(t)}">${esc(t)}${TAG_EN[t] ? ' / ' + esc(TAG_EN[t]) : ''}（${tagCount[t]}）</option>`).join('')
+          <select id="tag" class="tagsel">${nativeOption('', '全部标签', 'All tags')}${
+  tagList.map((t) => nativeOption(t, t + "（" + tagCount[t] + "）", (TAG_EN[t] || t) + " (" + tagCount[t] + ")")).join('')
 }</select>`;
 
 /* B4（2026-10-09）：按「我想做什么」组织入口。
@@ -317,7 +317,7 @@ const INTENT = [
 const body = `    <section class="section hero">
       <div class="container">
         <p class="eyebrow">SPECUL · DIRECTORY</p>        <h1 class="h1"><span class="grad-title"><span data-zh>AI 导航</span><span data-en>AI Directory</span></span></h1>
-        <p class="lede">系统化收录 <strong>${items.length}</strong> 个 AI 相关网站，按 ${cats.length} 类组织。每条附一句话说明与链接核验状态。</p>
+        <p class="lede">${biSpan(`系统化收录 <strong>${items.length}</strong> 个 AI 相关网站，按 ${cats.length} 类组织。每条附一句话说明与链接核验状态。`, `<strong>${items.length}</strong> AI websites across ${cats.length} categories. Each entry includes a short description and a link-check status.`)}</p>
         <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，逐条人工整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，${CHECK_DEAD_N} 个已失效，${CHECK_UNVER_N} 个网络受限未能探测——不代表失效）。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, compiled by hand; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live, ${CHECK_DEAD_N} dead, ${CHECK_UNVER_N} unreachable from the probe environment — not necessarily dead). This page is an index and does not replace each site's own documentation.</span></p>
       </div>
     </section>
@@ -326,13 +326,13 @@ const body = `    <section class="section hero">
       <div class="container">
         <div class="controls">
           <label class="sr-only" for="q"><span data-zh>搜索</span><span data-en>Search</span></label>
-          <input id="q" type="search" placeholder="搜索站名、说明或标签…" autocomplete="off" />
+          <input id="q" type="search" placeholder="搜索站名、说明或标签…" data-ui-placeholder-zh="搜索站名、说明或标签…" data-ui-placeholder-en="Search sites, descriptions or tags…" autocomplete="off" />
           ${tagSelect}
           <div class="chips">
         ${chips}
           </div>
         </div>
-        <p id="empty" class="empty" hidden>没有匹配的条目。</p>
+        <p id="empty" class="empty" hidden>${biSpan("没有匹配的条目。", "No matching entries.")}</p>
 
         <div class="intent">
           <p class="intent-h">${biSpan('或者，直接告诉我你想做什么', 'Or just tell me what you want to do')}</p>

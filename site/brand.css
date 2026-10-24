@@ -1,44 +1,9 @@
-/* ==========================================================================
-   Specul 设计系统 v2 —— 编辑部风格
-   --------------------------------------------------------------------------
-   v1 的问题（真实审计结论，不是感觉）：
-     · 信息密度失控 —— 一屏 5 个区块全写满，糊成一片
-     · 卡片无视觉锚点 —— 纯文字块，眼睛找不到落脚点
-     · 没有节奏 —— 间距/标题/留白几乎一样，页面没呼吸
-     · 英文小标签满天飞 —— 中文页里散落杂乱标签
-     · 色彩单调 —— 整页只有两个颜色，没有重点
+/* Specul shared design system. History: _archive/ui-before-20261024. */
 
-   v2 的原则：
-     1. 一屏一个焦点。首屏只讲一件事。
-     2. 层级靠字号与留白拉开，不靠颜色堆。
-     3. 颜色是标记，不是装饰。全站只有「品牌紫」+「功能青」+「状态色」。
-     4. 中文站不散落英文装饰标签。术语只在必要处出现，且中文优先。
-     5. 卡片要有「锚」—— 序号、色条、或图标，给眼睛一个落点。
-
-   尺度体系（8px 基线）：
-     字号 12 / 13 / 15 / 18 / 22 / 30 / 44 / 60
-     间距 4  8  12  20  32  52  80
-   ========================================================================== */
 
 :root {
   /* ── 色：暗色为默认 ── */
-  /* B6/v6（2026-10-09）：**采用主站首页的表面与墨色**，让六个站真正是一套皮肤。
-   *
-   * 起因：首页至今自带一套私有调色板（`--hp-*`，定义在 body.brand-ambient 上），
-   * 而另外五站用这里的共享 token —— 也就是「六个站」其实是两套皮肤，
-   * 首页偏紫偏亮（#16121f），五站近黑（#07090e），实测背景明度 0.096 vs 0.041。
-   *
-   * 做法（两步走，先零风险的那步）：**先把「值」对齐**，不动首页那 116 处 `var(--hp-*)` 引用。
-   * 值一致之后，两边的视觉差别消失；之后再把首页的重复定义删掉（那时是零风险）。
-   *
-   * 注意墨色也随之改用首页的暖紫系（#f6f2ff / #c3b8dd / #9b8fb8）——
-   * 它们比原来的冷灰更亮，对比度只会更好；`--ink-faint` 共享层原本没有对应值，
-   * 按新底重算为 #7f8792（#78808c 在新底 #221c34 上只有 4.10:1，不够 AA）。
-   *
-   * ⚠ 2026-10-10 用户「暗色版底色再黑一点」→ #16121f → #100d18，
-   *   面板/嵌入档按同比例下移（#221c34 → #1b1628 等）。
-   *   **压暗底色会连带改变彩色底上的文字对比度**（a11y 探针里那些
-   *   「on rgb(...)」的数值全部会变），所以改完必须重跑 `a11y-contrast --strict` ✓ */
+
   --bg:        #07060e;
   --bg-raise:  #0b0913;
   --bg-panel:  #100d1a;
@@ -50,23 +15,7 @@
 
   --ink:       #f6f2ff;
   --ink-mid:   #c3b8dd;
-  /* B5（2026-10-09）：--ink-dim / --ink-faint 提亮到满足 WCAG AA。
-   *
-   * 实测（`_audit/a11y-contrast.mjs`，浏览器里算有效背景 + WCAG 公式）：
-   *   旧 --ink-dim   #6b7688 → 3.95:1（最亮的深色底 #11161f）
-   *   旧 --ink-faint #5c6675 → 3.12:1
-   * 两者是**全站违规量最大**的色（1700 条聚类里的绝大多数）。
-   *
-   * 新值是**算出来的最小提亮量**（7% / 17%），不是随手调的：
-   *   #758090 → 4.52:1 · #78808c → 4.54:1（都过了 4.5 的线）
-   *
-   * ⚠ 这里推翻 2026-10-03 的一个判断。原注释写「ink-faint 只用于装饰性文字，
-   *   WCAG 1.4.3 对装饰性文本用 3:1 即达标」，并据此停在 3.43:1。两处不成立：
-   *   ① 3:1 那条豁免是给**大字号文本**（≥24px，或 ≥18.66px 加粗）与**非文本 UI 组件**的，
-   *      不是给「小字号的装饰性文本」的 —— 页脚版权与标签文字传达信息，属正文，要 4.5:1；
-   *   ② 「物理上无法达到 4.5:1」经复算不成立：#78808c 就达到了 4.54:1
-   *      （原注释里的 4.33:1 是拿另一个底色算的）。
-   *   「淡的分层」仍然保留：--ink-faint 依旧明显弱于 --ink-dim 与 --ink-mid。 */
+
   --ink-dim:   #9b8fb8;
   --ink-faint: #7f8792;
 
@@ -83,30 +32,6 @@
      那是「同一个组件的同一处前景色写两遍」，每站都可能抄错一份。 */
   --cyan-on:   #04121a;
 
-  /* ══════════════════════════════════════════════════════════════════
-     分类色盘 · 六色（2026-10-10 新增 · 从首页内联样式**提为共享 token**）
-     ──────────────────────────────────────────────────────────────────
-     为什么提上来：这套 6 色原先只写在 `www.specul/index.html` 的**页内联
-     `<style>`** 里 —— `brand.css` 里根本没有，于是**其余五站想用也用不了** ✗。
-     而「色彩丰富」这件事全靠它：affinity 探针实测**只有首页和 nav 的暖色
-     占比是 0.31，其余四站是 0** —— 冷紫一片，正是「过于严肃」的来源。
-
-     为什么是分类色而不是分站色：用户 2026-10-10 定案「不需要分站专属色，
-     整体与首页一致即可」。所以这 6 色按**内容类别**用（哪一类内容就上哪一色），
-     六个站共用同一套 ✓ —— 既满足「色彩丰富」，又不违反「不要分站主题色」。
-
-     三档用法（照搬首页已验证的模式）：
-       --cat-X      装饰面：大色块、图表、卡片顶条、渐变端点
-       --cat-X-soft 同色 20% 透明：底色块、标签底
-       --cat-X-ink  提亮版：**文字专用**，保证 WCAG AA
-
-     ⚠ 数值照搬首页，因为它已在 28 页 × 明暗两主题下通过 AA（0 违规）✓。
-       若要改任何一个值，必须重跑 `_audit/a11y-contrast.mjs 4321 --strict`
-       —— 玫红/青柠这类浅色降到白底就不达标了 ✗。
-
-     暗色主题（浅底上的深前景 → ink 取更亮的同色相）。
-     ⚠ 这 12 个值原先定义在首页内联 `body.brand-ambient` 下，
-       作用域比 `:root` 窄；提到 `:root` 后**六站都可用**，首页行为不变 ✓。 */
   --cat-violet:      #a78bfa;   --cat-violet-ink:  #c4b0ff;   --cat-violet-soft: rgba(167, 139, 250, .2);
   --cat-rose:        #ff7ba1;   --cat-rose-ink:    #ff9ab8;   --cat-rose-soft:   rgba(255, 92, 138, .2);
   --cat-amber:       #ffc35c;   --cat-amber-ink:   #ffcf7a;   --cat-amber-soft:  rgba(255, 176, 58, .2);
@@ -119,26 +44,10 @@
   --warn:  #fbbf24;   /* 部分核验 */
   --stop:  #f87171;   /* 过期 / 风险 */
 
-  /* 状态色的「柔和底 + 文字」两档（2026-10-10 新增）。
-     徽章类组件要的是「淡底 + 同色系深字」，直接拿 --ok 当文字色会太刺眼。
-     vg 的置信度徽章原本**自建了六套**这样的裸值（暗/亮各三色），
-     现在统一到这三组 token ✓ —— 六站若再需要徽章，直接用，不必重写。 */
   --ok-soft:   rgba(74, 222, 128, .15);   --ok-ink:   #8ce8ad;
   --warn-soft: rgba(251, 191, 36, .15);   --warn-ink: #f5cf7a;
   --stop-soft: rgba(248, 113, 113, .14);  --stop-ink: #f7a3a3;
 
-  /* ── 内容维度色板（2026-10-03 新增）──────────────────────────────────
-     为什么要它：--brand 是**站点级**标识（紫/青/蓝/绿/金），
-     但站点内部还有多个内容维度需要区分 —— agent 的形态与抽象层、
-     models 的量化档、nav 的分类。原先这些维度只能用粗体/边框/位置区分，
-     信息密度上不去，于是「靠留白和边框分组」，正好是留白多的根源。
-
-     **色彩是比留白更省空间的分组手段**：一个 2px 色条 + 一次色彩编码，
-     代替一段 40px 的上下留白。这是「空间利用率高」与「配色丰富」能同时成立的关键。
-
-     六个维度互不相邻使用（相邻两组必换色），避免读成渐变。
-     全部值按 WCAG 对比度算出：暗色对底色 ≥7.3:1、亮色对底色 ≥3.6:1，
-     且每色都给了 -on（色上的前景色）—— 暗色系这些色很亮，配白字只有 1.6~2.7:1。 */
   --c-form:    #5aa9f5;  --c-form-on:    #04121f;   /* 形态：IDE / CLI / 厂商云 */
   --c-layer:   #a78bfa;  --c-layer-on:   #120a2e;   /* 抽象层：原语 / 编排 / 开箱 */
   --c-use:     #3ddbc8;  --c-use-on:     #04211d;   /* 用途：编程 / 办公 / 研究 */
@@ -153,11 +62,6 @@
   --c-quant-soft: rgba(245, 197, 66, .14);
   --c-class-soft: rgba(251, 146, 60, .14);
 
-  /* ── 量化档专用色阶（2026-10-03）────────────────────────────────────
-     单独一组而不是复用 --c-*: 量化档是**有序**的（近似无损 → 极限压缩），
-     需要一条「质量递减」的连续色带，不能用分类色 ——
-     分类色之间无序（紫≠比青高级），量化档必须读得出高低。
-     冷 → 暖 = 高质量 → 高压缩，与「越压缩越暖」的心理预期一致。 */
   --q-lossless: #a78bfa;  --q-lossless-soft: rgba(167, 139, 250, .14);  /* 近似无损 */
   --q-conserv:  #5aa9f5;  --q-conserv-soft:  rgba(90, 169, 245, .14);   /* 保守 */
   --q-balance:  #3ddbc8;  --q-balance-soft:  rgba(61, 219, 200, .14);   /* 平衡 */
@@ -165,29 +69,7 @@
   --q-extreme:  #fb923c;  --q-extreme-soft:  rgba(251, 146, 60, .14);   /* 极限压缩 */
 
   /* ── 字号：语义命名 ── */
-  /* 2026-10-03 全部取整。原值 11.5 / 15.5 / 30（--fs-2xl 已改--display-sub）。
-     半像素的代价：在 100% / 125% / 150% 三种缩放下分别落在不同像素上，
-     同一档字看起来不等大；而且内容层再用 em/% 换算会派生出一串
-     9.68 / 12.096 / 12.88 这种数（实测 models 详情页有 27 个非整数字号）。 */
-  /* v6 亲和力改版（2026-10-09）：**字号与圆角整体上调一档**。
-   *
-   * 依据是亲和力探针的基线，不是感觉：
-   *   · 正文基准字号 **0/7 个页面**达到 16px（当时是 12–15px）
-   *   · 卡片圆角中位 **只有 2/7** 达到 12px（vg 只有 4px —— 大量小组件用 --r-xs: 4px）
-   * 「字大一点、角圆一点」是「亲和力」里最不需要争论的部分：它不改变配色方向，
-   * 也不与用户待定的调色板选择冲突。且这两项都能被探针量出来（baseFont / radiusCard）。
-   *
-   * ⚠ 六个站的段落文字都走 var(--fs-base)（learn.css 的注释专门写明「不要动 body」），
-   *   所以改这一处等于改六站。唯一的例外是 www 内联的 `font:` 简写，同步改过了。 */
-  /* ⚠ **2026-10-09：最小的三档各 +1px** —— 这是「亲和力」里**不用等配色决定**的一块 ✓。
-   *   亲和力探针实测六站的**正文字号**：`models 12` · `www/learn 13` · `agent/nav/vg 15` ✗
-   *   —— **没有一站达到 16** ✓。字号小是**明确的不友好**（读起来累 ✓），与色相无关 ✓，
-   *   所以按用户「提高亲和力、面向年轻女性」的要求直接调大一档 ✓。
-   *   ⚠ 这里是**真相源**（`_audit/brand-sync.mjs` L35 记的就是 `www.specul/brand.css` ✓）——
-   *   改完必须 `node _tmp/vendor-brand.mjs` 再 `node _audit/brand-sync.mjs` ✓。
-   *   （我第一次改的是 `_data/agent-guide/brand/brand.css` ✗ —— 那是**副本** ✓，
-   *    门禁的注释里就写着「不要直接改副本」，我踩了一次 ✓。）
-   *   ⚠ 保持**整数 px** —— `_design-audit` 有「字号落整数 px」的门禁 ✓。 */
+
   --fs-micro: 13px;     /* 角标、计数（原 12）*/
   --fs-xs:    14px;     /* meta、次要（原 13）*/
   --fs-sm:    16px;     /* 卡片正文（原 15）*/
@@ -198,25 +80,13 @@
      原来各站写死 24px/30px 不一，改这一个档即六站统一。 */
   --fs-stat:  24px;
   --fs-2xl:   var(--display-sub);
-  /* 首屏标题**接入 --display**（2026-10-03）。原先 --fs-3xl 自己写死 clamp(40px,6vw,60px)，
-     与内容层各站各写的 clamp 互不相干 —— 实测六站 h1 落在 30/34/40/54/60px 五档。
-     现在首屏标题与详情页标题分别有唯一来源（--display / --display-sub），
-     各站内容层不再自己写 clamp。 */
+
   --fs-3xl:   var(--display);
 
   /* ── 行高 ── */
   --lh-tight: 1.16;
   --lh-snug:  1.42;
-  /* 2026-10-03：原 1.76 → 实测全站行高比 1.76，超出「紧凑」判据（1.5~1.7）。
-     收到 1.62（15px 正文 = 24.3px 行高）：中文正文可读性仍好，
-     每行多容纳 1~2 个字，长段落与卡片列表的紧凑感改善最明显。
-     ⚠ 改这个值要同步 brand.css 里硬编码的 1.72 / 1.75（导语与说明段）——
-       它们不引用变量，改了变量它们不会跟着变。 */
-  /* ⚠ 2026-10-09：1.68 → **1.75**。
-   *   亲和力探针的「**每屏字数 ≤900**」在桌面上：`learn` **1133** ✗ · `agent` **919** ✗（其余 624–821 ✓）。
-   *   行高是最直接的杠杆 ✓ —— 它同时**降低密度** ✓ 与**提高可读性** ✓（「挤 = 累」）；
-   *   与配色无关 ✓，所以不必等那个决定 ✓。
-   *   ⚠ 只改这一档（正文行高）✓，不动 `--lh-snug`/`--lh-tight`（标题行距要紧 ✓）。 */
+
   --lh-body:  1.75;   /* v6：1.62 → 1.68；2026-10-09 → 1.75（降密度 + 更好读）*/
 
   /* ── 间距（8px 基线）── */
@@ -225,36 +95,12 @@
   --sp-3: 12px;
   --sp-4: 20px;
   --sp-5: 32px;
-  /* 2026-10-03 新增 40px 档：介于 --sp-5(32) 与 --sp-6(52) 之间。
-     原因：实测六站的区块留白从 12px 到 108px 跨 9 倍（www 108 / agent 80 /
-     models 52 / learn 54 / nav 52 / agent详情 12），四个站四种做法（硬编码 64px /
-     18px / var(--sp-4) / var(--sp-6)），没有共同尺度。
-     用户要求「留空都小一点」→ 统一收到 40px 这一档：
-     比原先最紧的 models/nav(52) 小，比 www(108) 大幅收紧。 */
+
   --sp-5b: 40px;
-  /* ⚠ 2026-10-09：板块间距 52 → **60** · 80 → **92**（约 +15%）。
-   *   亲和力探针的「**每屏字数 ≤900**」在桌面上 `learn` **1125** ✗ · `agent` **912** ✗。
-   *   行高那一档试过了 ✓ —— **只降 1%** ✗，不是杠杆 ✓。
-   *   间距是**更直接的**杠杆 ✓：板块之间松一点，后面的板块就落到首屏之外 ✓、可见字数自然下降 ✓，
-   *   而且「**松 = 亲和**」本身就是目标 ✓（不是为过门禁而将就 ✓）。
-   *   ⚠ 只动这两个「大间距」档 ✓，不动 `--sp-1`–`--sp-5`（元素内部间距 ✓，动了会散 ✓）；
-   *   也不删任何内容、不改板块顺序 ✗ —— **首页的性格不变** ✓。 */
+
   --sp-6: 60px;
   --sp-7: 92px;
 
-  /* ── 形状 ──
-     2026-10-03 新增 --r-xs 并明确四档的用途。
-     此前实测源码里有 **24 种** border-radius 取值（2/3/4/5/6/7/8/9/10/12/13/14/
-     16/18/20/24px + 99px + 999px + 50% + 4 个已有变量）——
-     圆角没有档位体系，是「不像一套」最直接的来源：
-     同样性质的卡片，一处 4px 一处 9px 一处 13px，眼睛会读成「三个不同组件」。
-     现已把 61 处收敛到这四档（特例 999px 胶囊与 50% 圆形/头像 保留）。 */
-  /* ── 内容层旧别名（2026-10-03 补齐）────────────────────────────────
-     这套命名（--text / --muted / --panel / --bg-soft / --accent …）是 v1 遗留：
-     **从未被定义过**，但内容层有 139 处引用，浏览器一律回退到默认值 ——
-     属于**静默失效**：页面看起来「有点怪」但没有任何报错，只有量computed 值才发现。
-     修法是补别名而不是逐个替换引用（139 处会漏，且以后还会新增）。
-     下面每个别名的右侧值都来自 brand.css 的真实 token，单一真相源不变。 */
   --text: var(--ink);            /* 正文色 */
   --text-dim: var(--ink-dim);    /* 弱化正文 */
   --muted: var(--ink-mid);       /* meta / 说明文字 */
@@ -270,77 +116,34 @@
   --dc: var(--c-class);          /* nav 分类色变量 */
   --red: var(--stop);
   --font: var(--mono);
-  /* --brand-on 的**默认值**（2026-10-03 补）：原先只有各站 accent 块定义它，
-     而 www 站没有 accent 块 → var(--brand-on, #fff) 的 fallback 生效。
-     放在这里让 brand.css 自洽：任何站不定义也能拿到合法值。 */
+
   --brand-on: #fff;
 
   /* v6：圆角整体上调一档（同上，依据是亲和力探针的 radiusCard 基线）。
    * 4→8 与 8→12 是最关键的两档：它们覆盖徽章、chip、按钮这些**到处都是**的小组件，
    * 「锐利感」主要来自这里，而不是大面板。 */
   --r-xs: 8px;    /* 徽章、色条、输入框、代码块（原 4）*/
-  --r-sm: 12px;   /* 标签、chip、按钮（原 8）*/
-  --r:    14px;   /* 卡片（主体，最常用）（原 12）*/
+  --r-sm: 14px;   /* 标签、chip、按钮（原 8）*/
+  --r:    22px;   /* 卡片（主体，最常用）（原 12）*/
   --r-lg: 22px;   /* 大面板、对话框、modal（原 18）*/
   /* B6：补两档大圆角（S2 的卡片用 20/26px）。 */
   --r-xl: 24px;   /* 原 20 */
   --r-2xl: 30px;  /* 原 26 */
   --container: min(1120px, 90vw);
-  /* B6：**宽容器**，只给「卡片 / 网格」类版面用。
-     ⚠ 为什么不直接把 --container 放宽到 1560px：正文站（learn 词条、legal）
-       一旦行宽到 1560px，15px 字号下每行约 150 字符，远超可读区间（45–90）。
-       www 之所以能用宽容器，是因为它的内容是卡片与 chip，不是散文。
-       所以宽度是**两种用途两个 token**，而不是一个数全局改大。 */
+
   --container-wide: min(1560px, 92vw);
 
-  /* ── 行宽（2026-10-03 新增）──────────────────────────────────────────
-     为什么不能用 ch：1ch = 数字「0」的宽度（约 0.5em），而**汉字是全角 1em = 2ch**。
-     所以 max-width: 60ch 实际只放得下 30 个汉字 —— 实测 www 的 hero-sub 被卡在
-     612px、agent 的 lede 被卡在 550px，用户报「大字不停换行、内容集中在左侧、
-     宽屏横向没占满」。这不是排版失误，是**用西文单位约束中文**。
-
-     新规则：用 em 明确「一行放多少汉字」，并随视口放宽。
-     取值按正文 15px × 汉字数 算出，不是拍脑袋：
-       40em = 600px ≈ 40 汉字（窄屏一行，超出换行）
-       46em = 690px ≈ 46 汉字（宽屏一行，密度合适不至于一行太长） */
   --measure: 40em;        /* 正文行宽上限 */
   --measure-wide: 34em;   /* 导语行宽上限（17px 字号下 ≈ 40 汉字） */
   --ring: rgba(139, 124, 248, .7);
 
   --ease: cubic-bezier(.4, 0, .2, 1);
-  /* B6（2026-10-09）：把首页 S2 的**表面与色系**提升到共享层，六站自动继承。
-     原先这套只在 `www.specul/index.html` 里内联（作用域限 body.brand-ambient），
-     于是六站看着像两套皮肤。提升的原则：**结构性与语义性的东西进共享层，
-     各站的身份色（--accent / --brand）留在各站**。 */
+
   --shadow: 0 2px 6px -2px rgba(0, 0, 0, .4), 0 14px 30px -20px rgba(0, 0, 0, .7);
   --shadow-hi: 0 4px 12px -4px rgba(0, 0, 0, .5), 0 22px 44px -24px rgba(0, 0, 0, .8);
   /* 玻璃表面：页头 / 底部 tab bar 用。必须跟着主题走（见亮色块）。 */
   --glass: rgba(22, 18, 31, .88);
 
-  /* ── 排版尺度（2026-10-03 新增，同日二次校准）─────────────────────────
-     第一版的问题：把「大」理解成「留白更多」，于是 section-pad 给到 88px，
-     实测 www 变成 108px 留白 —— 用户反馈「留空都小一点」。
-     **大 ≠ 空。** 大气来自三件事，按权重排：
-       1. 主标够大（字号 + 字重 + 字间距收紧）
-       2. 区块之间有节奏（一致，不是多）
-       3. 颜色层次清楚（accent 明确、暗色有光晕）
-     留白只占很小一部分 —— 内容密度高但不挤，才叫「大气」。
-     所以这一版：**字号放大、留白收一档**。 */
-  /* ⚠ **2026-10-10：--display 与 --display-sub 合并成同一档**（用户定案「六站整体效果与首页一致」）。
-   *
-   * 实测（Chrome 渲染值，非源文件）发现首页主标有三档并存：
-   *   www 34px（自己写死的 26/30/34 响应式）· learn/models/nav 46px · agent/vg 66px
-   * —— 相差近 2 倍，而 `brand.css` 六站**逐字节相同**、`consistency` 报 9/9 通过。
-   * 根因是 brand.css 原本设计成「首屏 --display / 详情 --display-sub」两档，
-   * 但**六站各自挑档**：agent/vg 首页用了大的那档，learn/models/nav 首页用了小的那档，
-   * www 则完全绕开 token 自己写了一套。共享层相同 ≠ 渲染相同 ✗。
-   *
-   * 现在让 --display 直接别名到 --display-sub：**首屏与详情页主标统一为 46px**。
-   * 为什么选 46 而不是跟着首页的 34：
-   *   · 六站里有 3 站首页本来就在 46（learn/models/nav），改动量最小
-   *   · www 只从 34 涨到 46，版式气质不变；agent/vg 从 66 降到 46 仍是醒目的大标题
-   *   · 若压到 34，agent/vg 的首屏会明显变朴素，与「现代简洁、色彩丰富」相悖
-   * 保留别名而不是删 token：`--fs-3xl` 等下游仍引用它，直接删会让下游静默失效。 */
   --display: var(--display-sub);
   --display-sub: clamp(28px, 3.8vw, 46px); /* 首屏与详情页主标共用这一档 */
   --h2: clamp(23px, 2.8vw, 32px);
@@ -357,27 +160,10 @@
   --grad-text: var(--brand);
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
-  /* ── 标题渐变（2026-10-10 新增 · 提为共享组件）─────────────────────
-     用户要求：「各个分站的标题都跟首页一样有一点渐变色」。
-     渐变原先只写在 `www.specul/index.html` 的 `.hp-hero h1 em` 里，
-     其余五站没有 —— 现在提成共享类 `.grad-title`，六站同一份。
-
-     三个色标取自上面的 `--cat-*` 色盘（玫红 → 紫 → 青），
-     即首页那一组；**没有新增任何色值** ✓
-
-     ⚠ `color: transparent` + `background-clip: text` 的组合有个已知副作用：
-       **渐变文字不能被 a11y-contrast 探针测到对比度**（探针把它归入
-       「无法测量（渐变文字等）」那一类）。所以：
-         · 深浅两主题的渐变色标必须**人工**保证可读，浅底那套已按 AA 压暗
-         · `_audit/gradient-contrast.mjs` 单独量渐变，**改这三个色必须跑它**
-     ⚠ 不要给整段 h1 上渐变 —— 副标题、说明文字用渐变会掉可读性。
-       只包「标题里那一句要强调的字」。 */
   --grad-title-from: var(--cat-rose);
   --grad-title-mid:  var(--cat-violet);
   --grad-title-to:   var(--cat-teal);
 }
-
-
 
   /* 宽屏放宽行宽：容器已封顶 1120px，所以在容器内把行宽放开一档 */
   @media (min-width: 1600px) {
@@ -389,12 +175,6 @@
     :root { --measure: 54em; --measure-wide: 48em; }
   }
 
-/* ── 宽屏容器分档（2026-10-03）──────────────────────────────────────
-   原值 min(1120px, 90vw) 在 1440 以上就封顶 —— 实测 1920 与 2560 视口下
-   容器都是 1120px，超宽屏右侧白留400~720px，用户报「横向没占满」。
-   现在按视口分档放开。每档都留出可读行长（正文约 40~48 汉字/行），
-   不会把一行拉到 2000px 那种「一行到底」的难读形态。
-   分档而不是连续公式：连续 min() 在中间尺寸会算出奇怪的中间值。 */
 @media (min-width: 1560px) { :root { --container: min(1320px, 88vw); } }
 @media (min-width: 1800px) { :root { --container: min(1480px, 86vw); } }
 @media (min-width: 2200px) { :root { --container: min(1720px, 82vw); } }
@@ -402,13 +182,7 @@
 
 /* 浅色：不是把暗色反过来，是重新给一套值 */
 [data-theme="light"] {
-  /* v6（2026-10-09）：**浅色主题也采用主站首页的值**（与深色同理，两步走的第二半）。
-   *
-   * 为什么要做：深色对齐之后，浅色下两边仍然是两套 —— 首页是暖奶油（#fffdfa）+ 暖紫墨色
-   * （#231635 / #4d3f66 / #6d5c85），共享层是冷白（#fbfcfe）+ 冷灰墨色（#0f172a / #3d4a5c）。
-   * 不对齐的话，「统一」只做到一半，而且首页那 116 处 `var(--hp-*)` 引用就没法安全删掉。
-   *
-   * ⚠ `--ink-faint` 首页没有对应值 → 按新底重算（见下方注释）。 */
+
   --bg:        #fffdfa;
   --bg-raise:  #ffffff;
   --bg-panel:  #ffffff;
@@ -460,12 +234,7 @@
   --c-layer:   #6d4fd6;  --c-layer-on:   #ffffff;
   --c-use:     #0b7c72;  --c-use-on:     #ffffff;
   --c-state:   #15803d;  --c-state-on:   #ffffff;
-  /* B6（2026-10-09）：#a97a08 → #906807。
-     注意这里**推翻本文件原先的一句结论**：原注释写「实测 #0d9488(3.65) / #a97a08(3.74) 不够，
-     各自加深一档后达标」—— 但两处的**现值仍是 3.74/3.84**，也就是说那次并没有真的达标。
-     之所以一直没被发现：B5 的对比度探针**只测了默认（深色）主题**，
-     而这两个色只出现在亮色主题的覆盖块里。B6 把探针扩成双主题后一次报出 342 处。
-     现在按「白底 + 各自柔和底」双条件算出：#0b7c72（白 5.05 / 最坏底 4.53）· #906807（5.06 / 4.54）。 */
+
   --c-quant:   #906807;  --c-quant-on:   #ffffff;
   --c-class:   #c2410c;  --c-class-on:   #ffffff;
   --c-form-soft:  rgba(31, 111, 196, .10);
@@ -488,9 +257,6 @@
   --glass: rgba(255, 253, 250, .9);
 }
 
-/* ══════════════════════════════════════════════════════════════════════
-   基础
-   ══════════════════════════════════════════════════════════════════════ */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--bg); scroll-padding-top: 96px; }
 body {
@@ -505,17 +271,8 @@ body {
 }
 h1, h2, h3, h4, p, ul, ol, figure { margin: 0; padding: 0; }
 
-/*裸标签的 h1/h2 默认字号 —— 2026-10-03 新增。
-   为什么必须加：agent 站详情页的 h1 **没有任何类名**，于是没有任何规则命中它，
-   30px 是浏览器默认的 `h1 { font-size: 2em }` × 父级 15.5px 算出来的，
-   与首页的 66px 差 2.2 倍 —— 六站详情页因此「小一号」。
-   「所有 h1 都必须命中规则」比「给每个 h1 都加类」更可靠：
-   裸标签规则兜底，内容层想单独调时再显式覆盖。 */
 h1 { font-size: var(--display-sub); line-height: var(--lh-tight); font-weight: 800; letter-spacing: -.028em;
-  /* ⚠ 2026-10-10：主标下边距提升到共享层。
-     原先 brand.css 是 0，而各站自己在别处补：agent/vg 20px、models 13.8px、
-     learn/nav 12px、www 10px、legal 0px —— 同一个站群，主标与首段的间距六种值。
-     骨架间距只能有一处定义。页面若要更紧，用自己的选择器覆盖即可（detail 页就是）。 */
+
   margin: 0 0 var(--sp-3); }
 h2 { font-size: var(--h2); line-height: var(--lh-tight); font-weight: 700; letter-spacing: -.018em; }
 ul, ol { list-style: none; }
@@ -534,22 +291,10 @@ code, kbd, pre { overflow-wrap: anywhere; }
 .container { width: var(--container); margin-inline: auto; }
 .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
 
-/* 页面底纹：一处光晕 + 一层细网格。
-   ⚠ 2026-10-03 改动：光晕色原先**硬编码为品牌紫** rgba(139,124,248,.13)，
-   所以各站 accent 改成青/蓝/绿/金之后，底纹还是紫的 ——
-   六站页面背景一模一样，这就是「不生动」也「不像一套站」的原因之一。
-   现在改用 color-mix 从 --brand 派生：站点换 accent，底纹自动跟着换。
-   color-mix 的两个底色都取自当前主题（--brand 与 --bg），
-   所以明暗两套主题都成立，不需要再各写一份。 */
 .brand-ambient::before {
   content: "";
   position: fixed; inset: 0; z-index: -1; pointer-events: none;
-  /* ⚠ 2026-10-10 用户「底色里这些渐变可以去掉」→ 去掉那圈品牌色辉光，
-     底色改为**平涂** --bg。
-     顺带修掉一处旧账：原来这里的 `linear-gradient(180deg, #0a0e15 … #05070b)`
-     里那两个色值是 **v6 统一之前**的冷灰蓝底，与当时的紫底早就不是一回事了 ——
-     属于「改了 token 忘了改硬编码」的漏网之鱼 ✓ 现在随 --bg 一起走。
-     亮色主题保留竖向渐变（浅色下它给页面一点纵深，用户没提出要动）。 */
+
   background: var(--bg);
 }
 .brand-ambient::after {
@@ -574,15 +319,6 @@ code, kbd, pre { overflow-wrap: anywhere; }
     linear-gradient(90deg, rgba(15,23,42,.05) 1px, transparent 1px);
 }
 
-/* ══════════════════════════════════════════════════════════════════════
-   标题渐变（2026-10-10 · 提为共享组件）
-   --------------------------------------------------------------------------
-   用户要求：各分站的标题跟首页一样带渐变。原先它只存在于首页内联样式的
-   `.hp-hero h1 em` 里，其余五站没有 —— 现在六站共用这一份 ✓
-   用法：<h1>把要强调的那几个字<span class="grad-title">包起来</span></h1>
-   ⚠ 见 :root 里 --grad-title-* 的注释：渐变文字测不到对比度，
-     改色必须跑 `_audit/gradient-contrast.mjs`。
-   ══════════════════════════════════════════════════════════════════════ */
 .grad-title {
   background: linear-gradient(100deg,
     var(--grad-title-from),
@@ -598,19 +334,6 @@ code, kbd, pre { overflow-wrap: anywhere; }
   .grad-title { color: var(--brand); }
 }
 
-/* ── 全站主标自动渐变（2026-10-10）────────────────────────────────────
-   问题：实测 **217 页里 211 页的 h1 没有渐变** —— 只有六站首页有。
-   逐页往标题里包 `<span class="grad-title">` 是**不可维护**的：
-   以后每加一个页面就要记得包，一漏就又不一致 ✗
-   而六站的主标**全都是 `h1` 元素**（`.hp-hero h1` / `.page-head h1` /
-   `.detail-head h1` / `.hero h1` / `.t-hero` / `.h1` 只是挂在它身上的类），
-   所以**在共享层直接给 h1 上渐变**即可，一处覆盖全部 217 页 ✓
-
-   ⚠ 副标题要显式还原颜色：h1 变成 `color: transparent` 后，
-     子元素若只靠继承就会跟着透明（看不见）。
-     各站的 `.sub` / `h1 .sub` 都已显式写 color，这里再加一条兜底 ✓
-   ⚠ 渐变文字**测不到对比度**（探针归入「无法测量」那一类），
-     所以这三个色标只能靠 `_audit/gradient-contrast.mjs` 单独验。 */
 h1 {
   background: linear-gradient(100deg,
     var(--grad-title-from),
@@ -628,9 +351,6 @@ h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
   h1 { color: var(--ink); }
 }
 
-/* ══════════════════════════════════════════════════════════════════════
-   顶栏 —— 细、高、留白足
-   ══════════════════════════════════════════════════════════════════════ */
 .site-header {
   position: sticky; top: 0; z-index: 60;
   border-bottom: 1px solid var(--line);
@@ -643,16 +363,14 @@ h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
   gap: var(--sp-4); min-height: 66px; padding-block: var(--sp-2);
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
-/* 品牌点 —— 2026-10-10 统一到首页取值。
-   原先共享层是 9px / 3px 圆角 / 紫→青，而 www 首页在页内联 CSS 里另写了一份
-   11px / 正圆 / 玫红→紫。两处并存时首页与分站的左上角标记**肉眼可辨不同**
-   （ui-parity 实测：brandDot 宽 11 vs 9、圆角 50% vs 3px）。
-   首页是基准，所以共享层取首页的值，www 那份本地覆盖删掉。 */
+
 .brand-dot {
-width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0;
+width: 24px; height: 24px; border-radius: 9px; flex-shrink: 0; position: relative;
 background: linear-gradient(135deg, var(--cat-rose), var(--cat-violet));
 box-shadow: 0 0 0 4px var(--brand-soft);
 }
+.brand-dot::before { content: ""; position: absolute; width: 3px; height: 3px; left: 7px; top: 7px; border-radius: 50%; background: var(--cyan-on); box-shadow: 7px 0 var(--cyan-on); }
+.brand-dot::after { content: ""; position: absolute; width: 10px; height: 5px; left: 7px; top: 11px; border-bottom: 2px solid var(--cyan-on); border-radius: 0 0 10px 10px; }
 .brand-text { display: flex; flex-direction: column; gap: 1px; }
 /* 字重 800 = 首页取值（ui-parity 实测原先首页 800 / 分站 700） */
 .brand-name { font-size:var(--fs-sm); font-weight: 800; letter-spacing: .01em; line-height: 1.2; }
@@ -660,20 +378,12 @@ box-shadow: 0 0 0 4px var(--brand-soft);
 
 .nav-links { display: flex; align-items: center; gap: var(--sp-5); margin-left: auto; }
 .nav-links > a {
-  /* ⚠ 2026-10-10：13.5px → var(--fs-xs)（14px）。
-     半像素字号是「节奏失准」的来源，而且 _design-audit 有「落整数 px」的门禁 ——
-     这条之所以还能存在，是因为 **www 的页内联样式用 14px 把它盖掉了**，
-     于是其余五站实测仍是 13.5px ✗（共享层写了、实际没生效）。
-     现在两边都改成同一个 token，六站真正一致 ✓ */
+
   font-size: var(--fs-xs); color: var(--ink-mid); position: relative;
   padding-block: var(--sp-2); transition: color .16s var(--ease);
 }
 .nav-links > a:hover { color: var(--ink); }
-/* ⚠ 2026-10-10：当前项样式统一取首页（品牌紫 + 字重 800）。
-   原先共享层是 `color: var(--ink); font-weight: 600`（近白半粗），
-   而 www 首页用自己的 site.css 覆盖成品牌紫 800 ——
-   实测：首页 rgb(196,176,255)/800，其余五站 rgb(246,242,255)/600。
-   「我现在在哪个站」应该是全站最醒目的那一个。 */
+
 .nav-links > a[aria-current] { color: var(--cat-violet-ink); font-weight: 800; }
 .nav-links > a[aria-current]::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 2px;
@@ -681,28 +391,15 @@ box-shadow: 0 0 0 4px var(--brand-soft);
 }
 .nav-tools { display: inline-flex; align-items: center; gap: var(--sp-2); }
 .icon-btn {
-  width: 32px; height: 32px; display: grid; place-items: center;
+  width: 44px; height: 44px; display: grid; place-items: center;
   border: 1px solid var(--line);
-  /* ⚠ 2026-10-10：999px 胶囊，不再用 var(--r-sm)（12px）。
-   *   实测按钮 32×32，12px 圆角看起来像小方块；首页本来就用胶囊
-   *   （`body.brand-ambient .icon-btn { border-radius: 999px }`），
-   *   而其余五站走共享层的 12px —— 六站顶栏按钮形状不一致 ✗。
-   *   按「与首页一致」定案：把胶囊**提进共享层**，删掉首页那条内联覆盖。
-   *   胶囊也与本站其余元素一致（.hp-chip / .hp-route .num 等都是 999px）。 */
+
   border-radius: 999px;
   font-size:var(--fs-xs); color: var(--ink-mid); background: transparent;
   transition: border-color .16s var(--ease), color .16s var(--ease);
 }
 .icon-btn:hover { border-color: var(--line-strong); color: var(--ink); }
 
-/* 语言按钮固定 32px 见上（width + display:grid; place-items:center）——
-   这也是语言按钮文案**只能用单字「中」而不能用「中文」**的原因：
-   两个汉字塞进 32px 会挤成一团，看起来像布局坏了。
-   （2026-10-03 用户定案：英文态EN，中文态「中」。） */
-
-/* ══════════════════════════════════════════════════════════════════════
-   页脚 —— 三段单行，信息少而准
-   ══════════════════════════════════════════════════════════════════════ */
 .site-footer {
 border-top: 1px solid var(--line);
 /* 上下留白取首页的 22 / 26px（原先共享层是 --sp-5 / --sp-6，桌面下 60px，
@@ -717,14 +414,7 @@ margin-top: auto;
 }
 .foot-brand { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; }
 .foot-copy { color: var(--ink-faint); }
-/* 页脚 —— 2026-10-10 统一到首页取值（药丸链接 + 22/26px 上下留白）。
-   原先共享层是**纯文字链接**（无底色无边框、字重 400），而 www 首页在页内联 CSS
-   里另写了一套**药丸**（底色 + 1px 边框 + 字重 750 + 999px 圆角）。
-   结果同一个页脚位置，六站两样（ui-parity 实测：footLink 字重 750 vs 400、
-   页脚下内边距 26px vs 60px）。首页是基准，故共享层取药丸版，www 本地那套删除。
 
-   ⚠ `.foot-links > a` 与 `.foot-links a` 的选择器权重不同，这里统一用 `>` ——
-   分站页脚里的链接都是 nav 的直接子元素，不需要给嵌套的 span 上样式。 */
 .foot-links { display: flex; flex-wrap: wrap; gap: 6px; flex: 0 0 auto; }
 .foot-links > a {
   display: inline-flex; align-items: center; padding: 5px 12px;
@@ -750,13 +440,6 @@ margin-top: auto;
   line-height: 1.5; overflow-wrap: anywhere;
 }
 
-/* ⚠ 2026-10-10：窄屏页脚药丸会溢出。
-   分站页脚有 10 个药丸（6 站链接 + 开源 + 3 条法律），在 390px 下排成一行
-   需要 510px → 横向溢出（responsive-overflow 门禁报 scrollWidth 510 > 390），
-   页面被撑宽。www 首页页脚链接少（且 ≤768 藏了 .foot-links）所以没暴露 ——
-   **这正是「只按首页验收」的盲区**。
-   现在窄屏把页脚药丸收紧：横向内距 12→9px、字重 750→600、
-   外边距 3px、字号降到 12px，并在 400px 以下让导航药丸换行成两列。 */
 @media (max-width: 768px) {
   .foot-links, .foot-legal-links { gap: 4px; margin-left: 0; }
   .foot-links > a, .foot-legal-links > a {
@@ -766,57 +449,27 @@ margin-top: auto;
 @media (max-width: 400px) {
   /* 更窄时导航类药丸（较长文字）换行，避免单行溢出 */
   .foot-links { width: 100%; }
-  .foot-links > a, .foot-legal-links > a { padding: 4px 8px; font-size: 11.5px; }
+  .foot-links > a, .foot-legal-links > a { padding: 4px 8px; font-size: 12px; }
 }
 
-/* ══════════════════════════════════════════════════════════════════════
-   跳转链接
-   ══════════════════════════════════════════════════════════════════════ */
 .t-skip {
   position: absolute; left: var(--sp-3); top: 10px; z-index: 100;
   transform: translateY(-180%);
-  /* B5（2026-10-09）：原来是白字 + --brand 底，实测 1.62–3.31:1（各站 accent 不同），
-   * 全部不达标。改为**深色字 + 亮 accent 底**：白字在亮色上对比度天然不足，
-   * 而深字在同样底色上到 ~6:1。跳转链接是键盘用户第一个会遇到的东西，不能是低对比的。 */
+
   background: var(--brand); color: #06080d;
   padding: 10px 16px; border-radius: var(--r-sm);
   font-size: var(--fs-xs); font-weight: 600;
   transition: transform .16s var(--ease);
 }
 .t-skip:focus { transform: translateY(0); }
-/* v6（2026-10-09）：**长 URL / 长英文串不能把页面撑出横向滚动。**
-   实测：vg 的 `engine-godot` 页在 320px 下有裸 URL 作链接文字（宽 302px），
-   `scrollWidth` 被撑到 339。字号上调后暴露出来 —— 但根因是「没允许断行」，与字号无关，
-   所以在共享层一次修掉，六站都受保护。
-   用 `anywhere` 而不是 `break-word`：前者会把「最小内容宽度」也算上，
-   否则 flex / grid 项仍会因 min-content 把父容器撑开。 */
+
 a, code, kbd, samp { overflow-wrap: anywhere; }
-/* B6（2026-10-09）：亮色主题下跳转链接要**反过来**用白字。
-   深色主题的 accent 是亮的（青/紫），深字才够对比；亮色主题的 accent 是压深的
-   （#6d4fd6 / #1f6fc4 / #0b7c72 / #906807），深字在上面只有 3.3–4.0:1，白字才达标。
-   —— 同一个组件在两个主题下需要**相反**的前景色，这是「一套值走天下」行不通的地方。 */
+
 [data-theme="light"] .t-skip { color: #fff; }
 
-/* ══════════════════════════════════════════════════════════════════════
-   B6（2026-10-09）· 移动端导航（汉堡抽屉 + 底部 tab bar）
-   ──────────────────────────────────────────────────────────────────────
-   来源：首页 S2 的内联实现（原先作用域限 body.brand-ambient，只有 www 有）。
-   提升到共享层的意义：**六站从此是同一套实现**，而不是六份各自演化。
-
-   移植时做了三件事（都不是照抄）：
-     1. token 映射：--hp-raise/--hp-line/--hp-ink* → --bg-panel/--line/--ink*；
-        --hp-glass → --glass（B6 新增，会随主题变）
-     2. 字号一律整数 px（设计系统硬规则，_design-audit 守着）
-     3. 抽屉只在 ≤900px 生效（与 .nav-links 的隐藏断点一致 —— 两者必须同时切换，
-        否则会出现「导航没了但没有替代入口」或「两个入口同时出现」）
-
-   ⚠ 底部 tab bar 只给 www 用，**没有**推给其余五站：那五站的页脚站群链接在窄屏
-     本来就可见（实测 390px 下六个站全部可达），再加一条 tab bar 只是把同一批入口
-     写两遍。推广的是组件与 token，用不用取决于它在该站是否冗余。
-   ══════════════════════════════════════════════════════════════════════ */
 .nav-burger {
   display: none; flex-direction: column; justify-content: center; gap: 4px;
-  width: 34px; height: 34px; padding: 0 6px; background: transparent;
+  width: 44px; height: 44px; padding: 0 6px; background: transparent;
   border: 1px solid var(--line-mid); border-radius: var(--r-sm); cursor: pointer;
 }
 .nav-burger i { display: block; height: 2px; background: var(--ink-mid); border-radius: 2px; transition: transform .2s var(--ease), opacity .2s var(--ease); }
@@ -831,15 +484,12 @@ a, code, kbd, samp { overflow-wrap: anywhere; }
   box-shadow: -14px 0 40px -20px rgba(0, 0, 0, .5);
   transform: translateX(102%); transition: transform .28s var(--ease);
   padding: 16px 0 calc(14px + env(safe-area-inset-bottom, 0px));
-  /* ⚠ 必须**显式**写 overflow-x: hidden。
-     只写 overflow-y: auto 时，CSS 的 overflow 耦合规则会把另一轴的 visible
-     计算成 auto —— 于是抽屉成了一个「横向可滚」的容器，被 models-check 的
-     「全站不允许横向滚动容器」约定判失败（24/24 全红）。显式写清就没有歧义。 */
+
   overflow-x: hidden; overflow-y: auto;
 }
 .nav-drawer.open { transform: none; }
 .nav-drawer-h { display: flex; align-items: center; justify-content: space-between; padding: 0 20px 14px; border-bottom: 1px solid var(--line); }
-.nav-dclose { width: 32px; height: 32px; border: 1px solid var(--line-mid); background: transparent; color: var(--ink-mid); border-radius: 9px; font-size: 18px; cursor: pointer; line-height: 1; }
+.nav-dclose { width: 44px; height: 44px; border: 1px solid var(--line-mid); background: transparent; color: var(--ink-mid); border-radius: 9px; font-size: 18px; cursor: pointer; line-height: 1; }
 .nav-drawer-list { display: flex; flex-direction: column; padding: 8px 12px; }
 .nav-drawer-list a { display: flex; align-items: center; justify-content: space-between; padding: 13px 12px; border-radius: 12px; color: var(--ink); font-size:var(--fs-sm); font-weight: 700; text-decoration: none; }
 .nav-drawer-list a:active { background: var(--brand-soft); }
@@ -879,24 +529,21 @@ a, code, kbd, samp { overflow-wrap: anywhere; }
 /* 无脚本时不能把导航藏进抽屉：汉堡按钮是 <button>，没有 JS 点了没反应。
    所以 JS 可用时由 brand.js 给 <html> 加 .js-on，只有此时才启用抽屉。 */
 html:not(.js-on) .nav-burger { display: none; }
+html:not(.js-on) .nav-tools, html:not(.js-on) #tabMore { display: none; }
+@media (max-width: 900px) {
+  html:not(.js-on) .site-bar { flex-wrap: wrap; }
+  html:not(.js-on) .nav-links { flex: 1 0 100%; flex-wrap: wrap; gap: var(--sp-3); }
+  html:not(.js-on) .nav-links > a { display: block; }
+}
 @media (max-width: 900px) { html:not(.js-on) .nav-links { display: flex !important; } }
 
-/* ══════════════════════════════════════════════════════════════════════
-   排版原语
-   ══════════════════════════════════════════════════════════════════════ */
 .t-hero {
   font-size: var(--fs-3xl); line-height: var(--lh-tight);
-  /* ⚠ 2026-10-10：删掉了这里的 `letter-spacing: -.035em`。
-     agent / vg 首页的 h1 写的是 `<h1 class="t-hero">`，而 `.t-hero` 权重高于 `h1`，
-     于是这两站的主标字距被这条带走（-1.61px），其余站是 -1.288px ——
-     同样 46px 的字看起来松紧不一样（ui-parity 报出）。
-     h1 属骨架，字距只由上面的 `h1` 一处决定，类名不该另开一份。 */
+
   font-weight: 800; margin: 0 0 var(--sp-4);
 }
 .t-h1 {
-  /* 2026-10-03：原 --fs-2xl(30px) → 实测 agent 详情页 h1 只有 30px，
-     而首页 66px，差 2.2 倍。接 --display-sub(46px)，详情页与首页同一套尺度。
-     --fs-2xl 本身保留 30px 给「卡片标题」等中间层级，不当页面主标用。 */
+
   font-size: var(--display-sub); line-height: var(--lh-tight);
   font-weight: 800; letter-spacing: -.028em; margin: 0 0 var(--sp-3);
 }
@@ -932,9 +579,6 @@ html:not(.js-on) .nav-burger { display: none; }
   color: var(--ink-dim); max-width: var(--measure); margin: 0 0 var(--sp-5);
 }
 
-/* ══════════════════════════════════════════════════════════════════════
-   卡片 —— 给眼睛一个落点
-   ══════════════════════════════════════════════════════════════════════ */
 .t-card {
   background: var(--bg-panel);
   border: 1px solid var(--line);
@@ -990,20 +634,9 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-state.is-warn::before { background: var(--warn); }
 .t-state.is-stop::before { background: var(--stop); }
 
-/* ── 学习叙事组件（v7 S22 · 2026-10-18）──────────────────────────────
-   「学完你能…」（.t-take）与「通往下一站」（.t-next）。
-   宪章 1：新语义先在共享层定义一次，各站消费 —— 此前这两句的样式若只写进
-   learn.css，guides / 学习路径 / 其他站要用时必然各抄一套。
-   措辞与内容来自各站的数据层（learn 是 meta.js 的 levels[].take / next）；
-   这里只管版式，不管文案。 */
 .t-take { margin: 4px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-mid); min-width: 0; }
 .t-next { margin: 6px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-dim); min-width: 0; }
 
-/* ── 学习路径组件（v7 S23 · 2026-10-19）───────────────────────────────
-   三条精选路径（半小时入门 / 一个下午看懂原理 / 一周路线）的版式。
-   宪章 1：先在这里定义一次，learn 首页导览条与 path/<id>/ 路径页共用；
-   禁止在 learn.css 或 build.mjs 的内联 <style> 里再写一套。
-   数据来自 _data/glossary/paths/*.json（真相源），这里只管版式。 */
 .t-pathcard { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); min-width: 0; }
 .t-pathcard h3 { margin: 0 0 2px; font-size: var(--fs-lg); font-weight: 700; }
 .t-pathcard .t-pathspan { font-size: var(--fs-xs); color: var(--ink-dim); }
@@ -1019,12 +652,6 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-check ol { margin: 0; padding-left: 1.2rem; }
 .t-check li { font-size: var(--fs-xs); line-height: 1.7; color: var(--ink-mid); margin: 4px 0; }
 
-/* ── 微型指南组件（v7 S24 · 2026-10-19）───────────────────────────────
-   5-10 分钟一篇的操作指南（怎么提问 / 怎么验证输出 / …）与「常见误区」
-   子类型（kind=myth，大家以为…其实…）的版式。
-   宪章 1：先在这里定义一次，learn 的 guide/<slug>/ 页与后续导览条共用；
-   禁止在 learn.css 或 build.mjs 的内联 <style> 里再写一套。
-   数据来自 _data/glossary/guides/*.md（真相源），这里只管版式。 */
 .t-guidecard { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); min-width: 0; }
 .t-guidecard h3 { margin: 0 0 2px; font-size: var(--fs-lg); font-weight: 700; }
 .t-guidecard .t-guidespan { font-size: var(--fs-xs); color: var(--ink-dim); }
@@ -1037,12 +664,6 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-myth .t-myth-said { font-size: var(--fs-sm); color: var(--ink-dim); margin: 0; }
 .t-myth .t-myth-fact { font-size: var(--fs-sm); line-height: 1.7; color: var(--ink); margin: 6px 0 0; }
 
-/* ── 任务入口卡（v7 S43 · 2026-10-19）───────────────────────────────
-   AI 工具首页的「任务视角」入口：「我想让 AI 替我写代码 / 自己搭 agent /
-   跑长任务 / 读文件 / 上网 / 装工具」→ 链到既有分区页与既有筛选参数。
-   宪章 1：先在这里定义一次，agent 站消费；禁止在 site.css 或 build.mjs
-   的内联 <style> 里再写一套。条数从档案现算（R4），这里只管版式。
-   与 .t-guidecard / .t-pathcard 同族：panel 底 + 边框 + 圆角。 */
 .t-taskcard { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); min-width: 0; }
 .t-taskcard h3 { margin: 0 0 2px; font-size: var(--fs-lg); font-weight: 700; }
 .t-taskcard .t-taskn { font-size: var(--fs-xs); color: var(--ink-dim); font-variant-numeric: tabular-nums; }
@@ -1050,23 +671,12 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-taskcard .t-tasknote { margin: 6px 0 0; font-size: var(--fs-micro); color: var(--ink-dim); }
 .t-taskgo { display: inline-block; margin-top: 10px; font-size: var(--fs-xs); text-decoration: none; }
 
-/* ── 边界声明（v7 S44 · 2026-10-20）─────────────────────────────────────
-   AI 工具站三张索引页顶部的「收录什么 / 不收录什么 / 用什么格式」三句。
-   宪章 1：先在这里定义一次，三个分区索引页共用；禁止在 site.css 或
-   build.mjs 的内联 <style> 里再写一套。文案在 build.mjs（内容），这里只管版式。 */
 .t-boundary { background: var(--bg-inset); border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); max-width: 82ch; }
 .t-boundary ol { margin: 0; padding: 0; list-style: none; }
 .t-boundary li { margin: 0 0 var(--sp-2); font-size: var(--fs-sm); line-height: 1.7; color: var(--ink-mid); }
 .t-boundary li:last-child { margin-bottom: 0; }
 .t-boundary li strong { color: var(--ink); }
 
-/* ── 轻档案三要素卡（v7 S45 · 2026-10-20 · D9 修订）─────────────────────
-   对话问答类 / 创作工具类的卡片格式（D4 定案：能做什么 / 数据去哪 /
-   适合谁，三要素，不上八维）。D9 定案：价格不进数据层——「多少钱」一行
-   （.t-lightnote）只放官方定价页链接，本站不存报价数字。
-   宪章 1：先在这里定义一次，AI 工具站消费；禁止在 site.css 或内联再写一套。
-   与 .t-taskcard / .t-guidecard 同族：panel 底 + 边框 + 圆角。
-   数据在 _data/agent-guide/light/light.json（真相源），这里只管版式。 */
 .t-lightcard { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); min-width: 0; }
 .t-lightcard h3 { margin: 0; font-size: var(--fs-lg); font-weight: 700; }
 .t-lightcard .t-lightvendor { margin: 2px 0 0; font-size: var(--fs-xs); color: var(--ink-dim); }
@@ -1076,11 +686,6 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-lightcard .t-lightsrc { font-size: var(--fs-micro); }
 .t-lightcard .t-lightnote { margin: var(--sp-2) 0 0; font-size: var(--fs-micro); color: var(--ink-dim); }
 
-/* ── 编年史与版图组件（v7 S39 · 2026-10-19）────────────────────────────
-   学 AI 的「版图」一页（关键模型时间线 + 公司版图 + 术语演变）的版式。
-   宪章 1：先在这里定义一次，learn.specul/atlas/ 页与后续任何引用共用；
-   禁止在 learn.css 或 build.mjs 的内联 <style> 里再写一套。
-   数据来自 _data/glossary/atlas/atlas.json（真相源），这里只管版式。 */
 .t-atlas-tl { list-style: none; margin: 0; padding: 0; }
 .t-atlas-tl li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); min-width: 0; }
 .t-atlas-date { font-variant-numeric: tabular-nums; font-size: var(--fs-xs); color: var(--ink-dim); white-space: nowrap; padding-top: 2px; }
@@ -1092,9 +697,6 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-atlas-org .t-atlas-founded { font-size: var(--fs-xs); color: var(--ink-dim); }
 .t-atlas-org p { margin: 6px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-mid); }
 
-/* ══════════════════════════════════════════════════════════════════════
-   按钮 —— 两级，形态统一
-   ══════════════════════════════════════════════════════════════════════ */
 .t-btn {
   display: inline-flex; align-items: center; gap: var(--sp-2);
   font-size: var(--fs-sm); font-weight: 600; line-height: 1.4;
@@ -1104,18 +706,11 @@ a.t-card:hover, .t-card.is-link:hover {
 }
 .t-btn:hover { transform: translateY(-2px); border-color: var(--brand); }
 .t-btn-primary {
-  /* --brand-on = 强调色上的前景色，由各站 accent 覆盖时一起给。
-     为什么需要它：强调色底+ 白字并非总是可读 ——
-     实测暗色主题下青(#3ddbc8)/金(#f5c542)/绿(#5ddc9a) 配白字只有 1.6~1.7:1，
-     按钮会糊成一片。CSS 无法「自动选黑或白」，所以由站点层显式声明。
-     品牌紫配白字 3.31:1（本来的行为），各站可给更深/更浅的值改善。*/
+
   background: var(--brand); border-color: var(--brand); color: var(--brand-on, #fff);
 }
 .t-btn-primary:hover { filter: brightness(1.08); }
 
-/* ══════════════════════════════════════════════════════════════════════
-   指标 / 网格
-   ══════════════════════════════════════════════════════════════════════ */
 .t-metrics { display: flex; flex-wrap: wrap; gap: var(--sp-4) var(--sp-5); }
 .t-metrics > div { min-width: 84px; }
 .t-metrics strong {
@@ -1152,9 +747,6 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-table a { color: var(--brand); }
 .t-table a:hover { text-decoration: underline; }
 
-/* ══════════════════════════════════════════════════════════════════════
-   语言显隐 —— 三条都必须 !important，否则被元素自身 display 覆盖级联
-   ══════════════════════════════════════════════════════════════════════ */
 [data-en] { display: none !important; }
 html[data-lang="en"] [data-zh] { display: none !important; }
 html[data-lang="en"] [data-en] { display: revert !important; }
@@ -1165,33 +757,16 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
 [data-zh].t-tag, [data-zh].t-state { display: inline-flex !important; }
 .t-metrics span { display: block; }
 
-/* ══════════════════════════════════════════════════════════════════════
-   窄屏
-   ══════════════════════════════════════════════════════════════════════ */
 @media (max-width: 760px) {
   :root {
-    /* 窄屏覆写改到 --display / --display-sub 上 ——
-       2026-10-03 前 --fs-3xl 是独立的 clamp，这里覆盖它；
-       现在 --fs-3xl = var(--display)，覆写必须跟着改 --display 才有效。
-       **变量别名链上任一环覆写错位，下游全部失效** —— 这类 bug 只看 computed 值才发现。 */
+
     --display: var(--display-sub);
     --display-sub: clamp(24px, 6.4vw, 32px);
     --h2: clamp(20px, 5vw, 26px);
     --sp-6: 44px; --sp-7: 64px;   /* 2026-10-09：随大间距一起 +10~15%，窄屏尤其需要呼吸 ✓ */
     --container: min(1120px, 90vw);
   }
-  /* 窄屏（≤900px）顶栏策略 —— **六站完全一致**，2026-10-10 用户定案：
-     顶部只留「品牌 + 主题/语言 + 汉堡」，**文字导航链接全部收进抽屉**。
 
-   为什么不再显示链接行（原先这里是方案 B：链接换到第二行居中）：
-     · 底部已有 App 式 tab bar（首页 / 学 AI / Agent / 模型 / 更多），四个入口直接可达；
-     · 顶部再摆 6 个链接 = 同一批入口写两遍，且把顶栏从 66px 撑到 89px（实测）；
-     · 最要紧的是**不一致**：www 早就只留按钮+汉堡，分站却顶着链接行 ——
-       同一个站群，六种站，用户点进来第一眼就是两套顶栏。
-     现在这条规则在**共享层**，谁也别想再单独改（原先它只写在 www 的页内联 CSS 里）。
-
-   可达性没有损失：抽屉里有全部 6 个站，tab bar 有 4 个 + 「更多」开抽屉，
-   `mobile-nav` 门禁就是专门数「390px 下能否到达其余 5 个站」的 ✓ */
   .site-bar { flex-wrap: nowrap; }
   .nav-links { flex: 0 0 auto; }          /* 链接已隐藏，只剩一个空盒子，别占宽 */
   .nav-links > a { display: none; }
@@ -1200,10 +775,74 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
   .brand-sub { display: none; }
 }
 @media (max-width: 520px) {
-  /* ≤520px 连品牌文字也藏掉，只留 brand-dot —— 与 www 首页同一取舍。 */
-  .brand-text { display: none; }
+  .brand-text { display: block; }
+  .brand-text .brand-name, .brand-text .brand-sub { display: none; }
+  .brand-text::after { content: "Specul"; font-size: var(--fs-sm); font-weight: 800; letter-spacing: -.02em; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+:root {
+  --play-shadow: 0 4px 0 color-mix(in srgb, var(--line) 65%, transparent), 0 14px 32px -22px var(--brand);
+  --play-border: color-mix(in srgb, var(--cat-violet) 28%, var(--line));
+}
+html { scrollbar-gutter: stable; }
+body { -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
+main { min-width: 0; overflow-wrap: anywhere; }
+input, select, textarea { font: inherit; }
+input[type="search"], input[type="text"], select { min-height: 44px; }
+button, a { touch-action: manipulation; }
+.site-header::after {
+  content: ""; position: absolute; inset: auto 0 -1px; height: 2px; pointer-events: none;
+  background: linear-gradient(90deg, var(--cat-violet), var(--cat-rose), var(--cat-amber), var(--cat-teal), var(--cat-blue)); opacity: .65;
+}
+.nav-links > a { border-radius: var(--r-sm); transition: background-color .16s, color .16s; }
+.nav-links > a[aria-current="page"] { background: var(--brand-soft); }
+.icon-btn { min-width: 44px; min-height: 44px; box-shadow: 0 2px 0 var(--line); }
+.icon-btn:active, .nav-burger:active { transform: translateY(1px); }
+.nav-dclose { min-width: 44px; min-height: 44px; }
+.nav-drawer { width: min(90vw, 360px); padding-top: max(16px, env(safe-area-inset-top, 0px)); }
+.nav-drawer-h { flex-wrap: wrap; gap: var(--sp-2); }
+.nav-drawer-h .brand-name { flex: 1; min-width: 0; }
+.nav-drawer-h .brand-sub { display: none; }
+.nav-drawer-list { gap: var(--sp-2); }
+.nav-drawer-list a { min-height: 52px; border: 1px solid var(--line); background: var(--bg-raise); }
+.nav-drawer-list a[aria-current="page"] { border-color: var(--brand-line); background: var(--brand-soft); }
+.nav-drawer-list a:nth-child(3n+1) .ar { color: var(--cat-rose-ink); }
+.nav-drawer-list a:nth-child(3n+2) .ar { color: var(--cat-teal-ink); }
+.nav-drawer-list a:nth-child(3n) .ar { color: var(--cat-amber-ink); }
+:is(.t-card, .t-pathcard, .t-guidecard, .hp-route, .pa-card, .m-famcard, .engine-card) {
+  border-radius: var(--r); box-shadow: var(--play-shadow);
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s var(--ease);
+}
+:is(.t-pathcard, .t-guidecard, .pa-card, .m-famcard):nth-child(6n+1) { border-block-start-color: var(--cat-violet); }
+:is(.t-pathcard, .t-guidecard, .pa-card, .m-famcard):nth-child(6n+2) { border-block-start-color: var(--cat-teal); }
+:is(.t-pathcard, .t-guidecard, .pa-card, .m-famcard):nth-child(6n+3) { border-block-start-color: var(--cat-rose); }
+:is(.t-pathcard, .t-guidecard, .pa-card, .m-famcard):nth-child(6n+4) { border-block-start-color: var(--cat-amber); }
+:is(.t-pathcard, .t-guidecard, .pa-card, .m-famcard):nth-child(6n+5) { border-block-start-color: var(--cat-blue); }
+:is(.t-pathcard, .t-guidecard, .pa-card, .m-famcard):nth-child(6n) { border-block-start-color: var(--cat-lime); }
+@media (hover: hover) and (pointer: fine) {
+  :is(a.t-card, a.t-pathcard, a.t-guidecard, .hp-route, a.pa-card, a.m-famcard):hover { transform: translateY(-3px); border-color: var(--play-border); }
+}
+@media (max-width: 768px) {
+  .site-header { padding-top: env(safe-area-inset-top, 0px); }
+  .nav-tabbar {
+    left: max(10px, env(safe-area-inset-left, 0px)); right: max(10px, env(safe-area-inset-right, 0px));
+    bottom: max(8px, env(safe-area-inset-bottom, 0px)); border: 1px solid var(--line-mid);
+    border-radius: 24px; padding: 5px; box-shadow: var(--shadow-hi);
+  }
+  .nav-tabbar a, .nav-tabbar button { min-height: 52px; border-radius: 18px; justify-content: center; font-size: 11px; }
+  .nav-tabbar a[aria-current="page"], .nav-tabbar button[aria-expanded="true"] { background: var(--brand-soft); }
+  body.has-tabbar .site-footer { padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@media (forced-colors: active) {
+  .site-header::after { display: none; }
+  .nav-tabbar a[aria-current="page"] { outline: 2px solid Highlight; }
 }
