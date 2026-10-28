@@ -48,7 +48,7 @@
 
 | 字段 | 类型 | 说明 |
 |---|---|---|
-| `retired` | 布尔 | 已下架/停服。**必须是布尔值**，不能写字符串。实测 3 条（Play.ht · CSM AI · Ready Player Me）。页面按此渲染成不可点状态 |
+| `retired` | 布尔 | 已下架/停服。**必须是布尔值**，不能写字符串。实测 9 条（Play.ht · CSM AI · Ready Player Me · Tabnine · Galileo AI · Phrasee · OctoAI · Ansys · Papers With Code，2026-10-28）。页面按此渲染成不可点状态 |
 
 ## 四、双语要求（R2）
 

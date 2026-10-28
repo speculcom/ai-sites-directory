@@ -158,10 +158,10 @@
 
 ## Practical AI
 
-- 链接：<https://changelog.com/practicalai>
+- 链接：<https://practicalai.show>
 - 说明：Changelog 旗下 AI 实用播客，关注 AI 产品化与工程实践。
 - 标签：播客
-- 核验：可达（已改址 → https://practicalai.show/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Data Skeptic
 

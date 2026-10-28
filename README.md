@@ -146,5 +146,5 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 | 条目 | 715 条（对外 531 · ext 184） |
 | 分类 | 12 类（对外 11 类） |
 | 标签词表 | 92 个（封闭枚举） |
-| 下架标记 | 4 条（Play.ht · Tabnine · CSM AI · Ready Player Me） |
+| 下架标记 | 9 条（Galileo AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Phrasee · OctoAI · Ansys · Papers With Code） |
 <!-- STATS:END -->

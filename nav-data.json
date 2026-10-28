@@ -594,13 +594,14 @@
     },
     {
       "n": "Galileo AI",
-      "d": "用自然语言描述即可生成 UI 界面设计稿的 AI 工具。",
+      "d": "AI 界面设计生成工具，官网已整站重定向到 Google Stitch（stitch.withgoogle.com），不再独立运营。",
       "u": "https://www.usegalileo.ai",
       "tag": "UI生成",
       "ic": "🎨",
       "cat": "gen",
       "old_t": "AI设计",
-      "old_c": "ai"
+      "old_c": "ai",
+      "retired": true
     },
     {
       "n": "Uizard",
@@ -905,7 +906,7 @@
     {
       "n": "Suno",
       "d": "AI 音乐生成平台，输入歌词或描述即可创作完整歌曲。",
-      "u": "https://suno.ai",
+      "u": "https://suno.com",
       "tag": "音乐生成",
       "ic": "🎵",
       "cat": "gen",
@@ -1016,7 +1017,7 @@
     {
       "n": "Cursor",
       "d": "基于 VS Code 的 AI 原生代码编辑器，编程体验极致智能。",
-      "u": "https://cursor.sh",
+      "u": "https://cursor.com",
       "tag": "IDE",
       "ic": "🖱️",
       "cat": "coding",
@@ -1025,8 +1026,8 @@
     },
     {
       "n": "Windsurf",
-      "d": "Codeium 推出的 AI 原生 IDE，支持多文件智能编辑与重构。",
-      "u": "https://codeium.com/windsurf",
+      "d": "Codeium 推出的 AI 原生 IDE，产品现归入 Devin（Cognition）旗下，官网重定向到 devin.ai/desktop。",
+      "u": "https://devin.ai/desktop",
       "tag": "IDE·编程助手",
       "ic": "🌊",
       "cat": "coding",
@@ -1336,8 +1337,8 @@
     },
     {
       "n": "SmythOS",
-      "d": "AI 智能体操作系统，拖拽式构建与部署多 Agent 工作流。",
-      "u": "https://smythos.com",
+      "d": "AI 智能体操作系统，公司转向开源智能体运行时 SRE，官网重定向到其 GitHub 仓库。",
+      "u": "https://github.com/smythos/sre",
       "tag": "可视化·云服务",
       "ic": "🔄",
       "cat": "coding",
@@ -1768,13 +1769,14 @@
     },
     {
       "n": "Phrasee",
-      "d": "AI 品牌语言优化工具，确保营销内容符合品牌调性。",
+      "d": "AI 品牌语言优化工具，官网已整站重定向到 jacquard.com，产品不再独立运营。",
       "u": "https://phrasee.co",
       "tag": "营销·设计",
       "ic": "🎯",
       "cat": "app",
       "old_t": "AI 营销",
-      "old_c": "ai"
+      "old_c": "ai",
+      "retired": true
     },
     {
       "n": "Albert AI",
@@ -2628,8 +2630,8 @@
     },
     {
       "n": "Makeblock",
-      "d": "中国 STEAM 教育机器人品牌，mBot 系列全球畅销。",
-      "u": "https://www.makeblock.com",
+      "d": "中国 STEAM 教育机器人品牌（公司已转向 xTool 品牌，官网重定向到 xtool.cn），mBot 系列全球畅销。",
+      "u": "https://www.xtool.cn",
       "tag": "教育·国产",
       "ic": "🤖",
       "cat": "robot",
@@ -2659,7 +2661,7 @@
     {
       "n": "Ollama",
       "d": "本地运行大语言模型的最简单方式，支持 Llama、Mistral 等。",
-      "u": "https://ollama.ai",
+      "u": "https://ollama.com",
       "tag": "本地部署",
       "ic": "🦙",
       "cat": "model",
@@ -2728,13 +2730,14 @@
     },
     {
       "n": "OctoAI",
-      "d": "高效 AI 推理优化与模型部署平台，大幅降低部署成本。",
+      "d": "AI 推理优化与部署平台，被 NVIDIA 收购，官网重定向到 nvidia.com。",
       "u": "https://octo.ai",
       "tag": "推理",
       "ic": "🐙",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "retired": true
     },
     {
       "n": "Anyscale",
@@ -2788,8 +2791,8 @@
     },
     {
       "n": "Llama",
-      "d": "Meta 发布的开源大语言模型系列，当前最受欢迎的开源基座。",
-      "u": "https://llama.meta.com",
+      "d": "Meta 开源大语言模型系列，当前最受欢迎的开源基座；入口域名 llama.com 现指向 Meta AI 开发者站。",
+      "u": "https://llama.com",
       "tag": "大厂·开源",
       "ic": "🦙",
       "cat": "model",
@@ -2818,8 +2821,8 @@
     },
     {
       "n": "Gemma",
-      "d": "Google 推出的轻量开源模型系列，适合端侧部署与实验。",
-      "u": "https://ai.google.dev/gemma",
+      "d": "Google 轻量开源模型系列，适合端侧部署与实验；模型页现迁至 DeepMind 站点。",
+      "u": "https://deepmind.google/models/gemma/",
       "tag": "大厂",
       "ic": "💎",
       "cat": "model",
@@ -2989,7 +2992,7 @@
     {
       "n": "Vercel AI SDK",
       "d": "Vercel 推出的 AI 应用开发工具包，快速搭建 AI 前端。",
-      "u": "https://sdk.vercel.ai",
+      "u": "https://ai-sdk.dev",
       "tag": "前端",
       "ic": "▲",
       "cat": "dev",
@@ -3059,7 +3062,7 @@
     {
       "n": "JAX",
       "d": "Google 开源高性能数值计算库，自动微分与 XLA 编译加速。",
-      "u": "https://jax.readthedocs.io",
+      "u": "https://docs.jax.dev/en/latest/",
       "tag": "大厂·高性能",
       "ic": "⚡",
       "cat": "dev",
@@ -3299,7 +3302,7 @@
     {
       "n": "DeepEval",
       "d": "开源 LLM 评测框架，单元测试方式量化评估模型质量。",
-      "u": "https://docs.confident-ai.com",
+      "u": "https://deepeval.com",
       "tag": "开源",
       "ic": "✅",
       "cat": "dev",
@@ -4377,7 +4380,7 @@
       "old_c": "crypto"
     },
     {
-      "n": "Gemini",
+      "n": "Gemini（交易所）",
       "d": "Winklevoss 兄弟创立的合规交易所，纽约州持牌安全优先。",
       "u": "https://www.gemini.com",
       "tag": "合规",
@@ -5199,7 +5202,7 @@
     {
       "n": "Cerebras",
       "d": "晶圆级 AI 芯片 WSE-3，单芯片集成 4 万亿晶体管。",
-      "u": "https://www.cerebras.net",
+      "u": "https://www.cerebras.ai",
       "tag": "芯片设计",
       "ic": "🧇",
       "cat": "infra",
@@ -5389,7 +5392,7 @@
     {
       "n": "Lambda Labs",
       "d": "专注 AI 训练的 GPU 云服务商，提供 A100/H100 实例。",
-      "u": "https://lambdalabs.com",
+      "u": "https://lambda.ai",
       "tag": "算力云·模型微调",
       "ic": "☁️",
       "cat": "infra",
@@ -5478,13 +5481,14 @@
     },
     {
       "n": "Ansys",
-      "d": "多物理场仿真软件领导者，芯片电磁与散热仿真不可或缺。",
+      "d": "多物理场仿真软件领导者，Synopsys 收购合并后官网重定向到 ansys.synopsys.com。",
       "u": "https://www.ansys.com",
       "tag": "仿真",
       "ic": "⚡",
       "cat": "infra",
       "old_t": "芯片设计 EDA",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "retired": true
     },
     {
       "n": "Keysight",
@@ -5869,7 +5873,7 @@
     {
       "n": "Neon",
       "d": "Serverless PostgreSQL 数据库，分支式开发体验极佳。",
-      "u": "https://neon.tech",
+      "u": "https://neon.com",
       "tag": "云服务",
       "ic": "💡",
       "cat": "tools",
@@ -5879,7 +5883,7 @@
     {
       "n": "Railway",
       "d": "极简部署平台，从代码到运行只需一个命令极速上线。",
-      "u": "https://railway.app",
+      "u": "https://railway.com",
       "tag": "云服务",
       "ic": "🚂",
       "cat": "tools",
@@ -6228,13 +6232,14 @@
     },
     {
       "n": "Papers With Code",
-      "d": "将论文与代码一一对应的平台，追踪 AI 技术最新进展。",
+      "d": "论文-代码对应索引平台，2025-07 被 Meta 关停，域名重定向到 Hugging Face Trending Papers，历史数据存于 paperswithcode-data 仓库。",
       "u": "https://paperswithcode.com",
       "tag": "学术·编程助手",
       "ic": "📝",
       "cat": "learn",
       "old_t": "论文研究",
-      "old_c": "learn"
+      "old_c": "learn",
+      "retired": true
     },
     {
       "n": "Semantic Scholar",
@@ -6789,7 +6794,7 @@
     {
       "n": "Practical AI",
       "d": "Changelog 旗下 AI 实用播客，关注 AI 产品化与工程实践。",
-      "u": "https://changelog.com/practicalai",
+      "u": "https://practicalai.show",
       "tag": "播客",
       "ic": "🛠️",
       "cat": "community",
@@ -7039,7 +7044,7 @@
     {
       "n": "AltTab",
       "d": "macOS 窗口切换增强器，Windows 风格 Alt+Tab 更高效切换。",
-      "u": "https://alt-tab-macos.netlify.app",
+      "u": "https://alt-tab.app",
       "tag": "免费",
       "ic": "🔄",
       "cat": "tools",
@@ -7089,7 +7094,7 @@
     {
       "n": "Mojo",
       "d": "为 AI 计算的 Python 超集语言，高达 Python 35000 倍提速潜力。",
-      "u": "https://www.modular.com/mojo",
+      "u": "https://mojolang.org",
       "tag": "高性能",
       "ic": "🔥",
       "cat": "learn",

@@ -744,7 +744,7 @@
 - 标签：交易
 - 核验：存活（反爬拦截）
 
-## Gemini
+## Gemini（交易所）
 
 - 链接：<https://www.gemini.com>
 - 说明：Winklevoss 兄弟创立的合规交易所，纽约州持牌安全优先。

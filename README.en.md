@@ -156,5 +156,5 @@ respective rights holders.
 | Items | 715 (public 531 · ext 184) |
 | Categories | 12 (11 public) |
 | Tag vocabulary | 92 (closed enum) |
-| Retired | 4 (Play.ht · Tabnine · CSM AI · Ready Player Me) |
+| Retired | 9 (Galileo AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Phrasee · OctoAI · Ansys · Papers With Code) |
 <!-- STATS:END -->

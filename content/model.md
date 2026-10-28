@@ -18,10 +18,10 @@
 
 ## Ollama
 
-- 链接：<https://ollama.ai>
+- 链接：<https://ollama.com>
 - 说明：本地运行大语言模型的最简单方式，支持 Llama、Mistral 等。
 - 标签：本地部署
-- 核验：可达（已改址 → https://ollama.com/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Replicate
 
@@ -68,7 +68,7 @@
 ## OctoAI
 
 - 链接：<https://octo.ai>
-- 说明：高效 AI 推理优化与模型部署平台，大幅降低部署成本。
+- 说明：AI 推理优化与部署平台，被 NVIDIA 收购，官网重定向到 nvidia.com。
 - 标签：推理
 - 核验：可达（已改址 → https://www.nvidia.com/en-us/）（2026-10-22）
 
@@ -109,8 +109,8 @@
 
 ## Llama
 
-- 链接：<https://llama.meta.com>
-- 说明：Meta 发布的开源大语言模型系列，当前最受欢迎的开源基座。
+- 链接：<https://llama.com>
+- 说明：Meta 开源大语言模型系列，当前最受欢迎的开源基座；入口域名 llama.com 现指向 Meta AI 开发者站。
 - 标签：大厂·开源
 - 核验：可达（已改址 → https://dev.meta.ai/）（2026-10-22）
 
@@ -130,10 +130,10 @@
 
 ## Gemma
 
-- 链接：<https://ai.google.dev/gemma>
-- 说明：Google 推出的轻量开源模型系列，适合端侧部署与实验。
+- 链接：<https://deepmind.google/models/gemma/>
+- 说明：Google 轻量开源模型系列，适合端侧部署与实验；模型页现迁至 DeepMind 站点。
 - 标签：大厂
-- 核验：可达（已改址 → https://deepmind.google/models/gemma/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Phi
 

@@ -571,10 +571,10 @@
 
 ## Makeblock
 
-- 链接：<https://www.makeblock.com>
-- 说明：中国 STEAM 教育机器人品牌，mBot 系列全球畅销。
+- 链接：<https://www.xtool.cn>
+- 说明：中国 STEAM 教育机器人品牌（公司已转向 xTool 品牌，官网重定向到 xtool.cn），mBot 系列全球畅销。
 - 标签：教育·国产
-- 核验：可达（已改址 → https://www.xtool.cn/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Festo Bionic
 

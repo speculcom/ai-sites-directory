@@ -19,7 +19,7 @@
 ## Galileo AI
 
 - 链接：<https://www.usegalileo.ai>
-- 说明：用自然语言描述即可生成 UI 界面设计稿的 AI 工具。
+- 说明：AI 界面设计生成工具，官网已整站重定向到 Google Stitch（stitch.withgoogle.com），不再独立运营。
 - 标签：UI生成
 - 核验：可达（已改址 → https://stitch.withgoogle.com/）（2026-10-22）
 
@@ -235,10 +235,10 @@
 
 ## Suno
 
-- 链接：<https://suno.ai>
+- 链接：<https://suno.com>
 - 说明：AI 音乐生成平台，输入歌词或描述即可创作完整歌曲。
 - 标签：音乐生成
-- 核验：可达（已改址 → https://suno.com/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Udio
 

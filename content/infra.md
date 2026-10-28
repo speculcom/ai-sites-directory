@@ -67,10 +67,10 @@
 
 ## Cerebras
 
-- 链接：<https://www.cerebras.net>
+- 链接：<https://www.cerebras.ai>
 - 说明：晶圆级 AI 芯片 WSE-3，单芯片集成 4 万亿晶体管。
 - 标签：芯片设计
-- 核验：可达（已改址 → https://www.cerebras.ai/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Graphcore
 
@@ -200,10 +200,10 @@
 
 ## Lambda Labs
 
-- 链接：<https://lambdalabs.com>
+- 链接：<https://lambda.ai>
 - 说明：专注 AI 训练的 GPU 云服务商，提供 A100/H100 实例。
 - 标签：算力云·模型微调
-- 核验：可达（已改址 → https://lambda.ai/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## CoreWeave
 
@@ -264,7 +264,7 @@
 ## Ansys
 
 - 链接：<https://www.ansys.com>
-- 说明：多物理场仿真软件领导者，芯片电磁与散热仿真不可或缺。
+- 说明：多物理场仿真软件领导者，Synopsys 收购合并后官网重定向到 ansys.synopsys.com。
 - 标签：仿真
 - 核验：可达（已改址 → https://ansys.synopsys.com/）（2026-10-22）
 

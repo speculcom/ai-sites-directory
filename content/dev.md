@@ -67,10 +67,10 @@
 
 ## Vercel AI SDK
 
-- 链接：<https://sdk.vercel.ai>
+- 链接：<https://ai-sdk.dev>
 - 说明：Vercel 推出的 AI 应用开发工具包，快速搭建 AI 前端。
 - 标签：前端
-- 核验：可达（已改址 → https://ai-sdk.dev/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Haystack
 
@@ -116,10 +116,10 @@
 
 ## JAX
 
-- 链接：<https://jax.readthedocs.io>
+- 链接：<https://docs.jax.dev/en/latest/>
 - 说明：Google 开源高性能数值计算库，自动微分与 XLA 编译加速。
 - 标签：大厂·高性能
-- 核验：可达（已改址 → https://docs.jax.dev/en/latest/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Weights & Biases
 
@@ -284,10 +284,10 @@
 
 ## DeepEval
 
-- 链接：<https://docs.confident-ai.com>
+- 链接：<https://deepeval.com>
 - 说明：开源 LLM 评测框架，单元测试方式量化评估模型质量。
 - 标签：开源
-- 核验：可达（已改址 → https://deepeval.com/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## TruLens
 

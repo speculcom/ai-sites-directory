@@ -12,7 +12,7 @@
 ## Papers With Code
 
 - 链接：<https://paperswithcode.com>
-- 说明：将论文与代码一一对应的平台，追踪 AI 技术最新进展。
+- 说明：论文-代码对应索引平台，2025-07 被 Meta 关停，域名重定向到 Hugging Face Trending Papers，历史数据存于 paperswithcode-data 仓库。
 - 标签：学术·编程助手
 - 核验：可达（已改址 → https://huggingface.co/papers/trending）（2026-10-22）
 
@@ -298,7 +298,7 @@
 
 ## Mojo
 
-- 链接：<https://www.modular.com/mojo>
+- 链接：<https://mojolang.org>
 - 说明：为 AI 计算的 Python 超集语言，高达 Python 35000 倍提速潜力。
 - 标签：高性能
-- 核验：可达（已改址 → https://mojolang.org/）（2026-10-22）
+- 核验：ok（2026-10-22）

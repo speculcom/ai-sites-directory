@@ -151,17 +151,17 @@
 
 ## Neon
 
-- 链接：<https://neon.tech>
+- 链接：<https://neon.com>
 - 说明：Serverless PostgreSQL 数据库，分支式开发体验极佳。
 - 标签：云服务
-- 核验：可达（已改址 → https://neon.com/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Railway
 
-- 链接：<https://railway.app>
+- 链接：<https://railway.com>
 - 说明：极简部署平台，从代码到运行只需一个命令极速上线。
 - 标签：云服务
-- 核验：可达（已改址 → https://railway.com/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Fly.io
 
@@ -480,10 +480,10 @@
 
 ## AltTab
 
-- 链接：<https://alt-tab-macos.netlify.app>
+- 链接：<https://alt-tab.app>
 - 说明：macOS 窗口切换增强器，Windows 风格 Alt+Tab 更高效切换。
 - 标签：免费
-- 核验：可达（已改址 → https://alt-tab.app/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## 1Password
 

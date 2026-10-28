@@ -11,17 +11,17 @@
 
 ## Cursor
 
-- 链接：<https://cursor.sh>
+- 链接：<https://cursor.com>
 - 说明：基于 VS Code 的 AI 原生代码编辑器，编程体验极致智能。
 - 标签：IDE
-- 核验：可达（已改址 → https://cursor.com/）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## Windsurf
 
-- 链接：<https://codeium.com/windsurf>
-- 说明：Codeium 推出的 AI 原生 IDE，支持多文件智能编辑与重构。
+- 链接：<https://devin.ai/desktop>
+- 说明：Codeium 推出的 AI 原生 IDE，产品现归入 Devin（Cognition）旗下，官网重定向到 devin.ai/desktop。
 - 标签：IDE·编程助手
-- 核验：可达（已改址 → https://devin.ai/desktop）（2026-10-22）
+- 核验：ok（2026-10-22）
 
 ## v0
 
@@ -235,7 +235,7 @@
 
 ## SmythOS
 
-- 链接：<https://smythos.com>
-- 说明：AI 智能体操作系统，拖拽式构建与部署多 Agent 工作流。
+- 链接：<https://github.com/smythos/sre>
+- 说明：AI 智能体操作系统，公司转向开源智能体运行时 SRE，官网重定向到其 GitHub 仓库。
 - 标签：可视化·云服务
-- 核验：可达（已改址 → https://github.com/smythos/sre）（2026-10-22）
+- 核验：ok（2026-10-22）
