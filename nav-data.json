@@ -3402,7 +3402,7 @@
     {
       "n": "Polkadot",
       "d": "跨链互操作协议，连接多条专用区块链实现数据互通。",
-      "u": "https://polkadot.network",
+      "u": "https://polkadot.com",
       "tag": "跨链",
       "ic": "🔗",
       "cat": "ext",
@@ -3412,7 +3412,7 @@
     {
       "n": "Avalanche",
       "d": "高性能可定制区块链平台，子网架构灵活可定制。",
-      "u": "https://www.avax.network",
+      "u": "https://www.avalanche.com",
       "tag": "基础设施",
       "ic": "❄️",
       "cat": "ext",
@@ -3472,7 +3472,7 @@
     {
       "n": "Algorand",
       "d": "MIT 教授创立的纯 PoS 公链，碳中和且快速终局不分叉。",
-      "u": "https://www.algorand.com",
+      "u": "https://algorand.co",
       "tag": "基础设施",
       "ic": "🟢",
       "cat": "ext",
@@ -3682,7 +3682,7 @@
     {
       "n": "Pocket Network",
       "d": "去中心化 RPC 协议，由节点运营商网络提供多链数据访问。",
-      "u": "https://www.pokt.network",
+      "u": "https://pocket.network",
       "tag": "基础设施·跨链",
       "ic": "📡",
       "cat": "ext",
@@ -3782,7 +3782,7 @@
     {
       "n": "Synapse",
       "d": "跨链互操作与资产桥接协议，支持 20+ EVM 链安全互通。",
-      "u": "https://www.synapseprotocol.com",
+      "u": "https://hypercall.xyz/synapse",
       "tag": "智能合约",
       "ic": "🧬",
       "cat": "ext",
@@ -3962,7 +3962,7 @@
     {
       "n": "Moralis",
       "d": "Web3 后端即服务平台，一站式构建去中心化应用后端。",
-      "u": "https://moralis.io",
+      "u": "https://moralis.com",
       "tag": "云服务·API",
       "ic": "⚡",
       "cat": "ext",
@@ -4012,7 +4012,7 @@
     {
       "n": "DIMO",
       "d": "去中心化车辆数据网络，车主分享行车数据赚取 DIMO 代币。",
-      "u": "https://dimo.zone",
+      "u": "https://dimo.org",
       "tag": "自动驾驶·数据集",
       "ic": "🚗",
       "cat": "ext",
@@ -4062,8 +4062,8 @@
     {
       "n": "Parcl",
       "d": "合成房地产投资协议，以代币追踪全球城市房价涨跌。",
-      "u": "https://parcl.co",
-      "tag": "语音合成",
+      "u": "https://www.parcllabs.com",
+      "tag": "DeFi",
       "ic": "🏘️",
       "cat": "ext",
       "old_t": "RWA 现实资产",
@@ -4102,7 +4102,7 @@
     {
       "n": "Vulcan Forged",
       "d": "NFT 游戏工作室与去中心化应用市场，多款热门链游。",
-      "u": "https://vulcanforged.com",
+      "u": "https://vulcan-x.io",
       "tag": "链上数据",
       "ic": "🔨",
       "cat": "ext",
@@ -4162,7 +4162,7 @@
     {
       "n": "Oasis Network",
       "d": "隐私优先的 L1 公链，TEE 与零知识技术保护用户数据。",
-      "u": "https://oasisprotocol.org",
+      "u": "https://oasis.net",
       "tag": "安全",
       "ic": "🟢",
       "cat": "ext",
@@ -4252,7 +4252,7 @@
     {
       "n": "Arkham",
       "d": "链上身份追踪与情报平台，可视化实体持仓与资金流向。",
-      "u": "https://www.arkhamintelligence.com",
+      "u": "https://info.arkm.com",
       "tag": "链上数据",
       "ic": "🕵️",
       "cat": "ext",
@@ -4422,7 +4422,7 @@
     {
       "n": "MetaMask",
       "d": "最流行的以太坊钱包浏览器插件，玩转 DeFi 的必备入口。",
-      "u": "https://metamask.io",
+      "u": "https://metamask.com",
       "tag": "钱包",
       "ic": "🦊",
       "cat": "ext",
@@ -4432,8 +4432,8 @@
     {
       "n": "Phantom",
       "d": "Solana 生态首选钱包，支持浏览器插件与移动端无缝体验。",
-      "u": "https://phantom.app",
-      "tag": "公链",
+      "u": "https://phantom.com",
+      "tag": "钱包",
       "ic": "👻",
       "cat": "ext",
       "old_t": "钱包",
@@ -4532,7 +4532,7 @@
     {
       "n": "Argent",
       "d": "以太坊 StarkNet 智能合约钱包，社交恢复免助记词极简体验。",
-      "u": "https://www.argent.xyz",
+      "u": "https://www.ready.co",
       "tag": "钱包·L2",
       "ic": "🦄",
       "cat": "ext",
@@ -4572,7 +4572,7 @@
     {
       "n": "Curve",
       "d": "稳定币交易 DEX，以超低滑点与深度流动性池闻名。",
-      "u": "https://curve.fi",
+      "u": "https://www.curve.finance",
       "tag": "稳定币",
       "ic": "📉",
       "cat": "ext",
@@ -4592,7 +4592,7 @@
     {
       "n": "EigenLayer",
       "d": "以太坊再质押协议，释放已质押资产的额外收益潜力。",
-      "u": "https://www.eigenlayer.xyz",
+      "u": "https://www.eigencloud.xyz",
       "tag": "质押·基础设施",
       "ic": "🔄",
       "cat": "ext",
@@ -4612,8 +4612,8 @@
     {
       "n": "1inch",
       "d": "DEX 聚合器龙头，自动寻找最优兑换路径降低滑点成本。",
-      "u": "https://1inch.io",
-      "tag": "搜索",
+      "u": "https://1inch.com",
+      "tag": "交易",
       "ic": "🐉",
       "cat": "ext",
       "old_t": "DeFi",
@@ -4642,7 +4642,7 @@
     {
       "n": "Compound",
       "d": "去中心化货币市场协议，存币生息与抵押借贷的去中心化实现。",
-      "u": "https://compound.finance",
+      "u": "https://compound.xyz",
       "tag": "DeFi·质押",
       "ic": "🏦",
       "cat": "ext",
@@ -4722,7 +4722,7 @@
     {
       "n": "Frax",
       "d": "部分抵押算法稳定币协议，创新的 AMO 策略实现高效稳定。",
-      "u": "https://frax.finance",
+      "u": "https://frax.com",
       "tag": "稳定币·DeFi",
       "ic": "🏛️",
       "cat": "ext",
@@ -4892,7 +4892,7 @@
     {
       "n": "CyberConnect",
       "d": "去中心化社交图谱协议，跨平台复用用户社交身份与数据。",
-      "u": "https://cyberconnect.me",
+      "u": "https://cyber.co",
       "tag": "社交",
       "ic": "🔗",
       "cat": "ext",
@@ -4912,7 +4912,7 @@
     {
       "n": "Paragraph",
       "d": "Web3 内容发布与 Newsletter 平台，作者与读者直接互联互通。",
-      "u": "https://paragraph.xyz",
+      "u": "https://paragraph.com",
       "tag": "资讯",
       "ic": "📰",
       "cat": "ext",
@@ -4952,7 +4952,7 @@
     {
       "n": "Blockworks",
       "d": "数字资产领域的媒体与研究平台，提供专业级分析与播客。",
-      "u": "https://blockworks.co",
+      "u": "https://blockworks.com",
       "tag": "播客",
       "ic": "🎙️",
       "cat": "ext",
@@ -4982,7 +4982,7 @@
     {
       "n": "Ramp Network",
       "d": "法币到加密货币的入金通道，合规覆盖 150+ 国家和地区。",
-      "u": "https://ramp.network",
+      "u": "https://rampnetwork.com",
       "tag": "金融·合规",
       "ic": "🏦",
       "cat": "ext",
@@ -5002,7 +5002,7 @@
     {
       "n": "a16z Crypto",
       "d": "Andreessen Horowitz 加密风投基金，Web3 领域最大投资者之一。",
-      "u": "https://a16zcrypto.com",
+      "u": "https://a16zfrontier.com",
       "tag": "创业·Web3",
       "ic": "💰",
       "cat": "ext",
@@ -5087,7 +5087,8 @@
       "ic": "💎",
       "cat": "ext",
       "old_t": "NFT 工具",
-      "old_c": "crypto"
+      "old_c": "crypto",
+      "retired": true
     },
     {
       "n": "Sudoswap",

@@ -1,16 +1,16 @@
 {
- "at": "2026-10-28T23:25:09.798Z",
+ "at": "2026-10-29T03:11:12.187Z",
  "source": "nav-data.json",
- "items": 715,
- "checked": 695,
- "probedNow": 695,
+ "items": 723,
+ "checked": 700,
+ "probedNow": 39,
  "dedup": true,
  "proxy": true,
  "only": null,
  "tally": {
-  "ok": 500,
-  "changed": 41,
+  "ok": 539,
   "blocked": 62,
+  "changed": 7,
   "unverifiable": 92
  },
  "history": [
@@ -194,6 +194,30 @@
     "blocked": 62,
     "unverifiable": 92
    }
+  },
+  {
+   "at": "2026-10-29T03:11:00.167Z",
+   "kind": "start",
+   "items": 723,
+   "probedNow": 0,
+   "tally": {
+    "ok": 500,
+    "changed": 41,
+    "blocked": 62,
+    "unverifiable": 92
+   }
+  },
+  {
+   "at": "2026-10-29T03:11:12.186Z",
+   "kind": "done",
+   "items": 723,
+   "probedNow": 39,
+   "tally": {
+    "ok": 539,
+    "blocked": 62,
+    "changed": 7,
+    "unverifiable": 92
+   }
   }
  ],
  "results": [
@@ -251,14 +275,6 @@
    "u": "https://hailuoai.com",
    "v": "ok",
    "s": 200,
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://kimi.moonshot.cn",
-   "v": "changed",
-   "s": 200,
-   "to": "https://www.kimi.com/",
    "via": "fetch"
   },
   {
@@ -351,14 +367,6 @@
    "u": "https://www.reka.ai",
    "v": "ok",
    "s": 200,
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://www.bochaai.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://bocha.cn/",
    "via": "fetch"
   },
   {
@@ -638,25 +646,9 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://runwayml.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://runway.com/",
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://firefly.adobe.com",
    "v": "ok",
    "s": 200,
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://kling.kuaishou.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://klingai.com/app/",
    "via": "fetch"
   },
   {
@@ -685,14 +677,6 @@
    "u": "https://www.capcut.cn",
    "v": "ok",
    "s": 200,
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://www.vidu.studio",
-   "v": "changed",
-   "s": 200,
-   "to": "https://www.vidu.cn/",
    "via": "fetch"
   },
   {
@@ -1941,15 +1925,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://www.flyzipline.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://www.zipline.com/",
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://wing.com",
    "v": "ok",
    "s": 200,
@@ -2034,15 +2009,6 @@
    "u": "https://www.eksobionics.com",
    "v": "ok",
    "s": 200,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://rewalk.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://golifeward.com/",
    "via": "curl",
    "fetchErr": "timeout"
   },
@@ -2308,15 +2274,6 @@
    "u": "https://www.tryleap.ai",
    "v": "ok",
    "s": 200,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://llama.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://dev.meta.ai/",
    "via": "curl",
    "fetchErr": "timeout"
   },
@@ -2787,14 +2744,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://www.avax.network",
-   "v": "changed",
-   "s": 200,
-   "to": "https://www.avalanche.com/",
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://flow.com",
    "v": "ok",
    "s": 200,
@@ -2858,15 +2807,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://polkadot.network",
-   "v": "changed",
-   "s": 200,
-   "to": "https://polkadot.com/",
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://www.bnbchain.org",
    "v": "ok",
    "s": 200,
@@ -2900,14 +2840,6 @@
    "u": "https://www.zilliqa.com",
    "v": "ok",
    "s": 200,
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://www.algorand.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://algorand.co/",
    "via": "fetch"
   },
   {
@@ -3054,14 +2986,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://www.pokt.network",
-   "v": "changed",
-   "s": 200,
-   "to": "https://pocket.network/",
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://x2y2.io",
    "v": "blocked",
    "s": 403,
@@ -3072,14 +2996,6 @@
    "u": "https://tronscan.org",
    "v": "blocked",
    "s": 403,
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://www.synapseprotocol.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://hypercall.xyz/synapse",
    "via": "fetch"
   },
   {
@@ -3228,27 +3144,9 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://moralis.io",
-   "v": "changed",
-   "s": 200,
-   "to": "https://moralis.com/",
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://www.helium.com",
    "v": "ok",
    "s": 200,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://dimo.zone",
-   "v": "changed",
-   "s": 200,
-   "to": "https://dimo.org/",
    "via": "curl",
    "fetchErr": "timeout"
   },
@@ -3278,15 +3176,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://parcl.co",
-   "v": "changed",
-   "s": 200,
-   "to": "https://www.parcllabs.com/",
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://godsunchained.com",
    "v": "ok",
    "s": 200,
@@ -3306,15 +3195,6 @@
    "u": "https://alienworlds.io",
    "v": "ok",
    "s": 200,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://vulcanforged.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://vulcan-x.io/",
    "via": "curl",
    "fetchErr": "timeout"
   },
@@ -3355,15 +3235,6 @@
    "u": "https://ironfish.network",
    "v": "ok",
    "s": 200,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://oasisprotocol.org",
-   "v": "changed",
-   "s": 200,
-   "to": "https://oasis.net/",
    "via": "curl",
    "fetchErr": "timeout"
   },
@@ -3428,15 +3299,6 @@
    "u": "https://messari.io",
    "v": "blocked",
    "s": 429,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://www.arkhamintelligence.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://info.arkm.com/",
    "via": "curl",
    "fetchErr": "timeout"
   },
@@ -3584,28 +3446,10 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://metamask.io",
-   "v": "changed",
-   "s": 200,
-   "to": "https://metamask.com/",
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://rabby.io",
    "v": "ok",
    "s": 200,
    "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://phantom.app",
-   "v": "changed",
-   "s": 200,
-   "to": "https://phantom.com/",
-   "via": "curl",
-   "fetchErr": "timeout"
   },
   {
    "lv": "2026-10-28",
@@ -3657,15 +3501,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://www.argent.xyz",
-   "v": "changed",
-   "s": 200,
-   "to": "https://www.ready.co/",
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://aave.com",
    "v": "ok",
    "s": 200,
@@ -3690,15 +3525,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://curve.fi",
-   "v": "changed",
-   "s": 200,
-   "to": "https://www.curve.finance/",
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://pancakeswap.finance",
    "v": "ok",
    "s": 200,
@@ -3707,27 +3533,9 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://www.eigenlayer.xyz",
-   "v": "changed",
-   "s": 200,
-   "to": "https://www.eigencloud.xyz/",
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://www.pendle.finance",
    "v": "ok",
    "s": 200,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://1inch.io",
-   "v": "changed",
-   "s": 200,
-   "to": "https://1inch.com/",
    "via": "curl",
    "fetchErr": "timeout"
   },
@@ -3744,15 +3552,6 @@
    "u": "https://www.ether.fi",
    "v": "blocked",
    "s": 429,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://compound.finance",
-   "v": "changed",
-   "s": 200,
-   "to": "https://www.compound.xyz/redirect",
    "via": "curl",
    "fetchErr": "timeout"
   },
@@ -3809,15 +3608,6 @@
    "u": "https://www.ethena.fi",
    "v": "ok",
    "s": 200,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://frax.finance",
-   "v": "changed",
-   "s": 200,
-   "to": "https://frax.com/",
    "via": "curl",
    "fetchErr": "timeout"
   },
@@ -3895,14 +3685,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://cyberconnect.me",
-   "v": "changed",
-   "s": 200,
-   "to": "https://cyber.co/",
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://www.deso.com",
    "v": "ok",
    "s": 200,
@@ -3966,14 +3748,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://a16zcrypto.com",
-   "v": "changed",
-   "s": 200,
-   "to": "https://a16zfrontier.com/",
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://www.moonpay.com",
    "v": "ok",
    "s": 200,
@@ -3995,25 +3769,9 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://blockworks.co",
-   "v": "changed",
-   "s": 200,
-   "to": "https://blockworks.com/",
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://koinly.io",
    "v": "blocked",
    "s": 403,
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://ramp.network",
-   "v": "changed",
-   "s": 200,
-   "to": "https://rampnetwork.com/",
    "via": "fetch"
   },
   {
@@ -4201,14 +3959,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://lightmatter.co",
-   "v": "changed",
-   "s": 200,
-   "to": "https://lightmatter.com/",
-   "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://juicebox.money",
    "v": "ok",
    "s": 200,
@@ -4221,15 +3971,6 @@
    "v": "blocked",
    "s": 403,
    "via": "fetch"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://paragraph.xyz",
-   "v": "changed",
-   "s": 200,
-   "to": "https://paragraph.com/",
-   "via": "curl",
-   "fetchErr": "timeout"
   },
   {
    "lv": "2026-10-28",
@@ -5128,15 +4869,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://docs.anthropic.com/prompt-library",
-   "v": "changed",
-   "s": 200,
-   "to": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://www.python.org",
    "v": "ok",
    "s": 200,
@@ -5578,6 +5310,288 @@
   {
    "lv": "2026-10-28",
    "u": "https://playcanvas.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://bocha.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://klingai.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://www.kimi.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://www.vidu.cn",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://golifeward.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://www.zipline.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://info.arkm.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://algorand.co",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://www.avalanche.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://pocket.network",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://www.parcllabs.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://dimo.org",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://metamask.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://hypercall.xyz/synapse",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://runway.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://1inch.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://vulcan-x.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://oasis.net",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://www.ready.co",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://www.eigencloud.xyz",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://rampnetwork.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "ECONNRESET"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://frax.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://cyber.co",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://blockworks.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://a16zfrontier.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://www.windmill.dev",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://composio.dev",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://exa.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://compound.xyz",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://lightmatter.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://dev.meta.ai",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://polkadot.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://temporal.io",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://moralis.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://docs.sillytavern.app",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://phantom.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://www.curve.finance",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://paragraph.com",
+   "v": "ok",
+   "s": 200,
+   "via": "curl",
+   "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-29",
+   "u": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
    "v": "ok",
    "s": 200,
    "via": "curl",
