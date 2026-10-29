@@ -105,7 +105,7 @@
     {
       "n": "Kimi",
       "d": "月之暗面推出的超长上下文 AI 助手，支持 200 万字输入。",
-      "u": "https://kimi.moonshot.cn",
+      "u": "https://www.kimi.com",
       "tag": "长文本·国产",
       "ic": "🌙",
       "cat": "llm",
@@ -415,7 +415,7 @@
     {
       "n": "博查 AI 搜索",
       "d": "字节旗下 AI 搜索产品，聚合全网信息智能回答。",
-      "u": "https://www.bochaai.com",
+      "u": "https://bocha.cn",
       "tag": "大厂·搜索",
       "ic": "🎯",
       "cat": "llm",
@@ -746,7 +746,7 @@
     {
       "n": "Runway",
       "d": "专业级 AI 视频生成与编辑平台，支持 Gen-3 等前沿模型。",
-      "u": "https://runwayml.com",
+      "u": "https://runway.com",
       "tag": "视频生成",
       "ic": "🎬",
       "cat": "gen",
@@ -766,7 +766,7 @@
     {
       "n": "可灵 Kling",
       "d": "快手推出的 AI 视频生成大模型，支持文生视频和图生视频。",
-      "u": "https://kling.kuaishou.com",
+      "u": "https://klingai.com",
       "tag": "国产",
       "ic": "🎞️",
       "cat": "gen",
@@ -836,7 +836,7 @@
     {
       "n": "Vidu",
       "d": "生数科技推出的长时长 AI 视频生成模型，一致性表现优异。",
-      "u": "https://www.vidu.studio",
+      "u": "https://www.vidu.cn",
       "tag": "视频生成",
       "ic": "🎯",
       "cat": "gen",
@@ -2321,7 +2321,7 @@
     {
       "n": "Zipline",
       "d": "医疗物资无人机配送全球领导者，服务非洲与美国。",
-      "u": "https://www.flyzipline.com",
+      "u": "https://www.zipline.com",
       "tag": "医疗·物流",
       "ic": "💉",
       "cat": "robot",
@@ -2441,7 +2441,7 @@
     {
       "n": "ReWalk Robotics",
       "d": "全球首个获 FDA 批准的个人外骨骼系统，助力截瘫行走。",
-      "u": "https://rewalk.com",
+      "u": "https://golifeward.com",
       "tag": "医疗",
       "ic": "🚶",
       "cat": "robot",
@@ -2791,8 +2791,8 @@
     },
     {
       "n": "Llama",
-      "d": "Meta 开源大语言模型系列，当前最受欢迎的开源基座；入口域名 llama.com 现指向 Meta AI 开发者站。",
-      "u": "https://llama.com",
+      "d": "Meta 开源大语言模型系列，当前最受欢迎的开源基座；开发者入口在 dev.meta.ai。",
+      "u": "https://dev.meta.ai",
       "tag": "大厂·开源",
       "ic": "🦙",
       "cat": "model",
@@ -5312,7 +5312,7 @@
     {
       "n": "Lightmatter",
       "d": "光子计算芯片先锋，用光代替电子实现超低功耗 AI 推理。",
-      "u": "https://lightmatter.co",
+      "u": "https://lightmatter.com",
       "tag": "芯片设计·边缘计算",
       "ic": "💡",
       "cat": "infra",
@@ -6443,8 +6443,8 @@
     },
     {
       "n": "Anthropic Prompt Library",
-      "d": "Anthropic 官方提示词库，精选各行各业高效 Prompt 模板。",
-      "u": "https://docs.anthropic.com/prompt-library",
+      "d": "Anthropic 官方提示词工程指南；原独立提示词库已并入 Claude 文档。",
+      "u": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
       "tag": "大厂·设计",
       "ic": "📚",
       "cat": "learn",
@@ -7220,6 +7220,86 @@
       "cat": "ext",
       "old_t": "游戏开发",
       "old_c": "game"
+    },
+    {
+      "n": "Windmill",
+      "d": "开源脚本编排与内部工具平台，LLM 工作流只是其场景之一。",
+      "u": "https://www.windmill.dev",
+      "tag": "工作流·开源",
+      "ic": "🎡",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Temporal",
+      "d": "持久执行引擎，可靠工作流的底座配件（不是 agent 框架）。",
+      "u": "https://temporal.io",
+      "tag": "开源·基础设施",
+      "ic": "⏳",
+      "cat": "tools",
+      "old_t": "开发者工具",
+      "old_c": "tools"
+    },
+    {
+      "n": "Composio",
+      "d": "面向 AI agent 的工具集成层，与 MCP 生态重叠。",
+      "u": "https://composio.dev",
+      "tag": "API·Agent",
+      "ic": "🔗",
+      "cat": "dev",
+      "old_t": "开发框架与工具",
+      "old_c": "dev"
+    },
+    {
+      "n": "Prompt flow",
+      "d": "微软开源 LLMOps 工具集：LLM 应用从原型、测试到部署监控。",
+      "u": "https://github.com/microsoft/promptflow",
+      "tag": "开源·工作流",
+      "ic": "🔀",
+      "cat": "dev",
+      "old_t": "开发框架与工具",
+      "old_c": "dev"
+    },
+    {
+      "n": "Exa",
+      "d": "面向 AI/agent 的检索 API——搜索基础设施，不是面向用户的研究产品。",
+      "u": "https://exa.ai",
+      "tag": "API·搜索",
+      "ic": "🔍",
+      "cat": "dev",
+      "old_t": "开发框架与工具",
+      "old_c": "dev"
+    },
+    {
+      "n": "SillyTavern",
+      "d": "开源本地对话前端壳，连接模型后端运行，本身不加载模型。",
+      "u": "https://docs.sillytavern.app",
+      "tag": "开源·本地部署",
+      "ic": "🎭",
+      "cat": "llm",
+      "old_t": "大模型与对话",
+      "old_c": "llm"
+    },
+    {
+      "n": "Candle",
+      "d": "Hugging Face 的 Rust 张量库，用 Rust 代码跑模型（是库不是运行器产品）。",
+      "u": "https://github.com/huggingface/candle",
+      "tag": "开源·高性能",
+      "ic": "🕯️",
+      "cat": "dev",
+      "old_t": "开发框架与工具",
+      "old_c": "dev"
+    },
+    {
+      "n": "MCP Servers（官方合集）",
+      "d": "Model Context Protocol 官方服务器合集；Postgres/Drive 等社区 server 都在该合集登记。",
+      "u": "https://github.com/modelcontextprotocol/servers",
+      "tag": "开源·Agent",
+      "ic": "🔌",
+      "cat": "dev",
+      "old_t": "开发框架与工具",
+      "old_c": "dev"
     }
   ]
 }

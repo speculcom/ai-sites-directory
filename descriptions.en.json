@@ -168,7 +168,7 @@
   "Banana Dev": "An AI model deployment platform — turn an ML model into a production API in a few lines.",
   "Baseten": "High-performance open-model inference, tuned for production LLM deployment.",
   "Leap AI": "An API-ification platform, quickly generating APIs for image and text models.",
-  "Llama": "Meta's open family of large language models — the most popular open base models; the llama.com entry now points to Meta's AI developer site.",
+  "Llama": "Meta's open family of large language models — the most popular open base models; the developer entry is dev.meta.ai.",
   "Mistral": "A French AI company shipping efficient open models that deploy lightly.",
   "Qwen": "Alibaba's open Qwen family, covering many sizes and multimodal variants.",
   "Gemma": "Google's lightweight open model family, suited to on-device deployment and experiments; the model page has moved to the DeepMind site.",
@@ -298,7 +298,7 @@
   "3Blue1Brown": "A YouTube channel explaining maths and AI concepts through beautiful animation.",
   "Learn Prompting": "A free introduction to prompt engineering, for using AI effectively.",
   "Prompting Guide": "DAIR.AI's comprehensive prompt engineering guide and research index.",
-  "Anthropic Prompt Library": "Anthropic's official prompt library, with effective templates across industries.",
+  "Anthropic Prompt Library": "Anthropic's official prompting guide; the standalone prompt library has been merged into the Claude docs.",
   "OpenAI Cookbook": "OpenAI's official API examples, covering best practices for common cases.",
   "FlowGPT": "The largest AI prompt community, with millions sharing their creations.",
   "Common Crawl": "A vast non-profit open dataset of web crawls, the bedrock of model training.",
@@ -534,5 +534,13 @@
   "Qodo": "AI code review and SDLC governance platform (formerly CodiumAI); the official sunset notice retired its code generation, and the IDE plugin retires 2026-10-30.",
   "Kilo Code": "Open-source AI coding agent (MIT): VS Code/JetBrains/CLI/cloud, 500+ models at zero markup, full BYOK and local-model support.",
   "文心快码": "Baidu's AI coding family (Baidu Comate): an AI IDE plus multi-IDE plugins and CLI, switchable domestic models, private deployment with data staying in-domain.",
-  "Gemini（交易所）": "The Winklevoss-run regulated exchange, NY-licensed and security-first."
+  "Gemini（交易所）": "The Winklevoss-run regulated exchange, NY-licensed and security-first.",
+  "Windmill": "Open-source script orchestration and internal-tools platform; LLM workflows are one of its scenarios.",
+  "Temporal": "Durable execution engine for reliable workflows; a foundation component rather than an agent framework.",
+  "Composio": "Tool-integration layer for AI agents, overlapping with the MCP ecosystem.",
+  "Prompt flow": "Microsoft's open-source LLMOps toolkit: prototyping, testing, deploying and monitoring LLM apps.",
+  "Exa": "A search API built for AI agents — retrieval infrastructure, not a consumer research product.",
+  "SillyTavern": "Open-source local chat frontend shell; connects to model backends rather than running models itself.",
+  "Candle": "Hugging Face's Rust tensor library for running models in Rust — a library, not a runner product.",
+  "MCP Servers（官方合集）": "The official collection of Model Context Protocol servers; community servers (Postgres, Drive, etc.) are tracked in this registry."
 }

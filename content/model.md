@@ -14,112 +14,112 @@
 - 链接：<https://modelscope.cn>
 - 说明：阿里云推出的中文 AI 模型开源社区，汇集国内优质模型。
 - 标签：大厂·国产
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Ollama
 
 - 链接：<https://ollama.com>
 - 说明：本地运行大语言模型的最简单方式，支持 Llama、Mistral 等。
 - 标签：本地部署
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Replicate
 
 - 链接：<https://replicate.com>
 - 说明：一键运行和部署开源 AI 模型的云平台，API 简单易用。
 - 标签：云服务·API
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Civitai
 
 - 链接：<https://civitai.com>
 - 说明：Stable Diffusion 模型与 LoRA 的最大分享社区，创作者天堂。
 - 标签：社区
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## OpenRouter
 
 - 链接：<https://openrouter.ai>
 - 说明：统一的 LLM API 网关，一站调用 200+ 模型，按量付费。
 - 标签：API
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Together AI
 
 - 链接：<https://www.together.ai>
 - 说明：开源模型推理与微调平台，提供极速 GPU 推理 API。
 - 标签：推理·模型微调
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Fireworks AI
 
 - 链接：<https://fireworks.ai>
 - 说明：极低延迟的开源模型推理平台，专为生产环境优化。
 - 标签：高性能
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Groq
 
 - 链接：<https://groq.com>
 - 说明：LPU 推理引擎驱动的极速 LLM 推理服务，毫秒级响应。
 - 标签：芯片设计·高性能
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## OctoAI
 
 - 链接：<https://octo.ai>
 - 说明：AI 推理优化与部署平台，被 NVIDIA 收购，官网重定向到 nvidia.com。
 - 标签：推理
-- 核验：可达（已改址 → https://www.nvidia.com/en-us/）（2026-10-22）
+- 核验：可达（已改址 → https://www.nvidia.com/en-us/#referrer=octoai/）（2026-10-28）
 
 ## Anyscale
 
 - 链接：<https://www.anyscale.com>
 - 说明：Ray 框架商业化平台，大规模分布式 AI 推理与训练引擎。
 - 标签：云服务
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Modal
 
 - 链接：<https://modal.com>
 - 说明：高性能无服务器 GPU 云，AI 模型推理与批处理秒级弹性。
 - 标签：云服务·GPU
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Banana Dev
 
 - 链接：<https://www.banana.dev>
 - 说明：AI 模型部署平台，几行代码将 ML 模型转化为生产 API。
 - 标签：云服务·API
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Baseten
 
 - 链接：<https://www.baseten.co>
 - 说明：高性能开源模型推理服务，专为生产级 LLM 部署优化。
 - 标签：云服务
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Leap AI
 
 - 链接：<https://www.tryleap.ai>
 - 说明：AI 模型 API 化平台，快速为图片和文本模型生成 API。
 - 标签：API
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Llama
 
-- 链接：<https://llama.com>
-- 说明：Meta 开源大语言模型系列，当前最受欢迎的开源基座；入口域名 llama.com 现指向 Meta AI 开发者站。
+- 链接：<https://dev.meta.ai>
+- 说明：Meta 开源大语言模型系列，当前最受欢迎的开源基座；开发者入口在 dev.meta.ai。
 - 标签：大厂·开源
-- 核验：可达（已改址 → https://dev.meta.ai/）（2026-10-22）
+- 核验：未核验
 
 ## Mistral
 
 - 链接：<https://mistral.ai>
 - 说明：法国 AI 公司推出的高性能开源模型，轻量高效部署友好。
 - 标签：高性能
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Qwen
 
@@ -133,21 +133,21 @@
 - 链接：<https://deepmind.google/models/gemma/>
 - 说明：Google 轻量开源模型系列，适合端侧部署与实验；模型页现迁至 DeepMind 站点。
 - 标签：大厂
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Phi
 
 - 链接：<https://azure.microsoft.com/products/phi>
 - 说明：微软研究院推出的小语言模型，在手机和笔记本上流畅运行。
 - 标签：大厂
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Yi 零一万物
 
 - 链接：<https://www.lingyiwanwu.com>
 - 说明：零一万物开源的大语言模型系列，中英文能力高度平衡。
 - 标签：多语言
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## DeepSeek Models
 
@@ -161,25 +161,25 @@
 - 链接：<https://www.databricks.com>
 - 说明：Databricks 推出的开源 MoE 模型，高效推理与企业级性能。
 - 标签：大厂
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## OLMo by Allen AI
 
 - 链接：<https://allenai.org/olmo>
 - 说明：Allen 人工智能研究所构建的完全开源的大语言模型。
 - 标签：学术·开源
-- 核验：存活（反爬拦截）
+- 核验：ok（2026-10-28）
 
 ## IBM Granite
 
 - 链接：<https://www.ibm.com/granite>
 - 说明：IBM 企业级开源模型系列，专为业务工作流和编码优化。
 - 标签：大厂·企业级
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
 
 ## Snowflake Arctic
 
 - 链接：<https://www.snowflake.com>
 - 说明：Snowflake 推出的企业智能开源大模型，高效 SQL 与编码。
 - 标签：企业级·编程助手
-- 核验：ok（2026-10-22）
+- 核验：ok（2026-10-28）
