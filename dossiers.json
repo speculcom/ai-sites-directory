@@ -1,6 +1,7 @@
 {
  "AIVA": "audio/aiva",
  "Andi Search": "research/andi",
+ "AutoGPT": "automation/autogpt",
  "Bolt.new": "coding/bolt-new",
  "Botpress": "automation/botpress",
  "ChatGPT": "chat/chatgpt",
@@ -48,6 +49,7 @@
  "Replit": "coding/replit-agent",
  "Runway": "video/runway",
  "SeaArt": "image/seaart",
+ "SmythOS": "automation/smythos",
  "Soundraw": "audio/soundraw",
  "Suno": "audio/suno",
  "Synthesia": "video/synthesia",
