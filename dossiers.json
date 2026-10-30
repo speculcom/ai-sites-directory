@@ -1,4 +1,5 @@
 {
+ "AIVA": "audio/aiva",
  "Andi Search": "research/andi",
  "Bolt.new": "coding/bolt-new",
  "Botpress": "automation/botpress",
@@ -47,6 +48,7 @@
  "Replit": "coding/replit-agent",
  "Runway": "video/runway",
  "SeaArt": "image/seaart",
+ "Soundraw": "audio/soundraw",
  "Suno": "audio/suno",
  "Synthesia": "video/synthesia",
  "Udio": "audio/udio",
