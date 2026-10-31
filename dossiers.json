@@ -54,6 +54,7 @@
  "Soundraw": "audio/soundraw",
  "Suno": "audio/suno",
  "Synthesia": "video/synthesia",
+ "Tensor.art": "image/tensor-art",
  "Udio": "audio/udio",
  "Vidu": "video/vidu",
  "Warp": "coding/warp",

@@ -156,5 +156,5 @@ respective rights holders.
 | Items | 723 (public 539 · ext 184) |
 | Categories | 12 (11 public) |
 | Tag vocabulary | 92 (closed enum) |
-| Retired | 12 (Galileo AI · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Tencent Zhiying · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code) |
+| Retired | 13 (Galileo AI · Baidu Yige · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Tencent Zhiying · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code) |
 <!-- STATS:END -->
