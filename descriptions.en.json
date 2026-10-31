@@ -542,5 +542,6 @@
   "Exa": "A search API built for AI agents — retrieval infrastructure, not a consumer research product.",
   "SillyTavern": "Open-source local chat frontend shell; connects to model backends rather than running models itself.",
   "Candle": "Hugging Face's Rust tensor library for running models in Rust — a library, not a runner product.",
-  "MCP Servers（官方合集）": "The official collection of Model Context Protocol servers; community servers (Postgres, Drive, etc.) are tracked in this registry."
+  "MCP Servers（官方合集）": "The official collection of Model Context Protocol servers; community servers (Postgres, Drive, etc.) are tracked in this registry.",
+  "agent-qa": "Natural-language testing for web, Android, and iOS apps with persistent memory, validated self-improvement, and CLI/MCP workflows."
 }

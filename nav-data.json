@@ -7304,6 +7304,16 @@
       "cat": "dev",
       "old_t": "开发框架与工具",
       "old_c": "dev"
+    },
+    {
+      "n": "agent-qa",
+      "d": "面向 Web、Android 和 iOS 的自然语言测试智能体，提供持久化记忆、经验证的自我改进与 CLI/MCP 工作流。",
+      "u": "https://vostride.com",
+      "tag": "Agent·命令行·本地部署",
+      "ic": "🧪",
+      "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
     }
   ]
 }

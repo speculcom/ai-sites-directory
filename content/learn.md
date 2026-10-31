@@ -7,28 +7,28 @@
 - 链接：<https://arxiv.org>
 - 说明：康奈尔大学运营的预印本论文平台，AI 前沿研究首选。
 - 标签：学术
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Papers With Code
 
 - 链接：<https://paperswithcode.com>
 - 说明：论文-代码对应索引平台，2025-07 被 Meta 关停，域名重定向到 Hugging Face Trending Papers，历史数据存于 paperswithcode-data 仓库。
 - 标签：学术·编程助手
-- 核验：可达（已改址 → https://huggingface.co/papers/trending）（2026-10-29）
+- 核验：可达（已改址 → https://huggingface.co/papers/trending）（2026-10-31）
 
 ## Semantic Scholar
 
 - 链接：<https://www.semanticscholar.org>
 - 说明：AI 驱动的学术文献搜索引擎，理解论文间引用与语义。
 - 标签：学术·搜索
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Connected Papers
 
 - 链接：<https://www.connectedpapers.com>
 - 说明：以图谱形式可视化论文引用关系，轻松探索学术脉络。
 - 标签：可视化
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## ResearchGate
 
@@ -42,35 +42,35 @@
 - 链接：<https://www.coursera.org>
 - 说明：全球顶级大学与企业的在线课程平台，提供专业证书与学位。
 - 标签：课程·合规
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## edX
 
 - 链接：<https://www.edx.org>
 - 说明：哈佛与 MIT 创立的非营利慕课平台，海量免费大学课程。
 - 标签：课程·学术
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Udacity
 
 - 链接：<https://www.udacity.com>
 - 说明：聚焦前沿技术的纳米学位平台，AI 与数据科学精品课程。
 - 标签：课程
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Fast.ai
 
 - 链接：<https://www.fast.ai>
 - 说明：免费的深度学习实战课程，以应用为导向的教学理念。
 - 标签：免费
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## DeepLearning.AI
 
 - 链接：<https://www.deeplearning.ai>
 - 说明：吴恩达创立的 AI 教育公司，体系化的深度学习专项课程。
 - 标签：课程·教育
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## LeetCode
 
@@ -91,77 +91,77 @@
 - 链接：<https://www.hackerrank.com>
 - 说明：编程练习与招聘平台，企业技术面试题库与技能认证。
 - 标签：教育·合规
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Codewars
 
 - 链接：<https://www.codewars.com>
 - 说明：社区驱动的编程挑战平台，以段位系统激励持续编码训练。
 - 标签：评测
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Exercism
 
 - 链接：<https://exercism.org>
 - 说明：免费开源编程练习平台，由人类导师免费审阅你的代码。
 - 标签：开源·教育
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## MIT OpenCourseWare
 
 - 链接：<https://ocw.mit.edu>
 - 说明：MIT 所有课程资料的免费开放计划，知识无界共享。
 - 标签：免费·课程
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Stanford Online
 
 - 链接：<https://online.stanford.edu>
 - 说明：斯坦福大学在线课程平台，AI 与 CS 课程世界顶级。
 - 标签：学术·教育
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Khan Academy
 
 - 链接：<https://www.khanacademy.org>
 - 说明：全球最大免费在线教育平台，科学数学到编程全覆盖。
 - 标签：免费·课程
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## OpenStax
 
 - 链接：<https://openstax.org>
 - 说明：Rice 大学运营的免费开放教科书平台，高质量大学教材。
 - 标签：课程·免费
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## 3Blue1Brown
 
 - 链接：<https://www.3blue1brown.com>
 - 说明：用精美动画直观讲解数学与 AI 核心概念的 YouTube 频道。
 - 标签：科研·可视化
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Learn Prompting
 
 - 链接：<https://learnprompting.org>
 - 说明：免费的提示工程入门教材，系统学习如何高效驾驭 AI。
 - 标签：免费
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Prompting Guide
 
 - 链接：<https://www.promptingguide.ai>
 - 说明：DAIR.AI 维护的提示工程综合指南与研究论文整理。
 - 标签：学术
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Anthropic Prompt Library
 
 - 链接：<https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices>
 - 说明：Anthropic 官方提示词工程指南；原独立提示词库已并入 Claude 文档。
 - 标签：大厂·设计
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## OpenAI Cookbook
 
@@ -182,7 +182,7 @@
 - 链接：<https://commoncrawl.org>
 - 说明：海量互联网爬虫数据的非营利开放数据集，训练大模型基石。
 - 标签：数据集
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Hugging Face Datasets
 
@@ -196,7 +196,7 @@
 - 链接：<https://datasetsearch.research.google.com>
 - 说明：Google 数据集搜索引擎，跨领域搜索海量开放数据。
 - 标签：大厂·搜索
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## ImageNet
 
@@ -210,63 +210,63 @@
 - 链接：<https://www.openstreetmap.org>
 - 说明：维基百科式开源世界地图，免费的地理空间数据宝库。
 - 标签：开源
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Rust
 
 - 链接：<https://www.rust-lang.org>
 - 说明：系统编程语言，零开销抽象与内存安全，正在重塑底层生态。
 - 标签：安全
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Python
 
 - 链接：<https://www.python.org>
 - 说明：人工智能与数据科学第一语言，生态极度丰富易学易用。
 - 标签：数据集
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## TypeScript
 
 - 链接：<https://www.typescriptlang.org>
 - 说明：JavaScript 的超集，类型系统赋予前端工程级开发体验。
 - 标签：前端
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Go
 
 - 链接：<https://go.dev>
 - 说明：Google 推出的高效并发语言，云原生基础设施开发标配。
 - 标签：云服务
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Swift
 
 - 链接：<https://www.swift.org>
 - 说明：Apple 生态的主力开发语言，iOS 与 AI 端侧推理首选。
 - 标签：大厂·本地部署
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Deep Learning Book
 
 - 链接：<https://www.deeplearningbook.org>
 - 说明：Ian Goodfellow 等著的深度学习圣经，理论基础就此一本。
 - 标签：课程·学术
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## d2l.ai
 
 - 链接：<https://d2l.ai>
 - 说明：李沐等人编写互动式深度学习教材，代码驱动的在线学习。
 - 标签：课程·编程助手
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Pattern Recognition and Machine Learning
 
 - 链接：<https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning>
 - 说明：Christopher Bishop 的 PRML 经典，贝叶斯机器学习奠基。
 - 标签：科研
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Reinforcement Learning: An Introduction
 
@@ -280,25 +280,25 @@
 - 链接：<https://hastie.su.domains/ElemStatLearn>
 - 说明：Trevor Hastie 著统计学习理论经典，理解机器学习理论基础。
 - 标签：科研
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Zig
 
 - 链接：<https://ziglang.org>
 - 说明：新兴系统编程语言，与 C 深度互操作挑战 C 语言生态主导地位。
 - 标签：跨链
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Julia
 
 - 链接：<https://julialang.org>
 - 说明：高性能科学计算语言，兼顾 Python 易用与 C 速度完美平衡。
 - 标签：科研·高性能
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
 
 ## Mojo
 
 - 链接：<https://mojolang.org>
 - 说明：为 AI 计算的 Python 超集语言，高达 Python 35000 倍提速潜力。
 - 标签：高性能
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-10-31）
