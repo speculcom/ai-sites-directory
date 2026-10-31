@@ -1,14 +1,14 @@
 {
- "at": "2026-10-29T03:11:12.187Z",
+ "at": "2026-10-31T10:33:51.285Z",
  "source": "nav-data.json",
- "items": 723,
- "checked": 700,
- "probedNow": 39,
+ "items": 724,
+ "checked": 701,
+ "probedNow": 1,
  "dedup": true,
- "proxy": true,
+ "proxy": false,
  "only": null,
  "tally": {
-  "ok": 539,
+  "ok": 540,
   "blocked": 62,
   "changed": 7,
   "unverifiable": 92
@@ -214,6 +214,30 @@
    "probedNow": 39,
    "tally": {
     "ok": 539,
+    "blocked": 62,
+    "changed": 7,
+    "unverifiable": 92
+   }
+  },
+  {
+   "at": "2026-10-31T10:33:50.813Z",
+   "kind": "start",
+   "items": 724,
+   "probedNow": 0,
+   "tally": {
+    "ok": 539,
+    "blocked": 62,
+    "changed": 7,
+    "unverifiable": 92
+   }
+  },
+  {
+   "at": "2026-10-31T10:33:51.284Z",
+   "kind": "done",
+   "items": 724,
+   "probedNow": 1,
+   "tally": {
+    "ok": 540,
     "blocked": 62,
     "changed": 7,
     "unverifiable": 92
@@ -5596,6 +5620,13 @@
    "s": 200,
    "via": "curl",
    "fetchErr": "timeout"
+  },
+  {
+   "lv": "2026-10-31",
+   "u": "https://vostride.com",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
   }
  ]
 }
