@@ -46,7 +46,8 @@ export const BRAND = {
  *   - 新增「学 AI」= learn.specul.com（116 词术语表站）
  *   - 移除「规划中」：keel.specul.com 已于 2026-10-03 整体退役（本地已归档）
  *  2026-10-05 新增「AI 做游戏」= vg.specul.com（第五项，共 6 项）。
- *   「作品库」demos.specul.com 尚未建站，上线时变 7 项。
+ *  2026-11-03：作品库 D3/D4/D5 全部暂缓，本轮不做；导航保持 6 项，
+ *   不预留第 7 项（建独立站属于新的站点决策）。
  *  改这里等于改全站：audit/consistency.mjs 的 EXPECT_NAV 与
  *  test-consistency.mjs 的 EXPECT.navItems 必须同步改，否则审计会误报。 */
 export const NAV = [
