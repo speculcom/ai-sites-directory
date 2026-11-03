@@ -1,6 +1,6 @@
 # 学习资源
 
-> 论文、课程、数据集、书籍与练习平台 · 共 51 条
+> 论文、课程、数据集、书籍与练习平台 · 共 55 条
 
 ## arXiv
 
@@ -356,5 +356,33 @@
 
 - 链接：<https://tools.specul.com/mcp/guides/compare-browser-agents.html>
 - 说明：Playwright MCP / Browserbase MCP / Chrome DevTools MCP 的适用条件、能力边界、价格档位与换用时机（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验
+
+## 练习：Builder 带引用问答
+
+- 链接：<https://tools.specul.com/mcp/guides/exercise-builder.html>
+- 说明：用 10 篇站内文档搭 RAG，产出 10 题答案、引用表、评测表与失败记录；附 10 分 rubric（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验
+
+## 练习：Creator 三件套
+
+- 链接：<https://tools.specul.com/mcp/guides/exercise-creator.html>
+- 说明：从一份官方资料产出短文、图像提示词与 30 秒口播，附 5 条事实表与 2 条被拒说法（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验
+
+## 练习：Manager 决策备忘录
+
+- 链接：<https://tools.specul.com/mcp/guides/exercise-manager.html>
+- 说明：用三个成本维度对比调 API 与自托管，交一页备忘录、评分表、5 个尽调问题与退出计划（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验
+
+## 自测：20 题（含答案）
+
+- 链接：<https://tools.specul.com/mcp/guides/selftest-20.html>
+- 说明：20 道只考站内已核验内容的题，附参考答案与评分标准；先做题再对答案（2026-11-03）。
 - 标签：工作流·学术
 - 核验：未核验

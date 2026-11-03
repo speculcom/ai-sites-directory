@@ -32,7 +32,7 @@ Live version: <https://nav.specul.com/>
 | Path | Content |
 |---|---|
 | `content/` | **Content source**: one Markdown file per site, with category, description and tags |
-| `nav-data.json` | **Primary data**: 770 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 586 items / 11 categories are live) |
+| `nav-data.json` | **Primary data**: 776 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 592 items / 11 categories are live) |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | English mappings (category / tag / vendor / description) |
 | `check-results.json` | Link-verification snapshot (each entry has a status and a verification date `lv`; `history` records each run's start/done). **The builder and `gen-content.mjs` consume it directly** to render verification status |
 | `urls.txt` | Historical snapshot (generated 2026-09-30). ⚠ No longer a verification input — `check-links.mjs` reads `nav-data.json` directly, so it can never drift from the data |
@@ -139,9 +139,9 @@ Information about the listed sites belongs to their respective rights holders.
 | Developer tools | 47 | Pinecone · Weaviate · Chroma · Milvus · Qdrant · Elasticsearch …and 41 more |
 | Infrastructure | 55 | NVIDIA · AMD · Intel · ARM · Cerebras · Graphcore …and 49 more |
 | Robotics & embodied | 87 | Tesla Optimus · Figure AI · Boston Dynamics · 1X Technologies · Agility Robotics · Apptronik …and 81 more |
-| Learning | 51 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …and 45 more |
+| Learning | 55 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …and 49 more |
 | Community | 25 | Hacker News · Product Hunt · Reddit r/MachineLearning · Dev.to · Stack Overflow · MIT Technology Review …and 19 more |
-| Tools & utilities | 87 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …and 81 more |
+| Tools & utilities | 89 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …and 83 more |
 
 > Full list: [`content/`](./content/) (one markdown file per site) or [`nav-data.json`](./nav-data.json).
 > `ext` (extended fields) has 184 more entries not published on the site, so it is not listed above.
@@ -153,7 +153,7 @@ Information about the listed sites belongs to their respective rights holders.
 <!-- STATS:BEGIN generated, do not edit -->
 | Item | Measured value |
 |---|---|
-| Items | 770 (public 586 · ext 184) |
+| Items | 776 (public 592 · ext 184) |
 | Categories | 12 (11 public) |
 | Tag vocabulary | 93 (closed enum) |
 | Retired | 15 (Galileo AI · DALL·E · Baidu Yige · Sora · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Tencent Zhiying · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code) |

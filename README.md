@@ -10,7 +10,7 @@ AI 导航的**源仓**（唯一真相源）。
 
 ## 我该怎么读
 
-770 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
+776 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
 
 | 你想干嘛 | 走哪条路 |
 |---|---|
@@ -30,7 +30,7 @@ DNS 在本地解析不了、在云端能打开是常事。所以探测受限的�
 | 路径 | 内容 |
 |---|---|
 | `content/` | **内容源**：每个站点一个 md，含分类、描述、标签 |
-| `nav-data.json` | **主数据**：770 条条目 / 12 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 586 条 / 11 类） |
+| `nav-data.json` | **主数据**：776 条条目 / 12 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 592 条 / 11 类） |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | 英文映射（分类名 / 标签 / 厂商 / 描述） |
 | `check-results.json` | 链接核验快照（每条带状态与核验日期 `lv`，另有 `history` 记每轮 start/done）。**构建器与 `gen-content.mjs` 直接消费它**渲染核验状态 |
 | `urls.txt` | 历史快照（2026-09-30 生成）。⚠ 已不是核验输入 —— `check-links.mjs` 直接读 `nav-data.json`，永远与数据一致 |
@@ -129,9 +129,9 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 | 开发框架与工具 | 47 | Pinecone · Weaviate · Chroma · Milvus · Qdrant · Elasticsearch …等 47 条 |
 | 算力与芯片 | 55 | NVIDIA · AMD · Intel · 台积电 TSMC · ARM · 寒武纪 …等 55 条 |
 | 机器人与具身智能 | 87 | Tesla Optimus · Figure AI · Boston Dynamics · Unitree 宇树 · 1X Technologies · Agility Robotics …等 87 条 |
-| 学习资源 | 51 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …等 51 条 |
+| 学习资源 | 55 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …等 55 条 |
 | 社区与资讯 | 25 | Hacker News · Product Hunt · Reddit r/MachineLearning · Dev.to · Stack Overflow · MIT Technology Review …等 25 条 |
-| 开发者工具 | 87 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …等 87 条 |
+| 开发者工具 | 89 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …等 89 条 |
 
 > 想看全部条目：[`content/`](./content/) 一站一个 md，或 [`nav-data.json`](./nav-data.json)（主数据）。
 > `ext` 延伸领域另有 184 条，构建时不上站，故不在上表。
@@ -143,7 +143,7 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 <!-- STATS:BEGIN generated, do not edit -->
 | 项 | 实测值 |
 |---|---|
-| 条目 | 770 条（对外 586 · ext 184） |
+| 条目 | 776 条（对外 592 · ext 184） |
 | 分类 | 12 类（对外 11 类） |
 | 标签词表 | 93 个（封闭枚举） |
 | 下架标记 | 15 条（Galileo AI · DALL·E · 文心一格 · Sora · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · 腾讯智影 · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code） |
