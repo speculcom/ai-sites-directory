@@ -19,35 +19,35 @@
 ## Intel
 
 - 链接：<https://www.intel.com>
-- 说明：全球最大半导体公司之一，发力 AI PC 与数据中心芯片赛道。
+- 说明：半导体公司，提供 CPU、GPU 与 AI PC/数据中心芯片。
 - 标签：CPU·芯片设计
 - 核验：可达（已改址 → https://www.intel.cn/content/www/cn/zh/homepage.html）（2026-10-29）
 
 ## 台积电 TSMC
 
 - 链接：<https://www.tsmc.com>
-- 说明：全球最大半导体代工企业，AI 芯片制造的核心枢纽。
+- 说明：半导体代工厂，为 AI 芯片提供先进制程制造。
 - 标签：芯片设计
 - 核验：存活（反爬拦截）
 
 ## ARM
 
 - 链接：<https://www.arm.com>
-- 说明：全球领先的芯片 IP 供应商，移动计算与 IoT 生态的基石。
+- 说明：芯片 IP 供应商，提供 CPU 架构与 IP 授权。
 - 标签：芯片设计·边缘计算
 - 核验：ok（2026-10-29）
 
 ## 寒武纪
 
 - 链接：<https://www.cambricon.com>
-- 说明：中国 AI 芯片第一股，思元系列智能加速卡业界遥遥领先。
+- 说明：AI 芯片公司，提供思元系列训练/推理加速卡。
 - 标签：国产·GPU
 - 核验：ok（2026-10-29）
 
 ## 海光信息
 
 - 链接：<https://www.hygon.cn>
-- 说明：国产 x86 兼容 CPU 龙头，数据中心与服务器芯片性能强劲。
+- 说明：国产 x86 兼容 CPU 与 DCU 加速卡厂商。
 - 标签：CPU·国产
 - 核验：ok（2026-10-29）
 
@@ -257,7 +257,7 @@
 ## Synopsys
 
 - 链接：<https://www.synopsys.com>
-- 说明：全球最大 EDA 与半导体 IP 供应商之一，AI 驱动 EDA 革新。
+- 说明：EDA 与半导体 IP 供应商，提供芯片设计工具。
 - 标签：芯片设计
 - 核验：ok（2026-10-29）
 
@@ -285,7 +285,7 @@
 ## Samsung Semiconductor
 
 - 链接：<https://semiconductor.samsung.com>
-- 说明：全球最大存储芯片制造商，DRAM 与 NAND 闪存份额第一。
+- 说明：存储芯片制造商，提供 DRAM、NAND 与 HBM。
 - 标签：存储
 - 核验：ok（2026-10-29）
 
@@ -306,14 +306,14 @@
 ## Western Digital
 
 - 链接：<https://www.westerndigital.com>
-- 说明：全球领先的数据存储解决方案商，HDD 与 SSD 产品线全面。
+- 说明：数据存储厂商，提供 HDD 与 SSD。
 - 标签：存储
 - 核验：ok（2026-10-29）
 
 ## 长江存储 YMTC
 
 - 链接：<https://www.ymtc.com>
-- 说明：中国 3D NAND 闪存制造商，Xtacking 架构创新领先。
+- 说明：3D NAND 闪存制造商，采用 Xtacking 架构。
 - 标签：存储·国产
 - 核验：ok（2026-10-29）
 
@@ -327,7 +327,7 @@
 ## Applied Materials
 
 - 链接：<https://www.appliedmaterials.com>
-- 说明：全球最大半导体设备制造商，覆盖沉积刻蚀注入全流程。
+- 说明：半导体设备厂商，覆盖沉积、刻蚀、离子注入等流程。
 - 标签：工作流
 - 核验：ok（2026-10-29）
 
@@ -341,21 +341,21 @@
 ## Tokyo Electron
 
 - 链接：<https://www.tel.com>
-- 说明：日本半导体设备巨头，涂胶显影与刻蚀设备市占率全球领先。
+- 说明：日本半导体设备厂商，提供涂胶显影与刻蚀设备。
 - 标签：芯片设计
 - 核验：ok（2026-10-29）
 
 ## 中微半导体 AMEC
 
 - 链接：<https://www.amec-inc.com>
-- 说明：中国刻蚀机与 MOCVD 龙头，等离子体刻蚀机进入 5nm 产线。
+- 说明：刻蚀机与 MOCVD 设备厂商，产品进入先进制程产线。
 - 标签：芯片设计·国产
 - 核验：ok（2026-10-29）
 
 ## SiFive
 
 - 链接：<https://www.sifive.com>
-- 说明：RISC-V 处理器 IP 领先供应商，提供从 MCU 到高性能 CPU 方案。
+- 说明：RISC-V 处理器 IP 供应商，覆盖 MCU 到高性能 CPU。
 - 标签：芯片设计
 - 核验：ok（2026-10-29）
 

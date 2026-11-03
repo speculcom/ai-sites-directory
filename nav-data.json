@@ -64,7 +64,7 @@
   "items": [
     {
       "n": "ChatGPT",
-      "d": "OpenAI 的对话产品：支持文本、图像、语音输入；提供 Deep Research、智能体与图像生成线（2026-11-03 核验）。",
+      "d": "OpenAI 的对话产品：Deep Research、智能体与图像 2.0 已并入主产品；Atlas 浏览器于 2026-08-09 停运，能力并入 ChatGPT/Codex。",
       "u": "https://chat.openai.com",
       "tag": "多模态",
       "ic": "💬",
@@ -74,7 +74,7 @@
     },
     {
       "n": "Claude",
-      "d": "Anthropic 开发的安全可靠大模型，擅长长文本分析与深度推理。",
+      "d": "Anthropic 的对话应用：2026-10-21 release notes 记录记忆与 Cowork 更新；消费条款把输出转让给用户，隐私政策提供训练 opt-out。",
       "u": "https://claude.ai",
       "tag": "长文本·安全",
       "ic": "🧠",
@@ -84,7 +84,7 @@
     },
     {
       "n": "Gemini",
-      "d": "Google DeepMind 打造的新一代多模态大模型，整合搜索与推理。",
+      "d": "Google 的对话应用：Gemini 4 Argon 于 2026-10-13 面向 AI Pro/Ultra 推出；研究线有 Deep Research Max（2026-04-21），图像线有 Nano Banana 2（2026-02-26）；关闭 Keep Activity 后未来对话不用于训练。",
       "u": "https://gemini.google.com",
       "tag": "大厂·多模态",
       "ic": "♊",
@@ -3106,7 +3106,7 @@
     },
     {
       "n": "ClearML",
-      "d": "开源 ML/DL 实验管理与编排平台，一站式 MLOps 方案。",
+      "d": "开源 ML/DL 实验管理与编排平台，覆盖训练到部署的流程。",
       "u": "https://clear.ml",
       "tag": "开源·工作流",
       "ic": "🧊",
@@ -6679,7 +6679,7 @@
     },
     {
       "n": "Rust",
-      "d": "系统编程语言，零开销抽象与内存安全，正在重塑底层生态。",
+      "d": "系统编程语言，以零开销抽象与内存安全为设计目标。",
       "u": "https://www.rust-lang.org",
       "tag": "安全",
       "ic": "🦀",
@@ -6949,7 +6949,7 @@
     },
     {
       "n": "iTerm2",
-      "d": "macOS 终极终端模拟器，分屏与快捷键大幅提升命令行效率。",
+      "d": "macOS 终端模拟器，分屏与快捷键齐全。",
       "u": "https://iterm2.com",
       "tag": "命令行",
       "ic": "🖥️",
@@ -7119,7 +7119,7 @@
     },
     {
       "n": "Soft Robotics",
-      "d": "软体机器人抓手公司，柔性夹持适应不规则物体实现自适应抓取。",
+      "d": "软体机器人夹持器公司，柔性夹持适应不规则物体。",
       "u": "https://www.softroboticsinc.com",
       "tag": "机械臂",
       "ic": "🐙",
@@ -7306,6 +7306,358 @@
       "cat": "dev",
       "old_t": "开发框架与工具",
       "old_c": "dev"
+    },
+    {
+      "n": "Microsoft Copilot",
+      "d": "微软 C 端对话入口：模型由微软路由；C 端 Deep Research 已于 2026-08-18 退役，深度研究改由 M365 Copilot 的 Researcher 承接。",
+      "u": "https://copilot.microsoft.com",
+      "tag": "大厂·多模态",
+      "ic": "🪁",
+      "cat": "llm"
+    },
+    {
+      "n": "Google Antigravity",
+      "d": "Google 的 agent-first 开发平台：桌面指挥中心 / CLI / IDE 扩展 / Python SDK 共用一套 harness，命令执行有官方三档策略（2026-10-13 核验）。",
+      "u": "https://antigravity.google",
+      "tag": "编程助手·IDE",
+      "ic": "🛰️",
+      "cat": "coding"
+    },
+    {
+      "n": "Trae",
+      "d": "字节跳动的三端 AI IDE（桌面/Web/移动）：Desktop 双窗口 + SOLO 整段委托，内置多模型并支持自定义 key，带 Privacy mode 与沙箱开关（2026-10 快照）。",
+      "u": "https://www.trae.ai",
+      "tag": "编程助手·IDE",
+      "ic": "🧑‍💻",
+      "cat": "coding"
+    },
+    {
+      "n": "Claude Code CLI",
+      "d": "Anthropic 的终端编码 agent：自带 CHANGELOG 与 Atom feed，权限粒度可配置；源码可见但 All rights reserved（2026-10 快照）。",
+      "u": "https://github.com/anthropics/claude-code",
+      "tag": "命令行·编程助手",
+      "ic": "⌨️",
+      "cat": "coding"
+    },
+    {
+      "n": "Codex CLI",
+      "d": "OpenAI 官方的终端编码 agent，Rust 实现，强调 app server 与线程续接；有独立 releases 变更记录。",
+      "u": "https://github.com/openai/codex",
+      "tag": "命令行·编程助手",
+      "ic": "⌨️",
+      "cat": "coding"
+    },
+    {
+      "n": "Gemini CLI",
+      "d": "Google 官方的开源终端 agent：npx 免安装启动，支持 MCP 与非交互脚本模式（Apache-2.0）。",
+      "u": "https://github.com/google-gemini/gemini-cli",
+      "tag": "命令行·开源",
+      "ic": "⌨️",
+      "cat": "coding"
+    },
+    {
+      "n": "Kiro",
+      "d": "AWS 的 agentic 工程环境：IDE / CLI / Web / Mobile 四端共用一套 harness，招牌是 requirements / design / tasks 三段式 spec。",
+      "u": "https://kiro.dev",
+      "tag": "编程助手·IDE",
+      "ic": "🧩",
+      "cat": "coding"
+    },
+    {
+      "n": "OpenCode",
+      "d": "MIT 许可的多 provider 编程 harness：运行 bash 命令前会询问权限，支持 ACP 载入。",
+      "u": "https://opencode.ai",
+      "tag": "命令行·开源",
+      "ic": "⌨️",
+      "cat": "coding"
+    },
+    {
+      "n": "Amp",
+      "d": "原 Sourcegraph 的前沿编码 agent，2025-12 官方公告分拆为独立公司 Amp Frontier Corporation；CLI + 云端 orb + runner 三执行面。",
+      "u": "https://ampcode.com",
+      "tag": "编程助手·云服务",
+      "ic": "⚡",
+      "cat": "coding"
+    },
+    {
+      "n": "FLUX",
+      "d": "Black Forest Labs 的图像模型家族：API/playground 托管生成 + 部分权重开源可自托管；条款允许商用但禁止用输出训练其他模型。",
+      "u": "https://bfl.ai/",
+      "tag": "图像生成·开源",
+      "ic": "🎨",
+      "cat": "gen"
+    },
+    {
+      "n": "Ideogram",
+      "d": "主打图内排版文字的图像模型族：4.0 开放量化权重（非商用免费，商用自托管需许可），4.5 闭源托管支持 precise edit。",
+      "u": "https://ideogram.ai",
+      "tag": "图像生成·设计",
+      "ic": "🔤",
+      "cat": "gen"
+    },
+    {
+      "n": "Veo",
+      "d": "Google 的视频生成模型家族，经 Gemini API / Vertex AI 与 Google AI 计划交付，输出带 SynthID 溯源；免费配额数据会用于训练，付费不训练。",
+      "u": "https://deepmind.google/technologies/veo/",
+      "tag": "视频生成·大厂",
+      "ic": "🎬",
+      "cat": "gen"
+    },
+    {
+      "n": "Kling",
+      "d": "国产视频生成：Kling 4.0 单次原生 30 秒、全能参考 15 项素材；已备案、大陆直连可用，商用需过会员线。",
+      "u": "https://klingai.com/global/",
+      "tag": "视频生成·国产",
+      "ic": "🎞️",
+      "cat": "gen"
+    },
+    {
+      "n": "Hailuo Video",
+      "d": "MiniMax 的消费级视频生成入口：文/图生视频，国产、大陆直连可用、免费档起步；产品入口备案状态未单独核验。",
+      "u": "https://hailuoai.video",
+      "tag": "视频生成·国产",
+      "ic": "🎥",
+      "cat": "gen"
+    },
+    {
+      "n": "Luma",
+      "d": "Dream Machine 主打镜头运动感短片与首尾帧插值；大陆直连不可达（2026-10 实测 000）。",
+      "u": "https://lumalabs.ai",
+      "tag": "视频生成·云服务",
+      "ic": "🌗",
+      "cat": "gen"
+    },
+    {
+      "n": "Whisper",
+      "d": "OpenAI 的 MIT 转写基座：多档权重可本地跑，隐私音频不出本机；它是模型不是产品，说话人分离靠衍生生态。",
+      "u": "https://github.com/openai/whisper",
+      "tag": "语音合成·开源",
+      "ic": "🎧",
+      "cat": "gen"
+    },
+    {
+      "n": "Deepgram",
+      "d": "开发者向语音 API：Nova 转写 + Aura TTS，实时流式转写是主打；定位是造语音产品的底座。",
+      "u": "https://www.deepgram.com",
+      "tag": "语音合成·API",
+      "ic": "🔊",
+      "cat": "gen"
+    },
+    {
+      "n": "LM Studio",
+      "d": "桌面本地模型图形入口：应用内下载、MLX + llama.cpp 双运行时、内置本地服务器；应用闭源，条款全文未能直抓。",
+      "u": "https://lmstudio.ai",
+      "tag": "本地部署",
+      "ic": "🖥️",
+      "cat": "model"
+    },
+    {
+      "n": "vLLM",
+      "d": "开源模型服务化的标杆：PagedAttention 管理显存，OpenAI 兼容 server 直接对接现有客户端；Apache-2.0。",
+      "u": "https://docs.vllm.ai",
+      "tag": "本地部署·高性能",
+      "ic": "🚀",
+      "cat": "model"
+    },
+    {
+      "n": "llama.cpp",
+      "d": "本地推理生态的地基：定义 GGUF 格式，MIT、纯 C/C++，llama-server 提供官方 REST 线；Ollama 与 LM Studio 都建在它上面。",
+      "u": "https://github.com/ggml-org/llama.cpp",
+      "tag": "本地部署·开源",
+      "ic": "🦙",
+      "cat": "model"
+    },
+    {
+      "n": "MLX",
+      "d": "Apple 硅的官方本地推理栈：统一内存架构的原生框架加 mlx-lm，MIT、活跃维护；本地推理与微调同一栈。",
+      "u": "https://ml-explore.github.io/mlx/build/html/index.html",
+      "tag": "本地部署·开源",
+      "ic": "🍎",
+      "cat": "model"
+    },
+    {
+      "n": "SGLang",
+      "d": "服务化推理的前缀复用一代：RadixAttention 复用多轮与共享前缀的 KV 缓存，agent 工作流收益直接；Apache-2.0。",
+      "u": "https://docs.sglang.ai",
+      "tag": "本地部署·高性能",
+      "ic": "🧠",
+      "cat": "model"
+    },
+    {
+      "n": "TensorRT-LLM",
+      "d": "NVIDIA 的生产级推理栈：先把模型编译成 TensorRT 引擎，再用 trtllm-serve 提供 OpenAI 兼容端点；面向 GPU 集群而非单机开箱。",
+      "u": "https://docs.nvidia.com/tensorrt-llm/",
+      "tag": "本地部署·高性能",
+      "ic": "⚙️",
+      "cat": "model"
+    },
+    {
+      "n": "Google Opal",
+      "d": "Google Labs 的无代码 AI mini-app 搭建器：自然语言把生成/搜索/视频步骤串成可分享应用；官方宣布 2026-11-17 从 Labs 毕业并迁移到 Gemini skills。",
+      "u": "https://opal.google/",
+      "tag": "工作流·可视化",
+      "ic": "🧱",
+      "cat": "tools"
+    },
+    {
+      "n": "Microsoft Copilot Studio",
+      "d": "Microsoft 生态的企业低代码 agent 平台：能力取决于是否在 Power Platform / Dataverse 生态；身份与数据驻留随 Microsoft 365 体系提供。",
+      "u": "https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio",
+      "tag": "工作流·企业级",
+      "ic": "🏢",
+      "cat": "tools"
+    },
+    {
+      "n": "n8n",
+      "d": "自动化优先的低代码工作流平台，AI 只是其中一类节点；源码公开但采用 fair-code（Sustainable Use License），不是 OSI 开源。",
+      "u": "https://n8n.io",
+      "tag": "工作流·开源",
+      "ic": "🔀",
+      "cat": "tools"
+    },
+    {
+      "n": "NotebookLM",
+      "d": "源锚定的研究工作台：只在你给的一组源里回答，并生成音频概览与学习指南；它不是搜索引擎。",
+      "u": "https://notebooklm.google.com",
+      "tag": "搜索·学术",
+      "ic": "📓",
+      "cat": "llm"
+    },
+    {
+      "n": "Kagi",
+      "d": "付费换隐私的自建索引搜索引擎：无广告无追踪，AI 答案层（FastGPT / Teclis）是附加线。",
+      "u": "https://kagi.com",
+      "tag": "搜索·学术",
+      "ic": "🔎",
+      "cat": "llm"
+    },
+    {
+      "n": "Elicit",
+      "d": "学术文献的检索加结构化抽取工作台：研究问题→论文筛选→抽取表→带引用综述；每个单元格仍要回原文核对。",
+      "u": "https://elicit.com",
+      "tag": "学术·科研",
+      "ic": "📚",
+      "cat": "learn"
+    },
+    {
+      "n": "Goose",
+      "d": "本地优先的开源通用 agent：桌面应用、CLI 与可嵌入 API 三种形态；由 Block 创建，现属 Agentic AI Foundation，provider 可换成 Ollama 等本地模型。",
+      "u": "https://github.com/aaif-goose/goose",
+      "tag": "命令行·开源",
+      "ic": "🪿",
+      "cat": "coding"
+    },
+    {
+      "n": "Specul 提示词与上下文模板",
+      "d": "四个可复制文本块：提示词结构、上下文预算、RAG 分块与重排清单、模型选型工作表（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/toolkit-prompt-context.html",
+      "tag": "工作流",
+      "ic": "📋",
+      "cat": "tools"
+    },
+    {
+      "n": "Specul Agent 评估与护栏模板",
+      "d": "四个可复制文本块：Agent 评估 rubric、四层护栏清单、客服验收单、故障复盘清单（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/toolkit-agent-ops.html",
+      "tag": "工作流",
+      "ic": "🛡️",
+      "cat": "tools"
+    },
+    {
+      "n": "Specul 权限与成本模板",
+      "d": "四个可复制文本块：Agent 权限矩阵、模型许可检查表、视频权利登记表、成本算式模板（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/toolkit-rights-cost.html",
+      "tag": "工作流",
+      "ic": "🧮",
+      "cat": "tools"
+    },
+    {
+      "n": "对比：写代码 Agent 怎么选",
+      "d": "终端、IDE、云端三类执行面对照，含权限模型、后台续跑与每个候选的适用条件（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-coding-agents.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "对比：聊天助手怎么选",
+      "d": "ChatGPT、Gemini、Claude、Copilot 按数据条款、研究线、生态与大陆可达四项筛选（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-chat-assistants.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "对比：图像与视频工具链怎么选",
+      "d": "图像三选一与视频三选一，按输入模态、权利条款与工作流位置分栏（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-media-tools.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "对比：本地 runner 怎么选",
+      "d": "Ollama、LM Studio、llama.cpp、vLLM 按硬件、量化、并发与服务化对比（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-local-runners.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "对比：Agent 框架怎么选",
+      "d": "LangGraph、OpenAI Agents SDK、Google ADK、Claude Agent SDK 按状态、HITL 与模型绑定对比（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-agent-frameworks.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "对比：研究工具怎么选",
+      "d": "Perplexity、Kagi、NotebookLM、Elicit 按检索深度、来源透明度与引用管理对比（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-research-tools.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "Playbook：修一个真实 bug",
+      "d": "从仓库上下文、复现、计划、改动、测试到审查的六步流程，含权限设置与验收单（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-fix-a-bug.html",
+      "tag": "工作流",
+      "ic": "🛠️",
+      "cat": "tools"
+    },
+    {
+      "n": "Playbook：做一条 60 秒视频",
+      "d": "脚本、分镜、生成、剪辑、权利登记五段，含单段时长限制与成本算式（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-60s-video.html",
+      "tag": "工作流",
+      "ic": "🎬",
+      "cat": "tools"
+    },
+    {
+      "n": "Playbook：做一份可核查的研究简报",
+      "d": "问题、检索、来源、综合、复核五步，每条结论挂来源与日期（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-research-brief.html",
+      "tag": "工作流",
+      "ic": "🔬",
+      "cat": "tools"
+    },
+    {
+      "n": "Playbook：搭一个客服 Agent",
+      "d": "意图、知识库、工具、护栏、评估、上线六段，含人工兜底与验收单（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-service-agent.html",
+      "tag": "工作流",
+      "ic": "🎧",
+      "cat": "tools"
+    },
+    {
+      "n": "Playbook：在本机跑一个模型",
+      "d": "显存、量化档、runtime、评估、监控五步，含体积算式与选档理由（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-local-model.html",
+      "tag": "工作流",
+      "ic": "🖥️",
+      "cat": "tools"
     }
   ]
 }

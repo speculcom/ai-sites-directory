@@ -3,23 +3,23 @@
   {
    "code": "llm",
    "name": "大模型与对话",
-   "n": 45,
+   "n": 48,
    "dead": 0,
    "maybe": 13
   },
   {
    "code": "coding",
    "name": "AI 编程与 Agent",
-   "n": 34,
+   "n": 43,
    "dead": 0,
    "maybe": 2
   },
   {
    "code": "gen",
    "name": "多模态生成",
-   "n": 56,
+   "n": 64,
    "dead": 0,
-   "maybe": 24
+   "maybe": 25
   },
   {
    "code": "app",
@@ -31,7 +31,7 @@
   {
    "code": "model",
    "name": "模型与权重",
-   "n": 26,
+   "n": 32,
    "dead": 0,
    "maybe": 0
   },
@@ -59,7 +59,7 @@
   {
    "code": "learn",
    "name": "学习资源",
-   "n": 43,
+   "n": 50,
    "dead": 0,
    "maybe": 2
   },
@@ -73,7 +73,7 @@
   {
    "code": "tools",
    "name": "开发者工具",
-   "n": 74,
+   "n": 85,
    "dead": 0,
    "maybe": 0
   },
@@ -85,5 +85,66 @@
    "maybe": 0
   }
  ],
- "needWork": []
+ "needWork": [
+  {
+   "n": "Yaskawa 安川",
+   "cat": "机器人与具身智能",
+   "len": 16,
+   "tag": "有"
+  },
+  {
+   "n": "极飞科技 XAG",
+   "cat": "机器人与具身智能",
+   "len": 15,
+   "tag": "有"
+  },
+  {
+   "n": "Stanford Online",
+   "cat": "学习资源",
+   "len": 13,
+   "tag": "有"
+  },
+  {
+   "n": "FlowGPT",
+   "cat": "学习资源",
+   "len": 15,
+   "tag": "有"
+  },
+  {
+   "n": "Stack Overflow",
+   "cat": "社区与资讯",
+   "len": 17,
+   "tag": "有"
+  },
+  {
+   "n": "Analytics India Magazine",
+   "cat": "社区与资讯",
+   "len": 14,
+   "tag": "有"
+  },
+  {
+   "n": "Dribbble",
+   "cat": "开发者工具",
+   "len": 13,
+   "tag": "有"
+  },
+  {
+   "n": "CertiK",
+   "cat": "开发者工具",
+   "len": 16,
+   "tag": "有"
+  },
+  {
+   "n": "Aave",
+   "cat": "延伸领域",
+   "len": 16,
+   "tag": "有"
+  },
+  {
+   "n": "The Block",
+   "cat": "延伸领域",
+   "len": 14,
+   "tag": "有"
+  }
+ ]
 }

@@ -32,7 +32,7 @@ Live version: <https://nav.specul.com/>
 | Path | Content |
 |---|---|
 | `content/` | **Content source**: one Markdown file per site, with category, description and tags |
-| `nav-data.json` | **Primary data**: 723 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 539 items / 11 categories are live) |
+| `nav-data.json` | **Primary data**: 767 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 583 items / 11 categories are live) |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | English mappings (category / tag / vendor / description) |
 | `check-results.json` | Link-verification snapshot (each entry has a status and a verification date `lv`; `history` records each run's start/done). **The builder and `gen-content.mjs` consume it directly** to render verification status |
 | `urls.txt` | Historical snapshot (generated 2026-09-30). ⚠ No longer a verification input — `check-links.mjs` reads `nav-data.json` directly, so it can never drift from the data |
@@ -131,17 +131,17 @@ Information about the listed sites belongs to their respective rights holders.
 
 | Category | Items | Examples |
 |---|---|---|
-| LLMs & chat | 45 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · Grok …and 39 more |
-| AI coding & agents | 34 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …and 28 more |
-| Multimodal generation | 56 | Canva · Microsoft Designer · Galileo AI · Uizard · Midjourney · Stable Diffusion …and 50 more |
+| LLMs & chat | 48 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · Grok …and 42 more |
+| AI coding & agents | 43 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …and 37 more |
+| Multimodal generation | 64 | Canva · Microsoft Designer · Galileo AI · Uizard · Midjourney · Stable Diffusion …and 58 more |
 | Applications | 47 | Gamma · Jasper · Copy.ai · Grammarly · Otter.ai · Notion AI …and 41 more |
-| Model providers | 26 | Hugging Face · Ollama · Replicate · Civitai · OpenRouter · Together AI …and 20 more |
+| Model providers | 32 | Hugging Face · Ollama · Replicate · Civitai · OpenRouter · Together AI …and 26 more |
 | Developer tools | 47 | Pinecone · Weaviate · Chroma · Milvus · Qdrant · Elasticsearch …and 41 more |
 | Infrastructure | 55 | NVIDIA · AMD · Intel · ARM · Cerebras · Graphcore …and 49 more |
 | Robotics & embodied | 87 | Tesla Optimus · Figure AI · Boston Dynamics · 1X Technologies · Agility Robotics · Apptronik …and 81 more |
-| Learning | 43 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …and 37 more |
+| Learning | 50 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …and 44 more |
 | Community | 25 | Hacker News · Product Hunt · Reddit r/MachineLearning · Dev.to · Stack Overflow · MIT Technology Review …and 19 more |
-| Tools & utilities | 74 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …and 68 more |
+| Tools & utilities | 85 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …and 79 more |
 
 > Full list: [`content/`](./content/) (one markdown file per site) or [`nav-data.json`](./nav-data.json).
 > `ext` (extended fields) has 184 more entries not published on the site, so it is not listed above.
@@ -153,7 +153,7 @@ Information about the listed sites belongs to their respective rights holders.
 <!-- STATS:BEGIN generated, do not edit -->
 | Item | Measured value |
 |---|---|
-| Items | 723 (public 539 · ext 184) |
+| Items | 767 (public 583 · ext 184) |
 | Categories | 12 (11 public) |
 | Tag vocabulary | 93 (closed enum) |
 | Retired | 15 (Galileo AI · DALL·E · Baidu Yige · Sora · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Tencent Zhiying · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code) |

@@ -1,11 +1,11 @@
 # 模型与权重
 
-> 模型平台、开源模型与权重托管 · 共 26 条
+> 模型平台、开源模型与权重托管 · 共 32 条
 
 ## Hugging Face
 
 - 链接：<https://huggingface.co>
-- 说明：全球最大的 AI 模型社区与开源平台，托管数十万模型与数据集。
+- 说明：开源模型与数据集社区，托管模型、数据集与 Spaces 应用。
 - 标签：社区·开源
 - 核验：未核验
 
@@ -33,7 +33,7 @@
 ## Civitai
 
 - 链接：<https://civitai.com>
-- 说明：Stable Diffusion 模型与 LoRA 的最大分享社区，创作者天堂。
+- 说明：Stable Diffusion 模型与 LoRA 分享社区，提供在线生成。
 - 标签：社区
 - 核验：ok（2026-10-29）
 
@@ -152,7 +152,7 @@
 ## DeepSeek Models
 
 - 链接：<https://huggingface.co/deepseek-ai>
-- 说明：深度求索开源模型系列，MoE 架构效率与性能双领先。
+- 说明：深度求索的开放权重模型系列，含 MoE 架构与多模态型号。
 - 标签：高性能
 - 核验：未核验
 
@@ -183,3 +183,45 @@
 - 说明：Snowflake 推出的企业智能开源大模型，高效 SQL 与编码。
 - 标签：企业级·编程助手
 - 核验：ok（2026-10-29）
+
+## LM Studio
+
+- 链接：<https://lmstudio.ai>
+- 说明：桌面本地模型图形入口：应用内下载、MLX + llama.cpp 双运行时、内置本地服务器；应用闭源，条款全文未能直抓。
+- 标签：本地部署
+- 核验：未核验
+
+## vLLM
+
+- 链接：<https://docs.vllm.ai>
+- 说明：开源模型服务化的标杆：PagedAttention 管理显存，OpenAI 兼容 server 直接对接现有客户端；Apache-2.0。
+- 标签：本地部署·高性能
+- 核验：未核验
+
+## llama.cpp
+
+- 链接：<https://github.com/ggml-org/llama.cpp>
+- 说明：本地推理生态的地基：定义 GGUF 格式，MIT、纯 C/C++，llama-server 提供官方 REST 线；Ollama 与 LM Studio 都建在它上面。
+- 标签：本地部署·开源
+- 核验：未核验
+
+## MLX
+
+- 链接：<https://ml-explore.github.io/mlx/build/html/index.html>
+- 说明：Apple 硅的官方本地推理栈：统一内存架构的原生框架加 mlx-lm，MIT、活跃维护；本地推理与微调同一栈。
+- 标签：本地部署·开源
+- 核验：未核验
+
+## SGLang
+
+- 链接：<https://docs.sglang.ai>
+- 说明：服务化推理的前缀复用一代：RadixAttention 复用多轮与共享前缀的 KV 缓存，agent 工作流收益直接；Apache-2.0。
+- 标签：本地部署·高性能
+- 核验：未核验
+
+## TensorRT-LLM
+
+- 链接：<https://docs.nvidia.com/tensorrt-llm/>
+- 说明：NVIDIA 的生产级推理栈：先把模型编译成 TensorRT 引擎，再用 trtllm-serve 提供 OpenAI 兼容端点；面向 GPU 集群而非单机开箱。
+- 标签：本地部署·高性能
+- 核验：未核验

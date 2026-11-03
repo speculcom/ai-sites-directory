@@ -1,6 +1,6 @@
 # 学习资源
 
-> 论文、课程、数据集、书籍与练习平台 · 共 43 条
+> 论文、课程、数据集、书籍与练习平台 · 共 50 条
 
 ## arXiv
 
@@ -40,7 +40,7 @@
 ## Coursera
 
 - 链接：<https://www.coursera.org>
-- 说明：全球顶级大学与企业的在线课程平台，提供专业证书与学位。
+- 说明：在线课程平台，提供大学与企业课程、证书与学位。
 - 标签：课程·合规
 - 核验：ok（2026-10-29）
 
@@ -117,14 +117,14 @@
 ## Stanford Online
 
 - 链接：<https://online.stanford.edu>
-- 说明：斯坦福大学在线课程平台，AI 与 CS 课程世界顶级。
+- 说明：斯坦福大学的在线课程平台。
 - 标签：学术·教育
 - 核验：ok（2026-10-29）
 
 ## Khan Academy
 
 - 链接：<https://www.khanacademy.org>
-- 说明：全球最大免费在线教育平台，科学数学到编程全覆盖。
+- 说明：免费在线教育平台，覆盖数学、科学与编程。
 - 标签：免费·课程
 - 核验：ok（2026-10-29）
 
@@ -173,7 +173,7 @@
 ## FlowGPT
 
 - 链接：<https://flowgpt.com>
-- 说明：全球最大的 AI Prompt 社区，数百万用户分享创作 Prompt。
+- 说明：AI Prompt 分享社区。
 - 标签：社区
 - 核验：存活（反爬拦截）
 
@@ -292,7 +292,7 @@
 ## Julia
 
 - 链接：<https://julialang.org>
-- 说明：高性能科学计算语言，兼顾 Python 易用与 C 速度完美平衡。
+- 说明：科学计算语言，提供 JIT 编译与数值计算库。
 - 标签：科研·高性能
 - 核验：ok（2026-10-29）
 
@@ -302,3 +302,52 @@
 - 说明：为 AI 计算的 Python 超集语言，高达 Python 35000 倍提速潜力。
 - 标签：高性能
 - 核验：ok（2026-10-29）
+
+## Elicit
+
+- 链接：<https://elicit.com>
+- 说明：学术文献的检索加结构化抽取工作台：研究问题→论文筛选→抽取表→带引用综述；每个单元格仍要回原文核对。
+- 标签：学术·科研
+- 核验：未核验
+
+## 对比：写代码 Agent 怎么选
+
+- 链接：<https://tools.specul.com/mcp/guides/compare-coding-agents.html>
+- 说明：终端、IDE、云端三类执行面对照，含权限模型、后台续跑与每个候选的适用条件（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验
+
+## 对比：聊天助手怎么选
+
+- 链接：<https://tools.specul.com/mcp/guides/compare-chat-assistants.html>
+- 说明：ChatGPT、Gemini、Claude、Copilot 按数据条款、研究线、生态与大陆可达四项筛选（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验
+
+## 对比：图像与视频工具链怎么选
+
+- 链接：<https://tools.specul.com/mcp/guides/compare-media-tools.html>
+- 说明：图像三选一与视频三选一，按输入模态、权利条款与工作流位置分栏（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验
+
+## 对比：本地 runner 怎么选
+
+- 链接：<https://tools.specul.com/mcp/guides/compare-local-runners.html>
+- 说明：Ollama、LM Studio、llama.cpp、vLLM 按硬件、量化、并发与服务化对比（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验
+
+## 对比：Agent 框架怎么选
+
+- 链接：<https://tools.specul.com/mcp/guides/compare-agent-frameworks.html>
+- 说明：LangGraph、OpenAI Agents SDK、Google ADK、Claude Agent SDK 按状态、HITL 与模型绑定对比（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验
+
+## 对比：研究工具怎么选
+
+- 链接：<https://tools.specul.com/mcp/guides/compare-research-tools.html>
+- 说明：Perplexity、Kagi、NotebookLM、Elicit 按检索深度、来源透明度与引用管理对比（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验

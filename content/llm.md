@@ -1,25 +1,25 @@
 # 大模型与对话
 
-> 通用大模型、AI 搜索与提示词生态 · 共 45 条
+> 通用大模型、AI 搜索与提示词生态 · 共 48 条
 
 ## ChatGPT
 
 - 链接：<https://chat.openai.com>
-- 说明：OpenAI 推出的顶级对话式 AI，支持文本、图像、语音多模态交互。
+- 说明：OpenAI 的对话产品：Deep Research、智能体与图像 2.0 已并入主产品；Atlas 浏览器于 2026-08-09 停运，能力并入 ChatGPT/Codex。
 - 标签：多模态
 - 核验：未验证（探测受限：timeout，非死链）
 
 ## Claude
 
 - 链接：<https://claude.ai>
-- 说明：Anthropic 开发的安全可靠大模型，擅长长文本分析与深度推理。
+- 说明：Anthropic 的对话应用：2026-10-21 release notes 记录记忆与 Cowork 更新；消费条款把输出转让给用户，隐私政策提供训练 opt-out。
 - 标签：长文本·安全
 - 核验：可达（已改址 → https://claude.com/app-unavailable-in-region）（2026-10-29）
 
 ## Gemini
 
 - 链接：<https://gemini.google.com>
-- 说明：Google DeepMind 打造的新一代多模态大模型，整合搜索与推理。
+- 说明：Google 的对话应用：Gemini 4 Argon 于 2026-10-13 面向 AI Pro/Ultra 推出；研究线有 Deep Research Max（2026-04-21），图像线有 Nano Banana 2（2026-02-26）；关闭 Keep Activity 后未来对话不用于训练。
 - 标签：大厂·多模态
 - 核验：未验证（探测受限：timeout，非死链）
 
@@ -47,7 +47,7 @@
 ## 文心一言
 
 - 链接：<https://yiyan.baidu.com>
-- 说明：百度推出的知识增强大语言模型，深度整合百度搜索生态。
+- 说明：百度的大语言模型对话产品，接入百度搜索与知识增强能力。
 - 标签：大厂·RAG
 - 核验：ok（2026-10-29）
 
@@ -110,7 +110,7 @@
 ## 海螺 AI
 
 - 链接：<https://hailuoai.com>
-- 说明：Minimax 推出的 AI 对话产品，语音合成能力业界领先。
+- 说明：MiniMax 的对话与语音产品，提供语音合成与克隆；具体音色与语言以官方页为准。
 - 标签：语音合成
 - 核验：ok（2026-10-29）
 
@@ -316,3 +316,24 @@
 - 说明：开源本地对话前端壳，连接模型后端运行，本身不加载模型。
 - 标签：开源·本地部署
 - 核验：ok（2026-10-29）
+
+## Microsoft Copilot
+
+- 链接：<https://copilot.microsoft.com>
+- 说明：微软 C 端对话入口：模型由微软路由；C 端 Deep Research 已于 2026-08-18 退役，深度研究改由 M365 Copilot 的 Researcher 承接。
+- 标签：大厂·多模态
+- 核验：未核验
+
+## NotebookLM
+
+- 链接：<https://notebooklm.google.com>
+- 说明：源锚定的研究工作台：只在你给的一组源里回答，并生成音频概览与学习指南；它不是搜索引擎。
+- 标签：搜索·学术
+- 核验：未核验
+
+## Kagi
+
+- 链接：<https://kagi.com>
+- 说明：付费换隐私的自建索引搜索引擎：无广告无追踪，AI 答案层（FastGPT / Teclis）是附加线。
+- 标签：搜索·学术
+- 核验：未核验

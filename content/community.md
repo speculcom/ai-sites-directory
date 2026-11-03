@@ -19,7 +19,7 @@
 ## Reddit r/MachineLearning
 
 - 链接：<https://www.reddit.com/r/MachineLearning>
-- 说明：Reddit 最大机器学习社区，交流前沿论文与技术讨论。
+- 说明：Reddit 的机器学习社区，讨论论文与技术。
 - 标签：学术
 - 核验：ok（2026-10-29）
 
@@ -33,7 +33,7 @@
 ## Stack Overflow
 
 - 链接：<https://stackoverflow.com>
-- 说明：全球最大的编程问答社区，解决开发遇到的一切难题。
+- 说明：编程问答社区，提供问题与答案检索。
 - 标签：编程助手
 - 核验：存活（反爬拦截）
 
@@ -68,7 +68,7 @@
 ## Analytics India Magazine
 
 - 链接：<https://analyticsindiamag.com>
-- 说明：印度最大的 AI 数据科学媒体，覆盖亚洲 AI 行业趋势。
+- 说明：印度 AI 与数据科学媒体。
 - 标签：数据集
 - 核验：ok（2026-10-29）
 

@@ -1,11 +1,11 @@
 # 开发者工具
 
-> 通用开发、后端、效率与低代码工具 · 共 74 条
+> 通用开发、后端、效率与低代码工具 · 共 85 条
 
 ## GitHub
 
 - 链接：<https://github.com>
-- 说明：全球最大的代码托管与协作平台，开源社区的精神中心。
+- 说明：代码托管与协作平台，提供 Issues、Actions 与 Copilot 集成。
 - 标签：编程助手·协作
 - 核验：未核验
 
@@ -33,7 +33,7 @@
 ## Figma
 
 - 链接：<https://www.figma.com>
-- 说明：领先的 UI/UX 在线协作设计工具，产品设计行业事实标准。
+- 说明：UI/UX 在线协作设计工具，支持多人实时编辑与组件库。
 - 标签：设计·协作
 - 核验：ok（2026-10-29）
 
@@ -47,7 +47,7 @@
 ## Kaggle
 
 - 链接：<https://www.kaggle.com>
-- 说明：全球最大的数据科学与机器学习竞赛平台，Google 子品牌。
+- 说明：数据科学与机器学习竞赛平台，提供数据集与 Notebook。
 - 标签：数据集·评测
 - 核验：ok（2026-10-29）
 
@@ -89,7 +89,7 @@
 ## Linear
 
 - 链接：<https://linear.app>
-- 说明：现代产品管理型任务追踪工具，性能极致的设计驱动。
+- 说明：产品管理型任务追踪工具，支持 issue、cycle 与 roadmap。
 - 标签：办公
 - 核验：ok（2026-10-29）
 
@@ -124,14 +124,14 @@
 ## Cloudflare
 
 - 链接：<https://www.cloudflare.com>
-- 说明：全球领先的 CDN 与边缘计算平台，Workers 无服务器函数。
+- 说明：CDN 与边缘计算平台，提供 Workers 无服务器函数。
 - 标签：云服务·边缘计算
 - 核验：ok（2026-10-29）
 
 ## AWS
 
 - 链接：<https://aws.amazon.com>
-- 说明：全球最大云服务商，提供 200+ 全功能基础设施服务。
+- 说明：云服务商，提供计算、存储、数据库与 AI 服务。
 - 标签：云服务
 - 核验：ok（2026-10-29）
 
@@ -180,7 +180,7 @@
 ## Dribbble
 
 - 链接：<https://dribbble.com>
-- 说明：全球设计师作品展示与灵感社区，发现顶级设计创意。
+- 说明：设计师作品展示与灵感社区。
 - 标签：社区
 - 核验：ok（2026-10-29）
 
@@ -327,7 +327,7 @@
 ## Zapier
 
 - 链接：<https://zapier.com>
-- 说明：全球最大的工作流自动化平台，连接 7000+ 应用零代码集成。
+- 说明：工作流自动化平台，连接 7000+ 应用。
 - 标签：工作流
 - 核验：ok（2026-10-29）
 
@@ -341,14 +341,14 @@
 ## Airtable
 
 - 链接：<https://airtable.com>
-- 说明：电子表格与数据库的完美结合，低代码构建业务应用。
+- 说明：电子表格与数据库结合的低代码应用平台。
 - 标签：办公
 - 核验：ok（2026-10-29）
 
 ## Bubble
 
 - 链接：<https://bubble.io>
-- 说明：功能强大的无代码 Web 应用构建平台，可视化编程。
+- 说明：无代码 Web 应用构建平台，可视化编排。
 - 标签：前端·可视化
 - 核验：ok（2026-10-29）
 
@@ -362,7 +362,7 @@
 ## CertiK
 
 - 链接：<https://www.certik.com>
-- 说明：全球领先的 Web3 智能合约安全审计公司，守护百亿美元资产。
+- 说明：Web3 智能合约安全审计公司。
 - 标签：合规
 - 核验：ok（2026-10-29）
 
@@ -390,7 +390,7 @@
 ## 慢雾科技 SlowMist
 
 - 链接：<https://www.slowmist.com>
-- 说明：中国领先区块链安全公司，发现并防护大量严重漏洞。
+- 说明：区块链安全公司，提供审计与威胁情报。
 - 标签：国产·安全
 - 核验：ok（2026-10-29）
 
@@ -418,7 +418,7 @@
 ## Alacritty
 
 - 链接：<https://alacritty.org>
-- 说明：GPU 加速跨平台终端模拟器，性能极致的 Rust 编写之美。
+- 说明：GPU 加速跨平台终端模拟器，Rust 实现。
 - 标签：GPU
 - 核验：ok（2026-10-29）
 
@@ -488,7 +488,7 @@
 ## 1Password
 
 - 链接：<https://1password.com>
-- 说明：行业领先的密码管理与团队安全平台，自动填充与安全共享。
+- 说明：密码管理与团队安全平台，支持自动填充与共享。
 - 标签：安全
 - 核验：ok（2026-10-29）
 
@@ -502,7 +502,7 @@
 ## Notion
 
 - 链接：<https://www.notion.so>
-- 说明：全能型笔记与知识管理工具，集成 AI 写作辅助强大功能。
+- 说明：笔记与知识管理工具，集成 AI 写作与数据库。
 - 标签：办公
 - 核验：未核验
 
@@ -519,3 +519,80 @@
 - 说明：持久执行引擎，可靠工作流的底座配件（不是 agent 框架）。
 - 标签：开源·基础设施
 - 核验：ok（2026-10-29）
+
+## Google Opal
+
+- 链接：<https://opal.google/>
+- 说明：Google Labs 的无代码 AI mini-app 搭建器：自然语言把生成/搜索/视频步骤串成可分享应用；官方宣布 2026-11-17 从 Labs 毕业并迁移到 Gemini skills。
+- 标签：工作流·可视化
+- 核验：未核验
+
+## Microsoft Copilot Studio
+
+- 链接：<https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio>
+- 说明：Microsoft 生态的企业低代码 agent 平台：能力取决于是否在 Power Platform / Dataverse 生态；身份与数据驻留随 Microsoft 365 体系提供。
+- 标签：工作流·企业级
+- 核验：未核验
+
+## n8n
+
+- 链接：<https://n8n.io>
+- 说明：自动化优先的低代码工作流平台，AI 只是其中一类节点；源码公开但采用 fair-code（Sustainable Use License），不是 OSI 开源。
+- 标签：工作流·开源
+- 核验：未核验
+
+## Specul 提示词与上下文模板
+
+- 链接：<https://tools.specul.com/mcp/guides/toolkit-prompt-context.html>
+- 说明：四个可复制文本块：提示词结构、上下文预算、RAG 分块与重排清单、模型选型工作表（2026-11-03）。
+- 标签：工作流
+- 核验：未核验
+
+## Specul Agent 评估与护栏模板
+
+- 链接：<https://tools.specul.com/mcp/guides/toolkit-agent-ops.html>
+- 说明：四个可复制文本块：Agent 评估 rubric、四层护栏清单、客服验收单、故障复盘清单（2026-11-03）。
+- 标签：工作流
+- 核验：未核验
+
+## Specul 权限与成本模板
+
+- 链接：<https://tools.specul.com/mcp/guides/toolkit-rights-cost.html>
+- 说明：四个可复制文本块：Agent 权限矩阵、模型许可检查表、视频权利登记表、成本算式模板（2026-11-03）。
+- 标签：工作流
+- 核验：未核验
+
+## Playbook：修一个真实 bug
+
+- 链接：<https://tools.specul.com/mcp/guides/playbook-fix-a-bug.html>
+- 说明：从仓库上下文、复现、计划、改动、测试到审查的六步流程，含权限设置与验收单（2026-11-03）。
+- 标签：工作流
+- 核验：未核验
+
+## Playbook：做一条 60 秒视频
+
+- 链接：<https://tools.specul.com/mcp/guides/playbook-60s-video.html>
+- 说明：脚本、分镜、生成、剪辑、权利登记五段，含单段时长限制与成本算式（2026-11-03）。
+- 标签：工作流
+- 核验：未核验
+
+## Playbook：做一份可核查的研究简报
+
+- 链接：<https://tools.specul.com/mcp/guides/playbook-research-brief.html>
+- 说明：问题、检索、来源、综合、复核五步，每条结论挂来源与日期（2026-11-03）。
+- 标签：工作流
+- 核验：未核验
+
+## Playbook：搭一个客服 Agent
+
+- 链接：<https://tools.specul.com/mcp/guides/playbook-service-agent.html>
+- 说明：意图、知识库、工具、护栏、评估、上线六段，含人工兜底与验收单（2026-11-03）。
+- 标签：工作流
+- 核验：未核验
+
+## Playbook：在本机跑一个模型
+
+- 链接：<https://tools.specul.com/mcp/guides/playbook-local-model.html>
+- 说明：显存、量化档、runtime、评估、监控五步，含体积算式与选档理由（2026-11-03）。
+- 标签：工作流
+- 核验：未核验

@@ -1,6 +1,6 @@
 # 多模态生成
 
-> 图像、视频、音频、3D 与数字人生成 · 共 56 条
+> 图像、视频、音频、3D 与数字人生成 · 共 64 条
 
 ## Canva
 
@@ -54,14 +54,14 @@
 ## DALL·E
 
 - 链接：<https://openai.com/dall-e-3>
-- 说明：OpenAI 开发的图像生成模型，与 ChatGPT 深度整合。
-- 标签：图像生成·大厂
+- 说明：已停运（2026-05-12 停止支持）：OpenAI 的图像生成模型；官方 deprecations 页把 DALL·E 2/3 标为弃用，现行图像生成走 ChatGPT / GPT Image。
+- 标签：已停运·图像生成
 - 核验：存活（反爬拦截）
 
 ## ComfyUI
 
 - 链接：<https://github.com/comfyanonymous/ComfyUI>
-- 说明：功能强大的 Stable Diffusion 节点式工作流界面，灵活高效。
+- 说明：Stable Diffusion 的节点式工作流界面，本地运行，支持自定义节点与模型。
 - 标签：工作流·开源
 - 核验：ok（2026-10-29）
 
@@ -145,8 +145,8 @@
 ## Sora
 
 - 链接：<https://openai.com/sora>
-- 说明：OpenAI 出品的革命性文生视频模型，物理世界模拟能力极强。
-- 标签：大厂·仿真
+- 说明：已停运（网页/App 2026-04-26、API 2026-09-24 停止服务）：OpenAI 的文生视频产品。
+- 标签：已停运·视频生成
 - 核验：未核验
 
 ## HeyGen
@@ -393,3 +393,59 @@
 - 说明：腾讯 AI 数字人视频创作平台；官方改造公告 2025-06-30 24 时起暂停登录及业务、停止用户数据访问，截至 2026-10 未重启。
 - 标签：大厂
 - 核验：未验证（探测受限：ENOENT，非死链）
+
+## FLUX
+
+- 链接：<https://bfl.ai/>
+- 说明：Black Forest Labs 的图像模型家族：API/playground 托管生成 + 部分权重开源可自托管；条款允许商用但禁止用输出训练其他模型。
+- 标签：图像生成·开源
+- 核验：未核验
+
+## Ideogram
+
+- 链接：<https://ideogram.ai>
+- 说明：主打图内排版文字的图像模型族：4.0 开放量化权重（非商用免费，商用自托管需许可），4.5 闭源托管支持 precise edit。
+- 标签：图像生成·设计
+- 核验：未核验
+
+## Veo
+
+- 链接：<https://deepmind.google/technologies/veo/>
+- 说明：Google 的视频生成模型家族，经 Gemini API / Vertex AI 与 Google AI 计划交付，输出带 SynthID 溯源；免费配额数据会用于训练，付费不训练。
+- 标签：视频生成·大厂
+- 核验：未核验
+
+## Kling
+
+- 链接：<https://klingai.com/global/>
+- 说明：国产视频生成：Kling 4.0 单次原生 30 秒、全能参考 15 项素材；已备案、大陆直连可用，商用需过会员线。
+- 标签：视频生成·国产
+- 核验：未核验
+
+## Hailuo Video
+
+- 链接：<https://hailuoai.video>
+- 说明：MiniMax 的消费级视频生成入口：文/图生视频，国产、大陆直连可用、免费档起步；产品入口备案状态未单独核验。
+- 标签：视频生成·国产
+- 核验：未核验
+
+## Luma
+
+- 链接：<https://lumalabs.ai>
+- 说明：Dream Machine 主打镜头运动感短片与首尾帧插值；大陆直连不可达（2026-10 实测 000）。
+- 标签：视频生成·云服务
+- 核验：未验证（探测受限：timeout，非死链）
+
+## Whisper
+
+- 链接：<https://github.com/openai/whisper>
+- 说明：OpenAI 的 MIT 转写基座：多档权重可本地跑，隐私音频不出本机；它是模型不是产品，说话人分离靠衍生生态。
+- 标签：语音合成·开源
+- 核验：未核验
+
+## Deepgram
+
+- 链接：<https://www.deepgram.com>
+- 说明：开发者向语音 API：Nova 转写 + Aura TTS，实时流式转写是主打；定位是造语音产品的底座。
+- 标签：语音合成·API
+- 核验：未核验

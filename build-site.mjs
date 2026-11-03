@@ -91,6 +91,10 @@ const CHECK_N = Number(check.checked || 0);
 const CHECK_OK_N = (check.results || []).filter(r => r.v === 'ok' || r.v === 'blocked' || r.v === 'changed').length;
 const CHECK_DEAD_N = (check.results || []).filter(r => r.v === 'dead').length;
 const CHECK_UNVER_N = (check.results || []).filter(r => r.v === 'unverifiable' || r.v === 'unknown').length;
+/* 2026-11-03：确认存活再拆三档，与 www 首页同一口径（539 直接 200 / 62 反爬 / 7 改址）。 */
+const CHECK_DIRECT_N = (check.results || []).filter(r => r.v === 'ok').length;
+const CHECK_BLOCKED_N = (check.results || []).filter(r => r.v === 'blocked').length;
+const CHECK_CHANGED_N = (check.results || []).filter(r => r.v === 'changed').length;
 const TODAY = CHECK_AT;
 
 // 核验结论：只有明确 404/410 判失效；unverifiable（探测受限）不是死链
@@ -318,7 +322,7 @@ const body = `    <section class="section hero">
       <div class="container">
         <p class="eyebrow">SPECUL · DIRECTORY</p>        <h1 class="h1"><span class="grad-title"><span data-zh>AI 导航</span><span data-en>AI Directory</span></span></h1>
         <p class="lede">${biSpan(`系统化收录 <strong>${items.length}</strong> 个 AI 相关网站，按 ${cats.length} 类组织。每条附一句话说明与链接核验状态。`, `<strong>${items.length}</strong> AI websites across ${cats.length} categories. Each entry includes a short description and a link-check status.`)}</p>
-        <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，逐条人工整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，${CHECK_DEAD_N} 个已失效，${CHECK_UNVER_N} 个网络受限未能探测——不代表失效）。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, compiled by hand; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live, ${CHECK_DEAD_N} dead, ${CHECK_UNVER_N} unreachable from the probe environment — not necessarily dead). This page is an index and does not replace each site's own documentation.</span></p>
+        <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，逐条人工整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，其中 ${CHECK_DIRECT_N} 个直接 200、${CHECK_BLOCKED_N} 个反爬拦截但站点响应、${CHECK_CHANGED_N} 个改址仍可达；${CHECK_DEAD_N} 个已失效；${CHECK_UNVER_N} 个探测环境受限未能确认——不代表失效）。${items.length} 条收录中，${CHECK_N} 个独立域名纳入该快照（一条收录可含多个链接，重复域名只探测一次）；快照之后新增的条目标为待核验。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, compiled by hand; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live — ${CHECK_DIRECT_N} direct 200, ${CHECK_BLOCKED_N} anti-bot but responding, ${CHECK_CHANGED_N} redirected and still reachable; ${CHECK_DEAD_N} dead; ${CHECK_UNVER_N} blocked by the probe environment — not necessarily dead). Of ${items.length} entries, ${CHECK_N} unique domains were covered by that snapshot (one entry may carry several links; duplicate domains are probed once); entries added afterwards are marked unchecked. This page is an index and does not replace each site's own documentation.</span></p>
       </div>
     </section>
 

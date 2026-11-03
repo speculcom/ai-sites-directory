@@ -1,6 +1,6 @@
 # AI 编程与 Agent
 
-> 编码助手、终端 Agent 与自动化智能体 · 共 34 条
+> 编码助手、终端 Agent 与自动化智能体 · 共 43 条
 
 ## GitHub Copilot
 
@@ -12,7 +12,7 @@
 ## Cursor
 
 - 链接：<https://cursor.com>
-- 说明：基于 VS Code 的 AI 原生代码编辑器，编程体验极致智能。
+- 说明：基于 VS Code 的 AI 代码编辑器，支持内联补全、Agent 模式与 MCP。
 - 标签：IDE
 - 核验：ok（2026-10-29）
 
@@ -238,4 +238,67 @@
 - 链接：<https://github.com/smythos/sre>
 - 说明：AI 智能体操作系统，公司转向开源智能体运行时 SRE，官网重定向到其 GitHub 仓库。
 - 标签：可视化·云服务
+- 核验：未核验
+
+## Google Antigravity
+
+- 链接：<https://antigravity.google>
+- 说明：Google 的 agent-first 开发平台：桌面指挥中心 / CLI / IDE 扩展 / Python SDK 共用一套 harness，命令执行有官方三档策略（2026-10-13 核验）。
+- 标签：编程助手·IDE
+- 核验：未核验
+
+## Trae
+
+- 链接：<https://www.trae.ai>
+- 说明：字节跳动的三端 AI IDE（桌面/Web/移动）：Desktop 双窗口 + SOLO 整段委托，内置多模型并支持自定义 key，带 Privacy mode 与沙箱开关（2026-10 快照）。
+- 标签：编程助手·IDE
+- 核验：未核验
+
+## Claude Code CLI
+
+- 链接：<https://github.com/anthropics/claude-code>
+- 说明：Anthropic 的终端编码 agent：自带 CHANGELOG 与 Atom feed，权限粒度可配置；源码可见但 All rights reserved（2026-10 快照）。
+- 标签：命令行·编程助手
+- 核验：未核验
+
+## Codex CLI
+
+- 链接：<https://github.com/openai/codex>
+- 说明：OpenAI 官方的终端编码 agent，Rust 实现，强调 app server 与线程续接；有独立 releases 变更记录。
+- 标签：命令行·编程助手
+- 核验：未核验
+
+## Gemini CLI
+
+- 链接：<https://github.com/google-gemini/gemini-cli>
+- 说明：Google 官方的开源终端 agent：npx 免安装启动，支持 MCP 与非交互脚本模式（Apache-2.0）。
+- 标签：命令行·开源
+- 核验：未核验
+
+## Kiro
+
+- 链接：<https://kiro.dev>
+- 说明：AWS 的 agentic 工程环境：IDE / CLI / Web / Mobile 四端共用一套 harness，招牌是 requirements / design / tasks 三段式 spec。
+- 标签：编程助手·IDE
+- 核验：未核验
+
+## OpenCode
+
+- 链接：<https://opencode.ai>
+- 说明：MIT 许可的多 provider 编程 harness：运行 bash 命令前会询问权限，支持 ACP 载入。
+- 标签：命令行·开源
+- 核验：未核验
+
+## Amp
+
+- 链接：<https://ampcode.com>
+- 说明：原 Sourcegraph 的前沿编码 agent，2025-12 官方公告分拆为独立公司 Amp Frontier Corporation；CLI + 云端 orb + runner 三执行面。
+- 标签：编程助手·云服务
+- 核验：未核验
+
+## Goose
+
+- 链接：<https://github.com/aaif-goose/goose>
+- 说明：本地优先的开源通用 agent：桌面应用、CLI 与可嵌入 API 三种形态；由 Block 创建，现属 Agentic AI Foundation，provider 可换成 Ollama 等本地模型。
+- 标签：命令行·开源
 - 核验：未核验
