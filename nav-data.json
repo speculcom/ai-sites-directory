@@ -7658,6 +7658,30 @@
       "tag": "工作流",
       "ic": "🖥️",
       "cat": "tools"
+    },
+    {
+      "n": "指南：国内可用性怎么读",
+      "d": "用 225 份档案的 cn 字段读直连、主体与备案；给统计口径、限制与四步自查，不做实时可用性承诺（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/cn-availability.html",
+      "tag": "合规",
+      "ic": "🇨🇳",
+      "cat": "tools"
+    },
+    {
+      "n": "对比：浏览器 Agent 三选一",
+      "d": "Playwright MCP / Browserbase MCP / Chrome DevTools MCP 的适用条件、能力边界、价格档位与换用时机（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-browser-agents.html",
+      "tag": "工作流·学术",
+      "ic": "🌐",
+      "cat": "learn"
+    },
+    {
+      "n": "速记：2026 Q3–Q4 变更",
+      "d": "10 条带日期的官方发布、停运与迁移，每条附来源；已宣布未生效的单独标注（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/changes-2026-q3-q4.html",
+      "tag": "工作流",
+      "ic": "🗓️",
+      "cat": "tools"
     }
   ]
 }

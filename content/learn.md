@@ -1,6 +1,6 @@
 # 学习资源
 
-> 论文、课程、数据集、书籍与练习平台 · 共 50 条
+> 论文、课程、数据集、书籍与练习平台 · 共 51 条
 
 ## arXiv
 
@@ -215,7 +215,7 @@
 ## Rust
 
 - 链接：<https://www.rust-lang.org>
-- 说明：系统编程语言，零开销抽象与内存安全，正在重塑底层生态。
+- 说明：系统编程语言，以零开销抽象与内存安全为设计目标。
 - 标签：安全
 - 核验：ok（2026-10-29）
 
@@ -349,5 +349,12 @@
 
 - 链接：<https://tools.specul.com/mcp/guides/compare-research-tools.html>
 - 说明：Perplexity、Kagi、NotebookLM、Elicit 按检索深度、来源透明度与引用管理对比（2026-11-03）。
+- 标签：工作流·学术
+- 核验：未核验
+
+## 对比：浏览器 Agent 三选一
+
+- 链接：<https://tools.specul.com/mcp/guides/compare-browser-agents.html>
+- 说明：Playwright MCP / Browserbase MCP / Chrome DevTools MCP 的适用条件、能力边界、价格档位与换用时机（2026-11-03）。
 - 标签：工作流·学术
 - 核验：未核验

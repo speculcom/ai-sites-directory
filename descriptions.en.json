@@ -586,5 +586,8 @@
   "Playbook：做一条 60 秒视频": "Five stages from script and storyboard to generation, editing and rights logging, with clip limits and a cost formula (2026-11-03).",
   "Playbook：做一份可核查的研究简报": "Five steps from question and search to sources, synthesis and review, with a source and date on every claim (2026-11-03).",
   "Playbook：搭一个客服 Agent": "Six stages from intents and knowledge base to tools, guardrails, evaluation and launch, with human fallback (2026-11-03).",
-  "Playbook：在本机跑一个模型": "Five steps from VRAM and quantization to runtime, evaluation and monitoring, with a size formula (2026-11-03)."
+  "Playbook：在本机跑一个模型": "Five steps from VRAM and quantization to runtime, evaluation and monitoring, with a size formula (2026-11-03).",
+  "指南：国内可用性怎么读": "Read the cn fields across 225 dossiers for direct reach, operator and filing, with counting rules, limits and a four-step self-check, and no real-time availability promise (2026-11-03).",
+  "对比：浏览器 Agent 三选一": "Playwright MCP, Browserbase MCP and Chrome DevTools MCP compared by applicability, capability limits, plan tiers and when to switch (2026-11-03).",
+  "速记：2026 Q3–Q4 变更": "Ten dated official launches, retirements and migrations, each with a source, with announced-but-not-yet-effective items marked separately (2026-11-03)."
 }
