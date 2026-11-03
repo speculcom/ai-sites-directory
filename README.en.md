@@ -121,9 +121,9 @@ Each entry carries 1–3 tags, 1.48 on average; no single-use tags, no untagged 
 ## Legal position
 
 Index and quote only. Do not host, do not interpret licenses, do not give legal advice.
-Descriptions are our own original text ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-free to reuse with attribution); information about the listed sites belongs to their
-respective rights holders.
+Descriptions are our own original text; no separate licence is granted for copying,
+adapting or redistributing them. Quote with credit and a link back to this site.
+Information about the listed sites belongs to their respective rights holders.
 
 <!-- INDEX:BEGIN generated, do not edit -->
 
@@ -131,20 +131,20 @@ respective rights holders.
 
 | Category | Items | Examples |
 |---|---|---|
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
+| LLMs & chat | 45 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · Grok …and 39 more |
+| AI coding & agents | 34 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …and 28 more |
+| Multimodal generation | 56 | Canva · Microsoft Designer · Galileo AI · Uizard · Midjourney · Stable Diffusion …and 50 more |
+| Applications | 47 | Gamma · Jasper · Copy.ai · Grammarly · Otter.ai · Notion AI …and 41 more |
+| Model providers | 26 | Hugging Face · Ollama · Replicate · Civitai · OpenRouter · Together AI …and 20 more |
+| Developer tools | 47 | Pinecone · Weaviate · Chroma · Milvus · Qdrant · Elasticsearch …and 41 more |
+| Infrastructure | 55 | NVIDIA · AMD · Intel · ARM · Cerebras · Graphcore …and 49 more |
+| Robotics & embodied | 87 | Tesla Optimus · Figure AI · Boston Dynamics · 1X Technologies · Agility Robotics · Apptronik …and 81 more |
+| Learning | 43 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …and 37 more |
+| Community | 25 | Hacker News · Product Hunt · Reddit r/MachineLearning · Dev.to · Stack Overflow · MIT Technology Review …and 19 more |
+| Tools & utilities | 74 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …and 68 more |
 
 > Full list: [`content/`](./content/) (one markdown file per site) or [`nav-data.json`](./nav-data.json).
+> `ext` (extended fields) has 184 more entries not published on the site, so it is not listed above.
 
 <!-- INDEX:END -->
 
@@ -155,6 +155,6 @@ respective rights holders.
 |---|---|
 | Items | 723 (public 539 · ext 184) |
 | Categories | 12 (11 public) |
-| Tag vocabulary | 92 (closed enum) |
-| Retired | 13 (Galileo AI · Baidu Yige · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Tencent Zhiying · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code) |
+| Tag vocabulary | 93 (closed enum) |
+| Retired | 15 (Galileo AI · DALL·E · Baidu Yige · Sora · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Tencent Zhiying · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code) |
 <!-- STATS:END -->
