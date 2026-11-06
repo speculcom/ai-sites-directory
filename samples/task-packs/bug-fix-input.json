@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "contract": "add(a,b) returns the sum of two finite numbers",
+  "cases": [
+    {
+      "a": 2,
+      "b": 3,
+      "expected": 5
+    },
+    {
+      "a": -2,
+      "b": 1,
+      "expected": -1
+    },
+    {
+      "a": 4,
+      "b": 0,
+      "expected": 4
+    }
+  ]
+}

@@ -775,6 +775,9 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
   .brand-sub { display: none; }
 }
 @media (max-width: 520px) {
+  .site-bar { column-gap: var(--sp-2); }
+  .site-bar .nav-links { display: none; }
+  .nav-tools { gap: var(--sp-1); }
   .brand-text { display: block; }
   .brand-text .brand-name, .brand-text .brand-sub { display: none; }
   .brand-text::after { content: "Specul"; font-size: var(--fs-sm); font-weight: 800; letter-spacing: -.02em; }

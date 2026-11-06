@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "dataset": {
+    "name": "RiverAssistant eval set v0 (fictional)",
+    "version": "v0",
+    "sample_count": 10,
+    "synthetic": true,
+    "provenance": "written for this page; not exported from production logs and not a public benchmark"
+  },
+  "metric_draft": {
+    "name": "accuracy",
+    "numerator": "judged rows that pass",
+    "denominator": "not decided yet",
+    "unjudged_handling": "not decided yet"
+  },
+  "baseline_version": null,
+  "model_identifier": null,
+  "prompt_revision": null,
+  "cost_estimate": {
+    "fictional": true,
+    "runs_per_week": 3,
+    "estimated_cost_usd_per_run": 0.42,
+    "estimated_wall_clock_minutes_per_run": 12,
+    "basis": "fictional planning estimate for this exercise, not a vendor price or measured throughput"
+  },
+  "cases": [
+    {
+      "name": "judged rows only",
+      "rows": [
+        {
+          "passed": true
+        },
+        {
+          "passed": true
+        },
+        {
+          "passed": false
+        },
+        {
+          "passed": false
+        }
+      ],
+      "expected": 0.5
+    },
+    {
+      "name": "two unjudged rows mixed in",
+      "rows": [
+        {
+          "passed": true
+        },
+        {
+          "passed": null
+        },
+        {
+          "passed": false
+        },
+        {
+          "passed": null
+        }
+      ],
+      "expected": 0.5
+    },
+    {
+      "name": "nothing judged",
+      "rows": [
+        {
+          "passed": null
+        },
+        {
+          "passed": null
+        }
+      ],
+      "expected": null
+    }
+  ]
+}

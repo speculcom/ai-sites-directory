@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "change": "rows.filter(passed !== false) over all rows -> only boolean-judged rows enter the numerator and the denominator",
+  "wrong_outputs": [
+    0.5,
+    0.75,
+    1
+  ],
+  "fixed_outputs": [
+    0.5,
+    0.5,
+    null
+  ],
+  "denominator_rule": {
+    "unjudged": "excluded from the denominator and reported as a separate count",
+    "error_or_timeout": "excluded, with a reason code recorded per row",
+    "empty_or_all_unjudged": "not computable; report no percentage"
+  },
+  "report_counts_with": "every percentage is paired with its graded and unjudged counts",
+  "execution_status": "not_executed",
+  "unknown": [
+    "real dataset version",
+    "model identifier and parameters",
+    "prompt revision",
+    "provider pricing and quota",
+    "judge-model bias"
+  ],
+  "limit": "Case one does not distinguish the two functions. Regression thresholds, judge-model bias and dataset leakage checks are outside this exercise.",
+  "rollback": "Restore score-bug.mjs or reverse the two-line scoring change.",
+  "conclusion": "A metric number without a denominator rule is not an evaluation result."
+}

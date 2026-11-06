@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "files": [
+    {
+      "path": "add-bug.mjs",
+      "bytes": 107,
+      "sha256": "64e1257f83703620337c5ff7a874453b7fabc9295fb51691848904e1ae36dd1e"
+    },
+    {
+      "path": "add-reference.mjs",
+      "bytes": 109,
+      "sha256": "86d8ca411aa6e1351301de6cc3a535f892caac520f1dbaf41151e3243767ecc7"
+    },
+    {
+      "path": "bug-fix-input.json",
+      "bytes": 584,
+      "sha256": "233f2f0190da902c83ccb58642f9ade45137482004dbd7984ac87caf6136498f"
+    },
+    {
+      "path": "bug-fix-reference.json",
+      "bytes": 669,
+      "sha256": "4ca4198b76dcfa7f991d5524a8a79b3f8663631e3095da11de2c7d5e26a046ad"
+    },
+    {
+      "path": "bug-fix-worksheet.json",
+      "bytes": 2184,
+      "sha256": "39615de263e79f0d25c9a8ed31113b7e08c2a1e955b6b6e042a0234dbda5cd1a"
+    },
+    {
+      "path": "eval-pipeline-input.json",
+      "bytes": 1852,
+      "sha256": "080b453b5e4aae1d72518423ad2e1d3d8affbb03daf60dc3523fbd6402405b00"
+    },
+    {
+      "path": "eval-pipeline-reference.json",
+      "bytes": 1423,
+      "sha256": "e414207c15223b6ba50039cec9067067b5c2592d3412d287d85c825cce52d073"
+    },
+    {
+      "path": "eval-pipeline-worksheet.json",
+      "bytes": 2657,
+      "sha256": "fc83144de5422621abe4e53d20d2bde52c25d1851d1d3ec31b2b2d77a7372ffd"
+    },
+    {
+      "path": "local-model-input.json",
+      "bytes": 765,
+      "sha256": "1ad53d782aa1cb9b2135c84560b007121c4be569d58f6174f6b91ffe3e23f830"
+    },
+    {
+      "path": "local-model-reference.json",
+      "bytes": 653,
+      "sha256": "c050ca4f991c72d8084fb689e7ddf8a6baa3a7fc59c4f050be4027b313ed6c57"
+    },
+    {
+      "path": "local-model-worksheet.json",
+      "bytes": 2338,
+      "sha256": "bf790b69cb55bfd66ee1db09f898505bf9a9ca4dc1d597baa31aa4a33be5c763"
+    },
+    {
+      "path": "redact-bug.mjs",
+      "bytes": 156,
+      "sha256": "bf2f7274b80be9d7c963150cfcd41e25f7051a00973f53e3f986a079089638ec"
+    },
+    {
+      "path": "redact-reference.mjs",
+      "bytes": 227,
+      "sha256": "991b39da010d644ddbf2a51a3ba96c4d667cfc9efbb3062959061b2a21a1921d"
+    },
+    {
+      "path": "research-input.json",
+      "bytes": 1013,
+      "sha256": "819075e6a7d4ad1f920b71c4c4f2f0232355fc030d1a2b341d1b0a23274cdb37"
+    },
+    {
+      "path": "research-reference.json",
+      "bytes": 1009,
+      "sha256": "14d06b0c2031441fe3c9a1fcf6cc70b95a3f2ea917ffe9a9472c41350ec799bc"
+    },
+    {
+      "path": "research-worksheet.json",
+      "bytes": 2364,
+      "sha256": "e3756c816ee678b274d37c0180a5d75d39a0fb6eede03be9f2d3df77b26ff2b8"
+    },
+    {
+      "path": "score-bug.mjs",
+      "bytes": 170,
+      "sha256": "26f61394438460346bb6bb9e432c7f1d4d189c05ecde54ac3979c58da6329c88"
+    },
+    {
+      "path": "score-reference.mjs",
+      "bytes": 285,
+      "sha256": "05e4a254860c118f6bc46e49be1159fd5eb48134559df98c512f3bc182ca0d12"
+    },
+    {
+      "path": "security-review-input.json",
+      "bytes": 1884,
+      "sha256": "940bdc30309aaf711719ae7943f9ba52ca3ae13e5b886f4dc33d3432f788d969"
+    },
+    {
+      "path": "security-review-reference.json",
+      "bytes": 1676,
+      "sha256": "b00e1ea8109089916205a9d58e0f6e8458ae2a14082ebd6ea241cfd679d23055"
+    },
+    {
+      "path": "security-review-worksheet.json",
+      "bytes": 2805,
+      "sha256": "ac6cb700a3ceb64ce3290a22a1b79e4af5384b92ac4f8150565c20718be2d322"
+    },
+    {
+      "path": "source-card.svg",
+      "bytes": 1248,
+      "sha256": "c7b4cf6238fc74cf17e6a789ae60aab5f2d220292968bb3d85c730b9312e5f43"
+    },
+    {
+      "path": "video-input.json",
+      "bytes": 786,
+      "sha256": "82bed02ee95755d18f3a451ee96ebf45a0a72c99111ccce69b18131808de3725"
+    },
+    {
+      "path": "video-reference.json",
+      "bytes": 766,
+      "sha256": "829ad8aa4f23c50911ff1bafb9b9792d669f6b1eec90c6b8b8b363094a1ad938"
+    },
+    {
+      "path": "video-worksheet.json",
+      "bytes": 2327,
+      "sha256": "0b81a255a43a24b7678b6d4f6430adae21cab0406deed49909df972bc1900e1f"
+    }
+  ]
+}

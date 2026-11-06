@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "kv_gib": 2,
+  "estimated_total_gib": 9,
+  "remaining_gib": 1,
+  "execution_status": "not_executed",
+  "unknown": [
+    "OS and backend",
+    "actual resident memory",
+    "model/runtime compatibility",
+    "model revision and licence"
+  ],
+  "conclusion": "Below the assumed memory budget does not establish that a model can run."
+}

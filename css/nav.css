@@ -194,3 +194,28 @@ html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
   .grid { grid-template-columns: 1fr; }
 }
 
+.constraint-filters { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(210px,100%),1fr)); gap: var(--sp-3); align-items: end; margin-top: var(--sp-4); }
+.constraint-filters label { display: flex; flex-direction: column; gap: var(--sp-2); font-size: var(--fs-sm); min-width: 0; }
+.constraint-filters .tagsel { width: 100%; margin: 0; }
+.constraint-filters button,.condition-compare button { font: inherit; padding: var(--sp-2) var(--sp-3); border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--bg); color: var(--ink); cursor: pointer; }
+.resource-conditions { margin-top: var(--sp-3); padding: var(--sp-3); border: 1px solid var(--line); border-radius: var(--r-sm); font-size: var(--fs-xs); overflow-wrap: anywhere; }
+.resource-conditions summary { cursor: pointer; }
+.resource-conditions dl,.comparison-card dl { margin-block: var(--sp-3); }
+.resource-conditions dt,.comparison-card dt { font-weight: 700; margin-top: var(--sp-3); }
+.resource-conditions dd,.comparison-card dd { margin: var(--sp-1) 0 0; color: var(--ink-mid); }
+.compare-choice { display: flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-xs); padding-block: var(--sp-3); }
+.compare-choice input { width: 20px; height: 20px; }
+.condition-compare { padding-block: var(--sp-5); }
+.comparison-columns { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(250px,100%),1fr)); gap: var(--sp-4); }
+.comparison-card { border: 1px solid var(--line); border-radius: var(--r); padding: var(--sp-4); overflow-wrap: anywhere; font-size: var(--fs-sm); }
+.comparison-card h3 { margin: 0; }
+.task-pack { overflow-wrap: anywhere; }
+.task-pack > p,.task-pack details p { margin-block: var(--sp-3); }
+.task-pack h4 { font-size: var(--fs-sm); margin-block: var(--sp-3) var(--sp-2); }
+.task-pack ol { list-style: decimal; padding-inline-start: 1.5em; }
+.task-pack li { margin-block: var(--sp-2); }
+.task-pack summary { cursor: pointer; }
+.pack-downloads { font-size: var(--fs-xs); line-height: 1.8; }
+.task-pack a,.resource-conditions a,.condition-compare a { color: var(--brand); text-decoration: underline; text-underline-offset: .15em; }
+@media print{.controls,.compare-choice,.condition-compare button{display:none}.comparison-card{break-inside:avoid}}
+

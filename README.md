@@ -15,7 +15,7 @@ AI 导航的**源仓**（唯一真相源）。
 | 你想干嘛 | 走哪条路 |
 |---|---|
 | 「这个领域有什么现成的」 | 下面的**分类表**，11 类各自多少条、代表站点是哪几个 |
-| 「我知道叫什么名字」 | 直接搜 [`content/`](./content/)，一站一个 md，文件名就是域名 |
+| 「我知道叫什么名字」 | 搜 [`content/`](./content/) 分类文档中的站名，或在网页目录里搜索 |
 | 「这家的东西还活着吗」 | 看 [`check-results.json`](./check-results.json) 里每条的核验状态和核验日期 |
 | 「我要机器可读」 | [`nav-data.json`](./nav-data.json) 是主数据，其余都是它的派生物 |
 
@@ -29,9 +29,12 @@ DNS 在本地解析不了、在云端能打开是常事。所以探测受限的�
 
 | 路径 | 内容 |
 |---|---|
-| `content/` | **内容源**：每个站点一个 md，含分类、描述、标签 |
+| `content/` | 从主数据生成的 12 份分类文档，含条目说明、标签与既有链接核验状态 |
 | `nav-data.json` | **主数据**：776 条条目 / 12 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 592 条 / 11 类） |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | 英文映射（分类名 / 标签 / 厂商 / 描述） |
+| `constraints.json` / `conditions.mjs` | 单项使用条件、官方来源与未知项；字段筛选和 2–3 项条件对照 |
+| `task-packs.json` / `task-packs.mjs` | 六个双语任务包、虚构输入、参考结果、随包代码与工作表生成 |
+| `directory.js` / `samples/task-packs/` | 浏览器筛选/对照；生成并附哈希清单的教学下载文件 |
 | `check-results.json` | 链接核验快照（每条带状态与核验日期 `lv`，另有 `history` 记每轮 start/done）。**构建器与 `gen-content.mjs` 直接消费它**渲染核验状态 |
 | `urls.txt` | 历史快照（2026-09-30 生成）。⚠ 已不是核验输入 —— `check-links.mjs` 直接读 `nav-data.json`，永远与数据一致 |
 | `site/` | 站点产物（由 `build-site.mjs` 生成） |
@@ -39,13 +42,21 @@ DNS 在本地解析不了、在云端能打开是常事。所以探测受限的�
 ## 内容改完要跑的三步
 
 ```bash
-node check-links.mjs        # 1 核验（读 nav-data.json，按域名去重；写 check-results.json）
-node gen-content.mjs        # 2 刷新 content/*.md 与 content-summary.json
-node build-site.mjs         # 3 建站 → 输出到 site/
+node validate.mjs           # 1 校验主数据与英文映射
+node gen-content.mjs        # 2 以既有链接快照刷新分类文档，不刷新链接核验日
+node build-site.mjs         # 3 建站，校验条件记录并生成任务包下载 → site/
 ```
 
 ⚠ **`check-results.json` 是产物链的一环**，不是可选报告：跑 `check-links.mjs`
 就等于直接改页面产物（每条链接旁显示的核验日期与状态）。
+
+文字编辑不要求重跑全部链接探测。需要新的连接证据时再运行 `check-links.mjs`，保留探测范围；条件文档核对、连接探测和产品实际执行分别记录，不互相替代。
+
+## 条件与任务包
+
+十条条目有明确范围的使用条件说明，其余字段默认未核对；未知不作为支持。条件按登录/鉴权、平台、输入输出、收费与数据分开，单项文档核对不提升整份档案可信度。
+
+六个任务包（本地模型、代码修复、研究简报、一分钟视频、上线前安全评审、评测流水线）附输入、四段步骤、交付、验收、排查与下一步，以及 JSON 工作表；带代码的包同时给出故意留错的样例与参考解法。虚构数据、参考代码与估算数字不冒充模型/工具执行结果或厂商报价。筛选和 2–3 项条件对照可用网址还原，对照可导出 JSON；没有总分或排名。
 
 ## 核验口径（A4.1 状态机 · 不可放宽）
 

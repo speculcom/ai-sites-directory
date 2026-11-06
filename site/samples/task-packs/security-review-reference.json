@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "change": "single replace without the g flag and no token rule -> global replace for both key formats",
+  "wrong_outputs": [
+    "retry failed for [REDACTED] at 09:12",
+    "tool call rejected: keys [REDACTED] and sk-ijklmnop both disabled",
+    "outbound https://api.invalid.example/v1?token=zyxwvuts&q=note"
+  ],
+  "fixed_outputs": [
+    "retry failed for [REDACTED] at 09:12",
+    "tool call rejected: keys [REDACTED] and [REDACTED] both disabled",
+    "outbound https://api.invalid.example/v1?token=[REDACTED]&q=note"
+  ],
+  "covered": [
+    "a second sk- key on the same line",
+    "a token value inside a URL query string"
+  ],
+  "not_covered": [
+    "keys split across lines",
+    "keys inside binary attachments",
+    "encryption at rest",
+    "provider-side retention"
+  ],
+  "review_execution_status": "not_executed",
+  "release_status": "not_ready",
+  "unknown": [
+    "version under review",
+    "provider retention window",
+    "who can read production prompts",
+    "current dependency advisories"
+  ],
+  "limit": "Case one does not distinguish the two functions. This exercise does not test infrastructure hardening, incident response or legal compliance.",
+  "rollback": "Restore redact-bug.mjs or re-add the g flag and the token rule.",
+  "conclusion": "A filled checklist is not a passed review; items without evidence stay unverified."
+}

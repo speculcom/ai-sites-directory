@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "task": "video",
+  "title": [
+    "制作一分钟视频",
+    "Make a one-minute video"
+  ],
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "input_inventory": [],
+  "constraints": {
+    "account": null,
+    "platform": null,
+    "permission": null,
+    "billing": null,
+    "data_handling": null
+  },
+  "source_versions": [],
+  "expected_output": null,
+  "steps": [
+    {
+      "title": [
+        "先确定事实和受众",
+        "Set facts and audience"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "按镜头分配时间与素材",
+        "Allocate shots and assets"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "检查生成与导出条件",
+        "Check generation and export conditions"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "导出后分开回放检查",
+        "Inspect the exported file"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    }
+  ],
+  "acceptance": [
+    {
+      "check": [
+        "八段计划时长合计 60 秒，实际视频时长仍待导出后确认。",
+        "Eight planned durations sum to 60 seconds; actual video duration awaits export."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "每项素材有来源与许可，未知授权素材不进入发布包。",
+        "Each asset has provenance and rights; assets with unknown permissions stay out of publication."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "字幕、音量、容器/编码、平台要求与导出限制分别检查。",
+        "Check captions, audio, container/codec, destination requirements and export restrictions separately."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    }
+  ],
+  "unknowns": [],
+  "next_action": null
+}

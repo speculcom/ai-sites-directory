@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "change": "return a - b -> return a + b",
+  "wrong_outputs": [
+    -1,
+    -3,
+    4
+  ],
+  "fixed_outputs": [
+    5,
+    -1,
+    4
+  ],
+  "limit": "Zero alone cannot distinguish the versions. Invalid-input handling and floating-point money arithmetic are outside this exercise.",
+  "rollback": "Restore add-bug.mjs or reverse the one-line patch."
+}

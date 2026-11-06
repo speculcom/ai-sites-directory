@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "product": "RiverTools Teaching Demo (not a real service)",
+  "question": "Who receives the preview, was it delayed, and when is public release?",
+  "sources": {
+    "A": {
+      "date": "2026-11-01",
+      "paragraph": "A1",
+      "text": "An internal-team preview is planned for November 6. No public release date is announced."
+    },
+    "B": {
+      "date": "2026-11-02",
+      "paragraph": "B1",
+      "text": "The public pricing page is unchanged. The preview is for internal teams, not general availability."
+    },
+    "C": {
+      "date": "2026-11-03",
+      "paragraph": "C1",
+      "text": "The internal preview is postponed. A replacement date has not been announced."
+    }
+  }
+}

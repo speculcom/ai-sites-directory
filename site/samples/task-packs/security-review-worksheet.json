@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "task": "security-review",
+  "title": [
+    "AI 上线前安全评审",
+    "AI pre-launch security review"
+  ],
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "input_inventory": [],
+  "constraints": {
+    "account": null,
+    "platform": null,
+    "permission": null,
+    "billing": null,
+    "data_handling": null
+  },
+  "source_versions": [],
+  "expected_output": null,
+  "steps": [
+    {
+      "title": [
+        "先固定评审范围与资产",
+        "Fix scope and assets"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "画数据流并标注边界",
+        "Map the data flow and its boundaries"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "用可复查的检查项走一轮",
+        "Run one round of re-checkable checks"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "交付风险表与上线条件",
+        "Deliver the risk register and release conditions"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    }
+  ],
+  "acceptance": [
+    {
+      "check": [
+        "每条结论都能回到具体位置（文件与行、配置项或带日期的官方页面），没有把看起来稳妥当证据。",
+        "Every conclusion returns to a specific location (file and line, configuration key or dated official page); it looks safe is not recorded as evidence."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "随包日志里两处虚构密钥（正文中的 sk- 值与 URL 查询串里的 token 值）在脱敏结果中都不可读，未覆盖的形式明确标注未覆盖。",
+        "Both fictional secrets in the bundled logs — the sk- value in the message and the token value in a URL query — are unreadable after masking, and uncovered formats stay labelled uncovered."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "依赖公告、模型许可与数据留存各有来源与核验日期；厂商宣传语与实测结果没有混写。",
+        "Dependency advisories, model licences and data retention each carry their own source and check date; marketing statements are not mixed with observed results."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    }
+  ],
+  "unknowns": [],
+  "next_action": null
+}
