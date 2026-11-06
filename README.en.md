@@ -32,7 +32,7 @@ Live version: <https://nav.specul.com/>
 | Path | Content |
 |---|---|
 | `content/` | **Content source**: one Markdown file per site, with category, description and tags |
-| `nav-data.json` | **Primary data**: 776 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 592 items / 11 categories are live) |
+| `nav-data.json` | **Primary data**: 777 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 593 items / 11 categories are live) |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | English mappings (category / tag / vendor / description) |
 | `check-results.json` | Link-verification snapshot (each entry has a status and a verification date `lv`; `history` records each run's start/done). **The builder and `gen-content.mjs` consume it directly** to render verification status |
 | `urls.txt` | Historical snapshot (generated 2026-09-30). ⚠ No longer a verification input — `check-links.mjs` reads `nav-data.json` directly, so it can never drift from the data |
@@ -132,7 +132,7 @@ Information about the listed sites belongs to their respective rights holders.
 | Category | Items | Examples |
 |---|---|---|
 | LLMs & chat | 48 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · Grok …and 42 more |
-| AI coding & agents | 43 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …and 37 more |
+| AI coding & agents | 44 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …and 38 more |
 | Multimodal generation | 64 | Canva · Microsoft Designer · Galileo AI · Uizard · Midjourney · Stable Diffusion …and 58 more |
 | Applications | 47 | Gamma · Jasper · Copy.ai · Grammarly · Otter.ai · Notion AI …and 41 more |
 | Model providers | 32 | Hugging Face · Ollama · Replicate · Civitai · OpenRouter · Together AI …and 26 more |
@@ -153,7 +153,7 @@ Information about the listed sites belongs to their respective rights holders.
 <!-- STATS:BEGIN generated, do not edit -->
 | Item | Measured value |
 |---|---|
-| Items | 776 (public 592 · ext 184) |
+| Items | 777 (public 593 · ext 184) |
 | Categories | 12 (11 public) |
 | Tag vocabulary | 93 (closed enum) |
 | Retired | 15 (Galileo AI · DALL·E · Baidu Yige · Sora · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Tencent Zhiying · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code) |

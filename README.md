@@ -10,7 +10,7 @@ AI 导航的**源仓**（唯一真相源）。
 
 ## 我该怎么读
 
-776 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
+777 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
 
 | 你想干嘛 | 走哪条路 |
 |---|---|
@@ -30,7 +30,7 @@ DNS 在本地解析不了、在云端能打开是常事。所以探测受限的�
 | 路径 | 内容 |
 |---|---|
 | `content/` | **内容源**：每个站点一个 md，含分类、描述、标签 |
-| `nav-data.json` | **主数据**：776 条条目 / 12 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 592 条 / 11 类） |
+| `nav-data.json` | **主数据**：777 条条目 / 12 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 593 条 / 11 类） |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | 英文映射（分类名 / 标签 / 厂商 / 描述） |
 | `check-results.json` | 链接核验快照（每条带状态与核验日期 `lv`，另有 `history` 记每轮 start/done）。**构建器与 `gen-content.mjs` 直接消费它**渲染核验状态 |
 | `urls.txt` | 历史快照（2026-09-30 生成）。⚠ 已不是核验输入 —— `check-links.mjs` 直接读 `nav-data.json`，永远与数据一致 |
@@ -122,7 +122,7 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 | 分类 | 条目数 | 代表站点 |
 |---|---|---|
 | 大模型与对话 | 48 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · 通义千问 …等 48 条 |
-| AI 编程与 Agent | 43 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …等 43 条 |
+| AI 编程与 Agent | 44 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …等 44 条 |
 | 多模态生成 | 64 | Canva · Microsoft Designer · Galileo AI · Uizard · 即时 AI · Midjourney …等 64 条 |
 | AI 办公与垂直应用 | 47 | Gamma · Jasper · Copy.ai · Grammarly · 通义听悟 · 讯飞听见 …等 47 条 |
 | 模型与权重 | 32 | Hugging Face · ModelScope 魔搭 · Ollama · Replicate · Civitai · OpenRouter …等 32 条 |
@@ -143,7 +143,7 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 <!-- STATS:BEGIN generated, do not edit -->
 | 项 | 实测值 |
 |---|---|
-| 条目 | 776 条（对外 592 · ext 184） |
+| 条目 | 777 条（对外 593 · ext 184） |
 | 分类 | 12 类（对外 11 类） |
 | 标签词表 | 93 个（封闭枚举） |
 | 下架标记 | 15 条（Galileo AI · DALL·E · 文心一格 · Sora · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · 腾讯智影 · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code） |
