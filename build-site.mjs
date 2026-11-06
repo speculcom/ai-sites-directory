@@ -91,6 +91,10 @@ const CHECK_N = Number(check.checked || 0);
 const CHECK_OK_N = (check.results || []).filter(r => r.v === 'ok' || r.v === 'blocked' || r.v === 'changed').length;
 const CHECK_DEAD_N = (check.results || []).filter(r => r.v === 'dead').length;
 const CHECK_UNVER_N = (check.results || []).filter(r => r.v === 'unverifiable' || r.v === 'unknown').length;
+/* 2026-11-03：确认存活再拆三档，与 www 首页同一口径（539 直接 200 / 62 反爬 / 7 改址）。 */
+const CHECK_DIRECT_N = (check.results || []).filter(r => r.v === 'ok').length;
+const CHECK_BLOCKED_N = (check.results || []).filter(r => r.v === 'blocked').length;
+const CHECK_CHANGED_N = (check.results || []).filter(r => r.v === 'changed').length;
 const TODAY = CHECK_AT;
 
 // 核验结论：只有明确 404/410 判失效；unverifiable（探测受限）不是死链
@@ -317,11 +321,25 @@ const INTENT = [
 const body = `    <section class="section hero">
       <div class="container">
         <p class="eyebrow">SPECUL · DIRECTORY</p>        <h1 class="h1"><span class="grad-title"><span data-zh>AI 导航</span><span data-en>AI Directory</span></span></h1>
-        <p class="lede">${biSpan(`系统化收录 <strong>${items.length}</strong> 个 AI 相关网站，按 ${cats.length} 类组织。每条附一句话说明与链接核验状态。`, `<strong>${items.length}</strong> AI websites across ${cats.length} categories. Each entry includes a short description and a link-check status.`)}</p>
-        <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，逐条人工整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，${CHECK_DEAD_N} 个已失效，${CHECK_UNVER_N} 个网络受限未能探测——不代表失效）。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, compiled by hand; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live, ${CHECK_DEAD_N} dead, ${CHECK_UNVER_N} unreachable from the probe environment — not necessarily dead). This page is an index and does not replace each site's own documentation.</span></p>
+        <p class="lede">${biSpan(`收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织。每条附说明与链接核验状态。`, `${items.length} AI websites across ${cats.length} categories. Each entry includes a description and a link-check status.`)}</p>
+        <details><summary>${biSpan("来源与链接核验范围", "Sources and link-check scope")}</summary>
+        <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，按条目整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，其中 ${CHECK_DIRECT_N} 个直接 200、${CHECK_BLOCKED_N} 个反爬拦截但站点响应、${CHECK_CHANGED_N} 个改址仍可达；${CHECK_DEAD_N} 个已失效；${CHECK_UNVER_N} 个探测环境受限未能确认——不代表失效）。${items.length} 条收录中，${CHECK_N} 个独立域名纳入该快照（一条收录可含多个链接，重复域名只探测一次）；快照之后新增的条目标为待核验。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, compiled by hand; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live — ${CHECK_DIRECT_N} direct 200, ${CHECK_BLOCKED_N} anti-bot but responding, ${CHECK_CHANGED_N} redirected and still reachable; ${CHECK_DEAD_N} dead; ${CHECK_UNVER_N} blocked by the probe environment — not necessarily dead). Of ${items.length} entries, ${CHECK_N} unique domains were covered by that snapshot (one entry may carry several links; duplicate domains are probed once); entries added afterwards are marked unchecked. This page is an index and does not replace each site's own documentation.</span></p>
+        </details>
       </div>
     </section>
 
+    <section class="section" id="task-packs">
+      <div class="container">
+        <h2>${biSpan('按任务准备一组资料', 'Build a small resource set for a task')}</h2>
+        <p>${biSpan('先写需要完成什么，再保留有用途的链接。下面给出查找顺序；不按工具多少判断准备是否充分。', 'Define the outcome first, then keep links with a clear purpose. These are search sequences, not quotas or rankings.')}</p>
+        <div class="t-grid t-grid-2">
+          <article class="t-taskcard"><h3>${biSpan('在本机跑一个模型', 'Run a local model')}</h3><p>${biSpan('先记录可用内存和平台，再找权重、运行器与对应说明。交付一份版本、许可、容量预算和未确认项记录。', 'Record memory and platform, then locate weights, a runtime and their documentation. Keep versions, licenses, a memory budget and unknowns.')}</p><p><a href="?cat=model#dir">${biSpan('找模型与权重', 'Find models and weights')}</a> · <a href="https://tools.specul.com/mcp/guides/playbook-local-model.html#worked-example">${biSpan('看完整例子', 'Read the worked example')}</a></p></article>
+          <article class="t-taskcard"><h3>${biSpan('修一个代码问题', 'Fix a code issue')}</h3><p>${biSpan('准备复现输入、错误信息和目标版本。先明确改动范围，再找适合现有编辑器或终端的工具。', 'Prepare reproduction inputs, errors and target versions. Define the change before looking for tools compatible with your editor or terminal.')}</p><p><a href="?cat=coding#dir">${biSpan('找编程工具', 'Find coding tools')}</a> · <a href="https://tools.specul.com/mcp/guides/playbook-fix-a-bug.html#worked-example">${biSpan('看修复记录示例', 'Read a repair-record example')}</a></p></article>
+          <article class="t-taskcard"><h3>${biSpan('核对资料并写简报', 'Check sources and write a brief')}</h3><p>${biSpan('为每个关键结论保留原文、日期和适用范围；冲突未解决时分开列出，不靠摘要填补证据。', 'Keep the original text, date and scope for key claims. Preserve unresolved conflicts rather than filling evidence gaps with summaries.')}</p><p><a href="?cat=learn#dir">${biSpan('找学习与参考资料', 'Find learning/reference material')}</a> · <a href="https://tools.specul.com/mcp/guides/playbook-research-brief.html#worked-example">${biSpan('看出处表的用法', 'Use a source record')}</a></p></article>
+          <article class="t-taskcard"><h3>${biSpan('制作一分钟视频', 'Make a one-minute video')}</h3><p>${biSpan('先确定事实、受众和分镜；每项素材记录来源与许可。完成后分别查信息、字幕、音量和平台要求。', 'Set facts, audience and shots first; record provenance and rights for each asset. Check facts, subtitles, audio and platform requirements separately.')}</p><p><a href="?cat=gen#dir">${biSpan('找生成工具', 'Find generation tools')}</a> · <a href="https://tools.specul.com/mcp/guides/playbook-60s-video.html#worked-example">${biSpan('看制作计划示例', 'Read a production-plan example')}</a></p></article>
+        </div>
+      </div>
+    </section>
     <section class="section" id="dir">
       <div class="container">
         <div class="controls">
@@ -335,7 +353,7 @@ const body = `    <section class="section hero">
         <p id="empty" class="empty" hidden>${biSpan("没有匹配的条目。", "No matching entries.")}</p>
 
         <div class="intent">
-          <p class="intent-h">${biSpan('或者，直接告诉我你想做什么', 'Or just tell me what you want to do')}</p>
+          <p class="intent-h">${biSpan('按任务筛选', 'Filter by task')}</p>
           <div class="intent-grid">
 ${INTENT.map((it) => {
   const n = items.filter((i) => i.cat === it.cat).length;
@@ -453,6 +471,11 @@ const script = `
         if (!id || CATS[id]) return false;
         var el = document.getElementById(id);
         if (!el) return false;
+        if (id === 'dir' || id === 'task-packs') {
+          deepLink(); apply();
+          el.scrollIntoView({ block: 'start' });
+          return true;
+        }
         setCat('all');           // 先取消分类筛选，否则该条所在的分类组可能是隐藏的
         apply();
         el.scrollIntoView({ block: 'center' });

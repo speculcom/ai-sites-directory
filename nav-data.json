@@ -64,7 +64,7 @@
   "items": [
     {
       "n": "ChatGPT",
-      "d": "OpenAI 推出的顶级对话式 AI，支持文本、图像、语音多模态交互。",
+      "d": "OpenAI 的对话产品：Deep Research、智能体与图像 2.0 已并入主产品；Atlas 浏览器于 2026-08-09 停运，能力并入 ChatGPT/Codex。",
       "u": "https://chat.openai.com",
       "tag": "多模态",
       "ic": "💬",
@@ -74,7 +74,7 @@
     },
     {
       "n": "Claude",
-      "d": "Anthropic 开发的安全可靠大模型，擅长长文本分析与深度推理。",
+      "d": "Anthropic 的对话应用：2026-10-21 release notes 记录记忆与 Cowork 更新；消费条款把输出转让给用户，隐私政策提供训练 opt-out。",
       "u": "https://claude.ai",
       "tag": "长文本·安全",
       "ic": "🧠",
@@ -84,7 +84,7 @@
     },
     {
       "n": "Gemini",
-      "d": "Google DeepMind 打造的新一代多模态大模型，整合搜索与推理。",
+      "d": "Google 的对话应用：Gemini 4 Argon 于 2026-10-13 面向 AI Pro/Ultra 推出；研究线有 Deep Research Max（2026-04-21），图像线有 Nano Banana 2（2026-02-26）；关闭 Keep Activity 后未来对话不用于训练。",
       "u": "https://gemini.google.com",
       "tag": "大厂·多模态",
       "ic": "♊",
@@ -124,7 +124,7 @@
     },
     {
       "n": "文心一言",
-      "d": "百度推出的知识增强大语言模型，深度整合百度搜索生态。",
+      "d": "百度的大语言模型对话产品，接入百度搜索与知识增强能力。",
       "u": "https://yiyan.baidu.com",
       "tag": "大厂·RAG",
       "ic": "📘",
@@ -214,7 +214,7 @@
     },
     {
       "n": "海螺 AI",
-      "d": "Minimax 推出的 AI 对话产品，语音合成能力业界领先。",
+      "d": "MiniMax 的对话与语音产品，提供语音合成与克隆；具体音色与语言以官方页为准。",
       "u": "https://hailuoai.com",
       "tag": "语音合成",
       "ic": "🐚",
@@ -484,7 +484,7 @@
     },
     {
       "n": "Grammarly",
-      "d": "全球领先的 AI 写作辅助工具，语法检查与风格优化。",
+      "d": "语法/拼写检查与语气改写工具；免费档与 Premium 档功能不同（官方 pricing 页）。",
       "u": "https://www.grammarly.com",
       "tag": "写作",
       "ic": "✅",
@@ -645,17 +645,18 @@
     },
     {
       "n": "DALL·E",
-      "d": "OpenAI 开发的图像生成模型，与 ChatGPT 深度整合。",
+      "d": "已停运（2026-05-12 停止支持）：OpenAI 的图像生成模型；官方 deprecations 页把 DALL·E 2/3 标为弃用，现行图像生成走 ChatGPT / GPT Image。",
       "u": "https://openai.com/dall-e-3",
-      "tag": "图像生成·大厂",
+      "tag": "已停运·图像生成",
       "ic": "✨",
       "cat": "gen",
       "old_t": "AI绘画",
-      "old_c": "ai"
+      "old_c": "ai",
+      "retired": true
     },
     {
       "n": "ComfyUI",
-      "d": "功能强大的 Stable Diffusion 节点式工作流界面，灵活高效。",
+      "d": "Stable Diffusion 的节点式工作流界面，本地运行，支持自定义节点与模型。",
       "u": "https://github.com/comfyanonymous/ComfyUI",
       "tag": "工作流·开源",
       "ic": "🔧",
@@ -776,13 +777,14 @@
     },
     {
       "n": "Sora",
-      "d": "OpenAI 出品的革命性文生视频模型，物理世界模拟能力极强。",
+      "d": "已停运（网页/App 2026-04-26、API 2026-09-24 停止服务）：OpenAI 的文生视频产品。",
       "u": "https://openai.com/sora",
-      "tag": "大厂·仿真",
+      "tag": "已停运·视频生成",
       "ic": "🌌",
       "cat": "gen",
       "old_t": "AI视频",
-      "old_c": "ai"
+      "old_c": "ai",
+      "retired": true
     },
     {
       "n": "HeyGen",
@@ -1018,7 +1020,7 @@
     },
     {
       "n": "Cursor",
-      "d": "基于 VS Code 的 AI 原生代码编辑器，编程体验极致智能。",
+      "d": "基于 VS Code 的 AI 代码编辑器，支持内联补全、Agent 模式与 MCP。",
       "u": "https://cursor.com",
       "tag": "IDE",
       "ic": "🖱️",
@@ -1582,7 +1584,7 @@
     },
     {
       "n": "推想科技",
-      "d": "中国 AI 医疗影像龙头，胸肺与脑部疾病智能筛查领先。",
+      "d": "AI 医疗影像公司，提供胸肺与脑部疾病筛查软件；产品范围以官网为准。",
       "u": "https://www.infervision.com",
       "tag": "医疗",
       "ic": "🫁",
@@ -1853,7 +1855,7 @@
     },
     {
       "n": "Unitree 宇树",
-      "d": "中国领先的四足与人形机器人公司，产品覆盖消费到工业。",
+      "d": "四足与人形机器人公司，产品线覆盖消费与工业级。",
       "u": "https://www.unitree.com",
       "tag": "四足·国产",
       "ic": "🐾",
@@ -1913,7 +1915,7 @@
     },
     {
       "n": "优必选科技",
-      "d": "中国人形机器人第一股，Walker 系列人形机器人行业领先。",
+      "d": "人形机器人公司，Walker 系列用于科研、商用与服务场景。",
       "u": "https://www.ubtrobot.com",
       "tag": "人形机器人·国产",
       "ic": "🤖",
@@ -1983,7 +1985,7 @@
     },
     {
       "n": "FANUC",
-      "d": "日本发那科，全球装机量最大的工业机器人制造商。",
+      "d": "日本工业机器人制造商，提供数控、伺服与机器人产品线。",
       "u": "https://www.fanuc.com",
       "tag": "工业",
       "ic": "🏭",
@@ -2003,7 +2005,7 @@
     },
     {
       "n": "Yaskawa 安川",
-      "d": "日本安川电机，伺服电机与工业机器人全球领先。",
+      "d": "日本伺服电机与工业机器人制造商。",
       "u": "https://www.yaskawa.com",
       "tag": "机械臂",
       "ic": "🔌",
@@ -2013,7 +2015,7 @@
     },
     {
       "n": "埃斯顿自动化",
-      "d": "国产工业机器人龙头，覆盖焊接、搬运、喷涂全场景。",
+      "d": "国产工业机器人厂商，覆盖焊接、搬运、喷涂等场景。",
       "u": "https://www.estun.com",
       "tag": "国产",
       "ic": "🇨🇳",
@@ -2053,7 +2055,7 @@
     },
     {
       "n": "高仙机器人",
-      "d": "清洁机器人行业龙头，商用清洁与无人环卫全覆盖。",
+      "d": "商用清洁机器人厂商，产品用于商场、机场等室内外清洁。",
       "u": "https://www.gs-robot.com",
       "tag": "服务机器人",
       "ic": "🧹",
@@ -2083,7 +2085,7 @@
     },
     {
       "n": "石头科技",
-      "d": "高端扫地机器人品牌，清洁算法与导航技术领先。",
+      "d": "扫地机器人厂商，产品含激光导航与扫拖一体机型。",
       "u": "https://www.roborock.com",
       "tag": "服务机器人",
       "ic": "🪨",
@@ -2133,7 +2135,7 @@
     },
     {
       "n": "Universal Robots",
-      "d": "协作机器人鼻祖，UR 系列全球装机量遥遥领先。",
+      "d": "丹麦协作机器人厂商，UR 系列用于中小型自动化产线。",
       "u": "https://www.universal-robots.com",
       "tag": "协作·本地部署",
       "ic": "🤝",
@@ -2223,7 +2225,7 @@
     },
     {
       "n": "文远知行 WeRide",
-      "d": "全球领先的 L4 级自动驾驶公司，覆盖出行与货运。",
+      "d": "L4 自动驾驶公司，覆盖 Robotaxi、Robobus 与货运场景。",
       "u": "https://www.weride.ai",
       "tag": "自动驾驶·物流",
       "ic": "🚌",
@@ -2343,7 +2345,7 @@
     },
     {
       "n": "极飞科技 XAG",
-      "d": "中国智慧农业无人化技术领导者，农业无人机全球领先。",
+      "d": "农业无人机与智慧农业设备厂商。",
       "u": "https://www.xag.cn",
       "tag": "农业·国产",
       "ic": "🌾",
@@ -2373,7 +2375,7 @@
     },
     {
       "n": "CMR Surgical",
-      "d": "英国手术机器人公司 Versius，模块化便携设计领先。",
+      "d": "英国手术机器人公司，Versius 为模块化腹腔镜手术系统。",
       "u": "https://cmrsurgical.com",
       "tag": "医疗·机械臂",
       "ic": "🇬🇧",
@@ -2413,7 +2415,7 @@
     },
     {
       "n": "海柔创新",
-      "d": "HAI ROBOTICS，箱式仓储机器人首创者，ACR 系统全球领先。",
+      "d": "箱式仓储机器人（ACR）厂商，提供货箱到人拣选系统。",
       "u": "https://www.hairobotics.com",
       "tag": "服务机器人·物流",
       "ic": "📬",
@@ -2513,7 +2515,7 @@
     },
     {
       "n": "Oceaneering",
-      "d": "全球领先的深海工程与 ROV 遥控水下机器人服务商。",
+      "d": "深海工程与 ROV 服务商，提供水下机器人及油气/能源服务。",
       "u": "https://www.oceaneering.com",
       "tag": "服务机器人·无人机",
       "ic": "🌊",
@@ -2563,7 +2565,7 @@
     },
     {
       "n": "FIRST Robotics",
-      "d": "全球最大的青少年机器人竞赛组织，激发下一代工程师。",
+      "d": "青少年机器人竞赛组织，举办 FRC/FTC 等赛事。",
       "u": "https://www.firstinspires.org",
       "tag": "教育",
       "ic": "🤖",
@@ -2573,7 +2575,7 @@
     },
     {
       "n": "VEX Robotics",
-      "d": "全球规模最大的中小学生机器人竞赛平台之一。",
+      "d": "中小学机器人竞赛与教育平台，提供 VEX IQ/EXP 等套件。",
       "u": "https://www.vexrobotics.com",
       "tag": "评测",
       "ic": "⚙️",
@@ -2643,7 +2645,7 @@
     },
     {
       "n": "Hugging Face",
-      "d": "全球最大的 AI 模型社区与开源平台，托管数十万模型与数据集。",
+      "d": "开源模型与数据集社区，托管模型、数据集与 Spaces 应用。",
       "u": "https://huggingface.co",
       "tag": "社区·开源",
       "ic": "🤗",
@@ -2683,7 +2685,7 @@
     },
     {
       "n": "Civitai",
-      "d": "Stable Diffusion 模型与 LoRA 的最大分享社区，创作者天堂。",
+      "d": "Stable Diffusion 模型与 LoRA 分享社区，提供在线生成。",
       "u": "https://civitai.com",
       "tag": "社区",
       "ic": "🏛️",
@@ -2854,7 +2856,7 @@
     },
     {
       "n": "DeepSeek Models",
-      "d": "深度求索开源模型系列，MoE 架构效率与性能双领先。",
+      "d": "深度求索的开放权重模型系列，含 MoE 架构与多模态型号。",
       "u": "https://huggingface.co/deepseek-ai",
       "tag": "高性能",
       "ic": "🔮",
@@ -3014,7 +3016,7 @@
     },
     {
       "n": "TensorFlow",
-      "d": "Google 推出的端到端开源机器学习平台，工业界广泛使用。",
+      "d": "Google 的开源机器学习框架，支持训练与部署。",
       "u": "https://www.tensorflow.org",
       "tag": "大厂·工业",
       "ic": "🔶",
@@ -3104,7 +3106,7 @@
     },
     {
       "n": "ClearML",
-      "d": "开源 ML/DL 实验管理与编排平台，一站式 MLOps 方案。",
+      "d": "开源 ML/DL 实验管理与编排平台，覆盖训练到部署的流程。",
       "u": "https://clear.ml",
       "tag": "开源·工作流",
       "ic": "🧊",
@@ -3174,7 +3176,7 @@
     },
     {
       "n": "Scale AI",
-      "d": "全球最大的 AI 数据标注与数据引擎平台，估值超百亿。",
+      "d": "AI 数据标注与数据引擎平台，提供标注、评估与 RLHF 数据服务。",
       "u": "https://scale.com",
       "tag": "数据集·链上数据",
       "ic": "⚖️",
@@ -3324,7 +3326,7 @@
     },
     {
       "n": "Ethereum",
-      "d": "全球最大的智能合约平台，DeFi 与 NFT 生态的核心基础设施。",
+      "d": "智能合约平台，支持 DeFi、NFT 与 Layer2 生态。",
       "u": "https://ethereum.org",
       "tag": "智能合约·DeFi",
       "ic": "💎",
@@ -3364,7 +3366,7 @@
     },
     {
       "n": "Arbitrum",
-      "d": "Optimistic Rollup 龙头，以太坊最受欢迎的 Layer2 网络。",
+      "d": "Optimistic Rollup Layer2 网络，兼容 EVM。",
       "u": "https://arbitrum.io",
       "tag": "L2",
       "ic": "🔵",
@@ -3464,7 +3466,7 @@
     },
     {
       "n": "Tron",
-      "d": "高吞吐量公链，USDT 流通量最大的区块链网络之一。",
+      "d": "高吞吐公链，USDT 流通量较大的网络之一。",
       "u": "https://tron.network",
       "tag": "稳定币·高性能",
       "ic": "🔴",
@@ -3594,7 +3596,7 @@
     },
     {
       "n": "Alchemy",
-      "d": "领先的区块链开发者平台，提供节点服务与增强 API。",
+      "d": "区块链开发者平台，提供节点服务与增强 API。",
       "u": "https://www.alchemy.com",
       "tag": "基础设施·API",
       "ic": "🧪",
@@ -3764,7 +3766,7 @@
     },
     {
       "n": "Stargate",
-      "d": "基于 LayerZero 的跨链桥，提供统一流动性与即时确认。",
+      "d": "基于 LayerZero 的跨链桥，提供跨链流动性与消息传递。",
       "u": "https://stargate.finance",
       "tag": "DeFi",
       "ic": "🌌",
@@ -3794,7 +3796,7 @@
     },
     {
       "n": "OpenSea",
-      "d": "全球最大的 NFT 交易市场，支持以太坊、Polygon 等多链。",
+      "d": "NFT 交易市场，支持以太坊、Polygon 等多链。",
       "u": "https://opensea.io",
       "tag": "NFT·跨链",
       "ic": "🌊",
@@ -3814,7 +3816,7 @@
     },
     {
       "n": "Magic Eden",
-      "d": "Solana 生态最大的 NFT 市场，跨链扩张至比特币 Ordinals。",
+      "d": "Solana 生态 NFT 市场，已扩展到比特币 Ordinals 与多链。",
       "u": "https://magiceden.io",
       "tag": "公链·NFT",
       "ic": "🪄",
@@ -3964,7 +3966,7 @@
     },
     {
       "n": "Moralis",
-      "d": "Web3 后端即服务平台，一站式构建去中心化应用后端。",
+      "d": "Web3 后端即服务平台，覆盖构建去中心化应用后端。",
       "u": "https://moralis.com",
       "tag": "云服务·API",
       "ic": "⚡",
@@ -4274,7 +4276,7 @@
     },
     {
       "n": "Binance",
-      "d": "全球交易量最大的加密货币交易所，生态体系全面完善。",
+      "d": "加密货币交易所，提供现货、合约与理财等服务。",
       "u": "https://www.binance.com",
       "tag": "交易",
       "ic": "🟡",
@@ -4284,7 +4286,7 @@
     },
     {
       "n": "OKX",
-      "d": "全球领先的加密货币交易所与 Web3 自托管钱包平台。",
+      "d": "加密货币交易所与 Web3 自托管钱包。",
       "u": "https://www.okx.com",
       "tag": "交易·Web3",
       "ic": "⚪",
@@ -4294,7 +4296,7 @@
     },
     {
       "n": "Coinbase",
-      "d": "美国最大的合规加密货币交易所，纳斯达克上市受 SEC 监管。",
+      "d": "美国合规加密货币交易所，纳斯达克上市。",
       "u": "https://www.coinbase.com",
       "tag": "合规·金融",
       "ic": "🔵",
@@ -4304,7 +4306,7 @@
     },
     {
       "n": "Uniswap",
-      "d": "以太坊上最大的去中心化交易所（DEX），AMM 做市先驱。",
+      "d": "以太坊上的去中心化交易所，采用 AMM 做市。",
       "u": "https://uniswap.org",
       "tag": "交易·DeFi",
       "ic": "🦄",
@@ -4314,7 +4316,7 @@
     },
     {
       "n": "Jupiter",
-      "d": "Solana 生态最大的聚合 DEX，自动寻找最优兑换路由。",
+      "d": "Solana 生态 DEX 聚合器，聚合多池报价与兑换路由。",
       "u": "https://jup.ag",
       "tag": "公链·搜索",
       "ic": "🪐",
@@ -4334,7 +4336,7 @@
     },
     {
       "n": "Kraken",
-      "d": "美国老牌合规交易所，以顶级安全和法币出入金便捷著称。",
+      "d": "美国合规加密货币交易所，提供法币出入金。",
       "u": "https://www.kraken.com",
       "tag": "合规·金融",
       "ic": "🐙",
@@ -4364,7 +4366,7 @@
     },
     {
       "n": "Bitget",
-      "d": "合约交易量全球领先的交易所，跟单交易功能业内最成熟。",
+      "d": "加密货币交易所，提供现货、合约与跟单交易。",
       "u": "https://www.bitget.com",
       "tag": "交易",
       "ic": "💪",
@@ -4434,7 +4436,7 @@
     },
     {
       "n": "Phantom",
-      "d": "Solana 生态首选钱包，支持浏览器插件与移动端无缝体验。",
+      "d": "Solana 生态钱包，提供浏览器插件与移动端。",
       "u": "https://phantom.com",
       "tag": "钱包",
       "ic": "👻",
@@ -4444,7 +4446,7 @@
     },
     {
       "n": "Ledger",
-      "d": "全球领先的硬件冷钱包品牌，私钥离线存储安全保障资产。",
+      "d": "硬件冷钱包品牌，私钥离线存储，支持多链资产。",
       "u": "https://www.ledger.com",
       "tag": "存储",
       "ic": "🔒",
@@ -4484,7 +4486,7 @@
     },
     {
       "n": "Trezor",
-      "d": "欧洲领先的硬件冷钱包品牌，开源固件安全透明可审计。",
+      "d": "硬件冷钱包品牌，开源固件，支持多链资产。",
       "u": "https://trezor.io",
       "tag": "开源",
       "ic": "🔐",
@@ -4514,7 +4516,7 @@
     },
     {
       "n": "Coin98",
-      "d": "东南亚流行的多链钱包，一站式管理 DeFi 与 NFT 资产。",
+      "d": "东南亚流行的多链钱包，覆盖管理 DeFi 与 NFT 资产。",
       "u": "https://coin98.com",
       "tag": "跨链",
       "ic": "💰",
@@ -4544,7 +4546,7 @@
     },
     {
       "n": "Aave",
-      "d": "领先的去中心化借贷协议，支持多链存借数字资产。",
+      "d": "去中心化借贷协议，支持多链存借。",
       "u": "https://aave.com",
       "tag": "DeFi·跨链",
       "ic": "👻",
@@ -4554,7 +4556,7 @@
     },
     {
       "n": "Lido",
-      "d": "最大的流动性质押协议，占据 ETH 质押量的主导份额。",
+      "d": "ETH 流动性质押协议，发行 stETH 等质押衍生品。",
       "u": "https://lido.fi",
       "tag": "质押",
       "ic": "💧",
@@ -4584,7 +4586,7 @@
     },
     {
       "n": "PancakeSwap",
-      "d": "BNB Chain 上最大的去中心化交易所，用户活跃度极高。",
+      "d": "BNB Chain 上的去中心化交易所，支持兑换、流动性池与农场。",
       "u": "https://pancakeswap.finance",
       "tag": "公链·交易",
       "ic": "🥞",
@@ -4614,7 +4616,7 @@
     },
     {
       "n": "1inch",
-      "d": "DEX 聚合器龙头，自动寻找最优兑换路径降低滑点成本。",
+      "d": "DEX 聚合器，聚合多协议报价以降低滑点。",
       "u": "https://1inch.com",
       "tag": "交易",
       "ic": "🐉",
@@ -4664,7 +4666,7 @@
     },
     {
       "n": "GMX",
-      "d": "Arbitrum 上最大的去中心化永续合约交易所，零滑点交易。",
+      "d": "Arbitrum 上的去中心化永续合约交易所。",
       "u": "https://gmx.io",
       "tag": "交易",
       "ic": "📈",
@@ -4694,7 +4696,7 @@
     },
     {
       "n": "Tether",
-      "d": "发行 USDT 的公司，全球流通量最大的稳定币发行商。",
+      "d": "USDT 稳定币发行商，代币在多条链上流通。",
       "u": "https://tether.to",
       "tag": "稳定币",
       "ic": "💵",
@@ -4774,7 +4776,7 @@
     },
     {
       "n": "STEPN",
-      "d": "首创 Move-to-Earn 运动即赚钱模式，边跑步边赚取加密资产。",
+      "d": "Move-to-Earn 应用，用运动数据获取应用内代币。",
       "u": "https://www.stepn.com",
       "tag": "GameFi·具身智能",
       "ic": "👟",
@@ -4924,7 +4926,7 @@
     },
     {
       "n": "The Block",
-      "d": "加密货币与区块链行业领先的新闻与研究媒体。",
+      "d": "加密与区块链新闻/研究媒体。",
       "u": "https://www.theblock.co",
       "tag": "资讯·学术",
       "ic": "📰",
@@ -4994,7 +4996,7 @@
     },
     {
       "n": "MoonPay",
-      "d": "全球领先的加密货币基础设施支付平台，服务超 500 万用户。",
+      "d": "加密支付基础设施，提供法币入金与合规通道。",
       "u": "https://www.moonpay.com",
       "tag": "金融·基础设施",
       "ic": "🌙",
@@ -5004,7 +5006,7 @@
     },
     {
       "n": "a16z Crypto",
-      "d": "Andreessen Horowitz 加密风投基金，Web3 领域最大投资者之一。",
+      "d": "Andreessen Horowitz 的加密风投基金。",
       "u": "https://a16zfrontier.com",
       "tag": "创业·Web3",
       "ic": "💰",
@@ -5014,7 +5016,7 @@
     },
     {
       "n": "Paradigm",
-      "d": "顶级加密原生风投，投资 Coinbase 与 Uniswap 等标杆项目。",
+      "d": "加密原生风投基金，投资 Coinbase、Uniswap 等项目。",
       "u": "https://www.paradigm.xyz",
       "tag": "创业",
       "ic": "🔮",
@@ -5135,7 +5137,7 @@
     },
     {
       "n": "Intel",
-      "d": "全球最大半导体公司之一，发力 AI PC 与数据中心芯片赛道。",
+      "d": "半导体公司，提供 CPU、GPU 与 AI PC/数据中心芯片。",
       "u": "https://www.intel.com",
       "tag": "CPU·芯片设计",
       "ic": "🔵",
@@ -5145,7 +5147,7 @@
     },
     {
       "n": "台积电 TSMC",
-      "d": "全球最大半导体代工企业，AI 芯片制造的核心枢纽。",
+      "d": "半导体代工厂，为 AI 芯片提供先进制程制造。",
       "u": "https://www.tsmc.com",
       "tag": "芯片设计",
       "ic": "🏭",
@@ -5155,7 +5157,7 @@
     },
     {
       "n": "ARM",
-      "d": "全球领先的芯片 IP 供应商，移动计算与 IoT 生态的基石。",
+      "d": "芯片 IP 供应商，提供 CPU 架构与 IP 授权。",
       "u": "https://www.arm.com",
       "tag": "芯片设计·边缘计算",
       "ic": "📱",
@@ -5165,7 +5167,7 @@
     },
     {
       "n": "寒武纪",
-      "d": "中国 AI 芯片第一股，思元系列智能加速卡业界遥遥领先。",
+      "d": "AI 芯片公司，提供思元系列训练/推理加速卡。",
       "u": "https://www.cambricon.com",
       "tag": "国产·GPU",
       "ic": "🧊",
@@ -5175,7 +5177,7 @@
     },
     {
       "n": "海光信息",
-      "d": "国产 x86 兼容 CPU 龙头，数据中心与服务器芯片性能强劲。",
+      "d": "国产 x86 兼容 CPU 与 DCU 加速卡厂商。",
       "u": "https://www.hygon.cn",
       "tag": "CPU·国产",
       "ic": "💠",
@@ -5475,7 +5477,7 @@
     },
     {
       "n": "Synopsys",
-      "d": "全球最大 EDA 与半导体 IP 供应商之一，AI 驱动 EDA 革新。",
+      "d": "EDA 与半导体 IP 供应商，提供芯片设计工具。",
       "u": "https://www.synopsys.com",
       "tag": "芯片设计",
       "ic": "🔧",
@@ -5516,7 +5518,7 @@
     },
     {
       "n": "Samsung Semiconductor",
-      "d": "全球最大存储芯片制造商，DRAM 与 NAND 闪存份额第一。",
+      "d": "存储芯片制造商，提供 DRAM、NAND 与 HBM。",
       "u": "https://semiconductor.samsung.com",
       "tag": "存储",
       "ic": "💾",
@@ -5546,7 +5548,7 @@
     },
     {
       "n": "Western Digital",
-      "d": "全球领先的数据存储解决方案商，HDD 与 SSD 产品线全面。",
+      "d": "数据存储厂商，提供 HDD 与 SSD。",
       "u": "https://www.westerndigital.com",
       "tag": "存储",
       "ic": "🖴",
@@ -5556,7 +5558,7 @@
     },
     {
       "n": "长江存储 YMTC",
-      "d": "中国 3D NAND 闪存制造商，Xtacking 架构创新领先。",
+      "d": "3D NAND 闪存制造商，采用 Xtacking 架构。",
       "u": "https://www.ymtc.com",
       "tag": "存储·国产",
       "ic": "🇨🇳",
@@ -5576,7 +5578,7 @@
     },
     {
       "n": "Applied Materials",
-      "d": "全球最大半导体设备制造商，覆盖沉积刻蚀注入全流程。",
+      "d": "半导体设备厂商，覆盖沉积、刻蚀、离子注入等流程。",
       "u": "https://www.appliedmaterials.com",
       "tag": "工作流",
       "ic": "🏭",
@@ -5596,7 +5598,7 @@
     },
     {
       "n": "Tokyo Electron",
-      "d": "日本半导体设备巨头，涂胶显影与刻蚀设备市占率全球领先。",
+      "d": "日本半导体设备厂商，提供涂胶显影与刻蚀设备。",
       "u": "https://www.tel.com",
       "tag": "芯片设计",
       "ic": "🇯🇵",
@@ -5606,7 +5608,7 @@
     },
     {
       "n": "中微半导体 AMEC",
-      "d": "中国刻蚀机与 MOCVD 龙头，等离子体刻蚀机进入 5nm 产线。",
+      "d": "刻蚀机与 MOCVD 设备厂商，产品进入先进制程产线。",
       "u": "https://www.amec-inc.com",
       "tag": "芯片设计·国产",
       "ic": "🇨🇳",
@@ -5616,7 +5618,7 @@
     },
     {
       "n": "SiFive",
-      "d": "RISC-V 处理器 IP 领先供应商，提供从 MCU 到高性能 CPU 方案。",
+      "d": "RISC-V 处理器 IP 供应商，覆盖 MCU 到高性能 CPU。",
       "u": "https://www.sifive.com",
       "tag": "芯片设计",
       "ic": "🔮",
@@ -5666,7 +5668,7 @@
     },
     {
       "n": "GitHub",
-      "d": "全球最大的代码托管与协作平台，开源社区的精神中心。",
+      "d": "代码托管与协作平台，提供 Issues、Actions 与 Copilot 集成。",
       "u": "https://github.com",
       "tag": "编程助手·协作",
       "ic": "🐙",
@@ -5706,7 +5708,7 @@
     },
     {
       "n": "Figma",
-      "d": "领先的 UI/UX 在线协作设计工具，产品设计行业事实标准。",
+      "d": "UI/UX 在线协作设计工具，支持多人实时编辑与组件库。",
       "u": "https://www.figma.com",
       "tag": "设计·协作",
       "ic": "🎯",
@@ -5726,7 +5728,7 @@
     },
     {
       "n": "Kaggle",
-      "d": "全球最大的数据科学与机器学习竞赛平台，Google 子品牌。",
+      "d": "数据科学与机器学习竞赛平台，提供数据集与 Notebook。",
       "u": "https://www.kaggle.com",
       "tag": "数据集·评测",
       "ic": "🏆",
@@ -5786,7 +5788,7 @@
     },
     {
       "n": "Linear",
-      "d": "现代产品管理型任务追踪工具，性能极致的设计驱动。",
+      "d": "产品管理型任务追踪工具，支持 issue、cycle 与 roadmap。",
       "u": "https://linear.app",
       "tag": "办公",
       "ic": "📐",
@@ -5836,7 +5838,7 @@
     },
     {
       "n": "Cloudflare",
-      "d": "全球领先的 CDN 与边缘计算平台，Workers 无服务器函数。",
+      "d": "CDN 与边缘计算平台，提供 Workers 无服务器函数。",
       "u": "https://www.cloudflare.com",
       "tag": "云服务·边缘计算",
       "ic": "☁️",
@@ -5846,7 +5848,7 @@
     },
     {
       "n": "AWS",
-      "d": "全球最大云服务商，提供 200+ 全功能基础设施服务。",
+      "d": "云服务商，提供计算、存储、数据库与 AI 服务。",
       "u": "https://aws.amazon.com",
       "tag": "云服务",
       "ic": "🟧",
@@ -5916,7 +5918,7 @@
     },
     {
       "n": "Dribbble",
-      "d": "全球设计师作品展示与灵感社区，发现顶级设计创意。",
+      "d": "设计师作品展示与灵感社区。",
       "u": "https://dribbble.com",
       "tag": "社区",
       "ic": "🏀",
@@ -6046,7 +6048,7 @@
     },
     {
       "n": "Reddit r/MachineLearning",
-      "d": "Reddit 最大机器学习社区，交流前沿论文与技术讨论。",
+      "d": "Reddit 的机器学习社区，讨论论文与技术。",
       "u": "https://www.reddit.com/r/MachineLearning",
       "tag": "学术",
       "ic": "🤖",
@@ -6066,7 +6068,7 @@
     },
     {
       "n": "Stack Overflow",
-      "d": "全球最大的编程问答社区，解决开发遇到的一切难题。",
+      "d": "编程问答社区，提供问题与答案检索。",
       "u": "https://stackoverflow.com",
       "tag": "编程助手",
       "ic": "🟧",
@@ -6176,7 +6178,7 @@
     },
     {
       "n": "Zapier",
-      "d": "全球最大的工作流自动化平台，连接 7000+ 应用零代码集成。",
+      "d": "工作流自动化平台，连接 7000+ 应用。",
       "u": "https://zapier.com",
       "tag": "工作流",
       "ic": "⚡",
@@ -6196,7 +6198,7 @@
     },
     {
       "n": "Airtable",
-      "d": "电子表格与数据库的完美结合，低代码构建业务应用。",
+      "d": "电子表格与数据库结合的低代码应用平台。",
       "u": "https://airtable.com",
       "tag": "办公",
       "ic": "🗃️",
@@ -6206,7 +6208,7 @@
     },
     {
       "n": "Bubble",
-      "d": "功能强大的无代码 Web 应用构建平台，可视化编程。",
+      "d": "无代码 Web 应用构建平台，可视化编排。",
       "u": "https://bubble.io",
       "tag": "前端·可视化",
       "ic": "🫧",
@@ -6277,7 +6279,7 @@
     },
     {
       "n": "Coursera",
-      "d": "全球顶级大学与企业的在线课程平台，提供专业证书与学位。",
+      "d": "在线课程平台，提供大学与企业课程、证书与学位。",
       "u": "https://www.coursera.org",
       "tag": "课程·合规",
       "ic": "🎓",
@@ -6387,7 +6389,7 @@
     },
     {
       "n": "Stanford Online",
-      "d": "斯坦福大学在线课程平台，AI 与 CS 课程世界顶级。",
+      "d": "斯坦福大学的在线课程平台。",
       "u": "https://online.stanford.edu",
       "tag": "学术·教育",
       "ic": "🌲",
@@ -6397,7 +6399,7 @@
     },
     {
       "n": "Khan Academy",
-      "d": "全球最大免费在线教育平台，科学数学到编程全覆盖。",
+      "d": "免费在线教育平台，覆盖数学、科学与编程。",
       "u": "https://www.khanacademy.org",
       "tag": "免费·课程",
       "ic": "🦸",
@@ -6467,7 +6469,7 @@
     },
     {
       "n": "FlowGPT",
-      "d": "全球最大的 AI Prompt 社区，数百万用户分享创作 Prompt。",
+      "d": "AI Prompt 分享社区。",
       "u": "https://flowgpt.com",
       "tag": "社区",
       "ic": "🌟",
@@ -6517,7 +6519,7 @@
     },
     {
       "n": "Analytics India Magazine",
-      "d": "印度最大的 AI 数据科学媒体，覆盖亚洲 AI 行业趋势。",
+      "d": "印度 AI 与数据科学媒体。",
       "u": "https://analyticsindiamag.com",
       "tag": "数据集",
       "ic": "🇮🇳",
@@ -6677,7 +6679,7 @@
     },
     {
       "n": "Rust",
-      "d": "系统编程语言，零开销抽象与内存安全，正在重塑底层生态。",
+      "d": "系统编程语言，以零开销抽象与内存安全为设计目标。",
       "u": "https://www.rust-lang.org",
       "tag": "安全",
       "ic": "🦀",
@@ -6877,7 +6879,7 @@
     },
     {
       "n": "CertiK",
-      "d": "全球领先的 Web3 智能合约安全审计公司，守护百亿美元资产。",
+      "d": "Web3 智能合约安全审计公司。",
       "u": "https://www.certik.com",
       "tag": "合规",
       "ic": "🛡️",
@@ -6917,7 +6919,7 @@
     },
     {
       "n": "慢雾科技 SlowMist",
-      "d": "中国领先区块链安全公司，发现并防护大量严重漏洞。",
+      "d": "区块链安全公司，提供审计与威胁情报。",
       "u": "https://www.slowmist.com",
       "tag": "国产·安全",
       "ic": "🇨🇳",
@@ -6947,7 +6949,7 @@
     },
     {
       "n": "iTerm2",
-      "d": "macOS 终极终端模拟器，分屏与快捷键大幅提升命令行效率。",
+      "d": "macOS 终端模拟器，分屏与快捷键齐全。",
       "u": "https://iterm2.com",
       "tag": "命令行",
       "ic": "🖥️",
@@ -6957,7 +6959,7 @@
     },
     {
       "n": "Alacritty",
-      "d": "GPU 加速跨平台终端模拟器，性能极致的 Rust 编写之美。",
+      "d": "GPU 加速跨平台终端模拟器，Rust 实现。",
       "u": "https://alacritty.org",
       "tag": "GPU",
       "ic": "⚡",
@@ -7057,7 +7059,7 @@
     },
     {
       "n": "1Password",
-      "d": "行业领先的密码管理与团队安全平台，自动填充与安全共享。",
+      "d": "密码管理与团队安全平台，支持自动填充与共享。",
       "u": "https://1password.com",
       "tag": "安全",
       "ic": "🔑",
@@ -7087,7 +7089,7 @@
     },
     {
       "n": "Julia",
-      "d": "高性能科学计算语言，兼顾 Python 易用与 C 速度完美平衡。",
+      "d": "科学计算语言，提供 JIT 编译与数值计算库。",
       "u": "https://julialang.org",
       "tag": "科研·高性能",
       "ic": "🔮",
@@ -7117,7 +7119,7 @@
     },
     {
       "n": "Soft Robotics",
-      "d": "软体机器人抓手公司，柔性夹持适应不规则物体实现自适应抓取。",
+      "d": "软体机器人夹持器公司，柔性夹持适应不规则物体。",
       "u": "https://www.softroboticsinc.com",
       "tag": "机械臂",
       "ic": "🐙",
@@ -7157,7 +7159,7 @@
     },
     {
       "n": "Notion",
-      "d": "全能型笔记与知识管理工具，集成 AI 写作辅助强大功能。",
+      "d": "笔记与知识管理工具，集成 AI 写作与数据库。",
       "u": "https://www.notion.so",
       "tag": "办公",
       "ic": "📝",
@@ -7167,7 +7169,7 @@
     },
     {
       "n": "AI 工具",
-      "d": "216 个 AI 工具对象按 10 大类对比——AI 编程、通用对话、图像/视频/音频生成、深度研究、自动化、框架与运行时、MCP 工具、本地运行器等，每条判断挂官方源，不给总分排名。",
+      "d": "225 个 AI 工具对象按 10 大类对比——AI 编程、通用对话、图像/视频/音频生成、深度研究、自动化、框架与运行时、MCP 工具、本地运行器等，每条判断挂官方源，不给总分排名。",
       "u": "https://tools.specul.com",
       "tag": "IDE·命令行·Agent",
       "ic": "📊",
@@ -7304,6 +7306,430 @@
       "cat": "dev",
       "old_t": "开发框架与工具",
       "old_c": "dev"
+    },
+    {
+      "n": "Microsoft Copilot",
+      "d": "微软 C 端对话入口：模型由微软路由；C 端 Deep Research 已于 2026-08-18 退役，深度研究改由 M365 Copilot 的 Researcher 承接。",
+      "u": "https://copilot.microsoft.com",
+      "tag": "大厂·多模态",
+      "ic": "🪁",
+      "cat": "llm"
+    },
+    {
+      "n": "Google Antigravity",
+      "d": "Google 的 agent-first 开发平台：桌面指挥中心 / CLI / IDE 扩展 / Python SDK 共用一套 harness，命令执行有官方三档策略（2026-10-13 核验）。",
+      "u": "https://antigravity.google",
+      "tag": "编程助手·IDE",
+      "ic": "🛰️",
+      "cat": "coding"
+    },
+    {
+      "n": "Trae",
+      "d": "字节跳动的三端 AI IDE（桌面/Web/移动）：Desktop 双窗口 + SOLO 整段委托，内置多模型并支持自定义 key，带 Privacy mode 与沙箱开关（2026-10 快照）。",
+      "u": "https://www.trae.ai",
+      "tag": "编程助手·IDE",
+      "ic": "🧑‍💻",
+      "cat": "coding"
+    },
+    {
+      "n": "Claude Code CLI",
+      "d": "Anthropic 的终端编码 agent：自带 CHANGELOG 与 Atom feed，权限粒度可配置；源码可见但 All rights reserved（2026-10 快照）。",
+      "u": "https://github.com/anthropics/claude-code",
+      "tag": "命令行·编程助手",
+      "ic": "⌨️",
+      "cat": "coding"
+    },
+    {
+      "n": "Codex CLI",
+      "d": "OpenAI 官方的终端编码 agent，Rust 实现，强调 app server 与线程续接；有独立 releases 变更记录。",
+      "u": "https://github.com/openai/codex",
+      "tag": "命令行·编程助手",
+      "ic": "⌨️",
+      "cat": "coding"
+    },
+    {
+      "n": "Gemini CLI",
+      "d": "Google 官方的开源终端 agent：npx 免安装启动，支持 MCP 与非交互脚本模式（Apache-2.0）。",
+      "u": "https://github.com/google-gemini/gemini-cli",
+      "tag": "命令行·开源",
+      "ic": "⌨️",
+      "cat": "coding"
+    },
+    {
+      "n": "Kiro",
+      "d": "AWS 的 agentic 工程环境：IDE / CLI / Web / Mobile 四端共用一套 harness，招牌是 requirements / design / tasks 三段式 spec。",
+      "u": "https://kiro.dev",
+      "tag": "编程助手·IDE",
+      "ic": "🧩",
+      "cat": "coding"
+    },
+    {
+      "n": "OpenCode",
+      "d": "MIT 许可的多 provider 编程 harness：运行 bash 命令前会询问权限，支持 ACP 载入。",
+      "u": "https://opencode.ai",
+      "tag": "命令行·开源",
+      "ic": "⌨️",
+      "cat": "coding"
+    },
+    {
+      "n": "Amp",
+      "d": "原 Sourcegraph 的前沿编码 agent，2025-12 官方公告分拆为独立公司 Amp Frontier Corporation；CLI + 云端 orb + runner 三执行面。",
+      "u": "https://ampcode.com",
+      "tag": "编程助手·云服务",
+      "ic": "⚡",
+      "cat": "coding"
+    },
+    {
+      "n": "FLUX",
+      "d": "Black Forest Labs 的图像模型家族：API/playground 托管生成 + 部分权重开源可自托管；条款允许商用但禁止用输出训练其他模型。",
+      "u": "https://bfl.ai/",
+      "tag": "图像生成·开源",
+      "ic": "🎨",
+      "cat": "gen"
+    },
+    {
+      "n": "Ideogram",
+      "d": "主打图内排版文字的图像模型族：4.0 开放量化权重（非商用免费，商用自托管需许可），4.5 闭源托管支持 precise edit。",
+      "u": "https://ideogram.ai",
+      "tag": "图像生成·设计",
+      "ic": "🔤",
+      "cat": "gen"
+    },
+    {
+      "n": "Veo",
+      "d": "Google 的视频生成模型家族，经 Gemini API / Vertex AI 与 Google AI 计划交付，输出带 SynthID 溯源；免费配额数据会用于训练，付费不训练。",
+      "u": "https://deepmind.google/technologies/veo/",
+      "tag": "视频生成·大厂",
+      "ic": "🎬",
+      "cat": "gen"
+    },
+    {
+      "n": "Kling",
+      "d": "国产视频生成：Kling 4.0 单次原生 30 秒、全能参考 15 项素材；已备案、大陆直连可用，商用需过会员线。",
+      "u": "https://klingai.com/global/",
+      "tag": "视频生成·国产",
+      "ic": "🎞️",
+      "cat": "gen"
+    },
+    {
+      "n": "Hailuo Video",
+      "d": "MiniMax 的消费级视频生成入口：文/图生视频，国产、大陆直连可用、免费档起步；产品入口备案状态未单独核验。",
+      "u": "https://hailuoai.video",
+      "tag": "视频生成·国产",
+      "ic": "🎥",
+      "cat": "gen"
+    },
+    {
+      "n": "Luma",
+      "d": "Dream Machine 主打镜头运动感短片与首尾帧插值；大陆直连不可达（2026-10 实测 000）。",
+      "u": "https://lumalabs.ai",
+      "tag": "视频生成·云服务",
+      "ic": "🌗",
+      "cat": "gen"
+    },
+    {
+      "n": "Whisper",
+      "d": "OpenAI 的 MIT 转写基座：多档权重可本地跑，隐私音频不出本机；它是模型不是产品，说话人分离靠衍生生态。",
+      "u": "https://github.com/openai/whisper",
+      "tag": "语音合成·开源",
+      "ic": "🎧",
+      "cat": "gen"
+    },
+    {
+      "n": "Deepgram",
+      "d": "开发者向语音 API：Nova 转写 + Aura TTS，实时流式转写是主打；定位是造语音产品的底座。",
+      "u": "https://www.deepgram.com",
+      "tag": "语音合成·API",
+      "ic": "🔊",
+      "cat": "gen"
+    },
+    {
+      "n": "LM Studio",
+      "d": "桌面本地模型图形入口：应用内下载、MLX + llama.cpp 双运行时、内置本地服务器；应用闭源，条款全文未能直抓。",
+      "u": "https://lmstudio.ai",
+      "tag": "本地部署",
+      "ic": "🖥️",
+      "cat": "model"
+    },
+    {
+      "n": "vLLM",
+      "d": "开源模型服务化的标杆：PagedAttention 管理显存，OpenAI 兼容 server 直接对接现有客户端；Apache-2.0。",
+      "u": "https://docs.vllm.ai",
+      "tag": "本地部署·高性能",
+      "ic": "🚀",
+      "cat": "model"
+    },
+    {
+      "n": "llama.cpp",
+      "d": "本地推理生态的地基：定义 GGUF 格式，MIT、纯 C/C++，llama-server 提供官方 REST 线；Ollama 与 LM Studio 都建在它上面。",
+      "u": "https://github.com/ggml-org/llama.cpp",
+      "tag": "本地部署·开源",
+      "ic": "🦙",
+      "cat": "model"
+    },
+    {
+      "n": "MLX",
+      "d": "Apple 硅的官方本地推理栈：统一内存架构的原生框架加 mlx-lm，MIT、活跃维护；本地推理与微调同一栈。",
+      "u": "https://ml-explore.github.io/mlx/build/html/index.html",
+      "tag": "本地部署·开源",
+      "ic": "🍎",
+      "cat": "model"
+    },
+    {
+      "n": "SGLang",
+      "d": "服务化推理的前缀复用一代：RadixAttention 复用多轮与共享前缀的 KV 缓存，agent 工作流收益直接；Apache-2.0。",
+      "u": "https://docs.sglang.ai",
+      "tag": "本地部署·高性能",
+      "ic": "🧠",
+      "cat": "model"
+    },
+    {
+      "n": "TensorRT-LLM",
+      "d": "NVIDIA 的生产级推理栈：先把模型编译成 TensorRT 引擎，再用 trtllm-serve 提供 OpenAI 兼容端点；面向 GPU 集群而非单机开箱。",
+      "u": "https://docs.nvidia.com/tensorrt-llm/",
+      "tag": "本地部署·高性能",
+      "ic": "⚙️",
+      "cat": "model"
+    },
+    {
+      "n": "Google Opal",
+      "d": "Google Labs 的无代码 AI mini-app 搭建器：自然语言把生成/搜索/视频步骤串成可分享应用；官方宣布 2026-11-17 从 Labs 毕业并迁移到 Gemini skills。",
+      "u": "https://opal.google/",
+      "tag": "工作流·可视化",
+      "ic": "🧱",
+      "cat": "tools"
+    },
+    {
+      "n": "Microsoft Copilot Studio",
+      "d": "Microsoft 生态的企业低代码 agent 平台：能力取决于是否在 Power Platform / Dataverse 生态；身份与数据驻留随 Microsoft 365 体系提供。",
+      "u": "https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio",
+      "tag": "工作流·企业级",
+      "ic": "🏢",
+      "cat": "tools"
+    },
+    {
+      "n": "n8n",
+      "d": "自动化优先的低代码工作流平台，AI 只是其中一类节点；源码公开但采用 fair-code（Sustainable Use License），不是 OSI 开源。",
+      "u": "https://n8n.io",
+      "tag": "工作流·开源",
+      "ic": "🔀",
+      "cat": "tools"
+    },
+    {
+      "n": "NotebookLM",
+      "d": "源锚定的研究工作台：只在你给的一组源里回答，并生成音频概览与学习指南；它不是搜索引擎。",
+      "u": "https://notebooklm.google.com",
+      "tag": "搜索·学术",
+      "ic": "📓",
+      "cat": "llm"
+    },
+    {
+      "n": "Kagi",
+      "d": "付费换隐私的自建索引搜索引擎：无广告无追踪，AI 答案层（FastGPT / Teclis）是附加线。",
+      "u": "https://kagi.com",
+      "tag": "搜索·学术",
+      "ic": "🔎",
+      "cat": "llm"
+    },
+    {
+      "n": "Elicit",
+      "d": "学术文献的检索加结构化抽取工作台：研究问题→论文筛选→抽取表→带引用综述；每个单元格仍要回原文核对。",
+      "u": "https://elicit.com",
+      "tag": "学术·科研",
+      "ic": "📚",
+      "cat": "learn"
+    },
+    {
+      "n": "Goose",
+      "d": "本地优先的开源通用 agent：桌面应用、CLI 与可嵌入 API 三种形态；由 Block 创建，现属 Agentic AI Foundation，provider 可换成 Ollama 等本地模型。",
+      "u": "https://github.com/aaif-goose/goose",
+      "tag": "命令行·开源",
+      "ic": "🪿",
+      "cat": "coding"
+    },
+    {
+      "n": "Specul 提示词与上下文模板",
+      "d": "四个可复制文本块：提示词结构、上下文预算、RAG 分块与重排清单、模型选型工作表（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/toolkit-prompt-context.html",
+      "tag": "工作流",
+      "ic": "📋",
+      "cat": "tools"
+    },
+    {
+      "n": "Specul Agent 评估与护栏模板",
+      "d": "四个可复制文本块：Agent 评估 rubric、四层护栏清单、客服验收单、故障复盘清单（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/toolkit-agent-ops.html",
+      "tag": "工作流",
+      "ic": "🛡️",
+      "cat": "tools"
+    },
+    {
+      "n": "Specul 权限与成本模板",
+      "d": "四个可复制文本块：Agent 权限矩阵、模型许可检查表、视频权利登记表、成本算式模板（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/toolkit-rights-cost.html",
+      "tag": "工作流",
+      "ic": "🧮",
+      "cat": "tools"
+    },
+    {
+      "n": "对比：写代码 Agent 怎么选",
+      "d": "终端、IDE、云端三类执行面对照，含权限模型、后台续跑与每个候选的适用条件（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-coding-agents.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "对比：聊天助手怎么选",
+      "d": "ChatGPT、Gemini、Claude、Copilot 按数据条款、研究线、生态与大陆可达四项筛选（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-chat-assistants.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "对比：图像与视频工具链怎么选",
+      "d": "图像三选一与视频三选一，按输入模态、权利条款与工作流位置分栏（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-media-tools.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "对比：本地 runner 怎么选",
+      "d": "Ollama、LM Studio、llama.cpp、vLLM 按硬件、量化、并发与服务化对比（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-local-runners.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "对比：Agent 框架怎么选",
+      "d": "LangGraph、OpenAI Agents SDK、Google ADK、Claude Agent SDK 按状态、HITL 与模型绑定对比（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-agent-frameworks.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "对比：研究工具怎么选",
+      "d": "Perplexity、Kagi、NotebookLM、Elicit 按检索深度、来源透明度与引用管理对比（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-research-tools.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "Playbook：修一个真实 bug",
+      "d": "从仓库上下文、复现、计划、改动、测试到审查的六步流程，含权限设置与验收单（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-fix-a-bug.html",
+      "tag": "工作流",
+      "ic": "🛠️",
+      "cat": "tools"
+    },
+    {
+      "n": "Playbook：做一条 60 秒视频",
+      "d": "脚本、分镜、生成、剪辑、权利登记五段，含单段时长限制与成本算式（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-60s-video.html",
+      "tag": "工作流",
+      "ic": "🎬",
+      "cat": "tools"
+    },
+    {
+      "n": "Playbook：做一份可核查的研究简报",
+      "d": "问题、检索、来源、综合、复核五步，每条结论挂来源与日期（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-research-brief.html",
+      "tag": "工作流",
+      "ic": "🔬",
+      "cat": "tools"
+    },
+    {
+      "n": "Playbook：搭一个客服 Agent",
+      "d": "意图、知识库、工具、护栏、评估、上线六段，含人工兜底与验收单（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-service-agent.html",
+      "tag": "工作流",
+      "ic": "🎧",
+      "cat": "tools"
+    },
+    {
+      "n": "Playbook：在本机跑一个模型",
+      "d": "显存、量化档、runtime、评估、监控五步，含体积算式与选档理由（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-local-model.html",
+      "tag": "工作流",
+      "ic": "🖥️",
+      "cat": "tools"
+    },
+    {
+      "n": "指南：国内可用性怎么读",
+      "d": "用 225 份档案的 cn 字段读直连、主体与备案；给统计口径、限制与四步自查，不做实时可用性承诺（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/cn-availability.html",
+      "tag": "合规",
+      "ic": "🇨🇳",
+      "cat": "tools"
+    },
+    {
+      "n": "对比：浏览器 Agent 三选一",
+      "d": "Playwright MCP / Browserbase MCP / Chrome DevTools MCP 的适用条件、能力边界、价格档位与换用时机（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/compare-browser-agents.html",
+      "tag": "工作流·学术",
+      "ic": "🌐",
+      "cat": "learn"
+    },
+    {
+      "n": "速记：2026 Q3–Q4 变更",
+      "d": "10 条带日期的官方发布、停运与迁移，每条附来源；已宣布未生效的单独标注（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/changes-2026-q3-q4.html",
+      "tag": "工作流",
+      "ic": "🗓️",
+      "cat": "tools"
+    },
+    {
+      "n": "Playbook：团队 90 天落地",
+      "d": "0–30 / 31–60 / 61–90 三段的目标、动作、验收点与负责人；含权限矩阵与季度审计六项（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/playbook-team-90days.html",
+      "tag": "工作流",
+      "ic": "🏢",
+      "cat": "tools"
+    },
+    {
+      "n": "清单：采购与权限审计",
+      "d": "18 个可直接发给厂商的问题，覆盖身份、数据、日志、模型、合同与退出；附权限矩阵模板（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/checklist-procurement-access.html",
+      "tag": "合规",
+      "ic": "📋",
+      "cat": "tools"
+    },
+    {
+      "n": "练习：Builder 带引用问答",
+      "d": "用 10 篇站内文档搭 RAG，产出 10 题答案、引用表、评测表与失败记录；附 10 分 rubric（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/exercise-builder.html",
+      "tag": "工作流·学术",
+      "ic": "🧪",
+      "cat": "learn"
+    },
+    {
+      "n": "练习：Creator 三件套",
+      "d": "从一份官方资料产出短文、图像提示词与 30 秒口播，附 5 条事实表与 2 条被拒说法（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/exercise-creator.html",
+      "tag": "工作流·学术",
+      "ic": "✍️",
+      "cat": "learn"
+    },
+    {
+      "n": "练习：Manager 决策备忘录",
+      "d": "用三个成本维度对比调 API 与自托管，交一页备忘录、评分表、5 个尽调问题与退出计划（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/exercise-manager.html",
+      "tag": "工作流·学术",
+      "ic": "🧭",
+      "cat": "learn"
+    },
+    {
+      "n": "自测：20 题（含答案）",
+      "d": "20 道只考站内已核验内容的题，附参考答案与评分标准；先做题再对答案（2026-11-03）。",
+      "u": "https://tools.specul.com/mcp/guides/selftest-20.html",
+      "tag": "工作流·学术",
+      "ic": "✅",
+      "cat": "learn"
     },
     {
       "n": "agent-qa",

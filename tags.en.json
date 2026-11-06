@@ -22,6 +22,7 @@
   "工作流": "workflow",
   "图像生成": "image generation",
   "视频生成": "video generation",
+  "已停运": "retired",
   "语音合成": "speech synthesis",
   "语音克隆": "voice cloning",
   "音乐生成": "music generation",

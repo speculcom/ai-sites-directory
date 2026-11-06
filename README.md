@@ -10,7 +10,7 @@ AI 导航的**源仓**（唯一真相源）。
 
 ## 我该怎么读
 
-715 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
+777 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
 
 | 你想干嘛 | 走哪条路 |
 |---|---|
@@ -30,7 +30,7 @@ DNS 在本地解析不了、在云端能打开是常事。所以探测受限的�
 | 路径 | 内容 |
 |---|---|
 | `content/` | **内容源**：每个站点一个 md，含分类、描述、标签 |
-| `nav-data.json` | **主数据**：723 条条目 / 12 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 539 条 / 11 类） |
+| `nav-data.json` | **主数据**：777 条条目 / 12 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 593 条 / 11 类） |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | 英文映射（分类名 / 标签 / 厂商 / 描述） |
 | `check-results.json` | 链接核验快照（每条带状态与核验日期 `lv`，另有 `history` 记每轮 start/done）。**构建器与 `gen-content.mjs` 直接消费它**渲染核验状态 |
 | `urls.txt` | 历史快照（2026-09-30 生成）。⚠ 已不是核验输入 —— `check-links.mjs` 直接读 `nav-data.json`，永远与数据一致 |
@@ -113,7 +113,7 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 ## 法律立场
 
 只索引、只引述、不托管、不解读许可、不给法律意见。
-描述文字为本站原创（CC BY 4.0，署名即可自由使用），被收录网站的信息归各自权利人。
+描述文字为本站原创，保留所有权利；引用请注明出处并链接回本站。被收录网站的信息归各自权利人。
 
 <!-- INDEX:BEGIN generated, do not edit -->
 
@@ -121,20 +121,20 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 
 | 分类 | 条目数 | 代表站点 |
 |---|---|---|
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
-| undefined | 0 |  |
+| 大模型与对话 | 48 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · 通义千问 …等 48 条 |
+| AI 编程与 Agent | 44 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …等 44 条 |
+| 多模态生成 | 64 | Canva · Microsoft Designer · Galileo AI · Uizard · 即时 AI · Midjourney …等 64 条 |
+| AI 办公与垂直应用 | 47 | Gamma · Jasper · Copy.ai · Grammarly · 通义听悟 · 讯飞听见 …等 47 条 |
+| 模型与权重 | 32 | Hugging Face · ModelScope 魔搭 · Ollama · Replicate · Civitai · OpenRouter …等 32 条 |
+| 开发框架与工具 | 47 | Pinecone · Weaviate · Chroma · Milvus · Qdrant · Elasticsearch …等 47 条 |
+| 算力与芯片 | 55 | NVIDIA · AMD · Intel · 台积电 TSMC · ARM · 寒武纪 …等 55 条 |
+| 机器人与具身智能 | 87 | Tesla Optimus · Figure AI · Boston Dynamics · Unitree 宇树 · 1X Technologies · Agility Robotics …等 87 条 |
+| 学习资源 | 55 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …等 55 条 |
+| 社区与资讯 | 25 | Hacker News · Product Hunt · Reddit r/MachineLearning · Dev.to · Stack Overflow · MIT Technology Review …等 25 条 |
+| 开发者工具 | 89 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …等 89 条 |
 
 > 想看全部条目：[`content/`](./content/) 一站一个 md，或 [`nav-data.json`](./nav-data.json)（主数据）。
+> `ext` 延伸领域另有 184 条，构建时不上站，故不在上表。
 
 <!-- INDEX:END -->
 
@@ -143,8 +143,8 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 <!-- STATS:BEGIN generated, do not edit -->
 | 项 | 实测值 |
 |---|---|
-| 条目 | 723 条（对外 539 · ext 184） |
+| 条目 | 777 条（对外 593 · ext 184） |
 | 分类 | 12 类（对外 11 类） |
-| 标签词表 | 92 个（封闭枚举） |
-| 下架标记 | 13 条（Galileo AI · 文心一格 · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · 腾讯智影 · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code） |
+| 标签词表 | 93 个（封闭枚举） |
+| 下架标记 | 15 条（Galileo AI · DALL·E · 文心一格 · Sora · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · 腾讯智影 · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code） |
 <!-- STATS:END -->
