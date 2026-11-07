@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "task": "eval-pipeline",
+  "title": [
+    "搭一条评测流水线",
+    "Build an evaluation pipeline"
+  ],
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "input_inventory": [],
+  "constraints": {
+    "account": null,
+    "platform": null,
+    "permission": null,
+    "billing": null,
+    "data_handling": null
+  },
+  "source_versions": [],
+  "expected_output": null,
+  "steps": [
+    {
+      "title": [
+        "先冻结数据集与口径",
+        "Freeze the dataset and definitions"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "给每次运行留下可比的记录",
+        "Keep run records comparable"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "算指标时守住分母",
+        "Guard the denominator when scoring"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "设回归门槛并保留失败样本",
+        "Set a regression gate and keep failing cases"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    }
+  ],
+  "acceptance": [
+    {
+      "check": [
+        "每个指标都有定义、分子与分母规则和数据来源；未判定样本单独计数，既不算通过也不算失败。",
+        "Every metric has a definition, numerator and denominator rule and data source; unjudged rows are counted separately, never as a pass or a fail."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "两次运行可以对比：数据集版本、模型标识与判定标准都在记录里，改动可追。",
+        "Two runs are comparable: dataset version, model identifier and judging standard are in the record, so changes are traceable."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "随包评分函数在含未判定样本的输入上给出与参考解一致的数字，全部未判定时返回无法计算。",
+        "The bundled scoring function matches the reference on inputs that contain unjudged rows, and returns not-computable when nothing was judged."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    }
+  ],
+  "unknowns": [],
+  "next_action": null
+}

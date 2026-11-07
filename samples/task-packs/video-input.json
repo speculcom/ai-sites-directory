@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "topic": "Trace a claim to its source",
+  "shots_seconds": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    6,
+    6
+  ],
+  "assets": [
+    {
+      "file": "source-card.svg",
+      "provenance": "Original Specul teaching graphic",
+      "licence": "Specul site terms; no separate redistribution licence",
+      "terms_url": "https://specul.com/legal.html",
+      "attribution": "Specul"
+    }
+  ],
+  "third_party_audio": null,
+  "voice_or_likeness_permission": null
+}

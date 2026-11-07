@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "task": "bug-fix",
+  "title": [
+    "修一个代码问题",
+    "Fix a code issue"
+  ],
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "input_inventory": [],
+  "constraints": {
+    "account": null,
+    "platform": null,
+    "permission": null,
+    "billing": null,
+    "data_handling": null
+  },
+  "source_versions": [],
+  "expected_output": null,
+  "steps": [
+    {
+      "title": [
+        "先得到可复现的差异",
+        "Reproduce a difference"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "限定修改范围",
+        "Bound the edit"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "检查补丁与结果",
+        "Check patch and results"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "留下可撤回的交付",
+        "Keep a reversible deliverable"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    }
+  ],
+  "acceptance": [
+    {
+      "check": [
+        "至少一个复现输入在错误版本失败、修复版本通过。",
+        "At least one reproduction case distinguishes the wrong and repaired versions."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "补丁只更改约定范围，未添加远程调用或依赖。",
+        "The patch stays within scope and adds no remote calls or dependencies."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "检查结果、运行范围和回退方法均可复查。",
+        "Check results, execution scope and rollback remain inspectable."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    }
+  ],
+  "unknowns": [],
+  "next_action": null
+}

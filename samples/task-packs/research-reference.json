@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "claims": [
+    {
+      "claim": "The described preview targets internal teams, not the public.",
+      "sources": [
+        "A:A1",
+        "B:B1"
+      ]
+    },
+    {
+      "claim": "As of C, the planned preview has been postponed without a replacement date.",
+      "sources": [
+        "C:C1"
+      ]
+    },
+    {
+      "claim": "B says the public pricing page was unchanged on November 2; this establishes no later price.",
+      "sources": [
+        "B:B1"
+      ]
+    }
+  ],
+  "unknown": [
+    "public release date",
+    "replacement preview date",
+    "future pricing"
+  ],
+  "warning": "These texts are fictional input, not real product announcements or a research-product run."
+}

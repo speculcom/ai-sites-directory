@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "planned_seconds": 60,
+  "video_execution_status": "not_rendered",
+  "publication_status": "not_ready",
+  "checks_pending": [
+    "actual exported duration",
+    "captions and sync",
+    "audio/rights if added",
+    "redistribution rights for every included asset",
+    "container and codec",
+    "watermark and plan restrictions",
+    "target-platform playback"
+  ],
+  "conclusion": "A 60-second storyboard is not a completed 60-second video."
+}

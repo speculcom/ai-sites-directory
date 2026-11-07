@@ -43,6 +43,7 @@
  "LM Studio": "runner/lm-studio",
  "LangChain": "framework/langchain",
  "LangGraph": "framework/langgraph",
+ "Langfuse": "safety/langfuse",
  "Leonardo AI": "image/leonardo-ai",
  "LlamaIndex": "framework/llamaindex",
  "Lovable": "coding/lovable",

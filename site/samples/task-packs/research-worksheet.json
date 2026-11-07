@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "task": "research",
+  "title": [
+    "核对资料并写简报",
+    "Check sources and write a brief"
+  ],
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "input_inventory": [],
+  "constraints": {
+    "account": null,
+    "platform": null,
+    "permission": null,
+    "billing": null,
+    "data_handling": null
+  },
+  "source_versions": [],
+  "expected_output": null,
+  "steps": [
+    {
+      "title": [
+        "先写可回答的问题",
+        "Write an answerable question"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "给资料分工",
+        "Assign a purpose to each source/tool"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "逐条链接到原文位置",
+        "Locate support for every claim"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "把未确认留在简报里",
+        "Keep unknowns in the brief"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    }
+  ],
+  "acceptance": [
+    {
+      "check": [
+        "每条结论均对应 A/B/C 的具体位置，没出现虚构的公众上线日或价格变化。",
+        "Every claim locates A/B/C evidence without invented public dates or price changes."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "预览范围与延期的时间关系清楚；新闻标题没有变成能力承诺。",
+        "Preview scope and the timing of the delay are explicit; headlines do not become capability promises."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "上传真实文档前已核对账号、数据处理与导出要求。",
+        "Account, data-processing and export requirements are checked before uploading real documents."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    }
+  ],
+  "unknowns": [],
+  "next_action": null
+}

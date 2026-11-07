@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "task": "local-model",
+  "title": [
+    "在本机跑一个模型",
+    "Run a local model"
+  ],
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "input_inventory": [],
+  "constraints": {
+    "account": null,
+    "platform": null,
+    "permission": null,
+    "billing": null,
+    "data_handling": null
+  },
+  "source_versions": [],
+  "expected_output": null,
+  "steps": [
+    {
+      "title": [
+        "写清任务与边界",
+        "Define task and limits"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "确认模型与运行器是一组",
+        "Match model and runtime"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "分开算权重、缓存与预留",
+        "Separate weights, cache and reserve"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    },
+    {
+      "title": [
+        "把验证与计划分开保存",
+        "Separate validation from planning"
+      ],
+      "status": "not_started",
+      "observations": null,
+      "evidence": null
+    }
+  ],
+  "acceptance": [
+    {
+      "check": [
+        "模型/运行器/文件修订可定位，许可与用途分别记录。",
+        "Model/runtime/file revisions are identifiable, with licence and intended use recorded separately."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "GiB、缓存长度、并发、架构范围与预留没有混成一个固定百分比。",
+        "GiB, cached length, concurrency, architecture scope and reserve are not replaced by one fixed percentage."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    },
+    {
+      "check": [
+        "参考计划的 9 GiB 估算不写成已成功运行。",
+        "The reference plan’s 9 GiB estimate is not reported as successful execution."
+      ],
+      "status": "not_checked",
+      "evidence": null
+    }
+  ],
+  "unknowns": [],
+  "next_action": null
+}

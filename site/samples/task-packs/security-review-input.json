@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "scope": [
+    "以下流程与样例由本站设计；样例均为虚构教学输入，参考文件不是产品运行记录。",
+    "Workflows and samples are designed for this site. Inputs are fictional teaching material; references are not product execution records."
+  ],
+  "fictional": true,
+  "system_under_review": "RiverAssistant Teaching Demo (not a real deployment)",
+  "review_scope": "Teaching scope only: no real customer data, no penetration test and no incident response performed.",
+  "version_under_review": null,
+  "data_flow": [
+    {
+      "step": "user_input",
+      "leaves_machine": null,
+      "retained": null
+    },
+    {
+      "step": "application",
+      "leaves_machine": null,
+      "retained": null
+    },
+    {
+      "step": "model_provider",
+      "leaves_machine": null,
+      "retained": null
+    },
+    {
+      "step": "tracing_and_storage",
+      "leaves_machine": null,
+      "retained": null
+    }
+  ],
+  "boundaries": {
+    "accounts": null,
+    "tool_permissions": null,
+    "retention": null
+  },
+  "planning_estimate": {
+    "fictional": true,
+    "review_hours": 12,
+    "estimated_cost_usd": 480,
+    "basis": "fictional planning estimate for this exercise, not a vendor quote or a measured cost"
+  },
+  "cases": [
+    {
+      "name": "one key in a message",
+      "line": "retry failed for sk-abcdefgh at 09:12",
+      "expected": "retry failed for [REDACTED] at 09:12"
+    },
+    {
+      "name": "two keys in one line",
+      "line": "tool call rejected: keys sk-abcdefgh and sk-ijklmnop both disabled",
+      "expected": "tool call rejected: keys [REDACTED] and [REDACTED] both disabled"
+    },
+    {
+      "name": "key inside a URL query",
+      "line": "outbound https://api.invalid.example/v1?token=zyxwvuts&q=note",
+      "expected": "outbound https://api.invalid.example/v1?token=[REDACTED]&q=note"
+    }
+  ]
+}

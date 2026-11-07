@@ -1,6 +1,9 @@
 import { fileURLToPath } from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
+import {validateConditions, conditionAttributes, conditionDetails, conditionControls, comparisonPanel, conditionRecord} from './conditions.mjs';
+import {buildTaskSamples, renderTaskPacks} from './task-packs.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 // 生成 nav 独立站静态文件（复用统一骨架 shell.mjs，保证品牌一致）
@@ -128,6 +131,7 @@ function linkState(it) {
 // 展示 AI 相关分类；ext（链/币/游戏）不进站，仅在仓库 content/ 留档
 const cats = data.categories.filter((c) => c.code !== 'ext');
 const items = data.items.filter((i) => i.cat !== 'ext');
+validateConditions(items);
 
 fs.mkdirSync(SITE, { recursive: true });
 
@@ -142,6 +146,7 @@ fs.mkdirSync(SITE, { recursive: true });
  * 保留字母 / 数字 / 汉字。撞名时加序号兜底（例如「A/B」与「AB」会被归一成同一个 base）——
  * 有兜底就不必让构建依赖「名字永远不撞」，但**同一份数据构建两次结果一致**（确定性）。 */
 const ANCHOR_SEEN = new Map();
+const RESOURCE_IDS = new Map();
 function anchorId(name) {
   let base = 'i-' + String(name).toLowerCase().replace(/\s+/g, '-').replace(/[^\p{L}\p{N}-]+/gu, '');
   if (base === 'i-' || base === 'i-') base = 'i-item';
@@ -151,9 +156,12 @@ function anchorId(name) {
 }
 
 function card(it) {
+  const resourceId = anchorId(it.n);
+  RESOURCE_IDS.set(it.n, resourceId);
   const st = linkState(it);
   const tags = (it.tag || '').split('·').filter(Boolean);
-  const searchBlob = `${it.n} ${it.d} ${it.tag}`.toLowerCase();
+  const cr = conditionRecord(it.n);
+  const searchBlob = `${it.n} ${VENDOR_EN[it.n] || it.n} ${it.d} ${DESC_EN[it.n] || ''} ${it.tag} ${cr.mode.join(' ')}`.toLowerCase();
   const dead = st.cls === 'is-dead';
   const tag = dead ? 'div' : 'a';
   const linkAttrs = dead ? '' : ` href="${esc(it.u)}" target="_blank" rel="noopener"`;
@@ -167,10 +175,10 @@ function card(it) {
   const dosHref = dos ? `https://tools.specul.com/${dos.split('/')[0]}/${dos.split('/')[1]}.html` : '';
   /* B2（2026-10-09）：`data-tags` 供标签筛选用 —— 存**拆分后的标签**（空格分隔），
    * 不是原始串。分类筛选看 data-cat，标签筛选看它，两者独立、可叠加。 */
-  return `          <div class="card-wrap" data-cat="${it.cat}" data-tags="${esc(tags.join(' '))}" data-blob="${esc(searchBlob)}">
-          <${tag} class="card${st.cls ? ' ' + st.cls : ''}" id="${anchorId(it.n)}"${linkAttrs}>
+  return `          <div class="card-wrap" data-cat="${it.cat}" data-tags="${esc(tags.join(' '))}" data-blob="${esc(searchBlob)}" ${conditionAttributes(it.n)} data-name-en="${esc(VENDOR_EN[it.n] || it.n)}">
+          <${tag} class="card${st.cls ? ' ' + st.cls : ''}" id="${resourceId}"${linkAttrs}>
             <span class="c-ic" aria-hidden="true">${esc(it.ic || '◈')}</span>
-            <span class="c-nm"><span data-zh>${esc(it.n)}</span>${VENDOR_EN[it.n] ? `<span data-en>${esc(VENDOR_EN[it.n])}</span>` : ''}</span>
+            <span class="c-nm"><span data-zh>${esc(it.n)}</span><span data-en>${esc(VENDOR_EN[it.n] || it.n)}</span></span>
             <span class="c-ds"><span data-zh>${esc(it.d)}</span><span data-en>${esc(DESC_EN[it.n] || it.d)}</span></span>
 ${tags.length ? `            <span class="c-tg">${tags.map((t) => {
           const en = TAG_EN[t];
@@ -183,7 +191,7 @@ ${tags.length ? `            <span class="c-tg">${tags.map((t) => {
           // 否则英文态因为没有 data-en 可切换，会继续显示中文（实测渲染态 1 处残留）。
           return `<i><span data-zh>${esc(t)}</span><span data-en>${esc(en)}</span></i>`;
         }).join('')}</span>\n` : ''}${st.note ? `            <span class="c-warn">${st.note}</span>\n` : ''}          </${tag}>
-${dos ? `          <a class="c-dossier" href="${dosHref}">${biSpan('本站有档案 →', 'Full profile →')}</a>\n` : ''}          </div>`;
+${dos ? `          <a class="c-dossier" href="${dosHref}">${biSpan('本站有档案 →', 'Full profile →')}</a>\n` : ''}${conditionDetails(it.n)}          </div>`;
 }
 
 // ---- 「零中文」检查：英文态是否还有中文产品名 ----
@@ -323,7 +331,7 @@ const body = `    <section class="section hero">
         <p class="eyebrow">SPECUL · DIRECTORY</p>        <h1 class="h1"><span class="grad-title"><span data-zh>AI 导航</span><span data-en>AI Directory</span></span></h1>
         <p class="lede">${biSpan(`收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织。每条附说明与链接核验状态。`, `${items.length} AI websites across ${cats.length} categories. Each entry includes a description and a link-check status.`)}</p>
         <details><summary>${biSpan("来源与链接核验范围", "Sources and link-check scope")}</summary>
-        <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，按条目整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，其中 ${CHECK_DIRECT_N} 个直接 200、${CHECK_BLOCKED_N} 个反爬拦截但站点响应、${CHECK_CHANGED_N} 个改址仍可达；${CHECK_DEAD_N} 个已失效；${CHECK_UNVER_N} 个探测环境受限未能确认——不代表失效）。${items.length} 条收录中，${CHECK_N} 个独立域名纳入该快照（一条收录可含多个链接，重复域名只探测一次）；快照之后新增的条目标为待核验。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, compiled by hand; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live — ${CHECK_DIRECT_N} direct 200, ${CHECK_BLOCKED_N} anti-bot but responding, ${CHECK_CHANGED_N} redirected and still reachable; ${CHECK_DEAD_N} dead; ${CHECK_UNVER_N} blocked by the probe environment — not necessarily dead). Of ${items.length} entries, ${CHECK_N} unique domains were covered by that snapshot (one entry may carry several links; duplicate domains are probed once); entries added afterwards are marked unchecked. This page is an index and does not replace each site's own documentation.</span></p>
+        <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，按条目整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，其中 ${CHECK_DIRECT_N} 个直接 200、${CHECK_BLOCKED_N} 个反爬拦截但站点响应、${CHECK_CHANGED_N} 个改址仍可达；${CHECK_DEAD_N} 个已失效；${CHECK_UNVER_N} 个探测环境受限未能确认——不代表失效）。${items.length} 条收录中，${CHECK_N} 个独立域名纳入该快照（一条收录可含多个链接，重复域名只探测一次）；快照之后新增的条目标为待核验。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, organised into entries; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live — ${CHECK_DIRECT_N} direct 200, ${CHECK_BLOCKED_N} anti-bot but responding, ${CHECK_CHANGED_N} redirected and still reachable; ${CHECK_DEAD_N} dead; ${CHECK_UNVER_N} blocked by the probe environment — not necessarily dead). Of ${items.length} entries, ${CHECK_N} unique domains were covered by that snapshot (one entry may carry several links; duplicate domains are probed once); entries added afterwards are marked unchecked. This page is an index and does not replace each site's own documentation.</span></p>
         </details>
       </div>
     </section>
@@ -332,20 +340,17 @@ const body = `    <section class="section hero">
       <div class="container">
         <h2>${biSpan('按任务准备一组资料', 'Build a small resource set for a task')}</h2>
         <p>${biSpan('先写需要完成什么，再保留有用途的链接。下面给出查找顺序；不按工具多少判断准备是否充分。', 'Define the outcome first, then keep links with a clear purpose. These are search sequences, not quotas or rankings.')}</p>
-        <div class="t-grid t-grid-2">
-          <article class="t-taskcard"><h3>${biSpan('在本机跑一个模型', 'Run a local model')}</h3><p>${biSpan('先记录可用内存和平台，再找权重、运行器与对应说明。交付一份版本、许可、容量预算和未确认项记录。', 'Record memory and platform, then locate weights, a runtime and their documentation. Keep versions, licenses, a memory budget and unknowns.')}</p><p><a href="?cat=model#dir">${biSpan('找模型与权重', 'Find models and weights')}</a> · <a href="https://tools.specul.com/mcp/guides/playbook-local-model.html#worked-example">${biSpan('看完整例子', 'Read the worked example')}</a></p></article>
-          <article class="t-taskcard"><h3>${biSpan('修一个代码问题', 'Fix a code issue')}</h3><p>${biSpan('准备复现输入、错误信息和目标版本。先明确改动范围，再找适合现有编辑器或终端的工具。', 'Prepare reproduction inputs, errors and target versions. Define the change before looking for tools compatible with your editor or terminal.')}</p><p><a href="?cat=coding#dir">${biSpan('找编程工具', 'Find coding tools')}</a> · <a href="https://tools.specul.com/mcp/guides/playbook-fix-a-bug.html#worked-example">${biSpan('看修复记录示例', 'Read a repair-record example')}</a></p></article>
-          <article class="t-taskcard"><h3>${biSpan('核对资料并写简报', 'Check sources and write a brief')}</h3><p>${biSpan('为每个关键结论保留原文、日期和适用范围；冲突未解决时分开列出，不靠摘要填补证据。', 'Keep the original text, date and scope for key claims. Preserve unresolved conflicts rather than filling evidence gaps with summaries.')}</p><p><a href="?cat=learn#dir">${biSpan('找学习与参考资料', 'Find learning/reference material')}</a> · <a href="https://tools.specul.com/mcp/guides/playbook-research-brief.html#worked-example">${biSpan('看出处表的用法', 'Use a source record')}</a></p></article>
-          <article class="t-taskcard"><h3>${biSpan('制作一分钟视频', 'Make a one-minute video')}</h3><p>${biSpan('先确定事实、受众和分镜；每项素材记录来源与许可。完成后分别查信息、字幕、音量和平台要求。', 'Set facts, audience and shots first; record provenance and rights for each asset. Check facts, subtitles, audio and platform requirements separately.')}</p><p><a href="?cat=gen#dir">${biSpan('找生成工具', 'Find generation tools')}</a> · <a href="https://tools.specul.com/mcp/guides/playbook-60s-video.html#worked-example">${biSpan('看制作计划示例', 'Read a production-plan example')}</a></p></article>
-        </div>
+${renderTaskPacks(RESOURCE_IDS)}
       </div>
     </section>
+    <div class="container">${comparisonPanel()}</div>
     <section class="section" id="dir">
       <div class="container">
         <div class="controls">
           <label class="sr-only" for="q"><span data-zh>搜索</span><span data-en>Search</span></label>
           <input id="q" type="search" placeholder="搜索站名、说明或标签…" data-ui-placeholder-zh="搜索站名、说明或标签…" data-ui-placeholder-en="Search sites, descriptions or tags…" autocomplete="off" />
           ${tagSelect}
+          ${conditionControls(nativeOption)}
           <div class="chips">
         ${chips}
           </div>
@@ -400,148 +405,13 @@ const html = shell({
 });
 
 // 注入交互脚本（放在 shell 末尾的 </body> 前）
-const script = `
-  <script>
-    (function () {
-      var q = document.getElementById('q');
-      var tagSel = document.getElementById('tag');
-      var empty = document.getElementById('empty');
-      var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
-      /* T31：筛选对象改为 .card-wrap（卡片+档案标注的包裹层）——
-       * data-cat/data-tags/data-blob 现在挂在 wrapper 上，隐藏 wrapper 时
-       * 「本站有档案 →」标注随卡片一起消失，不会留下悬空链接。 */
-      var cards = Array.prototype.slice.call(document.querySelectorAll('.card-wrap'));
-      var groups = Array.prototype.slice.call(document.querySelectorAll('.cat-group'));
-      var activeCat = 'all';
-      var activeTag = '';
-
-      function apply() {
-        var term = (q.value || '').trim().toLowerCase();
-        var shown = 0;
-        cards.forEach(function (c) {
-          var okCat = activeCat === 'all' || c.getAttribute('data-cat') === activeCat;
-          /* B2：标签筛选是「该条含这个标签」（多标签条目会被多个标签命中）——
-           * 与分类筛选**相互独立、可叠加**。 */
-          var okTag = !activeTag || (c.getAttribute('data-tags') || '').split(' ').indexOf(activeTag) !== -1;
-          var okQ = !term || c.getAttribute('data-blob').indexOf(term) !== -1;
-          var on = okCat && okTag && okQ;
-          c.hidden = !on;
-          if (on) shown++;
-        });
-        groups.forEach(function (g) {
-          var has = Array.prototype.slice.call(g.querySelectorAll('.card-wrap')).some(function (c) { return !c.hidden; });
-          g.hidden = !has;
-        });
-        empty.hidden = shown !== 0;
-      }
-
-      function setCat(cat) {
-        activeCat = cat || 'all';
-        chips.forEach(function (x) {
-          x.classList.toggle('is-on', x.getAttribute('data-cat') === activeCat);
-        });
-      }
-
-      // B1（2026-10-09）：深链支持，两种形式
-      //   ?cat=<code>  查询参数（可分享、可被爬虫当规范 URL；选中分类时同步进地址栏）
-      //   #<code>      旧形式，保留兼容
-      //   #<条目锚点>   指向某一条（点击它不该把整页筛空）
-      // ⚠ 歧义必须处理：井号以前被无条件当成分类名（setCat(任意字符串)），
-      //   加了条目锚点后，「#chatgpt」会被当成「分类 chatgpt」→ 没有任何卡片匹配 → **整页空白**。
-      //   所以只有「确实是已知分类码」时才当分类。
-      //   （本注释不能写反引号 —— 整段脚本是模板字符串，反引号会提前把它截断。踩过三次。）
-      var CATS = {};
-      chips.forEach(function (x) { CATS[x.getAttribute('data-cat')] = 1; });
-
-      function setUrl(cat, replace) {
-        try {
-          var u = new URL(location.href);
-          if (!cat || cat === 'all') u.searchParams.delete('cat');
-          else u.searchParams.set('cat', cat);
-          /* B2：标签也进地址栏（可与分类叠加，所以是两个独立参数） */
-          if (!activeTag) u.searchParams.delete('tag');
-          else u.searchParams.set('tag', activeTag);
-          u.hash = '';
-          history[replace ? 'replaceState' : 'pushState'](null, '', u.toString());
-        } catch (e) { /* 老浏览器 / file:// 下静默降级：功能照用，只是地址栏不同步 */ }
-      }
-
-      function scrollToAnchor() {
-        var id = (location.hash || '').replace('#', '');
-        if (!id || CATS[id]) return false;
-        var el = document.getElementById(id);
-        if (!el) return false;
-        if (id === 'dir' || id === 'task-packs') {
-          deepLink(); apply();
-          el.scrollIntoView({ block: 'start' });
-          return true;
-        }
-        setCat('all');           // 先取消分类筛选，否则该条所在的分类组可能是隐藏的
-        apply();
-        el.scrollIntoView({ block: 'center' });
-        return true;
-      }
-
-      function deepLink() {
-        /* ⚠ 用 URLSearchParams 解析 location.search —— 不能用 new URL(location.search)：
-         *   「?cat=coding」不是绝对 URL，构造会抛 Invalid URL（实测），
-         *   而我第一版把它包在 try/catch 里 → 异常被吞 → 静默回退到「全部」，
-         *   地址栏看着有参数、页面却没筛（探针抓到「点击有效、重开无效」）。
-         *   教训：catch 里不要吞掉「本来不该发生」的异常。 */
-        var cat = '';
-        var tg = '';
-        try {
-          var sp = new URLSearchParams(location.search);
-          cat = sp.get('cat') || '';
-          tg = sp.get('tag') || '';
-        } catch (e) { cat = ''; tg = ''; }
-        var hash = (location.hash || '').replace('#', '');
-        if (cat && CATS[cat]) setCat(cat);
-        else if (hash && CATS[hash]) setCat(hash);
-        else setCat('all');
-        /* B2：标签还原。选单遇到选项里没有的值会**静默忽略** → 那就成了「指名筛选却被无视」。
-         * 未知值补成一个选项：筛出来 0 条，如实显示（与 models 的处理一致）。 */
-        activeTag = tg;
-        if (tagSel && tg) {
-          var foundTag = Array.prototype.some.call(tagSel.options, function (o) { return o.value === tg; });
-          if (!foundTag) {
-            var extra = document.createElement('option');
-            extra.value = tg; extra.textContent = tg;
-            tagSel.appendChild(extra);
-          }
-          tagSel.value = tg;
-        }
-      }
-
-      q.addEventListener('input', apply);
-      chips.forEach(function (b) {
-        b.addEventListener('click', function () {
-          var c = b.getAttribute('data-cat');
-          setCat(c);
-          apply();
-          setUrl(c, true);       // 选中分类 → 地址栏同步（可复制还原状态）
-        });
-      });
-      /* B2：标签下拉变化 → 重筛 + 同步地址栏（标签与分类可叠加） */
-      if (tagSel) {
-        tagSel.addEventListener('change', function () {
-          activeTag = tagSel.value;
-          apply();
-          setUrl(activeCat, true);
-        });
-      }
-
-      window.addEventListener('hashchange', function () {
-        if (!scrollToAnchor()) { deepLink(); apply(); }
-      });
-      /* 首屏：先试条目锚点（会顺带取消分类筛选），否则按 ?cat= / #cat 定分类 */
-      if (!scrollToAnchor()) deepLink();
-      apply();
-    })();
-  </script>
-`;
+const directoryVersion = crypto.createHash('sha256').update(fs.readFileSync(path.join(BASE, 'directory.js'))).digest('hex').slice(0, 12);
+fs.copyFileSync(path.join(BASE, 'directory.js'), path.join(SITE, 'directory.js'));
+const script = '<script defer src="directory.js?v=' + directoryVersion + '"></script>';
 
 const final = html.replace('</body>', script + '</body>');
+const taskSampleCount = buildTaskSamples(BASE, SITE);
+console.log(`  · 任务包样例 ${taskSampleCount} 个文件（虚构输入与设计参考）`);
 fs.writeFileSync(path.join(SITE, 'index.html'), final, 'utf8');
 
 // ---- site.css：沿用图谱站已调好的基础，再追加目录站特有样式 ----
