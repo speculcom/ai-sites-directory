@@ -58,8 +58,8 @@ export const NAV = [
   { key: 'models', href: 'https://models.specul.com/', zh: 'AI 模型', en: 'AI Models' },
   // 2026-10-05 新增：AI 做游戏（占位站，内容在P1~P3 建）
   { key: 'vg', href: 'https://vg.specul.com/', zh: 'AI 做游戏', en: 'Vibe Gaming' },
-  // ⚠ 作品库（demos.specul.com）**尚未建** —— 占位页还没上线，先不占导航位。
-  //   上线时在此加：{ key: 'demos', href: 'https://demos.specul.com/', zh: '作品库', en: 'Demos' }
+  // 2026-11-07：作品库分站上线（用户批准），占全局第 7 项导航。
+  { key: 'demos', href: 'https://demos.specul.com/', zh: '作品库', en: 'Demos' },
   { key: 'nav', href: 'https://nav.specul.com/', zh: 'AI 导航', en: 'AI Directory' },
 ];
 
