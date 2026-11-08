@@ -1014,6 +1014,25 @@ html[data-lang="en"] .nav-links > a {
 @media (max-width: 1120px) {
   html[data-lang="en"] .brand-sub { display: none; }
 }
+
+/* 导航三组分层（2026-11-08）：日常 / 深水 / 出口。
+   只给组首链接加 class，不插入任何新元素 —— 多个探针按 .nav-links > a
+   的数量断言，DOM 结构必须保持 9 个链接不变。出口站用青色与外链箭头区分，
+   提醒用户它收录的是别人的网站，不是 Specul 自己的内容。 */
+.nav-links > a.nav-group-start {
+  margin-left: var(--sp-2); padding-left: var(--sp-3);
+  border-left: 1px solid var(--line-mid);
+}
+/* 不把 --cyan 当链接文字色：亮色主题下它被压深到 #0b7c72，在浅底只有
+   4.47:1，差一点到 AA。区分改由分组分隔线、装饰箭头与抽屉底色承担。 */
+.nav-links > a[data-nav-group="external"]::after { content: " ↗"; color: var(--cyan); }
+.nav-drawer-list > a[data-nav-group="external"] {
+  color: var(--ink); background: var(--cyan-soft); border: 1px solid var(--cyan);
+}
+.nav-drawer-list > a.nav-group-start {
+  margin-top: var(--sp-2); padding-top: var(--sp-3);
+  border-top: 1px solid var(--line);
+}
 .icon-btn { min-width: 44px; min-height: 44px; box-shadow: 0 2px 0 var(--line); }
 .icon-btn:active, .nav-burger:active { transform: translateY(1px); }
 .nav-dclose { min-width: 44px; min-height: 44px; }

@@ -36,30 +36,31 @@ export const BRAND = {
   repo: 'https://github.com/speculcom/ai-handbook',
 };
 
-/** 全站导航（五项，顺序固定；各站自己那项由 current 高亮）
- *  顺序依据 `_plan/v4-三站架构.md` §2（唯一真相源）：
- *  首页 · 学 AI · Agent · 本地模型 · 导航
- *  「导航」放末位：它是「去别的站」的兜底出口，不是内容层。
+/** 全站导航（9 项，顺序固定；各站自己那项由 current 高亮）
  *
- *  2026-10-02 从八项改来，三处变化：
- *   - IDE / CLI / MCP / Harness 四项合成 Agent 一项（四站合成 tools.specul.com 一站三分区）
- *   - 新增「学 AI」= learn.specul.com（116 词术语表站）
- *   - 移除「规划中」：keel.specul.com 已于 2026-10-03 整体退役（本地已归档）
- *  2026-10-05 新增「AI 做游戏」= vg.specul.com（第五项，共 6 项）。
- *  2026-11-03：作品库 D3/D4/D5 全部暂缓，本轮不做；导航保持 6 项，
- *   不预留第 7 项（建独立站属于新的站点决策）。
- *  改这里等于改全站：audit/consistency.mjs 的 EXPECT_NAV 与
- *  test-consistency.mjs 的 EXPECT.navItems 必须同步改，否则审计会误报。 */
+ *  2026-11-08 用户定案，按「用户走到哪一步才需要它」重排为三组：
+ *    daily    首页 · 学 AI · 工具 · 模型 · 作品库   —— 日常闭环
+ *    deep     硬件算力 · AI 论文 · 链               —— 按需深挖，受众从宽到窄
+ *    external 外部站点                              —— 外链目录，不是本网内容
+ *  旧顺序是历史累加出来的（先六站、再插 hardware、补 papers/chain、最后塞 nav），
+ *  不是设计出来的；现在把出口站单独成组，避免它被当成第 9 个内容站。
+ *
+ *  group 只用于渲染分组样式（header/drawer 给组首加 class），不新增链接元素：
+ *  多个探针按 NAV.length / .nav-links > a 计数，元素数量必须保持不变。
+ *  zh / en 同时是站名，mini-site-build 等生成器用它们产出页面标题与 llms，
+ *  改名后必须按标准顺序全站重建，并检查 README 生成块与 llms 站群表。
+ *  注：用户明确保留「学 AI」，其余去掉冗余的 AI 前缀；只有「AI 论文」需要
+ *  用 AI 限定收录范围（20 条全是 LLM/AI 方法论文，不收其他学科）。 */
 export const NAV_ALL = [
-  { key: 'www', href: 'https://specul.com/', zh: '首页', en: 'Home', live: true },
-  { key: 'learn', href: 'https://learn.specul.com/', zh: '学 AI', en: 'Learn', live: true },
-  { key: 'agent', href: 'https://tools.specul.com/', zh: 'AI 工具', en: 'AI Tools', live: true },
-  { key: 'models', href: 'https://models.specul.com/', zh: 'AI 模型', en: 'AI Models', live: true },
-  { key: 'demos', href: 'https://demos.specul.com/', zh: '作品库', en: 'Demos', live: true },
-  { key: 'hardware', href: 'https://hardware.specul.com/', zh: 'AI 硬件', en: 'AI Hardware', live: true },
-  { key: 'papers', href: 'https://papers.specul.com/', zh: '论文', en: 'Papers', live: true },
-  { key: 'chain', href: 'https://chain.specul.com/', zh: '链 × AI', en: 'Chain × AI', live: true },
-  { key: 'nav', href: 'https://nav.specul.com/', zh: 'AI 导航', en: 'AI Directory', live: true },
+  { key: 'www', href: 'https://specul.com/', zh: '首页', en: 'Home', group: 'daily', live: true },
+  { key: 'learn', href: 'https://learn.specul.com/', zh: '学 AI', en: 'Learn', group: 'daily', live: true },
+  { key: 'agent', href: 'https://tools.specul.com/', zh: '工具', en: 'Tools', group: 'daily', live: true },
+  { key: 'models', href: 'https://models.specul.com/', zh: '模型', en: 'Models', group: 'daily', live: true },
+  { key: 'demos', href: 'https://demos.specul.com/', zh: '作品库', en: 'Demos', group: 'daily', live: true },
+  { key: 'hardware', href: 'https://hardware.specul.com/', zh: '硬件算力', en: 'Compute', group: 'deep', live: true },
+  { key: 'papers', href: 'https://papers.specul.com/', zh: 'AI 论文', en: 'AI Papers', group: 'deep', live: true },
+  { key: 'chain', href: 'https://chain.specul.com/', zh: '链', en: 'Chain', group: 'deep', live: true },
+  { key: 'nav', href: 'https://nav.specul.com/', zh: '外部站点', en: 'External', group: 'external', live: true },
 ];
 
 /** 渲染用导航：只含已上线站。探针以 NAV.length 为期望项数，未上线站不进这里。 */
@@ -67,9 +68,11 @@ export const NAV = NAV_ALL.filter((n) => n.live);
 
 /** header —— current 为当前站的 key */
 export function header(current) {
-  const items = NAV.map((n) => {
+  const items = NAV.map((n, i) => {
     const cur = n.key === current ? ' aria-current="page"' : '';
-    return `        <a href="${n.href}"${cur}><span data-zh>${n.zh}</span><span data-en>${n.en}</span></a>`;
+    const start = i > 0 && NAV[i - 1].group !== n.group ? ' class="nav-group-start"' : '';
+    const ext = n.group === 'external' ? ' data-nav-group="external"' : '';
+    return `        <a href="${n.href}"${cur}${start}${ext}><span data-zh>${n.zh}</span><span data-en>${n.en}</span></a>`;
   }).join('\n');
 
   return `  <header class="site-header">
@@ -110,9 +113,11 @@ ${drawer(current)}`;
  *  窄屏存在的理由（底部 tab bar 没有推给五站，因为那五站页脚的站群链接
  *  在 390px 下本来就可见，再加一条只是把同一批入口写两遍）。 */
 export function drawer(current) {
-  const items = NAV.map((n) => {
+  const items = NAV.map((n, i) => {
     const cur = n.key === current ? ' aria-current="page"' : '';
-    return `      <a href="${n.href}"${cur}><span><span data-zh>${n.zh}</span><span data-en>${n.en}</span></span><span class="ar" aria-hidden="true">→</span></a>`;
+    const start = i > 0 && NAV[i - 1].group !== n.group ? ' class="nav-group-start"' : '';
+    const ext = n.group === 'external' ? ' data-nav-group="external"' : '';
+    return `      <a href="${n.href}"${cur}${start}${ext}><span><span data-zh>${n.zh}</span><span data-en>${n.en}</span></span><span class="ar" aria-hidden="true">${n.group === 'external' ? '↗' : '→'}</span></a>`;
   }).join('\n');
   return `  <div class="nav-scrim"></div>
   <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="站点导航">
@@ -125,7 +130,7 @@ export function drawer(current) {
 ${items}
     </nav>
     <div class="nav-drawer-foot">
-      <p><span data-zh>9 个站，各管一件事</span><span data-en>Nine sites, one job each</span></p>
+      <p><span data-zh>8 个内容站，外加一个去别处的出口</span><span data-en>Eight content sites, plus one gateway to other sites</span></p>
       <nav><a href="https://specul.com/legal.html"><span data-zh>法律条款</span><span data-en>Legal terms</span></a></nav>
     </div>
   </aside>`;

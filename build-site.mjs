@@ -328,8 +328,9 @@ const INTENT = [
 
 const body = `    <section class="section hero">
       <div class="container">
-        <p class="eyebrow">SPECUL · DIRECTORY</p>        <h1 class="h1"><span class="grad-title"><span data-zh>AI 导航</span><span data-en>AI Directory</span></span></h1>
-        <p class="lede">${biSpan(`收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织。每条附说明与链接核验状态。`, `${items.length} AI websites across ${cats.length} categories. Each entry includes a description and a link-check status.`)}</p>
+        <p class="eyebrow">SPECUL · EXTERNAL DIRECTORY</p>
+        <h1 class="h1"><span class="grad-title"><span data-zh>外部站点</span><span data-en>External sites</span></span></h1>
+        <p class="lede">${biSpan(`本页收录的是其他 AI 网站，不是 Specul 自己产出的内容。共 ${items.length} 个网站，按 ${cats.length} 类组织，每条附说明与链接核验状态；点类目可只看那一类。`, `This page lists other AI sites, not Specul's own content: ${items.length} websites across ${cats.length} categories, each with a description and a link-check status. Category links narrow the list.`)}</p>
         <details><summary>${biSpan("来源与链接核验范围", "Sources and link-check scope")}</summary>
         <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，按条目整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，其中 ${CHECK_DIRECT_N} 个直接 200、${CHECK_BLOCKED_N} 个反爬拦截但站点响应、${CHECK_CHANGED_N} 个改址仍可达；${CHECK_DEAD_N} 个已失效；${CHECK_UNVER_N} 个探测环境受限未能确认——不代表失效）。${items.length} 条收录中，${CHECK_N} 个独立域名纳入该快照（一条收录可含多个链接，重复域名只探测一次）；快照之后新增的条目标为待核验。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, organised into entries; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live — ${CHECK_DIRECT_N} direct 200, ${CHECK_BLOCKED_N} anti-bot but responding, ${CHECK_CHANGED_N} redirected and still reachable; ${CHECK_DEAD_N} dead; ${CHECK_UNVER_N} blocked by the probe environment — not necessarily dead). Of ${items.length} entries, ${CHECK_N} unique domains were covered by that snapshot (one entry may carry several links; duplicate domains are probed once); entries added afterwards are marked unchecked. This page is an index and does not replace each site's own documentation.</span></p>
         </details>
@@ -373,8 +374,8 @@ ${groups}
 
 const html = shell({
   current: 'nav',
-  title: 'AI 导航 · AI 网站目录 | 投机取巧',
-  desc: `系统化收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织：每条附一句话说明、标签、可达性核验状态与官网链接，并按「我想做什么」给出入口。`,
+  title: '外部站点 · AI 网站目录 | 投机取巧',
+  desc: `外部网站目录，不是 Specul 自己产出的内容：系统化收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织；每条附一句话说明、标签、可达性核验状态与官网链接，并按「我想做什么」给出入口。`,
   canonical: 'https://nav.specul.com/',
   /* ⚠ 2026-10-10 不再传 accent（原 '#22d3c5'青色）。
    * 用户定案「不需要分站专属色，整体与首页一致」；brand.css 的 --accent 是
@@ -387,7 +388,7 @@ const html = shell({
   jsonLd: {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'AI 导航 · AI 网站目录',
+    name: '外部站点 · AI 网站目录',
     url: 'https://nav.specul.com/',
     description: `系统化收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织。`,
     inLanguage: 'zh-Hans',
