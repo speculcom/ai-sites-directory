@@ -513,6 +513,9 @@ a, code, kbd, samp { overflow-wrap: anywhere; }
 @media (max-width: 900px) {
   .nav-burger { display: flex; }
   .nav-scrim, .nav-drawer { display: flex; }
+  /* 9 项导航在 768 附近会与汉堡并存并横向溢出：900 以下统一收进抽屉。 */
+  .nav-links { flex: 0 0 auto; }
+  .nav-links > a { display: none; }
 }
 @media (max-width: 768px) {
   .nav-tabbar { display: flex; }

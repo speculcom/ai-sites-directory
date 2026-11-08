@@ -50,18 +50,20 @@ export const BRAND = {
  *   不预留第 7 项（建独立站属于新的站点决策）。
  *  改这里等于改全站：audit/consistency.mjs 的 EXPECT_NAV 与
  *  test-consistency.mjs 的 EXPECT.navItems 必须同步改，否则审计会误报。 */
-export const NAV = [
-  { key: 'www', href: 'https://specul.com/', zh: '首页', en: 'Home' },
-  { key: 'learn', href: 'https://learn.specul.com/', zh: '学 AI', en: 'Learn' },
-  // v7 S14（2026-10-21）改名：Agent→AI 工具、本地模型→AI 模型、导航→AI 导航（域名切换在 S20）
-  { key: 'agent', href: 'https://tools.specul.com/', zh: 'AI 工具', en: 'AI Tools' },
-  { key: 'models', href: 'https://models.specul.com/', zh: 'AI 模型', en: 'AI Models' },
-  // 2026-10-05 新增：AI 做游戏（占位站，内容在P1~P3 建）
-  { key: 'vg', href: 'https://vg.specul.com/', zh: 'AI 做游戏', en: 'Vibe Gaming' },
-  // 2026-11-07：作品库分站上线（用户批准），占全局第 7 项导航。
-  { key: 'demos', href: 'https://demos.specul.com/', zh: '作品库', en: 'Demos' },
-  { key: 'nav', href: 'https://nav.specul.com/', zh: 'AI 导航', en: 'AI Directory' },
+export const NAV_ALL = [
+  { key: 'www', href: 'https://specul.com/', zh: '首页', en: 'Home', live: true },
+  { key: 'learn', href: 'https://learn.specul.com/', zh: '学 AI', en: 'Learn', live: true },
+  { key: 'agent', href: 'https://tools.specul.com/', zh: 'AI 工具', en: 'AI Tools', live: true },
+  { key: 'models', href: 'https://models.specul.com/', zh: 'AI 模型', en: 'AI Models', live: true },
+  { key: 'demos', href: 'https://demos.specul.com/', zh: '作品库', en: 'Demos', live: true },
+  { key: 'hardware', href: 'https://hardware.specul.com/', zh: 'AI 硬件', en: 'AI Hardware', live: true },
+  { key: 'papers', href: 'https://papers.specul.com/', zh: '论文', en: 'Papers', live: true },
+  { key: 'chain', href: 'https://chain.specul.com/', zh: '链 × AI', en: 'Chain × AI', live: true },
+  { key: 'nav', href: 'https://nav.specul.com/', zh: 'AI 导航', en: 'AI Directory', live: true },
 ];
+
+/** 渲染用导航：只含已上线站。探针以 NAV.length 为期望项数，未上线站不进这里。 */
+export const NAV = NAV_ALL.filter((n) => n.live);
 
 /** header —— current 为当前站的 key */
 export function header(current) {
@@ -123,7 +125,7 @@ export function drawer(current) {
 ${items}
     </nav>
     <div class="nav-drawer-foot">
-      <p><span data-zh>6 个站，各管一件事</span><span data-en>Six sites, one job each</span></p>
+      <p><span data-zh>9 个站，各管一件事</span><span data-en>Nine sites, one job each</span></p>
       <nav><a href="https://specul.com/legal.html"><span data-zh>法律条款</span><span data-en>Legal terms</span></a></nav>
     </div>
   </aside>`;
@@ -194,7 +196,7 @@ ${links}
       </nav>
     </div>
     <div class="container">
-      <p><a href="https://specul.com/search.html"><span data-zh>搜索六站内容</span><span data-en>Search all six sites</span></a></p>
+      <p><a href="https://specul.com/search.html"><span data-zh>搜索全站内容</span><span data-en>Search all sites</span></a></p>
       <p><a href="https://specul.com/correct.html"><span data-zh>发现错误？生成纠错草稿</span><span data-en>Spot an error? Compose a correction draft</span></a></p>
       <p class="foot-trademark"><span data-zh>产品名与商标归各权利方所有，本站仅作识别与评论之用。</span><span data-en>Product names and trademarks belong to their respective owners and are used here for identification and commentary only.</span></p>
     </div>
