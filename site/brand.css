@@ -807,6 +807,213 @@ button, a { touch-action: manipulation; }
 }
 .nav-links > a { border-radius: var(--r-sm); transition: background-color .16s, color .16s; }
 .nav-links > a[aria-current="page"] { background: var(--brand-soft); }
+
+/* ══════════════════════════════════════════════════════════════════════
+   统一表单控件 + 类目筛选 + 事实卡（2026-11-08）
+   --------------------------------------------------------------------------
+   一处定义，九站共用。此前 hardware / papers / chain / demos 的类目筛选是
+   裸 <select>，站级 CSS 又没被页面引入，四个目录页几乎没有版式。
+   这里把它们提升为共享设计系统组件：全部只用上面的 token，明暗主题自动跟随，
+   字号一律走 --fs-* 档位，颜色一律走语义变量。
+   ⚠ 站级 CSS 里若用 `background` 简写覆盖 select，会连带抹掉这里的箭头渐变，
+     改站级规则时请只写 background-color。
+   ══════════════════════════════════════════════════════════════════════ */
+
+select,
+input[type="search"],
+input[type="text"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--line-mid);
+  border-radius: var(--r-sm);
+  background-color: var(--bg-panel);
+  color: var(--ink);
+  transition: border-color .16s var(--ease), background-color .16s var(--ease);
+}
+select {
+  padding: var(--sp-2) calc(var(--sp-5) + var(--sp-1)) var(--sp-2) var(--sp-3);
+  cursor: pointer;
+  max-width: 100%;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--ink-mid) 50%),
+    linear-gradient(135deg, var(--ink-mid) 50%, transparent 50%);
+  background-position: calc(100% - var(--sp-4)) 55%, calc(100% - var(--sp-3) - 2px) 55%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+input[type="search"], input[type="text"] { padding: var(--sp-2) var(--sp-3); }
+select:hover, input[type="search"]:hover, input[type="text"]:hover { border-color: var(--brand-line); }
+select:focus-visible, input[type="search"]:focus-visible, input[type="text"]:focus-visible,
+.fx-chip:focus-visible, .fx-source:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+/* ── 筛选工具栏 ─────────────────────────────────────────────────────── */
+.fx-bar {
+  margin: var(--sp-4) 0 var(--sp-5);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--bg-panel);
+}
+.fx-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-3);
+}
+.fx-title {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  font-size: var(--fs-xs); font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+.fx-title::before {
+  content: ""; width: 14px; height: 2px; border-radius: var(--r-xs);
+  background: var(--brand); flex: none;
+}
+.fx-count { font-size: var(--fs-xs); color: var(--ink-mid); font-variant-numeric: tabular-nums; }
+.fx-count b { font-size: var(--fs-lg); font-weight: 700; color: var(--ink); }
+.fx-chips { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.fx-chip {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--line-mid); border-radius: 999px;
+  background: var(--bg-inset); color: var(--ink-mid);
+  font: inherit; font-size: var(--fs-xs); line-height: 1.3;
+  cursor: pointer; white-space: nowrap;
+  transition: border-color .16s var(--ease), background-color .16s var(--ease), color .16s var(--ease), transform .16s var(--ease);
+}
+.fx-chip:hover { border-color: var(--brand-line); color: var(--ink); transform: translateY(-1px); }
+.fx-chip[aria-pressed="true"] {
+  background: var(--brand-soft); border-color: var(--brand-line); color: var(--ink);
+}
+.fx-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cat, var(--brand)); flex: none; }
+.fx-chip[aria-pressed="true"] .fx-dot { background: var(--brand); }
+.fx-n { font-style: normal; font-size: var(--fs-micro); color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.fx-chip[aria-pressed="true"] .fx-n { color: var(--ink-mid); }
+
+/* 类目色：按 data-cat 上色，一处定义同时供筛选按钮与卡片使用 */
+[data-cat="accelerator"], [data-cat="architecture"], [data-cat="provenance"], [data-cat="游戏"] {
+  --cat: var(--cat-violet); --cat-soft: var(--cat-violet-soft);
+}
+[data-cat="system"], [data-cat="alignment"], [data-cat="credential"], [data-cat="Web 应用"] {
+  --cat: var(--cat-rose); --cat-soft: var(--cat-rose-soft);
+}
+[data-cat="edge"], [data-cat="scaling"], [data-cat="protocol"], [data-cat="数据可视化"] {
+  --cat: var(--cat-amber); --cat-soft: var(--cat-amber-soft);
+}
+[data-cat="robot-body"], [data-cat="adaptation"], [data-cat="inference"], [data-cat="内容与媒体"] {
+  --cat: var(--cat-teal); --cat-soft: var(--cat-teal-soft);
+}
+[data-cat="sensor"], [data-cat="efficiency"], [data-cat="data-rights"], [data-cat="自动化"] {
+  --cat: var(--cat-blue); --cat-soft: var(--cat-blue-soft);
+}
+[data-cat="cloud"], [data-cat="reasoning"], [data-cat="模型演示"] {
+  --cat: var(--cat-lime); --cat-soft: var(--cat-lime-soft);
+}
+
+/* ── 事实卡 ─────────────────────────────────────────────────────────── */
+.fx-stats {
+  display: flex; flex-wrap: wrap; gap: var(--sp-4) var(--sp-5);
+  margin: var(--sp-4) 0; padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line); border-radius: var(--r); background: var(--bg-raise);
+}
+.fx-stats > div { min-width: 84px; }
+.fx-stats strong { display: block; font-size: var(--fs-xl); font-weight: 700; line-height: 1.2; color: var(--ink); }
+.fx-stats strong.fx-date { font-size: var(--fs-lg); }
+.fx-stats span { font-size: var(--fs-micro); color: var(--ink-faint); }
+
+.fx-grid {
+  display: grid; gap: var(--sp-3);
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  margin: 0 0 var(--sp-5);
+}
+.fx-card {
+  position: relative; display: flex; flex-direction: column; gap: var(--sp-2);
+  min-width: 0; padding: var(--sp-4);
+  border: 1px solid var(--line); border-radius: var(--r);
+  background: var(--bg-panel);
+  transition: border-color .18s var(--ease), transform .18s var(--ease);
+}
+.fx-card::before {
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 3px;
+  border-radius: var(--r) 0 0 var(--r);
+  background: var(--cat, var(--brand)); opacity: .7;
+}
+.fx-card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+.fx-card h3 {
+  font-size: var(--fs-lg); font-weight: 650; line-height: var(--lh-snug);
+  margin: 0; letter-spacing: -.012em;
+}
+.fx-card h3 a { color: var(--ink); transition: color .16s var(--ease); }
+.fx-card h3 a:hover { color: var(--brand); }
+.fx-sub { font-size: var(--fs-xs); font-weight: 400; color: var(--ink-faint); }
+.fx-card p { font-size: var(--fs-sm); line-height: var(--lh-body); color: var(--ink-mid); margin: 0; }
+.fx-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: var(--sp-2); }
+.fx-badge {
+  display: inline-flex; align-items: center;
+  padding: 3px var(--sp-2); border-radius: 999px;
+  font-size: var(--fs-micro); line-height: 1.4; color: var(--ink);
+  background: var(--cat-soft, var(--brand-soft));
+  border: 1px solid var(--cat, var(--brand-line));
+}
+.fx-meta {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: var(--sp-1) var(--sp-3);
+  font-size: var(--fs-xs); color: var(--ink-faint);
+}
+.fx-meta > span { display: inline-flex; align-items: center; gap: var(--sp-1); }
+.fx-key { color: var(--ink-dim); }
+.fx-sep { width: 3px; height: 3px; border-radius: 50%; background: var(--line-strong); }
+.fx-specs {
+  display: grid; gap: var(--sp-2);
+  grid-template-columns: repeat(auto-fill, minmax(min(140px, 100%), 1fr));
+  margin: var(--sp-1) 0 0; padding: var(--sp-3) 0 0;
+  border-top: 1px solid var(--line);
+}
+.fx-specs > div { min-width: 0; }
+.fx-specs dt { font-size: var(--fs-micro); color: var(--ink-faint); margin-bottom: 2px; }
+.fx-specs dd { margin: 0; font-size: var(--fs-sm); color: var(--ink); overflow-wrap: anywhere; }
+.fx-source {
+  display: inline-flex; align-items: center; gap: var(--sp-1);
+  margin-top: auto; padding-top: var(--sp-2);
+  font-size: var(--fs-xs); color: var(--brand);
+}
+.fx-source:hover { text-decoration: underline; }
+
+/* ── 路径页与口径页 ─────────────────────────────────────────────────── */
+.fx-path { list-style: none; margin: var(--sp-4) 0; padding: 0; display: grid; gap: var(--sp-3); }
+.fx-path li {
+  position: relative; padding: var(--sp-3) var(--sp-4) var(--sp-3) var(--sp-5b);
+  border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--bg-panel);
+  font-size: var(--fs-sm); line-height: var(--lh-body); color: var(--ink-mid);
+}
+.fx-path li b { position: absolute; left: var(--sp-3); top: var(--sp-3); color: var(--brand); font-size: var(--fs-xs); }
+.fx-path a { color: var(--brand); }
+.fx-list { margin: var(--sp-4) 0; padding: 0; list-style: none; display: grid; gap: var(--sp-2); }
+.fx-list li {
+  position: relative; padding-left: var(--sp-4);
+  font-size: var(--fs-sm); line-height: var(--lh-body); color: var(--ink-mid);
+}
+.fx-list li::before {
+  content: ""; position: absolute; left: 0; top: .7em;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--brand);
+}
+
+@media (max-width: 560px) {
+  .fx-bar { padding: var(--sp-3); }
+  .fx-grid { grid-template-columns: 1fr; }
+  .fx-chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: var(--sp-1); scrollbar-width: thin; }
+  .fx-chip { flex: none; }
+  .fx-stats { gap: var(--sp-3) var(--sp-4); padding: var(--sp-3); }
+}
+
+/* 英文导航标签比中文长得多：flex 项被压缩后会把 Home / Papers / Learn
+   折成两行。只在英文态收紧间距、禁止折行，中文态与既有断点一律不动。
+   900 以下链接本来就收进抽屉，这条不影响窄屏。 */
+html[data-lang="en"] .nav-links { gap: var(--sp-2); }
+html[data-lang="en"] .nav-links > a {
+  white-space: nowrap; flex: none; font-size: var(--fs-micro);
+}
+@media (max-width: 1120px) {
+  html[data-lang="en"] .brand-sub { display: none; }
+}
 .icon-btn { min-width: 44px; min-height: 44px; box-shadow: 0 2px 0 var(--line); }
 .icon-btn:active, .nav-burger:active { transform: translateY(1px); }
 .nav-dclose { min-width: 44px; min-height: 44px; }

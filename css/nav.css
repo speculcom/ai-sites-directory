@@ -38,9 +38,9 @@
  *   （实测 Chrome 是 13.3333px），_design-audit 会判「非整数字号」。
  *   字号 13px 与 .chip 一致，实际是「整数 px」而不是「碰巧看起来对」。 */
 .tagsel {
-  margin-top: .9rem; padding: .35rem .75rem; font: inherit; font-size:var(--fs-xs);
-  border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius:var(--r-sm);
-  background: var(--bg-raise, rgba(127,127,127,.08)); color: inherit; cursor: pointer;
+  margin-top: .9rem; padding: .35rem calc(var(--sp-5) + var(--sp-1)) .35rem var(--sp-3); font: inherit; font-size:var(--fs-xs);
+  border: 1px solid var(--line-mid); border-radius:var(--r-sm);
+  background-color: var(--bg-panel); color: var(--ink); cursor: pointer;
   max-width: 100%;
 }
 .tagsel:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }

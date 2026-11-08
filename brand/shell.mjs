@@ -223,7 +223,7 @@ export function shell({ current, title, desc, canonical, accent, body, repo, rep
   <script src="${depth(assetPrefix)}brand.js?v=${RUNTIME_VERSION}"></script>
   <link rel="stylesheet" href="${depth(assetPrefix)}brand.css?v=${RUNTIME_VERSION}" />
   <link rel="stylesheet" href="${depth(assetPrefix)}site.css" />
-${accent ? `  <style>:root { --accent: ${accent}; }${headExtra ? '\n' + headExtra : ''}</style>\n` : ''}${jsonLd ? `  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n` : ''}</head>
+${accent ? `  <style>:root { --accent: ${accent}; }</style>\n` : ''}${headExtra ? `  ${headExtra.trim()}\n` : ''}${jsonLd ? `  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n` : ''}</head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
