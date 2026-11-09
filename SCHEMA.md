@@ -1,4 +1,4 @@
-# 硅基导航（ai-sites-directory）内容规范
+# 外部站点（ai-sites-directory）内容规范
 
 > 本文是**数据文件的必填矩阵**。机器执行方是 [`validate.mjs`](./validate.mjs)
 >（本仓没有 `scripts/` 目录，脚本都在仓根 —— 校验器随本仓约定也放根）。

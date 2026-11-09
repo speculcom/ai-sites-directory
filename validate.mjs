@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * validate.mjs —— ai-sites-directory（硅基导航站内容仓）的 schema 与标签词表校验器
+ * validate.mjs —— ai-sites-directory（外部站点内容仓）的 schema 与标签词表校验器
  *
  * ## 位置说明
  * 本仓**没有 `scripts/` 目录**（构建脚本 `build-site.mjs` / `build-nav-data.mjs` / `check-links.mjs`

@@ -1,24 +1,110 @@
-/* Directory filters and scoped condition comparison; no remote calls or accounts. */
-(()=>{'use strict';
- const q=document.getElementById('q'),tag=document.getElementById('tag'),empty=document.getElementById('empty'),counter=document.getElementById('filtered-count');
- const cards=[...document.querySelectorAll('.card-wrap')],groups=[...document.querySelectorAll('.cat-group')],chips=[...document.querySelectorAll('.chip')];
- const facets=Object.fromEntries(['login','platform','output'].map(k=>[k,document.getElementById('filter-'+k)]));
- const byName=new Map(cards.map(c=>[c.dataset.name,c]));const categories=new Set(chips.map(c=>c.dataset.cat));let activeCat='all',selected=[];
- const tr=(a,b)=>document.documentElement.lang.startsWith('en')?b:a;
- const text=(tag,value)=>{const e=document.createElement(tag);e.textContent=value;return e;};
- const raw=JSON.parse(document.getElementById('condition-data').textContent);const unknown=['未核对','Not checked'];
- const record=name=>Object.hasOwn(raw.entries,name)?raw.entries[name]:{checked:null,login:'unknown',platforms:[],outputs:[],mode:['使用条件未核对','Usage conditions not checked'],access:unknown,platform:unknown,io:unknown,billing:unknown,data:unknown,sources:[]};
- function setCat(value){activeCat=value||'all';chips.forEach(c=>c.classList.toggle('is-on',c.dataset.cat===activeCat));}
- function apply(){const term=q.value.trim().toLowerCase();let n=0;for(const c of cards){const on=(activeCat==='all'||c.dataset.cat===activeCat)&&(!tag.value||(c.dataset.tags||'').split(' ').includes(tag.value))&&(!term||(c.dataset.blob||'').includes(term))&&Object.entries(facets).every(([k,s])=>!s.value||(c.dataset[k]||'unknown').split(' ').includes(s.value));c.hidden=!on;if(on)n++;}for(const g of groups)g.hidden=![...g.querySelectorAll('.card-wrap')].some(c=>!c.hidden);empty.hidden=n!==0;counter.textContent=tr(`显示 ${n} / ${cards.length} 条。条件未核对不等于不支持。`,`Showing ${n} / ${cards.length}. Unchecked conditions do not establish lack of support.`);}
- function syncUrl(keepHash=false){try{const u=new URL(location.href);const values={q:q.value.trim(),cat:activeCat==='all'?'':activeCat,tag:tag.value,...Object.fromEntries(Object.entries(facets).map(([k,s])=>[k,s.value]))};for(const[k,v]of Object.entries(values)){if(v)u.searchParams.set(k,v);else u.searchParams.delete(k);}u.searchParams.delete('compare');for(const name of selected)u.searchParams.append('compare',name);if(!keepHash)u.hash='';history.replaceState(null,'',u);}catch{}}
- function selectValue(select,value){if(value&&![...select.options].some(o=>o.value===value)){const o=document.createElement('option');o.value=value;o.textContent=value;select.append(o);}select.value=value;}
- function resetFilters(){q.value='';tag.value='';for(const s of Object.values(facets))s.value='';setCat('all');apply();}
- function readUrl(){const sp=new URLSearchParams(location.search);let hash=location.hash.slice(1);try{hash=decodeURIComponent(hash);}catch{}const cat=sp.get('cat')||'';setCat(cat||categories.has(hash)&&hash||'all');q.value=(sp.get('q')||'').slice(0,300);selectValue(tag,sp.get('tag')||'');for(const[k,s]of Object.entries(facets))selectValue(s,sp.get(k)||'');selected=[...new Set(sp.getAll('compare'))].filter(x=>byName.has(x)).slice(0,3);renderComparison();}
- function scrollToAnchor(){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return false;}if(!id||categories.has(id))return false;const e=document.getElementById(id);if(!e)return false;if(e.closest('.card-wrap')){resetFilters();syncUrl(true);}else apply();for(let p=e.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;e.scrollIntoView({block:e.closest('.card-wrap')?'center':'start'});return true;}
- const fields=[['mode','核对范围','Check scope'],['access','登录 / 鉴权','Sign-in / authentication'],['platform','平台','Platform'],['io','输入与可取出的结果','Input and retrievable output'],['billing','收费口径','Billing scope'],['data','数据与未确认项','Data and unknowns']];
- function renderComparison(){const host=document.getElementById('compare-results'),status=document.getElementById('compare-status');host.replaceChildren();document.querySelectorAll('.compare-select').forEach(c=>c.checked=selected.includes(c.value));status.textContent=selected.length<2?tr(`已选择 ${selected.length} 项；选 2–3 项后并排核对，不计算总分。`,`${selected.length} selected. Choose 2–3 to compare conditions; no overall score.`):tr(`已选择 ${selected.length} 项；目录筛选不会清除已选项。`,`${selected.length} selected; directory filters do not clear the selection.`);if(selected.length<2)return;host.className='comparison-columns';for(const name of selected){const r=record(name),c=byName.get(name),a=document.createElement('article');a.className='comparison-card';const heading=text('h3',tr(name,c.dataset.nameEn||name));a.append(heading);const dl=document.createElement('dl');for(const[key,zh,en]of fields){dl.append(text('dt',tr(zh,en)),text('dd',tr(...r[key])));}a.append(dl,text('p',r.checked?tr(`单项文档核对 ${r.checked}；未安装测试。`,`Scoped document check ${r.checked}; no installation test.`):tr('未核对条件。','Conditions not checked.')));const list=document.createElement('ul');for(const[label,url]of r.sources){const l=document.createElement('li'),link=document.createElement('a');const[zh,en]=label.split(' / ');link.textContent=tr(zh,en);link.href=url;link.target='_blank';link.rel='noopener';l.append(link);list.append(l);}a.append(list);host.append(a);}}
- for(const c of cards)c.querySelector('.compare-select').addEventListener('change',e=>{const name=e.target.value;if(e.target.checked){if(selected.length===3){e.target.checked=false;document.getElementById('compare-status').textContent=tr('最多对照 3 项，请先取消一项。','Compare at most 3; deselect one first.');return;}selected.push(name);}else selected=selected.filter(x=>x!==name);renderComparison();syncUrl();});
- q.addEventListener('input',()=>{apply();syncUrl();});for(const s of[tag,...Object.values(facets)])s.addEventListener('change',()=>{apply();syncUrl();});chips.forEach(c=>c.addEventListener('click',()=>{setCat(c.dataset.cat);apply();syncUrl();}));document.getElementById('directory-reset').addEventListener('click',()=>{resetFilters();syncUrl();q.focus();});document.getElementById('compare-clear').addEventListener('click',()=>{selected=[];renderComparison();syncUrl();});
- document.getElementById('compare-export').addEventListener('click',()=>{if(selected.length<2){document.getElementById('compare-status').textContent=tr('先选择 2–3 项再下载对照。','Choose 2–3 entries before downloading.');return;}const payload={schema:1,scope:raw.scope,task:'Fill in your shared task and constraints before making a choice.',entries:selected.map(name=>({name,...record(name)})),noScore:true};const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='specul-tool-conditions.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
- window.addEventListener('hashchange',()=>{readUrl();apply();scrollToAnchor();});window.addEventListener('popstate',()=>{readUrl();apply();scrollToAnchor();});new MutationObserver(()=>{apply();renderComparison();}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});readUrl();apply();scrollToAnchor();
+/* Directory filters: search, category chips, tag select. No remote calls, no accounts.
+ * 2026-11-09：nav 回到「收藏夹」定位 —— 移除条件筛选与 2–3 项对照（该能力与 592 条里
+ * 只有 10 条有条件数据不匹配），搜索改为首次输入时从卡片文本惰性建索引
+ * （省掉每卡 data-blob 共 152 KB）。 */
+(() => {
+  'use strict';
+  const q = document.getElementById('q');
+  const tag = document.getElementById('tag');
+  const empty = document.getElementById('empty');
+  const counter = document.getElementById('filtered-count');
+  const cards = [...document.querySelectorAll('.card-wrap')];
+  const groups = [...document.querySelectorAll('.cat-group')];
+  const chips = [...document.querySelectorAll('.chip')];
+  const categories = new Set(chips.map((c) => c.dataset.cat));
+  let activeCat = 'all';
+  let index = null;
+
+  const tr = (a, b) => (document.documentElement.lang.startsWith('en') ? b : a);
+
+  /* 惰性索引：只有用户真的输入时才读 592 张卡的文本，避免首屏多一次遍历。 */
+  const searchIndex = () => {
+    if (!index) index = cards.map((c) => c.textContent.toLowerCase());
+    return index;
+  };
+
+  function setCat(value) {
+    activeCat = value || 'all';
+    chips.forEach((c) => c.classList.toggle('is-on', c.dataset.cat === activeCat));
+  }
+
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    const idx = term ? searchIndex() : null;
+    let n = 0;
+    cards.forEach((c, i) => {
+      const on =
+        (activeCat === 'all' || c.dataset.cat === activeCat) &&
+        (!tag.value || (c.dataset.tags || '').split(' ').includes(tag.value)) &&
+        (!term || idx[i].includes(term));
+      c.hidden = !on;
+      if (on) n++;
+    });
+    for (const g of groups) g.hidden = ![...g.querySelectorAll('.card-wrap')].some((c) => !c.hidden);
+    empty.hidden = n !== 0;
+    if (counter) {
+      counter.textContent = tr(
+        `显示 ${n} / ${cards.length} 条`,
+        `Showing ${n} / ${cards.length}`
+      );
+    }
+  }
+
+  function syncUrl(keepHash = false) {
+    try {
+      const u = new URL(location.href);
+      const values = { q: q.value.trim(), cat: activeCat === 'all' ? '' : activeCat, tag: tag.value };
+      for (const [k, v] of Object.entries(values)) {
+        if (v) u.searchParams.set(k, v); else u.searchParams.delete(k);
+      }
+      u.searchParams.delete('compare');
+      if (!keepHash) u.hash = '';
+      history.replaceState(null, '', u);
+    } catch (_) { /* file:// 等场景忽略 */ }
+  }
+
+  function selectValue(select, value) {
+    if (value && ![...select.options].some((o) => o.value === value)) {
+      const o = document.createElement('option');
+      o.value = value; o.textContent = value; select.append(o);
+    }
+    select.value = value;
+  }
+
+  function resetFilters() {
+    q.value = ''; tag.value = ''; setCat('all'); apply();
+  }
+
+  function readUrl() {
+    const sp = new URLSearchParams(location.search);
+    let hash = location.hash.slice(1);
+    try { hash = decodeURIComponent(hash); } catch (_) {}
+    const cat = sp.get('cat') || '';
+    setCat(cat || (categories.has(hash) && hash) || 'all');
+    q.value = (sp.get('q') || '').slice(0, 300);
+    selectValue(tag, sp.get('tag') || '');
+  }
+
+  function scrollToAnchor() {
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return false; }
+    if (!id || categories.has(id)) return false;
+    const e = document.getElementById(id);
+    if (!e) return false;
+    if (e.closest('.card-wrap')) { resetFilters(); syncUrl(true); } else apply();
+    for (let p = e.parentElement; p; p = p.parentElement) if (p.tagName === 'DETAILS') p.open = true;
+    e.scrollIntoView({ block: e.closest('.card-wrap') ? 'center' : 'start' });
+    return true;
+  }
+
+  q.addEventListener('input', () => { apply(); syncUrl(); });
+  tag.addEventListener('change', () => { apply(); syncUrl(); });
+  chips.forEach((c) => c.addEventListener('click', () => { setCat(c.dataset.cat); apply(); syncUrl(); }));
+  const reset = document.getElementById('directory-reset');
+  if (reset) reset.addEventListener('click', () => { resetFilters(); syncUrl(); q.focus(); });
+  window.addEventListener('hashchange', () => { readUrl(); apply(); scrollToAnchor(); });
+  window.addEventListener('popstate', () => { readUrl(); apply(); scrollToAnchor(); });
+  readUrl();
+  apply();
+  scrollToAnchor();
 })();

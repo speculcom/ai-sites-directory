@@ -2,8 +2,8 @@ import { fileURLToPath } from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import {validateConditions, conditionAttributes, conditionDetails, conditionControls, comparisonPanel, conditionRecord} from './conditions.mjs';
-import {buildTaskSamples, renderTaskPacks} from './task-packs.mjs';
+import {validateConditions, conditionDetails} from './conditions.mjs';
+import {buildTaskSamples, renderTaskPacks, taskPacks} from './task-packs.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 // 生成 nav 独立站静态文件（复用统一骨架 shell.mjs，保证品牌一致）
@@ -160,8 +160,6 @@ function card(it) {
   RESOURCE_IDS.set(it.n, resourceId);
   const st = linkState(it);
   const tags = (it.tag || '').split('·').filter(Boolean);
-  const cr = conditionRecord(it.n);
-  const searchBlob = `${it.n} ${VENDOR_EN[it.n] || it.n} ${it.d} ${DESC_EN[it.n] || ''} ${it.tag} ${cr.mode.join(' ')}`.toLowerCase();
   const dead = st.cls === 'is-dead';
   const tag = dead ? 'div' : 'a';
   const linkAttrs = dead ? '' : ` href="${esc(it.u)}" target="_blank" rel="noopener"`;
@@ -175,7 +173,10 @@ function card(it) {
   const dosHref = dos ? `https://tools.specul.com/${dos.split('/')[0]}/${dos.split('/')[1]}.html` : '';
   /* B2（2026-10-09）：`data-tags` 供标签筛选用 —— 存**拆分后的标签**（空格分隔），
    * 不是原始串。分类筛选看 data-cat，标签筛选看它，两者独立、可叠加。 */
-  return `          <div class="card-wrap" data-cat="${it.cat}" data-tags="${esc(tags.join(' '))}" data-blob="${esc(searchBlob)}" ${conditionAttributes(it.n)} data-name-en="${esc(VENDOR_EN[it.n] || it.n)}">
+  /* 2026-11-09：nav 定位为「收藏夹」——卡片只保留筛选必需的 data-cat / data-tags。
+   * data-blob（整段中英摘要，152 KB / 592 条）、data-login/platform/output（条件筛选已移除）
+   * 与 data-name-en（只服务被删掉的对照面板）全部去掉；搜索改为在首次输入时从文本惰性建索引。 */
+  return `          <div class="card-wrap" data-cat="${it.cat}" data-tags="${esc(tags.join(' '))}">
           <${tag} class="card${st.cls ? ' ' + st.cls : ''}" id="${resourceId}"${linkAttrs}>
             <span class="c-ic" aria-hidden="true">${esc(it.ic || '◈')}</span>
             <span class="c-nm"><span data-zh>${esc(it.n)}</span><span data-en>${esc(VENDOR_EN[it.n] || it.n)}</span></span>
@@ -330,43 +331,31 @@ const body = `    <section class="section hero">
       <div class="container">
         <p class="eyebrow">SPECUL · EXTERNAL DIRECTORY</p>
         <h1 class="h1"><span class="grad-title"><span data-zh>外部站点</span><span data-en>External sites</span></span></h1>
-        <p class="lede">${biSpan(`本页收录的是其他 AI 网站，不是 Specul 自己产出的内容。共 ${items.length} 个网站，按 ${cats.length} 类组织，每条附说明与链接核验状态；点类目可只看那一类。`, `This page lists other AI sites, not Specul's own content: ${items.length} websites across ${cats.length} categories, each with a description and a link-check status. Category links narrow the list.`)}</p>
+        <p class="lede">${biSpan(`收录 ${items.length} 个其他 AI 网站（不是 Specul 自产内容），按 ${cats.length} 类整理；搜名字或点类目，直接点出去。`, `${items.length} other AI sites (not Specul's own content), in ${cats.length} categories. Search a name or pick a category, then click straight through.`)}</p>
+        <p class="t-sm"><a href="tasks.html">${biSpan(`按任务准备一组资料（${taskPacks.packs.length} 个任务包）→`, `Build a resource set for a task (${taskPacks.packs.length} packs) →`)}</a></p>
         <details><summary>${biSpan("来源与链接核验范围", "Sources and link-check scope")}</summary>
         <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，按条目整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，其中 ${CHECK_DIRECT_N} 个直接 200、${CHECK_BLOCKED_N} 个反爬拦截但站点响应、${CHECK_CHANGED_N} 个改址仍可达；${CHECK_DEAD_N} 个已失效；${CHECK_UNVER_N} 个探测环境受限未能确认——不代表失效）。${items.length} 条收录中，${CHECK_N} 个独立域名纳入该快照（一条收录可含多个链接，重复域名只探测一次）；快照之后新增的条目标为待核验。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, organised into entries; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live — ${CHECK_DIRECT_N} direct 200, ${CHECK_BLOCKED_N} anti-bot but responding, ${CHECK_CHANGED_N} redirected and still reachable; ${CHECK_DEAD_N} dead; ${CHECK_UNVER_N} blocked by the probe environment — not necessarily dead). Of ${items.length} entries, ${CHECK_N} unique domains were covered by that snapshot (one entry may carry several links; duplicate domains are probed once); entries added afterwards are marked unchecked. This page is an index and does not replace each site's own documentation.</span></p>
         </details>
       </div>
     </section>
 
-    <section class="section" id="task-packs">
-      <div class="container">
-        <h2>${biSpan('按任务准备一组资料', 'Build a small resource set for a task')}</h2>
-        <p>${biSpan('先写需要完成什么，再保留有用途的链接。下面给出查找顺序；不按工具多少判断准备是否充分。', 'Define the outcome first, then keep links with a clear purpose. These are search sequences, not quotas or rankings.')}</p>
-${renderTaskPacks(RESOURCE_IDS)}
-      </div>
-    </section>
-    <div class="container">${comparisonPanel()}</div>
     <section class="section" id="dir">
       <div class="container">
         <div class="controls">
           <label class="sr-only" for="q"><span data-zh>搜索</span><span data-en>Search</span></label>
           <input id="q" type="search" placeholder="搜索站名、说明或标签…" data-ui-placeholder-zh="搜索站名、说明或标签…" data-ui-placeholder-en="Search sites, descriptions or tags…" autocomplete="off" />
           ${tagSelect}
-          ${conditionControls(nativeOption)}
+          <button type="button" id="directory-reset" class="reset-btn">${biSpan('清空筛选', 'Clear filters')}</button>
           <div class="chips">
         ${chips}
           </div>
         </div>
-        <p id="empty" class="empty" hidden>${biSpan("没有匹配的条目。", "No matching entries.")}</p>
-
-        <div class="intent">
-          <p class="intent-h">${biSpan('按任务筛选', 'Filter by task')}</p>
-          <div class="intent-grid">
-${INTENT.map((it) => {
+        <p class="intent-rail"><span class="intent-h">${biSpan('按意图', 'By intent')}</span>${INTENT.map((it) => {
   const n = items.filter((i) => i.cat === it.cat).length;
-  return `            <a class="intent-card" href="?cat=${esc(it.cat)}"><b>${biSpan(it.zh, it.en)}</b><span class="intent-n">${n} ${biSpan('条', 'entries')}</span></a>`;
-}).join('\n')}
-          </div>
-        </div>
+  return `<a class="intent-card" href="?cat=${esc(it.cat)}"><b>${biSpan(it.zh, it.en)}</b><span class="intent-n">${n}</span></a>`;
+}).join('')}</p>
+        <p id="empty" class="empty" hidden>${biSpan("没有匹配的条目。", "No matching entries.")}</p>
+        <p id="filtered-count" class="t-sm dim" role="status" aria-live="polite"></p>
 
 ${groups}
       </div>
@@ -415,6 +404,43 @@ const taskSampleCount = buildTaskSamples(BASE, SITE);
 console.log(`  · 任务包样例 ${taskSampleCount} 个文件（虚构输入与设计参考）`);
 fs.writeFileSync(path.join(SITE, 'index.html'), final, 'utf8');
 
+/* 任务包独立页（2026-11-09）：首页定位改回「收藏夹」——搜索 + 分类 + 592 张卡，
+ * 任务包（6 个、含样例与工作表）移到 tasks.html，从 hero 一行链接进入。
+ * 内容一字未删，只是不再占首页首屏。 */
+const tasksBody = `    <section class="section hero">
+      <div class="container">
+        <p class="eyebrow">SPECUL · EXTERNAL DIRECTORY</p>
+        <h1 class="h1"><span class="grad-title"><span data-zh>任务包</span><span data-en>Task packs</span></span></h1>
+        <p class="lede">${biSpan('先写清要完成什么，再按用途挑站点。每个包给出输入、步骤、验收与失败后去查的条目；样例是虚构输入，不是产品运行记录。', 'Define the outcome first, then pick sites by role. Each pack gives inputs, steps, acceptance checks and where to look when it fails; samples are fictional inputs, not product runs.')}</p>
+        <p class="t-sm"><a href="./">${biSpan('← 回到站点目录', '← Back to the directory')}</a></p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+${renderTaskPacks(RESOURCE_IDS, 'index.html')}
+      </div>
+    </section>`;
+const tasksHtml = shell({
+  current: 'nav',
+  title: '任务包 · 外部站点 | 投机取巧',
+  desc: `按任务准备一组外部站点：${taskPacks.packs.length} 个任务包，各自给出输入清单、执行步骤、验收标准与失败后该去查的条目；样例均为虚构输入，不含真实账号或数据。`,
+  canonical: 'https://nav.specul.com/tasks.html',
+  accent: null,
+  body: tasksBody,
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: '任务包 · 外部站点',
+    url: 'https://nav.specul.com/tasks.html',
+    description: `${taskPacks.packs.length} 个按任务组织的资源准备流程。`,
+    inLanguage: 'zh-Hans',
+    isPartOf: { '@type': 'WebSite', name: 'Specul · 投机取巧', url: 'https://specul.com/' },
+  },
+  repo: 'https://github.com/speculcom/ai-sites-directory',
+  headExtra: '',
+});
+fs.writeFileSync(path.join(SITE, 'tasks.html'), tasksHtml, 'utf8');
+
 // ---- site.css：沿用图谱站已调好的基础，再追加目录站特有样式 ----
 // 2026-10-03改：原先读 `_sites/ide/site.css`（旧 IDE 站产物，随 v4 废弃一起删了）。
 // 真相源一直是 `_sites/_template/site.css` —— 各站那几份都是构建时从它复制的副本。
@@ -454,7 +480,43 @@ fs.writeFileSync(
   `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://nav.specul.com/</loc><lastmod>${TODAY}</lastmod></url>
+  <url><loc>https://nav.specul.com/tasks.html</loc><lastmod>${TODAY}</lastmod></url>
 </urlset>
+`,
+  'utf8'
+);
+
+/* llms.txt / llms.en.txt：2026-11-09 之前数据仓根有、产物里没有，
+ * 线上 https://nav.specul.com/llms.txt 一直 404。文件由 gen-repo-docs 生成，这里只同步。 */
+for (const name of ['llms.txt', 'llms.en.txt']) {
+  const src = path.join(BASE, name);
+  if (!fs.existsSync(src)) { console.warn(`⚠ 缺少 ${name}，跳过同步（先跑 gen-repo-docs --write）`); continue; }
+  fs.copyFileSync(src, path.join(SITE, name));
+}
+
+/* README.md：此前是 2026-10 手写后遗留的静态文件，线上一直挂着「硅基导航 · 529 个条目」——
+ * 站名与数字都过期了。改为随构建生成，数字与页面同源。 */
+fs.writeFileSync(
+  path.join(SITE, 'README.md'),
+  `# 外部站点 · AI 网站目录
+
+> https://nav.specul.com/
+
+系统化收录 AI 相关网站。**本站收录 ${items.length} 个条目，按 ${cats.length} 类组织**，每条附一句话说明与链接核验状态。
+延伸领域另有 ${data.items.length - items.length} 条只入库、不上站。
+
+## 内容地图
+
+- \`nav-data.json\` — 唯一真相源：条目 + 分类
+- \`content/*.md\` — 分类页文案
+- \`descriptions.en.json\` — 条目英文描述（键 = 条目名）
+- \`check-results.json\` — 外链可达性结果（\`check-links.mjs\` 生成）
+
+## 边界
+
+- 不收没有官网的条目；不写营销话术（描述必须能从官网自证）
+- 不排名、不打分；过期链接渲染为不可点状态
+- 这是**外部站点目录**，不是本站自产内容
 `,
   'utf8'
 );

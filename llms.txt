@@ -1,4 +1,4 @@
-# 硅基导航（ai-sites-directory）
+# 外部站点（ai-sites-directory）
 
 > AI 相关网站都在哪、各是干什么的。
 

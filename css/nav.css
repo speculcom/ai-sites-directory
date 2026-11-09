@@ -219,3 +219,29 @@ html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
 .task-pack a,.resource-conditions a,.condition-compare a { color: var(--brand); text-decoration: underline; text-underline-offset: .15em; }
 @media print{.controls,.compare-choice,.condition-compare button{display:none}.comparison-card{break-inside:avoid}}
 
+/* 2026-11-09：592 张卡片一次性布局在低端机上很贵。content-visibility 让视口外的卡片
+   跳过渲染与布局，配合 contain-intrinsic-size 避免滚动条跳动。 */
+.card-wrap {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 108px;
+}
+
+/* 2026-11-09：意图入口从 8 张大卡压成一行胶囊 —— 保留「按我想做的事找」这条路，
+   但不再占首屏。 */
+.intent-rail { display:flex; flex-wrap:wrap; align-items:center; gap:.35rem .5rem; margin: var(--sp-3) 0 0; }
+.intent-rail .intent-h { margin:0; flex:none; white-space:nowrap; }
+.intent-rail .intent-card { padding:.2rem .6rem; border-radius:999px; font-size:var(--fs-sm); gap:.4rem; }
+.intent-rail .intent-card:hover { border-color: var(--cyan); }
+
+/* 2026-11-09：手机端分类胶囊改为单行横向滚动 —— 原先换行占 4 行，把站点卡推到首屏之外。 */
+@media (max-width: 720px) {
+  .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: .3rem; scrollbar-width: thin; }
+  .chips .chip { flex: none; }
+  .intent-rail { flex-wrap: nowrap; overflow-x: auto; padding-bottom: .3rem; scrollbar-width: thin; }
+  .intent-rail .intent-card { flex: none; }
+}
+
+/* 2026-11-09：条件筛选控件移除后，补一个轻量「清空筛选」按钮 —— 搜索 + 标签 + 类目
+   三者叠加后如果没有匹配项，需要一个一键回到全部。 */
+.reset-btn { font: inherit; font-size: var(--fs-sm); padding: .45rem .8rem; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--bg); color: var(--ink-mid); cursor: pointer; }
+.reset-btn:hover { border-color: var(--brand-line); color: var(--ink); }
