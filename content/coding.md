@@ -1,6 +1,6 @@
 # AI 编程与 Agent
 
-> 编码助手、终端 Agent 与自动化智能体 · 共 43 条
+> 编码助手、终端 Agent 与自动化智能体 · 共 44 条
 
 ## GitHub Copilot
 
@@ -301,4 +301,11 @@
 - 链接：<https://github.com/aaif-goose/goose>
 - 说明：本地优先的开源通用 agent：桌面应用、CLI 与可嵌入 API 三种形态；由 Block 创建，现属 Agentic AI Foundation，provider 可换成 Ollama 等本地模型。
 - 标签：命令行·开源
+- 核验：未核验
+
+## agent-qa
+
+- 链接：<https://vostride.com>
+- 说明：面向 Web、Android 和 iOS 的自然语言测试智能体，支持持久 memidex 记忆、经验证的自我改进与 CLI/MCP 工作流。
+- 标签：Agent·命令行·本地部署
 - 核验：未核验

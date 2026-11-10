@@ -595,5 +595,6 @@
   "练习：Builder 带引用问答": "Build RAG over 10 site pages and produce 10 answers, a citation table, an evaluation sheet and a failure log, with a 10-point rubric (2026-11-03).",
   "练习：Creator 三件套": "Turn one official source into a short post, an image prompt and a 30-second script, plus five fact rows and two rejected claims (2026-11-03).",
   "练习：Manager 决策备忘录": "Compare API usage with self-hosting on three cost dimensions and deliver a one-page memo, score sheet, five due-diligence questions and an exit plan (2026-11-03).",
-  "自测：20 题（含答案）": "Twenty questions drawn only from verified on-site content, with an answer key and scoring rules; answer first, then check (2026-11-03)."
+  "自测：20 题（含答案）": "Twenty questions drawn only from verified on-site content, with an answer key and scoring rules; answer first, then check (2026-11-03).",
+  "agent-qa": "Natural-language web, Android and iOS QA with persistent memidex memory, validated self-improvement and CLI/MCP workflows."
 }
