@@ -11,11 +11,11 @@
     },
     "shell.mjs": {
       "source": "_sites/_template/shell.mjs",
-      "sha256": "90a0e00e9180151b2709fcbc43a2f7c1b08b157b2cff18259fdbb513eed22157"
+      "sha256": "c6625ef1f12be8bd662fb275bf85140fb49a66c03f60f227b09c79467598cdeb"
     },
     "site.css": {
       "source": "_sites/_template/site.css",
-      "sha256": "640753ff28ca574f0d179e94243e8ef418355662c2a4b51e6ce5980d73bc06f3"
+      "sha256": "00d8cc002fc7cc414b2dfae1039bbc86b3a590b6550fe421108b8557c6bf0062"
     }
   }
 }

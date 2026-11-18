@@ -1,6 +1,6 @@
 # 开发者工具
 
-> 通用开发、后端、效率与低代码工具 · 共 89 条
+> 通用开发、后端、效率与低代码工具 · 共 90 条
 
 ## GitHub
 
@@ -623,4 +623,11 @@
 - 链接：<https://tools.specul.com/mcp/guides/checklist-procurement-access.html>
 - 说明：18 个可直接发给厂商的问题，覆盖身份、数据、日志、模型、合同与退出；附权限矩阵模板（2026-11-03）。
 - 标签：合规
+- 核验：未核验
+
+## Power Automate
+
+- 链接：<https://www.microsoft.com/en-us/power-platform/products/power-automate>
+- 说明：微软的低代码自动化平台：云端 flow、Windows 桌面 RPA、Copilot 与 AI Builder，按租户与环境治理。
+- 标签：工作流 · 企业级
 - 核验：未核验

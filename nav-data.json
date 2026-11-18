@@ -7169,7 +7169,7 @@
     },
     {
       "n": "AI 工具",
-      "d": "262 个 AI 工具对象按 11 大类对比——AI 编程、通用对话、图像/视频/音频生成、深度研究、自动化、框架与运行时、MCP 工具、本地运行器等，每条判断挂官方源，不给总分排名。",
+      "d": "265 个 AI 工具对象按 11 大类对比——AI 编程、通用对话、图像/视频/音频生成、深度研究、自动化、框架与运行时、MCP 工具、本地运行器等，每条判断挂官方源，不给总分排名。",
       "u": "https://tools.specul.com",
       "tag": "IDE·命令行·Agent",
       "ic": "📊",
@@ -7661,7 +7661,7 @@
     },
     {
       "n": "指南：国内可用性怎么读",
-      "d": "用 262 份档案的 cn 字段读直连、主体与备案；给统计口径、限制与四步自查，不做实时可用性承诺（2026-11-03）。",
+      "d": "用 265 份档案的 cn 字段读直连、主体与备案；给统计口径、限制与四步自查，不做实时可用性承诺（2026-11-03）。",
       "u": "https://tools.specul.com/mcp/guides/cn-availability.html",
       "tag": "合规",
       "ic": "🇨🇳",
@@ -7730,6 +7730,36 @@
       "tag": "工作流·学术",
       "ic": "✅",
       "cat": "learn"
+    },
+    {
+      "n": "Open WebUI",
+      "d": "自托管的多模型聊天界面：接 Ollama 与 OpenAI 兼容 API，自带知识库、工具调用与多用户权限。",
+      "u": "https://openwebui.com",
+      "tag": "开源 · 本地部署",
+      "ic": "🧩",
+      "cat": "llm",
+      "old_t": "开源项目",
+      "old_c": "ai"
+    },
+    {
+      "n": "LibreChat",
+      "d": "自托管的多 provider 聊天平台：统一 Anthropic、OpenAI、Google、Bedrock 与 Ollama，并带 Agents、MCP 与代码沙箱。",
+      "u": "https://www.librechat.ai",
+      "tag": "开源 · 本地部署",
+      "ic": "💬",
+      "cat": "llm",
+      "old_t": "开源项目",
+      "old_c": "ai"
+    },
+    {
+      "n": "Power Automate",
+      "d": "微软的低代码自动化平台：云端 flow、Windows 桌面 RPA、Copilot 与 AI Builder，按租户与环境治理。",
+      "u": "https://www.microsoft.com/en-us/power-platform/products/power-automate",
+      "tag": "工作流 · 企业级",
+      "ic": "⚙️",
+      "cat": "tools",
+      "old_t": "自动化平台",
+      "old_c": "tools"
     }
   ]
 }

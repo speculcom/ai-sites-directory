@@ -216,6 +216,93 @@ td a:hover { color: var(--accent, var(--brand)); }
   /* 类型是元信息，压暗一号；链接是这一格唯一的长内容，允许任意位置折行 */
   .panel > table.src td:first-child {color: var(--ink-dim); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .04em;}
 }
+
+/* 资料卡独立页（2026-11-18）
+   cards keep their compact index shape; each card now links to a root-level
+   <id>.html page. These styles only cover the entry page and the two-link
+   footer inside a card. */
+.fx-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 10px;
+}
+.fx-crumb { margin: 0 0 var(--sp-4); font-size: var(--fs-sm); }
+.fx-crumb a { color: var(--ink-dim); }
+.fx-crumb a:hover { color: var(--brand); text-decoration: underline; }
+.fx-entry-link { margin: var(--sp-4) 0 0; font-size: var(--fs-sm); }
+.fx-entry-link a { font-weight: 700; }
+.fx-entry { max-width: 880px; }
+.fx-entry h1 {
+  margin: 10px 0 var(--sp-4);
+  font-size: clamp(26px, 4vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -.015em;
+}
+.fx-entry h1 .fx-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: .48em;
+  font-weight: 650;
+  color: var(--ink-dim);
+  letter-spacing: 0;
+}
+.fx-entry-lead {
+  margin: 0 0 var(--sp-5);
+  font-size: var(--fs-md);
+  line-height: var(--lh-body);
+  color: var(--ink-mid);
+}
+.fx-entry-sec { margin: var(--sp-5) 0; }
+.fx-entry-sec h2 {
+  margin: 0 0 var(--sp-3);
+  font-size: var(--fs-xl);
+  letter-spacing: -.01em;
+}
+.fx-entry .fx-specs {
+  margin: var(--sp-3) 0 0;
+  padding: var(--sp-3);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+.fx-evidence {
+  margin: 0 0 var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  border-left: 3px solid var(--brand);
+  background: var(--panel);
+  border-radius: 0 10px 10px 0;
+}
+.fx-evidence blockquote {
+  margin: 0 0 8px;
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  color: var(--ink);
+}
+.fx-evidence figcaption {
+  font-size: var(--fs-xs);
+  line-height: 1.55;
+  color: var(--ink-dim);
+  overflow-wrap: anywhere;
+}
+.fx-evidence .fx-ev-n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  border-radius: 999px;
+  background: var(--panel-solid);
+  color: var(--ink-mid);
+  font-weight: 700;
+}
+@media (max-width: 560px) {
+  .fx-entry h1 { font-size: var(--fs-xl); }
+  .fx-entry-lead { font-size: var(--fs-sm); }
+  .fx-entry-sec h2 { font-size: var(--fs-lg); }
+  .fx-entry .fx-specs { padding: var(--sp-3); }
+}
 /* ==========================================================================
    nav.css —— 本文件是 **源**，构建时追加到 `site/site.css` 末尾。
    --------------------------------------------------------------------------

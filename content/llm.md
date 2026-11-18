@@ -1,6 +1,6 @@
 # 大模型与对话
 
-> 通用大模型、AI 搜索与提示词生态 · 共 48 条
+> 通用大模型、AI 搜索与提示词生态 · 共 50 条
 
 ## ChatGPT
 
@@ -336,4 +336,18 @@
 - 链接：<https://kagi.com>
 - 说明：付费换隐私的自建索引搜索引擎：无广告无追踪，AI 答案层（FastGPT / Teclis）是附加线。
 - 标签：搜索·学术
+- 核验：未核验
+
+## Open WebUI
+
+- 链接：<https://openwebui.com>
+- 说明：自托管的多模型聊天界面：接 Ollama 与 OpenAI 兼容 API，自带知识库、工具调用与多用户权限。
+- 标签：开源 · 本地部署
+- 核验：未核验
+
+## LibreChat
+
+- 链接：<https://www.librechat.ai>
+- 说明：自托管的多 provider 聊天平台：统一 Anthropic、OpenAI、Google、Bedrock 与 Ollama，并带 Agents、MCP 与代码沙箱。
+- 标签：开源 · 本地部署
 - 核验：未核验

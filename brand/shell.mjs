@@ -56,7 +56,7 @@ export const NAV_ALL = [
   { key: 'learn', href: 'https://learn.specul.com/', zh: '学 AI', en: 'Learn', group: 'daily', live: true },
   { key: 'agent', href: 'https://tools.specul.com/', zh: '工具', en: 'Tools', group: 'daily', live: true },
   { key: 'models', href: 'https://models.specul.com/', zh: '模型', en: 'Models', group: 'daily', live: true },
-  { key: 'demos', href: 'https://demos.specul.com/', zh: '作品库', en: 'Demos', group: 'daily', live: true },
+  { key: 'demos', href: 'https://demos.specul.com/', zh: '作品演示', en: 'Playground', group: 'daily', live: true },
   { key: 'hardware', href: 'https://hardware.specul.com/', zh: '硬件算力', en: 'Compute', group: 'deep', live: true },
   { key: 'papers', href: 'https://papers.specul.com/', zh: 'AI 论文', en: 'AI Papers', group: 'deep', live: true },
   { key: 'chain', href: 'https://chain.specul.com/', zh: '链', en: 'Chain', group: 'deep', live: true },

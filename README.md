@@ -10,7 +10,7 @@ AI 导航的**源仓**（唯一真相源）。
 
 ## 我该怎么读
 
-776 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
+779 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
 
 | 你想干嘛 | 走哪条路 |
 |---|---|
@@ -30,7 +30,7 @@ DNS 在本地解析不了、在云端能打开是常事。所以探测受限的�
 | 路径 | 内容 |
 |---|---|
 | `content/` | 从主数据生成的 12 份分类文档，含条目说明、标签与既有链接核验状态 |
-| `nav-data.json` | **主数据**：776 条条目 / 12 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 592 条 / 11 类） |
+| `nav-data.json` | **主数据**：779 条条目 / 12 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 595 条 / 11 类） |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | 英文映射（分类名 / 标签 / 厂商 / 描述） |
 | `constraints.json` / `conditions.mjs` | 单项使用条件、官方来源与未知项；字段筛选和 2–3 项条件对照 |
 | `task-packs.json` / `task-packs.mjs` | 六个双语任务包、虚构输入、参考结果、随包代码与工作表生成 |
@@ -132,7 +132,7 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 
 | 分类 | 条目数 | 代表站点 |
 |---|---|---|
-| 大模型与对话 | 48 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · 通义千问 …等 48 条 |
+| 大模型与对话 | 50 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · 通义千问 …等 50 条 |
 | AI 编程与 Agent | 43 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …等 43 条 |
 | 多模态生成 | 64 | Canva · Microsoft Designer · Galileo AI · Uizard · 即时 AI · Midjourney …等 64 条 |
 | AI 办公与垂直应用 | 47 | Gamma · Jasper · Copy.ai · Grammarly · 通义听悟 · 讯飞听见 …等 47 条 |
@@ -142,7 +142,7 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 | 机器人与具身智能 | 87 | Tesla Optimus · Figure AI · Boston Dynamics · Unitree 宇树 · 1X Technologies · Agility Robotics …等 87 条 |
 | 学习资源 | 55 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …等 55 条 |
 | 社区与资讯 | 25 | Hacker News · Product Hunt · Reddit r/MachineLearning · Dev.to · Stack Overflow · MIT Technology Review …等 25 条 |
-| 开发者工具 | 89 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …等 89 条 |
+| 开发者工具 | 90 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …等 90 条 |
 
 > 想看全部条目：[`content/`](./content/) 一站一个 md，或 [`nav-data.json`](./nav-data.json)（主数据）。
 > `ext` 延伸领域另有 184 条，构建时不上站，故不在上表。
@@ -154,7 +154,7 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 <!-- STATS:BEGIN generated, do not edit -->
 | 项 | 实测值 |
 |---|---|
-| 条目 | 776 条（对外 592 · ext 184） |
+| 条目 | 779 条（对外 595 · ext 184） |
 | 分类 | 12 类（对外 11 类） |
 | 标签词表 | 93 个（封闭枚举） |
 | 下架标记 | 15 条（Galileo AI · DALL·E · 文心一格 · Sora · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · 腾讯智影 · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code） |

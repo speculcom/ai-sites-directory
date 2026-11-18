@@ -10,7 +10,7 @@ The **source repo** for the directory (single source of truth).
 
 ## How to read this
 
-776 sites live in one file, which nobody is going to scroll through. Go by where you
+779 sites live in one file, which nobody is going to scroll through. Go by where you
 are instead:
 
 | What you want | Where |
@@ -32,7 +32,7 @@ Live version: <https://nav.specul.com/>
 | Path | Content |
 |---|---|
 | `content/` | 12 category documents generated from primary data, with descriptions, tags and existing link-check status |
-| `nav-data.json` | **Primary data**: 776 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 592 items / 11 categories are live) |
+| `nav-data.json` | **Primary data**: 779 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 595 items / 11 categories are live) |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | English mappings (category / tag / vendor / description) |
 | `constraints.json` / `conditions.mjs` | Scoped usage conditions, official sources and unknowns; filters and 2–3-entry condition comparisons |
 | `task-packs.json` / `task-packs.mjs` | Six bilingual task packs, fictional inputs, designed references, bundled sample code and worksheet generation |
@@ -139,7 +139,7 @@ Information about the listed sites belongs to their respective rights holders.
 
 | Category | Items | Examples |
 |---|---|---|
-| LLMs & chat | 48 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · Grok …and 42 more |
+| LLMs & chat | 50 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · Grok …and 44 more |
 | AI coding & agents | 43 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …and 37 more |
 | Multimodal generation | 64 | Canva · Microsoft Designer · Galileo AI · Uizard · Midjourney · Stable Diffusion …and 58 more |
 | Applications | 47 | Gamma · Jasper · Copy.ai · Grammarly · Otter.ai · Notion AI …and 41 more |
@@ -149,7 +149,7 @@ Information about the listed sites belongs to their respective rights holders.
 | Robotics & embodied | 87 | Tesla Optimus · Figure AI · Boston Dynamics · 1X Technologies · Agility Robotics · Apptronik …and 81 more |
 | Learning | 55 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …and 49 more |
 | Community | 25 | Hacker News · Product Hunt · Reddit r/MachineLearning · Dev.to · Stack Overflow · MIT Technology Review …and 19 more |
-| Tools & utilities | 89 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …and 83 more |
+| Tools & utilities | 90 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …and 84 more |
 
 > Full list: [`content/`](./content/) (one markdown file per site) or [`nav-data.json`](./nav-data.json).
 > `ext` (extended fields) has 184 more entries not published on the site, so it is not listed above.
@@ -161,7 +161,7 @@ Information about the listed sites belongs to their respective rights holders.
 <!-- STATS:BEGIN generated, do not edit -->
 | Item | Measured value |
 |---|---|
-| Items | 776 (public 592 · ext 184) |
+| Items | 779 (public 595 · ext 184) |
 | Categories | 12 (11 public) |
 | Tag vocabulary | 93 (closed enum) |
 | Retired | 15 (Galileo AI · DALL·E · Baidu Yige · Sora · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Tencent Zhiying · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code) |
