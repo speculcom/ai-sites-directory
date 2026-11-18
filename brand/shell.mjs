@@ -39,9 +39,9 @@ export const BRAND = {
 /** 全站导航（9 项，顺序固定；各站自己那项由 current 高亮）
  *
  *  2026-11-08 用户定案，按「用户走到哪一步才需要它」重排为三组：
- *    daily    首页 · 学 AI · 工具 · 模型 · 作品库   —— 日常闭环
+ *    daily    首页 · 学 AI · 工具 · 模型 · 作品演示 —— 日常闭环
  *    deep     硬件算力 · AI 论文 · 链               —— 按需深挖，受众从宽到窄
- *    external 外部站点                              —— 外链目录，不是本网内容
+ *    external AI导航                                —— 站外 AI 网站目录，不是本网内容
  *  旧顺序是历史累加出来的（先六站、再插 hardware、补 papers/chain、最后塞 nav），
  *  不是设计出来的；现在把出口站单独成组，避免它被当成第 9 个内容站。
  *
@@ -60,7 +60,7 @@ export const NAV_ALL = [
   { key: 'hardware', href: 'https://hardware.specul.com/', zh: '硬件算力', en: 'Compute', group: 'deep', live: true },
   { key: 'papers', href: 'https://papers.specul.com/', zh: 'AI 论文', en: 'AI Papers', group: 'deep', live: true },
   { key: 'chain', href: 'https://chain.specul.com/', zh: '链', en: 'Chain', group: 'deep', live: true },
-  { key: 'nav', href: 'https://nav.specul.com/', zh: '外部站点', en: 'External', group: 'external', live: true },
+  { key: 'nav', href: 'https://nav.specul.com/', zh: 'AI导航', en: 'AI Directory', group: 'external', live: true },
 ];
 
 /** 渲染用导航：只含已上线站。探针以 NAV.length 为期望项数，未上线站不进这里。 */
@@ -130,7 +130,7 @@ export function drawer(current) {
 ${items}
     </nav>
     <div class="nav-drawer-foot">
-      <p><span data-zh>8 个内容站，外加一个去别处的出口</span><span data-en>Eight content sites, plus one gateway to other sites</span></p>
+      <p><span data-zh>8 个内容站，外加 AI导航（595 个站外 AI 网站）</span><span data-en>Eight content sites, plus AI Directory of 595 off-site AI sites</span></p>
       <nav><a href="https://specul.com/legal.html"><span data-zh>法律条款</span><span data-en>Legal terms</span></a></nav>
     </div>
   </aside>`;
@@ -144,33 +144,31 @@ export const OPEN_SOURCE_LABEL = '<span data-zh>开源</span><span data-en>Open 
 
 /** 底部 tab bar —— 手机端「像 App 一样」的固定导航（2026-10-10 用户要求：分站也要有）
  *
- *  · 标记与 www 首页完全一致（同样 5 项：首页/学 AI/Agent/模型/更多）；
- *    样式在共享 brand.css —— 默认 `display:none`，≤768px 才 `display:flex`；
- *  · 行为**不需要新脚本**：brand.js 已经监听 `.nav-tabbar [aria-controls]` 作为「更多」，
- *    点它开的就是同一个抽屉（实测 www 上可用）；
+ *  2026-11-18 用户定案：不再用「4 入口 + 更多」，9 个站全部直接列出，做成双排：
+ *    上排（日常闭环）首页 / 学 AI / 工具 / 模型 / 作品演示
+ *    下排（按需深挖 + 出口）硬件算力 / AI 论文 / 链 / AI导航
+ *  · 9 项单排会挤到每格 ~40px，字看不清；横滑又会把「硬件算力」切在屏幕外，
+ *    所以分两排、下排字号小一档，用一条细分隔线表示层级；
+ *  · 样式在共享 brand.css：`.nav-tabbar-2row` 负责两排布局，
+ *    默认 display:none，≤768px 才显示；
+ *  · 抽屉仍然保留（汉堡在 769–900px 是唯一入口；手机上作为大字号备选）；
  *  · 页脚留白靠 <body class="has-tabbar"> 触发 brand.css 里的
  *    `body.has-tabbar .site-footer { padding-bottom: … }` —— 漏了这个类，
- *    底部 tab bar 会盖住页脚最后一行；
- *  · 只有 4 个入口 + 「更多」，vg / nav 不单列：和主站一样放进抽屉，
- *    5 个格子是手机上的舒适密度（6 个挤、4 个太空）。
+ *    底部 tab bar 会盖住页脚最后一行。
  */
 export function tabbar(current) {
-  const items = [
-    { key: 'www', ti: '◎', zh: '首页', en: 'Home', plain: false },
-    { key: 'learn', ti: '▤', zh: '学 AI', en: 'Learn', plain: false },
-    { key: 'agent', ti: '◈', zh: '工具', en: 'Tools', plain: false },
-    { key: 'models', ti: '▦', zh: '模型', en: 'Models', plain: false },
-  ].map(({ key, ti, zh, en, plain }) => {
+  const TI = { www: '◎', learn: '▤', agent: '◈', models: '▦', demos: '▷', hardware: '▣', papers: '▥', chain: '◇', nav: '↗' };
+  const link = (key) => {
     const n = NAV.find((x) => x.key === key);
     const cur = key === current ? ' aria-current="page"' : '';
-    // plain=true 的项中英同名，走单节点（避免英文态出现两个同词）
-    const label = plain ? zh : `<span data-zh>${zh}</span><span data-en>${en}</span>`;
-    return `  <a href="${n.href}"${cur}><span class="ti" aria-hidden="true">${ti}</span>${label}</a>`;
-  }).join('\n');
+    const ext = n.group === 'external' ? ' data-nav-group="external"' : '';
+    return `    <a href="${n.href}"${cur}${ext}><span class="ti" aria-hidden="true">${TI[key]}</span><span data-zh>${n.zh}</span><span data-en>${n.en}</span></a>`;
+  };
+  const row = (keys, cls) => `  <div class="tb-row tb-row-${cls}">\n${keys.map(link).join('\n')}\n  </div>`;
 
-  return `<nav class="nav-tabbar" aria-label="快捷导航">
-${items}
-  <button type="button" id="tabMore" aria-controls="navDrawer" aria-expanded="false"><span class="ti" aria-hidden="true">⋯</span><span data-zh>更多</span><span data-en>More</span></button>
+  return `<nav class="nav-tabbar nav-tabbar-2row" aria-label="快捷导航">
+${row(['www', 'learn', 'agent', 'models', 'demos'], 'main')}
+${row(['hardware', 'papers', 'chain', 'nav'], 'deep')}
 </nav>`;
 }
 

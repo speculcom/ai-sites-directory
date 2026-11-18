@@ -329,9 +329,9 @@ const INTENT = [
 
 const body = `    <section class="section hero">
       <div class="container">
-        <p class="eyebrow">SPECUL · EXTERNAL DIRECTORY</p>
-        <h1 class="h1"><span class="grad-title"><span data-zh>外部站点</span><span data-en>External sites</span></span></h1>
-        <p class="lede">${biSpan(`收录 ${items.length} 个其他 AI 网站（不是 Specul 自产内容），按 ${cats.length} 类整理；搜名字或点类目，直接点出去。`, `${items.length} other AI sites (not Specul's own content), in ${cats.length} categories. Search a name or pick a category, then click straight through.`)}</p>
+        <p class="eyebrow">SPECUL · AI DIRECTORY</p>
+        <h1 class="h1"><span class="grad-title"><span data-zh>AI导航</span><span data-en>AI Directory</span></span></h1>
+        <p class="lede">${biSpan(`收录 ${items.length} 个站外 AI 网站（不是 Specul 自产内容），按 ${cats.length} 类整理；搜名字或点类目，直接点出去。`, `${items.length} off-site AI sites (not Specul's own content), in ${cats.length} categories. Search a name or pick a category, then click straight through.`)}</p>
         <p class="t-sm"><a href="tasks.html">${biSpan(`按任务准备一组资料（${taskPacks.packs.length} 个任务包）→`, `Build a resource set for a task (${taskPacks.packs.length} packs) →`)}</a></p>
         <details><summary>${biSpan("来源与链接核验范围", "Sources and link-check scope")}</summary>
         <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，按条目整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，其中 ${CHECK_DIRECT_N} 个直接 200、${CHECK_BLOCKED_N} 个反爬拦截但站点响应、${CHECK_CHANGED_N} 个改址仍可达；${CHECK_DEAD_N} 个已失效；${CHECK_UNVER_N} 个探测环境受限未能确认——不代表失效）。${items.length} 条收录中，${CHECK_N} 个独立域名纳入该快照（一条收录可含多个链接，重复域名只探测一次）；快照之后新增的条目标为待核验。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, organised into entries; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live — ${CHECK_DIRECT_N} direct 200, ${CHECK_BLOCKED_N} anti-bot but responding, ${CHECK_CHANGED_N} redirected and still reachable; ${CHECK_DEAD_N} dead; ${CHECK_UNVER_N} blocked by the probe environment — not necessarily dead). Of ${items.length} entries, ${CHECK_N} unique domains were covered by that snapshot (one entry may carry several links; duplicate domains are probed once); entries added afterwards are marked unchecked. This page is an index and does not replace each site's own documentation.</span></p>
@@ -363,8 +363,8 @@ ${groups}
 
 const html = shell({
   current: 'nav',
-  title: '外部站点 · AI 网站目录 | 投机取巧',
-  desc: `外部网站目录，不是 Specul 自己产出的内容：系统化收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织；每条附一句话说明、标签、可达性核验状态与官网链接，并按「我想做什么」给出入口。`,
+  title: `AI导航 · ${items.length} 个站外 AI 网站 | 投机取巧`,
+  desc: `AI导航，不是 Specul 自己产出的内容：系统化收录 ${items.length} 个站外 AI 网站，按 ${cats.length} 类组织；每条附一句话说明、标签、可达性核验状态与官网链接，并按「我想做什么」给出入口。`,
   canonical: 'https://nav.specul.com/',
   /* ⚠ 2026-10-10 不再传 accent（原 '#22d3c5'青色）。
    * 用户定案「不需要分站专属色，整体与首页一致」；brand.css 的 --accent 是
@@ -377,9 +377,9 @@ const html = shell({
   jsonLd: {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: '外部站点 · AI 网站目录',
+    name: 'AI导航 · 站外 AI 网站目录',
     url: 'https://nav.specul.com/',
-    description: `系统化收录 ${items.length} 个 AI 相关网站，按 ${cats.length} 类组织。`,
+    description: `系统化收录 ${items.length} 个站外 AI 网站，按 ${cats.length} 类组织。`,
     inLanguage: 'zh-Hans',
     isPartOf: { '@type': 'WebSite', name: 'Specul · 投机取巧', url: 'https://specul.com/' },
     mainEntity: {
@@ -409,7 +409,7 @@ fs.writeFileSync(path.join(SITE, 'index.html'), final, 'utf8');
  * 内容一字未删，只是不再占首页首屏。 */
 const tasksBody = `    <section class="section hero">
       <div class="container">
-        <p class="eyebrow">SPECUL · EXTERNAL DIRECTORY</p>
+        <p class="eyebrow">SPECUL · AI DIRECTORY</p>
         <h1 class="h1"><span class="grad-title"><span data-zh>任务包</span><span data-en>Task packs</span></span></h1>
         <p class="lede">${biSpan('先写清要完成什么，再按用途挑站点。每个包给出输入、步骤、验收与失败后去查的条目；样例是虚构输入，不是产品运行记录。', 'Define the outcome first, then pick sites by role. Each pack gives inputs, steps, acceptance checks and where to look when it fails; samples are fictional inputs, not product runs.')}</p>
         <p class="t-sm"><a href="./">${biSpan('← 回到站点目录', '← Back to the directory')}</a></p>
@@ -422,15 +422,15 @@ ${renderTaskPacks(RESOURCE_IDS, 'index.html')}
     </section>`;
 const tasksHtml = shell({
   current: 'nav',
-  title: '任务包 · 外部站点 | 投机取巧',
-  desc: `按任务准备一组外部站点：${taskPacks.packs.length} 个任务包，各自给出输入清单、执行步骤、验收标准与失败后该去查的条目；样例均为虚构输入，不含真实账号或数据。`,
+  title: '任务包 · AI导航 | 投机取巧',
+  desc: `按任务准备一组站外 AI 网站：${taskPacks.packs.length} 个任务包，各自给出输入清单、执行步骤、验收标准与失败后该去查的条目；样例均为虚构输入，不含真实账号或数据。`,
   canonical: 'https://nav.specul.com/tasks.html',
   accent: null,
   body: tasksBody,
   jsonLd: {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: '任务包 · 外部站点',
+    name: '任务包 · AI导航',
     url: 'https://nav.specul.com/tasks.html',
     description: `${taskPacks.packs.length} 个按任务组织的资源准备流程。`,
     inLanguage: 'zh-Hans',
@@ -498,11 +498,11 @@ for (const name of ['llms.txt', 'llms.en.txt']) {
  * 站名与数字都过期了。改为随构建生成，数字与页面同源。 */
 fs.writeFileSync(
   path.join(SITE, 'README.md'),
-  `# 外部站点 · AI 网站目录
+  `# AI导航 · 站外 AI 网站目录
 
 > https://nav.specul.com/
 
-系统化收录 AI 相关网站。**本站收录 ${items.length} 个条目，按 ${cats.length} 类组织**，每条附一句话说明与链接核验状态。
+系统化收录站外 AI 网站。**本站收录 ${items.length} 个条目，按 ${cats.length} 类组织**，每条附一句话说明与链接核验状态。
 延伸领域另有 ${data.items.length - items.length} 条只入库、不上站。
 
 ## 内容地图
@@ -516,7 +516,7 @@ fs.writeFileSync(
 
 - 不收没有官网的条目；不写营销话术（描述必须能从官网自证）
 - 不排名、不打分；过期链接渲染为不可点状态
-- 这是**外部站点目录**，不是本站自产内容
+- 这是**站外 AI 网站目录**，不是本站自产内容
 `,
   'utf8'
 );

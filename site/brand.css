@@ -383,9 +383,22 @@ box-shadow: 0 0 0 4px var(--brand-soft);
   padding-block: var(--sp-2); transition: color .16s var(--ease);
 }
 .nav-links > a:hover { color: var(--ink); }
+/* 标签永远不拆行：导航站激活态加粗后，「AI导航 ↗」曾在 1440px 被挤成两行，
+   箭头掉到胶囊外面。后来改成双伪元素分工（下划线 ::before、箭头 ::after），
+   这道 nowrap 保险仍留在共享层。 */
+.nav-links > a { white-space: nowrap; }
+/* 901–1180px：品牌 + 9 项 + 三个圆钮会把导航挤成逐字竖排（1024px 实测每项高 65px）。
+   这一段不收进抽屉（抽屉只在 ≤900 出现），改为缩间距、缩字号。 */
+@media (max-width: 1180px) and (min-width: 901px) {
+  .nav-links { gap: 14px; }
+  .nav-links > a { font-size: 13px; }
+  .site-bar { gap: var(--sp-3); }
+}
 
 .nav-links > a[aria-current] { color: var(--cat-violet-ink); font-weight: 800; }
-.nav-links > a[aria-current]::after {
+/* 下划线用 ::before，把 ::after 让给外链箭头（AI导航 激活时两者会同时命中，
+   之前都挂在 ::after 上，箭头被 2px 高的下划线盒子挤到胶囊外面）。 */
+.nav-links > a[aria-current]::before {
   content: ""; position: absolute; left: 0; right: 0; bottom: 2px;
   height: 2px; border-radius: 2px; background: var(--brand);
 }
@@ -510,6 +523,14 @@ a, code, kbd, samp { overflow-wrap: anywhere; }
 }
 .nav-tabbar a[aria-current="page"], .nav-tabbar button[aria-expanded="true"] { color: var(--brand); }
 .nav-tabbar .ti { font-size: 17px; line-height: 1; }
+/* 2026-11-18：9 项双排。旧的「4 入口 + 更多」结构没有 .nav-tabbar-2row，
+   所以这些规则不会影响尚未重建的站；两排布局只对带该类的新标记生效。 */
+.nav-tabbar-2row { flex-direction: column; }
+.nav-tabbar-2row .tb-row { display: flex; width: 100%; }
+.nav-tabbar-2row .tb-row + .tb-row { margin-top: 2px; padding-top: 3px; border-top: 1px solid var(--line); }
+.nav-tabbar-2row .tb-row-deep a { color: var(--ink-dim); font-size: 10px; }
+.nav-tabbar-2row .tb-row-deep a .ti { font-size: 14px; }
+.nav-tabbar-2row .tb-row-deep a[aria-current="page"] { color: var(--brand); }
 @media (max-width: 900px) {
   .nav-burger { display: flex; }
   .nav-scrim, .nav-drawer { display: flex; }
@@ -524,7 +545,7 @@ a, code, kbd, samp { overflow-wrap: anywhere; }
      页脚再写一遍在 390px 下要多占两三行。HTML 里仍然保留（无脚本也可达）。 */
   .foot-links { display: none; }
   /* 有 tab bar 的页面要给页脚留出底部空间，否则最后一行被挡住 */
-  body.has-tabbar .site-footer, body.has-tabbar .foot { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  body.has-tabbar .site-footer, body.has-tabbar .foot { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-burger i, .nav-scrim, .nav-drawer { transition: none !important; }
@@ -1074,7 +1095,10 @@ html[data-lang="en"] .nav-links > a {
   }
   .nav-tabbar a, .nav-tabbar button { min-height: 52px; border-radius: 18px; justify-content: center; font-size: 11px; }
   .nav-tabbar a[aria-current="page"], .nav-tabbar button[aria-expanded="true"] { background: var(--brand-soft); }
-  body.has-tabbar .site-footer { padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
+  /* 两排时上排 48px、下排 44px：9 格仍满足 44px 最小触控高度，总高约 100px。 */
+  .nav-tabbar-2row a { min-height: 48px; border-radius: 16px; }
+  .nav-tabbar-2row .tb-row-deep a { min-height: 44px; border-radius: 14px; font-size: 10px; }
+  body.has-tabbar .site-footer { padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
