@@ -523,8 +523,16 @@ a, code, kbd, samp { overflow-wrap: anywhere; }
 }
 .nav-tabbar a[aria-current="page"], .nav-tabbar button[aria-expanded="true"] { color: var(--brand); }
 .nav-tabbar .ti { font-size: 17px; line-height: 1; }
-/* 2026-11-18：9 项双排。旧的「4 入口 + 更多」结构没有 .nav-tabbar-2row，
-   所以这些规则不会影响尚未重建的站；两排布局只对带该类的新标记生效。 */
+/* 2026-11-18：9 项单排、铺满一屏。旧「4 入口 + 更多」与双排结构都没有
+   .nav-tabbar-1row，所以这些规则不会影响尚未重建的站。底栏用短标签：
+   学AI / 演示 / 算力 / AI论文，正式站名仍以顶栏、抽屉、页脚为准。 */
+.nav-tabbar-1row { gap: 0; }
+.nav-tabbar-1row a {
+  min-width: 0; gap: 1px; padding: 6px 0 5px;
+  white-space: nowrap; letter-spacing: -0.1px;
+}
+/* 临时兼容：2026-11-18 早批重建的 demos 仍带双排 5+4 标记。
+   等它下一次用新 shell 重建、换成 .nav-tabbar-1row 后，这段可删。 */
 .nav-tabbar-2row { flex-direction: column; }
 .nav-tabbar-2row .tb-row { display: flex; width: 100%; }
 .nav-tabbar-2row .tb-row + .tb-row { margin-top: 2px; padding-top: 3px; border-top: 1px solid var(--line); }
@@ -545,7 +553,8 @@ a, code, kbd, samp { overflow-wrap: anywhere; }
      页脚再写一遍在 390px 下要多占两三行。HTML 里仍然保留（无脚本也可达）。 */
   .foot-links { display: none; }
   /* 有 tab bar 的页面要给页脚留出底部空间，否则最后一行被挡住 */
-  body.has-tabbar .site-footer, body.has-tabbar .foot { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
+  body.has-tabbar .site-footer, body.has-tabbar .foot { padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px)); }
+  body.has-tabbar-1row .site-footer, body.has-tabbar-1row .foot { padding-bottom: calc(78px + env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-burger i, .nav-scrim, .nav-drawer { transition: none !important; }
@@ -1093,12 +1102,25 @@ html[data-lang="en"] .nav-links > a {
     bottom: max(8px, env(safe-area-inset-bottom, 0px)); border: 1px solid var(--line-mid);
     border-radius: 24px; padding: 5px; box-shadow: var(--shadow-hi);
   }
+  /* 单排 9 项铺满横向空间：左右贴边，只留安全区；顶部圆角保留。 */
+  .nav-tabbar-1row {
+    left: 0; right: 0; bottom: 0; border-left: 0; border-right: 0; border-bottom: 0;
+    border-radius: 20px 20px 0 0;
+    padding: 4px max(4px, env(safe-area-inset-right, 0px)) calc(4px + env(safe-area-inset-bottom, 0px)) max(4px, env(safe-area-inset-left, 0px));
+  }
   .nav-tabbar a, .nav-tabbar button { min-height: 52px; border-radius: 18px; justify-content: center; font-size: 11px; }
   .nav-tabbar a[aria-current="page"], .nav-tabbar button[aria-expanded="true"] { background: var(--brand-soft); }
-  /* 两排时上排 48px、下排 44px：9 格仍满足 44px 最小触控高度，总高约 100px。 */
+  /* 9 项单排：390px 用 11px；≤360px 降到 10px，保证「AI论文」不被截断。 */
+  .nav-tabbar-1row a { min-height: 52px; border-radius: 14px; padding: 5px 0 4px; font-size: 11px; }
+  /* 兼容早批双排页（demos）；新页不会再命中这段。 */
   .nav-tabbar-2row a { min-height: 48px; border-radius: 16px; }
   .nav-tabbar-2row .tb-row-deep a { min-height: 44px; border-radius: 14px; font-size: 10px; }
-  body.has-tabbar .site-footer { padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px)); }
+  body.has-tabbar .site-footer { padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px)); }
+  body.has-tabbar-1row .site-footer { padding-bottom: calc(78px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (max-width: 360px) {
+  .nav-tabbar-1row a { font-size: 10px; }
+  .nav-tabbar-1row .ti { font-size: 15px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

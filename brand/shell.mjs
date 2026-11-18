@@ -144,12 +144,11 @@ export const OPEN_SOURCE_LABEL = '<span data-zh>开源</span><span data-en>Open 
 
 /** 底部 tab bar —— 手机端「像 App 一样」的固定导航（2026-10-10 用户要求：分站也要有）
  *
- *  2026-11-18 用户定案：不再用「4 入口 + 更多」，9 个站全部直接列出，做成双排：
- *    上排（日常闭环）首页 / 学 AI / 工具 / 模型 / 作品演示
- *    下排（按需深挖 + 出口）硬件算力 / AI 论文 / 链 / AI导航
- *  · 9 项单排会挤到每格 ~40px，字看不清；横滑又会把「硬件算力」切在屏幕外，
- *    所以分两排、下排字号小一档，用一条细分隔线表示层级；
- *  · 样式在共享 brand.css：`.nav-tabbar-2row` 负责两排布局，
+ *  2026-11-18 用户定案：9 个站全部直接列出，单排铺满一屏；底部空间只够短标签，
+ *  所以底栏用一套自己的简称，不改变顶栏/抽屉/页脚的正式站名：
+ *    首页 / 学AI / 工具 / 模型 / 演示 / 算力 / AI论文 / 链 / AI导航
+ *  · 9 项单排会挤到每格 ~40px，短标签 + 满宽排布后 390px 与 320px 都放得下；
+ *  · 样式在共享 brand.css：`.nav-tabbar-1row` 负责单排、满宽与紧凑字号，
  *    默认 display:none，≤768px 才显示；
  *  · 抽屉仍然保留（汉堡在 769–900px 是唯一入口；手机上作为大字号备选）；
  *  · 页脚留白靠 <body class="has-tabbar"> 触发 brand.css 里的
@@ -158,17 +157,28 @@ export const OPEN_SOURCE_LABEL = '<span data-zh>开源</span><span data-en>Open 
  */
 export function tabbar(current) {
   const TI = { www: '◎', learn: '▤', agent: '◈', models: '▦', demos: '▷', hardware: '▣', papers: '▥', chain: '◇', nav: '↗' };
+  /* 底栏专用短标签：只在这里缩短，不影响 NAV / 顶栏 / 抽屉 / 页脚。 */
+  const TAB = {
+    www: ['首页', 'Home'],
+    learn: ['学AI', 'Learn'],
+    agent: ['工具', 'Tools'],
+    models: ['模型', 'Models'],
+    demos: ['演示', 'Demos'],
+    hardware: ['算力', 'Chips'],
+    papers: ['AI论文', 'Papers'],
+    chain: ['链', 'Chain'],
+    nav: ['AI导航', 'AI Nav'],
+  };
   const link = (key) => {
     const n = NAV.find((x) => x.key === key);
+    const [zh, en] = TAB[key];
     const cur = key === current ? ' aria-current="page"' : '';
     const ext = n.group === 'external' ? ' data-nav-group="external"' : '';
-    return `    <a href="${n.href}"${cur}${ext}><span class="ti" aria-hidden="true">${TI[key]}</span><span data-zh>${n.zh}</span><span data-en>${n.en}</span></a>`;
+    return `    <a href="${n.href}"${cur}${ext}><span class="ti" aria-hidden="true">${TI[key]}</span><span data-zh>${zh}</span><span data-en>${en}</span></a>`;
   };
-  const row = (keys, cls) => `  <div class="tb-row tb-row-${cls}">\n${keys.map(link).join('\n')}\n  </div>`;
 
-  return `<nav class="nav-tabbar nav-tabbar-2row" aria-label="快捷导航">
-${row(['www', 'learn', 'agent', 'models', 'demos'], 'main')}
-${row(['hardware', 'papers', 'chain', 'nav'], 'deep')}
+  return `<nav class="nav-tabbar nav-tabbar-1row" aria-label="快捷导航">
+${NAV.map((n) => link(n.key)).join('\n')}
 </nav>`;
 }
 
@@ -234,7 +244,7 @@ ${accent ? `  <style>:root { --accent: ${accent}; }</style>\n` : ''}${headExtra 
      现在只保留头部那一处 —— 单一真相源，且可被主题覆盖。
      ⚠ 这段注释里**不能出现反引号**：它在模板字符串内部，反引号会提前结束模板
      （写这段时踩了第 4 次；pitfalls 里早有记录）。 -->
-<body class="brand-ambient has-tabbar">
+<body class="brand-ambient has-tabbar has-tabbar-1row">
   <a class="t-skip" href="#main"><span data-zh>跳到主要内容</span><span data-en>Skip to main content</span></a>
 ${header(current)}
   <main id="main">
