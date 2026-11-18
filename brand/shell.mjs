@@ -151,9 +151,9 @@ export const OPEN_SOURCE_LABEL = '<span data-zh>开源</span><span data-en>Open 
  *  · 样式在共享 brand.css：`.nav-tabbar-1row` 负责单排、满宽与紧凑字号，
  *    默认 display:none，≤768px 才显示；
  *  · 抽屉仍然保留（汉堡在 769–900px 是唯一入口；手机上作为大字号备选）；
- *  · 页脚留白靠 <body class="has-tabbar"> 触发 brand.css 里的
- *    `body.has-tabbar .site-footer { padding-bottom: … }` —— 漏了这个类，
- *    底部 tab bar 会盖住页脚最后一行。
+ *  · 页脚留白靠 <body class="has-tabbar has-tabbar-1row"> 触发 brand.css 里的
+ *    `body.has-tabbar-1row .site-footer { padding-bottom: … }` —— 漏了这个类，
+ *    底部 tab bar 会盖住页脚最后一行；早批双排页只有 has-tabbar，走 128px 兜底。
  */
 export function tabbar(current) {
   const TI = { www: '◎', learn: '▤', agent: '◈', models: '▦', demos: '▷', hardware: '▣', papers: '▥', chain: '◇', nav: '↗' };

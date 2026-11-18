@@ -553,7 +553,7 @@ a, code, kbd, samp { overflow-wrap: anywhere; }
      页脚再写一遍在 390px 下要多占两三行。HTML 里仍然保留（无脚本也可达）。 */
   .foot-links { display: none; }
   /* 有 tab bar 的页面要给页脚留出底部空间，否则最后一行被挡住 */
-  body.has-tabbar .site-footer, body.has-tabbar .foot { padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px)); }
+  body.has-tabbar .site-footer, body.has-tabbar .foot { padding-bottom: calc(128px + env(safe-area-inset-bottom, 0px)); }
   body.has-tabbar-1row .site-footer, body.has-tabbar-1row .foot { padding-bottom: calc(78px + env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1115,12 +1115,14 @@ html[data-lang="en"] .nav-links > a {
   /* 兼容早批双排页（demos）；新页不会再命中这段。 */
   .nav-tabbar-2row a { min-height: 48px; border-radius: 16px; }
   .nav-tabbar-2row .tb-row-deep a { min-height: 44px; border-radius: 14px; font-size: 10px; }
-  body.has-tabbar .site-footer { padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px)); }
+  body.has-tabbar .site-footer { padding-bottom: calc(128px + env(safe-area-inset-bottom, 0px)); }
   body.has-tabbar-1row .site-footer { padding-bottom: calc(78px + env(safe-area-inset-bottom, 0px)); }
 }
 @media (max-width: 360px) {
   .nav-tabbar-1row a { font-size: 10px; }
   .nav-tabbar-1row .ti { font-size: 15px; }
+  /* 320px 英文态：Models / Demos 用 10px 会几乎贴在一起，单独降一档。 */
+  html[data-lang="en"] .nav-tabbar-1row a { font-size: 9px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
