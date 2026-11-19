@@ -2,9 +2,8 @@ import { fileURLToPath } from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import {validateConditions, conditionDetails} from './conditions.mjs';
+import {validateConditions} from './conditions.mjs';
 import {buildTaskSamples, renderTaskPacks, taskPacks} from './task-packs.mjs';
-import { vizFor } from '../../_audit/viz.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 // 生成 nav 独立站静态文件（复用统一骨架 shell.mjs，保证品牌一致）
@@ -160,40 +159,19 @@ function card(it) {
   const resourceId = anchorId(it.n);
   RESOURCE_IDS.set(it.n, resourceId);
   const st = linkState(it);
-  const tags = (it.tag || '').split('·').filter(Boolean);
   const dead = st.cls === 'is-dead';
   const tag = dead ? 'div' : 'a';
   const linkAttrs = dead ? '' : ` href="${esc(it.u)}" target="_blank" rel="noopener"`;
-  /* T31（2026-10-22）：「本站有档案 →」标注。
-   * ⚠ 卡片本体是 <a>（is-dead 时是 <div>）——档案链接**不能嵌套进 <a>**
-   *   （嵌套 <a> 会被 HTML 解析器静默吞掉，本仓踩过）。所以用 .card-wrap 包裹，
-   *   档案 <a> 作为卡片的**兄弟元素**放在卡外下方。
-   * ⚠ 筛选用的 data-cat/data-tags/data-blob 移到 wrapper 上（筛选隐藏的是 wrapper，
-   *   卡片随之隐藏；档案链接也跟着走，不会出现「卡片没了但标注还在」）。 */
-  const dos = DOSSIER[it.n];
-  const dosHref = dos ? `https://tools.specul.com/${dos.split('/')[0]}/${dos.split('/')[1]}.html` : '';
-  /* B2（2026-10-09）：`data-tags` 供标签筛选用 —— 存**拆分后的标签**（空格分隔），
-   * 不是原始串。分类筛选看 data-cat，标签筛选看它，两者独立、可叠加。 */
-  /* 2026-11-09：nav 定位为「收藏夹」——卡片只保留筛选必需的 data-cat / data-tags。
-   * data-blob（整段中英摘要，152 KB / 592 条）、data-login/platform/output（条件筛选已移除）
-   * 与 data-name-en（只服务被删掉的对照面板）全部去掉；搜索改为在首次输入时从文本惰性建索引。 */
-  return `          <div class="card-wrap" data-cat="${it.cat}" data-tags="${esc(tags.join(' '))}">
-          <${tag} class="card${st.cls ? ' ' + st.cls : ''}" id="${resourceId}"${linkAttrs}>
-            <span class="c-ic" aria-hidden="true">${esc(it.ic || '◈')}</span>
+  /* 2026-11-19：目录页回到「最快跳出去」。
+   * 卡片只留站名、一句话说明和打不开提示；图标、标签、档案入口、条件折叠
+   * 全部撤掉 —— 625 条里任何一项都是让人多读一行、晚点一次外链的噪音。 */
+  return `          <div class="card-wrap" data-cat="${it.cat}">
+          <${tag} class="c-link${st.cls ? ' ' + st.cls : ''}" id="${resourceId}"${linkAttrs}>
             <span class="c-nm"><span data-zh>${esc(it.n)}</span><span data-en>${esc(VENDOR_EN[it.n] || it.n)}</span></span>
             <span class="c-ds"><span data-zh>${esc(it.d)}</span><span data-en>${esc(DESC_EN[it.n] || it.d)}</span></span>
-${tags.length ? `            <span class="c-tg">${tags.map((t) => {
-          const en = TAG_EN[t];
-          const hasCJK = /[\u4e00-\u9fff]/.test(t);
-          // 无映射且原值纯英文 → 直接输出（英文态显示它本身，正确）
-          if (!en) return `<i>${esc(t)}</i>`;
-          // 有映射且不含中文 → 只输出一次（GPT→GPT，否则会出现「GPTGPT」）
-          if (en === t && !hasCJK) return `<i>${esc(t)}</i>`;
-          // 其余情况（含 identity 映射的中文标签如「A/B测试」）→ 必须双语包裹。
-          // 否则英文态因为没有 data-en 可切换，会继续显示中文（实测渲染态 1 处残留）。
-          return `<i><span data-zh>${esc(t)}</span><span data-en>${esc(en)}</span></i>`;
-        }).join('')}</span>\n` : ''}${st.note ? `            <span class="c-warn">${st.note}</span>\n` : ''}          </${tag}>
-${dos ? `          <a class="c-dossier" href="${dosHref}">${biSpan('本站有档案 →', 'Full profile →')}</a>\n` : ''}${conditionDetails(it.n)}          </div>`;
+${st.note ? `            <span class="c-warn">${st.note}</span>` : ''}
+          </${tag}>
+          </div>`;
 }
 
 // ---- 「零中文」检查：英文态是否还有中文产品名 ----
@@ -272,9 +250,8 @@ const groups = cats
     // **DOM 不重渲染** → 必须在 HTML 里同时给出中英，由 CSS 按 [data-lang] 选显。
     // 构建期判断语言是错的（那样只能生成一种，构建后无法切换）。
     var cn = CAT_EN[c.code] || {};
-    return `      <section class="cat-group" data-cat="${c.code}">
+    return `      <section class="cat-group" id="cat-${c.code}" data-cat="${c.code}">
         <h2 class="cat-h"><span class="cat-dot" aria-hidden="true"></span><span data-zh>${esc(c.name)}</span><span data-en>${esc(cn.name || c.name)}</span><em>${list.length}</em></h2>
-        <p class="cat-sub"><span data-zh>${esc(c.desc)}</span><span data-en>${esc(cn.desc || c.desc)}</span></p>
         <div class="grid">
 ${list.map(card).join('\n')}
         </div>
@@ -300,71 +277,36 @@ const chips = ['<button class="chip is-on" data-cat="all">'
   )
   .join('\n        ');
 
-/* B2（2026-10-09）：标签筛选下拉。
- * 选项 = **在站条目实际用到的标签**（不是整个词表 —— 词表里 unused 的标签放进来就是死选项）。
- * 按出现次数降序（常用的在前），标签数相同时按词表顺序，保证**产物确定**。
- * ⚠ `<option>` 里不能放 HTML（浏览器只按纯文本渲染），所以标签英文用「中文 / English」纯文本。 */
-const tagCount = {};
-for (const i of items) for (const t of String(i.tag || '').split('·').map((x) => x.trim()).filter(Boolean)) tagCount[t] = (tagCount[t] || 0) + 1;
-const tagList = Object.keys(tagCount).sort((a, b) => (tagCount[b] - tagCount[a]) || a.localeCompare(b, 'zh'));
-const tagSelect = `<label class="sr-only" for="tag"><span data-zh>按标签筛选</span><span data-en>Filter by tag</span></label>
-          <select id="tag" class="tagsel">${nativeOption('', '全部标签', 'All tags')}${
-  tagList.map((t) => nativeOption(t, t + "（" + tagCount[t] + "）", (TAG_EN[t] || t) + " (" + tagCount[t] + ")")).join('')
-}</select>`;
+/* 2026-11-19：标签下拉与「按意图」入口撤掉。
+ * 目录页先给搜索 + 分类两组够用的筛选，剩下的屏幕留给 625 个站本身。 */
 
-/* B4（2026-10-09）：按「我想做什么」组织入口。
- * 做法上**不新造一套筛选**，而是链进已有的 `?cat=` 深链（B1/B2 建的）——
- *   这样入口与筛选是同一个真相源，不会出现「入口说 30 条、点进去 27 条」。
- * 数字**从数据算**（items 里该分类的条数），不手写。
- * 只列「意图明确」的分类：把 12 类硬套成 12 个意图反而是噪声。 */
-const INTENT = [
-  { cat: 'coding', zh: '我想写代码', en: 'I want to write code' },
-  { cat: 'gen', zh: '我想做图 / 视频 / 音频', en: 'I want to make images, video or audio' },
-  { cat: 'model', zh: '我想挑模型或找权重', en: 'I want to pick a model or find weights' },
-  { cat: 'app', zh: '我想找个能直接用的 AI 产品', en: 'I want a ready-to-use AI product' },
-  { cat: 'learn', zh: '我想学点东西', en: 'I want to learn something' },
-  { cat: 'infra', zh: '我需要算力或硬件', en: 'I need compute or hardware' },
-  { cat: 'robot', zh: '我看机器人与具身智能', en: 'I follow robotics and embodied AI' },
-  { cat: 'community', zh: '我想跟进行业动态', en: 'I want to keep up with the industry' },
-];
-
-const body = `    <section class="section hero">
-      <div class="container">
-        <p class="eyebrow">SPECUL · AI DIRECTORY</p>
-        <h1 class="h1"><span class="grad-title"><span data-zh>AI导航</span><span data-en>AI Directory</span></span></h1>
-        <p class="lede">${biSpan('找 AI 网站不用一个个翻。这里按用途整理好了，点名字直接去官网；打不开的会标出来。', 'No need to hunt for AI sites one by one. They are grouped by use here: click a name to go straight to the official site, and dead links are marked.')}</p>
-        <p class="t-sm"><a href="tasks.html">${biSpan(`不知道从哪开始？按任务准备一组资料（${taskPacks.packs.length} 个任务包）→`, `Not sure where to start? Build a resource set for a task (${taskPacks.packs.length} packs) →`)}</a></p>
-      </div>
-    </section>
-
-${vizFor('nav')}
-
-    <section class="section" id="dir">
-      <div class="container">
-        <div class="controls">
-          <label class="sr-only" for="q"><span data-zh>搜索</span><span data-en>Search</span></label>
-          <input id="q" type="search" placeholder="搜索站名、说明或标签…" data-ui-placeholder-zh="搜索站名、说明或标签…" data-ui-placeholder-en="Search sites, descriptions or tags…" autocomplete="off" />
-          ${tagSelect}
-          <button type="button" id="directory-reset" class="reset-btn">${biSpan('清空筛选', 'Clear filters')}</button>
-          <div class="chips">
-        ${chips}
-          </div>
+const body = `    <header class="dir-head">
+      <div class="container dir-head-row">
+        <h1 class="dir-h1"><span class="grad-title"><span data-zh>AI导航</span><span data-en>AI Directory</span></span></h1>
+        <div class="dir-tools">
+          <label class="dir-search" for="q">
+            <span class="sr-only"><span data-zh>搜索</span><span data-en>Search</span></span>
+            <input id="q" type="search" placeholder="搜站名或用途" data-ui-placeholder-zh="搜站名或用途" data-ui-placeholder-en="Search a site or use case" autocomplete="off" />
+          </label>
+          <button type="button" id="directory-reset" class="reset-btn">${biSpan('清空', 'Clear')}</button>
+          <a class="dir-task" href="tasks.html">${biSpan('任务包', 'Task packs')}</a>
         </div>
-        <p class="intent-rail"><span class="intent-h">${biSpan('按意图', 'By intent')}</span>${INTENT.map((it) => {
-  const n = items.filter((i) => i.cat === it.cat).length;
-  return `<a class="intent-card" href="?cat=${esc(it.cat)}"><b>${biSpan(it.zh, it.en)}</b><span class="intent-n">${n}</span></a>`;
-}).join('')}</p>
-        <p id="empty" class="empty" hidden>${biSpan("没有匹配的条目。", "No matching entries.")}</p>
-        <p id="filtered-count" class="t-sm dim" role="status" aria-live="polite"></p>
+      </div>
+    </header>
 
+    <section class="section dir-body" id="dir">
+      <div class="container">
+        <nav class="dir-cats" aria-label="按类目筛选">${chips}</nav>
+        <p id="empty" class="empty" hidden>${biSpan("没有匹配的条目。", "No matching entries.")}</p>
+        <p id="filtered-count" class="dir-count" role="status" aria-live="polite"></p>
 ${groups}
       </div>
     </section>`;
 
 const html = shell({
   current: 'nav',
-  title: `AI导航 · ${items.length} 个站外 AI 网站 | 投机取巧`,
-  desc: `AI导航，不是 Specul 自己产出的内容：系统化收录 ${items.length} 个站外 AI 网站，按 ${cats.length} 类组织；每条附一句话说明、标签、可达性核验状态与官网链接，并按「我想做什么」给出入口。`,
+  title: `AI导航 · 站外 AI 网站目录 | 投机取巧`,
+  desc: `AI导航：按用途整理的站外 AI 网站目录，点名字直接去官网；打不开的会标出来。`,
   canonical: 'https://nav.specul.com/',
   /* ⚠ 2026-10-10 不再传 accent（原 '#22d3c5'青色）。
    * 用户定案「不需要分站专属色，整体与首页一致」；brand.css 的 --accent 是
@@ -379,7 +321,7 @@ const html = shell({
     '@type': 'CollectionPage',
     name: 'AI导航 · 站外 AI 网站目录',
     url: 'https://nav.specul.com/',
-    description: `系统化收录 ${items.length} 个站外 AI 网站，按 ${cats.length} 类组织。`,
+    description: `按用途整理的站外 AI 网站目录。`,
     inLanguage: 'zh-Hans',
     isPartOf: { '@type': 'WebSite', name: 'Specul · 投机取巧', url: 'https://specul.com/' },
     mainEntity: {

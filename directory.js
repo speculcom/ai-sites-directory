@@ -35,7 +35,7 @@
     cards.forEach((c, i) => {
       const on =
         (activeCat === 'all' || c.dataset.cat === activeCat) &&
-        (!tag.value || (c.dataset.tags || '').split(' ').includes(tag.value)) &&
+        (!tag || !tag.value || (c.dataset.tags || '').split(' ').includes(tag.value)) &&
         (!term || idx[i].includes(term));
       c.hidden = !on;
       if (on) n++;
@@ -43,17 +43,18 @@
     for (const g of groups) g.hidden = ![...g.querySelectorAll('.card-wrap')].some((c) => !c.hidden);
     empty.hidden = n !== 0;
     if (counter) {
-      counter.textContent = tr(
-        `显示 ${n} / ${cards.length} 条`,
-        `Showing ${n} / ${cards.length}`
-      );
+      const filtering = !!term || activeCat !== 'all' || !!(tag && tag.value);
+      counter.hidden = !filtering;
+      if (filtering) {
+        counter.textContent = tr(`找到 ${n} 个`, `${n} found`);
+      }
     }
   }
 
   function syncUrl(keepHash = false) {
     try {
       const u = new URL(location.href);
-      const values = { q: q.value.trim(), cat: activeCat === 'all' ? '' : activeCat, tag: tag.value };
+      const values = { q: q.value.trim(), cat: activeCat === 'all' ? '' : activeCat, tag: tag ? tag.value : '' };
       for (const [k, v] of Object.entries(values)) {
         if (v) u.searchParams.set(k, v); else u.searchParams.delete(k);
       }
@@ -72,7 +73,7 @@
   }
 
   function resetFilters() {
-    q.value = ''; tag.value = ''; setCat('all'); apply();
+    q.value = ''; if (tag) tag.value = ''; setCat('all'); apply();
   }
 
   function readUrl() {
@@ -82,7 +83,7 @@
     const cat = sp.get('cat') || '';
     setCat(cat || (categories.has(hash) && hash) || 'all');
     q.value = (sp.get('q') || '').slice(0, 300);
-    selectValue(tag, sp.get('tag') || '');
+    if (tag) selectValue(tag, sp.get('tag') || '');
   }
 
   function scrollToAnchor() {
@@ -98,7 +99,7 @@
   }
 
   q.addEventListener('input', () => { apply(); syncUrl(); });
-  tag.addEventListener('change', () => { apply(); syncUrl(); });
+  tag?.addEventListener('change', () => { apply(); syncUrl(); });
   chips.forEach((c) => c.addEventListener('click', () => { setCat(c.dataset.cat); apply(); syncUrl(); }));
   const reset = document.getElementById('directory-reset');
   if (reset) reset.addEventListener('click', () => { resetFilters(); syncUrl(); q.focus(); });

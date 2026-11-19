@@ -550,7 +550,84 @@ html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
   .intent-rail .intent-card { flex: none; }
 }
 
-/* 2026-11-09：条件筛选控件移除后，补一个轻量「清空筛选」按钮 —— 搜索 + 标签 + 类目
-   三者叠加后如果没有匹配项，需要一个一键回到全部。 */
-.reset-btn { font: inherit; font-size: var(--fs-sm); padding: .45rem .8rem; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--bg); color: var(--ink-mid); cursor: pointer; }
+/* ==========================================================================
+   2026-11-19 · 目录直达版
+   目标：打开就看见站，点名字就出去。
+   去掉 hero / 总结 / 仪表盘 / 意图胶囊；只留标题、搜索、类目筛选、625 个站。
+   ========================================================================== */
+
+.dir-head { padding: var(--sp-5) 0 var(--sp-4); }
+.dir-head-row {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: var(--sp-3) var(--sp-5); flex-wrap: wrap;
+}
+.dir-h1 { margin: 0; font-size: var(--display-sub); line-height: var(--lh-tight); letter-spacing: -.03em; }
+.dir-tools { display: flex; align-items: center; justify-content: flex-end; gap: var(--sp-2); flex: 1 1 320px; min-width: 0; }
+.dir-search { flex: 1 1 220px; max-width: 360px; min-width: 0; }
+.dir-search input {
+  width: 100%; padding: .62rem .8rem; font: inherit; font-size: var(--fs-sm);
+  border: 1px solid var(--line-mid); border-radius: var(--r-sm);
+  background: var(--bg-panel); color: var(--ink);
+}
+.dir-search input:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.dir-task {
+  flex: none; font-size: var(--fs-xs); color: var(--ink-mid); text-decoration: none;
+  padding: .5rem .65rem; border: 1px solid var(--line); border-radius: var(--r-sm);
+}
+.dir-task:hover { color: var(--ink); border-color: var(--brand-line); }
+.reset-btn {
+  flex: none; font: inherit; font-size: var(--fs-xs);
+  padding: .5rem .65rem; border: 1px solid var(--line); border-radius: var(--r-sm);
+  background: var(--bg-panel); color: var(--ink-mid); cursor: pointer;
+}
 .reset-btn:hover { border-color: var(--brand-line); color: var(--ink); }
+
+.dir-body { padding-top: 0; }
+.dir-cats {
+  display: flex; align-items: center; flex-wrap: wrap; gap: .45rem;
+  padding: var(--sp-2) 0 var(--sp-3);
+  position: sticky; top: 66px; z-index: 30;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+}
+.dir-cats .chip { flex: none; }
+.dir-count { margin: 0; padding: var(--sp-2) 0 0; font-size: var(--fs-xs); color: var(--ink-faint); }
+.dir-count[hidden] { display: none; }
+
+.dir-body .cat-group { margin: var(--sp-4) 0 0; }
+.dir-body .cat-h {
+  margin: 0 0 var(--sp-2); padding-left: .6rem;
+  font-size: var(--fs-lg); border-left: 3px solid var(--cat-c, var(--brand));
+  line-height: 1.35;
+}
+.dir-body .cat-h em { color: var(--ink-faint); }
+.dir-body .grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.dir-body .c-link {
+  display: flex; flex-direction: column; gap: .12rem;
+  min-height: 58px; padding: .5rem .55rem .48rem;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none; color: inherit;
+}
+.dir-body .c-link:hover { background: var(--brand-soft); }
+.dir-body .c-nm { font-size: var(--fs-sm); font-weight: 700; line-height: 1.35; }
+.dir-body .c-ds {
+  font-size: var(--fs-xs); color: var(--ink-mid); line-height: 1.4;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.dir-body .c-warn { font-size: var(--fs-xs); color: var(--red); }
+.dir-body .c-link.is-dead { opacity: .52; cursor: default; }
+.dir-body .card-wrap { content-visibility: auto; contain-intrinsic-size: auto 58px; }
+
+@media (max-width: 720px) {
+  .dir-head { padding: var(--sp-4) 0 var(--sp-2); }
+  .dir-head-row { align-items: stretch; flex-direction: column; gap: var(--sp-2); }
+  .dir-h1 { font-size: clamp(28px, 9vw, 38px); }
+  .dir-tools { flex: none; flex-wrap: wrap; }
+  .dir-search { flex: 1 1 100%; max-width: none; }
+  .dir-cats { top: 66px; padding-bottom: var(--sp-2); flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; }
+  .dir-body .grid { grid-template-columns: 1fr; }
+}
+
