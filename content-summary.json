@@ -3,7 +3,7 @@
   {
    "code": "llm",
    "name": "大模型与对话",
-   "n": 50,
+   "n": 56,
    "dead": 0,
    "maybe": 13
   },
@@ -17,21 +17,21 @@
   {
    "code": "gen",
    "name": "多模态生成",
-   "n": 64,
+   "n": 70,
    "dead": 0,
    "maybe": 25
   },
   {
    "code": "app",
    "name": "AI 办公与垂直应用",
-   "n": 47,
+   "n": 52,
    "dead": 0,
    "maybe": 37
   },
   {
    "code": "model",
    "name": "模型与权重",
-   "n": 32,
+   "n": 39,
    "dead": 0,
    "maybe": 0
   },
@@ -45,7 +45,7 @@
   {
    "code": "infra",
    "name": "算力与芯片",
-   "n": 55,
+   "n": 61,
    "dead": 0,
    "maybe": 2
   },

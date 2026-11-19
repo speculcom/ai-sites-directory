@@ -1,6 +1,6 @@
 # 多模态生成
 
-> 图像、视频、音频、3D 与数字人生成 · 共 64 条
+> 图像、视频、音频、3D 与数字人生成 · 共 70 条
 
 ## Canva
 
@@ -448,4 +448,46 @@
 - 链接：<https://www.deepgram.com>
 - 说明：开发者向语音 API：Nova 转写 + Aura TTS，实时流式转写是主打；定位是造语音产品的底座。
 - 标签：语音合成·API
+- 核验：未核验
+
+## Stability AI
+
+- 链接：<https://stability.ai/>
+- 说明：Stable Diffusion 系列背后的公司，覆盖图像、视频、音频与 3D 生成模型。
+- 标签：图像生成·开源
+- 核验：未核验
+
+## Adobe Firefly
+
+- 链接：<https://www.adobe.com/products/firefly.html>
+- 说明：Adobe 的生成式模型家族，嵌入 Photoshop、Illustrator 与 Express，主打商用授权。
+- 标签：图像生成·设计
+- 核验：未核验
+
+## Krea
+
+- 链接：<https://www.krea.ai/>
+- 说明：实时图像/视频生成与增强工具，强调边画边看、风格参考和放大。
+- 标签：实时·图像生成
+- 核验：未核验
+
+## Leonardo
+
+- 链接：<https://leonardo.ai/>
+- 说明：面向游戏与产品设计的图像生成平台，含模型训练、材质与资产管理。
+- 标签：图像生成·游戏
+- 核验：未核验
+
+## 可灵 AI
+
+- 链接：<https://klingai.com/>
+- 说明：快手可灵的视频生成平台，支持文生视频、图生视频与首尾帧控制。
+- 标签：视频生成·国产
+- 核验：未核验
+
+## Pika Labs
+
+- 链接：<https://pika.art/>
+- 说明：轻量视频生成工具，主打图生视频、局部修改与快速出片。
+- 标签：视频生成
 - 核验：未核验

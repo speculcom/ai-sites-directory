@@ -163,12 +163,11 @@ function card(it) {
   const tag = dead ? 'div' : 'a';
   const linkAttrs = dead ? '' : ` href="${esc(it.u)}" target="_blank" rel="noopener"`;
   /* 2026-11-19：目录页回到「最快跳出去」。
-   * 卡片只留站名、一句话说明和打不开提示；图标、标签、档案入口、条件折叠
-   * 全部撤掉 —— 625 条里任何一项都是让人多读一行、晚点一次外链的噪音。 */
+   * 卡片只留站名和打不开提示；说明、图标、标签、档案入口、条件折叠全部撤掉
+   * —— 625 条里任何一项都是让人多读一行、晚点一次外链的噪音。 */
   return `          <div class="card-wrap" data-cat="${it.cat}">
           <${tag} class="c-link${st.cls ? ' ' + st.cls : ''}" id="${resourceId}"${linkAttrs}>
             <span class="c-nm"><span data-zh>${esc(it.n)}</span><span data-en>${esc(VENDOR_EN[it.n] || it.n)}</span></span>
-            <span class="c-ds"><span data-zh>${esc(it.d)}</span><span data-en>${esc(DESC_EN[it.n] || it.d)}</span></span>
 ${st.note ? `            <span class="c-warn">${st.note}</span>` : ''}
           </${tag}>
           </div>`;
@@ -251,7 +250,7 @@ const groups = cats
     // 构建期判断语言是错的（那样只能生成一种，构建后无法切换）。
     var cn = CAT_EN[c.code] || {};
     return `      <section class="cat-group" id="cat-${c.code}" data-cat="${c.code}">
-        <h2 class="cat-h"><span class="cat-dot" aria-hidden="true"></span><span data-zh>${esc(c.name)}</span><span data-en>${esc(cn.name || c.name)}</span><em>${list.length}</em></h2>
+        <h2 class="cat-h"><span class="cat-dot" aria-hidden="true"></span><span data-zh>${esc(c.name)}</span><span data-en>${esc(cn.name || c.name)}</span></h2>
         <div class="grid">
 ${list.map(card).join('\n')}
         </div>
@@ -262,17 +261,15 @@ ${list.map(card).join('\n')}
 
 const chips = ['<button class="chip is-on" data-cat="all">'
   + '<span data-zh>全部</span><span data-en>All</span>'
-  + '<em>' + items.length + '</em></button>']
+  + '</button>']
   .concat(
     cats
       .filter((c) => items.some((i) => i.cat === c.code))
       .map((c) => {
-        const n = items.filter((i) => i.cat === c.code).length;
         var cn = CAT_EN[c.code] || {};
         return '<button class="chip" data-cat="' + esc(c.code) + '">'
           + '<span data-zh>' + esc(c.name) + '</span>'
-          + '<span data-en>' + esc(cn.name || c.name) + '</span>'
-          + '<em>' + n + '</em></button>';
+          + '<span data-en>' + esc(cn.name || c.name) + '</span></button>';
       })
   )
   .join('\n        ');
@@ -286,10 +283,9 @@ const body = `    <header class="dir-head">
         <div class="dir-tools">
           <label class="dir-search" for="q">
             <span class="sr-only"><span data-zh>搜索</span><span data-en>Search</span></span>
-            <input id="q" type="search" placeholder="搜站名或用途" data-ui-placeholder-zh="搜站名或用途" data-ui-placeholder-en="Search a site or use case" autocomplete="off" />
+            <input id="q" type="search" placeholder="搜站名" data-ui-placeholder-zh="搜站名" data-ui-placeholder-en="Search a site" autocomplete="off" />
           </label>
           <button type="button" id="directory-reset" class="reset-btn">${biSpan('清空', 'Clear')}</button>
-          <a class="dir-task" href="tasks.html">${biSpan('任务包', 'Task packs')}</a>
         </div>
       </div>
     </header>

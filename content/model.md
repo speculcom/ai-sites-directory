@@ -1,6 +1,6 @@
 # 模型与权重
 
-> 模型平台、开源模型与权重托管 · 共 32 条
+> 模型平台、开源模型与权重托管 · 共 39 条
 
 ## Hugging Face
 
@@ -224,4 +224,53 @@
 - 链接：<https://docs.nvidia.com/tensorrt-llm/>
 - 说明：NVIDIA 的生产级推理栈：先把模型编译成 TensorRT 引擎，再用 trtllm-serve 提供 OpenAI 兼容端点；面向 GPU 集群而非单机开箱。
 - 标签：本地部署·高性能
+- 核验：未核验
+
+## 阿里云百炼
+
+- 链接：<https://www.aliyun.com/product/bailian>
+- 说明：阿里云的大模型服务平台：模型调用、应用编排、知识库与微调。
+- 标签：大厂·API
+- 核验：未核验
+
+## 火山方舟
+
+- 链接：<https://www.volcengine.com/product/ark>
+- 说明：字节跳动的模型服务平台：豆包模型 API、推理、微调与 Agent 工具链。
+- 标签：大厂·API
+- 核验：未核验
+
+## 华为盘古
+
+- 链接：<https://www.huaweicloud.com/product/pangu.html>
+- 说明：华为的盘古大模型体系，覆盖 NLP、视觉、多模态与行业大模型。
+- 标签：大厂·国产
+- 核验：未核验
+
+## 百度智能云千帆
+
+- 链接：<https://cloud.baidu.com/product/qianfan.html>
+- 说明：百度智能云的模型平台：文心模型 API、数据管理、微调与 RAG 工具。
+- 标签：大厂·RAG
+- 核验：未核验
+
+## 智谱 BigModel
+
+- 链接：<https://bigmodel.cn/>
+- 说明：智谱 GLM 系列的开放平台：模型 API、微调、知识库与 Agent 能力。
+- 标签：国产·API
+- 核验：未核验
+
+## MiniMax 开放平台
+
+- 链接：<https://platform.minimaxi.com/>
+- 说明：MiniMax 的模型 API 平台，覆盖文本、语音、视频与角色对话。
+- 标签：多模态·API
+- 核验：未核验
+
+## Moonshot 开放平台
+
+- 链接：<https://platform.moonshot.cn/>
+- 说明：月之暗面的 Kimi 模型 API 与工具调用平台。
+- 标签：国产·API
 - 核验：未核验
