@@ -548,6 +548,10 @@ a, code, kbd, samp { overflow-wrap: anywhere; }
   /* 9 项导航在 768 附近会与汉堡并存并横向溢出：900 以下统一收进抽屉。 */
   .nav-links { flex: 0 0 auto; }
   .nav-links > a { display: none; }
+  /* 顶部导航收起后，底部导航必须接上：769–900px 这一段原先两头都没有入口。 */
+  .nav-tabbar { display: flex; }
+  .foot-links { display: none; }
+  body.has-tabbar .site-footer, body.has-tabbar .foot { padding-bottom: calc(78px + env(safe-area-inset-bottom, 0px)); }
 }
 @media (max-width: 768px) {
   .nav-tabbar { display: flex; }
@@ -1054,17 +1058,8 @@ html[data-lang="en"] .nav-links > a {
   html[data-lang="en"] .brand-sub { display: none; }
 }
 
-/* 导航三组分层（2026-11-08）：日常 / 深水 / 出口。
-   只给组首链接加 class，不插入任何新元素 —— 多个探针按 .nav-links > a
-   的数量断言，DOM 结构必须保持 9 个链接不变。出口站用青色与外链箭头区分，
-   提醒用户它收录的是别人的网站，不是 Specul 自己的内容。 */
-.nav-links > a.nav-group-start {
-  margin-left: var(--sp-2); padding-left: var(--sp-3);
-  border-left: 1px solid var(--line-mid);
-}
-/* 不把 --cyan 当链接文字色：亮色主题下它被压深到 #0b7c72，在浅底只有
-   4.47:1，差一点到 AA。区分改由分组分隔线、装饰箭头与抽屉底色承担。 */
-.nav-links > a[data-nav-group="external"]::after { content: " ↗"; color: var(--cyan); }
+/* 导航分组在顶部不再画分隔线：10 个入口统一读成一条横排。
+   抽屉里仍保留分组（见 .nav-drawer-list 规则），因为抽屉是纵向长列表。 */
 .nav-drawer-list > a[data-nav-group="external"] {
   color: var(--ink); background: var(--cyan-soft); border: 1px solid var(--cyan);
 }
