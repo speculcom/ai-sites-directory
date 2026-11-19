@@ -7760,6 +7760,306 @@
       "cat": "tools",
       "old_t": "自动化平台",
       "old_c": "tools"
+    },
+    {
+      "n": "零一万物",
+      "d": "李开复团队的大模型公司：Yi 系列开源模型与万知平台，主打中英双语与低成本微调。",
+      "u": "https://www.01.ai/",
+      "tag": "国产·大厂",
+      "ic": "🧠",
+      "cat": "llm",
+      "old_t": "国产·大厂",
+      "old_c": "llm"
+    },
+    {
+      "n": "商汤日日新",
+      "d": "商汤的大模型与多模态能力平台，覆盖对话、图像、视频与行业解决方案。",
+      "u": "https://www.sensetime.com/",
+      "tag": "大厂·多模态",
+      "ic": "🌊",
+      "cat": "llm",
+      "old_t": "大厂·多模态",
+      "old_c": "llm"
+    },
+    {
+      "n": "天工 AI",
+      "d": "昆仑万维的 AI 搜索与对话产品，主打研究型问答和中文内容聚合。",
+      "u": "https://www.tiangong.cn/",
+      "tag": "搜索·学术",
+      "ic": "🔭",
+      "cat": "llm",
+      "old_t": "搜索·学术",
+      "old_c": "llm"
+    },
+    {
+      "n": "纳米 AI 搜索",
+      "d": "360 的 AI 搜索入口，支持多轮追问、网页总结与直接生成答案。",
+      "u": "https://www.n.cn/",
+      "tag": "搜索",
+      "ic": "🔎",
+      "cat": "llm",
+      "old_t": "搜索",
+      "old_c": "llm"
+    },
+    {
+      "n": "夸克 AI",
+      "d": "阿里夸克浏览器的 AI 能力：搜索、扫描、文档总结与学习助手。",
+      "u": "https://quark.cn/",
+      "tag": "搜索·国产",
+      "ic": "⚡",
+      "cat": "llm",
+      "old_t": "搜索·国产",
+      "old_c": "llm"
+    },
+    {
+      "n": "Mistral AI",
+      "d": "法国开源模型公司：Mistral、Mixtral 与 Le Chat，主打欧洲数据驻留与开放权重。",
+      "u": "https://mistral.ai/",
+      "tag": "开源·大厂",
+      "ic": "🇫🇷",
+      "cat": "llm",
+      "old_t": "开源·大厂",
+      "old_c": "llm"
+    },
+    {
+      "n": "阿里云百炼",
+      "d": "阿里云的大模型服务平台：模型调用、应用编排、知识库与微调。",
+      "u": "https://www.aliyun.com/product/bailian",
+      "tag": "大厂·API",
+      "ic": "☁️",
+      "cat": "model",
+      "old_t": "大厂·API",
+      "old_c": "model"
+    },
+    {
+      "n": "火山方舟",
+      "d": "字节跳动的模型服务平台：豆包模型 API、推理、微调与 Agent 工具链。",
+      "u": "https://www.volcengine.com/product/ark",
+      "tag": "大厂·API",
+      "ic": "🌋",
+      "cat": "model",
+      "old_t": "大厂·API",
+      "old_c": "model"
+    },
+    {
+      "n": "华为盘古",
+      "d": "华为的盘古大模型体系，覆盖 NLP、视觉、多模态与行业大模型。",
+      "u": "https://www.huaweicloud.com/product/pangu.html",
+      "tag": "大厂·国产",
+      "ic": "🐉",
+      "cat": "model",
+      "old_t": "大厂·国产",
+      "old_c": "model"
+    },
+    {
+      "n": "百度智能云千帆",
+      "d": "百度智能云的模型平台：文心模型 API、数据管理、微调与 RAG 工具。",
+      "u": "https://cloud.baidu.com/product/qianfan.html",
+      "tag": "大厂·RAG",
+      "ic": "⛵",
+      "cat": "model",
+      "old_t": "大厂·RAG",
+      "old_c": "model"
+    },
+    {
+      "n": "智谱 BigModel",
+      "d": "智谱 GLM 系列的开放平台：模型 API、微调、知识库与 Agent 能力。",
+      "u": "https://bigmodel.cn/",
+      "tag": "国产·API",
+      "ic": "🧩",
+      "cat": "model",
+      "old_t": "国产·API",
+      "old_c": "model"
+    },
+    {
+      "n": "MiniMax 开放平台",
+      "d": "MiniMax 的模型 API 平台，覆盖文本、语音、视频与角色对话。",
+      "u": "https://platform.minimaxi.com/",
+      "tag": "多模态·API",
+      "ic": "🎛️",
+      "cat": "model",
+      "old_t": "多模态·API",
+      "old_c": "model"
+    },
+    {
+      "n": "Moonshot 开放平台",
+      "d": "月之暗面的 Kimi 模型 API 与工具调用平台。",
+      "u": "https://platform.moonshot.cn/",
+      "tag": "国产·API",
+      "ic": "🌙",
+      "cat": "model",
+      "old_t": "国产·API",
+      "old_c": "model"
+    },
+    {
+      "n": "无问芯穹",
+      "d": "国产算力与模型服务的适配层：把多种国产芯片接入统一推理与训练平台。",
+      "u": "https://www.infinigence.com/",
+      "tag": "算力云·国产",
+      "ic": "🧱",
+      "cat": "infra",
+      "old_t": "算力云·国产",
+      "old_c": "infra"
+    },
+    {
+      "n": "潞晨科技",
+      "d": "Colossal-AI 背后的团队，提供大模型训练加速、推理与云服务。",
+      "u": "https://www.luchentech.com/",
+      "tag": "算力云·模型微调",
+      "ic": "🚀",
+      "cat": "infra",
+      "old_t": "算力云·模型微调",
+      "old_c": "infra"
+    },
+    {
+      "n": "趋境科技",
+      "d": "面向大模型推理优化的国产团队，主打异构算力与低延迟服务。",
+      "u": "https://www.qujingai.com/",
+      "tag": "推理",
+      "ic": "⚙️",
+      "cat": "infra",
+      "old_t": "推理",
+      "old_c": "infra"
+    },
+    {
+      "n": "清程极智",
+      "d": "清华系 AI 基础设施团队，做训练/推理框架与国产算力适配。",
+      "u": "https://www.qingcheng.ai/",
+      "tag": "国产·云服务",
+      "ic": "🧿",
+      "cat": "infra",
+      "old_t": "国产·云服务",
+      "old_c": "infra"
+    },
+    {
+      "n": "中科加禾",
+      "d": "中科院系 AI 编译与算力优化团队，主打跨芯片编译与推理加速。",
+      "u": "https://www.jiahe.ai/",
+      "tag": "芯片设计·国产",
+      "ic": "🔧",
+      "cat": "infra",
+      "old_t": "芯片设计·国产",
+      "old_c": "infra"
+    },
+    {
+      "n": "天数智芯",
+      "d": "国产通用 GPU 厂商，提供训练与推理芯片及软件栈。",
+      "u": "https://www.iluvatar.com/",
+      "tag": "国产·GPU",
+      "ic": "🎴",
+      "cat": "infra",
+      "old_t": "国产·GPU",
+      "old_c": "infra"
+    },
+    {
+      "n": "Stability AI",
+      "d": "Stable Diffusion 系列背后的公司，覆盖图像、视频、音频与 3D 生成模型。",
+      "u": "https://stability.ai/",
+      "tag": "图像生成·开源",
+      "ic": "🎨",
+      "cat": "gen",
+      "old_t": "图像生成·开源",
+      "old_c": "gen"
+    },
+    {
+      "n": "Adobe Firefly",
+      "d": "Adobe 的生成式模型家族，嵌入 Photoshop、Illustrator 与 Express，主打商用授权。",
+      "u": "https://www.adobe.com/products/firefly.html",
+      "tag": "图像生成·设计",
+      "ic": "🔥",
+      "cat": "gen",
+      "old_t": "图像生成·设计",
+      "old_c": "gen"
+    },
+    {
+      "n": "Krea",
+      "d": "实时图像/视频生成与增强工具，强调边画边看、风格参考和放大。",
+      "u": "https://www.krea.ai/",
+      "tag": "实时·图像生成",
+      "ic": "🖌️",
+      "cat": "gen",
+      "old_t": "实时·图像生成",
+      "old_c": "gen"
+    },
+    {
+      "n": "Leonardo",
+      "d": "面向游戏与产品设计的图像生成平台，含模型训练、材质与资产管理。",
+      "u": "https://leonardo.ai/",
+      "tag": "图像生成·游戏",
+      "ic": "🗡️",
+      "cat": "gen",
+      "old_t": "图像生成·游戏",
+      "old_c": "gen"
+    },
+    {
+      "n": "可灵 AI",
+      "d": "快手可灵的视频生成平台，支持文生视频、图生视频与首尾帧控制。",
+      "u": "https://klingai.com/",
+      "tag": "视频生成·国产",
+      "ic": "🎬",
+      "cat": "gen",
+      "old_t": "视频生成·国产",
+      "old_c": "gen"
+    },
+    {
+      "n": "Pika Labs",
+      "d": "轻量视频生成工具，主打图生视频、局部修改与快速出片。",
+      "u": "https://pika.art/",
+      "tag": "视频生成",
+      "ic": "✨",
+      "cat": "gen",
+      "old_t": "视频生成",
+      "old_c": "gen"
+    },
+    {
+      "n": "Magic Studio",
+      "d": "Canva 收购的 AI 图像编辑工具箱：去背景、擦除、放大与批量改图。",
+      "u": "https://magicstudio.com/",
+      "tag": "图像生成·设计",
+      "ic": "🪄",
+      "cat": "app",
+      "old_t": "图像生成·设计",
+      "old_c": "app"
+    },
+    {
+      "n": "Beautiful.ai",
+      "d": "用规则和 AI 自动排版演示文稿，强调品牌一致性与团队模板。",
+      "u": "https://www.beautiful.ai/",
+      "tag": "设计·办公",
+      "ic": "📊",
+      "cat": "app",
+      "old_t": "设计·办公",
+      "old_c": "app"
+    },
+    {
+      "n": "Tome",
+      "d": "AI 原生叙事与演示工具，从提纲生成页面、配图与讲稿。",
+      "u": "https://tome.app/",
+      "tag": "办公·可视化",
+      "ic": "📕",
+      "cat": "app",
+      "old_t": "办公·可视化",
+      "old_c": "app"
+    },
+    {
+      "n": "Decktopus",
+      "d": "输入主题即生成演示文稿，支持自定义布局、图片与分享分析。",
+      "u": "https://decktopus.com/",
+      "tag": "办公",
+      "ic": "📑",
+      "cat": "app",
+      "old_t": "办公",
+      "old_c": "app"
+    },
+    {
+      "n": "Plus AI",
+      "d": "Google Slides / PowerPoint 里的 AI 插件，做大纲、改写和品牌模板。",
+      "u": "https://www.plusdocs.com/",
+      "tag": "办公·设计",
+      "ic": "➕",
+      "cat": "app",
+      "old_t": "办公·设计",
+      "old_c": "app"
     }
   ]
 }
