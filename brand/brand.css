@@ -272,8 +272,11 @@ body {
 h1, h2, h3, h4, p, ul, ol, figure { margin: 0; padding: 0; }
 
 h1 { font-size: var(--display-sub); line-height: var(--lh-tight); font-weight: 800; letter-spacing: -.028em;
-
+  text-wrap: balance;
   margin: 0 0 var(--sp-3); }
+/* 只在窄屏生效的语义换行：桌面保持一行，手机上在逗号后断，避免把「一件」「解决」拆开。 */
+.br-sm { display: none; }
+@media (max-width: 768px) { .br-sm { display: inline; } }
 h2 { font-size: var(--h2); line-height: var(--lh-tight); font-weight: 700; letter-spacing: -.018em; }
 ul, ol { list-style: none; }
 img, svg { max-width: 100%; display: block; }
@@ -1163,6 +1166,7 @@ html[data-lang="en"] .nav-links > a {
   line-height: 1.14;
   letter-spacing: -.02em;
   color: var(--ink);
+  text-wrap: balance;
 }
 .vz-title-sub {
   display: inline-block;

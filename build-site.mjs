@@ -332,11 +332,8 @@ const body = `    <section class="section hero">
       <div class="container">
         <p class="eyebrow">SPECUL · AI DIRECTORY</p>
         <h1 class="h1"><span class="grad-title"><span data-zh>AI导航</span><span data-en>AI Directory</span></span></h1>
-        <p class="lede">${biSpan(`收录 ${items.length} 个站外 AI 网站（不是 Specul 自产内容），按 ${cats.length} 类整理；搜名字或点类目，直接点出去。`, `${items.length} off-site AI sites (not Specul's own content), in ${cats.length} categories. Search a name or pick a category, then click straight through.`)}</p>
-        <p class="t-sm"><a href="tasks.html">${biSpan(`按任务准备一组资料（${taskPacks.packs.length} 个任务包）→`, `Build a resource set for a task (${taskPacks.packs.length} packs) →`)}</a></p>
-        <details><summary>${biSpan("来源与链接核验范围", "Sources and link-check scope")}</summary>
-        <p class="t-sm dim"><span data-zh>数据来源：公开的站点官方信息，按条目整理；链接最近核验于 ${CHECK_AT}（快照覆盖 ${CHECK_N} 个域名：${CHECK_OK_N} 个确认存活，其中 ${CHECK_DIRECT_N} 个直接 200、${CHECK_BLOCKED_N} 个反爬拦截但站点响应、${CHECK_CHANGED_N} 个改址仍可达；${CHECK_DEAD_N} 个已失效；${CHECK_UNVER_N} 个探测环境受限未能确认——不代表失效）。${items.length} 条收录中，${CHECK_N} 个独立域名纳入该快照（一条收录可含多个链接，重复域名只探测一次）；快照之后新增的条目标为待核验。本页为索引与引述，不替代各站点官方文档。</span><span data-en>Sourcing: public official site information, organised into entries; links last checked on ${CHECK_AT} (snapshot covers ${CHECK_N} domains: ${CHECK_OK_N} confirmed live — ${CHECK_DIRECT_N} direct 200, ${CHECK_BLOCKED_N} anti-bot but responding, ${CHECK_CHANGED_N} redirected and still reachable; ${CHECK_DEAD_N} dead; ${CHECK_UNVER_N} blocked by the probe environment — not necessarily dead). Of ${items.length} entries, ${CHECK_N} unique domains were covered by that snapshot (one entry may carry several links; duplicate domains are probed once); entries added afterwards are marked unchecked. This page is an index and does not replace each site's own documentation.</span></p>
-        </details>
+        <p class="lede">${biSpan('找 AI 网站不用一个个翻。这里按用途整理好了，点名字直接去官网；打不开的会标出来。', 'No need to hunt for AI sites one by one. They are grouped by use here: click a name to go straight to the official site, and dead links are marked.')}</p>
+        <p class="t-sm"><a href="tasks.html">${biSpan(`不知道从哪开始？按任务准备一组资料（${taskPacks.packs.length} 个任务包）→`, `Not sure where to start? Build a resource set for a task (${taskPacks.packs.length} packs) →`)}</a></p>
       </div>
     </section>
 
