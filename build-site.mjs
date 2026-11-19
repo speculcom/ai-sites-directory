@@ -4,6 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {validateConditions, conditionDetails} from './conditions.mjs';
 import {buildTaskSamples, renderTaskPacks, taskPacks} from './task-packs.mjs';
+import { vizFor } from '../../_audit/viz.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 // 生成 nav 独立站静态文件（复用统一骨架 shell.mjs，保证品牌一致）
@@ -338,6 +339,8 @@ const body = `    <section class="section hero">
         </details>
       </div>
     </section>
+
+${vizFor('nav')}
 
     <section class="section" id="dir">
       <div class="container">

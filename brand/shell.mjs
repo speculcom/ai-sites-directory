@@ -36,10 +36,12 @@ export const BRAND = {
   repo: 'https://github.com/speculcom/ai-handbook',
 };
 
-/** 全站导航（9 项，顺序固定；各站自己那项由 current 高亮）
+/** 全站导航（10 项，顺序固定；各站自己那项由 current 高亮）
  *
+ *  2026-11-19 加 OSS 开源库：放在「作品演示」之后、「硬件算力」之前；
+ *  发布授权后已把 live 打开，进 NAV / 底栏 / 搜索。
  *  2026-11-08 用户定案，按「用户走到哪一步才需要它」重排为三组：
- *    daily    首页 · 学 AI · 工具 · 模型 · 作品演示 —— 日常闭环
+ *    daily    首页 · 学 AI · 工具 · 模型 · 作品演示 · 开源库 —— 日常闭环
  *    deep     硬件算力 · AI 论文 · 链               —— 按需深挖，受众从宽到窄
  *    external AI导航                                —— 站外 AI 网站目录，不是本网内容
  *  旧顺序是历史累加出来的（先六站、再插 hardware、补 papers/chain、最后塞 nav），
@@ -57,6 +59,7 @@ export const NAV_ALL = [
   { key: 'agent', href: 'https://tools.specul.com/', zh: '工具', en: 'Tools', group: 'daily', live: true },
   { key: 'models', href: 'https://models.specul.com/', zh: '模型', en: 'Models', group: 'daily', live: true },
   { key: 'demos', href: 'https://demos.specul.com/', zh: '作品演示', en: 'Playground', group: 'daily', live: true },
+  { key: 'oss', href: 'https://oss.specul.com/', zh: '开源库', en: 'OSS', group: 'daily', live: true },
   { key: 'hardware', href: 'https://hardware.specul.com/', zh: '硬件算力', en: 'Compute', group: 'deep', live: true },
   { key: 'papers', href: 'https://papers.specul.com/', zh: 'AI 论文', en: 'AI Papers', group: 'deep', live: true },
   { key: 'chain', href: 'https://chain.specul.com/', zh: '链', en: 'Chain', group: 'deep', live: true },
@@ -144,10 +147,10 @@ export const OPEN_SOURCE_LABEL = '<span data-zh>开源</span><span data-en>Open 
 
 /** 底部 tab bar —— 手机端「像 App 一样」的固定导航（2026-10-10 用户要求：分站也要有）
  *
- *  2026-11-18 用户定案：9 个站全部直接列出，单排铺满一屏；底部空间只够短标签，
+ *  2026-11-19 用户定案：10 个站全部直接列出，单排铺满一屏；底部空间只够短标签，
  *  所以底栏用一套自己的简称，不改变顶栏/抽屉/页脚的正式站名：
- *    首页 / 学AI / 工具 / 模型 / 演示 / 算力 / AI论文 / 链 / AI导航
- *  · 9 项单排会挤到每格 ~40px，短标签 + 满宽排布后 390px 与 320px 都放得下；
+ *    首页 / 学AI / 工具 / 模型 / 演示 / 开源 / 算力 / 论文 / 链 / 导航
+ *  · 10 项单排每格约 38px（390px）/ 31px（320px），短标签实测都放得下；
  *  · 样式在共享 brand.css：`.nav-tabbar-1row` 负责单排、满宽与紧凑字号，
  *    默认 display:none，≤768px 才显示；
  *  · 抽屉仍然保留（汉堡在 769–900px 是唯一入口；手机上作为大字号备选）；
@@ -156,7 +159,7 @@ export const OPEN_SOURCE_LABEL = '<span data-zh>开源</span><span data-en>Open 
  *    底部 tab bar 会盖住页脚最后一行；早批双排页只有 has-tabbar，走 128px 兜底。
  */
 export function tabbar(current) {
-  const TI = { www: '◎', learn: '▤', agent: '◈', models: '▦', demos: '▷', hardware: '▣', papers: '▥', chain: '◇', nav: '↗' };
+  const TI = { www: '◎', learn: '▤', agent: '◈', models: '▦', demos: '▷', oss: '▧', hardware: '▣', papers: '▥', chain: '◇', nav: '↗' };
   /* 底栏专用短标签：只在这里缩短，不影响 NAV / 顶栏 / 抽屉 / 页脚。 */
   const TAB = {
     www: ['首页', 'Home'],
@@ -164,10 +167,11 @@ export function tabbar(current) {
     agent: ['工具', 'Tools'],
     models: ['模型', 'Models'],
     demos: ['演示', 'Demos'],
+    oss: ['开源', 'OSS'],
     hardware: ['算力', 'Chips'],
-    papers: ['AI论文', 'Papers'],
+    papers: ['论文', 'Papers'],
     chain: ['链', 'Chain'],
-    nav: ['AI导航', 'AI Nav'],
+    nav: ['导航', 'Nav'],
   };
   const link = (key) => {
     const n = NAV.find((x) => x.key === key);
