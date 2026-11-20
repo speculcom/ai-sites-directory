@@ -11,7 +11,7 @@
     },
     "shell.mjs": {
       "source": "_sites/_template/shell.mjs",
-      "sha256": "6e5183001d6458d16a51ffdb67f2f6a34d2dbbe3d9942d89eae15d4cb5c94ecf"
+      "sha256": "c1c45480f47ed4b6a950db966add90628e275cbf81e231330039340d0a4546b3"
     },
     "site.css": {
       "source": "_sites/_template/site.css",

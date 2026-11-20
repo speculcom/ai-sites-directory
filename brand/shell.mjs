@@ -63,7 +63,7 @@ export const NAV_ALL = [
   { key: 'hardware', href: 'https://hardware.specul.com/', zh: '硬件算力', en: 'Compute', group: 'deep', live: true },
   { key: 'papers', href: 'https://papers.specul.com/', zh: 'AI 论文', en: 'AI Papers', group: 'deep', live: true },
   { key: 'chain', href: 'https://chain.specul.com/', zh: '链', en: 'Chain', group: 'deep', live: true },
-  { key: 'nav', href: 'https://nav.specul.com/', zh: 'AI导航', zhTop: 'AI 导航', en: 'AI Directory', group: 'external', live: true },
+  { key: 'nav', href: 'https://nav.specul.com/', zh: 'AI导航', zhTop: 'AI导航', en: 'AI Directory', group: 'external', live: true },
 ];
 
 /** 渲染用导航：只含已上线站。探针以 NAV.length 为期望项数，未上线站不进这里。 */

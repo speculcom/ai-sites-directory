@@ -32,7 +32,7 @@ Live version: <https://nav.specul.com/>
 | Path | Content |
 |---|---|
 | `content/` | 12 category documents generated from primary data, with descriptions, tags and existing link-check status |
-| `nav-data.json` | **Primary data**: 809 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 625 items / 11 categories are live) |
+| `nav-data.json` | **Primary data**: 813 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 629 items / 11 categories are live) |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | English mappings (category / tag / vendor / description) |
 | `constraints.json` / `conditions.mjs` | Scoped usage conditions, official sources and unknowns; filters and 2–3-entry condition comparisons |
 | `task-packs.json` / `task-packs.mjs` | Six bilingual task packs, fictional inputs, designed references, bundled sample code and worksheet generation |
@@ -141,11 +141,11 @@ Information about the listed sites belongs to their respective rights holders.
 |---|---|---|
 | LLMs & chat | 56 | ChatGPT · Claude · Gemini · DeepSeek · Kimi · Grok …and 50 more |
 | AI coding & agents | 43 | GitHub Copilot · Cursor · Windsurf · v0 · Bolt.new · Qoder CN …and 37 more |
-| Multimodal generation | 70 | Canva · Microsoft Designer · Galileo AI · Uizard · Midjourney · Stable Diffusion …and 64 more |
+| Multimodal generation | 72 | Canva · Microsoft Designer · Galileo AI · Uizard · Midjourney · Stable Diffusion …and 66 more |
 | Applications | 52 | Gamma · Jasper · Copy.ai · Grammarly · Otter.ai · Notion AI …and 46 more |
 | Model providers | 39 | Hugging Face · Ollama · Replicate · Civitai · OpenRouter · Together AI …and 33 more |
 | Developer tools | 47 | Pinecone · Weaviate · Chroma · Milvus · Qdrant · Elasticsearch …and 41 more |
-| Infrastructure | 61 | NVIDIA · AMD · Intel · ARM · Cerebras · Graphcore …and 55 more |
+| Infrastructure | 63 | NVIDIA · AMD · Intel · ARM · Cerebras · Graphcore …and 57 more |
 | Robotics & embodied | 87 | Tesla Optimus · Figure AI · Boston Dynamics · 1X Technologies · Agility Robotics · Apptronik …and 81 more |
 | Learning | 55 | arXiv · Papers With Code · Semantic Scholar · Connected Papers · ResearchGate · Coursera …and 49 more |
 | Community | 25 | Hacker News · Product Hunt · Reddit r/MachineLearning · Dev.to · Stack Overflow · MIT Technology Review …and 19 more |
@@ -161,7 +161,7 @@ Information about the listed sites belongs to their respective rights holders.
 <!-- STATS:BEGIN generated, do not edit -->
 | Item | Measured value |
 |---|---|
-| Items | 809 (public 625 · ext 184) |
+| Items | 813 (public 629 · ext 184) |
 | Categories | 12 (11 public) |
 | Tag vocabulary | 93 (closed enum) |
 | Retired | 15 (Galileo AI · DALL·E · Baidu Yige · Sora · Haiper AI · Play.ht · Tabnine · CSM AI · Ready Player Me · Tencent Zhiying · Phrasee · OctoAI · Gem.xyz · Ansys · Papers With Code) |

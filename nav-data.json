@@ -8060,6 +8060,46 @@
       "cat": "app",
       "old_t": "办公·设计",
       "old_c": "app"
+    },
+    {
+      "n": "NVIDIA RTX Spark",
+      "d": "NVIDIA 的 Windows PC 超级芯片：Grace CPU + Blackwell RTX GPU，最高 1 PFLOPS FP4、128GB 统一内存；薄本与紧凑桌面都能本地跑智能体、创作和游戏。",
+      "u": "https://www.nvidia.com/en-us/products/rtx-spark/",
+      "tag": "高性能·GPU",
+      "ic": "🖥️",
+      "cat": "infra",
+      "old_t": "算力硬件",
+      "old_c": "infra"
+    },
+    {
+      "n": "NVIDIA DGX Spark",
+      "d": "NVIDIA 的个人 AI 超算：GB10 Grace Blackwell，最高 1 PFLOPS FP4、128GB 一致统一内存，桌面跑本地智能体与大模型；ConnectX-7 可四机互联。",
+      "u": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
+      "tag": "高性能·GPU",
+      "ic": "📦",
+      "cat": "infra",
+      "old_t": "算力硬件",
+      "old_c": "infra"
+    },
+    {
+      "n": "Seedream 5.5",
+      "d": "字节 Seed 于 2026-11-09 发布的图像模型：百轮编辑像素级保持、原生 RGBA 透明素材、文字渲染更强；已接入即梦、豆包与火山方舟。",
+      "u": "https://seed.bytedance.com/seedream5_5",
+      "tag": "图像生成·国产",
+      "ic": "🎨",
+      "cat": "gen",
+      "old_t": "图像生成",
+      "old_c": "gen"
+    },
+    {
+      "n": "Seedance 2.5",
+      "d": "字节 Seed 的音视频联合生成模型：单段 30 秒、可延长两次，多模态参考与编辑更准，支持白模控制与绿幕编辑。",
+      "u": "https://seed.bytedance.com/seedance2_5",
+      "tag": "视频生成·国产",
+      "ic": "🎬",
+      "cat": "gen",
+      "old_t": "视频生成",
+      "old_c": "gen"
     }
   ]
 }

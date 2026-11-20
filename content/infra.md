@@ -1,6 +1,6 @@
 # 算力与芯片
 
-> 算力云、芯片、量子计算与半导体 · 共 61 条
+> 算力云、芯片、量子计算与半导体 · 共 63 条
 
 ## NVIDIA
 
@@ -427,4 +427,18 @@
 - 链接：<https://www.iluvatar.com/>
 - 说明：国产通用 GPU 厂商，提供训练与推理芯片及软件栈。
 - 标签：国产·GPU
+- 核验：未核验
+
+## NVIDIA RTX Spark
+
+- 链接：<https://www.nvidia.com/en-us/products/rtx-spark/>
+- 说明：NVIDIA 的 Windows PC 超级芯片：Grace CPU + Blackwell RTX GPU，最高 1 PFLOPS FP4、128GB 统一内存；薄本与紧凑桌面都能本地跑智能体、创作和游戏。
+- 标签：高性能·GPU
+- 核验：未核验
+
+## NVIDIA DGX Spark
+
+- 链接：<https://www.nvidia.com/en-us/products/workstations/dgx-spark/>
+- 说明：NVIDIA 的个人 AI 超算：GB10 Grace Blackwell，最高 1 PFLOPS FP4、128GB 一致统一内存，桌面跑本地智能体与大模型；ConnectX-7 可四机互联。
+- 标签：高性能·GPU
 - 核验：未核验

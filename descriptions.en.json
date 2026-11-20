@@ -628,5 +628,9 @@
   "Beautiful.ai": "AI-assisted presentation layout with brand consistency and team templates.",
   "Tome": "An AI-native storytelling and deck tool that turns an outline into pages, visuals and speaker notes.",
   "Decktopus": "Generate a deck from a topic, with custom layouts, images and share analytics.",
-  "Plus AI": "An AI add-on for Google Slides and PowerPoint for outlines, rewriting and brand templates."
+  "Plus AI": "An AI add-on for Google Slides and PowerPoint for outlines, rewriting and brand templates.",
+  "NVIDIA RTX Spark": "NVIDIA's Windows PC superchip: a Grace CPU plus a Blackwell RTX GPU, up to 1 PFLOP FP4 and 128 GB unified memory, for local agents, creation and gaming in slim laptops or compact desktops.",
+  "NVIDIA DGX Spark": "NVIDIA's personal AI supercomputer: GB10 Grace Blackwell, up to 1 PFLOP FP4 and 128 GB coherent unified memory, built to run local agents and large models on a desk; ConnectX-7 links up to four units.",
+  "Seedream 5.5": "ByteDance Seed's image model released 2026-11-09: pixel-level preservation across up to 100 edit rounds, native RGBA transparent output, and stronger text rendering; available in Jimeng, Doubao and Volcengine Ark.",
+  "Seedance 2.5": "ByteDance Seed's audio-video joint generation model: up to 30-second single-pass clips with two extensions, precise multimodal references and editing, plus white-model and green-screen control for professional workflows."
 }
