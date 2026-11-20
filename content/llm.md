@@ -1,20 +1,34 @@
 # 大模型与对话
 
-> 通用大模型、AI 搜索与提示词生态 · 共 56 条
+> 通用大模型、AI 搜索与提示词生态 · 共 58 条
 
 ## ChatGPT
 
-- 链接：<https://chat.openai.com>
+- 链接：<https://chatgpt.com>
 - 说明：OpenAI 的对话产品：Deep Research、智能体与图像 2.0 已并入主产品；Atlas 浏览器于 2026-08-09 停运，能力并入 ChatGPT/Codex。
 - 标签：多模态
 - 核验：未验证（探测受限：timeout，非死链）
+
+## ChatGPT Work
+
+- 链接：<https://chatgpt.com/work>
+- 说明：OpenAI 的项目型工作台：把文件、Slack/Teams、浏览器与 Codex 串起来，产出文档、表格、幻灯片和站点；复杂任务在关键动作前要求人工审批。
+- 标签：办公·Agent
+- 核验：未核验
 
 ## Claude
 
 - 链接：<https://claude.ai>
 - 说明：Anthropic 的对话应用：2026-10-21 release notes 记录记忆与 Cowork 更新；消费条款把输出转让给用户，隐私政策提供训练 opt-out。
 - 标签：长文本·安全
-- 核验：可达（已改址 → https://claude.com/app-unavailable-in-region）（2026-10-29）
+- 核验：可达（已改址 → https://claude.com/app-unavailable-in-region）（2026-11-20）
+
+## Claude Fable 5.2
+
+- 链接：<https://www.anthropic.com/claude/fable>
+- 说明：Anthropic 的旗舰模型线：Fable 5.2 于 2026-11-09 上线，官方定位为最强技术模型，可连续数天推进模糊工程任务并协调大量子 Agent；Mythos 5.2 为同代安全/研究版本。
+- 标签：推理·Agent
+- 核验：ok（2026-11-20）
 
 ## Gemini
 
@@ -28,35 +42,35 @@
 - 链接：<https://chat.deepseek.com>
 - 说明：深度求索推出的高性能开源大模型，编程与推理能力突出。
 - 标签：开源·编程助手
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Kimi
 
 - 链接：<https://www.kimi.com>
 - 说明：月之暗面推出的超长上下文 AI 助手，支持 200 万字输入。
 - 标签：长文本·国产
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## 通义千问
 
 - 链接：<https://tongyi.aliyun.com>
 - 说明：阿里云自研大语言模型，提供对话、编程、翻译等多场景服务。
 - 标签：大厂·国产
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## 文心一言
 
 - 链接：<https://yiyan.baidu.com>
 - 说明：百度的大语言模型对话产品，接入百度搜索与知识增强能力。
 - 标签：大厂·RAG
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## 豆包
 
 - 链接：<https://www.doubao.com>
 - 说明：字节跳动旗下 AI 对话助手，集成抖音生态与多模态能力。
 - 标签：大厂·多模态
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Grok
 
@@ -77,56 +91,56 @@
 - 链接：<https://chatglm.cn>
 - 说明：智谱 AI 推出的 GLM 系列大模型对话产品，支持多模态交互。
 - 标签：国产
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## 讯飞星火
 
 - 链接：<https://xinghuo.xfyun.cn>
 - 说明：科大讯飞自研大模型，深耕语音交互与教育办公场景。
 - 标签：语音合成
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## 百川智能
 
 - 链接：<https://www.baichuan-ai.com>
 - 说明：百川 AI 推出的 Baichuan 系列大模型平台，中文评测突出。
 - 标签：国产
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## 腾讯混元
 
 - 链接：<https://hunyuan.tencent.com>
 - 说明：腾讯自研大模型，深度嵌入微信、腾讯会议等产品矩阵。
 - 标签：大厂
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## 腾讯元宝
 
 - 链接：<https://yuanbao.tencent.com>
 - 说明：腾讯 AI 助手应用，融合混元大模型与公众号内容生态。
 - 标签：大厂
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## 海螺 AI
 
 - 链接：<https://hailuoai.com>
 - 说明：MiniMax 的对话与语音产品，提供语音合成与克隆；具体音色与语言以官方页为准。
 - 标签：语音合成
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## 阶跃星辰
 
 - 链接：<https://www.stepfun.com>
 - 说明：Step 系列大模型，数学推理与多模态能力突出。
 - 标签：科研
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Cohere
 
 - 链接：<https://cohere.com>
 - 说明：企业级大语言模型平台，Command R 系列专注 RAG 与多语言。
 - 标签：企业级·RAG
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Mistral Le Chat
 
@@ -170,6 +184,13 @@
 - 标签：大厂·免费
 - 核验：未验证（探测受限：timeout，非死链）
 
+## Meta Muse
+
+- 链接：<https://muse.ai/>
+- 说明：Meta 的个人 AI Agent：在独立 Secure VM 里代管邮件、日历、购物与浏览，敏感动作先确认；2026-09 起在美国上线，之后扩到更多市场。
+- 标签：Agent·办公
+- 核验：未验证（探测受限：timeout，非死链）
+
 ## Pi
 
 - 链接：<https://pi.ai>
@@ -182,7 +203,7 @@
 - 链接：<https://platform.deepseek.com>
 - 说明：DeepSeek API 开发平台，提供模型推理与微调服务。
 - 标签：API·模型微调
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Google AI Studio
 
@@ -196,14 +217,14 @@
 - 链接：<https://www.reka.ai>
 - 说明：前 DeepMind 团队创立的多模态大模型，视觉理解能力突出。
 - 标签：多模态·大厂
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## AI21 Labs
 
 - 链接：<https://www.ai21.com>
 - 说明：以色列 AI 公司推出 Jurassic 系列大模型，企业级语言理解。
 - 标签：企业级
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Writer
 
@@ -217,14 +238,7 @@
 - 链接：<https://metaso.cn>
 - 说明：中文 AI 搜索引擎，可深入学术与专业领域检索。
 - 标签：搜索·学术
-- 核验：ok（2026-10-29）
-
-## 天工 AI 搜索
-
-- 链接：<https://www.tiangong.cn>
-- 说明：昆仑万维推出的 AI 搜索产品，支持多轮深度研究。
-- 标签：搜索
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Devv
 
@@ -252,7 +266,7 @@
 - 链接：<https://bocha.cn>
 - 说明：字节旗下 AI 搜索产品，聚合全网信息智能回答。
 - 标签：大厂·搜索
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Brave Search
 
@@ -266,14 +280,14 @@
 - 链接：<https://consensus.app>
 - 说明：AI 驱动的学术论文搜索引擎，用研究证据回答问题。
 - 标签：学术
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Andi Search
 
 - 链接：<https://andisearch.com>
 - 说明：AI 原生搜索引擎，以对话形式呈现结构化答案。
 - 标签：搜索
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## PromptBase
 
@@ -287,74 +301,74 @@
 - 链接：<https://prompthero.com>
 - 说明：最流行的 AI 图像 Prompt 搜索引擎，发现优秀提示词与作品。
 - 标签：搜索·图像生成
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Artbreeder
 
 - 链接：<https://www.artbreeder.com>
 - 说明：AI 图像融合与基因编辑创作平台，通过混合图像创造新视觉。
 - 标签：图像生成
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## PromptFolder
 
 - 链接：<https://promptfolder.com>
 - 说明：提示词管理工具，保存、组织与分享你的最佳 AI Prompt。
 - 标签：社区
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## ChatGPT Prompt Plus
 
 - 链接：<https://www.aiprm.com>
 - 说明：浏览器扩展一键保存和复用最常用的 ChatGPT 提示词模板。
 - 标签：设计
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## SillyTavern
 
 - 链接：<https://docs.sillytavern.app>
 - 说明：开源本地对话前端壳，连接模型后端运行，本身不加载模型。
 - 标签：开源·本地部署
-- 核验：ok（2026-10-29）
+- 核验：ok（2026-11-20）
 
 ## Microsoft Copilot
 
 - 链接：<https://copilot.microsoft.com>
 - 说明：微软 C 端对话入口：模型由微软路由；C 端 Deep Research 已于 2026-08-18 退役，深度研究改由 M365 Copilot 的 Researcher 承接。
 - 标签：大厂·多模态
-- 核验：未核验
+- 核验：未验证（探测受限：ECONNRESET，非死链）
 
 ## NotebookLM
 
 - 链接：<https://notebooklm.google.com>
 - 说明：Google 的来源问答与笔记工具；2026-11-04 官方帮助使用 Gemini Notebook 名称，账号迁移状态未登录验证。笔记可导出新 Google Doc，修改不回同步；使用条件见条目说明。
 - 标签：搜索·学术
-- 核验：未核验
+- 核验：未验证（探测受限：ETIMEDOUT，非死链）
 
 ## Kagi
 
 - 链接：<https://kagi.com>
 - 说明：付费换隐私的自建索引搜索引擎：无广告无追踪，AI 答案层（FastGPT / Teclis）是附加线。
 - 标签：搜索·学术
-- 核验：未核验
+- 核验：未验证（探测受限：ETIMEDOUT，非死链）
 
 ## Open WebUI
 
 - 链接：<https://openwebui.com>
 - 说明：自托管的多模型聊天界面：接 Ollama 与 OpenAI 兼容 API，自带知识库、工具调用与多用户权限。
 - 标签：开源 · 本地部署
-- 核验：未核验
+- 核验：ok（2026-11-20）
 
 ## LibreChat
 
 - 链接：<https://www.librechat.ai>
 - 说明：自托管的多 provider 聊天平台：统一 Anthropic、OpenAI、Google、Bedrock 与 Ollama，并带 Agents、MCP 与代码沙箱。
 - 标签：开源 · 本地部署
-- 核验：未核验
+- 核验：ok（2026-11-20）
 
 ## 零一万物
 
-- 链接：<https://www.01.ai/>
+- 链接：<https://www.lingyiwanwu.com/>
 - 说明：李开复团队的大模型公司：Yi 系列开源模型与万知平台，主打中英双语与低成本微调。
 - 标签：国产·大厂
 - 核验：未核验
@@ -364,28 +378,28 @@
 - 链接：<https://www.sensetime.com/>
 - 说明：商汤的大模型与多模态能力平台，覆盖对话、图像、视频与行业解决方案。
 - 标签：大厂·多模态
-- 核验：未核验
+- 核验：ok（2026-11-20）
 
 ## 天工 AI
 
 - 链接：<https://www.tiangong.cn/>
 - 说明：昆仑万维的 AI 搜索与对话产品，主打研究型问答和中文内容聚合。
 - 标签：搜索·学术
-- 核验：未核验
+- 核验：ok（2026-11-20）
 
 ## 纳米 AI 搜索
 
 - 链接：<https://www.n.cn/>
 - 说明：360 的 AI 搜索入口，支持多轮追问、网页总结与直接生成答案。
 - 标签：搜索
-- 核验：未核验
+- 核验：ok（2026-11-20）
 
 ## 夸克 AI
 
 - 链接：<https://quark.cn/>
 - 说明：阿里夸克浏览器的 AI 能力：搜索、扫描、文档总结与学习助手。
 - 标签：搜索·国产
-- 核验：未核验
+- 核验：ok（2026-11-20）
 
 ## Mistral AI
 

@@ -65,11 +65,21 @@
     {
       "n": "ChatGPT",
       "d": "OpenAI 的对话产品：Deep Research、智能体与图像 2.0 已并入主产品；Atlas 浏览器于 2026-08-09 停运，能力并入 ChatGPT/Codex。",
-      "u": "https://chat.openai.com",
+      "u": "https://chatgpt.com",
       "tag": "多模态",
       "ic": "💬",
       "cat": "llm",
       "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "ChatGPT Work",
+      "cat": "llm",
+      "ic": "🗂️",
+      "tag": "办公·Agent",
+      "u": "https://chatgpt.com/work",
+      "d": "OpenAI 的项目型工作台：把文件、Slack/Teams、浏览器与 Codex 串起来，产出文档、表格、幻灯片和站点；复杂任务在关键动作前要求人工审批。",
+      "old_t": "AI 办公",
       "old_c": "ai"
     },
     {
@@ -83,6 +93,16 @@
       "old_c": "ai"
     },
     {
+      "n": "Claude Fable 5.2",
+      "cat": "llm",
+      "ic": "🎭",
+      "tag": "推理·Agent",
+      "u": "https://www.anthropic.com/claude/fable",
+      "d": "Anthropic 的旗舰模型线：Fable 5.2 于 2026-11-09 上线，官方定位为最强技术模型，可连续数天推进模糊工程任务并协调大量子 Agent；Mythos 5.2 为同代安全/研究版本。",
+      "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
       "n": "Gemini",
       "d": "Google 的对话应用：Gemini 4 Argon 于 2026-10-13 面向 AI Pro/Ultra 推出；研究线有 Deep Research Max（2026-04-21），图像线有 Nano Banana 2（2026-02-26）；关闭 Keep Activity 后未来对话不用于训练。",
       "u": "https://gemini.google.com",
@@ -90,6 +110,16 @@
       "ic": "♊",
       "cat": "llm",
       "old_t": "大语言模型",
+      "old_c": "ai"
+    },
+    {
+      "n": "Gemini Omni",
+      "cat": "gen",
+      "ic": "🎞️",
+      "tag": "视频生成·多模态",
+      "u": "https://deepmind.google/models/gemini-omni/",
+      "d": "Google DeepMind 的多模态视频生成与编辑模型：支持文本、图像、视频、音频参考，输出统一视频；可在 Gemini、Google Flow 和 YouTube 使用，输出带 SynthID 与 C2PA。",
+      "old_t": "AI视频",
       "old_c": "ai"
     },
     {
@@ -303,6 +333,16 @@
       "old_c": "ai"
     },
     {
+      "n": "Meta Muse",
+      "cat": "llm",
+      "ic": "🪄",
+      "tag": "Agent·办公",
+      "u": "https://muse.ai/",
+      "d": "Meta 的个人 AI Agent：在独立 Secure VM 里代管邮件、日历、购物与浏览，敏感动作先确认；2026-09 起在美国上线，之后扩到更多市场。",
+      "old_t": "AI 助手",
+      "old_c": "ai"
+    },
+    {
       "n": "Pi",
       "d": "Inflection AI 打造的情感化 AI 对话助手，对话自然温暖。",
       "u": "https://pi.ai",
@@ -368,16 +408,6 @@
       "u": "https://metaso.cn",
       "tag": "搜索·学术",
       "ic": "🔍",
-      "cat": "llm",
-      "old_t": "AI搜索",
-      "old_c": "ai"
-    },
-    {
-      "n": "天工 AI 搜索",
-      "d": "昆仑万维推出的 AI 搜索产品，支持多轮深度研究。",
-      "u": "https://www.tiangong.cn",
-      "tag": "搜索",
-      "ic": "🌤️",
       "cat": "llm",
       "old_t": "AI搜索",
       "old_c": "ai"
@@ -593,17 +623,6 @@
       "old_c": "ai"
     },
     {
-      "n": "Galileo AI",
-      "d": "AI 界面设计生成工具，官网已整站重定向到 Google Stitch（stitch.withgoogle.com），不再独立运营。",
-      "u": "https://www.usegalileo.ai",
-      "tag": "UI生成",
-      "ic": "🎨",
-      "cat": "gen",
-      "old_t": "AI设计",
-      "old_c": "ai",
-      "retired": true
-    },
-    {
       "n": "Uizard",
       "d": "AI 驱动的产品原型设计工具，草图一键转交互原型。",
       "u": "https://uizard.io",
@@ -644,17 +663,6 @@
       "old_c": "ai"
     },
     {
-      "n": "DALL·E",
-      "d": "已停运（2026-05-12 停止支持）：OpenAI 的图像生成模型；官方 deprecations 页把 DALL·E 2/3 标为弃用，现行图像生成走 ChatGPT / GPT Image。",
-      "u": "https://openai.com/dall-e-3",
-      "tag": "已停运·图像生成",
-      "ic": "✨",
-      "cat": "gen",
-      "old_t": "AI绘画",
-      "old_c": "ai",
-      "retired": true
-    },
-    {
       "n": "ComfyUI",
       "d": "Stable Diffusion 的节点式工作流界面，本地运行，支持自定义节点与模型。",
       "u": "https://github.com/comfyanonymous/ComfyUI",
@@ -675,16 +683,6 @@
       "old_c": "ai"
     },
     {
-      "n": "Firefly",
-      "d": "Adobe 推出的商用安全 AI 图像生成工具，深度集成 PS。",
-      "u": "https://firefly.adobe.com",
-      "tag": "大厂·安全",
-      "ic": "🦋",
-      "cat": "gen",
-      "old_t": "AI绘画",
-      "old_c": "ai"
-    },
-    {
       "n": "通义万相",
       "d": "阿里云推出的 AI 创意绘画平台，支持文生图与风格迁移。",
       "u": "https://tongyi.aliyun.com/wanxiang",
@@ -693,17 +691,6 @@
       "cat": "gen",
       "old_t": "AI绘画",
       "old_c": "ai"
-    },
-    {
-      "n": "文心一格",
-      "d": "百度出品的 AI 艺术与创意辅助平台；官方已于 2025-04-01 将服务迁移合并至文心一言官网，旧域名 302 跳转迁移指南页（2026-10-31 三通道核验）——独立产品已终结。",
-      "u": "https://yige.baidu.com",
-      "tag": "大厂·多语言",
-      "ic": "🖌️",
-      "cat": "gen",
-      "old_t": "AI绘画",
-      "old_c": "ai",
-      "retired": true
     },
     {
       "n": "SeaArt",
@@ -754,37 +741,6 @@
       "cat": "gen",
       "old_t": "AI视频",
       "old_c": "ai"
-    },
-    {
-      "n": "Pika",
-      "d": "简单易用的 AI 视频生成工具，支持文本转视频及视频编辑。",
-      "u": "https://pika.art",
-      "tag": "视频生成",
-      "ic": "🎥",
-      "cat": "gen",
-      "old_t": "AI视频",
-      "old_c": "ai"
-    },
-    {
-      "n": "可灵 Kling",
-      "d": "快手推出的 AI 视频生成大模型，支持文生视频和图生视频。",
-      "u": "https://klingai.com",
-      "tag": "国产",
-      "ic": "🎞️",
-      "cat": "gen",
-      "old_t": "AI视频",
-      "old_c": "ai"
-    },
-    {
-      "n": "Sora",
-      "d": "已停运（网页/App 2026-04-26、API 2026-09-24 停止服务）：OpenAI 的文生视频产品。",
-      "u": "https://openai.com/sora",
-      "tag": "已停运·视频生成",
-      "ic": "🌌",
-      "cat": "gen",
-      "old_t": "AI视频",
-      "old_c": "ai",
-      "retired": true
     },
     {
       "n": "HeyGen",
@@ -855,17 +811,6 @@
       "cat": "gen",
       "old_t": "AI视频",
       "old_c": "ai"
-    },
-    {
-      "n": "Haiper AI",
-      "d": "前 DeepMind 团队创立的 AI 视频生成平台；consumer app 2025 年初下线、创始团队 2025-03 加入 Microsoft AI、模型售予 NetMind.AI（仅 B2B API）——消费级产品已停运。",
-      "u": "https://haiper.ai",
-      "tag": "大厂",
-      "ic": "🎬",
-      "cat": "gen",
-      "old_t": "AI视频",
-      "old_c": "ai",
-      "retired": true
     },
     {
       "n": "Genmo",
@@ -958,17 +903,6 @@
       "old_c": "ai"
     },
     {
-      "n": "Play.ht",
-      "d": "AI 语音生成平台，2025 年 7 月被 Meta 收购（acqui-hire），2025-12-31 永久停服，2026 年域名停止解析。原域名已失效。",
-      "u": "https://play.ht",
-      "tag": "语音合成·多语言",
-      "ic": "🔊",
-      "cat": "gen",
-      "old_t": "AI音频",
-      "old_c": "ai",
-      "retired": true
-    },
-    {
       "n": "Speak",
       "d": "AI 语言学习 App，通过语音交互练习英语与韩语口语。",
       "u": "https://www.speak.com",
@@ -1025,6 +959,36 @@
       "tag": "IDE",
       "ic": "🖱️",
       "cat": "coding",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Devin",
+      "cat": "coding",
+      "ic": "🤖",
+      "tag": "Agent·编程助手",
+      "u": "https://devin.ai/",
+      "d": "Cognition 的自主软件工程师：云端或本地 VM、浏览器实测、并行子 Agent 和 PR 串成一条线；适合把整段任务交出去再 review diff，Windsurf/Devin Desktop 同属一家。",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Augment Code",
+      "cat": "coding",
+      "ic": "🧩",
+      "tag": "编程助手·企业级",
+      "u": "https://www.augmentcode.com/",
+      "d": "Augment Code 的企业级 Agent 平台 Cosmos：把 SDLC 拆成专家 Agent，从 ticket 到 PR、代码评审和修复共用一套上下文，人守关键质量门。",
+      "old_t": "AI编程",
+      "old_c": "ai"
+    },
+    {
+      "n": "Aider",
+      "cat": "coding",
+      "ic": "⌨️",
+      "tag": "命令行·开源",
+      "u": "https://aider.chat/",
+      "d": "开源终端编程 Agent：直接改本地 git 仓库并自动提交，支持多家模型和 BYOK；适合喜欢命令行、要可审计 diff 的人。",
       "old_t": "AI编程",
       "old_c": "ai"
     },
@@ -1137,17 +1101,6 @@
       "cat": "coding",
       "old_t": "AI编程",
       "old_c": "ai"
-    },
-    {
-      "n": "Tabnine",
-      "d": "老牌 AI 代码补全引擎，2026-07-30 被 Tricentis 收购，官网已整站并入 Tricentis 站、产品清单不再单列。",
-      "u": "https://www.tabnine.com",
-      "tag": "本地部署·安全",
-      "ic": "🔐",
-      "cat": "coding",
-      "old_t": "AI编程",
-      "old_c": "ai",
-      "retired": true
     },
     {
       "n": "Zed",
@@ -1370,17 +1323,6 @@
       "old_c": "ai"
     },
     {
-      "n": "CSM AI",
-      "d": "Common Sense Machines，图片与视频转 3D 世界模型。2026 年初被 Google 收购后官网下线。",
-      "u": "https://csm.ai",
-      "tag": "3D生成·具身智能",
-      "ic": "🌍",
-      "cat": "gen",
-      "old_t": "3D生成",
-      "old_c": "ai",
-      "retired": true
-    },
-    {
       "n": "Rodin",
       "d": "文本和图片生成高质量 3D 头像与数字资产的 AI 平台。",
       "u": "https://hyper3d.ai",
@@ -1421,17 +1363,6 @@
       "old_c": "ai"
     },
     {
-      "n": "Ready Player Me",
-      "d": "跨游戏跨平台 3D 虚拟化身平台，一张自拍即可生成。2025-12 被 Netflix 收购，2026-01-31 起服务关闭。",
-      "u": "https://readyplayer.me",
-      "tag": "数字人",
-      "ic": "🧑",
-      "cat": "gen",
-      "old_t": "3D生成",
-      "old_c": "ai",
-      "retired": true
-    },
-    {
       "n": "小冰",
       "d": "微软小冰独立后的 AI Being 平台，覆盖虚拟人与数字人技术。",
       "u": "https://www.xiaoice.com",
@@ -1470,17 +1401,6 @@
       "cat": "gen",
       "old_t": "数字人",
       "old_c": "ai"
-    },
-    {
-      "n": "腾讯智影",
-      "d": "腾讯 AI 数字人视频创作平台；官方改造公告 2025-06-30 24 时起暂停登录及业务、停止用户数据访问，截至 2026-10 未重启。",
-      "u": "https://zenvideo.qq.com",
-      "tag": "大厂",
-      "ic": "🎥",
-      "cat": "gen",
-      "old_t": "数字人",
-      "old_c": "ai",
-      "retired": true
     },
     {
       "n": "AlphaFold DB",
@@ -1771,17 +1691,6 @@
       "cat": "app",
       "old_t": "AI 营销",
       "old_c": "ai"
-    },
-    {
-      "n": "Phrasee",
-      "d": "AI 品牌语言优化工具，官网已整站重定向到 jacquard.com，产品不再独立运营。",
-      "u": "https://phrasee.co",
-      "tag": "营销·设计",
-      "ic": "🎯",
-      "cat": "app",
-      "old_t": "AI 营销",
-      "old_c": "ai",
-      "retired": true
     },
     {
       "n": "Albert AI",
@@ -2734,17 +2643,6 @@
       "old_c": "models"
     },
     {
-      "n": "OctoAI",
-      "d": "AI 推理优化与部署平台，被 NVIDIA 收购，官网重定向到 nvidia.com。",
-      "u": "https://octo.ai",
-      "tag": "推理",
-      "ic": "🐙",
-      "cat": "model",
-      "old_t": "模型平台",
-      "old_c": "models",
-      "retired": true
-    },
-    {
       "n": "Anyscale",
       "d": "Ray 框架商业化平台，大规模分布式 AI 推理与训练引擎。",
       "u": "https://www.anyscale.com",
@@ -3077,7 +2975,7 @@
     {
       "n": "Weights & Biases",
       "d": "最流行的 ML 实验追踪与可视化平台，团队协作神器。",
-      "u": "https://wandb.ai",
+      "u": "https://forge.coreweave.com/wandb",
       "tag": "可观测·可视化",
       "ic": "📈",
       "cat": "dev",
@@ -5085,17 +4983,6 @@
       "old_c": "crypto"
     },
     {
-      "n": "Gem.xyz",
-      "d": "NFT 聚合交易工具，批量扫地板价高效收集 NFT 资产。",
-      "u": "https://www.gem.xyz",
-      "tag": "搜索·工作流",
-      "ic": "💎",
-      "cat": "ext",
-      "old_t": "NFT 工具",
-      "old_c": "crypto",
-      "retired": true
-    },
-    {
       "n": "Sudoswap",
       "d": "去中心化 NFT 自动化做市协议，即时创建与交易 NFT 池。",
       "u": "https://sudoswap.xyz",
@@ -5484,17 +5371,6 @@
       "cat": "infra",
       "old_t": "芯片设计 EDA",
       "old_c": "silicon"
-    },
-    {
-      "n": "Ansys",
-      "d": "多物理场仿真软件领导者，Synopsys 收购合并后官网重定向到 ansys.synopsys.com。",
-      "u": "https://www.ansys.com",
-      "tag": "仿真",
-      "ic": "⚡",
-      "cat": "infra",
-      "old_t": "芯片设计 EDA",
-      "old_c": "silicon",
-      "retired": true
     },
     {
       "n": "Keysight",
@@ -6235,17 +6111,6 @@
       "cat": "learn",
       "old_t": "论文研究",
       "old_c": "learn"
-    },
-    {
-      "n": "Papers With Code",
-      "d": "论文-代码对应索引平台，2025-07 被 Meta 关停，域名重定向到 Hugging Face Trending Papers，历史数据存于 paperswithcode-data 仓库。",
-      "u": "https://paperswithcode.com",
-      "tag": "学术·编程助手",
-      "ic": "📝",
-      "cat": "learn",
-      "old_t": "论文研究",
-      "old_c": "learn",
-      "retired": true
     },
     {
       "n": "Semantic Scholar",
@@ -7404,27 +7269,11 @@
       "cat": "gen"
     },
     {
-      "n": "Kling",
-      "d": "国产视频生成：Kling 4.0 单次原生 30 秒、全能参考 15 项素材；已备案、大陆直连可用，商用需过会员线。",
-      "u": "https://klingai.com/global/",
-      "tag": "视频生成·国产",
-      "ic": "🎞️",
-      "cat": "gen"
-    },
-    {
       "n": "Hailuo Video",
       "d": "MiniMax 的消费级视频生成入口：文/图生视频，国产、大陆直连可用、免费档起步；产品入口备案状态未单独核验。",
       "u": "https://hailuoai.video",
       "tag": "视频生成·国产",
       "ic": "🎥",
-      "cat": "gen"
-    },
-    {
-      "n": "Luma",
-      "d": "Dream Machine 主打镜头运动感短片与首尾帧插值；大陆直连不可达（2026-10 实测 000）。",
-      "u": "https://lumalabs.ai",
-      "tag": "视频生成·云服务",
-      "ic": "🌗",
       "cat": "gen"
     },
     {
@@ -7478,7 +7327,7 @@
     {
       "n": "SGLang",
       "d": "服务化推理的前缀复用一代：RadixAttention 复用多轮与共享前缀的 KV 缓存，agent 工作流收益直接；Apache-2.0。",
-      "u": "https://docs.sglang.ai",
+      "u": "https://docs.sglang.io/",
       "tag": "本地部署·高性能",
       "ic": "🧠",
       "cat": "model"
@@ -7764,7 +7613,7 @@
     {
       "n": "零一万物",
       "d": "李开复团队的大模型公司：Yi 系列开源模型与万知平台，主打中英双语与低成本微调。",
-      "u": "https://www.01.ai/",
+      "u": "https://www.lingyiwanwu.com/",
       "tag": "国产·大厂",
       "ic": "🧠",
       "cat": "llm",
@@ -7874,7 +7723,7 @@
     {
       "n": "MiniMax 开放平台",
       "d": "MiniMax 的模型 API 平台，覆盖文本、语音、视频与角色对话。",
-      "u": "https://platform.minimaxi.com/",
+      "u": "https://platform.minimax.cn/",
       "tag": "多模态·API",
       "ic": "🎛️",
       "cat": "model",
@@ -7884,7 +7733,7 @@
     {
       "n": "Moonshot 开放平台",
       "d": "月之暗面的 Kimi 模型 API 与工具调用平台。",
-      "u": "https://platform.moonshot.cn/",
+      "u": "https://platform.kimi.com/",
       "tag": "国产·API",
       "ic": "🌙",
       "cat": "model",
@@ -7924,7 +7773,7 @@
     {
       "n": "清程极智",
       "d": "清华系 AI 基础设施团队，做训练/推理框架与国产算力适配。",
-      "u": "https://www.qingcheng.ai/",
+      "u": "https://www.qc-ai.cn/",
       "tag": "国产·云服务",
       "ic": "🧿",
       "cat": "infra",
@@ -7972,14 +7821,14 @@
       "old_c": "gen"
     },
     {
-      "n": "Krea",
-      "d": "实时图像/视频生成与增强工具，强调边画边看、风格参考和放大。",
-      "u": "https://www.krea.ai/",
-      "tag": "实时·图像生成",
-      "ic": "🖌️",
+      "n": "Google Pics",
       "cat": "gen",
-      "old_t": "实时·图像生成",
-      "old_c": "gen"
+      "ic": "🖼️",
+      "tag": "图像生成·办公",
+      "u": "https://pics.google.com/",
+      "d": "Google Workspace 的图片生成与编辑工具：基于 Nano Banana，既能作为独立网页应用，也嵌在 Slides、Docs 和 Drive 里，支持对象级精修、文字改写与团队共享画布。",
+      "old_t": "AI绘画",
+      "old_c": "ai"
     },
     {
       "n": "Leonardo",
@@ -8000,6 +7849,16 @@
       "cat": "gen",
       "old_t": "视频生成·国产",
       "old_c": "gen"
+    },
+    {
+      "n": "Wan 3.0",
+      "cat": "gen",
+      "ic": "🌊",
+      "tag": "视频生成·国产",
+      "u": "https://wan.video/",
+      "d": "阿里通义万相的视频生成线：Wan 3.0 支持最多 20 个参考素材、文档/网页解析、原生 30 秒时长和声音设计，适合中文创作者与本地化素材。",
+      "old_t": "AI视频",
+      "old_c": "ai"
     },
     {
       "n": "Pika Labs",
@@ -8054,7 +7913,7 @@
     {
       "n": "Plus AI",
       "d": "Google Slides / PowerPoint 里的 AI 插件，做大纲、改写和品牌模板。",
-      "u": "https://www.plusdocs.com/",
+      "u": "https://plusai.com/",
       "tag": "办公·设计",
       "ic": "➕",
       "cat": "app",
