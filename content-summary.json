@@ -5,7 +5,7 @@
    "name": "大模型与对话",
    "n": 58,
    "dead": 0,
-   "maybe": 17
+   "maybe": 18
   },
   {
    "code": "coding",
@@ -17,7 +17,7 @@
   {
    "code": "gen",
    "name": "多模态生成",
-   "n": 60,
+   "n": 58,
    "dead": 0,
    "maybe": 21
   },
@@ -31,7 +31,7 @@
   {
    "code": "model",
    "name": "模型与权重",
-   "n": 38,
+   "n": 36,
    "dead": 0,
    "maybe": 0
   },

@@ -1,17 +1,17 @@
 {
- "at": "2026-11-20T07:37:05.338Z",
+ "at": "2026-11-20T07:49:19.916Z",
  "source": "nav-data.json",
- "items": 800,
+ "items": 796,
  "checked": 739,
  "probedNow": 2,
  "dedup": true,
  "proxy": false,
  "only": null,
  "tally": {
-  "ok": 576,
+  "ok": 575,
   "blocked": 65,
   "changed": 2,
-  "unverifiable": 96
+  "unverifiable": 97
  },
  "history": [
   {
@@ -289,6 +289,30 @@
     "blocked": 65,
     "changed": 2,
     "unverifiable": 96
+   }
+  },
+  {
+   "at": "2026-11-20T07:49:06.678Z",
+   "kind": "start",
+   "items": 796,
+   "probedNow": 0,
+   "tally": {
+    "ok": 576,
+    "blocked": 65,
+    "changed": 2,
+    "unverifiable": 96
+   }
+  },
+  {
+   "at": "2026-11-20T07:49:19.915Z",
+   "kind": "done",
+   "items": 796,
+   "probedNow": 2,
+   "tally": {
+    "ok": 575,
+    "blocked": 65,
+    "changed": 2,
+    "unverifiable": 97
    }
   }
  ],
@@ -2229,14 +2253,6 @@
   },
   {
    "lv": "2026-10-28",
-   "u": "https://mistral.ai",
-   "v": "ok",
-   "s": 200,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
    "u": "https://deepmind.google/models/gemma/",
    "v": "ok",
    "s": 200,
@@ -2246,14 +2262,6 @@
   {
    "lv": "2026-10-28",
    "u": "https://azure.microsoft.com/products/phi",
-   "v": "ok",
-   "s": 200,
-   "via": "curl",
-   "fetchErr": "timeout"
-  },
-  {
-   "lv": "2026-10-28",
-   "u": "https://www.lingyiwanwu.com",
    "v": "ok",
    "s": 200,
    "via": "curl",
@@ -5947,6 +5955,22 @@
    "v": "ok",
    "s": 200,
    "via": "fetch"
+  },
+  {
+   "lv": "2026-11-20",
+   "u": "https://www.lingyiwanwu.com/",
+   "v": "ok",
+   "s": 200,
+   "via": "fetch"
+  },
+  {
+   "lv": "2026-11-20",
+   "u": "https://mistral.ai/",
+   "v": "unverifiable",
+   "s": 0,
+   "err": "timeout",
+   "curlErr": "curl-000",
+   "via": "fetch+curl"
   }
  ]
 }

@@ -1,6 +1,6 @@
 # 多模态生成
 
-> 图像、视频、音频、3D 与数字人生成 · 共 60 条
+> 图像、视频、音频、3D 与数字人生成 · 共 58 条
 
 ## Gemini Omni
 
@@ -359,13 +359,6 @@
 - 标签：语音合成·API
 - 核验：ok（2026-11-20）
 
-## Stability AI
-
-- 链接：<https://stability.ai/>
-- 说明：Stable Diffusion 系列背后的公司，覆盖图像、视频、音频与 3D 生成模型。
-- 标签：图像生成·开源
-- 核验：未核验
-
 ## Adobe Firefly
 
 - 链接：<https://www.adobe.com/products/firefly.html>
@@ -379,13 +372,6 @@
 - 说明：Google Workspace 的图片生成与编辑工具：基于 Nano Banana，既能作为独立网页应用，也嵌在 Slides、Docs 和 Drive 里，支持对象级精修、文字改写与团队共享画布。
 - 标签：图像生成·办公
 - 核验：未验证（探测受限：timeout，非死链）
-
-## Leonardo
-
-- 链接：<https://leonardo.ai/>
-- 说明：面向游戏与产品设计的图像生成平台，含模型训练、材质与资产管理。
-- 标签：图像生成·游戏
-- 核验：未核验
 
 ## 可灵 AI
 

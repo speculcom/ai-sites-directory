@@ -2703,16 +2703,6 @@
       "old_c": "models"
     },
     {
-      "n": "Mistral",
-      "d": "法国 AI 公司推出的高性能开源模型，轻量高效部署友好。",
-      "u": "https://mistral.ai",
-      "tag": "高性能",
-      "ic": "🌪️",
-      "cat": "model",
-      "old_t": "开源模型",
-      "old_c": "models"
-    },
-    {
       "n": "Qwen",
       "d": "阿里通义千问开源模型系列，覆盖多种尺寸与多模态。",
       "u": "https://github.com/QwenLM/Qwen",
@@ -2738,16 +2728,6 @@
       "u": "https://azure.microsoft.com/products/phi",
       "tag": "大厂",
       "ic": "📱",
-      "cat": "model",
-      "old_t": "开源模型",
-      "old_c": "models"
-    },
-    {
-      "n": "Yi 零一万物",
-      "d": "零一万物开源的大语言模型系列，中英文能力高度平衡。",
-      "u": "https://www.lingyiwanwu.com",
-      "tag": "多语言",
-      "ic": "☯",
       "cat": "model",
       "old_t": "开源模型",
       "old_c": "models"
@@ -7801,16 +7781,6 @@
       "old_c": "infra"
     },
     {
-      "n": "Stability AI",
-      "d": "Stable Diffusion 系列背后的公司，覆盖图像、视频、音频与 3D 生成模型。",
-      "u": "https://stability.ai/",
-      "tag": "图像生成·开源",
-      "ic": "🎨",
-      "cat": "gen",
-      "old_t": "图像生成·开源",
-      "old_c": "gen"
-    },
-    {
       "n": "Adobe Firefly",
       "d": "Adobe 的生成式模型家族，嵌入 Photoshop、Illustrator 与 Express，主打商用授权。",
       "u": "https://www.adobe.com/products/firefly.html",
@@ -7829,16 +7799,6 @@
       "d": "Google Workspace 的图片生成与编辑工具：基于 Nano Banana，既能作为独立网页应用，也嵌在 Slides、Docs 和 Drive 里，支持对象级精修、文字改写与团队共享画布。",
       "old_t": "AI绘画",
       "old_c": "ai"
-    },
-    {
-      "n": "Leonardo",
-      "d": "面向游戏与产品设计的图像生成平台，含模型训练、材质与资产管理。",
-      "u": "https://leonardo.ai/",
-      "tag": "图像生成·游戏",
-      "ic": "🗡️",
-      "cat": "gen",
-      "old_t": "图像生成·游戏",
-      "old_c": "gen"
     },
     {
       "n": "可灵 AI",
