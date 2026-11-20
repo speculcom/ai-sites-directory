@@ -221,6 +221,22 @@ ${links}
 
 /** 完整页面外壳 */
 export function shell({ current, title, desc, canonical, accent, body, repo, repoLabel, jsonLd, headExtra = '', langBridge = false, assetPrefix = '' }) {
+  /* 2026-11-20：SEO 基础项修复。绝大多数生成页原先不传 jsonLd，导致
+   * seo-basics 报 235 页「缺少 JSON-LD」。这里给一个可解析的 WebPage 兜底：
+   * 已有显式 jsonLd 或 headExtra 里自带 ld+json 的页面不重复注入。 */
+  const autoLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    description: desc,
+    url: canonical,
+    inLanguage: ['zh-CN', 'en'],
+    isPartOf: { '@type': 'WebSite', url: 'https://specul.com/' },
+  };
+  const headHasLd = /<script[^>]*type="application\/ld\+json"/.test(headExtra || '');
+  const ldBlock = jsonLd
+    ? `  <script type="application/ld+json">${typeof jsonLd === 'string' ? jsonLd : JSON.stringify(jsonLd)}</script>\n`
+    : headHasLd ? '' : `  <script type="application/ld+json">${JSON.stringify(autoLd)}</script>\n`;
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -239,7 +255,7 @@ export function shell({ current, title, desc, canonical, accent, body, repo, rep
   <script src="${depth(assetPrefix)}brand.js?v=${RUNTIME_VERSION}"></script>
   <link rel="stylesheet" href="${depth(assetPrefix)}brand.css?v=${RUNTIME_VERSION}" />
   <link rel="stylesheet" href="${depth(assetPrefix)}site.css" />
-${accent ? `  <style>:root { --accent: ${accent}; }</style>\n` : ''}${headExtra ? `  ${headExtra.trim()}\n` : ''}${jsonLd ? `  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n` : ''}</head>
+${accent ? `  <style>:root { --accent: ${accent}; }</style>\n` : ''}${headExtra ? `  ${headExtra.trim()}\n` : ''}${ldBlock}</head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）

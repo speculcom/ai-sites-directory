@@ -165,7 +165,7 @@ function card(it) {
   /* 2026-11-19：目录页回到「最快跳出去」。
    * 卡片只留站名和打不开提示；说明、图标、标签、档案入口、条件折叠全部撤掉
    * —— 625 条里任何一项都是让人多读一行、晚点一次外链的噪音。 */
-  return `          <div class="card-wrap" data-cat="${it.cat}">
+  return `          <div class="card-wrap" data-cat="${it.cat}" data-tags="${esc(it.tag || '')}">
           <${tag} class="c-link${st.cls ? ' ' + st.cls : ''}" id="${resourceId}"${linkAttrs}>
             <span class="c-nm"><span data-zh>${esc(it.n)}</span><span data-en>${esc(VENDOR_EN[it.n] || it.n)}</span></span>
 ${st.note ? `            <span class="c-warn">${st.note}</span>` : ''}
@@ -302,7 +302,7 @@ ${groups}
 const html = shell({
   current: 'nav',
   title: `AI导航 · 站外 AI 网站目录 | 投机取巧`,
-  desc: `AI导航：按用途整理的站外 AI 网站目录，点名字直接去官网；打不开的会标出来。`,
+  desc: `AI导航：按用途整理的站外 AI 网站目录，点名字直接去官网；打不开的会标出来。收录 600+ 条站外工具与官网入口，按用途分组并标注可用状态。`,
   canonical: 'https://nav.specul.com/',
   /* ⚠ 2026-10-10 不再传 accent（原 '#22d3c5'青色）。
    * 用户定案「不需要分站专属色，整体与首页一致」；brand.css 的 --accent 是
