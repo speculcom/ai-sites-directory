@@ -213,10 +213,10 @@
        改任何一个值都必须重跑 `a11y-contrast --strict`。 */
   --cat-violet:      #7c5cff;   --cat-violet-ink:  #5b34e8;   --cat-violet-soft: rgba(124, 92, 255, .13);
   --cat-rose:        #ff5c8a;   --cat-rose-ink:    #c81e56;   --cat-rose-soft:   rgba(255, 92, 138, .13);
-  --cat-amber:       #ffb03a;   --cat-amber-ink:   #a86a00;   --cat-amber-soft:  rgba(255, 176, 58, .16);
+  --cat-amber:       #ffb03a;   --cat-amber-ink:   #9a5f00;   --cat-amber-soft:  rgba(255, 176, 58, .16);
   --cat-teal:        #12b8b0;   --cat-teal-ink:    #07706a;   --cat-teal-soft:   rgba(18, 184, 176, .13);
   --cat-blue:        #3b9eff;   --cat-blue-ink:    #0b6fc4;   --cat-blue-soft:   rgba(59, 158, 255, .13);
-  --cat-lime:        #84cc16;   --cat-lime-ink:    #4d8a00;   --cat-lime-soft:   rgba(132, 204, 22, .14);
+  --cat-lime:        #84cc16;   --cat-lime-ink:    #3f7200;   --cat-lime-soft:   rgba(132, 204, 22, .14);
 
   --ok:    #15803d;
   --warn:  #b45309;
@@ -1212,7 +1212,7 @@ html[data-lang="en"] .nav-links > a {
   place-items: center;
   font-size: 10px;
   font-variant-numeric: tabular-nums;
-  color: var(--cyan);
+  color: var(--cat-teal-ink);
   border: 1px solid var(--brand-line);
   background: var(--brand-soft);
 }
@@ -1255,7 +1255,7 @@ html[data-lang="en"] .nav-links > a {
   padding: 3px 7px;
   border-radius: 6px;
   font-size: 10px;
-  color: var(--cyan);
+  color: var(--cat-teal-ink);
   border: 1px solid var(--brand-line);
   background: var(--brand-soft);
 }
@@ -1272,7 +1272,7 @@ html[data-lang="en"] .nav-links > a {
 .vz-map-row b { font-size: 12px; color: var(--ink); }
 .vz-map-row small { font-size: 10px; line-height: 1.45; color: var(--ink-faint); }
 .vz-path { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 12px 4px 4px; }
-.vz-path span { padding: 7px 12px; border-radius: 999px; border: 1px solid var(--brand-line); background: var(--brand-soft); font-size: 12px; color: var(--ink); }
+.vz-path span { padding: 7px 12px; border-radius: 999px; border: 1px solid #6d4fd6; background: #6d4fd6; color: #fff; font-size: 12px; }
 .vz-path i { font-style: normal; color: var(--cyan); font-size: 12px; }
 .vz-wire { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .vz-wire > div { padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-raise); }

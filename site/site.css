@@ -561,7 +561,7 @@ html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
   display: flex; align-items: center; justify-content: space-between;
   gap: var(--sp-3) var(--sp-5); flex-wrap: wrap;
 }
-.dir-h1 { margin: 0; font-size: clamp(26px, 3vw, 34px); line-height: var(--lh-tight); letter-spacing: -.03em; }
+.dir-h1 { margin: 0; font-size: clamp(32px, 3.2vw, 46px); line-height: var(--lh-tight); letter-spacing: -.03em; }
 .dir-tools { display: flex; align-items: center; justify-content: flex-end; gap: var(--sp-2); flex: 1 1 320px; min-width: 0; }
 .dir-search { flex: 1 1 220px; max-width: 360px; min-width: 0; }
 .dir-search input {

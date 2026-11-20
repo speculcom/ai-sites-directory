@@ -1,4 +1,4 @@
-# AI导航 · 站外 AI 网站目录
+# AI 导航 · 站外 AI 网站目录
 
 > https://nav.specul.com/
 

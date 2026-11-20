@@ -43,7 +43,7 @@ export const BRAND = {
  *  2026-11-08 用户定案，按「用户走到哪一步才需要它」重排为三组：
  *    daily    首页 · 学 AI · 工具 · 模型 · 作品演示 · 开源库 —— 日常闭环
  *    deep     硬件算力 · AI 论文 · 链               —— 按需深挖，受众从宽到窄
- *    external AI导航                                —— 站外 AI 网站目录，不是本网内容
+ *    external AI 导航                                —— 站外 AI 网站目录，不是本网内容
  *  旧顺序是历史累加出来的（先六站、再插 hardware、补 papers/chain、最后塞 nav），
  *  不是设计出来的；现在把出口站单独成组，避免它被当成第 9 个内容站。
  *
@@ -63,7 +63,7 @@ export const NAV_ALL = [
   { key: 'hardware', href: 'https://hardware.specul.com/', zh: '硬件算力', en: 'Compute', group: 'deep', live: true },
   { key: 'papers', href: 'https://papers.specul.com/', zh: 'AI 论文', en: 'AI Papers', group: 'deep', live: true },
   { key: 'chain', href: 'https://chain.specul.com/', zh: '链', en: 'Chain', group: 'deep', live: true },
-  { key: 'nav', href: 'https://nav.specul.com/', zh: 'AI导航', zhTop: 'AI导航', en: 'AI Directory', group: 'external', live: true },
+  { key: 'nav', href: 'https://nav.specul.com/', zh: 'AI 导航', zhTop: 'AI 导航', en: 'AI Directory', group: 'external', live: true },
 ];
 
 /** 渲染用导航：只含已上线站。探针以 NAV.length 为期望项数，未上线站不进这里。 */
@@ -132,7 +132,7 @@ export function drawer(current) {
 ${items}
     </nav>
     <div class="nav-drawer-foot">
-      <p><span data-zh>内容站覆盖学、用、选、跑；AI导航是站外的 AI 网站目录，点出去看。</span><span data-en>Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</span></p>
+      <p><span data-zh>内容站覆盖学、用、选、跑；AI 导航是站外的 AI 网站目录，点出去看。</span><span data-en>Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</span></p>
       <nav><a href="https://specul.com/legal.html"><span data-zh>法律条款</span><span data-en>Legal terms</span></a></nav>
     </div>
   </aside>`;

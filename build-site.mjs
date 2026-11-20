@@ -279,7 +279,7 @@ const chips = ['<button class="chip is-on" data-cat="all">'
 
 const body = `    <header class="dir-head">
       <div class="container dir-head-row">
-        <h1 class="dir-h1"><span class="grad-title"><span data-zh>AI导航</span><span data-en>AI Directory</span></span></h1>
+        <h1 class="dir-h1"><span class="grad-title"><span data-zh>AI 导航</span><span data-en>AI Directory</span></span></h1>
         <div class="dir-tools">
           <label class="dir-search" for="q">
             <span class="sr-only"><span data-zh>搜索</span><span data-en>Search</span></span>
@@ -301,8 +301,8 @@ ${groups}
 
 const html = shell({
   current: 'nav',
-  title: `AI导航 · 站外 AI 网站目录 | 投机取巧`,
-  desc: `AI导航：按用途整理的站外 AI 网站目录，点名字直接去官网；打不开的会标出来。收录 600+ 条站外工具与官网入口，按用途分组并标注可用状态。`,
+  title: `AI 导航 · 站外 AI 网站目录 | 投机取巧`,
+  desc: `AI 导航：按用途整理的站外 AI 网站目录，点名字直接去官网；打不开的会标出来。收录 600+ 条站外工具与官网入口，按用途分组并标注可用状态。`,
   canonical: 'https://nav.specul.com/',
   /* ⚠ 2026-10-10 不再传 accent（原 '#22d3c5'青色）。
    * 用户定案「不需要分站专属色，整体与首页一致」；brand.css 的 --accent 是
@@ -315,7 +315,7 @@ const html = shell({
   jsonLd: {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'AI导航 · 站外 AI 网站目录',
+    name: 'AI 导航 · 站外 AI 网站目录',
     url: 'https://nav.specul.com/',
     description: `按用途整理的站外 AI 网站目录。`,
     inLanguage: 'zh-Hans',
@@ -337,7 +337,8 @@ const directoryVersion = crypto.createHash('sha256').update(fs.readFileSync(path
 fs.copyFileSync(path.join(BASE, 'directory.js'), path.join(SITE, 'directory.js'));
 const script = '<script defer src="directory.js?v=' + directoryVersion + '"></script>';
 
-const final = html.replace('</body>', script + '</body>');
+const navSpace = (s) => s.replaceAll('<span data-zh>AI 导航</span>', '<span data-zh>AI&nbsp;导航</span>');
+const final = navSpace(html).replace('</body>', script + '</body>');
 const taskSampleCount = buildTaskSamples(BASE, SITE);
 console.log(`  · 任务包样例 ${taskSampleCount} 个文件（虚构输入与设计参考）`);
 fs.writeFileSync(path.join(SITE, 'index.html'), final, 'utf8');
@@ -360,7 +361,7 @@ ${renderTaskPacks(RESOURCE_IDS, 'index.html')}
     </section>`;
 const tasksHtml = shell({
   current: 'nav',
-  title: '任务包 · AI导航 | 投机取巧',
+  title: '任务包 · AI 导航 | 投机取巧',
   desc: `按任务准备一组站外 AI 网站：${taskPacks.packs.length} 个任务包，各自给出输入清单、执行步骤、验收标准与失败后该去查的条目；样例均为虚构输入，不含真实账号或数据。`,
   canonical: 'https://nav.specul.com/tasks.html',
   accent: null,
@@ -368,7 +369,7 @@ const tasksHtml = shell({
   jsonLd: {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: '任务包 · AI导航',
+    name: '任务包 · AI 导航',
     url: 'https://nav.specul.com/tasks.html',
     description: `${taskPacks.packs.length} 个按任务组织的资源准备流程。`,
     inLanguage: 'zh-Hans',
@@ -377,7 +378,7 @@ const tasksHtml = shell({
   repo: 'https://github.com/speculcom/ai-sites-directory',
   headExtra: '',
 });
-fs.writeFileSync(path.join(SITE, 'tasks.html'), tasksHtml, 'utf8');
+fs.writeFileSync(path.join(SITE, 'tasks.html'), navSpace(tasksHtml), 'utf8');
 
 // ---- site.css：沿用图谱站已调好的基础，再追加目录站特有样式 ----
 // 2026-10-03改：原先读 `_sites/ide/site.css`（旧 IDE 站产物，随 v4 废弃一起删了）。
@@ -432,11 +433,18 @@ for (const name of ['llms.txt', 'llms.en.txt']) {
   fs.copyFileSync(src, path.join(SITE, name));
 }
 
+/* 2026.html / 404.html 顶部同一个导航；Cloudflare 的 HTML 优化会吞掉普通空格，
+ * 用不换行空格把「AI 导航」这两个词之间的间距固定住。 */
+for (const name of ['2026.html', '404.html']) {
+  const p = path.join(SITE, name);
+  if (fs.existsSync(p)) fs.writeFileSync(p, navSpace(fs.readFileSync(p, 'utf8')), 'utf8');
+}
+
 /* README.md：此前是 2026-10 手写后遗留的静态文件，线上一直挂着「硅基导航 · 529 个条目」——
  * 站名与数字都过期了。改为随构建生成，数字与页面同源。 */
 fs.writeFileSync(
   path.join(SITE, 'README.md'),
-  `# AI导航 · 站外 AI 网站目录
+  `# AI 导航 · 站外 AI 网站目录
 
 > https://nav.specul.com/
 

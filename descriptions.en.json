@@ -514,7 +514,6 @@
   "Qodo": "AI code review and SDLC governance platform (formerly CodiumAI); the official sunset notice retired its code generation, and the IDE plugin retires 2026-10-30.",
   "Kilo Code": "Open-source AI coding agent (MIT): VS Code/JetBrains/CLI/cloud, 500+ models at zero markup, full BYOK and local-model support.",
   "文心快码": "Baidu's AI coding family (Baidu Comate): an AI IDE plus multi-IDE plugins and CLI, switchable domestic models, private deployment with data staying in-domain.",
-  "Gemini（交易所）": "The Winklevoss-run regulated exchange, NY-licensed and security-first.",
   "Windmill": "Open-source script orchestration and internal-tools platform; LLM workflows are one of its scenarios.",
   "Temporal": "Durable execution engine for reliable workflows; a foundation component rather than an agent framework.",
   "Composio": "Tool-integration layer for AI agents, overlapping with the MCP ecosystem.",
