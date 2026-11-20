@@ -292,7 +292,7 @@ const body = `    <header class="dir-head">
 
     <section class="section dir-body" id="dir">
       <div class="container">
-        <nav class="dir-cats" aria-label="按类目筛选">${chips}</nav>
+        <nav class="dir-cats" aria-label="按类目筛选" data-ui-aria-label-zh="按类目筛选" data-ui-aria-label-en="Filter by category">${chips}</nav>
         <p id="empty" class="empty" hidden>${biSpan("没有匹配的条目。", "No matching entries.")}</p>
         <p id="filtered-count" class="dir-count" role="status" aria-live="polite"></p>
 ${groups}
