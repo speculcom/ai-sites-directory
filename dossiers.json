@@ -27,6 +27,7 @@
  "ElevenLabs": "audio/elevenlabs",
  "Elicit": "research/elicit",
  "Gamma": "office/gamma",
+ "Garak": "safety/garak",
  "Gemini": "chat/gemini-chat",
  "Gemini CLI": "coding/gemini-cli",
  "Genmo": "video/genmo",

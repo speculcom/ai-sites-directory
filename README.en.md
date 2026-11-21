@@ -10,7 +10,7 @@ The **source repo** for the directory (single source of truth).
 
 ## How to read this
 
-796 sites live in one file, which nobody is going to scroll through. Go by where you
+816 sites live in one file, which nobody is going to scroll through. Go by where you
 are instead:
 
 | What you want | Where |
@@ -32,7 +32,7 @@ Live version: <https://nav.specul.com/>
 | Path | Content |
 |---|---|
 | `content/` | 12 category documents generated from primary data, with descriptions, tags and existing link-check status |
-| `nav-data.json` | **Primary data**: 796 items / 12 categories (the `ext` adjacent-field category is not shown on the site, so 613 items / 11 categories are live) |
+| `nav-data.json` | **Primary data**: 816 items / 13 categories (the `ext` adjacent-field category is not shown on the site, so 633 items / 12 categories are live) |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | English mappings (category / tag / vendor / description) |
 | `constraints.json` / `conditions.mjs` | Scoped usage conditions, official sources and unknowns; filters and 2–3-entry condition comparisons |
 | `task-packs.json` / `task-packs.mjs` | Six bilingual task packs, fictional inputs, designed references, bundled sample code and worksheet generation |
@@ -150,6 +150,7 @@ Information about the listed sites belongs to their respective rights holders.
 | Learning | 54 | arXiv · Semantic Scholar · Connected Papers · ResearchGate · Coursera · edX …and 48 more |
 | Community | 25 | Hacker News · Product Hunt · Reddit r/MachineLearning · Dev.to · Stack Overflow · MIT Technology Review …and 19 more |
 | Tools & utilities | 90 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …and 84 more |
+| AI safety & governance | 20 | NIST AI Risk Management Framework · OWASP LLM Top 10 · MITRE ATLAS · AI Incident Database · Partnership on AI · EU AI Act …and 14 more |
 
 > Full list: [`content/`](./content/) (one markdown file per site) or [`nav-data.json`](./nav-data.json).
 > `ext` (extended fields) has 183 more entries not published on the site, so it is not listed above.
@@ -161,8 +162,8 @@ Information about the listed sites belongs to their respective rights holders.
 <!-- STATS:BEGIN generated, do not edit -->
 | Item | Measured value |
 |---|---|
-| Items | 796 (public 613 · ext 183) |
-| Categories | 12 (11 public) |
-| Tag vocabulary | 92 (closed enum) |
+| Items | 816 (public 633 · ext 183) |
+| Categories | 13 (12 public) |
+| Tag vocabulary | 98 (closed enum) |
 | Retired | 0 () |
 <!-- STATS:END -->

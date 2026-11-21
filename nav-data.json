@@ -59,6 +59,11 @@
       "code": "ext",
       "name": "延伸领域",
       "desc": "链上与加密等相邻领域（非 AI 主体）"
+    },
+    {
+      "code": "safety",
+      "name": "安全与评测",
+      "desc": "AI 安全、红队、评测、公平性与合规资源"
     }
   ],
   "items": [
@@ -70,7 +75,11 @@
       "ic": "💬",
       "cat": "llm",
       "old_t": "大语言模型",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合任务有多步、要调工具或需要人工审批节点时。",
+        "en": "Fit when multi-step tasks that call tools or need human approval."
+      }
     },
     {
       "n": "ChatGPT Work",
@@ -80,7 +89,11 @@
       "u": "https://chatgpt.com/work",
       "d": "OpenAI 的项目型工作台：把文件、Slack/Teams、浏览器与 Codex 串起来，产出文档、表格、幻灯片和站点；复杂任务在关键动作前要求人工审批。",
       "old_t": "AI 办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合任务有多步、要调工具或需要人工审批节点时。",
+        "en": "Fit when multi-step tasks that call tools or need human approval."
+      }
     },
     {
       "n": "Claude",
@@ -90,7 +103,11 @@
       "ic": "🧠",
       "cat": "llm",
       "old_t": "大语言模型",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要读长文档、跨文件对照或做资料综述时。",
+        "en": "Fit when reading long documents, comparing files or reviewing sources."
+      }
     },
     {
       "n": "Claude Fable 5.2",
@@ -100,7 +117,11 @@
       "u": "https://www.anthropic.com/claude/fable",
       "d": "Anthropic 的旗舰模型线：Fable 5.2 于 2026-11-09 上线，官方定位为最强技术模型，可连续数天推进模糊工程任务并协调大量子 Agent；Mythos 5.2 为同代安全/研究版本。",
       "old_t": "大语言模型",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合任务有多步、要调工具或需要人工审批节点时。",
+        "en": "Fit when multi-step tasks that call tools or need human approval."
+      }
     },
     {
       "n": "Gemini",
@@ -110,7 +131,11 @@
       "ic": "♊",
       "cat": "llm",
       "old_t": "大语言模型",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "Gemini Omni",
@@ -120,7 +145,11 @@
       "u": "https://deepmind.google/models/gemini-omni/",
       "d": "Google DeepMind 的多模态视频生成与编辑模型：支持文本、图像、视频、音频参考，输出统一视频；可在 Gemini、Google Flow 和 YouTube 使用，输出带 SynthID 与 C2PA。",
       "old_t": "AI视频",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "DeepSeek",
@@ -130,7 +159,11 @@
       "ic": "🔮",
       "cat": "llm",
       "old_t": "大语言模型",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要改仓库、跑测试或在终端里完成多步操作时。",
+        "en": "Fit when editing a repo, running tests or completing multi-step terminal work."
+      }
     },
     {
       "n": "Kimi",
@@ -140,7 +173,11 @@
       "ic": "🌙",
       "cat": "llm",
       "old_t": "大语言模型",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要读长文档、跨文件对照或做资料综述时。",
+        "en": "Fit when reading long documents, comparing files or reviewing sources."
+      }
     },
     {
       "n": "通义千问",
@@ -150,7 +187,11 @@
       "ic": "☁️",
       "cat": "llm",
       "old_t": "大语言模型",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要改仓库、跑测试或在终端里完成多步操作时。",
+        "en": "Fit when editing a repo, running tests or completing multi-step terminal work."
+      }
     },
     {
       "n": "文心一言",
@@ -160,7 +201,11 @@
       "ic": "📘",
       "cat": "llm",
       "old_t": "大语言模型",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要找资料、读论文、做文献综述时。",
+        "en": "Fit when finding sources, reading papers or reviewing literature."
+      }
     },
     {
       "n": "豆包",
@@ -170,7 +215,11 @@
       "ic": "🫘",
       "cat": "llm",
       "old_t": "大语言模型",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "Grok",
@@ -490,7 +539,11 @@
       "ic": "📊",
       "cat": "app",
       "old_t": "AI写作办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合产出文档、表格、幻灯片、纪要或邮件时。",
+        "en": "Fit when producing documents, sheets, slides, notes or email."
+      }
     },
     {
       "n": "Jasper",
@@ -500,7 +553,11 @@
       "ic": "✍️",
       "cat": "app",
       "old_t": "AI写作办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "Copy.ai",
@@ -510,7 +567,11 @@
       "ic": "📋",
       "cat": "app",
       "old_t": "AI写作办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "Grammarly",
@@ -520,7 +581,11 @@
       "ic": "✅",
       "cat": "app",
       "old_t": "AI写作办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合想先小范围试、再决定是否付费时。",
+        "en": "Fit when trying small before paying."
+      }
     },
     {
       "n": "通义听悟",
@@ -530,7 +595,11 @@
       "ic": "👂",
       "cat": "app",
       "old_t": "AI写作办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合产出文档、表格、幻灯片、纪要或邮件时。",
+        "en": "Fit when producing documents, sheets, slides, notes or email."
+      }
     },
     {
       "n": "讯飞听见",
@@ -540,7 +609,11 @@
       "ic": "🎙️",
       "cat": "app",
       "old_t": "AI写作办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合产出文档、表格、幻灯片、纪要或邮件时。",
+        "en": "Fit when producing documents, sheets, slides, notes or email."
+      }
     },
     {
       "n": "Otter.ai",
@@ -550,7 +623,11 @@
       "ic": "🦦",
       "cat": "app",
       "old_t": "AI写作办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合产出文档、表格、幻灯片、纪要或邮件时。",
+        "en": "Fit when producing documents, sheets, slides, notes or email."
+      }
     },
     {
       "n": "Notion AI",
@@ -560,7 +637,11 @@
       "ic": "📝",
       "cat": "app",
       "old_t": "AI写作办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合产出文档、表格、幻灯片、纪要或邮件时。",
+        "en": "Fit when producing documents, sheets, slides, notes or email."
+      }
     },
     {
       "n": "WPS AI",
@@ -570,7 +651,11 @@
       "ic": "📑",
       "cat": "app",
       "old_t": "AI写作办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合产出文档、表格、幻灯片、纪要或邮件时。",
+        "en": "Fit when producing documents, sheets, slides, notes or email."
+      }
     },
     {
       "n": "Rytr",
@@ -580,7 +665,11 @@
       "ic": "✍️",
       "cat": "app",
       "old_t": "AI写作办公",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "Writesonic",
@@ -610,7 +699,11 @@
       "ic": "🖌️",
       "cat": "gen",
       "old_t": "AI设计",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "Microsoft Designer",
@@ -620,7 +713,11 @@
       "ic": "🪟",
       "cat": "gen",
       "old_t": "AI设计",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "Uizard",
@@ -630,7 +727,11 @@
       "ic": "📱",
       "cat": "gen",
       "old_t": "AI设计",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "即时 AI",
@@ -640,7 +741,11 @@
       "ic": "🇨🇳",
       "cat": "gen",
       "old_t": "AI设计",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "Midjourney",
@@ -650,7 +755,11 @@
       "ic": "🎨",
       "cat": "gen",
       "old_t": "AI绘画",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "Stable Diffusion",
@@ -660,7 +769,11 @@
       "ic": "🖼️",
       "cat": "gen",
       "old_t": "AI绘画",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "ComfyUI",
@@ -670,7 +783,11 @@
       "ic": "🔧",
       "cat": "gen",
       "old_t": "AI绘画",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要自己部署、控制数据与许可，或离线运行时。",
+        "en": "Fit when self-hosting, controlling data and licences, or running offline."
+      }
     },
     {
       "n": "Leonardo AI",
@@ -680,7 +797,11 @@
       "ic": "🎮",
       "cat": "gen",
       "old_t": "AI绘画",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "通义万相",
@@ -690,7 +811,11 @@
       "ic": "🖼️",
       "cat": "gen",
       "old_t": "AI绘画",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "SeaArt",
@@ -950,7 +1075,11 @@
       "ic": "👨‍💻",
       "cat": "coding",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要改仓库、跑测试或在终端里完成多步操作时。",
+        "en": "Fit when editing a repo, running tests or completing multi-step terminal work."
+      }
     },
     {
       "n": "Cursor",
@@ -960,7 +1089,11 @@
       "ic": "🖱️",
       "cat": "coding",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合任务有多步、要调工具或需要人工审批节点时。",
+        "en": "Fit when multi-step tasks that call tools or need human approval."
+      }
     },
     {
       "n": "Devin",
@@ -970,7 +1103,11 @@
       "u": "https://devin.ai/",
       "d": "Cognition 的自主软件工程师：云端或本地 VM、浏览器实测、并行子 Agent 和 PR 串成一条线；适合把整段任务交出去再 review diff，Windsurf/Devin Desktop 同属一家。",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合任务有多步、要调工具或需要人工审批节点时。",
+        "en": "Fit when multi-step tasks that call tools or need human approval."
+      }
     },
     {
       "n": "Augment Code",
@@ -980,7 +1117,11 @@
       "u": "https://www.augmentcode.com/",
       "d": "Augment Code 的企业级 Agent 平台 Cosmos：把 SDLC 拆成专家 Agent，从 ticket 到 PR、代码评审和修复共用一套上下文，人守关键质量门。",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合任务有多步、要调工具或需要人工审批节点时。",
+        "en": "Fit when multi-step tasks that call tools or need human approval."
+      }
     },
     {
       "n": "Aider",
@@ -990,7 +1131,11 @@
       "u": "https://aider.chat/",
       "d": "开源终端编程 Agent：直接改本地 git 仓库并自动提交，支持多家模型和 BYOK；适合喜欢命令行、要可审计 diff 的人。",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合任务有多步、要调工具或需要人工审批节点时。",
+        "en": "Fit when multi-step tasks that call tools or need human approval."
+      }
     },
     {
       "n": "Windsurf",
@@ -1000,7 +1145,11 @@
       "ic": "🌊",
       "cat": "coding",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要改仓库、跑测试或在终端里完成多步操作时。",
+        "en": "Fit when editing a repo, running tests or completing multi-step terminal work."
+      }
     },
     {
       "n": "v0",
@@ -1010,7 +1159,11 @@
       "ic": "🖌️",
       "cat": "coding",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要改仓库、跑测试或在终端里完成多步操作时。",
+        "en": "Fit when editing a repo, running tests or completing multi-step terminal work."
+      }
     },
     {
       "n": "Bolt.new",
@@ -1020,7 +1173,11 @@
       "ic": "⚡",
       "cat": "coding",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合要改仓库、跑测试或在终端里完成多步操作时。",
+        "en": "Fit when editing a repo, running tests or completing multi-step terminal work."
+      }
     },
     {
       "n": "Qoder CN",
@@ -1030,7 +1187,11 @@
       "ic": "🐴",
       "cat": "coding",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合想先小范围试、再决定是否付费时。",
+        "en": "Fit when trying small before paying."
+      }
     },
     {
       "n": "Qoder",
@@ -1040,7 +1201,11 @@
       "ic": "🚀",
       "cat": "coding",
       "old_t": "AI编程",
-      "old_c": "ai"
+      "old_c": "ai",
+      "fit": {
+        "zh": "适合任务有多步、要调工具或需要人工审批节点时。",
+        "en": "Fit when multi-step tasks that call tools or need human approval."
+      }
     },
     {
       "n": "Qodo",
@@ -1740,7 +1905,11 @@
       "ic": "🤖",
       "cat": "robot",
       "old_t": "人形机器人",
-      "old_c": "robot"
+      "old_c": "robot",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "Figure AI",
@@ -1750,7 +1919,11 @@
       "ic": "🦿",
       "cat": "robot",
       "old_t": "人形机器人",
-      "old_c": "robot"
+      "old_c": "robot",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "Boston Dynamics",
@@ -1760,7 +1933,11 @@
       "ic": "🐕",
       "cat": "robot",
       "old_t": "人形机器人",
-      "old_c": "robot"
+      "old_c": "robot",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "Unitree 宇树",
@@ -1770,7 +1947,11 @@
       "ic": "🐾",
       "cat": "robot",
       "old_t": "人形机器人",
-      "old_c": "robot"
+      "old_c": "robot",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "1X Technologies",
@@ -1780,7 +1961,11 @@
       "ic": "🏠",
       "cat": "robot",
       "old_t": "人形机器人",
-      "old_c": "robot"
+      "old_c": "robot",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "Agility Robotics",
@@ -1790,7 +1975,11 @@
       "ic": "📦",
       "cat": "robot",
       "old_t": "人形机器人",
-      "old_c": "robot"
+      "old_c": "robot",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "傅利叶智能",
@@ -1800,7 +1989,11 @@
       "ic": "🏥",
       "cat": "robot",
       "old_t": "人形机器人",
-      "old_c": "robot"
+      "old_c": "robot",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "智元机器人",
@@ -1810,7 +2003,11 @@
       "ic": "🧬",
       "cat": "robot",
       "old_t": "人形机器人",
-      "old_c": "robot"
+      "old_c": "robot",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "Apptronik",
@@ -1820,7 +2017,11 @@
       "ic": "🚀",
       "cat": "robot",
       "old_t": "人形机器人",
-      "old_c": "robot"
+      "old_c": "robot",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "优必选科技",
@@ -1830,7 +2031,11 @@
       "ic": "🤖",
       "cat": "robot",
       "old_t": "人形机器人",
-      "old_c": "robot"
+      "old_c": "robot",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "达闼机器人",
@@ -2560,7 +2765,11 @@
       "ic": "🤗",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要自己部署、控制数据与许可，或离线运行时。",
+        "en": "Fit when self-hosting, controlling data and licences, or running offline."
+      }
     },
     {
       "n": "ModelScope 魔搭",
@@ -2570,7 +2779,11 @@
       "ic": "🧩",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要自己部署、控制数据与许可，或离线运行时。",
+        "en": "Fit when self-hosting, controlling data and licences, or running offline."
+      }
     },
     {
       "n": "Ollama",
@@ -2580,7 +2793,11 @@
       "ic": "🦙",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要自己部署、控制数据与许可，或离线运行时。",
+        "en": "Fit when self-hosting, controlling data and licences, or running offline."
+      }
     },
     {
       "n": "Replicate",
@@ -2590,7 +2807,11 @@
       "ic": "☁️",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要自己部署、控制数据与许可，或离线运行时。",
+        "en": "Fit when self-hosting, controlling data and licences, or running offline."
+      }
     },
     {
       "n": "Civitai",
@@ -2600,7 +2821,11 @@
       "ic": "🏛️",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "OpenRouter",
@@ -2610,7 +2835,11 @@
       "ic": "🔀",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "Together AI",
@@ -2620,7 +2849,11 @@
       "ic": "⚡",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要拆难题、做多步推理或验证解题过程时。",
+        "en": "Fit when tackling hard problems, multi-step reasoning or checking solutions."
+      }
     },
     {
       "n": "Fireworks AI",
@@ -2630,7 +2863,11 @@
       "ic": "🎆",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要拆难题、做多步推理或验证解题过程时。",
+        "en": "Fit when tackling hard problems, multi-step reasoning or checking solutions."
+      }
     },
     {
       "n": "Groq",
@@ -2640,7 +2877,11 @@
       "ic": "💨",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "Anyscale",
@@ -2650,7 +2891,11 @@
       "ic": "⚡",
       "cat": "model",
       "old_t": "模型平台",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要拆难题、做多步推理或验证解题过程时。",
+        "en": "Fit when tackling hard problems, multi-step reasoning or checking solutions."
+      }
     },
     {
       "n": "Modal",
@@ -2790,7 +3035,11 @@
       "ic": "🌲",
       "cat": "dev",
       "old_t": "向量数据库",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要处理数据、做评测或核对基准口径时。",
+        "en": "Fit when working with data, evaluation or benchmark baselines."
+      }
     },
     {
       "n": "Weaviate",
@@ -2800,7 +3049,11 @@
       "ic": "🔍",
       "cat": "dev",
       "old_t": "向量数据库",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要自己部署、控制数据与许可，或离线运行时。",
+        "en": "Fit when self-hosting, controlling data and licences, or running offline."
+      }
     },
     {
       "n": "Chroma",
@@ -2810,7 +3063,11 @@
       "ic": "🎨",
       "cat": "dev",
       "old_t": "向量数据库",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要自己部署、控制数据与许可，或离线运行时。",
+        "en": "Fit when self-hosting, controlling data and licences, or running offline."
+      }
     },
     {
       "n": "Milvus",
@@ -2820,7 +3077,11 @@
       "ic": "🐘",
       "cat": "dev",
       "old_t": "向量数据库",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要自己部署、控制数据与许可，或离线运行时。",
+        "en": "Fit when self-hosting, controlling data and licences, or running offline."
+      }
     },
     {
       "n": "Qdrant",
@@ -2830,7 +3091,11 @@
       "ic": "🦀",
       "cat": "dev",
       "old_t": "向量数据库",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要自己部署、控制数据与许可，或离线运行时。",
+        "en": "Fit when self-hosting, controlling data and licences, or running offline."
+      }
     },
     {
       "n": "Elasticsearch",
@@ -2840,7 +3105,11 @@
       "ic": "🔎",
       "cat": "dev",
       "old_t": "向量数据库",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要找资料、读论文、做文献综述时。",
+        "en": "Fit when finding sources, reading papers or reviewing literature."
+      }
     },
     {
       "n": "LangChain",
@@ -2850,7 +3119,11 @@
       "ic": "⛓️",
       "cat": "dev",
       "old_t": "AI开发框架",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "LlamaIndex",
@@ -2860,7 +3133,11 @@
       "ic": "📇",
       "cat": "dev",
       "old_t": "AI开发框架",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要处理数据、做评测或核对基准口径时。",
+        "en": "Fit when working with data, evaluation or benchmark baselines."
+      }
     },
     {
       "n": "Langfuse",
@@ -2870,7 +3147,11 @@
       "ic": "📊",
       "cat": "dev",
       "old_t": "AI开发框架",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合要自己部署、控制数据与许可，或离线运行时。",
+        "en": "Fit when self-hosting, controlling data and licences, or running offline."
+      }
     },
     {
       "n": "Vercel AI SDK",
@@ -2880,7 +3161,11 @@
       "ic": "▲",
       "cat": "dev",
       "old_t": "AI开发框架",
-      "old_c": "models"
+      "old_c": "models",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "Haystack",
@@ -4990,7 +5275,11 @@
       "ic": "🟢",
       "cat": "infra",
       "old_t": "芯片算力",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "fit": {
+        "zh": "适合要选算力、比较云价或估算显存时。",
+        "en": "Fit when choosing compute, comparing cloud prices or budgeting VRAM."
+      }
     },
     {
       "n": "AMD",
@@ -5000,7 +5289,11 @@
       "ic": "🔴",
       "cat": "infra",
       "old_t": "芯片算力",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "fit": {
+        "zh": "适合要处理数据、做评测或核对基准口径时。",
+        "en": "Fit when working with data, evaluation or benchmark baselines."
+      }
     },
     {
       "n": "Intel",
@@ -5010,7 +5303,11 @@
       "ic": "🔵",
       "cat": "infra",
       "old_t": "芯片算力",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "台积电 TSMC",
@@ -5020,7 +5317,11 @@
       "ic": "🏭",
       "cat": "infra",
       "old_t": "芯片算力",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "ARM",
@@ -5030,7 +5331,11 @@
       "ic": "📱",
       "cat": "infra",
       "old_t": "芯片算力",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "寒武纪",
@@ -5040,7 +5345,11 @@
       "ic": "🧊",
       "cat": "infra",
       "old_t": "芯片算力",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "fit": {
+        "zh": "适合要拆难题、做多步推理或验证解题过程时。",
+        "en": "Fit when tackling hard problems, multi-step reasoning or checking solutions."
+      }
     },
     {
       "n": "海光信息",
@@ -5050,7 +5359,11 @@
       "ic": "💠",
       "cat": "infra",
       "old_t": "芯片算力",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "摩尔线程",
@@ -5060,7 +5373,11 @@
       "ic": "🧵",
       "cat": "infra",
       "old_t": "芯片算力",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "fit": {
+        "zh": "适合要拆难题、做多步推理或验证解题过程时。",
+        "en": "Fit when tackling hard problems, multi-step reasoning or checking solutions."
+      }
     },
     {
       "n": "地平线",
@@ -5070,7 +5387,11 @@
       "ic": "🚘",
       "cat": "infra",
       "old_t": "芯片算力",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "fit": {
+        "zh": "适合做感知、控制、仿真或机器人落地时。",
+        "en": "Fit when perception, control, simulation or robot deployment."
+      }
     },
     {
       "n": "Cerebras",
@@ -5080,7 +5401,11 @@
       "ic": "🧇",
       "cat": "infra",
       "old_t": "芯片算力",
-      "old_c": "silicon"
+      "old_c": "silicon",
+      "fit": {
+        "zh": "适合要出图、改图、做分镜或生成短视频时。",
+        "en": "Fit when generating or editing images, storyboards or short video."
+      }
     },
     {
       "n": "Graphcore",
@@ -5890,7 +6215,11 @@
       "ic": "🟠",
       "cat": "community",
       "old_t": "资讯社区",
-      "old_c": "tools"
+      "old_c": "tools",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "Product Hunt",
@@ -5900,7 +6229,11 @@
       "ic": "🐱",
       "cat": "community",
       "old_t": "资讯社区",
-      "old_c": "tools"
+      "old_c": "tools",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "Reddit r/MachineLearning",
@@ -5910,7 +6243,11 @@
       "ic": "🤖",
       "cat": "community",
       "old_t": "资讯社区",
-      "old_c": "tools"
+      "old_c": "tools",
+      "fit": {
+        "zh": "适合要找资料、读论文、做文献综述时。",
+        "en": "Fit when finding sources, reading papers or reviewing literature."
+      }
     },
     {
       "n": "Dev.to",
@@ -5920,7 +6257,11 @@
       "ic": "👩‍💻",
       "cat": "community",
       "old_t": "资讯社区",
-      "old_c": "tools"
+      "old_c": "tools",
+      "fit": {
+        "zh": "适合要改仓库、跑测试或在终端里完成多步操作时。",
+        "en": "Fit when editing a repo, running tests or completing multi-step terminal work."
+      }
     },
     {
       "n": "Stack Overflow",
@@ -5930,7 +6271,11 @@
       "ic": "🟧",
       "cat": "community",
       "old_t": "资讯社区",
-      "old_c": "tools"
+      "old_c": "tools",
+      "fit": {
+        "zh": "适合要改仓库、跑测试或在终端里完成多步操作时。",
+        "en": "Fit when editing a repo, running tests or completing multi-step terminal work."
+      }
     },
     {
       "n": "D3.js",
@@ -6090,7 +6435,11 @@
       "ic": "📄",
       "cat": "learn",
       "old_t": "论文研究",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合要找资料、读论文、做文献综述时。",
+        "en": "Fit when finding sources, reading papers or reviewing literature."
+      }
     },
     {
       "n": "Semantic Scholar",
@@ -6100,7 +6449,11 @@
       "ic": "🔬",
       "cat": "learn",
       "old_t": "论文研究",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合要找资料、读论文、做文献综述时。",
+        "en": "Fit when finding sources, reading papers or reviewing literature."
+      }
     },
     {
       "n": "Connected Papers",
@@ -6110,7 +6463,11 @@
       "ic": "🕸️",
       "cat": "learn",
       "old_t": "论文研究",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合要找资料、读论文、做文献综述时。",
+        "en": "Fit when finding sources, reading papers or reviewing literature."
+      }
     },
     {
       "n": "ResearchGate",
@@ -6120,7 +6477,11 @@
       "ic": "🌍",
       "cat": "learn",
       "old_t": "论文研究",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合要找资料、读论文、做文献综述时。",
+        "en": "Fit when finding sources, reading papers or reviewing literature."
+      }
     },
     {
       "n": "Coursera",
@@ -6130,7 +6491,11 @@
       "ic": "🎓",
       "cat": "learn",
       "old_t": "在线课程",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合要加输入过滤、输出审查、红队或做合规证据时。",
+        "en": "Fit when input filtering, output review, red teaming or compliance evidence."
+      }
     },
     {
       "n": "edX",
@@ -6140,7 +6505,11 @@
       "ic": "🏛️",
       "cat": "learn",
       "old_t": "在线课程",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合想先小范围试、再决定是否付费时。",
+        "en": "Fit when trying small before paying."
+      }
     },
     {
       "n": "Udacity",
@@ -6150,7 +6519,11 @@
       "ic": "🎯",
       "cat": "learn",
       "old_t": "在线课程",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合要处理数据、做评测或核对基准口径时。",
+        "en": "Fit when working with data, evaluation or benchmark baselines."
+      }
     },
     {
       "n": "Fast.ai",
@@ -6160,7 +6533,11 @@
       "ic": "⚡",
       "cat": "learn",
       "old_t": "在线课程",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合想先小范围试、再决定是否付费时。",
+        "en": "Fit when trying small before paying."
+      }
     },
     {
       "n": "DeepLearning.AI",
@@ -6170,7 +6547,11 @@
       "ic": "🧠",
       "cat": "learn",
       "old_t": "在线课程",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "LeetCode",
@@ -6180,7 +6561,11 @@
       "ic": "💻",
       "cat": "learn",
       "old_t": "练习平台",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合要改仓库、跑测试或在终端里完成多步操作时。",
+        "en": "Fit when editing a repo, running tests or completing multi-step terminal work."
+      }
     },
     {
       "n": "Codecademy",
@@ -6330,7 +6715,11 @@
       "ic": "🏛️",
       "cat": "community",
       "old_t": "AI资讯",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "The Verge AI",
@@ -6340,7 +6729,11 @@
       "ic": "🔺",
       "cat": "community",
       "old_t": "AI资讯",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "VentureBeat AI",
@@ -6350,7 +6743,11 @@
       "ic": "💼",
       "cat": "community",
       "old_t": "AI资讯",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "TechCrunch AI",
@@ -6360,7 +6757,11 @@
       "ic": "📰",
       "cat": "community",
       "old_t": "AI资讯",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合先做小范围试用，确认数据、权限与输出边界后再扩大。",
+        "en": "Fit when you try it on a small scope first, then confirm data, permissions and output boundaries."
+      }
     },
     {
       "n": "Analytics India Magazine",
@@ -6370,7 +6771,11 @@
       "ic": "🇮🇳",
       "cat": "community",
       "old_t": "AI资讯",
-      "old_c": "learn"
+      "old_c": "learn",
+      "fit": {
+        "zh": "适合要处理数据、做评测或核对基准口径时。",
+        "en": "Fit when working with data, evaluation or benchmark baselines."
+      }
     },
     {
       "n": "Google DeepMind",
@@ -7919,6 +8324,206 @@
       "cat": "gen",
       "old_t": "视频生成",
       "old_c": "gen"
+    },
+    {
+      "n": "NIST AI Risk Management Framework",
+      "d": "AI 风险管理框架：治理、映射、度量与管理四步，适合做企业 AI 风险台账。",
+      "u": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "tag": "AI 安全",
+      "ic": "🛡️",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "OWASP LLM Top 10",
+      "d": "LLM 应用最常见的十类风险：提示注入、数据泄漏、供应链、过度代理等，附防御清单。",
+      "u": "https://genai.owasp.org/llm-top-10/",
+      "tag": "AI 安全",
+      "ic": "🔟",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "MITRE ATLAS",
+      "d": "把针对 AI 系统的攻击技术、案例与防御映射成矩阵，适合做威胁建模。",
+      "u": "https://atlas.mitre.org/",
+      "tag": "AI 安全",
+      "ic": "🎯",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "AI Incident Database",
+      "d": "真实 AI 事故与失败案例库，按场景、行业与危害类型检索。",
+      "u": "https://incidentdatabase.ai/",
+      "tag": "AI 安全",
+      "ic": "📚",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "Partnership on AI",
+      "d": "产业、学术与公民社会共同推进负责任 AI 的联盟，发布安全与治理报告。",
+      "u": "https://partnershiponai.org/",
+      "tag": "AI 治理",
+      "ic": "🤝",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "EU AI Act",
+      "d": "欧盟《人工智能法案》全文、时间表与合规指引，按风险等级查阅义务。",
+      "u": "https://artificialintelligenceact.eu/",
+      "tag": "AI 合规",
+      "ic": "🇪🇺",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "UK AI Safety Institute",
+      "d": "英国 AI 安全研究院：模型评测、红队与安全研究，发布公开报告。",
+      "u": "https://www.aisi.gov.uk/",
+      "tag": "AI 安全",
+      "ic": "🇬🇧",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "US AI Safety Institute",
+      "d": "美国 NIST 下设 AI 安全研究院，推动评测标准、测试方法与产业协作。",
+      "u": "https://www.nist.gov/aisi",
+      "tag": "AI 安全",
+      "ic": "🇺🇸",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "METR",
+      "d": "AI 能力与风险评测研究机构，擅长长任务、自动化与 agent 评测。",
+      "u": "https://metr.org/",
+      "tag": "AI 评测",
+      "ic": "📈",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "Center for AI Safety",
+      "d": "AI 安全研究与非营利组织，推动安全基准、风险沟通与公共讨论。",
+      "u": "https://www.safe.ai/",
+      "tag": "AI 安全",
+      "ic": "🧭",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "Anthropic Safety",
+      "d": "Anthropic 的安全研究、模型卡与负责任扩展政策公开入口。",
+      "u": "https://www.anthropic.com/safety",
+      "tag": "AI 安全",
+      "ic": "🔬",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "OpenAI Safety",
+      "d": "OpenAI 的安全研究、系统卡、准备度报告与政策说明。",
+      "u": "https://openai.com/safety/",
+      "tag": "AI 安全",
+      "ic": "🧪",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "Google DeepMind Safety",
+      "d": "DeepMind 的安全研究、模型评估与负责任 AI 原则。",
+      "u": "https://deepmind.google/safety/",
+      "tag": "AI 安全",
+      "ic": "🧠",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "EleutherAI",
+      "d": "开放 AI 研究社区，发布开源模型、评测与安全研究。",
+      "u": "https://www.eleuther.ai/",
+      "tag": "AI 研究",
+      "ic": "🌐",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "AI Fairness 360",
+      "d": "IBM 开源公平性工具包：偏见检测、度量与缓解算法，适合表格与分类模型。",
+      "u": "https://aif360.res.ibm.com/",
+      "tag": "AI 公平",
+      "ic": "⚖️",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "Fairlearn",
+      "d": "微软开源公平性工具：评估指标、可视化与缓解策略，和 scikit-learn 兼容。",
+      "u": "https://fairlearn.org/",
+      "tag": "AI 公平",
+      "ic": "📊",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "Adversarial Robustness Toolbox",
+      "d": "IBM 开源对抗样本工具库，覆盖攻击、防御与鲁棒性评估。",
+      "u": "https://github.com/Trusted-AI/adversarial-robustness-toolbox",
+      "tag": "AI 安全",
+      "ic": "🧱",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "Garak",
+      "d": "NVIDIA 开源的 LLM 漏洞扫描器：提示注入、越狱、数据泄漏与幻觉探测。",
+      "u": "https://github.com/NVIDIA/garak",
+      "tag": "AI 安全",
+      "ic": "🐍",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "Model Cards for Model Reporting",
+      "d": "模型卡经典论文：用统一模板记录用途、性能、局限与伦理考量。",
+      "u": "https://arxiv.org/abs/1810.03993",
+      "tag": "AI 治理",
+      "ic": "📄",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
+    },
+    {
+      "n": "Datasheets for Datasets",
+      "d": "数据卡经典论文：记录数据集动机、构成、采集、清洗、用途与维护。",
+      "u": "https://arxiv.org/abs/1803.09010",
+      "tag": "AI 治理",
+      "ic": "🗂️",
+      "cat": "safety",
+      "old_t": "AI 安全与评测",
+      "old_c": "community"
     }
   ]
 }

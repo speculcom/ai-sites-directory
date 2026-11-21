@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>100 个常用入口的适用场景 · AI 导航</title>
+  <meta name="description" content="按 10 个类目各取 10 个常用入口，用一句话写清什么时候该点它；不是排名，规格与许可仍以官网为准。" />
+  <link rel="canonical" href="https://nav.specul.com/fit.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="100 个常用入口的适用场景 · AI 导航" />
+  <meta property="og:url" content="https://nav.specul.com/fit.html" />
+  <meta property="og:title" content="100 个常用入口的适用场景 · AI 导航" />
+  <meta property="og:description" content="按 10 个类目各取 10 个常用入口，用一句话写清什么时候该点它；不是排名，规格与许可仍以官网为准。" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <link rel="alternate" hreflang="zh-CN" href="https://nav.specul.com/fit.html" />
+  <link rel="alternate" hreflang="en" href="https://nav.specul.com/fit.html?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://nav.specul.com/fit.html" />
+  <meta name="theme-color" content="#16121f" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b7cf8'/%3E%3Cstop offset='1' stop-color='%2322d3c5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='48' height='48' rx='12' fill='%2305080f'/%3E%3Cpath d='M14 32 L24 12 L34 32' fill='none' stroke='url(%23g)' stroke-width='2.4' stroke-linejoin='round'/%3E%3Ccircle cx='24' cy='27' r='2.4' fill='%2322d3c5'/%3E%3C/svg%3E" />
+  <script src="brand.js?v=0e72a386c5db"></script>
+  <link rel="stylesheet" href="brand.css?v=0e72a386c5db" />
+  <link rel="stylesheet" href="site.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"100 个常用入口的适用场景 · AI 导航","description":"按 10 个类目各取 10 个常用入口，用一句话写清什么时候该点它；不是排名，规格与许可仍以官网为准。","url":"https://nav.specul.com/fit.html","inLanguage":["zh-CN","en"],"isPartOf":{"@type":"WebSite","url":"https://specul.com/"}}</script>
+</head>
+<!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
+     同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
+     而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
+     完全无效：vg 的引擎名在亮色主题下一直是 1.62:1 的金色，就是因为这条内联。
+     现在只保留头部那一处 —— 单一真相源，且可被主题覆盖。
+     ⚠ 这段注释里**不能出现反引号**：它在模板字符串内部，反引号会提前结束模板
+     （写这段时踩了第 4 次；pitfalls 里早有记录）。 -->
+<body class="brand-ambient has-tabbar has-tabbar-1row">
+  <a class="t-skip" href="#main"><span data-zh>跳到主要内容</span><span data-en>Skip to main content</span></a>
+  <header class="site-header">
+    <div class="container site-bar">
+      <a class="brand" href="https://specul.com/" title="投机取巧">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name" id="markName" data-zh-name="投机取巧" data-en-name="Speculative Speculation">投机取巧</span>
+          <span class="brand-sub" id="markSub" data-zh-sub="Speculative Speculation" data-en-sub="">Speculative Speculation</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="站点导航">
+        <a href="https://specul.com/"><span data-zh>首页</span><span data-en>Home</span></a>
+        <a href="https://learn.specul.com/"><span data-zh>学 AI</span><span data-en>Learn</span></a>
+        <a href="https://tools.specul.com/"><span data-zh>工具</span><span data-en>Tools</span></a>
+        <a href="https://models.specul.com/"><span data-zh>模型</span><span data-en>Models</span></a>
+        <a href="https://demos.specul.com/"><span data-zh>作品演示</span><span data-en>Playground</span></a>
+        <a href="https://oss.specul.com/"><span data-zh>开源库</span><span data-en>OSS</span></a>
+        <a href="https://hardware.specul.com/"><span data-zh>硬件算力</span><span data-en>Compute</span></a>
+        <a href="https://papers.specul.com/"><span data-zh>AI 论文</span><span data-en>AI Papers</span></a>
+        <a href="https://chain.specul.com/"><span data-zh>链</span><span data-en>Chain</span></a>
+        <a href="https://nav.specul.com/" aria-current="page"><span data-zh>AI 导航</span><span data-en>AI Directory</span></a>
+      </nav>
+      <!-- 2026-10-10：.nav-tools 从 nav 元素**内部**移到外面，与 .nav-links 平级。
+           放里面时窄屏下它会跟着链接一起换行：链接占满整行 → 按钮被挤到第三条
+           （实测顶栏 134px、按钮组孤零零一行）。移出来后它与品牌同行，
+           链接独占第二行居中 —— 这才是下面注释里方案 B 想要的样子。 -->
+      <span class="nav-tools">
+        <a class="icon-btn" href="https://specul.com/search.html" aria-label="搜索" data-ui-aria-label-zh="搜索" data-ui-aria-label-en="Search" title="搜索全站" data-ui-title-zh="搜索全站" data-ui-title-en="Search all sites"><span aria-hidden="true">⌕</span></a>
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="切换明暗主题" title="切换明暗主题">☾</button>
+        <button class="icon-btn" id="langBtn" type="button" aria-label="Switch language" title="Switch language">EN</button>
+      </span>
+      <!-- B6（2026-10-09）：窄屏（≤900px）下 .nav-links 会隐藏，这个汉堡是替代入口。
+           行为在共享 brand.js 里（一处实现、十站共用），样式在共享 brand.css。
+           无脚本时 CSS 不会显示它，而是把 .nav-links 在窄屏放出来 —— 不会出现
+           「导航被藏进一个点了没反应的按钮」。 -->
+      <button class="nav-burger" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navDrawer">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </header>
+  <div class="nav-scrim"></div>
+  <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="站点导航">
+    <div class="nav-drawer-h">
+      <span class="brand-name"><span data-zh>投机取巧</span><span data-en>Speculative Speculation</span></span>
+      <span class="brand-sub" data-zh-sub="Speculative Speculation" data-en-sub="">Speculative Speculation</span>
+      <button class="nav-dclose" type="button" aria-label="关闭">×</button>
+    </div>
+    <nav class="nav-drawer-list">
+      <a href="https://specul.com/"><span><span data-zh>首页</span><span data-en>Home</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://learn.specul.com/"><span><span data-zh>学 AI</span><span data-en>Learn</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://tools.specul.com/"><span><span data-zh>工具</span><span data-en>Tools</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://models.specul.com/"><span><span data-zh>模型</span><span data-en>Models</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://demos.specul.com/"><span><span data-zh>作品演示</span><span data-en>Playground</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://oss.specul.com/"><span><span data-zh>开源库</span><span data-en>OSS</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://hardware.specul.com/" class="nav-group-start"><span><span data-zh>硬件算力</span><span data-en>Compute</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://papers.specul.com/"><span><span data-zh>AI 论文</span><span data-en>AI Papers</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://chain.specul.com/"><span><span data-zh>链</span><span data-en>Chain</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://nav.specul.com/" aria-current="page" class="nav-group-start" data-nav-group="external"><span><span data-zh>AI 导航</span><span data-en>AI Directory</span></span><span class="ar" aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="nav-drawer-foot">
+      <p><span data-zh>内容站覆盖学、用、选、跑；AI 导航是站外的 AI 网站目录，点出去看。</span><span data-en>Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</span></p>
+      <nav><a href="https://specul.com/legal.html"><span data-zh>法律条款</span><span data-en>Legal terms</span></a></nav>
+    </div>
+  </aside>
+  <main id="main">
+<div class="container section">
+  <p class="dir-count"><a href="index.html"><span data-zh>← 回 AI 导航</span><span data-en>← Back to the directory</span></a></p>
+  <h1><span data-zh>100 个常用入口：先看它适合什么</span><span data-en>100 common entries: what each is for</span></h1>
+  <p class="dir-count"><span data-zh>这不是排名。每个类目取前 10 个常用入口，用一句话写清「什么时候该点它」。真正的规格、价格与许可仍在官网；拿不准就回目录按类目筛。</span><span data-en>This is not a ranking. The first ten common entries in each category get one line on when to open them. Specs, prices and licences stay on the official site; if unsure, go back to the directory and filter by category.</span></p>
+  <p class="dir-count"><span data-zh>「适合」只描述任务形态，不代表能力更强或更便宜；同一任务往往有多个可选入口，先小范围试再扩大。</span><span data-en>“Fit” describes the shape of the task, not superior capability or lower price; most tasks have several plausible entries, so try small before scaling.</span></p>
+  <section class="section"><h2><span data-zh>大模型与对话</span><span data-en>大模型与对话</span> <span class="dir-count">10</span></h2>
+    <div class="dir-grid"><a class="dir-card" href="https://chatgpt.com" rel="noopener">
+      <b>ChatGPT</b>
+      <span class="dir-desc">适合任务有多步、要调工具或需要人工审批节点时。</span>
+      <span class="dir-tags">多模态</span>
+    </a><a class="dir-card" href="https://chatgpt.com/work" rel="noopener">
+      <b>ChatGPT Work</b>
+      <span class="dir-desc">适合任务有多步、要调工具或需要人工审批节点时。</span>
+      <span class="dir-tags">办公·Agent</span>
+    </a><a class="dir-card" href="https://claude.ai" rel="noopener">
+      <b>Claude</b>
+      <span class="dir-desc">适合要读长文档、跨文件对照或做资料综述时。</span>
+      <span class="dir-tags">长文本·安全</span>
+    </a><a class="dir-card" href="https://www.anthropic.com/claude/fable" rel="noopener">
+      <b>Claude Fable 5.2</b>
+      <span class="dir-desc">适合任务有多步、要调工具或需要人工审批节点时。</span>
+      <span class="dir-tags">推理·Agent</span>
+    </a><a class="dir-card" href="https://gemini.google.com" rel="noopener">
+      <b>Gemini</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">大厂·多模态</span>
+    </a><a class="dir-card" href="https://chat.deepseek.com" rel="noopener">
+      <b>DeepSeek</b>
+      <span class="dir-desc">适合要改仓库、跑测试或在终端里完成多步操作时。</span>
+      <span class="dir-tags">开源·编程助手</span>
+    </a><a class="dir-card" href="https://www.kimi.com" rel="noopener">
+      <b>Kimi</b>
+      <span class="dir-desc">适合要读长文档、跨文件对照或做资料综述时。</span>
+      <span class="dir-tags">长文本·国产</span>
+    </a><a class="dir-card" href="https://tongyi.aliyun.com" rel="noopener">
+      <b>通义千问</b>
+      <span class="dir-desc">适合要改仓库、跑测试或在终端里完成多步操作时。</span>
+      <span class="dir-tags">大厂·国产</span>
+    </a><a class="dir-card" href="https://yiyan.baidu.com" rel="noopener">
+      <b>文心一言</b>
+      <span class="dir-desc">适合要找资料、读论文、做文献综述时。</span>
+      <span class="dir-tags">大厂·RAG</span>
+    </a><a class="dir-card" href="https://www.doubao.com" rel="noopener">
+      <b>豆包</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">大厂·多模态</span>
+    </a></div></section>
+<section class="section"><h2><span data-zh>AI 编程与 Agent</span><span data-en>AI 编程与 Agent</span> <span class="dir-count">10</span></h2>
+    <div class="dir-grid"><a class="dir-card" href="https://github.com/features/copilot" rel="noopener">
+      <b>GitHub Copilot</b>
+      <span class="dir-desc">适合要改仓库、跑测试或在终端里完成多步操作时。</span>
+      <span class="dir-tags">编程助手·IDE</span>
+    </a><a class="dir-card" href="https://cursor.com" rel="noopener">
+      <b>Cursor</b>
+      <span class="dir-desc">适合任务有多步、要调工具或需要人工审批节点时。</span>
+      <span class="dir-tags">IDE</span>
+    </a><a class="dir-card" href="https://devin.ai/" rel="noopener">
+      <b>Devin</b>
+      <span class="dir-desc">适合任务有多步、要调工具或需要人工审批节点时。</span>
+      <span class="dir-tags">Agent·编程助手</span>
+    </a><a class="dir-card" href="https://www.augmentcode.com/" rel="noopener">
+      <b>Augment Code</b>
+      <span class="dir-desc">适合任务有多步、要调工具或需要人工审批节点时。</span>
+      <span class="dir-tags">编程助手·企业级</span>
+    </a><a class="dir-card" href="https://aider.chat/" rel="noopener">
+      <b>Aider</b>
+      <span class="dir-desc">适合任务有多步、要调工具或需要人工审批节点时。</span>
+      <span class="dir-tags">命令行·开源</span>
+    </a><a class="dir-card" href="https://devin.ai/desktop" rel="noopener">
+      <b>Windsurf</b>
+      <span class="dir-desc">适合要改仓库、跑测试或在终端里完成多步操作时。</span>
+      <span class="dir-tags">IDE·编程助手</span>
+    </a><a class="dir-card" href="https://v0.app" rel="noopener">
+      <b>v0</b>
+      <span class="dir-desc">适合要改仓库、跑测试或在终端里完成多步操作时。</span>
+      <span class="dir-tags">UI生成</span>
+    </a><a class="dir-card" href="https://bolt.new" rel="noopener">
+      <b>Bolt.new</b>
+      <span class="dir-desc">适合要改仓库、跑测试或在终端里完成多步操作时。</span>
+      <span class="dir-tags">编程助手·前端</span>
+    </a><a class="dir-card" href="https://qoder.com.cn" rel="noopener">
+      <b>Qoder CN</b>
+      <span class="dir-desc">适合想先小范围试、再决定是否付费时。</span>
+      <span class="dir-tags">大厂·免费</span>
+    </a><a class="dir-card" href="https://qoder.com" rel="noopener">
+      <b>Qoder</b>
+      <span class="dir-desc">适合任务有多步、要调工具或需要人工审批节点时。</span>
+      <span class="dir-tags">大厂·免费</span>
+    </a></div></section>
+<section class="section"><h2><span data-zh>多模态生成</span><span data-en>多模态生成</span> <span class="dir-count">10</span></h2>
+    <div class="dir-grid"><a class="dir-card" href="https://deepmind.google/models/gemini-omni/" rel="noopener">
+      <b>Gemini Omni</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">视频生成·多模态</span>
+    </a><a class="dir-card" href="https://www.canva.com" rel="noopener">
+      <b>Canva</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">设计</span>
+    </a><a class="dir-card" href="https://designer.microsoft.com" rel="noopener">
+      <b>Microsoft Designer</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">大厂·设计</span>
+    </a><a class="dir-card" href="https://uizard.io" rel="noopener">
+      <b>Uizard</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">UI生成</span>
+    </a><a class="dir-card" href="https://js.design/ai" rel="noopener">
+      <b>即时 AI</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">国产·UI生成</span>
+    </a><a class="dir-card" href="https://www.midjourney.com" rel="noopener">
+      <b>Midjourney</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">图像生成</span>
+    </a><a class="dir-card" href="https://stability.ai" rel="noopener">
+      <b>Stable Diffusion</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">开源·本地部署</span>
+    </a><a class="dir-card" href="https://github.com/comfyanonymous/ComfyUI" rel="noopener">
+      <b>ComfyUI</b>
+      <span class="dir-desc">适合要自己部署、控制数据与许可，或离线运行时。</span>
+      <span class="dir-tags">工作流·开源</span>
+    </a><a class="dir-card" href="https://leonardo.ai" rel="noopener">
+      <b>Leonardo AI</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">图像生成·游戏</span>
+    </a><a class="dir-card" href="https://tongyi.aliyun.com/wanxiang" rel="noopener">
+      <b>通义万相</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">大厂·设计</span>
+    </a></div></section>
+<section class="section"><h2><span data-zh>AI 办公与垂直应用</span><span data-en>AI 办公与垂直应用</span> <span class="dir-count">10</span></h2>
+    <div class="dir-grid"><a class="dir-card" href="https://gamma.app" rel="noopener">
+      <b>Gamma</b>
+      <span class="dir-desc">适合产出文档、表格、幻灯片、纪要或邮件时。</span>
+      <span class="dir-tags">办公</span>
+    </a><a class="dir-card" href="https://www.jasper.ai" rel="noopener">
+      <b>Jasper</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">营销·写作</span>
+    </a><a class="dir-card" href="https://www.copy.ai" rel="noopener">
+      <b>Copy.ai</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">营销·工作流</span>
+    </a><a class="dir-card" href="https://www.grammarly.com" rel="noopener">
+      <b>Grammarly</b>
+      <span class="dir-desc">适合想先小范围试、再决定是否付费时。</span>
+      <span class="dir-tags">写作</span>
+    </a><a class="dir-card" href="https://tingwu.aliyun.com" rel="noopener">
+      <b>通义听悟</b>
+      <span class="dir-desc">适合产出文档、表格、幻灯片、纪要或邮件时。</span>
+      <span class="dir-tags">会议·翻译</span>
+    </a><a class="dir-card" href="https://www.iflyrec.com" rel="noopener">
+      <b>讯飞听见</b>
+      <span class="dir-desc">适合产出文档、表格、幻灯片、纪要或邮件时。</span>
+      <span class="dir-tags">会议</span>
+    </a><a class="dir-card" href="https://otter.ai" rel="noopener">
+      <b>Otter.ai</b>
+      <span class="dir-desc">适合产出文档、表格、幻灯片、纪要或邮件时。</span>
+      <span class="dir-tags">会议</span>
+    </a><a class="dir-card" href="https://www.notion.so/product/ai" rel="noopener">
+      <b>Notion AI</b>
+      <span class="dir-desc">适合产出文档、表格、幻灯片、纪要或邮件时。</span>
+      <span class="dir-tags">办公·RAG</span>
+    </a><a class="dir-card" href="https://ai.wps.cn" rel="noopener">
+      <b>WPS AI</b>
+      <span class="dir-desc">适合产出文档、表格、幻灯片、纪要或邮件时。</span>
+      <span class="dir-tags">办公·国产</span>
+    </a><a class="dir-card" href="https://rytr.me" rel="noopener">
+      <b>Rytr</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">多语言</span>
+    </a></div></section>
+<section class="section"><h2><span data-zh>模型与权重</span><span data-en>模型与权重</span> <span class="dir-count">10</span></h2>
+    <div class="dir-grid"><a class="dir-card" href="https://huggingface.co" rel="noopener">
+      <b>Hugging Face</b>
+      <span class="dir-desc">适合要自己部署、控制数据与许可，或离线运行时。</span>
+      <span class="dir-tags">社区·开源</span>
+    </a><a class="dir-card" href="https://modelscope.cn" rel="noopener">
+      <b>ModelScope 魔搭</b>
+      <span class="dir-desc">适合要自己部署、控制数据与许可，或离线运行时。</span>
+      <span class="dir-tags">大厂·国产</span>
+    </a><a class="dir-card" href="https://ollama.com" rel="noopener">
+      <b>Ollama</b>
+      <span class="dir-desc">适合要自己部署、控制数据与许可，或离线运行时。</span>
+      <span class="dir-tags">本地部署</span>
+    </a><a class="dir-card" href="https://replicate.com" rel="noopener">
+      <b>Replicate</b>
+      <span class="dir-desc">适合要自己部署、控制数据与许可，或离线运行时。</span>
+      <span class="dir-tags">云服务·API</span>
+    </a><a class="dir-card" href="https://civitai.com" rel="noopener">
+      <b>Civitai</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">社区</span>
+    </a><a class="dir-card" href="https://openrouter.ai" rel="noopener">
+      <b>OpenRouter</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">API</span>
+    </a><a class="dir-card" href="https://www.together.ai" rel="noopener">
+      <b>Together AI</b>
+      <span class="dir-desc">适合要拆难题、做多步推理或验证解题过程时。</span>
+      <span class="dir-tags">推理·模型微调</span>
+    </a><a class="dir-card" href="https://fireworks.ai" rel="noopener">
+      <b>Fireworks AI</b>
+      <span class="dir-desc">适合要拆难题、做多步推理或验证解题过程时。</span>
+      <span class="dir-tags">高性能</span>
+    </a><a class="dir-card" href="https://groq.com" rel="noopener">
+      <b>Groq</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">芯片设计·高性能</span>
+    </a><a class="dir-card" href="https://www.anyscale.com" rel="noopener">
+      <b>Anyscale</b>
+      <span class="dir-desc">适合要拆难题、做多步推理或验证解题过程时。</span>
+      <span class="dir-tags">云服务</span>
+    </a></div></section>
+<section class="section"><h2><span data-zh>开发框架与工具</span><span data-en>开发框架与工具</span> <span class="dir-count">10</span></h2>
+    <div class="dir-grid"><a class="dir-card" href="https://www.pinecone.io" rel="noopener">
+      <b>Pinecone</b>
+      <span class="dir-desc">适合要处理数据、做评测或核对基准口径时。</span>
+      <span class="dir-tags">云服务·RAG</span>
+    </a><a class="dir-card" href="https://weaviate.io" rel="noopener">
+      <b>Weaviate</b>
+      <span class="dir-desc">适合要自己部署、控制数据与许可，或离线运行时。</span>
+      <span class="dir-tags">开源</span>
+    </a><a class="dir-card" href="https://www.trychroma.com" rel="noopener">
+      <b>Chroma</b>
+      <span class="dir-desc">适合要自己部署、控制数据与许可，或离线运行时。</span>
+      <span class="dir-tags">开源</span>
+    </a><a class="dir-card" href="https://milvus.io" rel="noopener">
+      <b>Milvus</b>
+      <span class="dir-desc">适合要自己部署、控制数据与许可，或离线运行时。</span>
+      <span class="dir-tags">开源·云服务</span>
+    </a><a class="dir-card" href="https://qdrant.tech" rel="noopener">
+      <b>Qdrant</b>
+      <span class="dir-desc">适合要自己部署、控制数据与许可，或离线运行时。</span>
+      <span class="dir-tags">高性能</span>
+    </a><a class="dir-card" href="https://www.elastic.co" rel="noopener">
+      <b>Elasticsearch</b>
+      <span class="dir-desc">适合要找资料、读论文、做文献综述时。</span>
+      <span class="dir-tags">搜索</span>
+    </a><a class="dir-card" href="https://www.langchain.com" rel="noopener">
+      <b>LangChain</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">工作流·基础设施</span>
+    </a><a class="dir-card" href="https://www.llamaindex.ai" rel="noopener">
+      <b>LlamaIndex</b>
+      <span class="dir-desc">适合要处理数据、做评测或核对基准口径时。</span>
+      <span class="dir-tags">RAG</span>
+    </a><a class="dir-card" href="https://langfuse.com" rel="noopener">
+      <b>Langfuse</b>
+      <span class="dir-desc">适合要自己部署、控制数据与许可，或离线运行时。</span>
+      <span class="dir-tags">可观测</span>
+    </a><a class="dir-card" href="https://ai-sdk.dev" rel="noopener">
+      <b>Vercel AI SDK</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">前端</span>
+    </a></div></section>
+<section class="section"><h2><span data-zh>算力与芯片</span><span data-en>算力与芯片</span> <span class="dir-count">10</span></h2>
+    <div class="dir-grid"><a class="dir-card" href="https://www.nvidia.com" rel="noopener">
+      <b>NVIDIA</b>
+      <span class="dir-desc">适合要选算力、比较云价或估算显存时。</span>
+      <span class="dir-tags">GPU</span>
+    </a><a class="dir-card" href="https://www.amd.com" rel="noopener">
+      <b>AMD</b>
+      <span class="dir-desc">适合要处理数据、做评测或核对基准口径时。</span>
+      <span class="dir-tags">GPU·CPU</span>
+    </a><a class="dir-card" href="https://www.intel.com" rel="noopener">
+      <b>Intel</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">CPU·芯片设计</span>
+    </a><a class="dir-card" href="https://www.tsmc.com" rel="noopener">
+      <b>台积电 TSMC</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">芯片设计</span>
+    </a><a class="dir-card" href="https://www.arm.com" rel="noopener">
+      <b>ARM</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">芯片设计·边缘计算</span>
+    </a><a class="dir-card" href="https://www.cambricon.com" rel="noopener">
+      <b>寒武纪</b>
+      <span class="dir-desc">适合要拆难题、做多步推理或验证解题过程时。</span>
+      <span class="dir-tags">国产·GPU</span>
+    </a><a class="dir-card" href="https://www.hygon.cn" rel="noopener">
+      <b>海光信息</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">CPU·国产</span>
+    </a><a class="dir-card" href="https://www.mthreads.com" rel="noopener">
+      <b>摩尔线程</b>
+      <span class="dir-desc">适合要拆难题、做多步推理或验证解题过程时。</span>
+      <span class="dir-tags">GPU·模型微调</span>
+    </a><a class="dir-card" href="https://www.horizon.auto" rel="noopener">
+      <b>地平线</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">边缘计算·自动驾驶</span>
+    </a><a class="dir-card" href="https://www.cerebras.ai" rel="noopener">
+      <b>Cerebras</b>
+      <span class="dir-desc">适合要出图、改图、做分镜或生成短视频时。</span>
+      <span class="dir-tags">芯片设计</span>
+    </a></div></section>
+<section class="section"><h2><span data-zh>机器人与具身智能</span><span data-en>机器人与具身智能</span> <span class="dir-count">10</span></h2>
+    <div class="dir-grid"><a class="dir-card" href="https://www.tesla.com/AI" rel="noopener">
+      <b>Tesla Optimus</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">大厂·人形机器人</span>
+    </a><a class="dir-card" href="https://www.figure.ai" rel="noopener">
+      <b>Figure AI</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">人形机器人·大厂</span>
+    </a><a class="dir-card" href="https://bostondynamics.com" rel="noopener">
+      <b>Boston Dynamics</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">人形机器人·四足</span>
+    </a><a class="dir-card" href="https://www.unitree.com" rel="noopener">
+      <b>Unitree 宇树</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">四足·国产</span>
+    </a><a class="dir-card" href="https://www.1x.tech" rel="noopener">
+      <b>1X Technologies</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">人形机器人·服务机器人</span>
+    </a><a class="dir-card" href="https://agilityrobotics.com" rel="noopener">
+      <b>Agility Robotics</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">人形机器人·物流</span>
+    </a><a class="dir-card" href="https://www.fftai.com" rel="noopener">
+      <b>傅利叶智能</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">医疗·国产</span>
+    </a><a class="dir-card" href="https://www.agibot.com" rel="noopener">
+      <b>智元机器人</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">具身智能·大厂</span>
+    </a><a class="dir-card" href="https://apptronik.com" rel="noopener">
+      <b>Apptronik</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">人形机器人·物流</span>
+    </a><a class="dir-card" href="https://www.ubtrobot.com" rel="noopener">
+      <b>优必选科技</b>
+      <span class="dir-desc">适合做感知、控制、仿真或机器人落地时。</span>
+      <span class="dir-tags">人形机器人·国产</span>
+    </a></div></section>
+<section class="section"><h2><span data-zh>学习资源</span><span data-en>学习资源</span> <span class="dir-count">10</span></h2>
+    <div class="dir-grid"><a class="dir-card" href="https://arxiv.org" rel="noopener">
+      <b>arXiv</b>
+      <span class="dir-desc">适合要找资料、读论文、做文献综述时。</span>
+      <span class="dir-tags">学术</span>
+    </a><a class="dir-card" href="https://www.semanticscholar.org" rel="noopener">
+      <b>Semantic Scholar</b>
+      <span class="dir-desc">适合要找资料、读论文、做文献综述时。</span>
+      <span class="dir-tags">学术·搜索</span>
+    </a><a class="dir-card" href="https://www.connectedpapers.com" rel="noopener">
+      <b>Connected Papers</b>
+      <span class="dir-desc">适合要找资料、读论文、做文献综述时。</span>
+      <span class="dir-tags">可视化</span>
+    </a><a class="dir-card" href="https://www.researchgate.net" rel="noopener">
+      <b>ResearchGate</b>
+      <span class="dir-desc">适合要找资料、读论文、做文献综述时。</span>
+      <span class="dir-tags">社交·学术</span>
+    </a><a class="dir-card" href="https://www.coursera.org" rel="noopener">
+      <b>Coursera</b>
+      <span class="dir-desc">适合要加输入过滤、输出审查、红队或做合规证据时。</span>
+      <span class="dir-tags">课程·合规</span>
+    </a><a class="dir-card" href="https://www.edx.org" rel="noopener">
+      <b>edX</b>
+      <span class="dir-desc">适合想先小范围试、再决定是否付费时。</span>
+      <span class="dir-tags">课程·学术</span>
+    </a><a class="dir-card" href="https://www.udacity.com" rel="noopener">
+      <b>Udacity</b>
+      <span class="dir-desc">适合要处理数据、做评测或核对基准口径时。</span>
+      <span class="dir-tags">课程</span>
+    </a><a class="dir-card" href="https://www.fast.ai" rel="noopener">
+      <b>Fast.ai</b>
+      <span class="dir-desc">适合想先小范围试、再决定是否付费时。</span>
+      <span class="dir-tags">免费</span>
+    </a><a class="dir-card" href="https://www.deeplearning.ai" rel="noopener">
+      <b>DeepLearning.AI</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">课程·教育</span>
+    </a><a class="dir-card" href="https://leetcode.com" rel="noopener">
+      <b>LeetCode</b>
+      <span class="dir-desc">适合要改仓库、跑测试或在终端里完成多步操作时。</span>
+      <span class="dir-tags">教育</span>
+    </a></div></section>
+<section class="section"><h2><span data-zh>社区与资讯</span><span data-en>社区与资讯</span> <span class="dir-count">10</span></h2>
+    <div class="dir-grid"><a class="dir-card" href="https://news.ycombinator.com" rel="noopener">
+      <b>Hacker News</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">创业</span>
+    </a><a class="dir-card" href="https://www.producthunt.com" rel="noopener">
+      <b>Product Hunt</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">社区·创业</span>
+    </a><a class="dir-card" href="https://www.reddit.com/r/MachineLearning" rel="noopener">
+      <b>Reddit r/MachineLearning</b>
+      <span class="dir-desc">适合要找资料、读论文、做文献综述时。</span>
+      <span class="dir-tags">学术</span>
+    </a><a class="dir-card" href="https://dev.to" rel="noopener">
+      <b>Dev.to</b>
+      <span class="dir-desc">适合要改仓库、跑测试或在终端里完成多步操作时。</span>
+      <span class="dir-tags">资讯·社区</span>
+    </a><a class="dir-card" href="https://stackoverflow.com" rel="noopener">
+      <b>Stack Overflow</b>
+      <span class="dir-desc">适合要改仓库、跑测试或在终端里完成多步操作时。</span>
+      <span class="dir-tags">编程助手</span>
+    </a><a class="dir-card" href="https://www.technologyreview.com" rel="noopener">
+      <b>MIT Technology Review</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">资讯·学术</span>
+    </a><a class="dir-card" href="https://www.theverge.com/ai-artificial-intelligence" rel="noopener">
+      <b>The Verge AI</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">资讯</span>
+    </a><a class="dir-card" href="https://venturebeat.com/category/ai" rel="noopener">
+      <b>VentureBeat AI</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">创业</span>
+    </a><a class="dir-card" href="https://techcrunch.com/category/artificial-intelligence" rel="noopener">
+      <b>TechCrunch AI</b>
+      <span class="dir-desc">适合先做小范围试用，确认数据、权限与输出边界后再扩大。</span>
+      <span class="dir-tags">创业·企业级</span>
+    </a><a class="dir-card" href="https://analyticsindiamag.com" rel="noopener">
+      <b>Analytics India Magazine</b>
+      <span class="dir-desc">适合要处理数据、做评测或核对基准口径时。</span>
+      <span class="dir-tags">数据集</span>
+    </a></div></section>
+</div>
+  </main>
+  <footer class="site-footer">
+    <div class="container foot-row">
+      <div class="foot-brand">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="foot-copy">© 2026 <span data-zh>投机取巧</span><span data-en>Specul</span></span>
+      </div>
+      <nav class="foot-links" aria-label="页脚导航">
+          <a href="https://specul.com/"><span data-zh>首页</span><span data-en>Home</span></a>
+          <a href="https://learn.specul.com/"><span data-zh>学 AI</span><span data-en>Learn</span></a>
+          <a href="https://tools.specul.com/"><span data-zh>工具</span><span data-en>Tools</span></a>
+          <a href="https://models.specul.com/"><span data-zh>模型</span><span data-en>Models</span></a>
+          <a href="https://demos.specul.com/"><span data-zh>作品演示</span><span data-en>Playground</span></a>
+          <a href="https://oss.specul.com/"><span data-zh>开源库</span><span data-en>OSS</span></a>
+          <a href="https://hardware.specul.com/"><span data-zh>硬件算力</span><span data-en>Compute</span></a>
+          <a href="https://papers.specul.com/"><span data-zh>AI 论文</span><span data-en>AI Papers</span></a>
+          <a href="https://chain.specul.com/"><span data-zh>链</span><span data-en>Chain</span></a>
+          <a href="https://nav.specul.com/"><span data-zh>AI 导航</span><span data-en>AI Directory</span></a>
+          <a href="https://github.com/speculcom/ai-sites-directory" target="_blank" rel="noopener"><span data-zh>开源</span><span data-en>Open source</span></a>
+      </nav>
+      <nav class="foot-legal-links" aria-label="法律">
+        <a href="https://specul.com/legal.html"><span data-zh>法律条款</span><span data-en>Legal terms</span></a>
+        <a href="https://specul.com/legal.html#s6"><span data-zh>免责声明</span><span data-en>Disclaimer</span></a>
+        <a href="https://specul.com/legal.html#s8"><span data-zh>隐私与本地存储</span><span data-en>Privacy</span></a>
+      </nav>
+    </div>
+    <div class="container">
+      <p><a href="https://specul.com/search.html"><span data-zh>搜索全站内容</span><span data-en>Search all sites</span></a></p>
+      <p><a href="https://specul.com/correct.html"><span data-zh>发现错误？生成纠错草稿</span><span data-en>Spot an error? Compose a correction draft</span></a></p>
+      <p class="foot-trademark"><span data-zh>产品名与商标归各权利方所有，本站仅作识别与评论之用。</span><span data-en>Product names and trademarks belong to their respective owners and are used here for identification and commentary only.</span></p>
+    </div>
+  </footer>
+<nav class="nav-tabbar nav-tabbar-1row" aria-label="快捷导航">
+    <a href="https://specul.com/"><span class="ti" aria-hidden="true">◎</span><span data-zh>首页</span><span data-en>Home</span></a>
+    <a href="https://learn.specul.com/"><span class="ti" aria-hidden="true">▤</span><span data-zh>学AI</span><span data-en>Learn</span></a>
+    <a href="https://tools.specul.com/"><span class="ti" aria-hidden="true">◈</span><span data-zh>工具</span><span data-en>Tools</span></a>
+    <a href="https://models.specul.com/"><span class="ti" aria-hidden="true">▦</span><span data-zh>模型</span><span data-en>Models</span></a>
+    <a href="https://demos.specul.com/"><span class="ti" aria-hidden="true">▷</span><span data-zh>演示</span><span data-en>Demos</span></a>
+    <a href="https://oss.specul.com/"><span class="ti" aria-hidden="true">▧</span><span data-zh>开源</span><span data-en>OSS</span></a>
+    <a href="https://hardware.specul.com/"><span class="ti" aria-hidden="true">▣</span><span data-zh>算力</span><span data-en>Chips</span></a>
+    <a href="https://papers.specul.com/"><span class="ti" aria-hidden="true">▥</span><span data-zh>论文</span><span data-en>Papers</span></a>
+    <a href="https://chain.specul.com/"><span class="ti" aria-hidden="true">◇</span><span data-zh>链</span><span data-en>Chain</span></a>
+    <a href="https://nav.specul.com/" aria-current="page" data-nav-group="external"><span class="ti" aria-hidden="true">↗</span><span data-zh>导航</span><span data-en>Nav</span></a>
+</nav>
+</body>
+</html>

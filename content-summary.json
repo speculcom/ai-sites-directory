@@ -83,6 +83,13 @@
    "n": 183,
    "dead": 0,
    "maybe": 0
+  },
+  {
+   "code": "safety",
+   "name": "安全与评测",
+   "n": 20,
+   "dead": 0,
+   "maybe": 0
   }
  ],
  "needWork": [

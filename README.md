@@ -10,11 +10,11 @@ AI 导航的**源仓**（唯一真相源）。
 
 ## 我该怎么读
 
-796 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
+816 条站点，全塞在一个文件里没人翻得动。按你现在的状态走：
 
 | 你想干嘛 | 走哪条路 |
 |---|---|
-| 「这个领域有什么现成的」 | 下面的**分类表**，11 类各自多少条、代表站点是哪几个 |
+| 「这个领域有什么现成的」 | 下面的**分类表**，12 类各自多少条、代表站点是哪几个 |
 | 「我知道叫什么名字」 | 搜 [`content/`](./content/) 分类文档中的站名，或在网页目录里搜索 |
 | 「这家的东西还活着吗」 | 看 [`check-results.json`](./check-results.json) 里每条的核验状态和核验日期 |
 | 「我要机器可读」 | [`nav-data.json`](./nav-data.json) 是主数据，其余都是它的派生物 |
@@ -30,7 +30,7 @@ DNS 在本地解析不了、在云端能打开是常事。所以探测受限的�
 | 路径 | 内容 |
 |---|---|
 | `content/` | 从主数据生成的 12 份分类文档，含条目说明、标签与既有链接核验状态 |
-| `nav-data.json` | **主数据**：796 条条目 / 12 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 613 条 / 11 类） |
+| `nav-data.json` | **主数据**：816 条条目 / 13 个分类（其中 `ext` 延伸领域不在站上呈现，故线上为 633 条 / 12 类） |
 | `categories.en.json` / `tags.en.json` / `vendors.en.json` / `descriptions.en.json` | 英文映射（分类名 / 标签 / 厂商 / 描述） |
 | `constraints.json` / `conditions.mjs` | 单项使用条件、官方来源与未知项；字段筛选和 2–3 项条件对照 |
 | `task-packs.json` / `task-packs.mjs` | 六个双语任务包、虚构输入、参考结果、随包代码与工作表生成 |
@@ -143,6 +143,7 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 | 学习资源 | 54 | arXiv · Semantic Scholar · Connected Papers · ResearchGate · Coursera · edX …等 54 条 |
 | 社区与资讯 | 25 | Hacker News · Product Hunt · Reddit r/MachineLearning · Dev.to · Stack Overflow · MIT Technology Review …等 25 条 |
 | 开发者工具 | 90 | GitHub · Vercel · Netlify · DeepL · Figma · CodePen …等 90 条 |
+| 安全与评测 | 20 | NIST AI Risk Management Framework · OWASP LLM Top 10 · MITRE ATLAS · AI Incident Database · Partnership on AI · EU AI Act …等 20 条 |
 
 > 想看全部条目：[`content/`](./content/) 一站一个 md，或 [`nav-data.json`](./nav-data.json)（主数据）。
 > `ext` 延伸领域另有 183 条，构建时不上站，故不在上表。
@@ -154,8 +155,8 @@ bash _audit/push-site.sh _data/nav/site speculcom/nav "内容更新"
 <!-- STATS:BEGIN generated, do not edit -->
 | 项 | 实测值 |
 |---|---|
-| 条目 | 796 条（对外 613 · ext 183） |
-| 分类 | 12 类（对外 11 类） |
-| 标签词表 | 92 个（封闭枚举） |
+| 条目 | 816 条（对外 633 · ext 183） |
+| 分类 | 13 类（对外 12 类） |
+| 标签词表 | 98 个（封闭枚举） |
 | 下架标记 | 0 条（） |
 <!-- STATS:END -->

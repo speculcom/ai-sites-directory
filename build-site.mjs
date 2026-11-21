@@ -289,6 +289,7 @@ const body = `    <header class="dir-head">
         </div>
       </div>
     </header>
+    <p class="dir-count container"><a href="fit.html"><b><span data-zh>不确定点哪个？先看 100 个常用入口的适用场景 →</span><span data-en>Not sure what to open? See the fit notes for 100 common entries →</span></b></a></p>
 
     <section class="section dir-body" id="dir">
       <div class="container">

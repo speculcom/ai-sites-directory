@@ -90,5 +90,11 @@
   "写作": "writing",
   "社交": "social",
   "翻译": "translation",
-  "多语言": "multilingual"
+  "多语言": "multilingual",
+  "AI 安全": "AI safety",
+  "AI 治理": "AI governance",
+  "AI 合规": "AI compliance",
+  "AI 公平": "AI fairness",
+  "AI 研究": "AI research",
+  "AI 评测": "AI evaluation"
 }
