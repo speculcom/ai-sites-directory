@@ -41,7 +41,7 @@
 
 - 链接：<https://artificialintelligenceact.eu/>
 - 说明：欧盟《人工智能法案》全文、时间表与合规指引，按风险等级查阅义务。
-- 标签：AI 合规
+- 标签：合规·法律
 - 核验：ok（2026-11-21）
 
 ## UK AI Safety Institute
@@ -62,7 +62,7 @@
 
 - 链接：<https://metr.org/>
 - 说明：AI 能力与风险评测研究机构，擅长长任务、自动化与 agent 评测。
-- 标签：AI 评测
+- 标签：评测·学术
 - 核验：ok（2026-11-21）
 
 ## Center for AI Safety
@@ -97,7 +97,7 @@
 
 - 链接：<https://www.eleuther.ai/>
 - 说明：开放 AI 研究社区，发布开源模型、评测与安全研究。
-- 标签：AI 研究
+- 标签：科研·开源
 - 核验：未核验
 
 ## AI Fairness 360
