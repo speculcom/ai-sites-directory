@@ -681,6 +681,19 @@ a.t-card:hover, .t-card.is-link:hover {
 .t-pathcard h3 { margin: 0 0 2px; font-size: var(--fs-lg); font-weight: 700; }
 .t-pathcard .t-pathspan { font-size: var(--fs-xs); color: var(--ink-dim); }
 .t-pathcard .t-pathlead { margin: 6px 0 0; font-size: var(--fs-xs); line-height: 1.6; color: var(--ink-mid); }
+.t-pathmeta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 4px 0 0; }
+.t-level { display: inline-flex; align-items: center; gap: 5px; padding: 1px 8px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg-inset); color: var(--ink-mid); font-size: var(--fs-micro); font-weight: 600; line-height: 1.7; white-space: nowrap; }
+.t-level::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--ink-faint); }
+.t-level.is-starter::before { background: var(--cat-teal, #2dd4bf); }
+.t-level.is-builder::before { background: var(--cat-blue, #60a5fa); }
+.t-level.is-deep::before { background: var(--cat-violet, #a78bfa); }
+.t-level.is-ship::before { background: var(--cat-amber, #f59e0b); }
+.t-levelnote { font-size: var(--fs-micro); color: var(--ink-dim); }
+.level-filter { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 2px; }
+.level-filter button { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg-panel); color: var(--ink-mid); font: inherit; font-size: var(--fs-xs); cursor: pointer; }
+.level-filter button span { color: var(--ink-dim); font-variant-numeric: tabular-nums; }
+.level-filter button[aria-pressed="true"] { border-color: var(--accent); color: var(--ink); background: var(--bg-inset); }
+.level-filter button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .t-pathsteps { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; counter-reset: tp; }
 .t-pathsteps li { counter-increment: tp; min-width: 0; }
 .t-pathsteps a { display: inline-block; background: var(--bg-raise); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; font-size: var(--fs-xs); text-decoration: none; color: var(--ink-mid); }
