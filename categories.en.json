@@ -45,8 +45,8 @@
     "desc": "Small utilities, clients, plugins and helpers"
   },
   "ext": {
-    "name": "Excluded",
-    "desc": "Not listed here: links, coins, games"
+    "name": "Adjacent fields",
+    "desc": "Background references: chains, games, general utilities — not part of the AI tool directory"
   },
   "safety": {
     "name": "AI safety & governance",

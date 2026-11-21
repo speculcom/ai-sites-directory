@@ -128,7 +128,7 @@ function linkState(it) {
   return { cls: '', note: '' };
 }
 
-// 展示 AI 相关分类；ext（链/币/游戏）不进站，仅在仓库 content/ 留档
+// 展示 AI 相关分类；ext（链/币/游戏等非 AI 主体）不进站，仅在仓库 content/ 留档
 const cats = data.categories.filter((c) => c.code !== 'ext');
 const items = data.items.filter((i) => i.cat !== 'ext');
 validateConditions(items);
@@ -211,7 +211,7 @@ ${st.note ? `            <span class="c-warn">${st.note}</span>` : ''}
   const hit = Object.entries(counts).filter(([k]) => TAG_EN[k]).reduce((a, [, v]) => a + v, 0);
   const rate = total ? Math.round(hit / total * 100) : 0;
   // 零中文检查：中文标签在英文态会露出中文，必须 warn。
-  // ⚠ **只算在站条目（cat !== 'ext'）** —— ext 是延伸领域（加密货币等），
+  // ⚠ **只算在站条目（cat !== 'ext'）** —— ext 是相邻领域（加密货币等非 AI 主体），
   //   页面上一条都不显示。原先用全量 counts 导致 160 个 ext 标签误报。
   const inCounts = {};
   data.items.filter(x => x.cat !== 'ext').forEach(x => {
@@ -450,7 +450,7 @@ fs.writeFileSync(
 > https://nav.specul.com/
 
 系统化收录站外 AI 网站。**本站收录 ${items.length} 个条目，按 ${cats.length} 类组织**，每条附一句话说明与链接核验状态。
-延伸领域另有 ${data.items.length - items.length} 条只入库、不上站。
+相邻领域另有 ${data.items.length - items.length} 条只入库、不上站（链上、游戏、通用工具等背景参考，不是 AI 工具目录的一部分）。
 
 ## 内容地图
 
@@ -469,6 +469,6 @@ fs.writeFileSync(
 );
 
 console.log('=== nav 站已生成 ===');
-console.log(`  条目 ${items.length} 条 · 分类 ${cats.length} 类（已排除延伸领域 ${data.items.length - items.length} 条）`);
+console.log(`  条目 ${items.length} 条 · 分类 ${cats.length} 类（已排除相邻领域 ${data.items.length - items.length} 条）`);
 console.log(`  index.html ${(fs.statSync(path.join(SITE, 'index.html')).size / 1024).toFixed(0)} KB`);
 console.log(`  输出目录 ${SITE}`);
