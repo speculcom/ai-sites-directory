@@ -5,91 +5,91 @@
    "name": "大模型与对话",
    "n": 58,
    "dead": 0,
-   "maybe": 18
+   "maybe": 21
   },
   {
    "code": "coding",
    "name": "AI 编程与 Agent",
    "n": 45,
    "dead": 0,
-   "maybe": 2
+   "maybe": 4
   },
   {
    "code": "gen",
    "name": "多模态生成",
    "n": 58,
    "dead": 0,
-   "maybe": 21
+   "maybe": 16
   },
   {
    "code": "app",
    "name": "AI 办公与垂直应用",
    "n": 51,
    "dead": 0,
-   "maybe": 38
+   "maybe": 11
   },
   {
    "code": "model",
    "name": "模型与权重",
    "n": 36,
    "dead": 0,
-   "maybe": 0
+   "maybe": 3
   },
   {
    "code": "dev",
    "name": "开发框架与工具",
    "n": 47,
    "dead": 0,
-   "maybe": 2
+   "maybe": 13
   },
   {
    "code": "infra",
    "name": "算力与芯片",
    "n": 62,
    "dead": 0,
-   "maybe": 3
+   "maybe": 7
   },
   {
    "code": "robot",
    "name": "机器人与具身智能",
    "n": 87,
    "dead": 0,
-   "maybe": 9
+   "maybe": 12
   },
   {
    "code": "learn",
    "name": "学习资源",
    "n": 54,
    "dead": 0,
-   "maybe": 2
+   "maybe": 7
   },
   {
    "code": "community",
    "name": "社区与资讯",
    "n": 25,
    "dead": 0,
-   "maybe": 1
+   "maybe": 6
   },
   {
    "code": "tools",
    "name": "开发者工具",
    "n": 90,
    "dead": 0,
-   "maybe": 1
+   "maybe": 8
   },
   {
    "code": "ext",
    "name": "延伸领域",
    "n": 183,
    "dead": 0,
-   "maybe": 0
+   "maybe": 77
   },
   {
    "code": "safety",
    "name": "安全与评测",
    "n": 20,
    "dead": 0,
-   "maybe": 0
+   "maybe": 1
   }
  ],
  "needWork": [
