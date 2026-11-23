@@ -289,7 +289,7 @@ const body = `    <header class="dir-head">
         </div>
       </div>
     </header>
-    <p class="dir-count container"><a href="fit.html"><b><span data-zh>不确定点哪个？先看 100 个常用入口的适用场景 →</span><span data-en>Not sure what to open? See the fit notes for 100 common entries →</span></b></a></p>
+    <p class="dir-count container"><a href="fit.html"><b><span data-zh>不确定点哪个？先看 100 个常用入口的适用场景 →</span><span data-en>Not sure what to open? See the fit notes for 100 common entries →</span></b></a><span aria-hidden="true"> · </span><a href="2026.html"><span data-zh>2026 新入口：先看官方页，再看榜单 →</span><span data-en>2026 additions: official pages first, leaderboards second →</span></a></p>
 
     <section class="section dir-body" id="dir">
       <div class="container">

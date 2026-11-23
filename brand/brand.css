@@ -87,19 +87,19 @@
   --lh-tight: 1.16;
   --lh-snug:  1.42;
 
-  --lh-body:  1.75;   /* v6：1.62 → 1.68；2026-10-09 → 1.75（降密度 + 更好读）*/
+  --lh-body:  1.62;   /* 2026-11-22：按全站紧凑化要求从 1.75 收紧，仍保留中文正文可读性 */
 
-  /* ── 间距（8px 基线）── */
+  /* ── 间距（8px 基线；2026-11-22 全站紧凑化一档）── */
   --sp-1: 4px;
   --sp-2: 8px;
   --sp-3: 12px;
-  --sp-4: 20px;
-  --sp-5: 32px;
+  --sp-4: 16px;
+  --sp-5: 24px;
 
-  --sp-5b: 40px;
+  --sp-5b: 30px;
 
-  --sp-6: 60px;
-  --sp-7: 92px;
+  --sp-6: 44px;
+  --sp-7: 64px;
 
   --text: var(--ink);            /* 正文色 */
   --text-dim: var(--ink-dim);    /* 弱化正文 */
@@ -148,7 +148,7 @@
   --display-sub: clamp(28px, 3.8vw, 46px); /* 首屏与详情页主标共用这一档 */
   --h2: clamp(23px, 2.8vw, 32px);
   --lede: 17px;
-  --lede-lh: 1.72;
+  --lede-lh: 1.58;
   /* 区块纵向留白：从 52~88px 收到 40px 一档，六站同一档 */
   --section-pad: var(--sp-5b);
   --section-pad-sm: var(--sp-5);
@@ -816,7 +816,7 @@ h1[data-en], h2[data-en], h3[data-en], h4[data-en], p[data-en], li[data-en],
     --display: var(--display-sub);
     --display-sub: clamp(24px, 6.4vw, 32px);
     --h2: clamp(20px, 5vw, 26px);
-    --sp-6: 44px; --sp-7: 64px;   /* 2026-10-09：随大间距一起 +10~15%，窄屏尤其需要呼吸 ✓ */
+    --sp-6: 34px; --sp-7: 48px;   /* 2026-11-22：随全站紧凑化下调，手机一屏尽量多显示一档内容 */
     --container: min(1120px, 90vw);
   }
 
@@ -1151,8 +1151,8 @@ html[data-lang="en"] .nav-links > a {
  * ========================================================================== */
 .vz-section {
   position: relative;
-  margin: 0 0 clamp(32px, 6vw, 72px);
-  padding: clamp(26px, 4vw, 48px) 0 clamp(30px, 5vw, 54px);
+  margin: 0 0 var(--sp-5b);
+  padding: var(--sp-5) 0 var(--sp-5b);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background:
@@ -1185,23 +1185,23 @@ html[data-lang="en"] .nav-links > a {
   color: var(--ink-faint);
 }
 .vz-dek {
-  margin: 14px 0 0;
+  margin: 8px 0 0;
   max-width: 68ch;
   font-size: 14px;
-  line-height: 1.75;
+  line-height: var(--lh-body);
   color: var(--ink-mid);
 }
 .vz-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 22px;
+  gap: 10px;
+  margin-top: 14px;
 }
 .vz-card {
   grid-column: span 4;
   min-width: 0;
   margin: 0;
-  padding: 16px 16px 13px;
+  padding: 13px 13px 11px;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: linear-gradient(180deg, var(--bg-panel), var(--bg-inset));
@@ -1305,7 +1305,7 @@ html[data-lang="en"] .nav-links > a {
 }
 @media (max-width: 640px) {
   .vz-card, .vz-span-3, .vz-span-4, .vz-span-5, .vz-span-6, .vz-span-7, .vz-span-8, .vz-span-12 { grid-column: span 12; }
-  .vz-card { padding: 14px 13px 12px; }
+  .vz-card { padding: 11px 11px 9px; }
   .vz-title-sub { display: block; margin: 6px 0 0; }
   .vz-map-row { grid-template-columns: 44px 1fr; }
   .vz-map-row small { grid-column: 2; }

@@ -4,7 +4,7 @@ https://gemini.google.com
 https://chat.deepseek.com
 https://kimi.moonshot.cn
 https://tongyi.aliyun.com
-https://yiyan.baidu.com
+https://yiyan.baidu.com/
 https://www.doubao.com
 https://grok.com
 https://www.perplexity.ai
@@ -559,7 +559,7 @@ https://www.netlify.com
 https://www.deepl.com
 https://www.figma.com
 https://codepen.io
-https://www.kaggle.com
+https://www.kaggle.com/
 https://stackblitz.com
 https://excalidraw.com
 https://obsidian.md
