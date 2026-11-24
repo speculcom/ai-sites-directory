@@ -404,9 +404,9 @@ h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
    头部是透明 PNG，只保留花盘和花瓣，不再靠伪元素画脸；28px 下仍能看清一张脸。
    背景图放在每个站点自己的 assets/brand/ 下，由 sync-brand.mjs 同步过去。 */
 .brand-dot {
-width: 28px; height: 28px; border-radius: 9px; flex-shrink: 0; position: relative;
-background: url("assets/brand/dandelion-head.png") center / contain no-repeat;
-box-shadow: 0 0 0 3px var(--brand-soft);
+width: 36px; height: 36px; border-radius: 7px; flex-shrink: 0; position: relative;
+background: url("assets/brand/dandelion-mark-badge-mint.png") center / contain no-repeat;
+box-shadow: 0 0 0 2px var(--brand-soft);
 }
 .brand-dot::before, .brand-dot::after { content: none; }
 .brand-text { display: flex; flex-direction: column; gap: 1px; }
