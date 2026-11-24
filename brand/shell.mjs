@@ -219,15 +219,41 @@ ${links}
   </footer>`;
 }
 
+/** 统一收口 SEO 标题长度：保留「 — 深水指南」「 · AI 论文」等栏目后缀，
+ *  超长时只裁正文，末尾补一个省略号；仍放不下才整体硬截。
+ *  这样各站生成器继续传原始标题，不用逐页手改。 */
+function clampSeoTitle(raw) {
+  const max = 60;
+  const text = String(raw ?? '').trim();
+  if (text.length <= max) return text;
+  const seps = [' — ', ' · ', ' | '];
+  let pos = -1;
+  let sep = '';
+  for (const s of seps) {
+    const i = text.indexOf(s);
+    if (i > 0 && (pos < 0 || i < pos)) { pos = i; sep = s; }
+  }
+  if (pos > 0) {
+    const core = text.slice(0, pos).trimEnd();
+    const suffix = text.slice(pos);
+    const room = max - suffix.length;
+    if (room >= 8) {
+      return `${core.slice(0, room - 1).trimEnd()}…${suffix}`;
+    }
+  }
+  return `${text.slice(0, max - 1).trimEnd()}…`;
+}
+
 /** 完整页面外壳 */
 export function shell({ current, title, desc, canonical, accent, body, repo, repoLabel, jsonLd, headExtra = '', langBridge = false, assetPrefix = '' }) {
+  const seoTitle = clampSeoTitle(title);
   /* 2026-11-20：SEO 基础项修复。绝大多数生成页原先不传 jsonLd，导致
    * seo-basics 报 235 页「缺少 JSON-LD」。这里给一个可解析的 WebPage 兜底：
    * 已有显式 jsonLd 或 headExtra 里自带 ld+json 的页面不重复注入。 */
   const autoLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: title,
+    name: seoTitle,
     description: desc,
     url: canonical,
     inLanguage: ['zh-CN', 'en'],
@@ -242,13 +268,13 @@ export function shell({ current, title, desc, canonical, accent, body, repo, rep
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>${esc(title)}</title>
+  <title>${esc(seoTitle)}</title>
   <meta name="description" content="${esc(desc)}" />
   <link rel="canonical" href="${esc(canonical)}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="${esc(title.split(' — ')[0] || '投机取巧')}" />
   <meta property="og:url" content="${esc(canonical)}" />
-  <meta property="og:title" content="${esc(title)}" />
+  <meta property="og:title" content="${esc(seoTitle)}" />
   <meta property="og:description" content="${esc(desc)}" />
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:locale:alternate" content="en_US" />

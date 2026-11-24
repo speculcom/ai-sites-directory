@@ -277,9 +277,12 @@ const chips = ['<button class="chip is-on" data-cat="all">'
 /* 2026-11-19：标签下拉与「按意图」入口撤掉。
  * 目录页先给搜索 + 分类两组够用的筛选，剩下的屏幕留给 625 个站本身。 */
 
-const body = `    <header class="dir-head">
-      <div class="container dir-head-row">
-        <h1 class="dir-h1"><span class="grad-title"><span data-zh>AI 导航</span><span data-en>AI Directory</span></span></h1>
+const body = `    <header class="site-hero">
+      <div class="container site-hero-row">
+        <div>
+          <h1><span data-zh>AI 导航</span><span data-en>AI Directory</span></h1>
+          <p class="site-hero-deck"><span data-zh>600+ 条站外入口，按用途分组，点名字去官网。</span><span data-en>600+ off-site entries, grouped by use; the name opens the official site.</span></p>
+        </div>
         <div class="dir-tools">
           <label class="dir-search" for="q">
             <span class="sr-only"><span data-zh>搜索</span><span data-en>Search</span></span>
@@ -289,7 +292,8 @@ const body = `    <header class="dir-head">
         </div>
       </div>
     </header>
-    <p class="dir-count container"><a href="fit.html"><b><span data-zh>不确定点哪个？先看 100 个常用入口的适用场景 →</span><span data-en>Not sure what to open? See the fit notes for 100 common entries →</span></b></a><span aria-hidden="true"> · </span><a href="2026.html"><span data-zh>2026 新入口：先看官方页，再看榜单 →</span><span data-en>2026 additions: official pages first, leaderboards second →</span></a></p>
+
+    <p class="dir-count dir-links container"><a href="fit.html"><span data-zh>100 个常用入口怎么用</span><span data-en>How to use 100 common entries</span></a> · <a href="2026.html"><span data-zh>2026 新增</span><span data-en>2026 additions</span></a></p>
 
     <section class="section dir-body" id="dir">
       <div class="container">

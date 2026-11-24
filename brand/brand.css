@@ -354,6 +354,39 @@ h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
   h1 { color: var(--ink); }
 }
 
+/* 十站首页统一标题区：一行主标 + 一句具体说明，同一左对齐、同一字号。
+   2026-11-24：去掉各站 kicker/eyebrow/两行口号，首屏只留有信息量的内容。 */
+.site-hero {
+  padding: 26px 0 16px;
+}
+.site-hero h1 {
+  margin: 0 0 6px;
+  max-width: none;
+  font-size: clamp(24px, 3.8vw, 46px);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+  white-space: nowrap;
+}
+.site-hero .site-hero-deck {
+  margin: 0;
+  max-width: 82ch;
+  color: var(--ink-mid);
+  font-size: var(--lede);
+  line-height: 1.45;
+}
+.site-hero .site-hero-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+@media (max-width: 760px) {
+  .site-hero { padding: 18px 0 12px; }
+  .site-hero h1 { font-size: clamp(24px, 7vw, 34px); }
+  .site-hero .site-hero-deck { font-size: 15px; }
+  .site-hero .site-hero-row { display: block; }
+}
+
 .site-header {
   position: sticky; top: 0; z-index: 60;
   border-bottom: 1px solid var(--line);
@@ -1170,7 +1203,7 @@ html[data-lang="en"] .nav-links > a {
 }
 .vz-title {
   margin: 0;
-  font-size: clamp(25px, 3.1vw, 38px);
+  font-size: clamp(26px, 2.7vw, 34px);
   line-height: 1.14;
   letter-spacing: -.02em;
   color: var(--ink);

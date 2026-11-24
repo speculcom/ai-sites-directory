@@ -556,8 +556,14 @@ html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
    去掉 hero / 总结 / 仪表盘 / 意图胶囊；只留标题、搜索、类目筛选、625 个站。
    ========================================================================== */
 
-.dir-head { padding: var(--sp-4) 0 var(--sp-2); }
-.dir-head-row {
+.site-hero .dir-tools { flex: 0 0 min(360px, 40vw); }
+.site-hero .dir-tools .dir-search { max-width: none; }
+@media (max-width: 760px) {
+  .site-hero .site-hero-row { display: block; }
+  .site-hero .dir-tools { margin-top: 10px; }
+}
+
+.dir-head { padding: var(--sp-4) 0 var(--sp-2); }.dir-head-row {
   display: flex; align-items: center; justify-content: space-between;
   gap: var(--sp-3) var(--sp-5); flex-wrap: wrap;
 }
