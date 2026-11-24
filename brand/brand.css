@@ -1387,7 +1387,7 @@ html[data-lang="en"] .nav-links > a {
 .site-footer.foot-single .foot-license .sep {
   margin: 0 4px;
   font-size: 10px;
-  color: var(--ink-faint);
+  color: var(--ink-mid);
 }
 .site-footer.foot-single .foot-license a {
   color: var(--ink-mid);
@@ -1434,7 +1434,7 @@ html[data-lang="en"] .nav-links > a {
   font-weight: 700;
 }
 .site-footer.foot-single .sep {
-  color: var(--line-strong);
+  color: var(--ink-mid);
   font-size: 11px;
   line-height: 1;
 }
@@ -1458,6 +1458,19 @@ html[data-lang="en"] .nav-links > a {
     justify-content: space-between;
     gap: 4px 12px;
     white-space: normal;
+  }
+  .site-footer.foot-single .foot-brand {
+    white-space: normal;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .site-footer.foot-single .foot-license {
+    padding-left: 0;
+    white-space: normal;
+  }
+  .site-footer.foot-single .foot-license a,
+  .site-footer.foot-single .foot-license .sep {
+    white-space: nowrap;
   }
   .site-footer.foot-single .foot-legal {
     margin-left: auto;

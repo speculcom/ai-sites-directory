@@ -185,8 +185,8 @@ ${NAV.map((n) => link(n.key)).join('\n')}
 </nav>`;
 }
 
-/** footer —— 全站统一采用首页的单行页脚（2026-11-24 用户定案） */
-export function footer() {
+/** footer —— 全站统一采用首页的单行页脚，并保留源码与法律入口（2026-11-24） */
+export function footer(repo = 'https://github.com/speculcom/ai-handbook') {
   return `  <footer class="site-footer foot-single">
     <div class="container foot-line">
       <div class="foot-brand">
@@ -194,9 +194,9 @@ export function footer() {
           <span class="brand-dot" aria-hidden="true"></span>
           <span class="foot-copy"><span data-zh>投机取巧 · specul.com</span><span data-en>Specul · specul.com</span></span>
         </span>
-        <span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt"><span data-zh>内容 CC BY 4.0</span><span data-en>Content CC BY 4.0</span></a><span class="sep" aria-hidden="true">·</span><a href="https://specul.com/LICENSE.txt"><span data-zh>代码 MIT</span><span data-en>Code MIT</span></a></span>
+        <span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt"><span data-zh>内容 CC BY 4.0</span><span data-en>Content CC BY 4.0</span></a><span class="sep" aria-hidden="true">·</span><a href="https://specul.com/LICENSE.txt"><span data-zh>代码 MIT</span><span data-en>Code MIT</span></a><span class="sep" aria-hidden="true">·</span><a class="foot-source" href="${repo}" target="_blank" rel="noopener"><span data-zh>源码</span><span data-en>Source</span></a></span>
       </div>
-      <nav class="foot-sites" aria-label="站内导航">
+      <nav class="foot-sites" aria-label="Footer site links">
         <a class="site-link" href="https://specul.com/"><span data-zh>首页</span><span data-en>Home</span></a><span class="sep site-sep" aria-hidden="true">·</span>
         <a class="site-link" href="https://learn.specul.com/"><span data-zh>学 AI</span><span data-en>Learn</span></a><span class="sep site-sep" aria-hidden="true">·</span>
         <a class="site-link" href="https://tools.specul.com/"><span data-zh>工具</span><span data-en>Tools</span></a><span class="sep site-sep" aria-hidden="true">·</span>
@@ -208,8 +208,9 @@ export function footer() {
         <a class="site-link" href="https://chain.specul.com/"><span data-zh>链</span><span data-en>Chain</span></a><span class="sep site-sep" aria-hidden="true">·</span>
         <a class="site-link" href="https://nav.specul.com/"><span data-zh>导航</span><span data-en>Directory</span></a>
       </nav>
-      <nav class="foot-legal" aria-label="法律与纠错">
+      <nav class="foot-legal" aria-label="Legal and corrections">
         <a href="https://specul.com/legal.html"><span data-zh>法律</span><span data-en>Legal</span></a><span class="sep" aria-hidden="true">·</span>
+        <a href="https://specul.com/legal.html#s8"><span data-zh>隐私</span><span data-en>Privacy</span></a><span class="sep" aria-hidden="true">·</span>
         <a href="https://specul.com/correct.html"><span data-zh>纠错</span><span data-en>Corrections</span></a>
       </nav>
     </div>
@@ -279,8 +280,8 @@ export function shell({ current, title, desc, canonical, accent, body, repo, rep
   <link rel="alternate" hreflang="en" href="${esc(canonical)}${canonical.includes('?') ? '&' : '?'}lang=en" />
   <link rel="alternate" hreflang="x-default" href="${esc(canonical)}" />
   <meta name="theme-color" content="#16121f" />
-  <link rel="icon" type="image/png" href="/assets/brand/dandelion-favicon-site.png" />
-  <link rel="apple-touch-icon" href="/assets/brand/dandelion-apple-touch-site.png" />
+  <link rel="icon" type="image/png" href="${depth(assetPrefix)}assets/brand/dandelion-favicon-site.png" />
+  <link rel="apple-touch-icon" href="${depth(assetPrefix)}assets/brand/dandelion-apple-touch-site.png" />
   <script src="${depth(assetPrefix)}brand.js?v=${RUNTIME_VERSION}"></script>
   <link rel="stylesheet" href="${depth(assetPrefix)}brand.css?v=${RUNTIME_VERSION}" />
   <link rel="stylesheet" href="${depth(assetPrefix)}site.css" />
