@@ -1438,6 +1438,12 @@ html[data-lang="en"] .nav-links > a {
   font-size: 11px;
   line-height: 1;
 }
+/* 底部 tabbar 出现的同一断点：页脚不再重复放 44px 站标，移动端只留文字品牌。 */
+@media (max-width: 900px) {
+  .site-footer.foot-single .foot-brand-main .brand-dot {
+    display: none;
+  }
+}
 @media (max-width: 860px) {
   .site-footer.foot-single .foot-sites,
   .site-footer.foot-single .foot-sites .site-sep {
