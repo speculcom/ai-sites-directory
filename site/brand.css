@@ -403,10 +403,11 @@ h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
 /* 2026-11-24：品牌标从「渐变圆角方块＋两只眼」换成蒲公英头部。
    头部是透明 PNG，只保留花盘和花瓣，不再靠伪元素画脸；28px 下仍能看清一张脸。
    背景图放在每个站点自己的 assets/brand/ 下，由 sync-brand.mjs 同步过去。 */
+/* 品牌标：透明底的整株薄荷蒲公英，让它在浅色页头里直接落在页面底色上，
+   不再套深色方块；深色页头同样用这一张，花瓣和笑脸自带深色勾边。 */
 .brand-dot {
-width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0; position: relative;
-background: url("assets/brand/dandelion-mark-badge-mint.png") center / contain no-repeat;
-box-shadow: 0 0 0 2px var(--brand-soft);
+width: 44px; height: 44px; border-radius: 0; flex-shrink: 0; position: relative;
+background: url("assets/brand/dandelion-mark-mint.png") center / contain no-repeat;
 }
 .brand-dot::before, .brand-dot::after { content: none; }
 .brand-text { display: flex; flex-direction: column; gap: 1px; }
