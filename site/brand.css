@@ -407,7 +407,7 @@ h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
    不再套深色方块；深色页头同样用这一张，花瓣和笑脸自带深色勾边。 */
 .brand-dot {
 width: 44px; height: 44px; border-radius: 0; flex-shrink: 0; position: relative;
-background: url("assets/brand/dandelion-mark-mint.png") center / contain no-repeat;
+background: url("assets/brand/dandelion-mark-site.png") center / contain no-repeat;
 }
 .brand-dot::before, .brand-dot::after { content: none; }
 .brand-text { display: flex; flex-direction: column; gap: 1px; }
@@ -1346,4 +1346,120 @@ html[data-lang="en"] .nav-links > a {
   .vz-map-row { grid-template-columns: 44px 1fr; }
   .vz-map-row small { grid-column: 2; }
   .vz-path span { padding: 6px 10px; font-size: 11px; }
+}
+
+/* ===== 单行页脚（全站统一，来自 footer-compact.css） ===== */
+/* 单行页脚：品牌与许可在左，站内导航居中，法律/纠错在右侧独立成组。
+   宽屏一行；窄屏收起站内导航，只留品牌、许可与法律/纠错。 */
+.site-footer.foot-single {
+  padding: 18px 0 22px;
+}
+.site-footer.foot-single .foot-line {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+.site-footer.foot-single .foot-brand {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.site-footer.foot-single .foot-brand-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.site-footer.foot-single .foot-copy {
+  color: var(--ink-faint);
+  font-weight: 650;
+}
+.site-footer.foot-single .foot-license {
+  color: var(--ink-faint);
+  font-size: 10px;
+  line-height: 1.35;
+  letter-spacing: .01em;
+  padding-left: 30px;
+}
+.site-footer.foot-single .foot-license .sep {
+  margin: 0 4px;
+  font-size: 10px;
+  color: var(--ink-faint);
+}
+.site-footer.foot-single .foot-license a {
+  color: var(--ink-mid);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--line-strong);
+}
+.site-footer.foot-single .foot-license a:hover {
+  color: var(--cat-violet-ink);
+  border-bottom-color: var(--cat-violet-ink);
+}
+.site-footer.foot-single .foot-sites {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.site-footer.foot-single .foot-sites a,
+.site-footer.foot-single .foot-legal a {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 6px;
+  border-radius: 5px;
+  color: var(--ink-mid);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color .16s var(--ease), background .16s var(--ease);
+}
+.site-footer.foot-single .foot-sites a:hover,
+.site-footer.foot-single .foot-legal a:hover {
+  color: var(--cat-violet-ink);
+  background: var(--cat-violet-soft);
+}
+.site-footer.foot-single .foot-legal {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  padding-left: 18px;
+  border-left: 1px solid var(--line-strong);
+}
+.site-footer.foot-single .foot-legal a {
+  font-weight: 700;
+}
+.site-footer.foot-single .sep {
+  color: var(--line-strong);
+  font-size: 11px;
+  line-height: 1;
+}
+@media (max-width: 860px) {
+  .site-footer.foot-single .foot-sites,
+  .site-footer.foot-single .foot-sites .site-sep {
+    display: none;
+  }
+  .site-footer.foot-single .foot-legal {
+    margin-left: auto;
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+@media (max-width: 640px) {
+  .site-footer.foot-single {
+    padding: 12px 0 16px;
+  }
+  .site-footer.foot-single .foot-line {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 12px;
+    white-space: normal;
+  }
+  .site-footer.foot-single .foot-legal {
+    margin-left: auto;
+  }
 }

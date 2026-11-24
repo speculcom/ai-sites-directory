@@ -185,36 +185,33 @@ ${NAV.map((n) => link(n.key)).join('\n')}
 </nav>`;
 }
 
-/** footer —— repo 参数让各站链自己的 **markdown 内容仓**（不是部署仓） */
-export function footer(repo = 'https://github.com/speculcom/ai-handbook', repoLabel = OPEN_SOURCE_LABEL) {
-  // 2026-10-04 修：原先对 nav / www 两项特殊处理，输出**纯中文** `${n.zh}`（无 data-en），
-  // 其余项才走双节点 —— 结果英文态的页脚露出「学 AI」「本地模型」等中文。
-  // 实测（渲染态审计）：英文态页脚有 2 处中文可见。
-  // 现在统一走双节点，不再有特例 —— 页脚不该是英文页的唯一中文区。
-  const links = NAV.map((n) =>
-    `          <a href="${n.href}"><span data-zh>${n.zh}</span><span data-en>${n.en}</span></a>`
-  ).join('\n');
-
-  return `  <footer class="site-footer">
-    <div class="container foot-row">
+/** footer —— 全站统一采用首页的单行页脚（2026-11-24 用户定案） */
+export function footer() {
+  return `  <footer class="site-footer foot-single">
+    <div class="container foot-line">
       <div class="foot-brand">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span class="foot-copy">© 2026 <span data-zh>${BRAND.zh}</span><span data-en>Specul</span></span>
+        <span class="foot-brand-main">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="foot-copy"><span data-zh>投机取巧 · specul.com</span><span data-en>Specul · specul.com</span></span>
+        </span>
+        <span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt"><span data-zh>内容 CC BY 4.0</span><span data-en>Content CC BY 4.0</span></a><span class="sep" aria-hidden="true">·</span><a href="https://specul.com/LICENSE.txt"><span data-zh>代码 MIT</span><span data-en>Code MIT</span></a></span>
       </div>
-      <nav class="foot-links" aria-label="页脚导航">
-${links}
-          <a href="${repo}" target="_blank" rel="noopener">${repoLabel}</a>
+      <nav class="foot-sites" aria-label="站内导航">
+        <a class="site-link" href="https://specul.com/"><span data-zh>首页</span><span data-en>Home</span></a><span class="sep site-sep" aria-hidden="true">·</span>
+        <a class="site-link" href="https://learn.specul.com/"><span data-zh>学 AI</span><span data-en>Learn</span></a><span class="sep site-sep" aria-hidden="true">·</span>
+        <a class="site-link" href="https://tools.specul.com/"><span data-zh>工具</span><span data-en>Tools</span></a><span class="sep site-sep" aria-hidden="true">·</span>
+        <a class="site-link" href="https://models.specul.com/"><span data-zh>模型</span><span data-en>Models</span></a><span class="sep site-sep" aria-hidden="true">·</span>
+        <a class="site-link" href="https://demos.specul.com/"><span data-zh>演示</span><span data-en>Demos</span></a><span class="sep site-sep" aria-hidden="true">·</span>
+        <a class="site-link" href="https://oss.specul.com/"><span data-zh>开源</span><span data-en>OSS</span></a><span class="sep site-sep" aria-hidden="true">·</span>
+        <a class="site-link" href="https://hardware.specul.com/"><span data-zh>算力</span><span data-en>Compute</span></a><span class="sep site-sep" aria-hidden="true">·</span>
+        <a class="site-link" href="https://papers.specul.com/"><span data-zh>论文</span><span data-en>Papers</span></a><span class="sep site-sep" aria-hidden="true">·</span>
+        <a class="site-link" href="https://chain.specul.com/"><span data-zh>链</span><span data-en>Chain</span></a><span class="sep site-sep" aria-hidden="true">·</span>
+        <a class="site-link" href="https://nav.specul.com/"><span data-zh>导航</span><span data-en>Directory</span></a>
       </nav>
-      <nav class="foot-legal-links" aria-label="法律">
-        <a href="https://specul.com/legal.html"><span data-zh>法律条款</span><span data-en>Legal terms</span></a>
-        <a href="https://specul.com/legal.html#s6"><span data-zh>免责声明</span><span data-en>Disclaimer</span></a>
-        <a href="https://specul.com/legal.html#s8"><span data-zh>隐私与本地存储</span><span data-en>Privacy</span></a>
+      <nav class="foot-legal" aria-label="法律与纠错">
+        <a href="https://specul.com/legal.html"><span data-zh>法律</span><span data-en>Legal</span></a><span class="sep" aria-hidden="true">·</span>
+        <a href="https://specul.com/correct.html"><span data-zh>纠错</span><span data-en>Corrections</span></a>
       </nav>
-    </div>
-    <div class="container">
-      <p><a href="https://specul.com/search.html"><span data-zh>搜索全站内容</span><span data-en>Search all sites</span></a></p>
-      <p><a href="https://specul.com/correct.html"><span data-zh>发现错误？生成纠错草稿</span><span data-en>Spot an error? Compose a correction draft</span></a></p>
-      <p class="foot-trademark"><span data-zh>产品名与商标归各权利方所有，本站仅作识别与评论之用。</span><span data-en>Product names and trademarks belong to their respective owners and are used here for identification and commentary only.</span></p>
     </div>
   </footer>`;
 }
@@ -282,7 +279,8 @@ export function shell({ current, title, desc, canonical, accent, body, repo, rep
   <link rel="alternate" hreflang="en" href="${esc(canonical)}${canonical.includes('?') ? '&' : '?'}lang=en" />
   <link rel="alternate" hreflang="x-default" href="${esc(canonical)}" />
   <meta name="theme-color" content="#16121f" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b7cf8'/%3E%3Cstop offset='1' stop-color='%2322d3c5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='48' height='48' rx='12' fill='%2305080f'/%3E%3Cpath d='M14 32 L24 12 L34 32' fill='none' stroke='url(%23g)' stroke-width='2.4' stroke-linejoin='round'/%3E%3Ccircle cx='24' cy='27' r='2.4' fill='%2322d3c5'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="/assets/brand/dandelion-favicon-site.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/dandelion-apple-touch-site.png" />
   <script src="${depth(assetPrefix)}brand.js?v=${RUNTIME_VERSION}"></script>
   <link rel="stylesheet" href="${depth(assetPrefix)}brand.css?v=${RUNTIME_VERSION}" />
   <link rel="stylesheet" href="${depth(assetPrefix)}site.css" />
