@@ -400,13 +400,15 @@ h1 small { -webkit-text-fill-color: currentColor; color: var(--ink-dim); }
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
 
+/* 2026-11-24：品牌标从「渐变圆角方块＋两只眼」换成蒲公英头部。
+   头部是透明 PNG，只保留花盘和花瓣，不再靠伪元素画脸；28px 下仍能看清一张脸。
+   背景图放在每个站点自己的 assets/brand/ 下，由 sync-brand.mjs 同步过去。 */
 .brand-dot {
-width: 24px; height: 24px; border-radius: 9px; flex-shrink: 0; position: relative;
-background: linear-gradient(135deg, var(--cat-rose), var(--cat-violet));
-box-shadow: 0 0 0 4px var(--brand-soft);
+width: 28px; height: 28px; border-radius: 9px; flex-shrink: 0; position: relative;
+background: url("assets/brand/dandelion-head.png") center / contain no-repeat;
+box-shadow: 0 0 0 3px var(--brand-soft);
 }
-.brand-dot::before { content: ""; position: absolute; width: 3px; height: 3px; left: 7px; top: 7px; border-radius: 50%; background: var(--cyan-on); box-shadow: 7px 0 var(--cyan-on); }
-.brand-dot::after { content: ""; position: absolute; width: 10px; height: 5px; left: 7px; top: 11px; border-bottom: 2px solid var(--cyan-on); border-radius: 0 0 10px 10px; }
+.brand-dot::before, .brand-dot::after { content: none; }
 .brand-text { display: flex; flex-direction: column; gap: 1px; }
 /* 字重 800 = 首页取值（ui-parity 实测原先首页 800 / 分站 700） */
 .brand-name { font-size:var(--fs-sm); font-weight: 800; letter-spacing: .01em; line-height: 1.2; }
