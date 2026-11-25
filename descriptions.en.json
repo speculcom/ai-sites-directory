@@ -543,7 +543,7 @@
   "MLX": "Apple Silicon's official local inference stack: a native unified-memory framework plus mlx-lm, MIT-licensed and actively maintained; inference and fine-tuning share one stack.",
   "SGLang": "A serving-era inference stack built on prefix reuse: RadixAttention reuses KV cache across turns and shared prefixes, which pays off in agent workflows; Apache-2.0.",
   "TensorRT-LLM": "NVIDIA's production inference stack: compiles models into TensorRT engines, then serves them through trtllm-serve with OpenAI-compatible endpoints; aimed at GPU clusters rather than single-machine setup.",
-  "Google Opal": "A no-code AI mini-app builder from Google Labs. The experimental service is scheduled to turn off on 2026-11-17; workflows do not automatically migrate. Preserve prompts and Drive files and rebuild for the destination task.",
+  "Google Opal": "A no-code AI mini-app builder from Google Labs. The experimental service shut down on 2026-11-17 and Gems made by Labs closed the same day. Existing workflows and shared links no longer run; Drive files remain, and workflows do not migrate automatically into skills.",
   "Microsoft Copilot Studio": "Microsoft's enterprise low-code agent platform: usefulness depends on living in the Power Platform / Dataverse ecosystem; identity and data residency come with the Microsoft 365 stack.",
   "n8n": "An automation-first low-code workflow platform where AI is just one node type; source is public under fair-code (Sustainable Use License), which is not OSI open source.",
   "NotebookLM": "Google’s sourced Q&A and notes tool. Official help used Gemini Notebook on 2026-11-04; account migration was not tested. Note export creates a Google Doc without reverse synchronization. See scoped usage notes.",

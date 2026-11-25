@@ -523,7 +523,7 @@
 ## Google Opal
 
 - 链接：<https://opal.google/>
-- 说明：Google Labs 的无代码 AI mini-app 搭建器；实验服务计划 2026-11-17 停用，工作流不会自动迁移。保留提示与 Drive 文件，按目标任务重新搭建。
+- 说明：Google Labs 的无代码 AI mini-app 搭建器；实验服务已于 2026-11-17 停用，Gems made by Labs 同日关闭。现有工作流与共享链接不再运行，Drive 文件保留，工作流不自动迁移到 skills。
 - 标签：工作流·可视化
 - 核验：未验证（探测受限：timeout，非死链）
 
